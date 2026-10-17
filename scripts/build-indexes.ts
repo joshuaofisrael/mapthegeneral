@@ -3,8 +3,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
-import { VOIVODESHIPS } from "../data/pl/places";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
+import { registryCountries } from "../src/lib/country-registry";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -69,10 +69,8 @@ const lines = [
   }),
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
-  `Poland: national pages and ${VOIVODESHIPS.length} voivodeships, in Polish and English. Powiat and gmina pages are not in this release.`,
   "",
-  "United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.",
-  "",
+  ...registryCountries().flatMap((country) => [`${country.name} (${SITE.url}${country.href}): ${country.summary}`, ""]),
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];
