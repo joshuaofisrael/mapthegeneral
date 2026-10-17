@@ -12,6 +12,7 @@ import {
   communityBySlug,
   provinceBySlug,
 } from "../data/spain/places";
+import { canadaIndexEntries } from "../countries/ca";
 import { franceIndexEntries } from "../../data/fr/paths";
 import { polandEntries } from "../../data/pl/paths";
 import type { Lang } from "../data/spain/types";
@@ -166,6 +167,7 @@ export function searchIndex(): IndexEntry[] {
     ...japanEntries("en"),
     ...japanEntries("ja"),
     ...italySearchEntries(),
+    ...canadaIndexEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
