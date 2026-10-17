@@ -1,3 +1,4 @@
+import { indexEntries as mexicoIndexEntries } from "../countries/mx";
 import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
 import { mayorByCode } from "../data/spain/mayors";
@@ -44,7 +45,7 @@ export type IndexEntry = {
 };
 
 const STATIC_EN: IndexEntry[] = [
-  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain poland elections" },
+  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland elections" },
   { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
@@ -140,6 +141,11 @@ function spainEntries(lang: Lang): IndexEntry[] {
   return [...fixed, ...communities, ...provinces, ...cities, ...municipalities];
 }
 
+/** Country modules under src/countries/. Keep every country's entries. */
+function registryEntries(): IndexEntry[] {
+  return [...mexicoIndexEntries()];
+}
+
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
   const rows = [
@@ -149,6 +155,7 @@ export function searchIndex(): IndexEntry[] {
     ...gbSearchEntries(),
     ...polandEntries("en"),
     ...polandEntries("pl"),
+    ...registryEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
