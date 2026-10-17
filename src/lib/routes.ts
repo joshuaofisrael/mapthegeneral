@@ -8,6 +8,7 @@ import {
   communityBySlug,
   provinceBySlug,
 } from "../data/spain/places";
+import { canadaIndexEntries } from "../countries/ca";
 import type { Lang } from "../data/spain/types";
 
 export const LANGS: Lang[] = ["es", "en"];
@@ -35,7 +36,7 @@ export function municipalityPath(
 
 export type IndexEntry = {
   path: string;
-  lang: Lang | "en-only";
+  lang: Lang | "fr" | "en-only";
   title: string;
   kind: string;
   text: string;
@@ -139,7 +140,7 @@ function spainEntries(lang: Lang): IndexEntry[] {
 
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
-  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es")];
+  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es"), ...canadaIndexEntries()];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
     seen.add(row.path);
