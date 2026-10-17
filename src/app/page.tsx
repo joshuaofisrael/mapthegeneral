@@ -2,13 +2,11 @@ import Link from "@/components/AnchorLink";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { SITE } from "@/data/site";
-import { countryCard as mexicoCard } from "@/countries/mx";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
+import { registryCountries } from "@/lib/country-registry";
 import { pageMetadata } from "@/lib/metadata";
-
-const REGISTRY_CARDS = [mexicoCard];
 
 export const metadata = pageMetadata({
   title: SITE.name,
@@ -18,6 +16,7 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   const copy = ui("en");
+  const extraCountries = registryCountries().filter((country) => country.code !== "es");
   return (
     <div className="space-y-12">
       <JsonLd
@@ -82,18 +81,18 @@ export default function HomePage() {
               </Link>
             </p>
           </li>
-          {REGISTRY_CARDS.map((card) => (
-            <li key={card.code} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+          {extraCountries.map((country) => (
+            <li key={country.code} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
               <h3 className="font-serif text-2xl font-semibold">
-                <Link className="hover:text-navy" href={card.path}>
-                  {card.name}
+                <Link className="hover:text-navy" href={country.href}>
+                  {country.name}
                 </Link>
               </h3>
-              <p className="mt-2 text-sm leading-6 text-ink-muted">{card.summary}</p>
+              <p className="mt-2 text-sm leading-6 text-ink-muted">{country.summary}</p>
               <p className="mt-3 flex flex-wrap gap-4 text-sm">
-                {card.links.map((item) => (
-                  <Link key={item.href} className="font-medium text-navy hover:underline" href={item.href}>
-                    {item.label}
+                {country.links.map((link) => (
+                  <Link key={link.href} className="font-medium text-navy hover:underline" href={link.href}>
+                    {link.label}
                   </Link>
                 ))}
               </p>
