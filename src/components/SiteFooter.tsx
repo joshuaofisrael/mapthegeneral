@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { LEGAL_NAV, SITE } from "@/data/site";
 import { alphaCommunities } from "@/data/spain/places";
 

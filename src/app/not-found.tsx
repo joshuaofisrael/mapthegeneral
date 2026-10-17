@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { PageHeader } from "@/components/PageHeader";
 import { SITE } from "@/data/site";
 

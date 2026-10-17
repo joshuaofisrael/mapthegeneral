@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { swapLang } from "@/lib/metadata";
 import type { Lang } from "@/data/spain/types";
 

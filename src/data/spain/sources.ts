@@ -112,6 +112,18 @@ export const SOURCES: SourceRef[] = [
     readOn: READ,
   },
   {
+    id: "mpt-alcaldes-2023",
+    name: "Ministerio de Política Territorial y Memoria Democrática, Ficha de Alcaldes de la Legislatura 2023 (descarga getAlcaldesLegislatura de la consulta de alcaldes y concejales)",
+    url: "https://concejales.redsara.es/consulta/getAlcaldesLegislatura",
+    readOn: READ,
+  },
+  {
+    id: "ine-29005",
+    name: "INE, tabla 29005, «Cifras oficiales del padrón por municipio». Serie histórica desde 1996 de la revisión anual del Padrón municipal a 1 de enero de cada año. Cifra usada: columna Total, periodo 2025, del fichero csv_bd",
+    url: "https://www.ine.es/jaxiT3/Tabla.htm?t=29005",
+    readOn: READ,
+  },
+  {
     id: "jec-home",
     name: "Junta Electoral Central",
     url: "https://www.juntaelectoralcentral.es/",

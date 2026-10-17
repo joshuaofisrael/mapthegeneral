@@ -1,8 +1,9 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { SeatTable } from "@/components/SeatTable";
 import { SpainFrame } from "@/components/SpainFrame";
+import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import {
   CITIES,
   COMMUNITIES,
@@ -31,8 +32,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "es" ? "España" : "Spain",
     description:
       lang === "es"
-        ? "Elecciones a Cortes Generales del 29 de noviembre de 2026: Congreso, Senado, comunidades autónomas y provincias. Información no oficial."
-        : "Spanish general election of 29 November 2026: Congress, Senate, autonomous communities, and provinces. Unofficial information.",
+        ? "Elecciones a Cortes Generales del 29 de noviembre de 2026: Congreso, Senado, comunidades autónomas, provincias y municipios. Información no oficial."
+        : "Spanish general election of 29 November 2026: Congress, Senate, autonomous communities, provinces, and municipalities. Unofficial information.",
     path: spainHome(lang),
     lang,
     alternatePath: spainHome(lang === "es" ? "en" : "es"),
@@ -48,6 +49,7 @@ export default async function SpainNationalPage({ params }: { params: Promise<{ 
     "rd-806-2026",
     "loreg-jec",
     "rd-1117-2025",
+    "ine-29005",
     "jec-generales-2026",
     "jec-calendario",
     "jec-candidaturas",
@@ -170,6 +172,11 @@ export default async function SpainNationalPage({ params }: { params: Promise<{ 
           {es
             ? `El Real Decreto 1117/2025 declara oficiales las cifras del Padrón municipal a 1 de enero de 2025. El anexo no imprime un total nacional en el texto leído. La suma de las 50 provincias y de Ceuta y Melilla en ese anexo es ${formatNumber(PADRON_POPULATION_TOTAL, lang)}.`
             : `Royal Decree 1117/2025 declares official the municipal-register figures at 1 January 2025. The annex, as read, does not print a national total. The 50 provincial figures plus Ceuta and Melilla in that annex add up to ${formatNumber(PADRON_POPULATION_TOTAL, lang)}.`}
+        </p>
+        <p>
+          {es
+            ? `La tabla 29005 del INE, «Cifras oficiales del padrón por municipio», describe la serie como las cifras de la revisión anual del Padrón a 1 de enero de cada año. El Total de 2025, sumado por provincia, coincide con cada cifra provincial de ese anexo, y con Ceuta y Melilla. Hay ${formatNumber(MUNICIPALITY_PAGE_COUNT, lang)} municipios con Total de 2025 en las 50 provincias. Cada uno tiene página, enlazada desde su provincia. Ceuta y Melilla son la página de la ciudad. ${formatNumber(EMPTY_MUNICIPALITY_TOTAL_COUNT, lang)} códigos de la tabla tienen el Total de 2025 vacío y no tienen página.`
+            : `INE table 29005, “Cifras oficiales del padrón por municipio”, describes the series as the figures of the annual revision of the municipal register at 1 January of each year. The 2025 Total, summed by province, matches each provincial figure in that annex, and matches Ceuta and Melilla. ${formatNumber(MUNICIPALITY_PAGE_COUNT, lang)} municipalities in the 50 provinces have a 2025 Total. Each has a page, linked from its province. Ceuta and Melilla are the city page. ${formatNumber(EMPTY_MUNICIPALITY_TOTAL_COUNT, lang)} codes in the table have an empty 2025 Total and have no page.`}
         </p>
       </section>
 

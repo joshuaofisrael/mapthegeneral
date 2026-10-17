@@ -34,6 +34,21 @@ const FAQ = {
       answer:
         "No. Es información no oficial de Joshua Israel Ventures LLC. Hay que confirmarla con la oficina electoral oficial.",
     },
+    {
+      question: "¿De dónde sale la población de un municipio?",
+      answer:
+        "De la columna Total del periodo 2025 en la tabla 29005 del INE, «Cifras oficiales del padrón por municipio». El encabezado describe la serie como la revisión anual del Padrón a 1 de enero de cada año. Sumada por provincia, coincide con el anexo del Real Decreto 1117/2025. Seis códigos de esa tabla tienen el Total de 2025 vacío y no tienen página.",
+    },
+    {
+      question: "¿Quién es el alcalde?",
+      answer:
+        "La Ficha de Alcaldes de la Legislatura 2023, del Ministerio de Política Territorial y Memoria Democrática, imprime una fila por municipio: cargo, fecha de posesión y partido, tal como están en el fichero. El resto del pleno no está en esa ficha y no se copia aquí.",
+    },
+    {
+      question: "¿Cuándo son las próximas elecciones municipales?",
+      answer:
+        "El Real Decreto 207/2023 convocó las últimas elecciones locales para el domingo 28 de mayo de 2023. El artículo 42.3 de la LOREG las sitúa en el cuarto domingo de mayo y fija mandatos de cuatro años, así que el año que corresponde es 2027 y el mes es mayo. El 17 de octubre de 2026 no se había leído el decreto de convocatoria de 2027, y las páginas no imprimen un día de calendario.",
+    },
   ],
   en: [
     {
@@ -59,6 +74,21 @@ const FAQ = {
       question: "Is this an official website?",
       answer:
         "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+    },
+    {
+      question: "Where does a municipality’s population come from?",
+      answer:
+        "From the Total column for period 2025 in INE table 29005, “Cifras oficiales del padrón por municipio”. The heading describes the series as the annual revision of the municipal register at 1 January of each year. Summed by province, it matches the annex of Royal Decree 1117/2025. Six codes in that table have an empty 2025 Total and have no page.",
+    },
+    {
+      question: "Who is the mayor?",
+      answer:
+        "The Ficha de Alcaldes de la Legislatura 2023, from the Ministerio de Política Territorial y Memoria Democrática, prints one row per municipality: office, date of taking office, and party, as written in the file. The rest of the council is not in that file and is not copied here.",
+    },
+    {
+      question: "When are the next municipal elections?",
+      answer:
+        "Royal Decree 207/2023 called the last local elections for Sunday, 28 May 2023. Article 42.3 of the electoral law places them on the fourth Sunday of May and sets a four-year mandate, so the corresponding year is 2027 and the month is May. No 2027 calling decree had been read on 17 October 2026, and the pages do not print a calendar day.",
     },
   ],
 };
@@ -104,7 +134,17 @@ export default async function FaqPage({ params }: { params: Promise<{ lang: stri
       lede={es ? "Respuestas cortas, cada una atada a una fuente de la página de fuentes." : "Short answers, each tied to a source on the sources page."}
       officeHref={jec.url}
       officeLabel="Junta Electoral Central"
-      sources={sourcesById(["rd-806-2026", "loreg-jec", "jec-calendario", "jec-generales-2026"])}
+      sources={sourcesById([
+        "rd-806-2026",
+        "loreg-jec",
+        "loreg-boe",
+        "jec-calendario",
+        "jec-generales-2026",
+        "rd-207-2023",
+        "rd-1117-2025",
+        "ine-29005",
+        "mpt-alcaldes-2023",
+      ])}
     >
       <JsonLd data={faqJsonLd(items)} />
       <dl className="space-y-6">

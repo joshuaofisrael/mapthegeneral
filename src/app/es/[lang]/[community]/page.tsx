@@ -1,8 +1,10 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { SpainFrame } from "@/components/SpainFrame";
+import { mayorByCode, mayorSentence } from "@/data/spain/mayors";
+import { autonomousCityMunicipality } from "@/data/spain/municipalities";
 import {
   CITIES,
   alphaCommunityNeighbors,
@@ -64,6 +66,8 @@ export default async function CommunityPage({
   const path = communityPath(lang, slug);
   const provinces = provincesIn(slug);
   const city = CITIES.find((item) => item.slug === slug);
+  const cityRow = autonomousCityMunicipality(slug);
+  const cityMayor = cityRow ? mayorByCode(cityRow.code) : undefined;
   const population = populationOfCommunity(slug);
   const seats = congressSeatsOfCommunity(slug);
   const neighbors = alphaCommunityNeighbors(slug);
@@ -72,7 +76,7 @@ export default async function CommunityPage({
   if (slug === "castilla-y-leon") sourceIds.push("boe-cyl-2026");
   if (slug === "aragon") sourceIds.push("boe-aragon-xii");
   if (slug === "illes-balears") sourceIds.push("boe-balears-2023");
-  if (slug === "ceuta" || slug === "melilla") sourceIds.push("rd-207-2023", "loreg-boe");
+  if (slug === "ceuta" || slug === "melilla") sourceIds.push("rd-207-2023", "loreg-boe", "ine-29005", "mpt-alcaldes-2023");
 
   return (
     <SpainFrame
@@ -151,7 +155,11 @@ export default async function CommunityPage({
           </p>
         )}
         <h2>{copy.nextElection}</h2>
-        <GapNote label={copy.gap} text={copy.nextElectionGap} />
+        {cityRow ? (
+          <p>{copy.localElection}</p>
+        ) : (
+          <GapNote label={copy.gap} text={copy.nextElectionGap} />
+        )}
         <h2>{copy.government}</h2>
         <p>
           <a href={community.governmentUrl} rel="noopener noreferrer">
@@ -159,14 +167,21 @@ export default async function CommunityPage({
           </a>
         </p>
         <GapNote label={copy.gap} text={copy.governmentGap} />
-        {(slug === "ceuta" || slug === "melilla") && (
-          <p>
-            {es
-              ? "El Real Decreto 207/2023 convocó, para el 28 de mayo de 2023, las elecciones locales y las elecciones a las Asambleas de Ceuta y Melilla. El artículo 42.3 de la LOREG, en el texto consolidado leído, sitúa las elecciones locales ordinarias en el cuarto domingo de mayo y fija mandatos de cuatro años. Esta página no convierte esa regla en un día de 2027."
-              : "Royal Decree 207/2023 called, for 28 May 2023, the local elections and the elections to the Assemblies of Ceuta and Melilla. Article 42.3 of the electoral law, in the consolidated text that was read, places ordinary local elections on the fourth Sunday of May and sets four-year mandates. This page does not turn that rule into a 2027 calendar day."}
-          </p>
-        )}
       </section>
+
+      {cityRow && (
+        <section className="space-y-3">
+          <h2 className="font-serif text-2xl font-semibold">{copy.municipality}</h2>
+          <p className="text-sm leading-6">
+            {es
+              ? `La tabla 29005 imprime un municipio en este código de ciudad: ${cityRow.code} ${cityRow.name}, Total ${formatNumber(cityRow.population, lang)} para 2025. No hay provincia entre la ciudad autónoma y ese municipio, así que esta página es la del municipio.`
+              : `Table 29005 prints one municipality on this city code: ${cityRow.code} ${cityRow.name}, Total ${formatNumber(cityRow.population, lang)} for 2025. There is no province between the autonomous city and that municipality, so this page is the municipality page.`}
+          </p>
+          <p className="text-sm leading-6">{copy.populationSeriesCity}</p>
+          {cityMayor && <p className="text-sm leading-6">{mayorSentence(cityMayor, lang)}</p>}
+          <GapNote label={copy.gap} text={copy.mayorGap} />
+        </section>
+      )}
 
       {provinces.length > 0 && (
         <LinkGrid

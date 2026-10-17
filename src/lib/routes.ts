@@ -1,9 +1,12 @@
 import { absoluteUrl } from "../data/site";
+import { mayorByCode } from "../data/spain/mayors";
+import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
 import {
   alphaCommunities,
   CITIES,
   PROVINCES,
   communityBySlug,
+  provinceBySlug,
 } from "../data/spain/places";
 import type { Lang } from "../data/spain/types";
 
@@ -19,6 +22,15 @@ export function communityPath(lang: Lang, slug: string): string {
 
 export function provincePath(lang: Lang, communitySlug: string, provinceSlug: string): string {
   return `/es/${lang}/${communitySlug}/${provinceSlug}/`;
+}
+
+export function municipalityPath(
+  lang: Lang,
+  communitySlug: string,
+  provinceSlug: string,
+  municipalitySlug: string,
+): string {
+  return `/es/${lang}/${communitySlug}/${provinceSlug}/${municipalitySlug}/`;
 }
 
 export type IndexEntry = {
@@ -109,9 +121,20 @@ function spainEntries(lang: Lang): IndexEntry[] {
     lang,
     title: city.decreeName,
     kind: "city",
-    text: city.decreeName,
+    text: `${city.decreeName} ${autonomousCityMunicipality(city.slug)?.code ?? ""}`,
   }));
-  return [...fixed, ...communities, ...provinces, ...cities];
+  const municipalities = pageMunicipalities().map((municipality) => {
+    const province = provinceBySlug(municipality.provinceSlug);
+    const community = communityBySlug(municipality.communitySlug);
+    return {
+      path: municipalityPath(lang, municipality.communitySlug, municipality.provinceSlug, municipality.slug),
+      lang,
+      title: municipality.name,
+      kind: "municipality",
+      text: `${municipality.name} ${municipality.code} ${mayorByCode(municipality.code)?.given ?? ""} ${mayorByCode(municipality.code)?.surname1 ?? ""} ${mayorByCode(municipality.code)?.surname2 ?? ""} ${province?.decreeName ?? ""} ${community?.officialName ?? ""}`,
+    };
+  });
+  return [...fixed, ...communities, ...provinces, ...cities, ...municipalities];
 }
 
 export function searchIndex(): IndexEntry[] {

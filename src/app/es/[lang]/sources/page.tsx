@@ -54,8 +54,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       <div className="prose-legal">
         <p>
           {es
-            ? "Lo que no está en estas fuentes no se inventa. Las lagunas marcadas en las páginas —presidente autonómico en ejercicio, listas de candidatos, escrutinio, código postal— siguen abiertas hasta que se lea un documento oficial que las cierre."
-            : "What is not in these sources is not invented. Gaps marked on the pages — the sitting regional president, candidate lists, the count, postcodes — stay open until an official document that closes them has been read."}
+            ? "Lo que no está en estas fuentes no se inventa. Las lagunas que siguen abiertas son el presidente autonómico en ejercicio, el resto del pleno municipal, las listas de candidatos, el escrutinio y el código postal. La población municipal es el Total de 2025 de la tabla 29005 del INE. La alcaldía sale de la Ficha de Alcaldes de la Legislatura 2023. Seis códigos de la tabla 29005 (12066 Gatova, 15026 Cesuras, 15063 Oza dos Ríos, 17122 Palmerola, 36011 Cerdedo y 36012 Cotobade) tienen el Total de 2025 vacío y no tienen página."
+            : "What is not in these sources is not invented. The gaps that stay open are the sitting regional president, the rest of the municipal council, candidate lists, the count, and postcodes. Municipal population is the 2025 Total from INE table 29005. The mayor comes from the Ficha de Alcaldes de la Legislatura 2023. Six codes in table 29005 (12066 Gatova, 15026 Cesuras, 15063 Oza dos Ríos, 17122 Palmerola, 36011 Cerdedo and 36012 Cotobade) have an empty 2025 Total and have no page."}
         </p>
       </div>
     </SpainFrame>
