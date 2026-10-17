@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>https://mapthegeneral.com/sitemaps/global.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/au-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
   <sitemap><loc>https://mapthegeneral.com/sitemaps/es-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
   <sitemap><loc>https://mapthegeneral.com/sitemaps/es-es.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/fr-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/fr-fr.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/gb-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
   <sitemap><loc>https://mapthegeneral.com/sitemaps/it-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
   <sitemap><loc>https://mapthegeneral.com/sitemaps/it-it.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/jp-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/jp-ja.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/mx-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/mx-es.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/pl-en.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
+  <sitemap><loc>https://mapthegeneral.com/sitemaps/pl-pl.xml</loc><lastmod>2026-10-17</lastmod></sitemap>
 </sitemapindex>

@@ -63,6 +63,17 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
             ? "Ciò che non è in queste fonti non è inventato. Restano aperte, tra le altre, la presidenza del Consiglio in carica, i presidenti regionali, le liste dei candidati, lo scrutinio del Senato del 2022, la Valle d'Aosta e l'estero nella tabella della Camera, il giorno della prossima elezione politica e il CAP."
             : "What is not in these sources is not invented. Still open, among other gaps, are the sitting President of the Council, the regional presidents, candidate lists, the 2022 Senate count, Valle d'Aosta and the overseas constituency in the Chamber table, the day of the next general election, and postcodes."}
         </p>
+        <h2>{it ? "Licenze e attribuzione" : "Licences and attribution"}</h2>
+        <p>
+          {it ? "Dati ISTAT: fonte ISTAT, rilasciati con licenza " : "ISTAT data: source ISTAT, released under the "}
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.it">
+            {it ? "Creative Commons Attribuzione 4.0" : "Creative Commons Attribution 4.0 licence"}
+          </a>{" "}
+          (<a href="https://www.istat.it/note-legali/">{it ? "note legali ISTAT" : "ISTAT legal notes"}</a>).{" "}
+          {it
+            ? "I testi della Costituzione, delle leggi e dei decreti sono atti ufficiali esclusi dal diritto d'autore (art. 5 della legge 22 aprile 1941, n. 633). I fatti delle altre fonti ufficiali sono riassunti con parole nostre e con la citazione di ogni pagina. Non sono riprodotti immagini, loghi o emblemi."
+            : "The texts of the Constitution, laws and decrees are official acts excluded from copyright (article 5 of Law no. 633 of 22 April 1941). Facts from the other official sources are summarised in our own words with a citation to each page. No images, logos or emblems are reproduced."}
+        </p>
       </div>
     </ItalyFrame>
   );
