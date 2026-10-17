@@ -26,14 +26,24 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths = paths.filter((path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/"));
+const globalPaths = paths.filter(
+  (path) =>
+    !path.startsWith("/es/en/") &&
+    !path.startsWith("/es/es/") &&
+    !path.startsWith("/de/en/") &&
+    !path.startsWith("/de/de/"),
+);
 const enPaths = paths.filter((path) => path.startsWith("/es/en/"));
 const esPaths = paths.filter((path) => path.startsWith("/es/es/"));
+const deEnPaths = paths.filter((path) => path.startsWith("/de/en/"));
+const deDePaths = paths.filter((path) => path.startsWith("/de/de/"));
 
 for (const [name, list] of [
   ["global", globalPaths],
   ["es-en", enPaths],
   ["es-es", esPaths],
+  ["de-en", deEnPaths],
+  ["de-de", deDePaths],
 ] as const) {
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
@@ -44,6 +54,8 @@ const index = `<?xml version="1.0" encoding="UTF-8"?>
   <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-es.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+  <sitemap><loc>${SITE.url}/sitemaps/de-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+  <sitemap><loc>${SITE.url}/sitemaps/de-de.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -67,11 +79,13 @@ const lines = [
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
   "",
+  "Germany: national pages and 16 Länder, in German and English. District, municipality, and candidate pages are not in this release.",
+  "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];
 write("public/llms.txt", lines.join("\n"));
 
 console.log(
-  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length})`,
+  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length}, de-en ${deEnPaths.length}, de-de ${deDePaths.length})`,
 );
