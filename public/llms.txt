@@ -16560,6 +16560,21 @@
 - [Veracruz de Ignacio de la Llave](https://mapthegeneral.com/mx/es/veracruz-de-ignacio-de-la-llave/)
 - [Yucatán](https://mapthegeneral.com/mx/es/yucatan/)
 - [Zacatecas](https://mapthegeneral.com/mx/es/zacatecas/)
+- [Australia](https://mapthegeneral.com/au/)
+- [Australia](https://mapthegeneral.com/au/en/)
+- [Elections in Australia](https://mapthegeneral.com/au/en/elections/)
+- [Next federal election](https://mapthegeneral.com/au/en/elections/federal-next/)
+- [Results](https://mapthegeneral.com/au/en/results/)
+- [Sources](https://mapthegeneral.com/au/en/sources/)
+- [FAQ](https://mapthegeneral.com/au/en/faq/)
+- [New South Wales](https://mapthegeneral.com/au/en/new-south-wales/)
+- [Victoria](https://mapthegeneral.com/au/en/victoria/)
+- [Queensland](https://mapthegeneral.com/au/en/queensland/)
+- [Western Australia](https://mapthegeneral.com/au/en/western-australia/)
+- [South Australia](https://mapthegeneral.com/au/en/south-australia/)
+- [Tasmania](https://mapthegeneral.com/au/en/tasmania/)
+- [Australian Capital Territory](https://mapthegeneral.com/au/en/australian-capital-territory/)
+- [Northern Territory](https://mapthegeneral.com/au/en/northern-territory/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 Poland: national pages and 16 voivodeships, in Polish and English. Powiat and gmina pages are not in this release.

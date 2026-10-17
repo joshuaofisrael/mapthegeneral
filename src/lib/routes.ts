@@ -1,3 +1,4 @@
+import { AU_INDEX_ENTRIES } from "../countries/au";
 import { indexEntries as mexicoIndexEntries } from "../countries/mx";
 import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
@@ -156,6 +157,7 @@ export function searchIndex(): IndexEntry[] {
     ...polandEntries("en"),
     ...polandEntries("pl"),
     ...registryEntries(),
+    ...AU_INDEX_ENTRIES,
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
