@@ -2,6 +2,7 @@ import Link from "@/components/AnchorLink";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { SITE } from "@/data/site";
+import { countryCards } from "@/data/countries/read";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
@@ -79,6 +80,23 @@ export default function HomePage() {
               </Link>
             </p>
           </li>
+          {countryCards().map((country) => (
+            <li key={country.code} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+              <h3 className="font-serif text-2xl font-semibold">
+                <Link className="hover:text-navy" href={country.href}>
+                  {country.name}
+                </Link>
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-ink-muted">{country.summary}</p>
+              <p className="mt-3 flex flex-wrap gap-4 text-sm">
+                {country.links.map((item) => (
+                  <Link key={item.href} className="font-medium text-navy hover:underline" href={item.href}>
+                    {item.label}
+                  </Link>
+                ))}
+              </p>
+            </li>
+          ))}
         </ul>
       </section>
 

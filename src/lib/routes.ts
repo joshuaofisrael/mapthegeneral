@@ -1,3 +1,4 @@
+import { italySearchEntries } from "../data/italy/entries";
 import { absoluteUrl } from "../data/site";
 import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
@@ -35,7 +36,7 @@ export function municipalityPath(
 
 export type IndexEntry = {
   path: string;
-  lang: Lang | "en-only";
+  lang: string;
   title: string;
   kind: string;
   text: string;
@@ -139,7 +140,7 @@ function spainEntries(lang: Lang): IndexEntry[] {
 
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
-  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es")];
+  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es"), ...italySearchEntries()];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
     seen.add(row.path);

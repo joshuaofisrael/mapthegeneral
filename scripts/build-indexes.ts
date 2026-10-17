@@ -3,6 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
+import { REGIONS } from "../src/data/italy/places";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
 
@@ -26,24 +27,32 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths = paths.filter((path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/"));
-const enPaths = paths.filter((path) => path.startsWith("/es/en/"));
-const esPaths = paths.filter((path) => path.startsWith("/es/es/"));
+const buckets = new Map<string, string[]>();
+const globalPaths: string[] = [];
+for (const path of paths) {
+  const match = /^\/([a-z]{2})\/([a-z]{2})\//.exec(path);
+  if (!match) {
+    globalPaths.push(path);
+    continue;
+  }
+  const key = `${match[1]}-${match[2]}`;
+  const list = buckets.get(key);
+  if (list) list.push(path);
+  else buckets.set(key, [path]);
+}
+const sitemapNames = ["global", ...[...buckets.keys()].sort()];
 
-for (const [name, list] of [
-  ["global", globalPaths],
-  ["es-en", enPaths],
-  ["es-es", esPaths],
-] as const) {
+for (const name of sitemapNames) {
+  const list = name === "global" ? globalPaths : buckets.get(name) ?? [];
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
 }
 
 const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
-  <sitemap><loc>${SITE.url}/sitemaps/es-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
-  <sitemap><loc>${SITE.url}/sitemaps/es-es.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+${sitemapNames
+  .map((name) => `  <sitemap><loc>${SITE.url}/sitemaps/${name}.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>`)
+  .join("\n")}
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -66,12 +75,12 @@ const lines = [
   }),
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
+  `Italy: national pages and ${REGIONS.length} regions, in Italian and English. Sub-regional and municipality pages are not in this release.`,
   "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];
 write("public/llms.txt", lines.join("\n"));
 
-console.log(
-  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length})`,
-);
+const counts = sitemapNames.map((name) => `${name} ${name === "global" ? globalPaths.length : (buckets.get(name)?.length ?? 0)}`).join(", ");
+console.log(`indexes: ${paths.length} urls (${counts})`);

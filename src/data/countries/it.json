@@ -1,0 +1,11 @@
+{
+  "code": "it",
+  "href": "/it/",
+  "name": "Italy",
+  "summary": "Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree was read on 17 October 2026, so this release does not print a polling day. National page and 20 regions, in Italian and English. Sub-regional and municipality pages are not in this release.",
+  "links": [
+    { "href": "/it/en/", "label": "English" },
+    { "href": "/it/it/", "label": "Italiano" },
+    { "href": "/it/en/elections/prossime-politiche/", "label": "Next general election" }
+  ]
+}
