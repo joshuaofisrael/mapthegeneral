@@ -1,12 +1,10 @@
 import Link from "@/components/AnchorLink";
 import { LEGAL_NAV, SITE } from "@/data/site";
 import { alphaCommunities } from "@/data/spain/places";
-import { countryCards } from "@/lib/country-registry";
 
 const COPYRIGHT_YEAR = 2026;
 
 export function SiteFooter() {
-  const countries = countryCards();
   return (
     <footer className="mt-16 border-t border-line bg-navy-deep text-white">
       <div className="mx-auto grid max-w-site gap-10 px-4 py-12 md:grid-cols-4">
@@ -33,13 +31,6 @@ export function SiteFooter() {
                 España en español
               </Link>
             </li>
-            {countries.map((country) => (
-              <li key={country.code}>
-                <Link className="hover:underline" href={country.href}>
-                  {country.nameEn}
-                </Link>
-              </li>
-            ))}
             <li>
               <Link className="hover:underline" href="/search/">
                 Search

@@ -71,6 +71,8 @@ const lines = [
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
   `Poland: national pages and ${VOIVODESHIPS.length} voivodeships, in Polish and English. Powiat and gmina pages are not in this release.`,
   "",
+  "United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.",
+  "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];

@@ -5,14 +5,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { PRIMARY_NAV, SITE } from "@/data/site";
 
-type NavItem = { href: string; label: string };
-
 function navClass(pathname: string, href: string) {
   const active = pathname === href || (href !== "/" && pathname.startsWith(href));
   return active ? "font-semibold text-navy" : "text-ink-muted hover:text-navy";
 }
 
-export function SiteHeader({ nav = PRIMARY_NAV }: { nav?: readonly NavItem[] }) {
+export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -26,7 +24,7 @@ export function SiteHeader({ nav = PRIMARY_NAV }: { nav?: readonly NavItem[] }) 
           <span className="block truncate text-xs text-ink-muted">Unofficial election guide</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex" aria-label="Primary">
-          {nav.map((item) => (
+          {PRIMARY_NAV.map((item) => (
             <Link key={item.href} href={item.href} className={navClass(pathname, item.href)}>
               {item.label}
             </Link>
@@ -45,7 +43,7 @@ export function SiteHeader({ nav = PRIMARY_NAV }: { nav?: readonly NavItem[] }) 
       {open && (
         <nav id="mobile-nav" className="border-t border-line px-4 py-3 md:hidden" aria-label="Mobile">
           <ul className="space-y-2 text-sm">
-            {nav.map((item) => (
+            {PRIMARY_NAV.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={navClass(pathname, item.href)} onClick={() => setOpen(false)}>
                   {item.label}

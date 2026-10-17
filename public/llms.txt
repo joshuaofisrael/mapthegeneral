@@ -16429,6 +16429,18 @@
 - [Biel](https://mapthegeneral.com/es/es/aragon/zaragoza/biel/)
 - [Marracos](https://mapthegeneral.com/es/es/aragon/zaragoza/marracos/)
 - [Villamayor de Gállego](https://mapthegeneral.com/es/es/aragon/zaragoza/villamayor-de-gallego/)
+- [United Kingdom](https://mapthegeneral.com/gb/)
+- [United Kingdom](https://mapthegeneral.com/gb/en/)
+- [Elections](https://mapthegeneral.com/gb/en/elections/)
+- [UK Parliament, no later than 15 August 2029](https://mapthegeneral.com/gb/en/elections/general-election/)
+- [Parties](https://mapthegeneral.com/gb/en/parties/)
+- [Results](https://mapthegeneral.com/gb/en/results/)
+- [FAQ](https://mapthegeneral.com/gb/en/faq/)
+- [Sources](https://mapthegeneral.com/gb/en/sources/)
+- [England](https://mapthegeneral.com/gb/en/england/)
+- [Scotland](https://mapthegeneral.com/gb/en/scotland/)
+- [Wales](https://mapthegeneral.com/gb/en/wales/)
+- [Northern Ireland](https://mapthegeneral.com/gb/en/northern-ireland/)
 - [Poland](https://mapthegeneral.com/pl/en/)
 - [Elections](https://mapthegeneral.com/pl/en/elections/)
 - [Sejm and Senate election, 14 October–12 November 2027](https://mapthegeneral.com/pl/en/elections/sejm-senat-2027/)
@@ -16472,5 +16484,7 @@
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 Poland: national pages and 16 voivodeships, in Polish and English. Powiat and gmina pages are not in this release.
+
+United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml

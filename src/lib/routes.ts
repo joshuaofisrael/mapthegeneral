@@ -1,3 +1,4 @@
+import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
 import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
@@ -141,7 +142,14 @@ function spainEntries(lang: Lang): IndexEntry[] {
 
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
-  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es"), ...polandEntries("en"), ...polandEntries("pl")];
+  const rows = [
+    ...STATIC_EN,
+    ...spainEntries("en"),
+    ...spainEntries("es"),
+    ...gbSearchEntries(),
+    ...polandEntries("en"),
+    ...polandEntries("pl"),
+  ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
     seen.add(row.path);
