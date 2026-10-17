@@ -69,7 +69,7 @@ const websiteJsonLd = {
   alternateName: `${SITE.name} by ${SITE.legalName}`,
   url: `${SITE.url}/`,
   description: SITE.description,
-  inLanguage: ["en", "es", "pl", "fr"],
+  inLanguage: ["en", "es", "pl", "fr", "ja"],
   publisher: { "@id": ORG_ID },
   copyrightHolder: { "@id": ORG_ID },
   copyrightYear: 2026,
