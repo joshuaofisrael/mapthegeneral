@@ -69,7 +69,7 @@ export default async function ProvincePage({
   const municipalities = municipalitiesIn(province.slug);
   const emptyTotals = emptyTotalsIn(province.slug);
   const neighbors = alphaNeighbors(province.slug);
-  const sourceIds = ["rd-1117-2025", "ine-29005", "rd-806-2026", "loreg-jec", "rd-207-2023", "loreg-boe", "ine-2917", "jec-candidaturas"];
+  const sourceIds = ["rd-1117-2025", "ine-29005", "mpt-alcaldes-2023", "rd-806-2026", "loreg-jec", "rd-207-2023", "loreg-boe", "ine-2917", "jec-candidaturas"];
   if (province.cylProcuradores) sourceIds.push("boe-cyl-2026");
   if (province.islands?.some((island) => island.regionalDeputies)) sourceIds.push("boe-balears-2023");
 
@@ -181,7 +181,7 @@ export default async function ProvincePage({
       <section className="space-y-3">
         <h2 className="font-serif text-2xl font-semibold">{es ? "Elecciones municipales" : "Municipal elections"}</h2>
         <p className="text-sm leading-6">{copy.localElection}</p>
-        <GapNote label={copy.gap} text={copy.mayorGap} />
+        <p className="text-sm leading-6">{copy.mayorOnChild}</p>
         <GapNote label={copy.gap} text={copy.candidateGap} />
         {emptyTotals.length > 0 && (
           <GapNote
