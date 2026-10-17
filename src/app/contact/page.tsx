@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { Suspense } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";

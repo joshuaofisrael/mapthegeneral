@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { SpainFrame } from "@/components/SpainFrame";
 import { sourceById } from "@/data/spain/sources";
 import { ui } from "@/data/spain/ui";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { CITIES, PROVINCES } from "@/data/spain/places";
 import type { Lang } from "@/data/spain/types";
 import { communityPath, provincePath } from "@/lib/routes";

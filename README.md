@@ -20,7 +20,7 @@ The United States 2026 midterms are on the sibling site [Map the Midterms](https
 - Typed local modules under `src/data/`
 - GitHub Pages + GitHub Actions
 
-No cookies, no analytics, no accounts. Search runs in the browser against `public/search/index.json`.
+No cookies, no analytics, no accounts. Search runs in the browser against `public/search/index.json`. Internal links are normal anchors, so each page is a full document. After `next build`, the export drops Next’s per-route `index.txt` payloads so the Pages artifact stays under GitHub’s 1 GB site limit.
 
 ## Scripts
 
@@ -50,10 +50,19 @@ General election **Sunday, 29 November 2026**, called by **Real Decreto 806/2026
 | `/es/es/` and `/es/en/` | National pages |
 | `/es/[lang]/[community]/` | 17 autonomous communities plus Ceuta and Melilla |
 | `/es/[lang]/[community]/[province]/` | 50 provinces |
+| `/es/[lang]/[community]/[province]/[municipality]/` | Municipalities with a 2025 Total in INE table 29005 |
 | `/es/[lang]/elections/cortes-generales-2026/` | The called general election |
 | `/es/[lang]/parties/` `/candidates/` `/results/` `/faq/` `/sources/` | Indexes. Candidate profiles wait for the BOE proclamation |
 
-Municipality pages are not in this release. Population is the official Padrón at 1 January 2025 (Real Decreto 1117/2025). Facts that were not on a source read on 17 October 2026 are marked as gaps.
+Population is the official Padrón at 1 January 2025 (Real Decreto 1117/2025). Municipality figures are the 2025 Total column of [INE table 29005](https://www.ine.es/jaxiT3/Tabla.htm?t=29005). Summed by province, they match the decree’s annex. Ceuta and Melilla are the city pages, not a fake province. Six codes with an empty 2025 Total have no page: 12066 Gatova, 15026 Cesuras, 15063 Oza dos Ríos, 17122 Palmerola, 36011 Cerdedo, 36012 Cotobade.
+
+Regenerate the distilled file from the INE `csv_bd` download:
+
+```bash
+python3 scripts/extract-municipalities.py /path/to/29005.csv src/data/spain/municipalities.json
+```
+
+Facts that were not on a source read on 17 October 2026 are marked as gaps. That includes mayors, current regional cabinets, proclaimed candidacies, a 2027 calendar day, and postcodes. No official postcode-to-municipality file is wired into search.
 
 ## Contact
 

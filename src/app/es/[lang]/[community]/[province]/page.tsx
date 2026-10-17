@@ -1,8 +1,9 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { SpainFrame } from "@/components/SpainFrame";
+import { emptyTotalsIn, municipalitiesIn } from "@/data/spain/municipalities";
 import {
   PROVINCES,
   alphaNeighbors,
@@ -15,7 +16,7 @@ import { ui } from "@/data/spain/ui";
 import { formatNumber } from "@/lib/format";
 import { asLang } from "@/lib/lang";
 import { pageMetadata } from "@/lib/metadata";
-import { communityPath, provincePath, spainHome } from "@/lib/routes";
+import { communityPath, municipalityPath, provincePath, spainHome } from "@/lib/routes";
 
 export function generateStaticParams() {
   return ["es", "en"].flatMap((lang) =>
@@ -43,8 +44,8 @@ export async function generateMetadata({
     title: province.decreeName,
     description:
       lang === "es"
-        ? `${province.decreeName}: población del Padrón a 1 de enero de 2025, diputados del Real Decreto 806/2026 y senadores del artículo 3.2. Información no oficial.`
-        : `${province.decreeName}: municipal-register population at 1 January 2025, deputies in Royal Decree 806/2026, and senators under article 3.2. Unofficial information.`,
+        ? `${province.decreeName}: población del Padrón a 1 de enero de 2025, diputados del Real Decreto 806/2026 y municipios de la tabla 29005 del INE. Información no oficial.`
+        : `${province.decreeName}: municipal-register population at 1 January 2025, deputies in Royal Decree 806/2026, and municipalities from INE table 29005. Unofficial information.`,
     path,
     lang,
     alternatePath: provincePath(lang === "es" ? "en" : "es", communitySlug, provinceSlug),
@@ -65,8 +66,10 @@ export default async function ProvincePage({
   const es = lang === "es";
   const path = provincePath(lang, communitySlug, provinceSlug);
   const siblings = provincesIn(communitySlug).filter((item) => item.slug !== province.slug);
+  const municipalities = municipalitiesIn(province.slug);
+  const emptyTotals = emptyTotalsIn(province.slug);
   const neighbors = alphaNeighbors(province.slug);
-  const sourceIds = ["rd-1117-2025", "rd-806-2026", "loreg-jec", "rd-207-2023", "loreg-boe", "ine-2917", "jec-candidaturas"];
+  const sourceIds = ["rd-1117-2025", "ine-29005", "rd-806-2026", "loreg-jec", "rd-207-2023", "loreg-boe", "ine-2917", "jec-candidaturas"];
   if (province.cylProcuradores) sourceIds.push("boe-cyl-2026");
   if (province.islands?.some((island) => island.regionalDeputies)) sourceIds.push("boe-balears-2023");
 
@@ -177,13 +180,41 @@ export default async function ProvincePage({
 
       <section className="space-y-3">
         <h2 className="font-serif text-2xl font-semibold">{es ? "Elecciones municipales" : "Municipal elections"}</h2>
-        <p className="text-sm leading-6">
-          {es
-            ? "El Real Decreto 207/2023 convocó elecciones locales para el domingo 28 de mayo de 2023."
-            : "Royal Decree 207/2023 called local elections for Sunday, 28 May 2023."}
-        </p>
-        <GapNote label={copy.gap} text={copy.municipalityGap} />
+        <p className="text-sm leading-6">{copy.localElection}</p>
+        <GapNote label={copy.gap} text={copy.mayorGap} />
         <GapNote label={copy.gap} text={copy.candidateGap} />
+        {emptyTotals.length > 0 && (
+          <GapNote
+            label={copy.gap}
+            text={
+              es
+                ? `La tabla 29005 imprime estos códigos con el Total de 2025 vacío: ${emptyTotals.map((item) => `${item.code} ${item.name}`).join(", ")}. Esta entrega no publica una página cuando esa celda está vacía.`
+                : `Table 29005 prints these codes with an empty Total for 2025: ${emptyTotals.map((item) => `${item.code} ${item.name}`).join(", ")}. This release does not publish a page when that cell is empty.`
+            }
+          />
+        )}
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {copy.municipalities} ({formatNumber(municipalities.length, lang)})
+        </h2>
+        <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+          {municipalities.map((municipality) => (
+            <li key={municipality.code} className="break-inside-avoid py-1">
+              <Link
+                className="text-navy underline"
+                href={municipalityPath(lang, community.slug, province.slug, municipality.slug)}
+              >
+                {municipality.name}
+              </Link>
+              <span className="text-ink-muted">
+                {" "}
+                · {municipality.code} · {formatNumber(municipality.population, lang)}
+              </span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <p className="text-sm">

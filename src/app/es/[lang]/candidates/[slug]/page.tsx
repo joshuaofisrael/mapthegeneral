@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { SpainFrame } from "@/components/SpainFrame";

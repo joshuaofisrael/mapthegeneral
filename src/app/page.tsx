@@ -1,7 +1,8 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { SITE } from "@/data/site";
+import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
 import { pageMetadata } from "@/lib/metadata";
@@ -45,7 +46,7 @@ export default function HomePage() {
         </p>
         <div className="mt-4 max-w-2xl">
           <SearchBox
-            placeholder="Country, community, or province"
+            placeholder="Country, community, province, or municipality"
             postcodeNote={copy.postcodeGap}
           />
         </div>
@@ -63,8 +64,8 @@ export default function HomePage() {
             <p className="mt-2 text-sm leading-6 text-ink-muted">
               General election for the Congreso de los Diputados and the Senado, Sunday, 29 November
               2026, called by Real Decreto 806/2026. This release has the national page,{" "}
-              {COMMUNITIES.length} autonomous communities and cities, and 50 provinces, in Spanish and
-              English.
+              {COMMUNITIES.length} autonomous communities and cities, 50 provinces, and{" "}
+              {MUNICIPALITY_PAGE_COUNT.toLocaleString("en-US")} municipalities, in Spanish and English.
             </p>
             <p className="mt-3 flex flex-wrap gap-4 text-sm">
               <Link className="font-medium text-navy hover:underline" href="/es/en/">

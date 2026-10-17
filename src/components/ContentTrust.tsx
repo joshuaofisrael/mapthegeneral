@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { reportErrorHref } from "@/data/site";
 
 /** The sentence is fixed: "Unofficial information. Confirm with your official election office." */

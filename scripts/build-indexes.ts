@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
+import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
 
@@ -50,6 +51,8 @@ write("public/sitemap.xml", index);
 write("public/search/index.json", JSON.stringify(searchIndex()));
 write("public/search/indexnow-urls.json", JSON.stringify(paths.map((path) => absoluteUrl(path))));
 
+const indexed = searchIndex();
+const byPath = new Map(indexed.map((item) => [item.path, item]));
 const lines = [
   `# ${SITE.name}`,
   "",
@@ -58,11 +61,11 @@ const lines = [
   "## Pages",
   "",
   ...paths.map((path) => {
-    const entry = searchIndex().find((item) => item.path === path);
+    const entry = byPath.get(path);
     return `- [${entry?.title ?? path}](${absoluteUrl(path)})`;
   }),
   "",
-  `Spain in this release: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces. Municipality pages are not published yet.`,
+  `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
   "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",

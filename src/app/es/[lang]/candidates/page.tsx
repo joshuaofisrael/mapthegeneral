@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AnchorLink";
 import { GapNote } from "@/components/GapNote";
 import { SpainFrame } from "@/components/SpainFrame";
 import { PROVINCES, CITIES } from "@/data/spain/places";

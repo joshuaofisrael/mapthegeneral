@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "tsx scripts/build-indexes.ts",
     "build": "next build",
+    "postbuild": "node scripts/prune-export.mjs",
     "dev": "next dev",
     "start": "python3 -m http.server 3000 --directory out",
     "lint": "next lint",

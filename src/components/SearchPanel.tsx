@@ -8,7 +8,7 @@ export function SearchPanel({ postcodeNote }: { postcodeNote: string }) {
   return (
     <SearchBox
       initialQuery={params.get("q") ?? ""}
-      placeholder="Spain, Sevilla, Ceuta"
+      placeholder="Spain, Sevilla, Ceuta, municipality"
       postcodeNote={postcodeNote}
     />
   );
