@@ -3,6 +3,7 @@ import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteShell } from "@/components/SiteShell";
 import { SITE } from "@/data/site";
+import { registryLanguageCodes } from "@/lib/country-registry";
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -69,7 +70,7 @@ const websiteJsonLd = {
   alternateName: `${SITE.name} by ${SITE.legalName}`,
   url: `${SITE.url}/`,
   description: SITE.description,
-  inLanguage: ["en", "es"],
+  inLanguage: ["en", "es", ...registryLanguageCodes()],
   publisher: { "@id": ORG_ID },
   copyrightHolder: { "@id": ORG_ID },
   copyrightYear: 2026,

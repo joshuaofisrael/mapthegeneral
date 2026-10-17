@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
+import { countryCards } from "../src/lib/country-registry";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -26,24 +27,35 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths = paths.filter((path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/"));
+const cards = countryCards();
+const extraSitemaps = cards.flatMap((card) => card.sitemaps);
+const extraPrefixes = extraSitemaps.map((item) => item.prefix);
+const globalPaths = paths.filter(
+  (path) =>
+    !path.startsWith("/es/en/") &&
+    !path.startsWith("/es/es/") &&
+    !extraPrefixes.some((prefix) => path.startsWith(prefix)),
+);
 const enPaths = paths.filter((path) => path.startsWith("/es/en/"));
 const esPaths = paths.filter((path) => path.startsWith("/es/es/"));
 
-for (const [name, list] of [
+const sitemapGroups: [string, string[]][] = [
   ["global", globalPaths],
   ["es-en", enPaths],
   ["es-es", esPaths],
-] as const) {
+  ...extraSitemaps.map((item) => [item.name, paths.filter((path) => path.startsWith(item.prefix))] as [string, string[]]),
+];
+
+for (const [name, list] of sitemapGroups) {
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
 }
 
 const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
-  <sitemap><loc>${SITE.url}/sitemaps/es-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
-  <sitemap><loc>${SITE.url}/sitemaps/es-es.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+${sitemapGroups
+  .map((group) => `  <sitemap><loc>${SITE.url}/sitemaps/${group[0]}.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>`)
+  .join("\n")}
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -66,6 +78,7 @@ const lines = [
   }),
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
+  ...cards.map((card) => card.llmsLine),
   "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
