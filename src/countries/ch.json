@@ -1,0 +1,13 @@
+{
+  "code": "ch",
+  "name": "Switzerland",
+  "href": "/ch/",
+  "summary": "National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages and the 26 cantons, in German, French, Italian, and English. District and municipality pages are not in this release.",
+  "links": [
+    { "href": "/ch/de/", "label": "Deutsch" },
+    { "href": "/ch/fr/", "label": "Français" },
+    { "href": "/ch/it/", "label": "Italiano" },
+    { "href": "/ch/en/", "label": "English" },
+    { "href": "/ch/en/elections/nationalrat-2027/", "label": "24 October 2027" }
+  ]
+}

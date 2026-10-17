@@ -1,3 +1,4 @@
+import { switzerlandEntries } from "../../data/ch/search";
 import { germanyIndexEntries } from "../countries/de";
 import { italySearchEntries } from "../data/italy/entries";
 import { AU_INDEX_ENTRIES } from "../countries/au";
@@ -174,6 +175,7 @@ export function searchIndex(): IndexEntry[] {
     ...krIndexEntries(),
     ...germanyIndexEntries(),
     ...turkeySearchEntries(),
+    ...switzerlandEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
