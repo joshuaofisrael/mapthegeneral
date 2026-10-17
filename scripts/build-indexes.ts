@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
+import { PREFECTURES } from "../data/jp/places";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
@@ -26,14 +27,24 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths = paths.filter((path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/"));
+const globalPaths = paths.filter(
+  (path) =>
+    !path.startsWith("/es/en/") &&
+    !path.startsWith("/es/es/") &&
+    !path.startsWith("/jp/ja/") &&
+    !path.startsWith("/jp/en/"),
+);
 const enPaths = paths.filter((path) => path.startsWith("/es/en/"));
 const esPaths = paths.filter((path) => path.startsWith("/es/es/"));
+const jpJaPaths = paths.filter((path) => path.startsWith("/jp/ja/"));
+const jpEnPaths = paths.filter((path) => path.startsWith("/jp/en/"));
 
 for (const [name, list] of [
   ["global", globalPaths],
   ["es-en", enPaths],
   ["es-es", esPaths],
+  ["jp-ja", jpJaPaths],
+  ["jp-en", jpEnPaths],
 ] as const) {
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
@@ -44,6 +55,8 @@ const index = `<?xml version="1.0" encoding="UTF-8"?>
   <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-es.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+  <sitemap><loc>${SITE.url}/sitemaps/jp-ja.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+  <sitemap><loc>${SITE.url}/sitemaps/jp-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -67,11 +80,13 @@ const lines = [
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
   "",
+  `Japan: national pages and ${PREFECTURES.length} prefectures, in Japanese and English. Municipality pages are not in this release.`,
+  "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];
 write("public/llms.txt", lines.join("\n"));
 
 console.log(
-  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length})`,
+  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length}, jp-ja ${jpJaPaths.length}, jp-en ${jpEnPaths.length})`,
 );

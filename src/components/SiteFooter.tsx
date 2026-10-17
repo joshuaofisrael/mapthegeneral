@@ -32,6 +32,21 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="hover:underline" href="/jp/">
+                Japan
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="/jp/en/">
+                Japan in English
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="/jp/ja/">
+                日本
+              </Link>
+            </li>
+            <li>
               <Link className="hover:underline" href="/search/">
                 Search
               </Link>
