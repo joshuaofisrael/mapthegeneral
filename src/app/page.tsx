@@ -2,6 +2,7 @@ import Link from "@/components/AnchorLink";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { SITE } from "@/data/site";
+import { AU_COUNTRY } from "@/countries/au";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
@@ -77,6 +78,21 @@ export default function HomePage() {
               <Link className="font-medium text-navy hover:underline" href="/es/en/elections/cortes-generales-2026/">
                 29 November 2026
               </Link>
+            </p>
+          </li>
+          <li className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+            <h3 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href={AU_COUNTRY.href}>
+                {AU_COUNTRY.name}
+              </Link>
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">{AU_COUNTRY.blurb}</p>
+            <p className="mt-3 flex flex-wrap gap-4 text-sm">
+              {AU_COUNTRY.links.map((item) => (
+                <Link key={item.href} className="font-medium text-navy hover:underline" href={item.href}>
+                  {item.label}
+                </Link>
+              ))}
             </p>
           </li>
         </ul>

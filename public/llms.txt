@@ -16428,7 +16428,23 @@
 - [Biel](https://mapthegeneral.com/es/es/aragon/zaragoza/biel/)
 - [Marracos](https://mapthegeneral.com/es/es/aragon/zaragoza/marracos/)
 - [Villamayor de Gállego](https://mapthegeneral.com/es/es/aragon/zaragoza/villamayor-de-gallego/)
+- [Australia](https://mapthegeneral.com/au/)
+- [Australia](https://mapthegeneral.com/au/en/)
+- [Elections in Australia](https://mapthegeneral.com/au/en/elections/)
+- [Next federal election](https://mapthegeneral.com/au/en/elections/federal-next/)
+- [Results](https://mapthegeneral.com/au/en/results/)
+- [Sources](https://mapthegeneral.com/au/en/sources/)
+- [FAQ](https://mapthegeneral.com/au/en/faq/)
+- [New South Wales](https://mapthegeneral.com/au/en/new-south-wales/)
+- [Victoria](https://mapthegeneral.com/au/en/victoria/)
+- [Queensland](https://mapthegeneral.com/au/en/queensland/)
+- [Western Australia](https://mapthegeneral.com/au/en/western-australia/)
+- [South Australia](https://mapthegeneral.com/au/en/south-australia/)
+- [Tasmania](https://mapthegeneral.com/au/en/tasmania/)
+- [Australian Capital Territory](https://mapthegeneral.com/au/en/australian-capital-territory/)
+- [Northern Territory](https://mapthegeneral.com/au/en/northern-territory/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
+Australia: 15 English pages, including 8 states and territories. Council pages are not in this release.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml
