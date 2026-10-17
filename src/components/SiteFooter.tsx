@@ -1,7 +1,5 @@
 import Link from "@/components/AnchorLink";
-import { AU_COUNTRY } from "@/countries/au";
 import { LEGAL_NAV, SITE } from "@/data/site";
-import { alphaJurisdictions } from "@/data/au/places";
 import { alphaCommunities } from "@/data/spain/places";
 
 const COPYRIGHT_YEAR = 2026;
@@ -31,16 +29,6 @@ export function SiteFooter() {
             <li>
               <Link className="hover:underline" href="/es/es/">
                 España en español
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href={AU_COUNTRY.href}>
-                {AU_COUNTRY.name}
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/au/en/">
-                Australia in English
               </Link>
             </li>
             <li>
@@ -76,17 +64,6 @@ export function SiteFooter() {
               <span key={community.slug}>
                 <Link className="hover:underline" href={`/es/en/${community.slug}/`}>
                   {community.officialName}
-                </Link>
-                {index < list.length - 1 ? " · " : ""}
-              </span>
-            ))}
-          </p>
-          <p className="mt-3 text-xs leading-5 text-white/70">
-            Australia:{" "}
-            {alphaJurisdictions().map((item, index, list) => (
-              <span key={item.slug}>
-                <Link className="hover:underline" href={`/au/en/${item.slug}/`}>
-                  {item.officialName}
                 </Link>
                 {index < list.length - 1 ? " · " : ""}
               </span>

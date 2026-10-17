@@ -1,4 +1,6 @@
 import { AU_INDEX_ENTRIES } from "../countries/au";
+import { indexEntries as mexicoIndexEntries } from "../countries/mx";
+import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
 import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
@@ -9,6 +11,7 @@ import {
   communityBySlug,
   provinceBySlug,
 } from "../data/spain/places";
+import { polandEntries } from "../../data/pl/paths";
 import type { Lang } from "../data/spain/types";
 
 export const LANGS: Lang[] = ["es", "en"];
@@ -36,14 +39,15 @@ export function municipalityPath(
 
 export type IndexEntry = {
   path: string;
-  lang: Lang | "en-only";
+  lang: string;
   title: string;
   kind: string;
   text: string;
 };
 
 const STATIC_EN: IndexEntry[] = [
-  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain elections" },
+  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland elections" },
+  { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
   { path: "/disclaimer/", lang: "en-only", title: "Disclaimer", kind: "legal", text: "unofficial nonpartisan" },
@@ -138,9 +142,23 @@ function spainEntries(lang: Lang): IndexEntry[] {
   return [...fixed, ...communities, ...provinces, ...cities, ...municipalities];
 }
 
+/** Country modules under src/countries/. Keep every country's entries. */
+function registryEntries(): IndexEntry[] {
+  return [...mexicoIndexEntries()];
+}
+
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
-  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es"), ...AU_INDEX_ENTRIES];
+  const rows = [
+    ...STATIC_EN,
+    ...spainEntries("en"),
+    ...spainEntries("es"),
+    ...gbSearchEntries(),
+    ...polandEntries("en"),
+    ...polandEntries("pl"),
+    ...registryEntries(),
+    ...AU_INDEX_ENTRIES,
+  ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
     seen.add(row.path);
