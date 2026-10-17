@@ -2,6 +2,7 @@ import Link from "@/components/AnchorLink";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { SITE } from "@/data/site";
+import { KR_REGISTRY } from "@/data/countries/kr";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
@@ -76,6 +77,25 @@ export default function HomePage() {
               </Link>
               <Link className="font-medium text-navy hover:underline" href="/es/en/elections/cortes-generales-2026/">
                 29 November 2026
+              </Link>
+            </p>
+          </li>
+          <li className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+            <h3 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href={KR_REGISTRY.href}>
+                {KR_REGISTRY.label}
+              </Link>
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">{KR_REGISTRY.summary}</p>
+            <p className="mt-3 flex flex-wrap gap-4 text-sm">
+              <Link className="font-medium text-navy hover:underline" href="/kr/en/">
+                English
+              </Link>
+              <Link className="font-medium text-navy hover:underline" href="/kr/ko/">
+                한국어
+              </Link>
+              <Link className="font-medium text-navy hover:underline" href={KR_REGISTRY.electionHref}>
+                {KR_REGISTRY.electionLabel}
               </Link>
             </p>
           </li>
