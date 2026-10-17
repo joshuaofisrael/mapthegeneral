@@ -1,0 +1,20 @@
+{
+  "code": "au",
+  "name": "Australia",
+  "href": "/au/",
+  "summary": "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page and eight state and territory pages, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
+  "links": [
+    {
+      "href": "/au/en/",
+      "label": "English"
+    },
+    {
+      "href": "/au/en/elections/federal-next/",
+      "label": "Next federal election"
+    },
+    {
+      "href": "/au/en/victoria/",
+      "label": "Victoria, 28 November 2026"
+    }
+  ]
+}

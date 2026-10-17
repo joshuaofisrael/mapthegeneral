@@ -1,0 +1,20 @@
+{
+  "code": "ca",
+  "name": "Canada",
+  "href": "/ca/",
+  "summary": "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page and 13 provinces and territories, in English and French.",
+  "links": [
+    {
+      "href": "/ca/en/",
+      "label": "English"
+    },
+    {
+      "href": "/ca/fr/",
+      "label": "Français"
+    },
+    {
+      "href": "/ca/en/elections/federal-2029/",
+      "label": "15 October 2029"
+    }
+  ]
+}

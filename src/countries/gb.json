@@ -1,0 +1,10 @@
+{
+  "code": "gb",
+  "name": "United Kingdom",
+  "href": "/gb/",
+  "summary": "UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.",
+  "links": [
+    { "href": "/gb/en/", "label": "English" },
+    { "href": "/gb/en/elections/general-election/", "label": "No later than 15 August 2029" }
+  ]
+}

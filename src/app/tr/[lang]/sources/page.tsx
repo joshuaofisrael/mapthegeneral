@@ -56,6 +56,12 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
           ? "Posta kodu dosyası eklenmedi. PTT’nin sorgu ekranı açık bir toplu dosya olarak bu sürüme alınmadı."
           : "No postcode file was added. PTT’s query screen was not brought into this release as an open bulk file."}
       </p>
+      <h2 className="mt-6 font-serif text-xl font-semibold">{tr ? "Lisans ve kaynak gösterme" : "Licences and attribution"}</h2>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        {tr
+          ? "Kanunlar, Anayasa metni ve Yüksek Seçim Kurulu kararları, 5846 sayılı Fikir ve Sanat Eserleri Kanununun 31. maddesi kapsamında resmî metinlerdir. Nüfus verileri için kaynak: TÜİK (Türkiye İstatistik Kurumu), okuma tarihi her kayıtta yazılıdır. Diğer resmî kaynaklardaki olgular kendi sözlerimizle özetlenir ve her sayfada kaynak gösterilir. Görsel, logo veya amblem kullanılmaz."
+          : "Statutes, the text of the Constitution and Supreme Election Council decisions are official texts under article 31 of Law No. 5846 on Intellectual and Artistic Works. Population figures: source TÜİK (Turkish Statistical Institute), with the date read given on each record. Facts from the other official sources are summarised in our own words and cited on each page. No images, logos or emblems are used."}
+      </p>
     </TurkeyFrame>
   );
 }
