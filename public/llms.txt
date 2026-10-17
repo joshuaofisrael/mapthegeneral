@@ -17245,8 +17245,29 @@
 - [Zürich](https://mapthegeneral.com/ch/en/zh/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
-Poland: national pages and 16 voivodeships, in Polish and English. Powiat and gmina pages are not in this release.
 
-United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.
+Australia (https://mapthegeneral.com/au/): The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page and eight state and territory pages, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.
+
+Canada (https://mapthegeneral.com/ca/): Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page and 13 provinces and territories, in English and French.
+
+Switzerland (https://mapthegeneral.com/ch/): National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages and the 26 cantons, in German, French, Italian, and English. District and municipality pages are not in this release.
+
+Germany (https://mapthegeneral.com/de/): The Federal Returning Officer’s page for the election of the 22nd German Bundestag does not set a polling day. It places that day between 26 January 2029 and 25 March 2029. This release has the national page and the 16 Länder, in German and English.
+
+France (https://mapthegeneral.com/fr/): Presidential election on Sunday, 18 April 2027, with a runoff on Sunday, 2 May 2027, as published by Service-Public. This release has the national page and 18 regions, in French and English. Department and commune pages are not in this release.
+
+United Kingdom (https://mapthegeneral.com/gb/): UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.
+
+Italy (https://mapthegeneral.com/it/): Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree was read on 17 October 2026, so this release does not print a polling day. National page and 20 regions, in Italian and English. Sub-regional and municipality pages are not in this release.
+
+Japan (https://mapthegeneral.com/jp/): House of Representatives election of 8 February 2026, House of Councillors election of 20 July 2025, and 47 prefectures, in Japanese and English. No polling day for the next national election was proclaimed in the sources read on 17 October 2026.
+
+South Korea (https://mapthegeneral.com/kr/): National Assembly election on 12 April 2028, from the 22nd term printed by the National Assembly minutes index and article 34 of the Public Official Election Act. This release has the national pages and 16 upper-level local governments, in Korean and English.
+
+Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page and the 32 entidades, in Spanish and English. Municipality pages are not in this release.
+
+Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. This release has the national page and 16 voivodeships, in Polish and English. Powiat and gmina pages are not in this release.
+
+Turkey (https://mapthegeneral.com/tr/): Presidential and parliamentary elections are held on the same day every five years. The last joint election was 14 May 2023. The next ordinary election falls in 2028; a decision read on 17 October 2026 did not print the polling day. This release has the national page and 81 provinces, in Turkish and English.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml
