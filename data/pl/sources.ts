@@ -1,0 +1,144 @@
+import type { SourceRef } from "./types";
+
+const READ = "2026-10-17";
+
+export const SOURCES: SourceRef[] = [
+  {
+    id: "constitution",
+    name: "Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r. (Dz. U. 1997 nr 78 poz. 483), tekst na sejm.gov.pl",
+    url: "https://www.sejm.gov.pl/prawo/konst/polski/4.htm",
+    readOn: READ,
+  },
+  {
+    id: "constitution-eli",
+    name: "Konstytucja Rzeczypospolitej Polskiej, tekst ustawy (Dz. U. 1997 nr 78 poz. 483) w api.sejm.gov.pl",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/1997/483/text/U/D19970483Lj.pdf",
+    readOn: READ,
+  },
+  {
+    id: "kodeks",
+    name: "Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 1 września 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy – Kodeks wyborczy (Dz. U. 2026 poz. 1261)",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf",
+    readOn: READ,
+  },
+  {
+    id: "sejm-first-sitting",
+    name: "Sejm Rzeczypospolitej Polskiej, sprawozdanie z 1. dnia 1. posiedzenia Sejmu X kadencji, 13 listopada 2023 r.",
+    url: "https://www.sejm.gov.pl/sejm10.nsf/wypowiedz.xsp?dzien=1&posiedzenie=1&wyp=0",
+    readOn: READ,
+  },
+  {
+    id: "sejm-senior",
+    name: "Sejm Rzeczypospolitej Polskiej, informacja Marszałka Seniora o zwołaniu pierwszego posiedzenia Sejmu X kadencji na 13 listopada 2023 r.",
+    url: "https://www.sejm.gov.pl/Sejm9.nsf/komunikat.xsp?documentId=3E6B15D3956E4E99C1258A6100428CEE",
+    readOn: READ,
+  },
+  {
+    id: "sejm-marshal",
+    name: "Sejm Rzeczypospolitej Polskiej, komunikat „Sejm wybrał Włodzimierza Czarzastego na funkcję Marszałka Sejmu RP”",
+    url: "https://www.sejm.gov.pl/sejm10.nsf/komunikat.xsp?documentId=E7F57A11C3CEAA02C1258D46003D2E77&symbol=M_WYDARZENIA_KOMUNIKAT",
+    readOn: READ,
+  },
+  {
+    id: "sejm-marshal-half-year",
+    name: "Sejm Rzeczypospolitej Polskiej, komunikat z 18 maja 2026 r. o pół roku sprawowania funkcji Marszałka Sejmu przez Włodzimierza Czarzastego",
+    url: "https://www.sejm.gov.pl/sejm10.nsf/komunikat.xsp?documentId=5008BBE52A78DE89C1258DFB005211B2",
+    readOn: READ,
+  },
+  {
+    id: "senate-marshal",
+    name: "Senat Rzeczypospolitej Polskiej, aktualności „Marszałek i Prezydium”",
+    url: "https://www.senat.gov.pl/aktualnoscilista/marszalek-i-prezydium/",
+    readOn: READ,
+  },
+  {
+    id: "pkw",
+    name: "Państwowa Komisja Wyborcza",
+    url: "https://pkw.gov.pl/",
+    readOn: READ,
+  },
+  {
+    id: "pkw-sejm-2023",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 17 października 2023 r. o wynikach wyborów do Sejmu Rzeczypospolitej Polskiej przeprowadzonych w dniu 15 października 2023 r.",
+    url: "https://www.pkw.gov.pl/uploaded_files/1697617008_obwieszczenie-sejm.pdf",
+    readOn: READ,
+  },
+  {
+    id: "pkw-senat-2023",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 17 października 2023 r. o wynikach wyborów do Senatu Rzeczypospolitej Polskiej przeprowadzonych w dniu 15 października 2023 r.",
+    url: "https://www.pkw.gov.pl/uploaded_files/1697634760_obwieszczenie-senat.pdf",
+    readOn: READ,
+  },
+  {
+    id: "pkw-president-2025",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 2 czerwca 2025 r. o wynikach ponownego głosowania i wyniku wyborów Prezydenta Rzeczypospolitej Polskiej",
+    url: "https://pkw.gov.pl/uploaded_files/1748873119_obwieszczenie-pkw-o-wynikach-ponowne-glosowanie.pdf",
+    readOn: READ,
+  },
+  {
+    id: "president-oath",
+    name: "Oficjalna strona Prezydenta Rzeczypospolitej Polskiej, „Zaprzysiężenie Prezydenta RP Karola Nawrockiego”, 6 sierpnia 2025 r.",
+    url: "https://www.prezydent.pl/aktualnosci/wydarzenia/zaprzysiezenie-prezydenta-rp-karola-nawrockiego-,104583",
+    readOn: READ,
+  },
+  {
+    id: "zn-oath",
+    name: "Zgromadzenie Narodowe, sprawozdanie stenograficzne z 6 sierpnia 2025 r.",
+    url: "https://orka2.sejm.gov.pl/StenoInter10.nsf/0/9777162960E4CAA4C1258CE5002C82B2/%24File/ZN_06_08_2025_ksiazka.pdf",
+    readOn: READ,
+  },
+  {
+    id: "prime-minister",
+    name: "Kancelaria Prezesa Rady Ministrów, Skład Rady Ministrów",
+    url: "https://www.gov.pl/web/premier/sklad-rady-ministrow",
+    readOn: READ,
+  },
+  {
+    id: "mswia-jst",
+    name: "Ministerstwo Spraw Wewnętrznych i Administracji, Baza JST, stan na 1 stycznia 2026 r.",
+    url: "https://www.gov.pl/web/mswia/baza-jst",
+    readOn: READ,
+  },
+  {
+    id: "teryt",
+    name: "Główny Urząd Statystyczny, Rejestr TERYT, wykaz jednostek od 1 stycznia 2026 r.",
+    url: "https://eteryt.stat.gov.pl/",
+    readOn: READ,
+  },
+  {
+    id: "samorzad-woj",
+    name: "Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 27 maja 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o samorządzie województwa (Dz. U. 2026 poz. 720)",
+    url: "https://dziennikustaw.gov.pl/D2026000072001.pdf",
+    readOn: READ,
+  },
+  {
+    id: "pkw-rady-2024",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 9 kwietnia 2024 r. o zbiorczych wynikach wyborów do rad na obszarze kraju, przeprowadzonych w dniu 7 kwietnia 2024 r.",
+    url: "https://samorzad2024.pkw.gov.pl/samorzad2024/statics/PKW%5FAKTUALNOSCI/uploaded%5Ffiles/1712713138%5Fobwieszczenie-pkw-rady-final.pdf",
+    readOn: READ,
+  },
+  {
+    id: "pkw-wojt-2024",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 9 kwietnia 2024 r. o zbiorczych wynikach wyborów wójtów, burmistrzów i prezydentów miast na obszarze kraju, przeprowadzonych w dniu 7 kwietnia 2024 r.",
+    url: "https://www.pkw.gov.pl/uploaded_files/1712751143_obwieszczenie-wbp-pkw-tura-1-final.pdf",
+    readOn: READ,
+  },
+  {
+    id: "poczta",
+    name: "Poczta Polska, System Pocztowych Numerów Adresowych (PNA), BIP",
+    url: "https://bip.poczta-polska.pl/bez-kategorii/system-pocztowych-numerow-adresowych-pna/",
+    readOn: READ,
+  },
+];
+
+const byId = new Map(SOURCES.map((source) => [source.id, source]));
+
+export function sourceById(id: string): SourceRef {
+  const source = byId.get(id);
+  if (!source) throw new Error(`Missing Poland source ${id}`);
+  return source;
+}
+
+export function sourcesById(ids: string[]): SourceRef[] {
+  return ids.map((id) => sourceById(id));
+}

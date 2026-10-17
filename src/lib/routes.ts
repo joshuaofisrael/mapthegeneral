@@ -1,3 +1,7 @@
+import { italySearchEntries } from "../data/italy/entries";
+import { AU_INDEX_ENTRIES } from "../countries/au";
+import { indexEntries as mexicoIndexEntries } from "../countries/mx";
+import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
 import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
@@ -9,7 +13,10 @@ import {
   provinceBySlug,
 } from "../data/spain/places";
 import { canadaIndexEntries } from "../countries/ca";
+import { franceIndexEntries } from "../../data/fr/paths";
+import { polandEntries } from "../../data/pl/paths";
 import type { Lang } from "../data/spain/types";
+import { japanEntries } from "../countries/jp";
 
 export const LANGS: Lang[] = ["es", "en"];
 
@@ -36,14 +43,15 @@ export function municipalityPath(
 
 export type IndexEntry = {
   path: string;
-  lang: Lang | "fr" | "en-only";
+  lang: string;
   title: string;
   kind: string;
   text: string;
 };
 
 const STATIC_EN: IndexEntry[] = [
-  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain elections" },
+  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland france japan elections" },
+  { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
   { path: "/disclaimer/", lang: "en-only", title: "Disclaimer", kind: "legal", text: "unofficial nonpartisan" },
@@ -51,6 +59,7 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/terms/", lang: "en-only", title: "Terms of Use", kind: "legal", text: "terms" },
   { path: "/contact/", lang: "en-only", title: "Contact", kind: "legal", text: "contact error report" },
   { path: "/es/", lang: "en-only", title: "Spain", kind: "country", text: "España Spain elecciones generales" },
+  { path: "/jp/", lang: "en-only", title: "Japan", kind: "country", text: "日本 Japan 衆議院 参議院" },
 ];
 
 function spainEntries(lang: Lang): IndexEntry[] {
@@ -138,9 +147,28 @@ function spainEntries(lang: Lang): IndexEntry[] {
   return [...fixed, ...communities, ...provinces, ...cities, ...municipalities];
 }
 
+/** Country modules under src/countries/. Keep every country's entries. */
+function registryEntries(): IndexEntry[] {
+  return [...mexicoIndexEntries()];
+}
+
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
-  const rows = [...STATIC_EN, ...spainEntries("en"), ...spainEntries("es"), ...canadaIndexEntries()];
+  const rows = [
+    ...STATIC_EN,
+    ...spainEntries("en"),
+    ...spainEntries("es"),
+    ...gbSearchEntries(),
+    ...polandEntries("en"),
+    ...polandEntries("pl"),
+    ...registryEntries(),
+    ...AU_INDEX_ENTRIES,
+    ...franceIndexEntries(),
+    ...japanEntries("en"),
+    ...japanEntries("ja"),
+    ...italySearchEntries(),
+    ...canadaIndexEntries(),
+  ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
     seen.add(row.path);

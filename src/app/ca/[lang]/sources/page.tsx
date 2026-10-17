@@ -54,6 +54,16 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
           ? `${SOURCES.length} sources. Les pages de municipalités et de circonscriptions ne sont pas dans cette livraison.`
           : `${SOURCES.length} sources. Municipality and electoral-district pages are not in this release.`}
       </p>
+      <h2 className="mt-6 font-serif text-xl font-semibold">{fr ? "Licences et attribution" : "Licences and attribution"}</h2>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        {fr ? "Contient de l’information visée par la " : "Contains information licensed under the "}
+        <a className="underline" href={fr ? "https://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada" : "https://open.canada.ca/en/open-government-licence-canada"}>
+          {fr ? "Licence du gouvernement ouvert – Canada" : "Open Government Licence – Canada"}
+        </a>
+        {fr
+          ? " (données de Statistique Canada). Les faits tirés d’Élections Canada, du Parlement, des lois et des sites provinciaux sont résumés dans nos propres mots, avec la source citée pour chaque page. Aucune image, aucun logo ni aucune armoirie n’est reproduit. Map the General n’est affilié à aucun de ces organismes et n’a pas leur approbation."
+          : " (Statistics Canada data). Facts from Elections Canada, Parliament, statutes and provincial sites are summarised in our own words, with the source cited for each page. No images, logos or coats of arms are reproduced. Map the General is not affiliated with any of these bodies, and they do not endorse it."}
+      </p>
     </CanadaFrame>
   );
 }

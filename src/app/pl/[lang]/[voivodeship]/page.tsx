@@ -1,0 +1,166 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { GapNote } from "@/components/GapNote";
+import { PolandFrame } from "../../frame";
+import { alphaNeighbors, alphaVoivodeships, voivodeshipBySlug } from "../../../../../data/pl/places";
+import { sourceById, sourcesById } from "../../../../../data/pl/sources";
+import { ui } from "../../../../../data/pl/ui";
+import { polandMetadata } from "../../../../../data/pl/seo";
+import { polandHome, voivodeshipPath } from "../../../../../data/pl/paths";
+import type { Lang } from "../../../../../data/pl/types";
+
+function asLang(value: string): Lang {
+  if (value !== "pl" && value !== "en") notFound();
+  return value;
+}
+
+export function generateStaticParams() {
+  return ["pl", "en"].flatMap((lang) => alphaVoivodeships().map((item) => ({ lang, voivodeship: item.slug })));
+}
+export const dynamicParams = false;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; voivodeship: string }> }) {
+  const { lang: raw, voivodeship: slug } = await params;
+  const lang = asLang(raw);
+  const item = voivodeshipBySlug(slug);
+  if (!item) return {};
+  const path = voivodeshipPath(lang, slug);
+  return polandMetadata({
+    title: item.name,
+    description:
+      lang === "pl"
+        ? `${item.name}: sejmik, wojewoda, posłowie z załącznika nr 1 do Kodeksu wyborczego. Informacja nieoficjalna.`
+        : `${item.name}: sejmik, wojewoda, and deputies from annex 1 of the electoral code. Unofficial information.`,
+    path,
+    lang,
+    alternatePath: voivodeshipPath(lang === "pl" ? "en" : "pl", slug),
+  });
+}
+
+export default async function VoivodeshipPage({ params }: { params: Promise<{ lang: string; voivodeship: string }> }) {
+  const { lang: raw, voivodeship: slug } = await params;
+  const lang = asLang(raw);
+  const item = voivodeshipBySlug(slug);
+  if (!item) notFound();
+  const copy = ui(lang);
+  const pl = lang === "pl";
+  const path = voivodeshipPath(lang, slug);
+  const neighbors = alphaNeighbors(slug);
+  const pkw = sourceById("pkw");
+  const seatNoun = item.sejmConstituencies === 1 ? (pl ? "okręg" : "constituency") : pl ? "okręgi" : "constituencies";
+  return (
+    <PolandFrame
+      lang={lang}
+      path={path}
+      crumbs={[
+        { name: copy.home, path: "/" },
+        { name: copy.poland, path: "/pl/" },
+        { name: pl ? "Polska" : "Poland", path: polandHome(lang) },
+        { name: item.name, path },
+      ]}
+      eyebrow={pl ? "Województwo" : "Voivodeship"}
+      title={item.name}
+      lede={
+        pl
+          ? "Samorząd województwa ma sejmik i zarząd. Wojewoda jest przedstawicielem Rady Ministrów. To są różne urzędy."
+          : "The voivodeship’s self-government has a sejmik and an executive board. The wojewoda represents the Council of Ministers. They are different offices."
+      }
+      officeHref={pkw.url}
+      officeLabel="Państwowa Komisja Wyborcza"
+      sources={sourcesById(["constitution", "kodeks", "samorzad-woj", "pkw-rady-2024", "mswia-jst", "teryt"])}
+    >
+      <dl className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-xl border border-line bg-paper-card p-4">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-ink-muted">{copy.deputies}</dt>
+          <dd className="mt-1 font-serif text-2xl">{item.sejmSeats}</dd>
+          <dd className="mt-1 text-sm text-ink-muted">
+            {pl
+              ? "Suma liczb z załącznika nr 1 do Kodeksu wyborczego (Dz. U. 2026 poz. 1261) dla okręgów, które nazywają to województwo."
+              : "Sum of the figures in annex 1 of the electoral code (Dziennik Ustaw 2026 item 1261) for constituencies that name this voivodeship."}
+          </dd>
+        </div>
+        <div className="rounded-xl border border-line bg-paper-card p-4">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-ink-muted">{copy.constituencies}</dt>
+          <dd className="mt-1 font-serif text-2xl">
+            {item.sejmConstituencies} {seatNoun}
+          </dd>
+          <dd className="mt-1 text-sm text-ink-muted">
+            {pl
+              ? "Granic okręgów ta strona nie rozpisuje."
+              : "This page does not reprint constituency boundaries."}
+          </dd>
+        </div>
+      </dl>
+
+      <section className="prose-legal">
+        <h2>{copy.government}</h2>
+        <p>
+          {pl
+            ? "Artykuł 15 ustawy o samorządzie województwa, w tekście jednolitym Dz. U. 2026 poz. 720, mówi, że organami samorządu województwa są sejmik województwa i zarząd województwa. Artykuł 16 ust. 1 nazywa sejmik organem stanowiącym i kontrolnym. Artykuł 31 ust. 1 i 2 nazywa zarząd organem wykonawczym i mówi, że w pięcioosobowym zarządzie marszałek województwa jest przewodniczącym. Artykuł 32 ust. 1 i 2 mówi, że sejmik wybiera zarząd, w tym marszałka, i że marszałka wybiera bezwzględną większością głosów ustawowego składu, w głosowaniu tajnym."
+            : "Article 15 of the voivodeship self-government act, consolidated text Dziennik Ustaw 2026 item 720, says the organs of voivodeship self-government are the sejmik województwa and the zarząd województwa. Article 16(1) calls the sejmik the constitutive and supervisory body. Article 31(1) and (2) calls the zarząd the executive and says that, on a five-member board, the marszałek województwa is the chair. Article 32(1) and (2) says the sejmik elects the board, including the marshal, and elects the marshal by an absolute majority of the statutory membership, in a secret ballot."}
+        </p>
+        <p>
+          {pl
+            ? "Artykuł 152 ust. 1 Konstytucji mówi, że przedstawicielem Rady Ministrów w województwie jest wojewoda. Wojewoda nie jest marszałkiem i nie jest wybierany w wyborach do sejmiku."
+            : "Article 152(1) of the Constitution says the wojewoda is the representative of the Council of Ministers in the voivodeship. The wojewoda is not the marshal and is not chosen in the sejmik election."}
+        </p>
+        <p>
+          {pl
+            ? "Odpowiedniki ogólnokrajowe, w tym samym tekście Konstytucji: władzę ustawodawczą sprawują Sejm i Senat (art. 95 ust. 1); Sejm liczy 460 posłów (art. 96 ust. 1); Senat liczy 100 senatorów (art. 97 ust. 1). Prezes Rady Ministrów jest wymieniony na stronie krajowej według składu opublikowanego przez Kancelarię Prezesa Rady Ministrów. Ta strona nie ustawia sejmiku, marszałka i wojewody w jednym szeregu."
+            : "National counterparts, in the same constitutional text: legislative power is exercised by the Sejm and the Senate (article 95(1)); the Sejm has 460 deputies (article 96(1)); the Senate has 100 senators (article 97(1)). The Prime Minister is named on the national page from the composition published by the Chancellery of the Prime Minister. This page does not line the sejmik, the marshal and the wojewoda up as one office."}
+        </p>
+        <GapNote label={copy.gap} text={copy.officeholderGap} />
+      </section>
+
+      <section className="prose-legal">
+        <h2>{copy.lastElection}</h2>
+        <p>
+          {pl
+            ? "Obwieszczenie PKW z 9 kwietnia 2024 r. podaje zbiorcze wyniki wyborów do rad z 7 kwietnia 2024 r., w tym do 16 sejmików, i 552 wybranych radnych sejmików w skali kraju. Nie rozbija tej liczby na to województwo w akapicie odczytanym na tę stronę. Artykuł 16 ust. 3 ustawy określa liczbę radnych wzorem od liczby mieszkańców. Tej liczby ta strona nie podstawia."
+            : "The Commission’s announcement of 9 April 2024 gives the aggregate results of the council elections of 7 April 2024, including elections to 16 sejmiki, and 552 sejmik councillors elected nationally. The passage read for this page does not split that figure for this voivodeship. Article 16(3) of the act sets the number of councillors from the number of inhabitants. This page does not plug a population figure into that rule."}
+        </p>
+        <GapNote label={copy.gap} text={copy.populationGap} />
+        <h2>{copy.nextElection}</h2>
+        <p>
+          {pl
+            ? "Artykuł 16 ust. 2 mówi, że kadencja sejmiku trwa 5 lat, licząc od dnia wyborów. Artykuł 371 § 1 Kodeksu wyborczego mówi, że wybory do rad zarządza się nie wcześniej niż na 4 miesiące i nie później niż na 3 miesiące przed upływem kadencji, a datę wyznacza się na dzień wolny od pracy nie wcześniej niż na 30 dni i nie później niż na 7 dni przed tym upływem. Ostatnie wybory w cytowanym obwieszczeniu odbyły się 7 kwietnia 2024 r."
+            : "Article 16(2) says a sejmik’s term lasts five years, counting from election day. Article 371 § 1 of the electoral code says elections to councils are ordered no earlier than four months and no later than three months before the term ends, and the date is a non-working day no earlier than 30 days and no later than seven days before that end. The last election in the announcement cited here was held on 7 April 2024."}
+        </p>
+        <GapNote label={copy.gap} text={copy.nextLocalGap} />
+        <h2>{pl ? "Powiaty i gminy" : "Powiats and gminas"}</h2>
+        <p>
+          {pl
+            ? "Artykuł 164 ust. 1 Konstytucji nazywa gminę podstawową jednostką samorządu. Strona MSWiA podaje na 1 stycznia 2026 r. 314 powiatów i 2 479 gmin w całym kraju. TERYT liczy 380 powiatów, bo wlicza 66 miast na prawach powiatu. Żadne z tych źródeł, w tekście odczytanym na tę stronę, nie podaje liczby powiatów ani gmin tego województwa."
+            : "Article 164(1) of the Constitution calls the gmina the basic unit of self-government. The Interior Ministry page gives, at 1 January 2026, 314 powiats and 2,479 gminas in the whole country. TERYT counts 380 powiats because it includes the 66 cities with powiat status. Neither source, in the text read for this page, gives this voivodeship’s powiat or gmina count."}
+        </p>
+        <GapNote label={copy.gap} text={copy.localGap} />
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
+        <ul className="mt-3 space-y-2 text-sm">
+          {neighbors.prev && (
+            <li>
+              <Link className="text-navy underline" href={voivodeshipPath(lang, neighbors.prev.slug)}>
+                {neighbors.prev.name}
+              </Link>
+            </li>
+          )}
+          {neighbors.next && (
+            <li>
+              <Link className="text-navy underline" href={voivodeshipPath(lang, neighbors.next.slug)}>
+                {neighbors.next.name}
+              </Link>
+            </li>
+          )}
+        </ul>
+        <p className="mt-4 text-sm">
+          {copy.parent}:{" "}
+          <Link className="text-navy underline" href={polandHome(lang)}>
+            {pl ? "Polska" : "Poland"}
+          </Link>
+        </p>
+      </section>
+    </PolandFrame>
+  );
+}

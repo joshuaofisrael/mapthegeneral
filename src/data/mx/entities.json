@@ -1,0 +1,524 @@
+[
+  {
+    "slug": "aguascalientes",
+    "code": "01",
+    "name": "Aguascalientes",
+    "abbr": "Ags.",
+    "population": 1425607,
+    "municipalities": 11,
+    "ine": {
+      "heading": "Aguascalientes",
+      "gubernatura": 1,
+      "dipMr": 18,
+      "dipRp": 9,
+      "presidencias": 11,
+      "sindicaturas": 11,
+      "regidurias": 87
+    }
+  },
+  {
+    "slug": "baja-california",
+    "code": "02",
+    "name": "Baja California",
+    "abbr": "BC",
+    "population": 3769020,
+    "municipalities": 7,
+    "ine": {
+      "heading": "Baja California",
+      "gubernatura": 1,
+      "dipMr": 17,
+      "dipRp": 8,
+      "presidencias": 7,
+      "sindicaturas": 7,
+      "regidurias": 83
+    }
+  },
+  {
+    "slug": "baja-california-sur",
+    "code": "03",
+    "name": "Baja California Sur",
+    "abbr": "BCS",
+    "population": 798447,
+    "municipalities": 5,
+    "ine": {
+      "heading": "Baja California Sur",
+      "gubernatura": 1,
+      "dipMr": 16,
+      "dipRp": 5,
+      "presidencias": 5,
+      "sindicaturas": 5,
+      "regidurias": 48
+    }
+  },
+  {
+    "slug": "campeche",
+    "code": "04",
+    "name": "Campeche",
+    "abbr": "Camp.",
+    "population": 928363,
+    "municipalities": 13,
+    "ine": {
+      "heading": "Campeche",
+      "gubernatura": 1,
+      "dipMr": 21,
+      "dipRp": 14,
+      "presidencias": 13,
+      "sindicaturas": 28,
+      "regidurias": 110,
+      "cuartoOrden": 138
+    }
+  },
+  {
+    "slug": "coahuila-de-zaragoza",
+    "code": "05",
+    "name": "Coahuila de Zaragoza",
+    "abbr": "Coah.",
+    "population": 3146771,
+    "municipalities": 38,
+    "ine": {
+      "heading": "Coahuila",
+      "presidencias": 38,
+      "sindicaturas": 76,
+      "regidurias": 442
+    }
+  },
+  {
+    "slug": "colima",
+    "code": "06",
+    "name": "Colima",
+    "abbr": "Col.",
+    "population": 731391,
+    "municipalities": 10,
+    "ine": {
+      "heading": "Colima",
+      "gubernatura": 1,
+      "dipMr": 16,
+      "dipRp": 9,
+      "presidencias": 10,
+      "sindicaturas": 10,
+      "regidurias": 94
+    }
+  },
+  {
+    "slug": "chiapas",
+    "code": "07",
+    "name": "Chiapas",
+    "abbr": "Chis.",
+    "population": 5543828,
+    "municipalities": 124,
+    "ine": {
+      "heading": "Chiapas",
+      "dipMr": 24,
+      "dipRp": 16,
+      "presidencias": 123,
+      "sindicaturas": 123,
+      "regidurias": 875
+    }
+  },
+  {
+    "slug": "chihuahua",
+    "code": "08",
+    "name": "Chihuahua",
+    "abbr": "Chih.",
+    "population": 3741869,
+    "municipalities": 67,
+    "ine": {
+      "heading": "Chihuahua",
+      "gubernatura": 1,
+      "dipMr": 22,
+      "dipRp": 11,
+      "presidencias": 67,
+      "sindicaturas": 67,
+      "regidurias": 678
+    }
+  },
+  {
+    "slug": "ciudad-de-mexico",
+    "code": "09",
+    "name": "Ciudad de México",
+    "abbr": "CDMX",
+    "population": 9209944,
+    "municipalities": 16,
+    "ine": {
+      "heading": "Ciudad de México",
+      "dipMr": 34,
+      "dipRp": 32,
+      "alcaldias": 16,
+      "concejales": 204
+    }
+  },
+  {
+    "slug": "durango",
+    "code": "10",
+    "name": "Durango",
+    "abbr": "Dgo.",
+    "population": 1832650,
+    "municipalities": 39,
+    "ine": {
+      "heading": "Durango",
+      "dipMr": 15,
+      "dipRp": 10
+    }
+  },
+  {
+    "slug": "guanajuato",
+    "code": "11",
+    "name": "Guanajuato",
+    "abbr": "Gto.",
+    "population": 6166934,
+    "municipalities": 46,
+    "ine": {
+      "heading": "Guanajuato",
+      "dipMr": 22,
+      "dipRp": 14,
+      "presidencias": 46,
+      "sindicaturas": 46,
+      "regidurias": 418
+    }
+  },
+  {
+    "slug": "guerrero",
+    "code": "12",
+    "name": "Guerrero",
+    "abbr": "Gro.",
+    "population": 3540685,
+    "municipalities": 85,
+    "ine": {
+      "heading": "Guerrero",
+      "gubernatura": 1,
+      "dipMr": 28,
+      "dipRp": 18,
+      "presidencias": 83,
+      "sindicaturas": 83,
+      "regidurias": 593
+    }
+  },
+  {
+    "slug": "hidalgo",
+    "code": "13",
+    "name": "Hidalgo",
+    "abbr": "Hgo.",
+    "population": 3082841,
+    "municipalities": 84,
+    "ine": {
+      "heading": "Hidalgo",
+      "dipMr": 18,
+      "dipRp": 12,
+      "presidencias": 84,
+      "sindicaturas": 84,
+      "regidurias": 912
+    }
+  },
+  {
+    "slug": "jalisco",
+    "code": "14",
+    "name": "Jalisco",
+    "abbr": "Jal.",
+    "population": 8348151,
+    "municipalities": 125,
+    "ine": {
+      "heading": "Jalisco",
+      "dipMr": 20,
+      "dipRp": 18,
+      "presidencias": 125,
+      "sindicaturas": 125,
+      "regidurias": 1231
+    }
+  },
+  {
+    "slug": "mexico",
+    "code": "15",
+    "name": "México",
+    "abbr": "Mex.",
+    "population": 16992418,
+    "municipalities": 125,
+    "ine": {
+      "heading": "Estado de México",
+      "dipMr": 45,
+      "dipRp": 30,
+      "presidencias": 125,
+      "sindicaturas": 125,
+      "regidurias": 966
+    }
+  },
+  {
+    "slug": "michoacan-de-ocampo",
+    "code": "16",
+    "name": "Michoacán de Ocampo",
+    "abbr": "Mich.",
+    "population": 4748846,
+    "municipalities": 113,
+    "ine": {
+      "heading": "Michoacán",
+      "gubernatura": 1,
+      "dipMr": 24,
+      "dipRp": 16,
+      "presidencias": 112,
+      "sindicaturas": 112,
+      "regidurias": 873
+    }
+  },
+  {
+    "slug": "morelos",
+    "code": "17",
+    "name": "Morelos",
+    "abbr": "Mor.",
+    "population": 1971520,
+    "municipalities": 36,
+    "ine": {
+      "heading": "Morelos",
+      "dipMr": 12,
+      "dipRp": 8,
+      "presidencias": 33,
+      "sindicaturas": 33,
+      "regidurias": 153
+    }
+  },
+  {
+    "slug": "nayarit",
+    "code": "18",
+    "name": "Nayarit",
+    "abbr": "Nay.",
+    "population": 1235456,
+    "municipalities": 20,
+    "ine": {
+      "heading": "Nayarit",
+      "gubernatura": 1,
+      "dipMr": 18,
+      "dipRp": 12,
+      "presidencias": 20,
+      "sindicaturas": 20,
+      "regidurias": 203
+    }
+  },
+  {
+    "slug": "nuevo-leon",
+    "code": "19",
+    "name": "Nuevo León",
+    "abbr": "NL",
+    "population": 5784442,
+    "municipalities": 51,
+    "ine": {
+      "heading": "Nuevo León",
+      "gubernatura": 1,
+      "dipMr": 26,
+      "dipRp": 16,
+      "presidencias": 51,
+      "sindicaturas": 51,
+      "regidurias": 449
+    }
+  },
+  {
+    "slug": "oaxaca",
+    "code": "20",
+    "name": "Oaxaca",
+    "abbr": "Oax.",
+    "population": 4132148,
+    "municipalities": 570,
+    "ine": {
+      "heading": "Oaxaca",
+      "dipMr": 25,
+      "dipRp": 17,
+      "presidencias": 152,
+      "sindicaturas": 152,
+      "regidurias": 942
+    }
+  },
+  {
+    "slug": "puebla",
+    "code": "21",
+    "name": "Puebla",
+    "abbr": "Pue.",
+    "population": 6583278,
+    "municipalities": 217,
+    "ine": {
+      "heading": "Puebla",
+      "dipMr": 26,
+      "dipRp": 15,
+      "presidencias": 217,
+      "sindicaturas": 217,
+      "regidurias": 1810
+    }
+  },
+  {
+    "slug": "queretaro",
+    "code": "22",
+    "name": "Querétaro",
+    "abbr": "Qro.",
+    "population": 2368467,
+    "municipalities": 18,
+    "ine": {
+      "heading": "Querétaro",
+      "gubernatura": 1,
+      "dipMr": 15,
+      "dipRp": 10,
+      "presidencias": 18,
+      "sindicaturas": 36,
+      "regidurias": 148
+    }
+  },
+  {
+    "slug": "quintana-roo",
+    "code": "23",
+    "name": "Quintana Roo",
+    "abbr": "Q. Roo",
+    "population": 1857985,
+    "municipalities": 11,
+    "ine": {
+      "heading": "Quintana Roo",
+      "gubernatura": 1,
+      "dipMr": 15,
+      "dipRp": 10,
+      "presidencias": 11,
+      "sindicaturas": 11,
+      "regidurias": 117
+    }
+  },
+  {
+    "slug": "san-luis-potosi",
+    "code": "24",
+    "name": "San Luis Potosí",
+    "abbr": "SLP",
+    "population": 2822255,
+    "municipalities": 59,
+    "ine": {
+      "heading": "San Luis Potosí",
+      "gubernatura": 1,
+      "dipMr": 15,
+      "dipRp": 12,
+      "presidencias": 59,
+      "sindicaturas": 66,
+      "regidurias": 399
+    }
+  },
+  {
+    "slug": "sinaloa",
+    "code": "25",
+    "name": "Sinaloa",
+    "abbr": "Sin.",
+    "population": 3026943,
+    "municipalities": 20,
+    "ine": {
+      "heading": "Sinaloa",
+      "gubernatura": 1,
+      "dipMr": 24,
+      "dipRp": 16,
+      "presidencias": 20,
+      "sindicaturas": 20,
+      "regidurias": 165
+    }
+  },
+  {
+    "slug": "sonora",
+    "code": "26",
+    "name": "Sonora",
+    "abbr": "Son.",
+    "population": 2944840,
+    "municipalities": 72,
+    "ine": {
+      "heading": "Sonora",
+      "gubernatura": 1,
+      "dipMr": 21,
+      "dipRp": 12,
+      "presidencias": 72,
+      "sindicaturas": 72,
+      "regidurias": 454
+    }
+  },
+  {
+    "slug": "tabasco",
+    "code": "27",
+    "name": "Tabasco",
+    "abbr": "Tab.",
+    "population": 2402598,
+    "municipalities": 17,
+    "ine": {
+      "heading": "Tabasco",
+      "dipMr": 21,
+      "dipRp": 14,
+      "presidencias": 17,
+      "sindicaturas": 17,
+      "regidurias": 51
+    }
+  },
+  {
+    "slug": "tamaulipas",
+    "code": "28",
+    "name": "Tamaulipas",
+    "abbr": "Tamps.",
+    "population": 3527735,
+    "municipalities": 43,
+    "ine": {
+      "heading": "Tamaulipas",
+      "dipMr": 22,
+      "dipRp": 14,
+      "presidencias": 43,
+      "sindicaturas": 43,
+      "regidurias": 349
+    }
+  },
+  {
+    "slug": "tlaxcala",
+    "code": "29",
+    "name": "Tlaxcala",
+    "abbr": "Tlax.",
+    "population": 1342977,
+    "municipalities": 60,
+    "ine": {
+      "heading": "Tlaxcala",
+      "gubernatura": 1,
+      "dipMr": 15,
+      "dipRp": 10,
+      "presidencias": 60,
+      "sindicaturas": 60,
+      "regidurias": 350,
+      "cuartoOrden": 299
+    }
+  },
+  {
+    "slug": "veracruz-de-ignacio-de-la-llave",
+    "code": "30",
+    "name": "Veracruz de Ignacio de la Llave",
+    "abbr": "Ver.",
+    "population": 8062579,
+    "municipalities": 212,
+    "ine": {
+      "heading": "Veracruz",
+      "dipMr": 30,
+      "dipRp": 20
+    }
+  },
+  {
+    "slug": "yucatan",
+    "code": "31",
+    "name": "Yucatán",
+    "abbr": "Yuc.",
+    "population": 2320898,
+    "municipalities": 106,
+    "ine": {
+      "heading": "Yucatán",
+      "dipMr": 21,
+      "dipRp": 14,
+      "presidencias": 106,
+      "sindicaturas": 106,
+      "regidurias": 587
+    }
+  },
+  {
+    "slug": "zacatecas",
+    "code": "32",
+    "name": "Zacatecas",
+    "abbr": "Zac.",
+    "population": 1622138,
+    "municipalities": 58,
+    "ine": {
+      "heading": "Zacatecas",
+      "gubernatura": 1,
+      "dipMr": 18,
+      "dipRp": 12,
+      "presidencias": 58,
+      "sindicaturas": 58,
+      "regidurias": 552
+    }
+  }
+]
