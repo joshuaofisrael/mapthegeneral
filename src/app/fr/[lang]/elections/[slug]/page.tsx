@@ -92,7 +92,7 @@ export default async function PresidentialPage({
       <section className="space-y-3">
         <h2 className="font-serif text-2xl font-semibold">{fr ? "Candidatures" : "Candidacies"}</h2>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Aucune liste de candidats n’est copiée ici. Les pages lues le 17 octobre 2026 donnent des dates et une règle d’élection. Elles n’impriment pas les candidats de 2027."
@@ -103,7 +103,7 @@ export default async function PresidentialPage({
       <section className="space-y-3">
         <h2 className="font-serif text-2xl font-semibold">{fr ? "Résultats" : "Results"}</h2>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Il n’y a pas de décompte du scrutin de 2027 à reproduire. Cette page ne proclame pas un élu, n’attribue pas de voix et ne commente pas une tendance."
@@ -111,7 +111,7 @@ export default async function PresidentialPage({
           }
         />
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Aucun décret de convocation pour le 18 avril 2027 n’a été lu. F1939 écrit que, hors vacance de la présidence ou empêchement, les électeurs sont convoqués au moins dix semaines avant le premier tour."

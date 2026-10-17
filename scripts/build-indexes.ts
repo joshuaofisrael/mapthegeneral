@@ -1,9 +1,9 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { FRANCE_LLMS_LINE } from "../data/fr/paths";
 import { SITE, absoluteUrl } from "../src/data/site";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
+import { VOIVODESHIPS } from "../data/pl/places";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
 
@@ -27,30 +27,26 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths: string[] = [];
 const buckets = new Map<string, string[]>();
 for (const path of paths) {
   const match = path.match(/^\/([a-z]{2})\/([a-z]{2})\//);
-  if (!match) {
-    globalPaths.push(path);
-    continue;
-  }
-  const key = `${match[1]}-${match[2]}`;
+  const key = match ? `${match[1]}-${match[2]}` : "global";
   const list = buckets.get(key) ?? [];
   list.push(path);
   buckets.set(key, list);
 }
-const bucketNames = [...buckets.keys()].sort();
-
-for (const [name, list] of [["global", globalPaths] as const, ...bucketNames.map((name) => [name, buckets.get(name) ?? []] as const)]) {
+const bucketNames = [...buckets.keys()].sort((a, b) => (a === "global" ? -1 : b === "global" ? 1 : a.localeCompare(b)));
+for (const name of bucketNames) {
+  const list = buckets.get(name) ?? [];
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
 }
 
 const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
-${bucketNames.map((name) => `  <sitemap><loc>${SITE.url}/sitemaps/${name}.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>`).join("\n")}
+${bucketNames
+  .map((name) => `  <sitemap><loc>${SITE.url}/sitemaps/${name}.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>`)
+  .join("\n")}
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -73,8 +69,9 @@ const lines = [
   }),
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
+  `Poland: national pages and ${VOIVODESHIPS.length} voivodeships, in Polish and English. Powiat and gmina pages are not in this release.`,
   "",
-  FRANCE_LLMS_LINE,
+  "United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.",
   "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
@@ -82,5 +79,5 @@ const lines = [
 write("public/llms.txt", lines.join("\n"));
 
 console.log(
-  `indexes: ${paths.length} urls (global ${globalPaths.length}${bucketNames.map((name) => `, ${name} ${buckets.get(name)?.length ?? 0}`).join("")})`,
+  `indexes: ${paths.length} urls (${bucketNames.map((name) => `${name} ${buckets.get(name)?.length ?? 0}`).join(", ")})`,
 );

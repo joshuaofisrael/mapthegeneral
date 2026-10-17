@@ -69,6 +69,17 @@ export function FranceFrame({
       />
       <div className="mt-8 space-y-8">{children}</div>
       <SourceList sources={sources} heading={lang === "fr" ? "Sources" : "Sources"} />
+      <p className="mt-3 text-xs leading-5 text-ink-muted">
+        {lang === "fr"
+          ? "Informations publiques de l’INSEE, de Service-Public, de Légifrance et de data.gouv.fr réutilisées sous la "
+          : "Public information from INSEE, Service-Public, Légifrance and data.gouv.fr reused under the "}
+        <a className="underline" href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/">
+          {lang === "fr" ? "Licence Ouverte / Open Licence 2.0 (Etalab)" : "Licence Ouverte / Open Licence 2.0 (Etalab)"}
+        </a>
+        {lang === "fr"
+          ? ". Source et date de lecture indiquées pour chaque fiche ci-dessus. Aucune image ni aucun logo n’est reproduit."
+          : ". The source and the date read are given for each item above. No images or logos are reproduced."}
+      </p>
     </article>
   );
 }

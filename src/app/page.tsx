@@ -5,7 +5,7 @@ import { SITE } from "@/data/site";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
-import { registeredCountries } from "@/lib/country-registry";
+import { registryCountries } from "@/lib/country-registry";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   const copy = ui("en");
-  const countries = registeredCountries();
+  const extraCountries = registryCountries().filter((country) => country.code !== "es");
   return (
     <div className="space-y-12">
       <JsonLd
@@ -81,7 +81,7 @@ export default function HomePage() {
               </Link>
             </p>
           </li>
-          {countries.map((country) => (
+          {extraCountries.map((country) => (
             <li key={country.code} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
               <h3 className="font-serif text-2xl font-semibold">
                 <Link className="hover:text-navy" href={country.href}>

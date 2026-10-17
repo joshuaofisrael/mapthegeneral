@@ -99,7 +99,7 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
             : "The decree of 22 February 2026 on the composition of the Government, read on Légifrance as in force on 17 October 2026, is signed Emmanuel Macron, President of the Republic, and Sébastien Lecornu, Prime Minister. The info.gouv.fr page “Composition du Gouvernement”, announced on 26/02/2026, names Sébastien Lecornu as Prime Minister and Laurent Nunez as Minister of the Interior. This page does not copy the rest of that list."}
         </p>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Les noms des présidents de région et des maires ne sont pas sur cette page. Les pages de départements et de communes ne sont pas dans cette livraison."
@@ -121,7 +121,7 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
           </Link>
         </p>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Aucun décret de convocation des électeurs pour le 18 avril 2027 n’a été lu pour cette page. La fiche F1939 rappelle que, hors vacance ou empêchement, les électeurs sont convoqués au moins dix semaines avant le premier tour."
@@ -148,7 +148,7 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
             : `Overseas collectivities and territories printed in the COG file, with no page in this release: ${COMERS.map((item) => item.officialName).join(", ")}.`}
         </p>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "La Base officielle des codes postaux est publiée par La Poste sur data.gouv.fr. Cette livraison ne relie pas un code postal à une commune, parce que les pages de communes ne sont pas publiées."

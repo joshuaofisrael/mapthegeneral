@@ -120,7 +120,7 @@ export default async function RegionPage({
 
       {!region.populationInEnsemble && (
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? `La page Insee des populations de référence 2023 dit que le cyclone Chido a reporté la collecte de 2025 à Mayotte et qu’un recensement exhaustif a été organisé du 27 novembre 2025 au 10 janvier 2026, avec authentification de nouvelles populations fin 2026. Cette page n’imprime pas un chiffre de population. Le nombre de communes, ${formatOptional(region.communes, lang)}, est le compte des lignes TYPECOM « COM » du COG 2026 pour le département 976. Le chef-lieu imprimé par le COG est ${region.chefLieu}.`
@@ -155,7 +155,7 @@ export default async function RegionPage({
           ))}
         </ul>
         <GapNote
-          label={fr ? "Lagune" : "Gap"}
+          label={fr ? "Lacune" : "Gap"}
           text={
             fr
               ? "Le nom de la personne qui préside l’exécutif régional n’est pas copié ici. Les pages de départements et de communes ne sont pas publiées dans cette livraison. Le tableau ci-dessous reprend les départements du COG ; ce ne sont pas des liens."
