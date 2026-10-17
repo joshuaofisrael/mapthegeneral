@@ -1,0 +1,32 @@
+{
+  "name": "mapthegeneral",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Map the General — a global, nonpartisan election guide operated by Joshua Israel Ventures LLC.",
+  "scripts": {
+    "prebuild": "tsx scripts/build-indexes.ts",
+    "build": "next build",
+    "dev": "next dev",
+    "start": "python3 -m http.server 3000 --directory out",
+    "lint": "next lint",
+    "indexes": "tsx scripts/build-indexes.ts"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^22.18.1",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.2"
+  }
+}
