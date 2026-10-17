@@ -43,10 +43,10 @@ function normalize(raw: unknown): CountryCard {
   };
 }
 
-/** Country cards from src/countries/*.json and data/countries/*.json. Each country adds one file. */
+/** Country cards from src/countries/, data/countries/ and src/data/countries/ (*.json). Each country adds one file. */
 export function registryCountries(): CountryCard[] {
   const seen = new Set<string>();
-  return [...readDir("src/countries"), ...readDir("data/countries")]
+  return [...readDir("src/countries"), ...readDir("data/countries"), ...readDir("src/data/countries")]
     .map(normalize)
     .filter((card) => {
       if (seen.has(card.code)) return false;

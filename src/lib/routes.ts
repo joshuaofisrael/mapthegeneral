@@ -11,6 +11,7 @@ import {
   communityBySlug,
   provinceBySlug,
 } from "../data/spain/places";
+import { franceIndexEntries } from "../../data/fr/paths";
 import { polandEntries } from "../../data/pl/paths";
 import type { Lang } from "../data/spain/types";
 
@@ -46,7 +47,7 @@ export type IndexEntry = {
 };
 
 const STATIC_EN: IndexEntry[] = [
-  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland elections" },
+  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland france elections" },
   { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
@@ -158,6 +159,7 @@ export function searchIndex(): IndexEntry[] {
     ...polandEntries("pl"),
     ...registryEntries(),
     ...AU_INDEX_ENTRIES,
+    ...franceIndexEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
