@@ -26,14 +26,18 @@ function urlset(paths: string[]): string {
 }
 
 const paths = allPublicPaths();
-const globalPaths = paths.filter((path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/"));
+const globalPaths = paths.filter(
+  (path) => !path.startsWith("/es/en/") && !path.startsWith("/es/es/") && !path.startsWith("/gb/en/"),
+);
 const enPaths = paths.filter((path) => path.startsWith("/es/en/"));
 const esPaths = paths.filter((path) => path.startsWith("/es/es/"));
+const gbEnPaths = paths.filter((path) => path.startsWith("/gb/en/"));
 
 for (const [name, list] of [
   ["global", globalPaths],
   ["es-en", enPaths],
   ["es-es", esPaths],
+  ["gb-en", gbEnPaths],
 ] as const) {
   if (list.length > 50000) throw new Error(`${name} sitemap exceeds 50,000 URLs`);
   write(`public/sitemaps/${name}.xml`, urlset(list));
@@ -44,6 +48,7 @@ const index = `<?xml version="1.0" encoding="UTF-8"?>
   <sitemap><loc>${SITE.url}/sitemaps/global.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
   <sitemap><loc>${SITE.url}/sitemaps/es-es.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
+  <sitemap><loc>${SITE.url}/sitemaps/gb-en.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
@@ -67,11 +72,13 @@ const lines = [
   "",
   `Spain: ${COMMUNITIES.length} autonomous communities and cities, ${PROVINCES.length} provinces, ${MUNICIPALITY_PAGE_COUNT} municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. ${EMPTY_MUNICIPALITY_TOTAL_COUNT} codes with an empty 2025 Total have no page.`,
   "",
+  "United Kingdom: national page, elections, parties, results, FAQ, sources, and England, Scotland, Wales and Northern Ireland, in English. Constituency and local-authority pages are not in this release.",
+  "",
   `Sitemap index: ${SITE.url}/sitemap.xml`,
   "",
 ];
 write("public/llms.txt", lines.join("\n"));
 
 console.log(
-  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length})`,
+  `indexes: ${paths.length} urls (global ${globalPaths.length}, es-en ${enPaths.length}, es-es ${esPaths.length}, gb-en ${gbEnPaths.length})`,
 );
