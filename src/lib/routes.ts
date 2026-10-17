@@ -4,6 +4,7 @@ import { AU_INDEX_ENTRIES } from "../countries/au";
 import { indexEntries as mexicoIndexEntries } from "../countries/mx";
 import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
+import { turkeySearchEntries } from "../data/tr/publish";
 import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
 import {
@@ -172,6 +173,7 @@ export function searchIndex(): IndexEntry[] {
     ...canadaIndexEntries(),
     ...krIndexEntries(),
     ...germanyIndexEntries(),
+    ...turkeySearchEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
