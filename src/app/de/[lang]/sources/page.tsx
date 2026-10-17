@@ -68,6 +68,18 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
           ? "Parlament und Regierung eines Landes sind auf der Länderseite verlinkt. Aus diesen Auftritten wurden keine Namen und keine Sitzzahlen übernommen."
           : "Each Land’s parliament and government are linked from that Land’s page. No names and no seat totals were copied from those sites."}
       </p>
+      <h2 className="mt-6 font-serif text-xl font-semibold">{de ? "Lizenzen und Quellenvermerk" : "Licences and attribution"}</h2>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        {de
+          ? "Daten der Bundeswahlleiterin und des Statistischen Bundesamtes (Destatis): © Die Bundeswahlleiterin bzw. © Statistisches Bundesamt (Destatis), Wiesbaden 2026, genutzt unter der "
+          : "Data from the Federal Returning Officer and the Federal Statistical Office (Destatis): © Die Bundeswahlleiterin and © Statistisches Bundesamt (Destatis), Wiesbaden 2026, used under the "}
+        <a className="underline" href="https://www.govdata.de/dl-de/by-2-0">
+          {de ? "Datenlizenz Deutschland – Namensnennung – Version 2.0" : "Data licence Germany – attribution – version 2.0"}
+        </a>
+        {de
+          ? ". Gesetze, Verordnungen und amtliche Bekanntmachungen sind nach § 5 des Urheberrechtsgesetzes gemeinfrei. Fakten aus den übrigen amtlichen Quellen sind mit eigenen Worten wiedergegeben und je Seite belegt. Bilder, Logos und Wappen werden nicht übernommen."
+          : ". Statutes, ordinances and official notices are in the public domain under section 5 of the Copyright Act (UrhG). Facts from the other official sources are given in our own words and cited on each page. No images, logos or coats of arms are reproduced."}
+      </p>
     </GermanyFrame>
   );
 }
