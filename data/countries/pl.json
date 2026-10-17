@@ -1,0 +1,15 @@
+{
+  "code": "pl",
+  "nameEn": "Poland",
+  "nameLocal": "Polska",
+  "href": "/pl/",
+  "summaryEn": "Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. This release has the national page and 16 voivodeships, in Polish and English. Powiat and gmina pages are not in this release.",
+  "languages": [
+    { "code": "pl", "label": "Polski", "href": "/pl/pl/" },
+    { "code": "en", "label": "English", "href": "/pl/en/" }
+  ],
+  "election": {
+    "href": "/pl/en/elections/sejm-senat-2027/",
+    "label": "14 October–12 November 2027"
+  }
+}

@@ -63,6 +63,18 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
             ? "資料にないことは書きません。この公開で開いたままの未掲載は、衆議院議員の任期が終わる日、次の国政選挙の投票日、第51回の党派別議席、知事の氏名、市区町村、小選挙区、郵便番号です。人口は令和8年5月29日の人口速報です。令和8年9月29日の人口等基本集計は、結果ページの公表時期としては読みましたが、都道府県の数字の出典にはしていません。"
             : "What is not in these sources is not invented. The gaps left open are the term-end date of the current House of Representatives, the next national polling day, party seats for the 51st general election, governors’ names, municipalities, single-member districts, and postcodes. Population is the preliminary count of 29 May 2026. The basic tabulation of 29 September 2026 was read as a release date on the results page and was not used for the prefecture figures."}
         </p>
+        <h2>{ja ? "利用規約と出典" : "Terms of use and attribution"}</h2>
+        <p>
+          {ja
+            ? "総務省（統計局を含む）、首相官邸、衆議院、参議院、e-Govの公開情報は、各サイトの利用規約（"
+            : "Public information from the Ministry of Internal Affairs and Communications (including the Statistics Bureau), the Prime Minister’s Office, the House of Representatives, the House of Councillors and e-Gov is used under each site’s terms of use ("}
+          <a href="https://www.digital.go.jp/resources/open_data/public_data_license_v1.0">
+            {ja ? "公共データ利用規約" : "Public Data License"}
+          </a>
+          {ja
+            ? "、政府標準利用規約など）に従い、各項目に出典と閲覧日を記載して利用しています。画像やロゴは転載していません。編集・加工した部分の責任は当サイトにあります。"
+            : ", the Government of Japan Standard Terms of Use, or the site’s own terms). The source and the date read are given for each item. No images or logos are reproduced. Any summary or edit is ours, not the source’s."}
+        </p>
       </div>
     </JapanFrame>
   );
