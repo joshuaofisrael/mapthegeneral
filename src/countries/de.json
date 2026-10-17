@@ -1,0 +1,20 @@
+{
+  "code": "de",
+  "name": "Germany",
+  "href": "/de/",
+  "summary": "The Federal Returning Officer’s page for the election of the 22nd German Bundestag does not set a polling day. It places that day between 26 January 2029 and 25 March 2029. This release has the national page and the 16 Länder, in German and English.",
+  "links": [
+    {
+      "href": "/de/de/",
+      "label": "Deutsch"
+    },
+    {
+      "href": "/de/en/",
+      "label": "English"
+    },
+    {
+      "href": "/de/en/elections/bundestag-2029/",
+      "label": "Bundestag 2029"
+    }
+  ]
+}

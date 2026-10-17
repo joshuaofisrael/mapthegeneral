@@ -40,6 +40,25 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
         Constituency results, council leaders and candidate lists are not sources for this release. Those pages are not
         published yet.
       </p>
+      <h2 className="mt-6 font-serif text-xl font-semibold">Licences and attribution</h2>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        Contains public sector information licensed under the{" "}
+        <a className="underline" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+          Open Government Licence v3.0
+        </a>
+        .
+      </p>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        Contains Parliamentary information licensed under the{" "}
+        <a className="underline" href="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">
+          Open Parliament Licence v3.0
+        </a>
+        .
+      </p>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        Facts are reported in our own words with a citation to each page. No images, logos or crests are reproduced.
+        Map the General is not affiliated with any of these bodies, and they do not endorse it.
+      </p>
     </GbFrame>
   );
 }

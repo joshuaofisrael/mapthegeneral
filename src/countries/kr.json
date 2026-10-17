@@ -1,0 +1,20 @@
+{
+  "code": "kr",
+  "name": "South Korea",
+  "href": "/kr/",
+  "summary": "National Assembly election on 12 April 2028, from the 22nd term printed by the National Assembly minutes index and article 34 of the Public Official Election Act. This release has the national pages and 16 upper-level local governments, in Korean and English.",
+  "links": [
+    {
+      "href": "/kr/en/",
+      "label": "English"
+    },
+    {
+      "href": "/kr/ko/",
+      "label": "한국어"
+    },
+    {
+      "href": "/kr/en/elections/national-assembly-2028/",
+      "label": "12 April 2028"
+    }
+  ]
+}

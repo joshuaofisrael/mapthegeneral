@@ -66,6 +66,34 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
                 ? "Ciò che non sta in queste fonti non è inventato. Lacune aperte: candidature 2027, governi cantonali, date delle elezioni cantonali, pagine di distretti e comuni, numero postale, versione romancia, testo dell’articolo 17 della legge federale sui diritti politici."
                 : "What is not in these sources is not invented. Open gaps: 2027 candidacies, cantonal governments, cantonal election dates, district and municipality pages, postcodes, a Romansh version, and the wording of article 17 of the Federal Act on Political Rights."}
         </p>
+        <h2>
+          {lang === "de"
+            ? "Nutzungsbedingungen und Quellenangabe"
+            : lang === "fr"
+              ? "Conditions d’utilisation et indication de la source"
+              : lang === "it"
+                ? "Condizioni d’uso e indicazione della fonte"
+                : "Terms of use and attribution"}
+        </h2>
+        <p>
+          {lang === "de"
+            ? "Erlasse, Verordnungen, Mitteilungen und Entscheide von Behörden sind nach Artikel 5 des Urheberrechtsgesetzes nicht geschützt. Daten des Bundesamtes für Statistik: Quelle BFS, genutzt nach den Nutzungsbedingungen «Freie Nutzung. Quellenangabe ist Pflicht.» ("
+            : lang === "fr"
+              ? "Les actes législatifs, ordonnances, communiqués et décisions des autorités ne sont pas protégés selon l’article 5 de la loi sur le droit d’auteur. Données de l’Office fédéral de la statistique : source OFS, utilisées selon les conditions « Utilisation libre. Obligation d’indiquer la source. » ("
+              : lang === "it"
+                ? "Atti normativi, ordinanze, comunicati e decisioni delle autorità non sono protetti secondo l’articolo 5 della legge sul diritto d’autore. Dati dell’Ufficio federale di statistica: fonte UST, usati secondo le condizioni «Libera utilizzazione. Indicazione della fonte obbligatoria.» ("
+                : "Enactments, ordinances, announcements and decisions of authorities are not protected under article 5 of the Copyright Act. Federal Statistical Office data: source FSO, used under the terms “Open use. Must provide the source.” ("}
+          <a href="https://www.bfs.admin.ch/bfs/en/home/fso/swiss-federal-statistical-office/terms-of-use.html">
+            {lang === "de" ? "BFS-Nutzungsbedingungen" : lang === "fr" ? "conditions d’utilisation de l’OFS" : lang === "it" ? "condizioni d’uso dell’UST" : "FSO terms of use"}
+          </a>
+          {lang === "de"
+            ? "). Bilder, Logos und Wappen werden nicht übernommen."
+            : lang === "fr"
+              ? "). Aucune image, aucun logo ni aucune armoirie n’est reproduit."
+              : lang === "it"
+                ? "). Non sono riprodotti immagini, loghi o stemmi."
+                : "). No images, logos or coats of arms are reproduced."}
+        </p>
       </div>
     </ChFrame>
   );
