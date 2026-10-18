@@ -1,3 +1,15 @@
+import {
+  allPowiats,
+  allSejmOkregi,
+  allSenatOkregi,
+  powiatHeading,
+  powiatIndexPath,
+  powiatPath,
+  sejmIndexPath,
+  sejmOkregPath,
+  senatIndexPath,
+  senatOkregPath,
+} from "./level2";
 import { alphaVoivodeships } from "./places";
 import type { Lang } from "./types";
 
@@ -59,5 +71,49 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
     kind: "voivodeship",
     text: `${item.name} sejmik wojewoda marszalek`,
   }));
-  return [...fixed, ...regions];
+  const indexes: PolandIndexEntry[] = [
+    {
+      path: powiatIndexPath(lang),
+      lang,
+      title: pl ? "Powiaty" : "Powiats",
+      kind: "index",
+      text: "powiat miasto na prawach powiatu TERC",
+    },
+    {
+      path: sejmIndexPath(lang),
+      lang,
+      title: pl ? "Okręgi do Sejmu" : "Sejm constituencies",
+      kind: "index",
+      text: "Sejm okręg wyborczy posłowie",
+    },
+    {
+      path: senatIndexPath(lang),
+      lang,
+      title: pl ? "Okręgi do Senatu" : "Senate constituencies",
+      kind: "index",
+      text: "Senat okręg wyborczy senator",
+    },
+  ];
+  const powiats = allPowiats().map((item) => ({
+    path: powiatPath(lang, item.voivodeshipSlug, item.slug),
+    lang,
+    title: powiatHeading(item),
+    kind: item.kind === "powiat" ? "powiat" : "city-powiat",
+    text: `${powiatHeading(item)} ${item.name} ${item.kind} ${item.code} ${item.voivodeshipSlug}`,
+  }));
+  const sejm = allSejmOkregi().map((item) => ({
+    path: sejmOkregPath(lang, item.num),
+    lang,
+    title: pl ? `Okręg wyborczy nr ${item.num} do Sejmu` : `Sejm constituency ${item.num}`,
+    kind: "sejm-okreg",
+    text: `Sejm ${item.num} ${item.districtName} ${item.okw} ${item.voivodeship} ${item.members.map((member) => member.name).join(" ")}`,
+  }));
+  const senat = allSenatOkregi().map((item) => ({
+    path: senatOkregPath(lang, item.num),
+    lang,
+    title: pl ? `Okręg wyborczy nr ${item.num} do Senatu` : `Senate constituency ${item.num}`,
+    kind: "senat-okreg",
+    text: `Senat ${item.num} ${item.vacant ? "mandat nieobsadzony wybory uzupełniające 22 listopada 2026" : item.senator} ${item.alsoPrinted?.name ?? ""} ${item.area}`,
+  }));
+  return [...fixed, ...indexes, ...regions, ...powiats, ...sejm, ...senat];
 }

@@ -19,7 +19,10 @@ const EN = {
   nextElection: "Next election",
   government: "Offices",
   localGap:
-    "Powiat and gmina pages are not in this release. Constituency pages inside the voivodeship are not in this release either.",
+    "Gmina pages are not in this release. Powiat pages and Sejm and Senate constituency pages are.",
+  gminaGap: "Gmina pages are not in this release.",
+  officeNameGap:
+    "No official list read for this page names the starosta or the prezydent miasta. The name is not filled in from anywhere else.",
   officeholderGap:
     "The name of the marszałek województwa and the name of the wojewoda are not copied here. No official list of those officeholders was read for this page.",
   nextLocalGap:
@@ -52,7 +55,10 @@ const PL: typeof EN = {
   nextElection: "Następne wybory",
   government: "Urzędy",
   localGap:
-    "Stron powiatów i gmin nie ma w tym wydaniu. Stron okręgów wewnątrz województwa też nie ma w tym wydaniu.",
+    "Stron gmin nie ma w tym wydaniu. Strony powiatów oraz okręgów do Sejmu i Senatu są.",
+  gminaGap: "Stron gmin nie ma w tym wydaniu.",
+  officeNameGap:
+    "Na potrzeby tej strony nie odczytano urzędowego wykazu, który podaje starostę albo prezydenta miasta. Nazwiska nie uzupełniono z innego miejsca.",
   officeholderGap:
     "Nazwiska marszałka województwa i wojewody nie są tu przepisane. Na potrzeby tej strony nie odczytano urzędowego wykazu tych osób.",
   nextLocalGap:

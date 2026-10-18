@@ -1,6 +1,7 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ_L2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -128,6 +129,48 @@ export const SOURCES: SourceRef[] = [
     name: "Poczta Polska, System Pocztowych Numerów Adresowych (PNA), BIP",
     url: "https://bip.poczta-polska.pl/bez-kategorii/system-pocztowych-numerow-adresowych-pna/",
     readOn: READ,
+  },
+  {
+    id: "teryt-terc",
+    name: "Główny Urząd Statystyczny, plik pełny TERC_Urzedowy_2026-10-18 (katalog z datą 2026-01-01), pobrany ze strony plików pełnych eTERYT",
+    url: "https://eteryt.stat.gov.pl/eTeryt/rejestr_teryt/udostepnianie_danych/baza_teryt/uzytkownicy_indywidualni/pobieranie/pliki_pelne.aspx",
+    readOn: READ_L2,
+  },
+  {
+    id: "teryt-zasady",
+    name: "Główny Urząd Statystyczny, Formy i zasady udostępniania danych rejestru TERYT",
+    url: "https://eteryt.stat.gov.pl/eTeryt/rejestr_teryt/udostepnianie_danych/formy_i_zasady_udostepniania/formy_i_zasady_udostepniania.aspx",
+    readOn: READ_L2,
+  },
+  {
+    id: "sejm-api-mp",
+    name: "Kancelaria Sejmu, API danych Sejmu, lista posłów X kadencji (term10/MP), mandaty z polem active",
+    url: "https://api.sejm.gov.pl/sejm/term10/MP",
+    readOn: READ_L2,
+  },
+  {
+    id: "sejm-api-clubs",
+    name: "Kancelaria Sejmu, API danych Sejmu, kluby i koła X kadencji (term10/clubs)",
+    url: "https://api.sejm.gov.pl/sejm/term10/clubs",
+    readOn: READ_L2,
+  },
+  {
+    id: "senate-okregi",
+    name: "Senat Rzeczypospolitej Polskiej, Okręgi wyborcze",
+    url: "https://www.senat.gov.pl/sklad/okregi-wyborcze/",
+    readOn: READ_L2,
+  },
+  {
+    id: "pkw-senat-20-2026",
+    name: "Państwowa Komisja Wyborcza, serwis „Wybory uzupełniające do Senatu w okręgu wyborczym nr 20”",
+    url: "https://wybory.gov.pl/senat20261122/pl",
+    readOn: READ_L2,
+  },
+  {
+    id: "postanowienie-senat-20-2026",
+    name: "Postanowienie Prezydenta Rzeczypospolitej Polskiej z dnia 25 września 2026 r. w sprawie zarządzenia wyborów uzupełniających do Senatu Rzeczypospolitej Polskiej (Dz.U. 2026 poz. 1255)",
+    url: "https://www.dziennikustaw.gov.pl/DU/2026/1255",
+    readOn: READ_L2,
   },
 ];
 

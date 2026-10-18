@@ -7,6 +7,7 @@ import { alphaVoivodeships, SEJM_CONSTITUENCY_TOTAL, SEJM_SEAT_TOTAL } from "../
 import { sourceById, sourcesById } from "../../../../data/pl/sources";
 import { ui } from "../../../../data/pl/ui";
 import { polandMetadata } from "../../../../data/pl/seo";
+import { powiatIndexPath, sejmIndexPath, senatIndexPath } from "../../../../data/pl/level2";
 import { polandHome, voivodeshipPath } from "../../../../data/pl/paths";
 import type { Lang } from "../../../../data/pl/types";
 
@@ -84,6 +85,8 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
         "prime-minister",
         "mswia-jst",
         "teryt",
+        "teryt-terc",
+        "pkw-senat-20-2026",
         "samorzad-woj",
         "pkw-rady-2024",
         "poczta",
@@ -116,6 +119,16 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
             {pl ? "Strona tych wyborów" : "Page for this election"}
           </Link>
         </p>
+        <p>
+          {pl
+            ? "To okno nie jest wyborami uzupełniającymi. Serwis PKW odczytany 18 października 2026 r. nosi tytuł „Wybory uzupełniające do Senatu w okręgu wyborczym nr 20” i podaje datę 22 listopada 2026 r. Nazywa postanowienie Prezydenta RP z 25 września 2026 r. w sprawie zarządzenia tych wyborów. Ta strona nie podaje sondaży, prognoz ani wyniku tego głosowania."
+            : "That window is not the by-election. The Commission service read on 18 October 2026 is titled “Wybory uzupełniające do Senatu w okręgu wyborczym nr 20” and prints the date 22 November 2026. It names the President’s order of 25 September 2026 calling that election. This page prints no poll, projection, or result of that vote."}
+        </p>
+        <p>
+          <Link className="text-navy underline" href={`${path}senat/20/`}>
+            {pl ? "Okręg senacki nr 20" : "Senate constituency 20"}
+          </Link>
+        </p>
       </section>
 
       <section className="prose-legal">
@@ -136,8 +149,8 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
         <h2>{copy.senate}</h2>
         <p>
           {pl
-            ? "Artykuł 97 ust. 1 Konstytucji mówi, że Senat składa się ze 100 senatorów. Artykuł 256 Kodeksu wyborczego mówi, że do Senatu wybiera się 100 senatorów według zasady większości. Załącznik nr 2 określa jednomandatowe okręgi. Ta strona nie rozpisuje granic tych okręgów."
-            : "Article 97(1) of the Constitution says the Senate consists of 100 senators. Article 256 of the electoral code says 100 senators are elected by majority. Annex 2 sets the single-member constituencies. This page does not reprint those boundaries."}
+            ? "Artykuł 97 ust. 1 Konstytucji mówi, że Senat składa się ze 100 senatorów. Artykuł 256 Kodeksu wyborczego mówi, że do Senatu wybiera się 100 senatorów według zasady większości. Załącznik nr 2 określa jednomandatowe okręgi. Strony tych okręgów są w indeksie poniżej."
+            : "Article 97(1) of the Constitution says the Senate consists of 100 senators. Article 256 of the electoral code says 100 senators are elected by majority. Annex 2 sets the single-member constituencies. Pages for those constituencies are in the index below."}
         </p>
       </section>
 
@@ -196,13 +209,26 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
         <h2>{pl ? "Samorząd" : "Local and regional government"}</h2>
         <p>
           {pl
-            ? "Artykuł 163 Konstytucji mówi, że samorząd terytorialny wykonuje zadania publiczne nie zastrzeżone dla innych organów. Artykuł 164 ust. 1 mówi, że podstawową jednostką jest gmina. Artykuł 152 ust. 1 mówi, że przedstawicielem Rady Ministrów w województwie jest wojewoda. Strona MSWiA „Baza JST”, odczytana 17 października 2026 r., podaje stan na 1 stycznia 2026 r.: 16 województw, 314 powiatów i 2 479 gmin (302 miejskie, w tym 66 miast na prawach powiatu, 724 miejsko-wiejskie i 1 453 wiejskie). Rejestr TERYT w nocie odczytanej tego samego dnia liczy od 1 stycznia 2026 r. 16 województw, 380 powiatów i 2 479 gmin. Liczba 380 obejmuje miasta na prawach powiatu, które MSWiA liczy osobno od 314 powiatów."
-            : "Article 163 of the Constitution says territorial self-government performs public duties not reserved to other authorities. Article 164(1) says the basic unit is the gmina. Article 152(1) says the wojewoda is the representative of the Council of Ministers in the voivodeship. The Interior Ministry page “Baza JST”, read on 17 October 2026, gives the position at 1 January 2026: 16 voivodeships, 314 powiats and 2,479 gminas (302 urban, including 66 cities with powiat status, 724 urban-rural and 1,453 rural). The TERYT register’s note read the same day counts, from 1 January 2026, 16 voivodeships, 380 powiats and 2,479 gminas. The figure 380 includes the cities with powiat status, which the ministry counts apart from the 314 powiats."}
+            ? "Artykuł 163 Konstytucji mówi, że samorząd terytorialny wykonuje zadania publiczne nie zastrzeżone dla innych organów. Artykuł 164 ust. 1 mówi, że podstawową jednostką jest gmina. Artykuł 152 ust. 1 mówi, że przedstawicielem Rady Ministrów w województwie jest wojewoda. Strona MSWiA „Baza JST”, odczytana 17 października 2026 r., podaje stan na 1 stycznia 2026 r.: 16 województw, 314 powiatów i 2 479 gmin (302 miejskie, w tym 66 miast na prawach powiatu, 724 miejsko-wiejskie i 1 453 wiejskie). Plik TERC_Urzedowy_2026-10-18, katalog z datą 2026-01-01, odczytany 18 października 2026 r., ma 16 wierszy województw, 314 wierszy z NAZWA_DOD „powiat”, 65 wierszy „miasto na prawach powiatu” i 1 wiersz „miasto stołeczne, na prawach powiatu” oraz 2 479 wierszy gmin."
+            : "Article 163 of the Constitution says territorial self-government performs public duties not reserved to other authorities. Article 164(1) says the basic unit is the gmina. Article 152(1) says the wojewoda is the representative of the Council of Ministers in the voivodeship. The Interior Ministry page “Baza JST”, read on 17 October 2026, gives the position at 1 January 2026: 16 voivodeships, 314 powiats and 2,479 gminas (302 urban, including 66 cities with powiat status, 724 urban-rural and 1,453 rural). The file TERC_Urzedowy_2026-10-18, catalog date 2026-01-01, read on 18 October 2026, has 16 voivodeship rows, 314 rows with NAZWA_DOD “powiat”, 65 rows “miasto na prawach powiatu”, 1 row “miasto stołeczne, na prawach powiatu”, and 2,479 gmina rows."}
         </p>
         <p>
           {pl
             ? "Obwieszczenie PKW z 9 kwietnia 2024 r. podaje zbiorcze wyniki wyborów do rad przeprowadzonych 7 kwietnia 2024 r.: 16 sejmików województw i 552 radnych tych sejmików. Ustawa o samorządzie województwa, w tekście jednolitym Dz. U. 2026 poz. 720, w art. 16 ust. 2 mówi, że kadencja sejmiku trwa 5 lat, licząc od dnia wyborów. Ta strona nie wyznacza dnia następnych wyborów samorządowych."
             : "The Commission’s announcement of 9 April 2024 gives the aggregate results of the council elections held on 7 April 2024: 16 voivodeship sejmiki and 552 councillors of those sejmiki. The voivodeship self-government act, consolidated text Dziennik Ustaw 2026 item 720, says in article 16(2) that a sejmik’s term lasts five years, counting from election day. This page does not set the day of the next local elections."}
+        </p>
+        <p>
+          <Link className="text-navy underline" href={powiatIndexPath(lang)}>
+            {pl ? "Powiaty" : "Powiats"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={sejmIndexPath(lang)}>
+            {pl ? "Okręgi do Sejmu" : "Sejm constituencies"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={senatIndexPath(lang)}>
+            {pl ? "Okręgi do Senatu" : "Senate constituencies"}
+          </Link>
         </p>
         <GapNote label={copy.gap} text={copy.localGap} />
         <GapNote label={copy.gap} text={copy.populationGap} />
