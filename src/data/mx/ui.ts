@@ -26,8 +26,10 @@ const EN = {
     "The name of the person who holds the gubernatura, the Jefatura de Gobierno, or a presidencia municipal is not copied here. No official list of those officeholders was read for this release.",
   municipalityGap:
     "Municipality and alcaldía pages are not in this release. The count below is the number of rows the INEGI municipal catalog returned for this entidad on 17 October 2026.",
-  districtGap:
-    "Pages for federal single-member districts and for the five plurinominal constituencies are not in this release.",
+  districts: "Federal districts",
+  circunscripciones: "Plurinominal constituencies",
+  groupGap:
+    "The directory is titled “Listado de Diputados por Grupo Parlamentario”. On the page that was read, the group is an image without a text label, so this page does not name a grupo parlamentario.",
   postcodeGap:
     "A postcode search is not wired up. This release does not include an official postcode file. Five-digit queries are not matched to an entidad or a municipality.",
   resultsGap:
@@ -62,8 +64,10 @@ const ES = {
     "No se copia aquí el nombre de quien ejerce la gubernatura, la Jefatura de Gobierno o una presidencia municipal. Para esta entrega no se leyó una lista oficial de esas personas.",
   municipalityGap:
     "Las páginas de municipios y alcaldías no están en esta entrega. La cifra de abajo es el número de filas que el catálogo municipal del INEGI devolvió para esta entidad el 17 de octubre de 2026.",
-  districtGap:
-    "Esta entrega no publica páginas de distritos federales uninominales ni de las cinco circunscripciones plurinominales.",
+  districts: "Distritos federales",
+  circunscripciones: "Circunscripciones plurinominales",
+  groupGap:
+    "El directorio se titula «Listado de Diputados por Grupo Parlamentario». En la página leída, el grupo es una imagen sin rótulo de texto, así que esta página no nombra un grupo parlamentario.",
   postcodeGap:
     "La búsqueda por código postal no está conectada. Esta entrega no incorpora un fichero oficial de códigos postales. Una consulta de cinco cifras no se empareja con una entidad ni con un municipio.",
   resultsGap:

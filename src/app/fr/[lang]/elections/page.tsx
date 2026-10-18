@@ -1,7 +1,14 @@
 import Link from "@/components/AnchorLink";
 import { FranceFrame } from "../../_components/FranceFrame";
 import { asLang } from "../../../../../data/fr/lang";
-import { electionsPath, franceHome, presidentialPath } from "../../../../../data/fr/paths";
+import {
+  circonscriptionsIndexPath,
+  departementsIndexPath,
+  electionsPath,
+  franceHome,
+  presidentialPath,
+  sourcesPath,
+} from "../../../../../data/fr/paths";
 import { franceMetadata } from "../../../../../data/fr/seo";
 import { sourceById, sourcesById } from "../../../../../data/fr/sources";
 
@@ -17,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return franceMetadata({
     title: fr ? "Élections en France" : "Elections in France",
     description: fr
-      ? "Échéances lues sur Service-Public le 17 octobre 2026. L’élection nationale détaillée est la présidentielle de 2027."
-      : "Dates read on Service-Public on 17 October 2026. The national election published in detail is the 2027 presidential election.",
+      ? "Échéances lues sur Service-Public le 18 octobre 2026. L’élection nationale détaillée est la présidentielle de 2027."
+      : "Dates read on Service-Public on 18 October 2026. The national election published in detail is the 2027 presidential election.",
     path: electionsPath(lang),
     lang,
     alternatePath: electionsPath(fr ? "en" : "fr"),
@@ -96,6 +103,19 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
         <p>
           <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={presidentialPath(lang)}>
             {fr ? "Élection présidentielle de 2027" : "Presidential election of 2027"}
+          </Link>
+        </p>
+        <p>
+          <Link className="text-navy underline" href={departementsIndexPath(lang)}>
+            {fr ? "Départements" : "Departments"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={circonscriptionsIndexPath(lang)}>
+            {fr ? "Circonscriptions législatives" : "Legislative constituencies"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={sourcesPath(lang)}>
+            {fr ? "Sources, lois et licences" : "Sources, laws and licences"}
           </Link>
         </p>
       </section>

@@ -7,7 +7,7 @@ import { SourceList } from "@/components/SourceList";
 import { SITE } from "@/data/site";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import type { SourceRef, ChLang } from "../../../data/ch/types";
-import { officeLabel, ui } from "../../../data/ch/ui";
+import { localDate, officeLabel, trustCopy, ui } from "../../../data/ch/ui";
 import { ChLanguageSwitch } from "./LanguageSwitch";
 
 export function ChFrame({
@@ -42,7 +42,13 @@ export function ChFrame({
       <ChLanguageSwitch lang={lang} path={path} />
       <Breadcrumbs items={crumbItems} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
-      <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel(lang)} />
+      <ContentTrust
+        updated={localDate(SITE.lastUpdated, lang)}
+        pagePath={path}
+        officeHref={officeHref}
+        officeLabel={officeLabel(lang)}
+        copy={trustCopy(lang)}
+      />
       <div className="mt-8 space-y-8">{children}</div>
       <SourceList sources={sources} heading={copy.sourcesHeading} />
     </article>

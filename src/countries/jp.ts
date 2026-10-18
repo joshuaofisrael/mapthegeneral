@@ -7,7 +7,7 @@ export const japanCountry = {
   href: "/jp/",
   label: "Japan",
   nativeLabel: "日本",
-  summary: `House of Representatives election of 8 February 2026, House of Councillors election of 20 July 2025, and ${PREFECTURES.length} prefectures, in Japanese and English. No polling day for the next national election was proclaimed in the sources read on 17 October 2026.`,
+  summary: `289 House single-member districts, 11 proportional blocks, 45 House of Councillors districts, and ${PREFECTURES.length} prefectures, in Japanese and English. Member lists read on 18 October 2026. No polling day for the next national election was proclaimed in the sources read.`,
   languages: [
     { href: "/jp/ja/", label: "日本語" },
     { href: "/jp/en/", label: "English" },

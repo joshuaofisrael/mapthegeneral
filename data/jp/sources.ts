@@ -1,6 +1,7 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -86,6 +87,66 @@ export const SOURCES: SourceRef[] = [
     name: "総務省統計局「令和7年国勢調査 調査の結果」",
     url: "https://www.stat.go.jp/data/kokusei/2025/kekka.html",
     readOn: READ,
+  },
+  {
+    id: "shugiin-members",
+    name: "衆議院「議員一覧」（五十音。令和8年9月28日現在）",
+    url: "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/syu/giinselect_m.htm",
+    readOn: READ2,
+  },
+  {
+    id: "sangiin-hireiku",
+    name: "参議院「選挙区・比例代表別議員一覧」（令和８年９月４日現在）",
+    url: "https://www.sangiin.go.jp/japanese/giin/hireiku/hireiku.htm",
+    readOn: READ2,
+  },
+  {
+    id: "koukyo",
+    name: "公職選挙法（昭和二十五年法律第百号、e-Gov）",
+    url: "https://laws.e-gov.go.jp/law/325AC1000000100",
+    readOn: READ2,
+  },
+  {
+    id: "soumu-kuwari",
+    name: "総務省「衆議院小選挙区の区割りの改定等について」",
+    url: "https://www.soumu.go.jp/senkyo/senkyo_s/news/senkyo/shu_kuwari/shu_kuwari_4.html",
+    readOn: READ2,
+  },
+  {
+    id: "shugiin-rights",
+    name: "衆議院「リンク・著作権等について」",
+    url: "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/link.html",
+    readOn: READ2,
+  },
+  {
+    id: "sangiin-rights",
+    name: "参議院「著作権」",
+    url: "https://www.sangiin.go.jp/jpn/footer/chosaku.html",
+    readOn: READ2,
+  },
+  {
+    id: "soumu-rights",
+    name: "総務省「著作権について」",
+    url: "https://www.soumu.go.jp/menu_kyotsuu/policy/tyosaku.html",
+    readOn: READ2,
+  },
+  {
+    id: "public-license",
+    name: "デジタル庁「公共データ利用規約（第1.0版）」",
+    url: "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0",
+    readOn: READ2,
+  },
+  {
+    id: "copyright-act",
+    name: "著作権法（e-Gov）",
+    url: "https://laws.e-gov.go.jp/law/345AC0000000048",
+    readOn: READ2,
+  },
+  {
+    id: "appi",
+    name: "個人情報の保護に関する法律（e-Gov）",
+    url: "https://laws.e-gov.go.jp/law/415AC0000000057",
+    readOn: READ2,
   },
 ];
 

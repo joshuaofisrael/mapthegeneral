@@ -16,7 +16,7 @@ import {
   SI_TOTAL,
   alphaRegions,
 } from "@/data/kr/places";
-import { asKrLang, formatKrDate, formatKrNumber, krHome, krRoot, naElectionPath, regionPath, sectionPath } from "@/data/kr/paths";
+import { asKrLang, constituencyIndexPath, formatKrDate, formatKrNumber, krHome, krRoot, localIndexPath, naElectionPath, regionPath, sectionPath } from "@/data/kr/paths";
 import { sourceById, sourcesById } from "@/data/kr/sources";
 import { ui } from "@/data/kr/ui";
 import { krPageMetadata } from "@/data/kr/metadata";
@@ -58,6 +58,9 @@ export default async function KoreaNationalPage({ params }: { params: Promise<{ 
     "nec-local-2026",
     "nec-president-2025",
     "mois-district-2025",
+    "nec-winners-2026",
+    "nec-na-2024-districts",
+    "assembly-member-search",
   ]);
 
   return (
@@ -100,8 +103,8 @@ export default async function KoreaNationalPage({ params }: { params: Promise<{ 
         <h2>{ko ? "국회" : "National Assembly"}</h2>
         <p>
           {ko
-            ? "국회가 게시한 국회의원 선출 표는 임기 4년, 의원수 300인(지역구 254인, 비례대표 46인)이라고 적습니다. 선거권과 피선거권은 만 18세 이상이라고 적습니다. 이 페이지는 지역구 254곳의 이름을 옮기지 않습니다."
-            : "The National Assembly’s member-election table says the term is four years and the chamber has 300 members (254 from constituencies and 46 proportional representatives). It says the voting age and the age to stand are 18. This page does not copy the names of the 254 constituencies."}
+            ? "국회가 게시한 국회의원 선출 표는 임기 4년, 의원수 300인(지역구 254인, 비례대표 46인)이라고 적습니다. 선거권과 피선거권은 만 18세 이상이라고 적습니다. 선거통계시스템의 제22대 지역구 목록은 254개 이름입니다. 2026년 10월 18일 열린국회정보 검색은 지역구 253행과 비례대표 46행입니다. 이름은 지역구 페이지에 있습니다."
+            : "The National Assembly’s member-election table says the term is four years and the chamber has 300 members (254 from constituencies and 46 proportional representatives). It says the voting age and the age to stand are 18. The election-statistics list for the 22nd term has 254 constituency names. The National Assembly search on 18 October 2026 returned 253 constituency rows and 46 proportional rows. The names are on the constituency pages."}
         </p>
         <h2>{ko ? "대통령과 국무총리" : "President and Prime Minister"}</h2>
         <p>
@@ -117,8 +120,8 @@ export default async function KoreaNationalPage({ params }: { params: Promise<{ 
         <h2>{ko ? "최근 지방선거" : "Latest local elections"}</h2>
         <p>
           {ko
-            ? "중앙선거관리위원회의 제9회 전국동시지방선거 주요사무일정은 실시일을 2026-06-03으로 적습니다. 당선인 이름은 옮기지 않습니다."
-            : "The National Election Commission’s schedule for the 9th nationwide simultaneous local elections prints the polling day as 2026-06-03. Names of people elected are not copied."}
+            ? "중앙선거관리위원회의 제9회 전국동시지방선거 주요사무일정은 실시일을 2026-06-03으로 적습니다. 당선인명부의 구·시·군의 장선거는 227행입니다. 성명과 정당은 시·군·구 페이지에 있고, 생년월일과 주소는 옮기지 않습니다."
+            : "The National Election Commission’s schedule for the 9th nationwide simultaneous local elections prints the polling day as 2026-06-03. The winner roster has 227 rows for the election of heads of si, gun, and gu. Name and party are on the si, gun, and gu pages. Birth date and address are not copied."}
         </p>
         <GapNote label={copy.gap} text={copy.nextLocalGap} />
         <h2>{ko ? "행정구역" : "Administrative areas"}</h2>
@@ -163,6 +166,15 @@ export default async function KoreaNationalPage({ params }: { params: Promise<{ 
         </p>
       </section>
 
+      <p className="text-sm">
+        <Link className="text-navy underline" href={localIndexPath(lang)}>
+          {ko ? "시·군·구" : "Si, gun, and gu"}
+        </Link>
+        {" · "}
+        <Link className="text-navy underline" href={constituencyIndexPath(lang)}>
+          {ko ? "국회의원 지역구" : "National Assembly constituencies"}
+        </Link>
+      </p>
       <LinkGrid
         heading={copy.regions}
         items={alphaRegions().map((region) => ({

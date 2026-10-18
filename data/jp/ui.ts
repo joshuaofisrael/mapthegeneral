@@ -28,7 +28,7 @@ const JA = {
   governorGap:
     "知事の氏名、議会の会派別議席、次の投票日は、このページには書きません。2026年10月17日に読んだ資料は、都道府県の長と議員が選挙で選ばれ、任期満了による選挙は任期が終わる日の前30日以内に行われる、と書いています。任期がいつ終わるかは、都道府県ごとにこの資料には出ていません。",
   localGap:
-    "市区町村と小選挙区のページは、この公開にはありません。憲法第93条は、地方公共団体に議会を置き、長と議員を住民が直接選挙すると定めています。総務省の説明では、地方公共団体は都道府県と市区町村です。",
+    "市区町村のページは、この公開にはありません。衆議院の小選挙区と比例代表、参議院の選挙区は、選挙区の一覧から開けます。憲法第93条は、地方公共団体に議会を置き、長と議員を住民が直接選挙すると定めています。",
   nextElectionGap:
     "2026年10月17日に読んだ資料に、次の国政選挙の投票日を公示した文書はありません。このページは投票日を予想しません。",
   postcodeGap:
@@ -65,7 +65,7 @@ const EN = {
   governorGap:
     "The governor’s name, the assembly’s party totals, and the next polling day are not printed here. The sources read on 17 October 2026 say the chief executive and the assembly members of a local public body are elected, and that an election caused by the end of a term is held within 30 days before the term ends. Those sources do not print each prefecture’s term-end date.",
   localGap:
-    "Municipality pages and single-member district pages are not in this release. Article 93 of the Constitution says a local public body has an assembly and that residents directly elect the chief executive and the assembly members. The Ministry’s account treats local public bodies as prefectures and municipalities.",
+    "Municipality pages are not in this release. House single-member districts, proportional districts, and Councillors’ districts open from the district index. Article 93 of the Constitution says a local public body has an assembly and that residents directly elect the chief executive and the assembly members.",
   nextElectionGap:
     "No document read on 17 October 2026 proclaimed a polling day for the next national election. This page does not forecast one.",
   postcodeGap:

@@ -4,6 +4,17 @@ import { GapNote } from "@/components/GapNote";
 import { AuFrame } from "@/app/au/_components/AuFrame";
 import { auPageMetadata } from "@/data/au/meta";
 import { alphaNeighbors, jurisdictionBySlug, JURISDICTIONS } from "@/data/au/places";
+import {
+  ASSEMBLY,
+  COUNCIL,
+  assemblyIndexPath,
+  assemblyPath,
+  councilIndexPath,
+  councilPath,
+  divisionPath,
+  divisionsIn,
+  stateHouseIndexPath,
+} from "@/data/au/level2";
 import { sourcesById } from "@/data/au/sources";
 import { auHome, jurisdictionPath } from "@/countries/au";
 
@@ -44,7 +55,15 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
       lede={`${item.federalDivisions} House of Representatives electorates in the Australian Electoral Commission’s determination of 23 July 2026.`}
       officeHref={item.officeHref}
       officeLabel={item.officeLabel}
-      sources={sourcesById(item.sourceIds)}
+      updated="18 October 2026"
+      sources={sourcesById(
+        [
+          ...item.sourceIds,
+          "aec-profiles",
+          "aec-2025-elected",
+          ...(slug === "victoria" ? ["vec-districts", "vec-regions", "vec-2022-districts", "vec-2022-regions", "vec-by-elections", "pov-members", "acma-blackout"] : []),
+        ].filter((id, index, all) => all.indexOf(id) === index),
+      )}
     >
       <dl className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-card p-4">
@@ -95,6 +114,79 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
             ))}
           </tbody>
         </table>
+      </section>
+
+      {slug === "victoria" ? (
+        <>
+          <section>
+            <h2 className="font-serif text-2xl font-semibold">Legislative Assembly districts</h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">
+              88 names on the Victorian Electoral Commission state-districts page, read on 18 October 2026. The next
+              state election printed by the Commission is Saturday 28 November 2026. No poll, projection, or result call
+              is published here.
+            </p>
+            <p className="mt-2 text-sm">
+              <Link className="text-navy underline" href={assemblyIndexPath()}>
+                District index
+              </Link>
+            </p>
+            <ul className="mt-3 columns-1 gap-x-6 text-sm sm:columns-2">
+              {ASSEMBLY.map((district) => (
+                <li key={district.slug} className="py-0.5">
+                  <Link className="text-navy underline" href={assemblyPath(district.slug)}>
+                    {district.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section>
+            <h2 className="font-serif text-2xl font-semibold">Legislative Council regions</h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">
+              8 names on the Commission’s state-regions page, read on 18 October 2026. Local government councils are a
+              later page.
+            </p>
+            <p className="mt-2 text-sm">
+              <Link className="text-navy underline" href={councilIndexPath()}>
+                Region index
+              </Link>
+            </p>
+            <ul className="mt-3 text-sm">
+              {COUNCIL.map((region) => (
+                <li key={region.slug} className="py-0.5">
+                  <Link className="text-navy underline" href={councilPath(region.slug)}>
+                    {region.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      ) : null}
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">House of Representatives divisions</h2>
+        <p className="mt-2 text-sm leading-6 text-ink-muted">
+          {divisionsIn(slug).length} names on the Australian Electoral Commission profiles page, read on 18 October
+          2026. That page says these are the electorates in place for the 2025 federal election, and that the site will
+          be updated for the determined redistributions in South Australia, Tasmania and the Australian Capital
+          Territory before the next federal election. The member on each page is the one the Australian Electoral
+          Commission declared elected in 2025, or at the Farrer by-election of 9 May 2026.
+        </p>
+        <p className="mt-2 text-sm">
+          <Link className="text-navy underline" href={stateHouseIndexPath(slug)}>
+            Division index
+          </Link>
+        </p>
+        <ul className="mt-3 columns-1 gap-x-6 text-sm sm:columns-2">
+          {divisionsIn(slug).map((division) => (
+            <li key={division.slug} className="py-0.5">
+              <Link className="text-navy underline" href={divisionPath(slug, division.slug)}>
+                {division.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="space-y-3">
