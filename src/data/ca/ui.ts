@@ -23,7 +23,7 @@ const EN = {
   kindProvince: "Province",
   kindTerritory: "Territory",
   municipalityGap:
-    "Municipality, census-subdivision, and federal electoral-district pages are not in this release. No official list of mayors or of candidates for a future election was copied onto this page.",
+    "Census subdivisions and municipalities are not in this release. No official list of mayors, or of candidates for a future election, was copied onto this page.",
   postcodeGap:
     "A postal-code search is not wired up. This release did not add an official open postal-code dataset. A postal-code query is not matched to a municipality.",
   candidateGap:
@@ -58,7 +58,7 @@ const FR = {
   kindProvince: "Province",
   kindTerritory: "Territoire",
   municipalityGap:
-    "Les pages de municipalités, de subdivisions de recensement et de circonscriptions fédérales ne font pas partie de cette livraison. Aucune liste officielle de maires ni de candidatures à une élection future n’est copiée sur cette page.",
+    "Les subdivisions de recensement et les municipalités ne font pas partie de cette livraison. Aucune liste officielle de maires ni de candidatures à une élection future n’est copiée sur cette page.",
   postcodeGap:
     "La recherche par code postal n’est pas branchée. Cette livraison n’ajoute pas un jeu de données ouvert et officiel de codes postaux. Une requête de code postal n’est pas appariée à une municipalité.",
   candidateGap:

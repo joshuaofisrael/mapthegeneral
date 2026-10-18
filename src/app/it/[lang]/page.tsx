@@ -5,7 +5,7 @@ import { LinkGrid } from "@/components/LinkGrid";
 import { ItalyFrame } from "@/app/it/frame";
 import { formatNumber } from "@/data/italy/format";
 import { COMUNE_COUNT, POPULATION_2025, REGIONS, UNIT_COUNT, alphaRegions } from "@/data/italy/places";
-import { italyChooser, italyHome, otherLang, regionPath } from "@/data/italy/paths";
+import { collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitsIndexPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -145,6 +145,10 @@ export default async function ItalyNationalPage({ params }: { params: Promise<{ 
         <GapNote label={copy.gap} text={copy.candidateGap} />
         <GapNote label={copy.gap} text={copy.postcodeGap} />
         <p className="text-sm">
+          <Link className="text-navy underline" href={unitsIndexPath(lang)}>{it ? "Unità territoriali" : "Territorial units"}</Link>
+          {" · "}
+          <Link className="text-navy underline" href={collegiIndexPath(lang)}>{it ? "Collegi" : "Constituencies"}</Link>
+          {" · "}
           <Link className="text-navy underline" href={`${path}parties/`}>{copy.parties}</Link>
           {" · "}
           <Link className="text-navy underline" href={`${path}results/`}>{copy.results}</Link>

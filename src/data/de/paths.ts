@@ -14,6 +14,22 @@ export function landPath(lang: DeLang, slug: string): string {
   return `/de/${lang}/${slug}/`;
 }
 
+export function kreiseIndexPath(lang: DeLang): string {
+  return `${germanyHome(lang)}kreise/`;
+}
+
+export function wahlkreiseIndexPath(lang: DeLang): string {
+  return `${germanyHome(lang)}wahlkreise/`;
+}
+
+export function kreisPath(lang: DeLang, land: string, slug: string): string {
+  return `${landPath(lang, land)}${slug}/`;
+}
+
+export function wahlkreisPath(lang: DeLang, land: string, slug: string): string {
+  return `${landPath(lang, land)}${slug}/`;
+}
+
 export function electionsPath(lang: DeLang): string {
   return `${germanyHome(lang)}elections/`;
 }

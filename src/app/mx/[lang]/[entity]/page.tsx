@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { MexicoFrame } from "@/app/mx/_components/Frame";
 import { ENTITIES, entityBySlug, entityNeighbors } from "@/data/mx/entities";
-import { entityPath, mexicoHome } from "@/data/mx/paths";
+import { districtsByEntity, padDistrict } from "@/data/mx/distritos";
+import { circunscripcionForEntity } from "@/data/mx/circunscripciones";
+import { circunscripcionesPath, districtPath, districtsIndexPath, entityPath, mexicoHome } from "@/data/mx/paths";
 import { sourcesById } from "@/data/mx/sources";
 import { ui } from "@/data/mx/ui";
 import { formatNumber } from "@/lib/format";
@@ -78,7 +80,14 @@ export default async function EntityPage({
       }
       officeHref="https://ine.mx/voto-y-elecciones/elecciones-2027/"
       officeLabel="Instituto Nacional Electoral"
-      sources={sourcesById(["ine-2027", "inegi-catalogo"])}
+      sources={sourcesById([
+        "ine-2027",
+        "inegi-catalogo",
+        "ine-cg875-anexo",
+        "ine-cg526-2026",
+        "ine-cg130-2023",
+        "camara-lxvi",
+      ])}
     >
       <dl className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-card p-4">
@@ -180,8 +189,42 @@ export default async function EntityPage({
         <div className="mt-4 space-y-3">
           <GapNote label={copy.gap} text={ine.gubernatura ? copy.officeholderGap : copy.nextLocalGap} />
           {!ine.gubernatura && <GapNote label={copy.gap} text={copy.officeholderGap} />}
-          <GapNote label={copy.gap} text={copy.districtGap} />
         </div>
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {es ? "Distritos electorales federales" : "Federal electoral districts"}
+        </h2>
+        <p className="mt-3 text-sm leading-6">
+          {es
+            ? `El descriptivo del anexo 3 del acuerdo INE/CG875/2022 imprime ${formatNumber(districtsByEntity(slug).length, lang)} distritos para esta entidad. El acuerdo INE/CG526/2026 incorpora esa demarcación. La cabecera es la localidad que el descriptivo nombra.`
+            : `The descriptivo in annex 3 of agreement INE/CG875/2022 prints ${formatNumber(districtsByEntity(slug).length, lang)} districts for this entidad. Agreement INE/CG526/2026 incorporates that demarcation. The cabecera is the localidad the descriptivo names.`}
+          {circunscripcionForEntity(slug)
+            ? es
+              ? ` El acuerdo INE/CG130/2023 sitúa esta entidad en la circunscripción ${circunscripcionForEntity(slug)?.number}.`
+              : ` Agreement INE/CG130/2023 places this entidad in constituency ${circunscripcionForEntity(slug)?.number}.`
+            : ""}
+        </p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+          {districtsByEntity(slug).map((district) => (
+            <li key={district.number}>
+              <Link className="text-navy underline" href={districtPath(lang, slug, district.number)}>
+                {es ? `Distrito ${padDistrict(district.number)}` : `District ${padDistrict(district.number)}`}
+              </Link>
+              <span className="text-sm text-ink-muted"> — {district.cabeceraLocalidad}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+            {copy.districts}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={circunscripcionesPath(lang)}>
+            {copy.circunscripciones}
+          </Link>
+        </p>
       </section>
 
       <p className="text-sm">

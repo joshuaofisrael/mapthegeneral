@@ -87,6 +87,36 @@ export const SOURCES: SourceRef[] = [
     url: "https://www.bfs.admin.ch/bfs/de/home/grundlagen/agvch.html",
     readOn: READ,
   },
+  {
+    id: "opendata-hgv",
+    name: "opendata.swiss, Swiss official commune’s historicized list, Bundesamt für Statistik, Kennzeichen «Open use»",
+    url: "https://opendata.swiss/en/dataset/historisiertes-gemeindeverzeichnis-der-schweiz",
+    readOn: "2026-10-18",
+  },
+  {
+    id: "parlament-members",
+    name: "Parlamentsdienste der Bundesversammlung, Bern, Webservice councillors/basicdetails, aktuelle Ratsmitglieder, heruntergeladen am 18. Oktober 2026. Keine amtliche Veröffentlichung",
+    url: "http://ws-old.parlament.ch/councillors/basicdetails?format=json",
+    readOn: "2026-10-18",
+  },
+  {
+    id: "parlament-opendata",
+    name: "Parlamentsdienste, Open Data / Webservices, Verwendungszwecke und Auflagen",
+    url: "https://www.parlament.ch/de/%C3%BCber-das-parlament/fakten-und-zahlen/open-data-web-services",
+    readOn: "2026-10-18",
+  },
+  {
+    id: "admin-votes",
+    name: "Der Bundesrat, Die Volksabstimmungen, Volksabstimmung vom 29. November 2026",
+    url: "https://www.admin.ch/gov/de/start/dokumentation/abstimmungen.html",
+    readOn: "2026-10-18",
+  },
+  {
+    id: "dsg",
+    name: "Bundesgesetz vom 25. September 2020 über den Datenschutz (DSG, SR 235.1), Stand 7. Juli 2025",
+    url: "https://www.fedlex.admin.ch/eli/cc/2022/491/de",
+    readOn: "2026-10-18",
+  },
 ];
 
 export function sourceById(id: string): SourceRef {

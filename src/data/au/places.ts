@@ -96,18 +96,18 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.vec.vic.gov.au/voting/types-of-elections/state-elections",
     officeLabel: "Victorian Electoral Commission",
-    sourceIds: ["vec-state", "vic-parliament-2026", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["vec-state", "vic-parliament-2026", "vec-2022-report", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Victorian Electoral Commission says state elections are held on the last Saturday in November every 4 years, and that this date is set by the Electoral Act 2002 (Vic). It says the next state election is on Saturday 28 November 2026.",
       "The Commission says the Legislative Assembly has 88 members, one for each district, and the Legislative Council has 40 members, five for each region. It says a person must enrol and vote if they are 18 or older, an Australian citizen, and have lived in Victoria for longer than a month.",
       "The Commission’s 2026 timeline prints: writs and the close of rolls on 3 November 2026 (rolls until 8 pm); nominations until 12 noon on 9 November 2026; early voting from 18 November 2026; election day 28 November 2026; return of the writs on 19 December 2026.",
       "The Parliament of Victoria page prints the same election day, Saturday, 28 November 2026, and says Victorians will elect the members for Victoria’s 61st Parliament. It says there are 88 Legislative Assembly electorates and eight Legislative Council regions with five members each. It prints writs on Tuesday 3 November, nominations opening Wednesday 4 November and closing Monday 9 November, early voting from Wednesday 18 November, and writs returned by Saturday 19 December. It says the current parliament expires on 3 November 2026.",
+      "The Victorian Electoral Commission’s report to Parliament on the 2022 state election says the general election was held on 26 November 2022, and that a supplementary election for Narracan District was held on 28 January 2023.",
     ],
     gaps: [
       "The name of the Premier was not on the pages read.",
-      "Nominations for 28 November 2026, on the Parliament of Victoria timeline, open on Wednesday 4 November 2026. On 17 October 2026 that day has not arrived. No candidate list was read, and none is printed here.",
-      "The date of the previous state election was not on the pages read. This page does not calculate it by subtracting four years.",
-      "Council pages are not in this release.",
+      "Nominations for 28 November 2026, on the Parliament of Victoria timeline, open on Wednesday 4 November 2026. On 18 October 2026 that day has not arrived. No candidate list was read, and none is printed here.",
+      "Local government council pages are not in this release.",
     ],
   },
   {

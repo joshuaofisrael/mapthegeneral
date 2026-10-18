@@ -1,6 +1,6 @@
 import Link from "@/components/AnchorLink";
 import { MexicoFrame } from "@/app/mx/_components/Frame";
-import { mexicoHome } from "@/data/mx/paths";
+import { circunscripcionesPath, districtsIndexPath, mexicoHome } from "@/data/mx/paths";
 import { sourceById } from "@/data/mx/sources";
 import { ui } from "@/data/mx/ui";
 import { asLang } from "@/lib/lang";
@@ -60,6 +60,16 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
           <p className="mt-1 text-sm text-ink-muted">
             {es ? "Página del INE del Proceso Electoral Federal 2026-2027. Acuerdo INE/CG480/2026." : "INE page for the 2026-2027 federal electoral process. Agreement INE/CG480/2026."}
           </p>
+        </li>
+        <li>
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={districtsIndexPath(lang)}>
+            {es ? "Distritos electorales federales" : "Federal electoral districts"}
+          </Link>
+        </li>
+        <li>
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={circunscripcionesPath(lang)}>
+            {es ? "Circunscripciones plurinominales" : "Plurinominal constituencies"}
+          </Link>
         </li>
       </ul>
     </MexicoFrame>

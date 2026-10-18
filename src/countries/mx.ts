@@ -1,12 +1,22 @@
-import { alphaEntities, ENTITIES } from "@/data/mx/entities";
-import { electionPath, entityPath, mexicoHome, type Lang } from "@/data/mx/paths";
+import { CIRCUNSCRIPCIONES } from "@/data/mx/circunscripciones";
+import { DISTRICTS, padDistrict } from "@/data/mx/distritos";
+import { alphaEntities, ENTITIES, entityBySlug } from "@/data/mx/entities";
+import {
+  circunscripcionesPath,
+  districtPath,
+  districtsIndexPath,
+  electionPath,
+  entityPath,
+  mexicoHome,
+  type Lang,
+} from "@/data/mx/paths";
 
 export const countryCard = {
   code: "mx",
   name: "Mexico",
   path: "/mx/",
   summary:
-    "Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page and the 32 entidades, in Spanish and English. Municipality pages are not in this release.",
+    "Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts with the sitting deputy and the cabecera, and the five plurinominal constituencies, in Spanish and English. Municipality pages are not in this release.",
   links: [
     { href: "/mx/en/", label: "English" },
     { href: "/mx/es/", label: "Español" },
@@ -73,7 +83,21 @@ function languageEntries(lang: Lang): IndexEntry[] {
       lang,
       title: es ? "Fuentes" : "Sources",
       kind: "sources",
-      text: "fuentes INE INEGI Presidencia",
+      text: "fuentes INE INEGI Presidencia Cámara DOF",
+    },
+    {
+      path: districtsIndexPath(lang),
+      lang,
+      title: es ? "Distritos electorales federales" : "Federal electoral districts",
+      kind: "districts",
+      text: "300 distritos electorales federales uninominales cabecera INE",
+    },
+    {
+      path: circunscripcionesPath(lang),
+      lang,
+      title: es ? "Circunscripciones plurinominales" : "Plurinominal constituencies",
+      kind: "constituencies",
+      text: `cinco circunscripciones ${CIRCUNSCRIPCIONES.map((item) => item.sede).join(" ")}`,
     },
   ];
   const entities = alphaEntities().map((entity) => ({
@@ -83,7 +107,18 @@ function languageEntries(lang: Lang): IndexEntry[] {
     kind: "entity",
     text: `${entity.name} ${entity.ine.heading} ${entity.code} ${entity.abbr}`,
   }));
-  return [...fixed, ...entities];
+  const districts = DISTRICTS.map((district) => {
+    const entity = entityBySlug(district.entitySlug);
+    const number = padDistrict(district.number);
+    return {
+      path: districtPath(lang, district.entitySlug, district.number),
+      lang,
+      title: es ? `Distrito ${number}, ${entity?.name ?? district.entitySlug}` : `District ${number}, ${entity?.name ?? district.entitySlug}`,
+      kind: "district",
+      text: `${entity?.name ?? ""} ${number} ${district.cabeceraLocalidad} ${district.cabeceraMunicipio} ${district.deputy.name} circunscripcion ${district.circunscripcion}`,
+    };
+  });
+  return [...fixed, ...entities, ...districts];
 }
 
 export function indexEntries(): IndexEntry[] {
