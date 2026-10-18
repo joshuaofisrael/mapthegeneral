@@ -169,8 +169,11 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
         </p>
         <GapNote
           label="Gap"
-          text="Candidate lists for a future UK Parliament election are not on this page. No proclamation of a polling day was in the sources read on 17 October 2026. Constituency pages are not in this release."
+          text="Candidate lists for a future UK Parliament election are not on this page. No proclamation of a polling day was in the sources read on 17 October 2026."
         />
+        <p>
+          <Link href="/gb/en/constituencies/">Westminster, Scottish Parliament, Senedd and Assembly constituencies</Link>
+        </p>
       </section>
 
       <section className="prose-legal">
