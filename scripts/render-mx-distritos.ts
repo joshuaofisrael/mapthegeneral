@@ -142,14 +142,14 @@ function page(lang: Lang, district: District): string {
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${es ? `Información no oficial. Confírmela con su <a href="${OFFICE}">autoridad electoral oficial</a>.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(mexicoHome(lang))}">${esc(es ? "México" : "Mexico")}</a> · <a href="/search/">${esc(es ? "Buscar" : "Search")}</a> · <a href="${esc(otherPath)}">${es ? "English" : "Español"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 <p class="eyebrow">${esc(es ? "Distrito electoral federal uninominal" : "Federal single-member electoral district")}</p>
 <h1>${esc(titleName)}</h1>
 <p class="lede">${esc(entity.name)}</p>
-<p><strong>Last updated: October 18, 2026.</strong> <a href="${esc(reportErrorHref(path))}">Report an error</a></p>
+<p><strong>${es ? "Última actualización: 18 de octubre de 2026." : "Last updated: October 18, 2026."}</strong> <a href="${esc(reportErrorHref(path))}">${es ? "Reportar un error" : "Report an error"}</a></p>
 <table>
 <tr><th>${esc(es ? "Entidad" : "Entidad")}</th><td><a href="${esc(entityPath(lang, entity.slug))}">${esc(entity.name)}</a></td></tr>
 <tr><th>${esc(es ? "Número en el descriptivo" : "Number in the descriptivo")}</th><td>${esc(number)}</td></tr>
