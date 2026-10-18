@@ -34,6 +34,22 @@ export function sectionPath(lang: KrLang, section: string): string {
   return `${krHome(lang)}${section}/`;
 }
 
+export function localIndexPath(lang: KrLang): string {
+  return `${krHome(lang)}local/`;
+}
+
+export function localPath(lang: KrLang, region: string, slug: string): string {
+  return `${regionPath(lang, region)}${slug}/`;
+}
+
+export function constituencyIndexPath(lang: KrLang): string {
+  return `${krHome(lang)}constituencies/`;
+}
+
+export function constituencyPath(lang: KrLang, slug: string): string {
+  return `${constituencyIndexPath(lang)}${slug}/`;
+}
+
 export function otherLang(lang: KrLang): KrLang {
   return lang === "ko" ? "en" : "ko";
 }
