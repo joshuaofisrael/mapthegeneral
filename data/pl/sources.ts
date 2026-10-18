@@ -166,6 +166,12 @@ export const SOURCES: SourceRef[] = [
     url: "https://wybory.gov.pl/senat20261122/pl",
     readOn: READ_L2,
   },
+  {
+    id: "postanowienie-senat-20-2026",
+    name: "Postanowienie Prezydenta Rzeczypospolitej Polskiej z dnia 25 września 2026 r. w sprawie zarządzenia wyborów uzupełniających do Senatu Rzeczypospolitej Polskiej (Dz.U. 2026 poz. 1255)",
+    url: "https://www.dziennikustaw.gov.pl/DU/2026/1255",
+    readOn: READ_L2,
+  },
 ];
 
 const byId = new Map(SOURCES.map((source) => [source.id, source]));

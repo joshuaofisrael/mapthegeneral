@@ -121,7 +121,8 @@
     "num": 20,
     "area": "obejmujący obszary powiatów: krośnieński, świebodziński, zielonogórski oraz miasta na prawach powiatu: Zielona Góra.",
     "senator": "Mirosław Różański zmarł 24.08.2026r.",
-    "voivodeshipSlug": "lubuskie"
+    "voivodeshipSlug": "lubuskie",
+    "vacant": true
   },
   {
     "num": 21,

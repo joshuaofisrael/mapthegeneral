@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { PolandFrame } from "../../frame";
-import { allSenatOkregi, senatIndexPath, senatOkregPath } from "../../../../../data/pl/level2";
+import { allSenatOkregi, senatIndexPath, senatOkregPath, senatorLabel } from "../../../../../data/pl/level2";
 import { voivodeshipBySlug } from "../../../../../data/pl/places";
 import { sourcesById } from "../../../../../data/pl/sources";
 import { ui } from "../../../../../data/pl/ui";
@@ -56,7 +56,7 @@ export default async function SenatIndex({ params }: { params: Promise<{ lang: s
       }
       officeHref="https://pkw.gov.pl/"
       officeLabel="Państwowa Komisja Wyborcza"
-      sources={sourcesById(["senate-okregi", "kodeks", "pkw-senat-20-2026"])}
+      sources={sourcesById(["senate-okregi", "kodeks", "pkw-senat-20-2026", "postanowienie-senat-20-2026"])}
     >
       <ul className="mt-6 space-y-2 text-sm">
         {allSenatOkregi().map((okreg) => {
@@ -66,7 +66,7 @@ export default async function SenatIndex({ params }: { params: Promise<{ lang: s
               <a className="text-navy underline" href={senatOkregPath(lang, okreg.num)}>
                 {pl ? `Okręg nr ${okreg.num}` : `Constituency ${okreg.num}`}
               </a>
-              {` — ${okreg.senator} — ${voj?.name ?? okreg.voivodeshipSlug}`}
+              {` — ${senatorLabel(okreg, lang)} — ${voj?.name ?? okreg.voivodeshipSlug}`}
             </li>
           );
         })}

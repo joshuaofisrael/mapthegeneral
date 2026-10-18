@@ -113,7 +113,7 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
     lang,
     title: pl ? `Okręg wyborczy nr ${item.num} do Senatu` : `Senate constituency ${item.num}`,
     kind: "senat-okreg",
-    text: `Senat ${item.num} ${item.senator} ${item.alsoPrinted?.name ?? ""} ${item.area}`,
+    text: `Senat ${item.num} ${item.vacant ? "mandat nieobsadzony wybory uzupełniające 22 listopada 2026" : item.senator} ${item.alsoPrinted?.name ?? ""} ${item.area}`,
   }));
   return [...fixed, ...indexes, ...regions, ...powiats, ...sejm, ...senat];
 }

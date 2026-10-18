@@ -102,7 +102,7 @@ function shell(input: {
 <script type="application/ld+json">${jsonLd(input.crumbs)}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${pl ? `Informacja nieoficjalna. Potwierdź ją w <a href="${OFFICE}">urzędowym organie wyborczym</a>.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(polandHome(input.lang))}">${pl ? "Polska" : "Poland"}</a> · <a href="/search/">${pl ? "Szukaj" : "Search"}</a> · <a href="${esc(otherPath)}">${pl ? "English" : "Polski"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbsHtml(input.crumbs)}</nav>
@@ -248,11 +248,26 @@ function senatPage(lang: Lang, okreg: SenatOkreg): string {
     : "";
   const byElection =
     okreg.num === 20
-      ? `<p>${pl ? `Serwis PKW <a href="https://wybory.gov.pl/senat20261122/pl">Wybory uzupełniające do Senatu w okręgu wyborczym nr 20</a>, odczytany 18 października 2026 r., podaje datę 22 listopada 2026 r. i nazywa postanowienie Prezydenta RP z 25 września 2026 r. w sprawie zarządzenia tych wyborów. Art. 107 § 1 Kodeksu wyborczego zabrania agitacji w dniu głosowania i na 24 godziny przed tym dniem. 18 października 2026 r. ten zakaz jeszcze nie biegł. Ta strona nie podaje sondaży, prognoz, komitetów ani wyniku.` : `The Commission service <a href="https://wybory.gov.pl/senat20261122/pl">Wybory uzupełniające do Senatu w okręgu wyborczym nr 20</a>, read on 18 October 2026, prints the date 22 November 2026 and names the President’s order of 25 September 2026 calling that election. Article 107 § 1 of the electoral code forbids campaigning on polling day and for the 24 hours before it. On 18 October 2026 that ban had not started. This page prints no polls, projections, committees, or result.`}</p>`
+      ? `<p>${
+          pl
+            ? `Postanowieniem Prezydenta RP z dnia 25 września 2026 r. (<a href="https://www.dziennikustaw.gov.pl/DU/2026/1255">Dz.U. 2026 poz. 1255</a>) zarządzono wybory uzupełniające do Senatu w okręgu wyborczym nr 20. Datą wyborów jest niedziela 22 listopada 2026 r. Tę samą datę podaje serwis Państwowej Komisji Wyborczej <a href="https://wybory.gov.pl/senat20261122/pl">Wybory uzupełniające do Senatu w okręgu wyborczym nr 20</a>, odczytany 18 października 2026 r.`
+            : `By order of the President of the Republic of Poland of 25 September 2026 (<a href="https://www.dziennikustaw.gov.pl/DU/2026/1255">Dz.U. 2026 item 1255</a>), a by-election to the Senate was called in constituency 20. Polling day is Sunday 22 November 2026. The National Electoral Commission service <a href="https://wybory.gov.pl/senat20261122/pl">Wybory uzupełniające do Senatu w okręgu wyborczym nr 20</a>, read on 18 October 2026, prints the same date.`
+        }</p>`
       : "";
+  const seat = okreg.vacant
+    ? `<p class="gap"><strong>${pl ? "Mandat nieobsadzony." : "Seat vacant."}</strong> ${
+        pl
+          ? `Tabela Senatu „Okręgi wyborcze” (senat.gov.pl, odczyt 18 października 2026 r.) drukuje w komórce senatora: „${esc(okreg.senator)}”.`
+          : `The Senate table “Okręgi wyborcze” (senat.gov.pl, read 18 October 2026) prints in the senator cell: “${esc(okreg.senator)}”.`
+      }</p>`
+    : `<p>${esc(okreg.senator)}</p>`;
   const description = pl
-    ? `Okręg nr ${okreg.num} do Senatu. Senator w tabeli Senatu: ${okreg.senator}. Informacja nieoficjalna.`
-    : `Senate constituency ${okreg.num}. Senator in the Senate table: ${okreg.senator}. Unofficial information.`;
+    ? okreg.vacant
+      ? `Okręg nr ${okreg.num} do Senatu. Mandat nieobsadzony. Wybory uzupełniające 22 listopada 2026 r. Informacja nieoficjalna.`
+      : `Okręg nr ${okreg.num} do Senatu. Senator w tabeli Senatu: ${okreg.senator}. Informacja nieoficjalna.`
+    : okreg.vacant
+      ? `Senate constituency ${okreg.num}. Seat vacant. By-election on 22 November 2026. Unofficial information.`
+      : `Senate constituency ${okreg.num}. Senator in the Senate table: ${okreg.senator}. Unofficial information.`;
   const crumbs = [
     { name: pl ? "Strona główna" : "Home", path: "/" },
     { name: "Polska", path: "/pl/" },
@@ -260,14 +275,14 @@ function senatPage(lang: Lang, okreg: SenatOkreg): string {
     { name: pl ? "Okręgi do Senatu" : "Senate constituencies", path: senatIndexPath(lang) },
     { name: String(okreg.num), path },
   ];
-  const ids = okreg.num === 20 ? ["senate-okregi", "kodeks", "pkw-senat-2023", "pkw-senat-20-2026"] : ["senate-okregi", "kodeks", "pkw-senat-2023"];
+  const ids = okreg.num === 20 ? ["senate-okregi", "kodeks", "pkw-senat-2023", "postanowienie-senat-20-2026", "pkw-senat-20-2026"] : ["senate-okregi", "kodeks", "pkw-senat-2023"];
   const body = `<p class="eyebrow">${pl ? "Senat" : "Senate"}</p>
 <h1>${esc(title)}</h1>
 <p class="lede">${esc(voj.name)}</p>
 <p>${pl ? "Zdanie o obszarze jest przepisane ze strony Senatu „Okręgi wyborcze”, odczytanej 18 października 2026 r. Załącznik nr 2 do Kodeksu wyborczego jest ustawowym wykazem. Ta strona go nie przepisuje." : "The area sentence is copied from the Senate page “Okręgi wyborcze”, read on 18 October 2026. Annex 2 of the electoral code is the statutory list. This page does not reprint it."}</p>
 <p>${esc(okreg.area)}</p>
-<h2>${pl ? "Senator w tabeli" : "Senator in the table"}</h2>
-<p>${esc(okreg.senator)}</p>
+<h2>${okreg.vacant ? (pl ? "Mandat" : "Seat") : pl ? "Senator w tabeli" : "Senator in the table"}</h2>
+${seat}
 ${extra}
 ${byElection}
 <h2>${pl ? "Wybory" : "Elections"}</h2>

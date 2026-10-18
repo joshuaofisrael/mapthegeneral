@@ -54,7 +54,15 @@ export type SenatOkreg = {
   voivodeshipSlug: string;
   /** A further row the same table prints for this number. */
   alsoPrinted?: SenatAlsoPrinted;
+  /** The seat is vacant; a by-election has been called (okręg 20). */
+  vacant?: true;
 };
+
+/** Short label for the seat holder: the Senate table cell, or "vacant". */
+export function senatorLabel(okreg: SenatOkreg, lang: "pl" | "en"): string {
+  if (okreg.vacant) return lang === "pl" ? "mandat nieobsadzony" : "seat vacant";
+  return okreg.senator;
+}
 
 export type TercVoivodeshipStat = {
   land: number;
