@@ -14,8 +14,10 @@ import {
   faqPath,
   germanyChooser,
   germanyHome,
+  kreiseIndexPath,
   landPath,
   otherLang,
+  wahlkreiseIndexPath,
   partiesPath,
   resultsPath,
   sourcesPath,
@@ -146,8 +148,8 @@ export default async function GermanyNationalPage({ params }: { params: Promise<
         </p>
         <p>
           {de
-            ? `Die Destatis-Tabelle „Verwaltungsgliederung“, Gebietsstand 30. September 2026, druckt für Deutschland ${formatNumber(MUNICIPALITY_COUNT_2026_09_30, lang)} Gemeinden und ${formatNumber(KREIS_COUNT_2026_09_30, lang)} Kreise. Fußnote 3 sagt: ohne unbewohnte gemeindefreie Gebiete, einschließlich Städte. Seiten für diese Einheiten sind in dieser Ausgabe nicht dabei.`
-            : `The Destatis table “Verwaltungsgliederung”, territorial status 30 September 2026, prints ${formatNumber(MUNICIPALITY_COUNT_2026_09_30, lang)} municipalities and ${formatNumber(KREIS_COUNT_2026_09_30, lang)} Kreise for Germany. Footnote 3 says: excluding uninhabited unincorporated areas, including cities. Pages for those units are not in this release.`}
+            ? `Die Destatis-Tabelle „Verwaltungsgliederung“, Gebietsstand 30. September 2026, druckt für Deutschland ${formatNumber(MUNICIPALITY_COUNT_2026_09_30, lang)} Gemeinden und ${formatNumber(KREIS_COUNT_2026_09_30, lang)} Kreise. Fußnote 3 sagt: ohne unbewohnte gemeindefreie Gebiete, einschließlich Städte. Seiten für die Kreise und für die 299 Bundestagswahlkreise sind verlinkt. Seiten für die Gemeinden sind in dieser Ausgabe nicht dabei.`
+            : `The Destatis table “Verwaltungsgliederung”, territorial status 30 September 2026, prints ${formatNumber(MUNICIPALITY_COUNT_2026_09_30, lang)} municipalities and ${formatNumber(KREIS_COUNT_2026_09_30, lang)} Kreise for Germany. Footnote 3 says: excluding uninhabited unincorporated areas, including cities. Pages for the Kreise and for the 299 Bundestag constituencies are linked. Municipality pages are not in this release.`}
         </p>
         <GapNote label={copy.gap} text={copy.localGap} />
         <GapNote label={copy.gap} text={copy.candidateGap} />
@@ -173,6 +175,14 @@ export default async function GermanyNationalPage({ params }: { params: Promise<
         {" · "}
         <Link className="text-navy underline" href={sourcesPath(lang)}>
           {copy.sources}
+        </Link>
+        {" · "}
+        <Link className="text-navy underline" href={kreiseIndexPath(lang)}>
+          {copy.kreiseHeading}
+        </Link>
+        {" · "}
+        <Link className="text-navy underline" href={wahlkreiseIndexPath(lang)}>
+          {copy.wahlkreiseHeading}
         </Link>
       </p>
 
