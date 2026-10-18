@@ -1,14 +1,19 @@
 import { alphaLands } from "../data/de/lands";
+import { KREISE, WAHLKREISE } from "../data/de/level2";
 import {
   bundestag2029Path,
   electionsPath,
   faqPath,
   germanyChooser,
   germanyHome,
+  kreisPath,
+  kreiseIndexPath,
   landPath,
   partiesPath,
   resultsPath,
   sourcesPath,
+  wahlkreisPath,
+  wahlkreiseIndexPath,
 } from "../data/de/paths";
 import type { DeLang } from "../data/de/types";
 
@@ -17,7 +22,7 @@ export const germanyCountry = {
   name: "Germany",
   href: germanyChooser(),
   summary:
-    "The Federal Returning Officer’s page for the election of the 22nd German Bundestag does not set a polling day. It places that day between 26 January 2029 and 25 March 2029. This release has the national page and the 16 Länder, in German and English.",
+    "The Federal Returning Officer’s page for the election of the 22nd German Bundestag does not set a polling day. It places that day between 26 January 2029 and 25 March 2029. This release has the national page, the 16 Länder, 401 Kreise from the Destatis Gemeindeverzeichnis of 30 September 2026, and the 299 Bundestag constituencies, in German and English. Municipality pages are not in this release.",
   languages: [
     { label: "Deutsch", href: germanyHome("de") },
     { label: "English", href: germanyHome("en") },
@@ -93,7 +98,37 @@ function entriesFor(lang: DeLang): IndexEntry[] {
     kind: "land",
     text: `${land.name} ${land.nextLabel} ${land.turnus} Landtag`,
   }));
-  return [...fixed, ...lands];
+  const indexes: IndexEntry[] = [
+    {
+      path: kreiseIndexPath(lang),
+      lang,
+      title: de ? "Kreise und kreisfreie Städte" : "Kreise and district-free cities",
+      kind: "index",
+      text: "Kreise kreisfreie Städte Landkreis Stadtkreis GV100AD",
+    },
+    {
+      path: wahlkreiseIndexPath(lang),
+      lang,
+      title: de ? "Bundestagswahlkreise" : "Bundestag constituencies",
+      kind: "index",
+      text: "Wahlkreis Bundestag 2025 Zweitstimmendeckung",
+    },
+  ];
+  const kreise = KREISE.map((kreis) => ({
+    path: kreisPath(lang, kreis.land, kreis.slug),
+    lang,
+    title: kreis.name,
+    kind: "kreis",
+    text: `${kreis.name} ${kreis.ags} ${kreis.seat} ${kreis.land}`,
+  }));
+  const wahlkreise = WAHLKREISE.map((wk) => ({
+    path: wahlkreisPath(lang, wk.land, wk.slug),
+    lang,
+    title: `${String(wk.nr).padStart(3, "0")} ${wk.name}`,
+    kind: "wahlkreis",
+    text: `${wk.name} ${wk.nr} ${wk.party} ${wk.member ?? ""} ${wk.land}`,
+  }));
+  return [...fixed, ...lands, ...indexes, ...kreise, ...wahlkreise];
 }
 
 export function germanyIndexEntries(): IndexEntry[] {

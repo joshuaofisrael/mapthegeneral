@@ -20,7 +20,9 @@ const EN = {
   officeholderGap:
     "The name of the head of this Land government, the parties in that government, and the current chamber’s seat totals are not copied here. The parliament and the government linked below publish them.",
   localGap:
-    "District, municipality, and Bundestag constituency pages are not in this release. No mayor, Landrat, or constituency candidate is named here.",
+    "Municipality pages are not in this release. No mayor is named on these pages.",
+  kreiseHeading: "Kreise and district-free cities",
+  wahlkreiseHeading: "Bundestag constituencies",
   candidateGap:
     "No candidacy for the 2029 Bundestag election was read on 17 October 2026. The Federal Returning Officer’s page says elections of the candidates themselves may be held from 26 November 2027 at the earliest. This page does not publish a candidate list.",
   postcodeGap:
@@ -50,7 +52,9 @@ const DE = {
   officeholderGap:
     "Der Name der Person an der Spitze dieser Landesregierung, die Parteien dieser Regierung und die Sitzzahlen der laufenden Wahlperiode stehen hier nicht. Parlament und Regierung, die unten verlinkt sind, veröffentlichen sie.",
   localGap:
-    "Seiten für Kreise, Gemeinden und Bundestagswahlkreise sind in dieser Ausgabe nicht enthalten. Kein Bürgermeister, keine Landrätin und kein Landrat und keine Wahlkreisbewerbung wird hier genannt.",
+    "Seiten für Gemeinden sind in dieser Ausgabe nicht enthalten. Kein Bürgermeistername steht auf diesen Seiten.",
+  kreiseHeading: "Kreise und kreisfreie Städte",
+  wahlkreiseHeading: "Bundestagswahlkreise",
   candidateGap:
     "Am 17. Oktober 2026 lag keine Bewerbung für die Bundestagswahl 2029 vor, die für diese Seite gelesen wurde. Die Seite der Bundeswahlleiterin sagt, dass die Wahlen der Bewerberinnen und Bewerber frühestens ab dem 26. November 2027 stattfinden dürfen. Diese Seite veröffentlicht keine Bewerberliste.",
   postcodeGap:

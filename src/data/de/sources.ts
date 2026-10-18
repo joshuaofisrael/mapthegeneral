@@ -1,6 +1,7 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ_L2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -74,6 +75,84 @@ export const SOURCES: SourceRef[] = [
     name: "Die Bundesregierung",
     url: "https://www.bundesregierung.de/",
     readOn: READ,
+  },
+  {
+    id: "destatis-gv100",
+    name: "Statistisches Bundesamt (Destatis), Gemeindeverzeichnis GV100AD, Gebietsstand 30.09.2026, Erscheinungsmonat August 2026 (GV100AD_30092026.txt, Hinweise.txt, Datensatzbeschreibung_GV100AD.pdf)",
+    url: "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/Archiv/GV100ADQ/GV100AD3QAktuell.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwl-wkr-names",
+    name: "Die Bundeswahlleiterin, Wahlkreisnummern und -namen bei der Wahl zum 21. Deutschen Bundestag, Stand 07.03.2024",
+    url: "https://www.bundeswahlleiterin.de/dam/jcr/17e066f6-a0af-42df-a5d2-365dc87769ab/btw25_wahlkreisnamen_utf8.csv",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwl-kerg2",
+    name: "Die Bundeswahlleiterin, Ergebnisse nach Wahlkreisen (kerg2.csv), Status Endgültig, Stand 11.03.2025",
+    url: "https://www.bundeswahlleiterin.de/dam/jcr/f49a47a1-735b-4e9b-b4e1-4c73cad2292e/btw25_kerg2.csv",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwl-gewaehlte",
+    name: "Die Bundeswahlleiterin, Gewählte Bewerberinnen und Bewerber, Status Endgültig, Stand 12.03.2025, mit Datensatzbeschreibung Stand 22.02.2025",
+    url: "https://www.bundeswahlleiterin.de/dam/jcr/eeb02132-caeb-430a-ae1f-6cd5907f1809/btw25_gewaehlte_utf8.zip",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwl-opendata",
+    name: "Die Bundeswahlleiterin, Open-Data-Angebot, Abschnitt zur Zweitstimmendeckung in den Ergebnisdateien",
+    url: "https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/opendata.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwahlg-32",
+    name: "Bundeswahlgesetz § 32, Unzulässige Wahlpropaganda und Unterschriftensammlung, unzulässige Veröffentlichung von Wählerbefragungen",
+    url: "https://www.gesetze-im-internet.de/bwahlg/__32.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwahlg-49a",
+    name: "Bundeswahlgesetz § 49a, Ordnungswidrigkeiten",
+    url: "https://www.gesetze-im-internet.de/bwahlg/__49a.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "bwl-wahltermine",
+    name: "Die Bundeswahlleiterin, Künftige Wahltermine in Deutschland",
+    url: "https://www.bundeswahlleiterin.de/service/wahltermine.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "hessen-termine",
+    name: "Hessisches Statistisches Landesamt, Termine anstehender Wahlen",
+    url: "https://statistik.hessen.de/unsere-zahlen/wahlen/termine",
+    readOn: READ_L2,
+  },
+  {
+    id: "bayern-termine",
+    name: "Bayerisches Landesamt für Statistik, Wahltermine",
+    url: "https://www.statistik.bayern.de/wahlen/termine/",
+    readOn: READ_L2,
+  },
+  {
+    id: "dl-de-by-2-0",
+    name: "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+    url: "https://www.govdata.de/dl-de/by-2-0",
+    readOn: READ_L2,
+  },
+  {
+    id: "bdsg-1",
+    name: "Bundesdatenschutzgesetz § 1, Anwendungsbereich",
+    url: "https://www.gesetze-im-internet.de/bdsg_2018/__1.html",
+    readOn: READ_L2,
+  },
+  {
+    id: "urhg-5",
+    name: "Urheberrechtsgesetz § 5, Amtliche Werke",
+    url: "https://www.gesetze-im-internet.de/urhg/__5.html",
+    readOn: READ_L2,
   },
 ];
 

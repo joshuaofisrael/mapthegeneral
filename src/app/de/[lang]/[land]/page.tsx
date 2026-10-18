@@ -2,6 +2,8 @@ import Link from "@/components/AnchorLink";
 import { GapNote } from "@/components/GapNote";
 import { GermanyFrame } from "@/app/de/frame";
 import { alphaLands, landBySlug, landNeighbors } from "@/data/de/lands";
+import { KREIS_TYPE_LABEL, kreiseInLand, wahlkreiseInLand } from "@/data/de/level2";
+import { formatNumber } from "@/data/de/format";
 import { sourceById, sourcesById } from "@/data/de/sources";
 import { ui } from "@/data/de/ui";
 import { dePageMetadata } from "@/data/de/seo";
@@ -9,8 +11,12 @@ import {
   DE_LANGS,
   germanyChooser,
   germanyHome,
+  kreisPath,
+  kreiseIndexPath,
   landPath,
   otherLang,
+  wahlkreisPath,
+  wahlkreiseIndexPath,
 } from "@/data/de/paths";
 import type { ChamberKind, DeLang } from "@/data/de/types";
 import { notFound } from "next/navigation";
@@ -68,6 +74,8 @@ export default async function LandPage({
   const neighbors = landNeighbors(slug);
   const office = sourceById("bundesrat-landtag");
   const chamber = chamberLabel(land.chamber, lang);
+  const kreise = kreiseInLand(slug);
+  const wahlkreise = wahlkreiseInLand(slug);
 
   return (
     <GermanyFrame
@@ -151,6 +159,47 @@ export default async function LandPage({
           <a className="text-navy underline" href={office.url} rel="noopener noreferrer">
             {de ? "Bundesratstabelle" : "Bundesrat table"}
           </a>
+        </p>
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {copy.kreiseHeading} ({formatNumber(kreise.length, lang)})
+        </h2>
+        <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+          {kreise.map((kreis) => (
+            <li key={kreis.ags} className="break-inside-avoid py-1">
+              <Link className="text-navy underline" href={kreisPath(lang, kreis.land, kreis.slug)}>
+                {kreis.name}
+              </Link>
+              <span className="text-ink-muted"> · {KREIS_TYPE_LABEL[kreis.type]}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <Link className="text-navy underline" href={kreiseIndexPath(lang)}>
+            {copy.kreiseHeading}
+          </Link>
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="font-serif text-2xl font-semibold">
+          {copy.wahlkreiseHeading} ({formatNumber(wahlkreise.length, lang)})
+        </h2>
+        <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+          {wahlkreise.map((wk) => (
+            <li key={wk.nr} className="break-inside-avoid py-1">
+              <Link className="text-navy underline" href={wahlkreisPath(lang, wk.land, wk.slug)}>
+                {String(wk.nr).padStart(3, "0")} {wk.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <Link className="text-navy underline" href={wahlkreiseIndexPath(lang)}>
+            {copy.wahlkreiseHeading}
+          </Link>
         </p>
       </section>
 
