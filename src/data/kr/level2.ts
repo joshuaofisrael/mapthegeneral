@@ -59,11 +59,19 @@ const localsFile = localsJson as { adminSi: string[]; units: LocalUnit[] };
 const constituencyFile = constituenciesJson as Constituency[];
 
 export const ADMIN_SI = localsFile.adminSi;
-export const LOCAL_UNITS: LocalUnit[] = localsFile.units;
+// Law No. 20161 abolished Incheon Jung-gu and Dong-gu on 1 July 2026. Section 7-5
+// (31 December 2025) still prints them, so they stay in the book count but get no page.
+const ABOLISHED_2026 = new Set(["incheon/jung-gu", "incheon/dong-gu"]);
+const ALL_UNITS: LocalUnit[] = localsFile.units;
+export const ABOLISHED_UNITS: LocalUnit[] = ALL_UNITS.filter((unit) => ABOLISHED_2026.has(`${unit.region}/${unit.slug}`));
+export const LOCAL_UNITS: LocalUnit[] = ALL_UNITS.filter((unit) => !ABOLISHED_2026.has(`${unit.region}/${unit.slug}`));
+export const INCHEON_LAW_URL =
+  "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%EC%A0%9C%EB%AC%BC%ED%8F%AC%EA%B5%AC%E3%86%8D%EC%98%81%EC%A2%85%EA%B5%AC%EB%B0%8F%EA%B2%80%EB%8B%A8%EA%B5%AC%EC%84%A4%EC%B9%98%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0";
+export const INCHEON_REFORM_URL = "https://www.incheon.go.kr/IC01070101";
 export const CONSTITUENCIES: Constituency[] = constituencyFile;
 
-export const BOOK_LOCAL_COUNT = LOCAL_UNITS.filter((unit) => unit.inBook).length;
-export const ROSTER_ONLY_COUNT = LOCAL_UNITS.filter((unit) => !unit.inBook).length;
+export const BOOK_LOCAL_COUNT = ALL_UNITS.filter((unit) => unit.inBook).length;
+export const ROSTER_ONLY_COUNT = ALL_UNITS.filter((unit) => !unit.inBook).length;
 
 function byKoreanName<T extends { name: string }>(rows: T[]): T[] {
   return [...rows].sort((a, b) => a.name.localeCompare(b.name, "ko"));
@@ -104,6 +112,7 @@ export function districtListUrl(cityCode: string): string {
 function assertLevel2(): void {
   if (BOOK_LOCAL_COUNT !== 226) throw new Error(`book locals ${BOOK_LOCAL_COUNT}`);
   if (ROSTER_ONLY_COUNT !== 3) throw new Error(`roster-only ${ROSTER_ONLY_COUNT}`);
+  if (ABOLISHED_UNITS.length !== 2) throw new Error(`abolished ${ABOLISHED_UNITS.length}`);
   if (CONSTITUENCIES.length !== 254) throw new Error(`constituencies ${CONSTITUENCIES.length}`);
   if (ADMIN_SI.join(",") !== "제주시,서귀포시") throw new Error("admin si");
   for (const unit of LOCAL_UNITS) {

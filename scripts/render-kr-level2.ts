@@ -7,6 +7,8 @@ import {
   constituencyNeighbors,
   districtListUrl,
   LOCAL_UNITS,
+  INCHEON_LAW_URL,
+  INCHEON_REFORM_URL,
   localNeighbors,
   type Constituency,
   type LocalUnit,
@@ -118,7 +120,7 @@ function shell(input: {
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${ko ? `비공식 정보입니다. <a href="${OFFICE}">공식 선거관리기관</a>에서 확인하십시오.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(home)}">${esc(ko ? "대한민국" : "South Korea")}</a> · <a href="/search/">${esc(ko ? "검색" : "Search")}</a> · <a href="${esc(input.otherPath)}">${ko ? "English" : "한국어"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${nav}</nav>
@@ -228,6 +230,13 @@ ${
           ? `확정상황이 적은 보궐선거의 실시일은 ${unit.vacancy.pollingDay}입니다.`
           : `The confirmation table prints ${unit.vacancy.pollingDay} as the polling day of the by-election.`,
       )}</p>`
+    : ""
+}
+${
+  unit.region === "incheon" && unit.slug === "seo-gu"
+    ? ko
+      ? `<p><a href="${esc(INCHEON_LAW_URL)}">법률 제20161호</a>는 2026년 7월 1일부터 서구의 일부를 나누어 검단구를 설치합니다. 7-5와 당선인명부는 서구라는 이름을 인쇄합니다. <a href="${esc(INCHEON_REFORM_URL)}">인천광역시 행정체제 개편 안내</a>는 나머지 지역을 서해구로 부릅니다.</p>`
+      : `<p><a href="${esc(INCHEON_LAW_URL)}">Law No. 20161</a> split part of 서구 off as 검단구 from 1 July 2026. Section 7-5 and the winner roster print the name 서구. <a href="${esc(INCHEON_REFORM_URL)}">Incheon Metropolitan City’s reorganization page</a> calls the remaining area 서해구.</p>`
     : ""
 }
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(copy.localPagesGap)}</p>

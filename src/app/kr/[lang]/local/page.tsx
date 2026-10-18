@@ -46,8 +46,8 @@ export default async function LocalIndexPage({ params }: { params: Promise<{ lan
       title={ko ? "시·군·구" : "Si, gun, and gu"}
       lede={
         ko
-          ? `7-5의 기초자치단체 ${formatKrNumber(BOOK_LOCAL_COUNT, lang)}곳. 당선인명부에만 있는 이름 ${formatKrNumber(ROSTER_ONLY_COUNT, lang)}곳.`
-          : `${formatKrNumber(BOOK_LOCAL_COUNT, lang)} basic governments in section 7-5. ${formatKrNumber(ROSTER_ONLY_COUNT, lang)} names that appear only on the winner roster.`
+          ? `7-5의 기초자치단체 ${formatKrNumber(BOOK_LOCAL_COUNT, lang)}곳. 당선인명부에만 있는 이름 ${formatKrNumber(ROSTER_ONLY_COUNT, lang)}곳. 인천광역시 중구와 동구는 법률 제20161호에 따라 2026년 7월 1일 폐지되어 이 목록에 페이지가 없습니다.`
+          : `${formatKrNumber(BOOK_LOCAL_COUNT, lang)} basic governments in section 7-5. ${formatKrNumber(ROSTER_ONLY_COUNT, lang)} names that appear only on the winner roster. Incheon’s 중구 and 동구 were abolished on 1 July 2026 under Law No. 20161 and have no page here.`
       }
       officeHref="https://www.nec.go.kr/"
       officeLabel="중앙선거관리위원회"

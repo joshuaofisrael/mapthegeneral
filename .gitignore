@@ -52,3 +52,5 @@ next-env.d.ts
 
 # local env / tooling
 .vercel
+/public/fr/en/
+/public/fr/fr/
