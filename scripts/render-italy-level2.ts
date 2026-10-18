@@ -102,7 +102,7 @@ function shell(opts: {
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${it ? `Informazione non ufficiale. Confermarla con l'<a href="${OFFICE}">ufficio elettorale ufficiale</a>.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(italyHome(opts.lang))}">${it ? "Italia" : "Italy"}</a> · <a href="/search/">${it ? "Cerca" : "Search"}</a> · <a href="${esc(otherPath)}">${it ? "English" : "Italiano"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
@@ -119,7 +119,13 @@ function sourceList(lang: ItLang, ids: string[]): string {
   return sourcesById(ids)
     .map(
       (source) =>
-        `<li><a href="${esc(source.url)}">${esc(source.name)}</a> — ${esc(copy.readOn)} ${esc(source.readOn)}</li>`,
+        `<li><a href="${esc(source.url)}">${esc(source.name)}</a> — ${esc(copy.readOn)} ${esc(source.readOn)}${
+          source.id.startsWith("istat-")
+            ? lang === "it"
+              ? ` — Fonte: ISTAT, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it">CC BY 4.0</a>`
+              : ` — Source: ISTAT, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`
+            : ""
+        }</li>`,
     )
     .join("");
 }
@@ -206,14 +212,14 @@ ${offices}
 function memberParagraphs(lang: ItLang, item: Level2Collegio): string {
   const it = lang === "it";
   if (item.house === "senato") {
-    return `<p class="gap"><strong>${it ? "Laguna" : "Gap"}.</strong> ${
+    return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
       it
         ? "Il CSV dei senatori della XIX legislatura scaricato il 18 ottobre 2026 da dati.senato.it non ha un codice di collegio. Le schede pubbliche dei senatori quel giorno non erano leggibili. Questa pagina non assegna un nome."
         : "The CSV of XIX-legislature senators downloaded on 18 October 2026 from dati.senato.it has no constituency code. Public senator profiles were not readable that day. This page does not assign a name."
     }</p>`;
   }
   if (item.members.length === 0) {
-    return `<p class="gap"><strong>${it ? "Laguna" : "Gap"}.</strong> ${
+    return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
       it
         ? "L'interrogazione SPARQL dei mandati della Camera senza endDate, del 18 ottobre 2026, non ha una riga per questo collegio."
         : "The 18 October 2026 SPARQL query of Chamber mandates without an endDate has no row for this constituency."

@@ -56,7 +56,7 @@ const IT = {
   chamber: "Camera dei deputati",
   senate: "Senato della Repubblica",
   sourcesHeading: "Fonti",
-  gap: "Laguna",
+  gap: "Lacuna",
   alphaNearby: "Nome precedente e successivo nell'indice alfabetico",
   readOn: "Lettura",
   unofficial: "Informazione non ufficiale. Confermarla con l'ufficio elettorale ufficiale.",
