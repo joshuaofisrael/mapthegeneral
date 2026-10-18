@@ -1,5 +1,6 @@
+import { COLLEGI, UNITS } from "./level2";
 import { alphaRegions } from "./places";
-import { italyChooser, italyHome, regionPath } from "./paths";
+import { collegioPath, collegiIndexPath, italyChooser, italyHome, regionPath, unitPath, unitsIndexPath } from "./paths";
 import type { ItLang } from "./types";
 
 export type ItalyIndexEntry = {
@@ -54,5 +55,39 @@ export function italySearchEntries(): ItalyIndexEntry[] {
       text: `${region.istatName} ${region.article131Name} ${region.code}`,
     })),
   );
-  return [chooser, ...fixed("en"), ...fixed("it"), ...regions];
+  const indexes = (["en", "it"] as const).flatMap((lang) => [
+    {
+      path: unitsIndexPath(lang),
+      lang,
+      title: lang === "it" ? "Unità territoriali" : "Territorial units",
+      kind: "index",
+      text: "province città metropolitane liberi consorzi ISTAT",
+    },
+    {
+      path: collegiIndexPath(lang),
+      lang,
+      title: lang === "it" ? "Collegi elettorali" : "Electoral constituencies",
+      kind: "index",
+      text: "collegi uninominali plurinominali camera senato",
+    },
+  ]);
+  const units = (["en", "it"] as const).flatMap((lang) =>
+    UNITS.map((unit) => ({
+      path: unitPath(lang, unit.regionSlug, unit.slug),
+      lang,
+      title: unit.name,
+      kind: "unit",
+      text: `${unit.name} ${unit.code} ${unit.regionSlug}`,
+    })),
+  );
+  const collegi = (["en", "it"] as const).flatMap((lang) =>
+    COLLEGI.map((item) => ({
+      path: collegioPath(lang, item.house, item.slug),
+      lang,
+      title: item.name,
+      kind: item.kind,
+      text: `${item.name} ${item.house} ${item.circoscrizione} ${item.regionName}`,
+    })),
+  );
+  return [chooser, ...fixed("en"), ...fixed("it"), ...regions, ...indexes, ...units, ...collegi];
 }
