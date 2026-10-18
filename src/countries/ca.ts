@@ -1,12 +1,13 @@
 import { CA_LANGS } from "../data/ca/lang";
-import { canadaHome, electionPath, regionPath } from "../data/ca/paths";
+import { districtName, DISTRICTS, divisionName, DIVISIONS } from "../data/ca/level2";
+import { canadaHome, districtIndexPath, districtPath, divisionIndexPath, divisionPath, electionPath, regionPath } from "../data/ca/paths";
 import { alphaRegions, regionName } from "../data/ca/places";
 import type { CaLang } from "../data/ca/types";
 
 export const CANADA_HOME_CARD = {
   href: "/ca/",
   title: "Canada",
-  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page and 13 provinces and territories, in English and French.",
+  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, and 293 census divisions, in English and French.",
   links: [
     { href: "/ca/en/", label: "English" },
     { href: "/ca/fr/", label: "Français" },
@@ -88,6 +89,43 @@ export function canadaIndexEntries(): Entry[] {
       text: `${region.nameEn} ${region.nameFr} ${region.dailyLabel}`,
     })),
   );
+  const indexes = CA_LANGS.flatMap((lang) => {
+    const fr = lang === "fr";
+    return [
+      {
+        path: districtIndexPath(lang),
+        lang,
+        title: fr ? "Circonscriptions électorales fédérales" : "Federal electoral districts",
+        kind: "district-index",
+        text: "343 federal electoral districts Elections Canada House of Commons",
+      },
+      {
+        path: divisionIndexPath(lang),
+        lang,
+        title: fr ? "Divisions de recensement" : "Census divisions",
+        kind: "division-index",
+        text: "Statistics Canada SGC 2021 census divisions",
+      },
+    ];
+  });
+  const districts = CA_LANGS.flatMap((lang) =>
+    DISTRICTS.map((district) => ({
+      path: districtPath(lang, district.region, district.slug),
+      lang,
+      title: districtName(district, lang),
+      kind: "district",
+      text: `${district.nameEn} ${district.nameFr} ${district.fed}`,
+    })),
+  );
+  const divisions = CA_LANGS.flatMap((lang) =>
+    DIVISIONS.map((division) => ({
+      path: divisionPath(lang, division.region, division.slug),
+      lang,
+      title: divisionName(division, lang),
+      kind: "division",
+      text: `${division.nameEn} ${division.nameFr} ${division.code}`,
+    })),
+  );
   return [
     {
       path: "/ca/",
@@ -99,5 +137,8 @@ export function canadaIndexEntries(): Entry[] {
     ...fixedEntries("en"),
     ...fixedEntries("fr"),
     ...regions,
+    ...indexes,
+    ...districts,
+    ...divisions,
   ];
 }
