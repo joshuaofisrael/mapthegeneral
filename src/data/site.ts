@@ -39,6 +39,7 @@ export const LEGAL_NAV = [
   { href: "/terms", label: "Terms" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/imprint", label: "Imprint" },
 ] as const;
 
 export const PRIMARY_NAV = [

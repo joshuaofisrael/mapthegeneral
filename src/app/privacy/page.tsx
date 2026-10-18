@@ -104,6 +104,27 @@ export default function PrivacyPage() {
           may complain to a supervisory authority, including the Agencia Española de Protección de
           Datos.
         </p>
+        <h2 id="people-named">People named on this site</h2>
+        <p>
+          Pages name elected officeholders, candidates and mayors, with the office, constituency and
+          party or list they stood for. These details come only from official public sources: election
+          commissions, parliaments, official gazettes and government registers, each cited on the page.
+          {SITE.legalName} publishes them so voters can see who holds or seeks public office. Party
+          affiliation is published because the person made it public by standing for election or
+          taking office. The site publishes no private addresses, phone numbers, identity numbers,
+          dates of birth or photos of private individuals. A person named on the site can ask for a
+          correction or object to publication at <a href={contactMailto()}>{SITE.email}</a>; a
+          correction is made when the official source shows a different fact. Entries change when the
+          official source changes.
+        </p>
+        <h2 id="national-privacy-laws">Other national privacy laws</h2>
+        <p>
+          Requests under other national laws, including Switzerland’s Federal Act on Data Protection,
+          the United Kingdom GDPR, Korea’s Personal Information Protection Act, Japan’s Act on the
+          Protection of Personal Information, Türkiye’s Law No. 6698, Mexico’s federal personal data
+          law, Canada’s PIPEDA and Australia’s Privacy Act 1988, go to the same address and are handled
+          the same way.
+        </p>
         <h2>U.S. state privacy rights</h2>
         <p>
           We do not sell or share personal information for cross-context behavioural advertising, and

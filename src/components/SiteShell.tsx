@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SITE } from "@/data/site";
+import { ElectionLawNotice } from "./ElectionLawNotice";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 
@@ -13,6 +14,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         {SITE.officialNotUs}
       </p>
       <SiteHeader />
+      <ElectionLawNotice />
       <main id="main" className="mx-auto w-full max-w-site flex-1 px-4 py-8 sm:py-10">
         {children}
       </main>
