@@ -1,8 +1,10 @@
 import Link from "@/components/AnchorLink";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
+import { LinkGrid } from "@/components/LinkGrid";
 import { KoreaFrame } from "@/app/kr/frame";
 import { krPageMetadata } from "@/data/kr/metadata";
+import { ADMIN_SI, constituenciesInRegion, unitsInRegion } from "@/data/kr/level2";
 import {
   alphaRegionNeighbors,
   regionBySlug,
@@ -10,9 +12,11 @@ import {
 } from "@/data/kr/places";
 import {
   asKrLang,
+  constituencyPath,
   formatKrNumber,
   krHome,
   krRoot,
+  localPath,
   officeHref,
   regionPath,
   sectionPath,
@@ -160,14 +164,27 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
         <h2>{ko ? "최근 선거" : "Latest election"}</h2>
         <p>
           {ko
-            ? "중앙선거관리위원회는 제9회 전국동시지방선거 실시일을 2026-06-03으로 적습니다."
-            : "The National Election Commission prints 2026-06-03 as the polling day of the 9th nationwide simultaneous local elections."}
+            ? "중앙선거관리위원회는 제9회 전국동시지방선거 실시일을 2026-06-03으로 적습니다. 구·시·군의 장 당선인명부 칸은 아래 시·군·구 페이지에 있습니다."
+            : "The National Election Commission prints 2026-06-03 as the polling day of the 9th nationwide simultaneous local elections. Cells from the roster of heads of si, gun, and gu are on the pages linked below."}
         </p>
-        <GapNote label={copy.gap} text={copy.officeholderGap} />
         <h2>{ko ? "다음 선거" : "Next election"}</h2>
         <GapNote label={copy.gap} text={copy.nextLocalGap} />
         <GapNote label={copy.gap} text={copy.populationGap} />
         <GapNote label={copy.gap} text={copy.localPagesGap} />
+        {slug === "incheon" && (
+          <p>
+            {ko
+              ? "7-5의 인천 기초단체는 10곳입니다. 당선인명부의 선거구명에는 그 가운데 중구와 동구가 없고, 7-5에 없는 제물포구, 영종구, 검단구가 있습니다. 세 이름은 당선인명부 페이지로 두었고, 중구와 동구 페이지는 당선인 이름을 비워 둡니다."
+              : "Section 7-5 prints 10 basic governments in Incheon. The winner roster’s 선거구명 column omits 중구 and 동구 and prints 제물포구, 영종구, and 검단구, which section 7-5 does not. Those three names have pages from the roster. The 중구 and 동구 pages leave the elected-person name blank."}
+          </p>
+        )}
+        {slug === "jeju" && (
+          <p>
+            {ko
+              ? `7-5는 ${ADMIN_SI.join(", ")}를 제주특별자치도 아래에 적습니다. 총괄표의 행정시 2와 같습니다. 기초자치단체 페이지는 만들지 않습니다.`
+              : `Section 7-5 prints ${ADMIN_SI.join(", ")} under 제주특별자치도. That matches the two administrative si in the summary table. They do not have basic-government pages.`}
+          </p>
+        )}
       </section>
 
       <p className="text-sm">
@@ -179,6 +196,29 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
           {ko ? "대한민국" : "South Korea"}
         </Link>
       </p>
+
+      <LinkGrid
+        heading={ko ? "시·군·구" : "Si, gun, and gu"}
+        items={unitsInRegion(slug).map((unit) => ({
+          href: localPath(lang, slug, unit.slug),
+          title: unit.name,
+          detail: unit.inBook
+            ? ko
+              ? "7-5"
+              : "Section 7-5"
+            : ko
+              ? "당선인명부에만 있는 이름"
+              : "Name only on the winner roster",
+        }))}
+      />
+      <LinkGrid
+        heading={ko ? "국회의원 지역구" : "National Assembly constituencies"}
+        items={constituenciesInRegion(slug).map((row) => ({
+          href: constituencyPath(lang, row.slug),
+          title: row.name,
+          detail: row.city,
+        }))}
+      />
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>

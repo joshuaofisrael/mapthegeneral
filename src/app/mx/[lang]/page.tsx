@@ -8,7 +8,7 @@ import {
   MUNICIPALITY_CATALOG_COUNT,
   POPULATION_SUM,
 } from "@/data/mx/entities";
-import { entityPath, mexicoHome } from "@/data/mx/paths";
+import { circunscripcionesPath, districtsIndexPath, entityPath, mexicoHome } from "@/data/mx/paths";
 import { sourceById, sourcesById } from "@/data/mx/sources";
 import { ui } from "@/data/mx/ui";
 import { formatNumber } from "@/lib/format";
@@ -68,6 +68,10 @@ export default async function MexicoNationalPage({ params }: { params: Promise<{
         "ine-partidos",
         "presidencia",
         "presidencia-biografia",
+        "ine-cg875-anexo",
+        "ine-cg130-2023",
+        "ine-cg526-2026",
+        "camara-lxvi",
       ])}
     >
       <section className="prose-legal">
@@ -111,7 +115,15 @@ export default async function MexicoNationalPage({ params }: { params: Promise<{
         </p>
         <GapNote label={copy.gap} text={copy.officeholderGap} />
         <GapNote label={copy.gap} text={copy.municipalityGap} />
-        <GapNote label={copy.gap} text={copy.districtGap} />
+        <p>
+          <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+            {es ? "300 distritos electorales federales" : "300 federal electoral districts"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={circunscripcionesPath(lang)}>
+            {es ? "5 circunscripciones plurinominales" : "5 plurinominal constituencies"}
+          </Link>
+        </p>
       </section>
 
       <section className="prose-legal">

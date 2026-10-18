@@ -1,0 +1,4110 @@
+[
+  {
+    "code": "2110101",
+    "cityCode": "1100",
+    "name": "종로구",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-jong-ro-gu",
+    "member": {
+      "name": "곽상언",
+      "party": "더불어민주당",
+      "origNm": "서울 종로구",
+      "url": "https://www.assembly.go.kr/members/22nd/KWAKSANGEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110402",
+    "cityCode": "1100",
+    "name": "중구성동구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-jung-gu-seong-dong-gu-gap",
+    "member": {
+      "name": "전현희",
+      "party": "더불어민주당",
+      "origNm": "서울 중구성동구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONHYUNHEUI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110201",
+    "cityCode": "1100",
+    "name": "중구성동구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-jung-gu-seong-dong-gu-eul",
+    "member": {
+      "name": "박성준",
+      "party": "더불어민주당",
+      "origNm": "서울 중구성동구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSUNGJOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110301",
+    "cityCode": "1100",
+    "name": "용산구",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-yong-san-gu",
+    "member": {
+      "name": "권영세",
+      "party": "국민의힘",
+      "origNm": "서울 용산구",
+      "url": "https://www.assembly.go.kr/members/22nd/KWONYOUNGSE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110501",
+    "cityCode": "1100",
+    "name": "광진구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gwang-jin-gu-gap",
+    "member": {
+      "name": "이정헌",
+      "party": "더불어민주당",
+      "origNm": "서울 광진구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJEONGHEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110502",
+    "cityCode": "1100",
+    "name": "광진구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gwang-jin-gu-eul",
+    "member": {
+      "name": "고민정",
+      "party": "더불어민주당",
+      "origNm": "서울 광진구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KOMINJUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110601",
+    "cityCode": "1100",
+    "name": "동대문구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-dong-dae-mun-gu-gap",
+    "member": {
+      "name": "안규백",
+      "party": "더불어민주당",
+      "origNm": "서울 동대문구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/AHNGYUBACK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110602",
+    "cityCode": "1100",
+    "name": "동대문구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-dong-dae-mun-gu-eul",
+    "member": {
+      "name": "장경태",
+      "party": "무소속",
+      "origNm": "서울 동대문구을",
+      "url": "https://www.assembly.go.kr/members/22nd/JANGKYUNGTAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110701",
+    "cityCode": "1100",
+    "name": "중랑구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-jung-rang-gu-gap",
+    "member": {
+      "name": "서영교",
+      "party": "더불어민주당",
+      "origNm": "서울 중랑구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SEOYOUNGKYO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110702",
+    "cityCode": "1100",
+    "name": "중랑구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-jung-rang-gu-eul",
+    "member": {
+      "name": "박홍근",
+      "party": "더불어민주당",
+      "origNm": "서울 중랑구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKHONGKEUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110801",
+    "cityCode": "1100",
+    "name": "성북구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seong-buk-gu-gap",
+    "member": {
+      "name": "김영배",
+      "party": "더불어민주당",
+      "origNm": "서울 성북구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYOUNGBAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110802",
+    "cityCode": "1100",
+    "name": "성북구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seong-buk-gu-eul",
+    "member": {
+      "name": "김남근",
+      "party": "더불어민주당",
+      "origNm": "서울 성북구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMNAMGEUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110901",
+    "cityCode": "1100",
+    "name": "강북구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-buk-gu-gap",
+    "member": {
+      "name": "천준호",
+      "party": "더불어민주당",
+      "origNm": "서울 강북구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHEONJUNHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2110902",
+    "cityCode": "1100",
+    "name": "강북구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-buk-gu-eul",
+    "member": {
+      "name": "한민수",
+      "party": "더불어민주당",
+      "origNm": "서울 강북구을",
+      "url": "https://www.assembly.go.kr/members/22nd/HANMINSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111001",
+    "cityCode": "1100",
+    "name": "도봉구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-do-bong-gu-gap",
+    "member": {
+      "name": "김재섭",
+      "party": "국민의힘",
+      "origNm": "서울 도봉구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJAESUB"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111002",
+    "cityCode": "1100",
+    "name": "도봉구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-do-bong-gu-eul",
+    "member": {
+      "name": "오기형",
+      "party": "더불어민주당",
+      "origNm": "서울 도봉구을",
+      "url": "https://www.assembly.go.kr/members/22nd/OHGIHYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111101",
+    "cityCode": "1100",
+    "name": "노원구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-no-won-gu-gap",
+    "member": {
+      "name": "우원식",
+      "party": "더불어민주당",
+      "origNm": "서울 노원구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/WOOWONSHIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111102",
+    "cityCode": "1100",
+    "name": "노원구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-no-won-gu-eul",
+    "member": {
+      "name": "김성환",
+      "party": "더불어민주당",
+      "origNm": "서울 노원구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSUNGWHAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111201",
+    "cityCode": "1100",
+    "name": "은평구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-eun-pyeong-gu-gap",
+    "member": {
+      "name": "박주민",
+      "party": "더불어민주당",
+      "origNm": "서울 은평구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJUMIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111202",
+    "cityCode": "1100",
+    "name": "은평구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-eun-pyeong-gu-eul",
+    "member": {
+      "name": "김우영",
+      "party": "더불어민주당",
+      "origNm": "서울 은평구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMWOOYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111301",
+    "cityCode": "1100",
+    "name": "서대문구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seo-dae-mun-gu-gap",
+    "member": {
+      "name": "김동아",
+      "party": "더불어민주당",
+      "origNm": "서울 서대문구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMDONGAH"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111302",
+    "cityCode": "1100",
+    "name": "서대문구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seo-dae-mun-gu-eul",
+    "member": {
+      "name": "김영호",
+      "party": "더불어민주당",
+      "origNm": "서울 서대문구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYOUNGHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111401",
+    "cityCode": "1100",
+    "name": "마포구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-ma-po-gu-gap",
+    "member": {
+      "name": "조정훈",
+      "party": "국민의힘",
+      "origNm": "서울 마포구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOJUNGHUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111402",
+    "cityCode": "1100",
+    "name": "마포구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-ma-po-gu-eul",
+    "member": {
+      "name": "정청래",
+      "party": "더불어민주당",
+      "origNm": "서울 마포구을",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGCHUNGRAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111501",
+    "cityCode": "1100",
+    "name": "양천구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-yang-cheon-gu-gap",
+    "member": {
+      "name": "황희",
+      "party": "더불어민주당",
+      "origNm": "서울 양천구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/HWANGHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111502",
+    "cityCode": "1100",
+    "name": "양천구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-yang-cheon-gu-eul",
+    "member": {
+      "name": "이용선",
+      "party": "더불어민주당",
+      "origNm": "서울 양천구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEYONGSUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111601",
+    "cityCode": "1100",
+    "name": "강서구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-seo-gu-gap",
+    "member": {
+      "name": "강선우",
+      "party": "무소속",
+      "origNm": "서울 강서구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGSUNWOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111602",
+    "cityCode": "1100",
+    "name": "강서구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-seo-gu-eul",
+    "member": {
+      "name": "진성준",
+      "party": "더불어민주당",
+      "origNm": "서울 강서구을",
+      "url": "https://www.assembly.go.kr/members/22nd/JINSUNGJOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111603",
+    "cityCode": "1100",
+    "name": "강서구병",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-seo-gu-byeong",
+    "member": {
+      "name": "한정애",
+      "party": "더불어민주당",
+      "origNm": "서울 강서구병",
+      "url": "https://www.assembly.go.kr/members/22nd/HANJEOUNGAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111701",
+    "cityCode": "1100",
+    "name": "구로구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gu-ro-gu-gap",
+    "member": {
+      "name": "이인영",
+      "party": "더불어민주당",
+      "origNm": "서울 구로구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEINYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111702",
+    "cityCode": "1100",
+    "name": "구로구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gu-ro-gu-eul",
+    "member": {
+      "name": "윤건영",
+      "party": "더불어민주당",
+      "origNm": "서울 구로구을",
+      "url": "https://www.assembly.go.kr/members/22nd/YOUNKUNYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111801",
+    "cityCode": "1100",
+    "name": "금천구",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-geum-cheon-gu",
+    "member": {
+      "name": "최기상",
+      "party": "더불어민주당",
+      "origNm": "서울 금천구",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOIKISANG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111901",
+    "cityCode": "1100",
+    "name": "영등포구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-yeong-deung-po-gu-gap",
+    "member": {
+      "name": "채현일",
+      "party": "더불어민주당",
+      "origNm": "서울 영등포구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHAIHYUNIL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2111902",
+    "cityCode": "1100",
+    "name": "영등포구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-yeong-deung-po-gu-eul",
+    "member": {
+      "name": "김민석",
+      "party": "더불어민주당",
+      "origNm": "서울 영등포구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMMINSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112001",
+    "cityCode": "1100",
+    "name": "동작구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-dong-jak-gu-gap",
+    "member": {
+      "name": "김병기",
+      "party": "무소속",
+      "origNm": "서울 동작구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMBYUNGKEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112002",
+    "cityCode": "1100",
+    "name": "동작구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-dong-jak-gu-eul",
+    "member": {
+      "name": "나경원",
+      "party": "국민의힘",
+      "origNm": "서울 동작구을",
+      "url": "https://www.assembly.go.kr/members/22nd/NAKYUNGWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112101",
+    "cityCode": "1100",
+    "name": "관악구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gwan-ak-gu-gap",
+    "member": {
+      "name": "박민규",
+      "party": "더불어민주당",
+      "origNm": "서울 관악구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKMINKYU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112102",
+    "cityCode": "1100",
+    "name": "관악구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gwan-ak-gu-eul",
+    "member": {
+      "name": "정태호",
+      "party": "더불어민주당",
+      "origNm": "서울 관악구을",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGTAEHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112201",
+    "cityCode": "1100",
+    "name": "서초구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seo-cho-gu-gap",
+    "member": {
+      "name": "조은희",
+      "party": "국민의힘",
+      "origNm": "서울 서초구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOEUNHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112202",
+    "cityCode": "1100",
+    "name": "서초구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-seo-cho-gu-eul",
+    "member": {
+      "name": "신동욱",
+      "party": "국민의힘",
+      "origNm": "서울 서초구을",
+      "url": "https://www.assembly.go.kr/members/22nd/SHINDONGUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112301",
+    "cityCode": "1100",
+    "name": "강남구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-nam-gu-gap",
+    "member": {
+      "name": "서명옥",
+      "party": "국민의힘",
+      "origNm": "서울 강남구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SUHMYUNGOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112302",
+    "cityCode": "1100",
+    "name": "강남구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-nam-gu-eul",
+    "member": {
+      "name": "박수민",
+      "party": "국민의힘",
+      "origNm": "서울 강남구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSOOMIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112303",
+    "cityCode": "1100",
+    "name": "강남구병",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-nam-gu-byeong",
+    "member": {
+      "name": "고동진",
+      "party": "국민의힘",
+      "origNm": "서울 강남구병",
+      "url": "https://www.assembly.go.kr/members/22nd/KOHDONGJIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112401",
+    "cityCode": "1100",
+    "name": "송파구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-song-pa-gu-gap",
+    "member": {
+      "name": "박정훈",
+      "party": "국민의힘",
+      "origNm": "서울 송파구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJEONGHUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112402",
+    "cityCode": "1100",
+    "name": "송파구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-song-pa-gu-eul",
+    "member": {
+      "name": "배현진",
+      "party": "국민의힘",
+      "origNm": "서울 송파구을",
+      "url": "https://www.assembly.go.kr/members/22nd/BAEHYUNJIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112403",
+    "cityCode": "1100",
+    "name": "송파구병",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-song-pa-gu-byeong",
+    "member": {
+      "name": "남인순",
+      "party": "더불어민주당",
+      "origNm": "서울 송파구병",
+      "url": "https://www.assembly.go.kr/members/22nd/NAMINSOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112501",
+    "cityCode": "1100",
+    "name": "강동구갑",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-dong-gu-gap",
+    "member": {
+      "name": "진선미",
+      "party": "더불어민주당",
+      "origNm": "서울 강동구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JINSUNMEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2112502",
+    "cityCode": "1100",
+    "name": "강동구을",
+    "city": "서울특별시",
+    "region": "seoul",
+    "slug": "seoul-gang-dong-gu-eul",
+    "member": {
+      "name": "이해식",
+      "party": "더불어민주당",
+      "origNm": "서울 강동구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEHAESIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260401",
+    "cityCode": "2600",
+    "name": "중구영도구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-jung-gu-yeong-do-gu",
+    "member": {
+      "name": "조승환",
+      "party": "국민의힘",
+      "origNm": "부산 중구영도구",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOSEUNGHWAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260201",
+    "cityCode": "2600",
+    "name": "서구동구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-seo-gu-dong-gu",
+    "member": {
+      "name": "곽규택",
+      "party": "국민의힘",
+      "origNm": "부산 서구동구",
+      "url": "https://www.assembly.go.kr/members/22nd/KWAKKYUTAEK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260501",
+    "cityCode": "2600",
+    "name": "부산진구갑",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-bu-san-jin-gu-gap",
+    "member": {
+      "name": "정성국",
+      "party": "국민의힘",
+      "origNm": "부산 부산진구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGSUNGKOOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260502",
+    "cityCode": "2600",
+    "name": "부산진구을",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-bu-san-jin-gu-eul",
+    "member": {
+      "name": "이헌승",
+      "party": "국민의힘",
+      "origNm": "부산 부산진구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEHUNSEUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260601",
+    "cityCode": "2600",
+    "name": "동래구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-dong-rae-gu",
+    "member": {
+      "name": "서지영",
+      "party": "국민의힘",
+      "origNm": "부산 동래구",
+      "url": "https://www.assembly.go.kr/members/22nd/SEOJIYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260703",
+    "cityCode": "2600",
+    "name": "남구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-nam-gu",
+    "member": {
+      "name": "박수영",
+      "party": "국민의힘",
+      "origNm": "부산 남구",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSOOYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260802",
+    "cityCode": "2600",
+    "name": "북구갑",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-buk-gu-gap",
+    "member": {
+      "name": "한동훈",
+      "party": "무소속",
+      "origNm": "부산 북구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/HANDONGHOON"
+    },
+    "bye2026": {
+      "name": "한동훈",
+      "party": "무소속"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2260803",
+    "cityCode": "2600",
+    "name": "북구을",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-buk-gu-eul",
+    "member": {
+      "name": "박성훈",
+      "party": "국민의힘",
+      "origNm": "부산 북구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSUNGHOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260902",
+    "cityCode": "2600",
+    "name": "해운대구갑",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-hae-un-dae-gu-gap",
+    "member": {
+      "name": "주진우",
+      "party": "국민의힘",
+      "origNm": "부산 해운대구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JOOJINWOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2260903",
+    "cityCode": "2600",
+    "name": "해운대구을",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-hae-un-dae-gu-eul",
+    "member": {
+      "name": "김미애",
+      "party": "국민의힘",
+      "origNm": "부산 해운대구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMMIAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261101",
+    "cityCode": "2600",
+    "name": "사하구갑",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-sa-ha-gu-gap",
+    "member": {
+      "name": "이성권",
+      "party": "국민의힘",
+      "origNm": "부산 사하구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESEONGKWEUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261102",
+    "cityCode": "2600",
+    "name": "사하구을",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-sa-ha-gu-eul",
+    "member": {
+      "name": "조경태",
+      "party": "국민의힘",
+      "origNm": "부산 사하구을",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOKYOUNGTAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261201",
+    "cityCode": "2600",
+    "name": "금정구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-geum-jeong-gu",
+    "member": {
+      "name": "백종헌",
+      "party": "국민의힘",
+      "origNm": "부산 금정구",
+      "url": "https://www.assembly.go.kr/members/22nd/BAEKJONGHEAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261302",
+    "cityCode": "2600",
+    "name": "강서구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-gang-seo-gu",
+    "member": {
+      "name": "김도읍",
+      "party": "국민의힘",
+      "origNm": "부산 강서구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMDOEUP"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261401",
+    "cityCode": "2600",
+    "name": "연제구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-yeon-je-gu",
+    "member": {
+      "name": "김희정",
+      "party": "국민의힘",
+      "origNm": "부산 연제구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMHeeJung"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261501",
+    "cityCode": "2600",
+    "name": "수영구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-su-yeong-gu",
+    "member": {
+      "name": "정연욱",
+      "party": "국민의힘",
+      "origNm": "부산 수영구",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGYEONWOOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261601",
+    "cityCode": "2600",
+    "name": "사상구",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-sa-sang-gu",
+    "member": {
+      "name": "김대식",
+      "party": "국민의힘",
+      "origNm": "부산 사상구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMDAISIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2261002",
+    "cityCode": "2600",
+    "name": "기장군",
+    "city": "부산광역시",
+    "region": "busan",
+    "slug": "busan-gi-jang-gun",
+    "member": {
+      "name": "정동만",
+      "party": "국민의힘",
+      "origNm": "부산 기장군",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONGDONGMAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270401",
+    "cityCode": "2700",
+    "name": "중구남구",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-jung-gu-nam-gu",
+    "member": {
+      "name": "김기웅",
+      "party": "국민의힘",
+      "origNm": "대구 중구남구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMKIWOONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270203",
+    "cityCode": "2700",
+    "name": "동구군위군갑",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dong-gu-gun-wi-gun-gap",
+    "member": {
+      "name": "최은석",
+      "party": "국민의힘",
+      "origNm": "대구 동구군위군갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOIEUNSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270204",
+    "cityCode": "2700",
+    "name": "동구군위군을",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dong-gu-gun-wi-gun-eul",
+    "member": {
+      "name": "강대식",
+      "party": "국민의힘",
+      "origNm": "대구 동구군위군을",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGDAESIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270301",
+    "cityCode": "2700",
+    "name": "서구",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-seo-gu",
+    "member": {
+      "name": "김상훈",
+      "party": "국민의힘",
+      "origNm": "대구 서구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSANGHOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270501",
+    "cityCode": "2700",
+    "name": "북구갑",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-buk-gu-gap",
+    "member": {
+      "name": "우재준",
+      "party": "국민의힘",
+      "origNm": "대구 북구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/WOOJAEJUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270502",
+    "cityCode": "2700",
+    "name": "북구을",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-buk-gu-eul",
+    "member": {
+      "name": "김승수",
+      "party": "국민의힘",
+      "origNm": "대구 북구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSEUNGSU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270601",
+    "cityCode": "2700",
+    "name": "수성구갑",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-su-seong-gu-gap",
+    "member": {
+      "name": "주호영",
+      "party": "국민의힘",
+      "origNm": "대구 수성구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JOOHOYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270602",
+    "cityCode": "2700",
+    "name": "수성구을",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-su-seong-gu-eul",
+    "member": {
+      "name": "이인선",
+      "party": "국민의힘",
+      "origNm": "대구 수성구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEINSEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270701",
+    "cityCode": "2700",
+    "name": "달서구갑",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dal-seo-gu-gap",
+    "member": {
+      "name": "유영하",
+      "party": "국민의힘",
+      "origNm": "대구 달서구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/YOOYEONGHA"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270702",
+    "cityCode": "2700",
+    "name": "달서구을",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dal-seo-gu-eul",
+    "member": {
+      "name": "윤재옥",
+      "party": "국민의힘",
+      "origNm": "대구 달서구을",
+      "url": "https://www.assembly.go.kr/members/22nd/YUNJAEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270703",
+    "cityCode": "2700",
+    "name": "달서구병",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dal-seo-gu-byeong",
+    "member": {
+      "name": "권영진",
+      "party": "국민의힘",
+      "origNm": "대구 달서구병",
+      "url": "https://www.assembly.go.kr/members/22nd/KwonYoungJin"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2270801",
+    "cityCode": "2700",
+    "name": "달성군",
+    "city": "대구광역시",
+    "region": "daegu",
+    "slug": "daegu-dal-seong-gun",
+    "member": {
+      "name": "이진숙",
+      "party": "국민의힘",
+      "origNm": "대구 달성군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJINSOOK"
+    },
+    "bye2026": {
+      "name": "이진숙",
+      "party": "국민의힘"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2280101",
+    "cityCode": "2800",
+    "name": "중구강화군옹진군",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-jung-gu-gang-hwa-gun-ong-jin-gun",
+    "member": {
+      "name": "배준영",
+      "party": "국민의힘",
+      "origNm": "인천 중구강화군옹진군",
+      "url": "https://www.assembly.go.kr/members/22nd/BAEJUNEYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280301",
+    "cityCode": "2800",
+    "name": "동구미추홀구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-dong-gu-mi-chu-hol-gu-gap",
+    "member": {
+      "name": "허종식",
+      "party": "더불어민주당",
+      "origNm": "인천 동구미추홀구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/HEOJONGSIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280302",
+    "cityCode": "2800",
+    "name": "동구미추홀구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-dong-gu-mi-chu-hol-gu-eul",
+    "member": {
+      "name": "윤상현",
+      "party": "국민의힘",
+      "origNm": "인천 동구미추홀구을",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONSANGHYUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280402",
+    "cityCode": "2800",
+    "name": "연수구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-yeon-su-gu-gap",
+    "member": {
+      "name": "송영길",
+      "party": "더불어민주당",
+      "origNm": "인천 연수구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGYOUNGGIL"
+    },
+    "bye2026": {
+      "name": "송영길",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2280403",
+    "cityCode": "2800",
+    "name": "연수구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-yeon-su-gu-eul",
+    "member": {
+      "name": "정일영",
+      "party": "더불어민주당",
+      "origNm": "인천 연수구을",
+      "url": "https://www.assembly.go.kr/members/22nd/CHUNGILYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280501",
+    "cityCode": "2800",
+    "name": "남동구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-nam-dong-gu-gap",
+    "member": {
+      "name": "맹성규",
+      "party": "더불어민주당",
+      "origNm": "인천 남동구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MAENGSUNGKYU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280502",
+    "cityCode": "2800",
+    "name": "남동구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-nam-dong-gu-eul",
+    "member": {
+      "name": "이훈기",
+      "party": "더불어민주당",
+      "origNm": "인천 남동구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEHOONKI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280601",
+    "cityCode": "2800",
+    "name": "부평구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-bu-pyeong-gu-gap",
+    "member": {
+      "name": "노종면",
+      "party": "더불어민주당",
+      "origNm": "인천 부평구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/NOHJONGMYUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280602",
+    "cityCode": "2800",
+    "name": "부평구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-bu-pyeong-gu-eul",
+    "member": {
+      "name": "박선원",
+      "party": "더불어민주당",
+      "origNm": "인천 부평구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSUNWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280701",
+    "cityCode": "2800",
+    "name": "계양구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-gye-yang-gu-gap",
+    "member": {
+      "name": "유동수",
+      "party": "더불어민주당",
+      "origNm": "인천 계양구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/YOODONGSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280702",
+    "cityCode": "2800",
+    "name": "계양구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-gye-yang-gu-eul",
+    "member": {
+      "name": "김남준",
+      "party": "더불어민주당",
+      "origNm": "인천 계양구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMNAMJOON"
+    },
+    "bye2026": {
+      "name": "김남준",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2280802",
+    "cityCode": "2800",
+    "name": "서구갑",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-seo-gu-gap",
+    "member": {
+      "name": "김교흥",
+      "party": "더불어민주당",
+      "origNm": "인천 서구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMKYOHEUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280803",
+    "cityCode": "2800",
+    "name": "서구을",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-seo-gu-eul",
+    "member": {
+      "name": "이용우",
+      "party": "더불어민주당",
+      "origNm": "인천 서구을",
+      "url": "https://www.assembly.go.kr/members/22nd/YONGWOOLEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2280804",
+    "cityCode": "2800",
+    "name": "서구병",
+    "city": "인천광역시",
+    "region": "incheon",
+    "slug": "incheon-seo-gu-byeong",
+    "member": {
+      "name": "모경종",
+      "party": "더불어민주당",
+      "origNm": "인천 서구병",
+      "url": "https://www.assembly.go.kr/members/22nd/MOGYEONGJONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290302",
+    "cityCode": "2900",
+    "name": "동구남구갑",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-dong-gu-nam-gu-gap",
+    "member": {
+      "name": "정진욱",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 동구남구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHUNGCHINOOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290101",
+    "cityCode": "2900",
+    "name": "동구남구을",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-dong-gu-nam-gu-eul",
+    "member": {
+      "name": "안도걸",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 동구남구을",
+      "url": "https://www.assembly.go.kr/members/22nd/AHNDOGEOL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290201",
+    "cityCode": "2900",
+    "name": "서구갑",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-seo-gu-gap",
+    "member": {
+      "name": "조인철",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 서구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOINCHEUL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290202",
+    "cityCode": "2900",
+    "name": "서구을",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-seo-gu-eul",
+    "member": {
+      "name": "양부남",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 서구을",
+      "url": "https://www.assembly.go.kr/members/22nd/YANGBUNAM"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290401",
+    "cityCode": "2900",
+    "name": "북구갑",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-buk-gu-gap",
+    "member": {
+      "name": "정준호",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 북구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONGJUNHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290402",
+    "cityCode": "2900",
+    "name": "북구을",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-buk-gu-eul",
+    "member": {
+      "name": "전진숙",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 북구을",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONJINSOOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290501",
+    "cityCode": "2900",
+    "name": "광산구갑",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-gwang-san-gu-gap",
+    "member": {
+      "name": "박균택",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 광산구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKKYOONTAEK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2290502",
+    "cityCode": "2900",
+    "name": "광산구을",
+    "city": "광주광역시",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-gwang-san-gu-eul",
+    "member": {
+      "name": "임문영",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 광산구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LIMMUNYEONG"
+    },
+    "bye2026": {
+      "name": "임문영",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2300101",
+    "cityCode": "3000",
+    "name": "동구",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-dong-gu",
+    "member": {
+      "name": "장철민",
+      "party": "더불어민주당",
+      "origNm": "대전 동구",
+      "url": "https://www.assembly.go.kr/members/22nd/CHULMINJANG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300201",
+    "cityCode": "3000",
+    "name": "중구",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-jung-gu",
+    "member": {
+      "name": "박용갑",
+      "party": "더불어민주당",
+      "origNm": "대전 중구",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKYONGKAB"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300301",
+    "cityCode": "3000",
+    "name": "서구갑",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-seo-gu-gap",
+    "member": {
+      "name": "장종태",
+      "party": "더불어민주당",
+      "origNm": "대전 서구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHANGJONGTAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300302",
+    "cityCode": "3000",
+    "name": "서구을",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-seo-gu-eul",
+    "member": {
+      "name": "박범계",
+      "party": "더불어민주당",
+      "origNm": "대전 서구을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKBEOMKYE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300402",
+    "cityCode": "3000",
+    "name": "유성구갑",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-yu-seong-gu-gap",
+    "member": {
+      "name": "조승래",
+      "party": "더불어민주당",
+      "origNm": "대전 유성구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JOSEOUNGLAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300403",
+    "cityCode": "3000",
+    "name": "유성구을",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-yu-seong-gu-eul",
+    "member": {
+      "name": "황정아",
+      "party": "더불어민주당",
+      "origNm": "대전 유성구을",
+      "url": "https://www.assembly.go.kr/members/22nd/HWANGJUNGA"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2300501",
+    "cityCode": "3000",
+    "name": "대덕구",
+    "city": "대전광역시",
+    "region": "daejeon",
+    "slug": "daejeon-dae-deok-gu",
+    "member": {
+      "name": "박정현",
+      "party": "더불어민주당",
+      "origNm": "대전 대덕구",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJEONGHYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2310101",
+    "cityCode": "3100",
+    "name": "중구",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-jung-gu",
+    "member": {
+      "name": "박성민",
+      "party": "국민의힘",
+      "origNm": "울산 중구",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSEONGMIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2310201",
+    "cityCode": "3100",
+    "name": "남구갑",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-nam-gu-gap",
+    "member": {
+      "name": "김태규",
+      "party": "국민의힘",
+      "origNm": "울산 남구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMTAEKYU"
+    },
+    "bye2026": {
+      "name": "김태규",
+      "party": "국민의힘"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2310202",
+    "cityCode": "3100",
+    "name": "남구을",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-nam-gu-eul",
+    "member": {
+      "name": "김기현",
+      "party": "국민의힘",
+      "origNm": "울산 남구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMGIHYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2310301",
+    "cityCode": "3100",
+    "name": "동구",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-dong-gu",
+    "member": {
+      "name": "김태선",
+      "party": "더불어민주당",
+      "origNm": "울산 동구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMTAESEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2310401",
+    "cityCode": "3100",
+    "name": "북구",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-buk-gu",
+    "member": {
+      "name": "윤종오",
+      "party": "진보당",
+      "origNm": "울산 북구",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONJONGO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2310501",
+    "cityCode": "3100",
+    "name": "울주군",
+    "city": "울산광역시",
+    "region": "ulsan",
+    "slug": "ulsan-ul-ju-gun",
+    "member": {
+      "name": "서범수",
+      "party": "국민의힘",
+      "origNm": "울산 울주군",
+      "url": "https://www.assembly.go.kr/members/22nd/SUHBUMSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2510101",
+    "cityCode": "5100",
+    "name": "세종특별자치시갑",
+    "city": "세종특별자치시",
+    "region": "sejong",
+    "slug": "sejong-se-jong-teuk-byeol-ja-chi-si-gap",
+    "member": {
+      "name": "김종민",
+      "party": "무소속",
+      "origNm": "세종특별자치시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJONGMIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2510102",
+    "cityCode": "5100",
+    "name": "세종특별자치시을",
+    "city": "세종특별자치시",
+    "region": "sejong",
+    "slug": "sejong-se-jong-teuk-byeol-ja-chi-si-eul",
+    "member": {
+      "name": "강준현",
+      "party": "더불어민주당",
+      "origNm": "세종특별자치시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGJUNHYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410101",
+    "cityCode": "4100",
+    "name": "수원시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-su-won-si-gap",
+    "member": {
+      "name": "김승원",
+      "party": "더불어민주당",
+      "origNm": "경기 수원시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSEUNGWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410201",
+    "cityCode": "4100",
+    "name": "수원시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-su-won-si-eul",
+    "member": {
+      "name": "백혜련",
+      "party": "더불어민주당",
+      "origNm": "경기 수원시을",
+      "url": "https://www.assembly.go.kr/members/22nd/BACKHYERYUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410301",
+    "cityCode": "4100",
+    "name": "수원시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-su-won-si-byeong",
+    "member": {
+      "name": "김영진",
+      "party": "더불어민주당",
+      "origNm": "경기 수원시병",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYOUNGJIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410401",
+    "cityCode": "4100",
+    "name": "수원시정",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-su-won-si-jeong",
+    "member": {
+      "name": "김준혁",
+      "party": "더불어민주당",
+      "origNm": "경기 수원시정",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJUNHYUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410202",
+    "cityCode": "4100",
+    "name": "수원시무",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-su-won-si-mu",
+    "member": {
+      "name": "염태영",
+      "party": "더불어민주당",
+      "origNm": "경기 수원시무",
+      "url": "https://www.assembly.go.kr/members/22nd/YEOMTAEYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410501",
+    "cityCode": "4100",
+    "name": "성남시수정구",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-seong-nam-si-su-jeong-gu",
+    "member": {
+      "name": "김태년",
+      "party": "더불어민주당",
+      "origNm": "경기 성남시수정구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMTAENYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410601",
+    "cityCode": "4100",
+    "name": "성남시중원구",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-seong-nam-si-jung-won-gu",
+    "member": {
+      "name": "이수진",
+      "party": "더불어민주당",
+      "origNm": "경기 성남시중원구",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESOOJIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410701",
+    "cityCode": "4100",
+    "name": "성남시분당구갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-seong-nam-si-bun-dang-gu-gap",
+    "member": {
+      "name": "안철수",
+      "party": "국민의힘",
+      "origNm": "경기 성남시분당구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/AHNCHEOLSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410702",
+    "cityCode": "4100",
+    "name": "성남시분당구을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-seong-nam-si-bun-dang-gu-eul",
+    "member": {
+      "name": "김은혜",
+      "party": "국민의힘",
+      "origNm": "경기 성남시분당구을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMEUNHYE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410801",
+    "cityCode": "4100",
+    "name": "의정부시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-ui-jeong-bu-si-gap",
+    "member": {
+      "name": "박지혜",
+      "party": "더불어민주당",
+      "origNm": "경기 의정부시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJEEHYE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410802",
+    "cityCode": "4100",
+    "name": "의정부시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-ui-jeong-bu-si-eul",
+    "member": {
+      "name": "이재강",
+      "party": "더불어민주당",
+      "origNm": "경기 의정부시을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJAEGANG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2410901",
+    "cityCode": "4100",
+    "name": "안양시만안구",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-yang-si-man-an-gu",
+    "member": {
+      "name": "강득구",
+      "party": "더불어민주당",
+      "origNm": "경기 안양시만안구",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGDEUKGU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411001",
+    "cityCode": "4100",
+    "name": "안양시동안구갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-yang-si-dong-an-gu-gap",
+    "member": {
+      "name": "민병덕",
+      "party": "더불어민주당",
+      "origNm": "경기 안양시동안구갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MINBYOUNGDUG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411002",
+    "cityCode": "4100",
+    "name": "안양시동안구을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-yang-si-dong-an-gu-eul",
+    "member": {
+      "name": "이재정",
+      "party": "더불어민주당",
+      "origNm": "경기 안양시동안구을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJAEJUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2415201",
+    "cityCode": "4100",
+    "name": "부천시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-bu-cheon-si-gap",
+    "member": {
+      "name": "서영석",
+      "party": "더불어민주당",
+      "origNm": "경기 부천시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SEOYOUNGSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2415001",
+    "cityCode": "4100",
+    "name": "부천시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-bu-cheon-si-eul",
+    "member": {
+      "name": "김기표",
+      "party": "더불어민주당",
+      "origNm": "경기 부천시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMGIPYO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2415101",
+    "cityCode": "4100",
+    "name": "부천시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-bu-cheon-si-byeong",
+    "member": {
+      "name": "이건태",
+      "party": "더불어민주당",
+      "origNm": "경기 부천시병",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEGEONTAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411401",
+    "cityCode": "4100",
+    "name": "광명시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gwang-myeong-si-gap",
+    "member": {
+      "name": "임오경",
+      "party": "더불어민주당",
+      "origNm": "경기 광명시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LIMOKYEONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411402",
+    "cityCode": "4100",
+    "name": "광명시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gwang-myeong-si-eul",
+    "member": {
+      "name": "김남희",
+      "party": "더불어민주당",
+      "origNm": "경기 광명시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMNAMHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411501",
+    "cityCode": "4100",
+    "name": "평택시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-pyeong-taek-si-gap",
+    "member": {
+      "name": "홍기원",
+      "party": "더불어민주당",
+      "origNm": "경기 평택시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/HONGKEEWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411502",
+    "cityCode": "4100",
+    "name": "평택시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-pyeong-taek-si-eul",
+    "member": {
+      "name": "유의동",
+      "party": "국민의힘",
+      "origNm": "경기 평택시을",
+      "url": "https://www.assembly.go.kr/members/22nd/YUEUIDONG"
+    },
+    "bye2026": {
+      "name": "유의동",
+      "party": "국민의힘"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2411503",
+    "cityCode": "4100",
+    "name": "평택시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-pyeong-taek-si-byeong",
+    "member": {
+      "name": "김현정",
+      "party": "더불어민주당",
+      "origNm": "경기 평택시병",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMHYUNJUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411603",
+    "cityCode": "4100",
+    "name": "동두천시양주시연천군갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-dong-du-cheon-si-yang-ju-si-yeon-cheon-gun-gap",
+    "member": {
+      "name": "정성호",
+      "party": "더불어민주당",
+      "origNm": "경기 동두천시양주시연천군갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGSUNGHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411702",
+    "cityCode": "4100",
+    "name": "동두천시양주시연천군을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-dong-du-cheon-si-yang-ju-si-yeon-cheon-gun-eul",
+    "member": {
+      "name": "김성원",
+      "party": "국민의힘",
+      "origNm": "경기 동두천시양주시연천군을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSUNGWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411803",
+    "cityCode": "4100",
+    "name": "안산시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-san-si-gap",
+    "member": {
+      "name": "김남국",
+      "party": "더불어민주당",
+      "origNm": "경기 안산시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMNAMKUK"
+    },
+    "bye2026": {
+      "name": "김남국",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2411804",
+    "cityCode": "4100",
+    "name": "안산시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-san-si-eul",
+    "member": {
+      "name": "김현",
+      "party": "더불어민주당",
+      "origNm": "경기 안산시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMHyun"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2411903",
+    "cityCode": "4100",
+    "name": "안산시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-san-si-byeong",
+    "member": {
+      "name": "박해철",
+      "party": "더불어민주당",
+      "origNm": "경기 안산시병",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKHAECHEOL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412001",
+    "cityCode": "4100",
+    "name": "고양시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-go-yang-si-gap",
+    "member": {
+      "name": "김성회",
+      "party": "더불어민주당",
+      "origNm": "경기 고양시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSUNGHOI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412002",
+    "cityCode": "4100",
+    "name": "고양시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-go-yang-si-eul",
+    "member": {
+      "name": "한준호",
+      "party": "더불어민주당",
+      "origNm": "경기 고양시을",
+      "url": "https://www.assembly.go.kr/members/22nd/HANJUNHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412101",
+    "cityCode": "4100",
+    "name": "고양시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-go-yang-si-byeong",
+    "member": {
+      "name": "이기헌",
+      "party": "더불어민주당",
+      "origNm": "경기 고양시병",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEKIHEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412201",
+    "cityCode": "4100",
+    "name": "고양시정",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-go-yang-si-jeong",
+    "member": {
+      "name": "김영환",
+      "party": "더불어민주당",
+      "origNm": "경기 고양시정",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYOUNGWHAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412401",
+    "cityCode": "4100",
+    "name": "의왕시과천시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-ui-wang-si-gwa-cheon-si",
+    "member": {
+      "name": "이소영",
+      "party": "더불어민주당",
+      "origNm": "경기 의왕시과천시",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESOYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412501",
+    "cityCode": "4100",
+    "name": "구리시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gu-ri-si",
+    "member": {
+      "name": "윤호중",
+      "party": "더불어민주당",
+      "origNm": "경기 구리시",
+      "url": "https://www.assembly.go.kr/members/22nd/YUNHOJUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412601",
+    "cityCode": "4100",
+    "name": "남양주시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-nam-yang-ju-si-gap",
+    "member": {
+      "name": "최민희",
+      "party": "더불어민주당",
+      "origNm": "경기 남양주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOIMinhee"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412602",
+    "cityCode": "4100",
+    "name": "남양주시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-nam-yang-ju-si-eul",
+    "member": {
+      "name": "김병주",
+      "party": "더불어민주당",
+      "origNm": "경기 남양주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMBYUNGJOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412603",
+    "cityCode": "4100",
+    "name": "남양주시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-nam-yang-ju-si-byeong",
+    "member": {
+      "name": "김용민",
+      "party": "더불어민주당",
+      "origNm": "경기 남양주시병",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYONGMIN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412701",
+    "cityCode": "4100",
+    "name": "오산시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-o-san-si",
+    "member": {
+      "name": "차지호",
+      "party": "더불어민주당",
+      "origNm": "경기 오산시",
+      "url": "https://www.assembly.go.kr/members/22nd/CHAJIHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412901",
+    "cityCode": "4100",
+    "name": "시흥시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-si-heung-si-gap",
+    "member": {
+      "name": "문정복",
+      "party": "더불어민주당",
+      "origNm": "경기 시흥시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MOONJEONGBOG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2412902",
+    "cityCode": "4100",
+    "name": "시흥시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-si-heung-si-eul",
+    "member": {
+      "name": "조정식",
+      "party": "무소속",
+      "origNm": "경기 시흥시을",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOJEONGSIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413002",
+    "cityCode": "4100",
+    "name": "군포시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gun-po-si",
+    "member": {
+      "name": "이학영",
+      "party": "더불어민주당",
+      "origNm": "경기 군포시",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEHACKYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413102",
+    "cityCode": "4100",
+    "name": "하남시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-ha-nam-si-gap",
+    "member": {
+      "name": "이광재",
+      "party": "더불어민주당",
+      "origNm": "경기 하남시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEKWANGJAE"
+    },
+    "bye2026": {
+      "name": "이광재",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2413103",
+    "cityCode": "4100",
+    "name": "하남시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-ha-nam-si-eul",
+    "member": {
+      "name": "김용만",
+      "party": "더불어민주당",
+      "origNm": "경기 하남시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYONGMAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413501",
+    "cityCode": "4100",
+    "name": "용인시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-yong-in-si-gap",
+    "member": {
+      "name": "이상식",
+      "party": "더불어민주당",
+      "origNm": "경기 용인시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESANGSIK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413701",
+    "cityCode": "4100",
+    "name": "용인시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-yong-in-si-eul",
+    "member": {
+      "name": "손명수",
+      "party": "더불어민주당",
+      "origNm": "경기 용인시을",
+      "url": "https://www.assembly.go.kr/members/22nd/SONMYOUNGSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413602",
+    "cityCode": "4100",
+    "name": "용인시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-yong-in-si-byeong",
+    "member": {
+      "name": "부승찬",
+      "party": "더불어민주당",
+      "origNm": "경기 용인시병",
+      "url": "https://www.assembly.go.kr/members/22nd/BOOSEUNGCHAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413702",
+    "cityCode": "4100",
+    "name": "용인시정",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-yong-in-si-jeong",
+    "member": {
+      "name": "이언주",
+      "party": "더불어민주당",
+      "origNm": "경기 용인시정",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEUNJU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413202",
+    "cityCode": "4100",
+    "name": "파주시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-pa-ju-si-gap",
+    "member": {
+      "name": "윤후덕",
+      "party": "더불어민주당",
+      "origNm": "경기 파주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONHUDUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413203",
+    "cityCode": "4100",
+    "name": "파주시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-pa-ju-si-eul",
+    "member": {
+      "name": "박정",
+      "party": "더불어민주당",
+      "origNm": "경기 파주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJEUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413401",
+    "cityCode": "4100",
+    "name": "이천시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-i-cheon-si",
+    "member": {
+      "name": "송석준",
+      "party": "국민의힘",
+      "origNm": "경기 이천시",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGSEOGJUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413801",
+    "cityCode": "4100",
+    "name": "안성시",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-an-seong-si",
+    "member": {
+      "name": "윤종군",
+      "party": "더불어민주당",
+      "origNm": "경기 안성시",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONJONGKUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413902",
+    "cityCode": "4100",
+    "name": "김포시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gim-po-si-gap",
+    "member": {
+      "name": "김주영",
+      "party": "더불어민주당",
+      "origNm": "경기 김포시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJUYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413903",
+    "cityCode": "4100",
+    "name": "김포시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gim-po-si-eul",
+    "member": {
+      "name": "박상혁",
+      "party": "더불어민주당",
+      "origNm": "경기 김포시을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSANGHYUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414801",
+    "cityCode": "4100",
+    "name": "화성시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-hwa-seong-si-gap",
+    "member": {
+      "name": "송옥주",
+      "party": "더불어민주당",
+      "origNm": "경기 화성시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGOKJOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414901",
+    "cityCode": "4100",
+    "name": "화성시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-hwa-seong-si-eul",
+    "member": {
+      "name": "이준석",
+      "party": "개혁신당",
+      "origNm": "경기 화성시을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJUNSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414802",
+    "cityCode": "4100",
+    "name": "화성시병",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-hwa-seong-si-byeong",
+    "member": {
+      "name": "권칠승",
+      "party": "더불어민주당",
+      "origNm": "경기 화성시병",
+      "url": "https://www.assembly.go.kr/members/22nd/KWONCHILSEUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414902",
+    "cityCode": "4100",
+    "name": "화성시정",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-hwa-seong-si-jeong",
+    "member": {
+      "name": "전용기",
+      "party": "더불어민주당",
+      "origNm": "경기 화성시정",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONYONGGI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414002",
+    "cityCode": "4100",
+    "name": "광주시갑",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gwang-ju-si-gap",
+    "member": {
+      "name": "소병훈",
+      "party": "더불어민주당",
+      "origNm": "경기 광주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/SOBYUNGHOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414003",
+    "cityCode": "4100",
+    "name": "광주시을",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-gwang-ju-si-eul",
+    "member": {
+      "name": "안태준",
+      "party": "더불어민주당",
+      "origNm": "경기 광주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/ANTAEJUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2414102",
+    "cityCode": "4100",
+    "name": "포천시가평군",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-po-cheon-si-ga-pyeong-gun",
+    "member": {
+      "name": "김용태",
+      "party": "국민의힘",
+      "origNm": "경기 포천시가평군",
+      "url": "https://www.assembly.go.kr/members/22nd/YONGTAEKIM"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2413301",
+    "cityCode": "4100",
+    "name": "여주시양평군",
+    "city": "경기도",
+    "region": "gyeonggi",
+    "slug": "gyeonggi-yeo-ju-si-yang-pyeong-gun",
+    "member": {
+      "name": "김선교",
+      "party": "국민의힘",
+      "origNm": "경기 여주시양평군",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSUNGYO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520101",
+    "cityCode": "5200",
+    "name": "춘천시철원군화천군양구군갑",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-chun-cheon-si-cheol-won-gun-hwa-cheon-gun-yang-gu-gun-gap",
+    "member": {
+      "name": "허영",
+      "party": "더불어민주당",
+      "origNm": "강원 춘천시철원군화천군양구군갑",
+      "url": "https://www.assembly.go.kr/members/22nd/HUHYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520102",
+    "cityCode": "5200",
+    "name": "춘천시철원군화천군양구군을",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-chun-cheon-si-cheol-won-gun-hwa-cheon-gun-yang-gu-gun-eul",
+    "member": {
+      "name": "한기호",
+      "party": "국민의힘",
+      "origNm": "강원 춘천시철원군화천군양구군을",
+      "url": "https://www.assembly.go.kr/members/22nd/HANKIHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520201",
+    "cityCode": "5200",
+    "name": "원주시갑",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-won-ju-si-gap",
+    "member": {
+      "name": "박정하",
+      "party": "국민의힘",
+      "origNm": "강원 원주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJEONGHA"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520202",
+    "cityCode": "5200",
+    "name": "원주시을",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-won-ju-si-eul",
+    "member": {
+      "name": "송기헌",
+      "party": "더불어민주당",
+      "origNm": "강원 원주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGKIHUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520301",
+    "cityCode": "5200",
+    "name": "강릉시",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-gang-reung-si",
+    "member": null,
+    "bye2026": null,
+    "vacancy": {
+      "pollingDay": "2027-04-07",
+      "reason": "피선거권상실",
+      "reasonOn": "2026-07-16",
+      "confirmedOn": "2026-07-16",
+      "person": "권성동",
+      "party": "국민의힘"
+    }
+  },
+  {
+    "code": "2520401",
+    "cityCode": "5200",
+    "name": "동해시태백시삼척시정선군",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-dong-hae-si-tae-baek-si-sam-cheok-si-jeong-seon-gun",
+    "member": {
+      "name": "이철규",
+      "party": "국민의힘",
+      "origNm": "강원 동해시태백시삼척시정선군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEECHULGYU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2520801",
+    "cityCode": "5200",
+    "name": "속초시인제군고성군양양군",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-sok-cho-si-in-je-gun-go-seong-gun-yang-yang-gun",
+    "member": {
+      "name": "이양수",
+      "party": "국민의힘",
+      "origNm": "강원 속초시인제군고성군양양군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEYANGSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2521401",
+    "cityCode": "5200",
+    "name": "홍천군횡성군영월군평창군",
+    "city": "강원특별자치도",
+    "region": "gangwon",
+    "slug": "gangwon-hong-cheon-gun-hoeng-seong-gun-yeong-wol-gun-pyeong-chang-gun",
+    "member": {
+      "name": "유상범",
+      "party": "국민의힘",
+      "origNm": "강원 홍천군횡성군영월군평창군",
+      "url": "https://www.assembly.go.kr/members/22nd/YOOSANGBUM"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430101",
+    "cityCode": "4300",
+    "name": "청주시상당구",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-cheong-ju-si-sang-dang-gu",
+    "member": {
+      "name": "이강일",
+      "party": "더불어민주당",
+      "origNm": "충북 청주시상당구",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEKANGILL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2431401",
+    "cityCode": "4300",
+    "name": "청주시서원구",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-cheong-ju-si-seo-won-gu",
+    "member": {
+      "name": "이광희",
+      "party": "더불어민주당",
+      "origNm": "충북 청주시서원구",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEGOANGHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430202",
+    "cityCode": "4300",
+    "name": "청주시흥덕구",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-cheong-ju-si-heung-deok-gu",
+    "member": {
+      "name": "이연희",
+      "party": "더불어민주당",
+      "origNm": "충북 청주시흥덕구",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEYEONHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430601",
+    "cityCode": "4300",
+    "name": "청주시청원구",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-cheong-ju-si-cheong-won-gu",
+    "member": {
+      "name": "송재봉",
+      "party": "더불어민주당",
+      "origNm": "충북 청주시청원구",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGJAEBONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430301",
+    "cityCode": "4300",
+    "name": "충주시",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-chung-ju-si",
+    "member": {
+      "name": "이종배",
+      "party": "국민의힘",
+      "origNm": "충북 충주시",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJONGBAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430401",
+    "cityCode": "4300",
+    "name": "제천시단양군",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-je-cheon-si-dan-yang-gun",
+    "member": {
+      "name": "엄태영",
+      "party": "국민의힘",
+      "origNm": "충북 제천시단양군",
+      "url": "https://www.assembly.go.kr/members/22nd/EOMTAEYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2430701",
+    "cityCode": "4300",
+    "name": "보은군옥천군영동군괴산군",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-bo-eun-gun-ok-cheon-gun-yeong-dong-gun-goe-san-gun",
+    "member": {
+      "name": "박덕흠",
+      "party": "국민의힘",
+      "origNm": "충북 보은군옥천군영동군괴산군",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKDUKHYUM"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2431002",
+    "cityCode": "4300",
+    "name": "증평군진천군음성군",
+    "city": "충청북도",
+    "region": "chungbuk",
+    "slug": "chungbuk-jeung-pyeong-gun-jin-cheon-gun-eum-seong-gun",
+    "member": {
+      "name": "임호선",
+      "party": "더불어민주당",
+      "origNm": "충북 증평군진천군음성군",
+      "url": "https://www.assembly.go.kr/members/22nd/LIMHOSEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2441801",
+    "cityCode": "4400",
+    "name": "천안시갑",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-cheon-an-si-gap",
+    "member": {
+      "name": "문진석",
+      "party": "더불어민주당",
+      "origNm": "충남 천안시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MOONJINSEOG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2441701",
+    "cityCode": "4400",
+    "name": "천안시을",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-cheon-an-si-eul",
+    "member": {
+      "name": "이재관",
+      "party": "더불어민주당",
+      "origNm": "충남 천안시을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJAEKWAN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2441802",
+    "cityCode": "4400",
+    "name": "천안시병",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-cheon-an-si-byeong",
+    "member": {
+      "name": "이정문",
+      "party": "더불어민주당",
+      "origNm": "충남 천안시병",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJUNGMUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2440202",
+    "cityCode": "4400",
+    "name": "공주시부여군청양군",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-gong-ju-si-bu-yeo-gun-cheong-yang-gun",
+    "member": {
+      "name": "윤용근",
+      "party": "국민의힘",
+      "origNm": "충남 공주시부여군청양군",
+      "url": "https://www.assembly.go.kr/members/22nd/YUNYONGKEUN"
+    },
+    "bye2026": {
+      "name": "윤용근",
+      "party": "국민의힘"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2440301",
+    "cityCode": "4400",
+    "name": "보령시서천군",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-bo-ryeong-si-seo-cheon-gun",
+    "member": {
+      "name": "장동혁",
+      "party": "국민의힘",
+      "origNm": "충남 보령시서천군",
+      "url": "https://www.assembly.go.kr/members/22nd/JANGDONGHYEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2440402",
+    "cityCode": "4400",
+    "name": "아산시갑",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-a-san-si-gap",
+    "member": {
+      "name": "복기왕",
+      "party": "더불어민주당",
+      "origNm": "충남 아산시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/BOKKIWANG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2440403",
+    "cityCode": "4400",
+    "name": "아산시을",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-a-san-si-eul",
+    "member": {
+      "name": "전은수",
+      "party": "더불어민주당",
+      "origNm": "충남 아산시을",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONEUNSU"
+    },
+    "bye2026": {
+      "name": "전은수",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2440501",
+    "cityCode": "4400",
+    "name": "서산시태안군",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-seo-san-si-tae-an-gun",
+    "member": {
+      "name": "성일종",
+      "party": "국민의힘",
+      "origNm": "충남 서산시태안군",
+      "url": "https://www.assembly.go.kr/members/22nd/SUNGILJONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2440901",
+    "cityCode": "4400",
+    "name": "논산시계룡시금산군",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-non-san-si-gye-ryong-si-geum-san-gun",
+    "member": {
+      "name": "황명선",
+      "party": "더불어민주당",
+      "origNm": "충남 논산시계룡시금산군",
+      "url": "https://www.assembly.go.kr/members/22nd/HWANGMYEONGSEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2441601",
+    "cityCode": "4400",
+    "name": "당진시",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-dang-jin-si",
+    "member": {
+      "name": "어기구",
+      "party": "더불어민주당",
+      "origNm": "충남 당진시",
+      "url": "https://www.assembly.go.kr/members/22nd/EOHKIYKU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2441301",
+    "cityCode": "4400",
+    "name": "홍성군예산군",
+    "city": "충청남도",
+    "region": "chungnam",
+    "slug": "chungnam-hong-seong-gun-ye-san-gun",
+    "member": {
+      "name": "강승규",
+      "party": "국민의힘",
+      "origNm": "충남 홍성군예산군",
+      "url": "https://www.assembly.go.kr/members/22nd/KangSeungKyoo"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530101",
+    "cityCode": "5300",
+    "name": "전주시갑",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-jeon-ju-si-gap",
+    "member": {
+      "name": "김윤덕",
+      "party": "더불어민주당",
+      "origNm": "전북 전주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMYUNDUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530102",
+    "cityCode": "5300",
+    "name": "전주시을",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-jeon-ju-si-eul",
+    "member": {
+      "name": "이성윤",
+      "party": "더불어민주당",
+      "origNm": "전북 전주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESUNGYOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530201",
+    "cityCode": "5300",
+    "name": "전주시병",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-jeon-ju-si-byeong",
+    "member": {
+      "name": "정동영",
+      "party": "더불어민주당",
+      "origNm": "전북 전주시병",
+      "url": "https://www.assembly.go.kr/members/22nd/CHUNGDONGYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530301",
+    "cityCode": "5300",
+    "name": "군산시김제시부안군갑",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-gun-san-si-gim-je-si-bu-an-gun-gap",
+    "member": {
+      "name": "김의겸",
+      "party": "더불어민주당",
+      "origNm": "전북 군산시김제시부안군갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMEUIKYEOM"
+    },
+    "bye2026": {
+      "name": "김의겸",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2530901",
+    "cityCode": "5300",
+    "name": "군산시김제시부안군을",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-gun-san-si-gim-je-si-bu-an-gun-eul",
+    "member": {
+      "name": "박지원",
+      "party": "더불어민주당",
+      "origNm": "전북 군산시김제시부안군을",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJIWON"
+    },
+    "bye2026": {
+      "name": "박지원",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  },
+  {
+    "code": "2530501",
+    "cityCode": "5300",
+    "name": "익산시갑",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-ik-san-si-gap",
+    "member": {
+      "name": "이춘석",
+      "party": "무소속",
+      "origNm": "전북 익산시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/LEECHOONSUAK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530502",
+    "cityCode": "5300",
+    "name": "익산시을",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-ik-san-si-eul",
+    "member": {
+      "name": "한병도",
+      "party": "더불어민주당",
+      "origNm": "전북 익산시을",
+      "url": "https://www.assembly.go.kr/members/22nd/HANBYUNGDO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530701",
+    "cityCode": "5300",
+    "name": "정읍시고창군",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-jeong-eup-si-go-chang-gun",
+    "member": {
+      "name": "윤준병",
+      "party": "더불어민주당",
+      "origNm": "전북 정읍시고창군",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONJOONBYEONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2530801",
+    "cityCode": "5300",
+    "name": "남원시장수군임실군순창군",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-nam-won-si-jang-su-gun-im-sil-gun-sun-chang-gun",
+    "member": {
+      "name": "박희승",
+      "party": "더불어민주당",
+      "origNm": "전북 남원시장수군임실군순창군",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKHEESEONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2531001",
+    "cityCode": "5300",
+    "name": "완주군진안군무주군",
+    "city": "전북특별자치도",
+    "region": "jeonbuk",
+    "slug": "jeonbuk-wan-ju-gun-jin-an-gun-mu-ju-gun",
+    "member": {
+      "name": "안호영",
+      "party": "더불어민주당",
+      "origNm": "전북 완주군진안군무주군",
+      "url": "https://www.assembly.go.kr/members/22nd/ANHOYOUNG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460101",
+    "cityCode": "4600",
+    "name": "목포시",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-mok-po-si",
+    "member": {
+      "name": "김원이",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 목포시",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMWONI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460201",
+    "cityCode": "4600",
+    "name": "여수시갑",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-yeo-su-si-gap",
+    "member": {
+      "name": "주철현",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 여수시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/JUCHEOLHYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460202",
+    "cityCode": "4600",
+    "name": "여수시을",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-yeo-su-si-eul",
+    "member": {
+      "name": "조계원",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 여수시을",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOGYEWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460403",
+    "cityCode": "4600",
+    "name": "순천시광양시곡성군구례군갑",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-sun-cheon-si-gwang-yang-si-gok-seong-gun-gu-rye-gun-gap",
+    "member": {
+      "name": "김문수",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 순천시광양시곡성군구례군갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMMOONSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460702",
+    "cityCode": "4600",
+    "name": "순천시광양시곡성군구례군을",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-sun-cheon-si-gwang-yang-si-gok-seong-gun-gu-rye-gun-eul",
+    "member": {
+      "name": "권향엽",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 순천시광양시곡성군구례군을",
+      "url": "https://www.assembly.go.kr/members/22nd/KWONHYANGYUP"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2460601",
+    "cityCode": "4600",
+    "name": "나주시화순군",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-na-ju-si-hwa-sun-gun",
+    "member": {
+      "name": "신정훈",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 나주시화순군",
+      "url": "https://www.assembly.go.kr/members/22nd/SHINJEONGHOON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2462202",
+    "cityCode": "4600",
+    "name": "담양군함평군영광군장성군",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-dam-yang-gun-ham-pyeong-gun-yeong-gwang-gun-jang-seong-gun",
+    "member": {
+      "name": "이개호",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 담양군함평군영광군장성군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEKAIHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2461501",
+    "cityCode": "4600",
+    "name": "고흥군보성군장흥군강진군",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-go-heung-gun-bo-seong-gun-jang-heung-gun-gang-jin-gun",
+    "member": {
+      "name": "문금주",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 고흥군보성군장흥군강진군",
+      "url": "https://www.assembly.go.kr/members/22nd/MUNGEUMJU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2461801",
+    "cityCode": "4600",
+    "name": "해남군완도군진도군",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-hae-nam-gun-wan-do-gun-jin-do-gun",
+    "member": {
+      "name": "박지원",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 해남군완도군진도군",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKJIEWON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2462101",
+    "cityCode": "4600",
+    "name": "영암군무안군신안군",
+    "city": "전라남도",
+    "region": "jeonnam-gwangju",
+    "slug": "jeonnam-gwangju-yeong-am-gun-mu-an-gun-sin-an-gun",
+    "member": {
+      "name": "서삼석",
+      "party": "더불어민주당",
+      "origNm": "전남광주통합특별시 영암군무안군신안군",
+      "url": "https://www.assembly.go.kr/members/22nd/SEOSAMSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470101",
+    "cityCode": "4700",
+    "name": "포항시북구",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-po-hang-si-buk-gu",
+    "member": {
+      "name": "김정재",
+      "party": "국민의힘",
+      "origNm": "경북 포항시북구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJUNGJAE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470201",
+    "cityCode": "4700",
+    "name": "포항시남구울릉군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-po-hang-si-nam-gu-ul-reung-gun",
+    "member": {
+      "name": "이상휘",
+      "party": "국민의힘",
+      "origNm": "경북 포항시남구울릉군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEESANGHWI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470401",
+    "cityCode": "4700",
+    "name": "경주시",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-gyeong-ju-si",
+    "member": {
+      "name": "김석기",
+      "party": "국민의힘",
+      "origNm": "경북 경주시",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSEOKKI"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470501",
+    "cityCode": "4700",
+    "name": "김천시",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-gim-cheon-si",
+    "member": {
+      "name": "송언석",
+      "party": "국민의힘",
+      "origNm": "경북 김천시",
+      "url": "https://www.assembly.go.kr/members/22nd/SONGEONSEOG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470601",
+    "cityCode": "4700",
+    "name": "안동시예천군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-an-dong-si-ye-cheon-gun",
+    "member": {
+      "name": "김형동",
+      "party": "국민의힘",
+      "origNm": "경북 안동시예천군",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMHYUNGDONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470701",
+    "cityCode": "4700",
+    "name": "구미시갑",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-gu-mi-si-gap",
+    "member": {
+      "name": "구자근",
+      "party": "국민의힘",
+      "origNm": "경북 구미시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/KUJAKEUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470702",
+    "cityCode": "4700",
+    "name": "구미시을",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-gu-mi-si-eul",
+    "member": {
+      "name": "강명구",
+      "party": "국민의힘",
+      "origNm": "경북 구미시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGMYOUNGGU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470803",
+    "cityCode": "4700",
+    "name": "영주시영양군봉화군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-yeong-ju-si-yeong-yang-gun-bong-hwa-gun",
+    "member": {
+      "name": "임종득",
+      "party": "국민의힘",
+      "origNm": "경북 영주시영양군봉화군",
+      "url": "https://www.assembly.go.kr/members/22nd/LIMJONGDEUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2470901",
+    "cityCode": "4700",
+    "name": "영천시청도군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-yeong-cheon-si-cheong-do-gun",
+    "member": {
+      "name": "이만희",
+      "party": "국민의힘",
+      "origNm": "경북 영천시청도군",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEMANHEE"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2471002",
+    "cityCode": "4700",
+    "name": "상주시문경시",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-sang-ju-si-mun-gyeong-si",
+    "member": {
+      "name": "임이자",
+      "party": "국민의힘",
+      "origNm": "경북 상주시문경시",
+      "url": "https://www.assembly.go.kr/members/22nd/LIMLEEJA"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2471302",
+    "cityCode": "4700",
+    "name": "경산시",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-gyeong-san-si",
+    "member": {
+      "name": "조지연",
+      "party": "국민의힘",
+      "origNm": "경북 경산시",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOJIYEON"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2471903",
+    "cityCode": "4700",
+    "name": "의성군청송군영덕군울진군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-ui-seong-gun-cheong-song-gun-yeong-deok-gun-ul-jin-gun",
+    "member": {
+      "name": "박형수",
+      "party": "국민의힘",
+      "origNm": "경북 의성군청송군영덕군울진군",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKHYEUNGSOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2471701",
+    "cityCode": "4700",
+    "name": "고령군성주군칠곡군",
+    "city": "경상북도",
+    "region": "gyeongbuk",
+    "slug": "gyeongbuk-go-ryeong-gun-seong-ju-gun-chil-gok-gun",
+    "member": {
+      "name": "정희용",
+      "party": "국민의힘",
+      "origNm": "경북 고령군성주군칠곡군",
+      "url": "https://www.assembly.go.kr/members/22nd/JUNGHEEYONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2482101",
+    "cityCode": "4800",
+    "name": "창원시의창구",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-chang-won-si-ui-chang-gu",
+    "member": {
+      "name": "김종양",
+      "party": "국민의힘",
+      "origNm": "경남 창원시의창구",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJONGYANG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2482201",
+    "cityCode": "4800",
+    "name": "창원시성산구",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-chang-won-si-seong-san-gu",
+    "member": {
+      "name": "허성무",
+      "party": "더불어민주당",
+      "origNm": "경남 창원시성산구",
+      "url": "https://www.assembly.go.kr/members/22nd/HUHSUNGMOO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2482301",
+    "cityCode": "4800",
+    "name": "창원시마산합포구",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-chang-won-si-ma-san-hap-po-gu",
+    "member": {
+      "name": "최형두",
+      "party": "국민의힘",
+      "origNm": "경남 창원시마산합포구",
+      "url": "https://www.assembly.go.kr/members/22nd/CHOIHYUNGDU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2482401",
+    "cityCode": "4800",
+    "name": "창원시마산회원구",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-chang-won-si-ma-san-hoe-won-gu",
+    "member": {
+      "name": "윤한홍",
+      "party": "국민의힘",
+      "origNm": "경남 창원시마산회원구",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONHANHONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2482501",
+    "cityCode": "4800",
+    "name": "창원시진해구",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-chang-won-si-jin-hae-gu",
+    "member": {
+      "name": "이종욱",
+      "party": "국민의힘",
+      "origNm": "경남 창원시진해구",
+      "url": "https://www.assembly.go.kr/members/22nd/LEEJONHWOOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480301",
+    "cityCode": "4800",
+    "name": "진주시갑",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-jin-ju-si-gap",
+    "member": {
+      "name": "박대출",
+      "party": "국민의힘",
+      "origNm": "경남 진주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKDAECHUL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480302",
+    "cityCode": "4800",
+    "name": "진주시을",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-jin-ju-si-eul",
+    "member": {
+      "name": "강민국",
+      "party": "국민의힘",
+      "origNm": "경남 진주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KANGMINKUK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480501",
+    "cityCode": "4800",
+    "name": "통영시고성군",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-tong-yeong-si-go-seong-gun",
+    "member": {
+      "name": "정점식",
+      "party": "국민의힘",
+      "origNm": "경남 통영시고성군",
+      "url": "https://www.assembly.go.kr/members/22nd/JEONGJEOMSIG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480702",
+    "cityCode": "4800",
+    "name": "사천시남해군하동군",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-sa-cheon-si-nam-hae-gun-ha-dong-gun",
+    "member": {
+      "name": "서천호",
+      "party": "국민의힘",
+      "origNm": "경남 사천시남해군하동군",
+      "url": "https://www.assembly.go.kr/members/22nd/SUHCHEONHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480801",
+    "cityCode": "4800",
+    "name": "김해시갑",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-gim-hae-si-gap",
+    "member": {
+      "name": "민홍철",
+      "party": "더불어민주당",
+      "origNm": "경남 김해시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MINHONGCHUL"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480802",
+    "cityCode": "4800",
+    "name": "김해시을",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-gim-hae-si-eul",
+    "member": {
+      "name": "김정호",
+      "party": "더불어민주당",
+      "origNm": "경남 김해시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMJUNGHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2480901",
+    "cityCode": "4800",
+    "name": "밀양시의령군함안군창녕군",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-mil-yang-si-ui-ryeong-gun-ham-an-gun-chang-nyeong-gun",
+    "member": {
+      "name": "박상웅",
+      "party": "국민의힘",
+      "origNm": "경남 밀양시의령군함안군창녕군",
+      "url": "https://www.assembly.go.kr/members/22nd/PARKSANGWOONG"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2481001",
+    "cityCode": "4800",
+    "name": "거제시",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-geo-je-si",
+    "member": {
+      "name": "서일준",
+      "party": "국민의힘",
+      "origNm": "경남 거제시",
+      "url": "https://www.assembly.go.kr/members/22nd/SEOILJUN"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2481402",
+    "cityCode": "4800",
+    "name": "양산시갑",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-yang-san-si-gap",
+    "member": {
+      "name": "윤영석",
+      "party": "국민의힘",
+      "origNm": "경남 양산시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/YOONYOUNGSEOK"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2481403",
+    "cityCode": "4800",
+    "name": "양산시을",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-yang-san-si-eul",
+    "member": {
+      "name": "김태호",
+      "party": "국민의힘",
+      "origNm": "경남 양산시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMTAEHO"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2481901",
+    "cityCode": "4800",
+    "name": "산청군함양군거창군합천군",
+    "city": "경상남도",
+    "region": "gyeongnam",
+    "slug": "gyeongnam-san-cheong-gun-ham-yang-gun-geo-chang-gun-hap-cheon-gun",
+    "member": {
+      "name": "신성범",
+      "party": "국민의힘",
+      "origNm": "경남 산청군함양군거창군합천군",
+      "url": "https://www.assembly.go.kr/members/22nd/SHINSungBum"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2490101",
+    "cityCode": "4900",
+    "name": "제주시갑",
+    "city": "제주특별자치도",
+    "region": "jeju",
+    "slug": "jeju-je-ju-si-gap",
+    "member": {
+      "name": "문대림",
+      "party": "더불어민주당",
+      "origNm": "제주 제주시갑",
+      "url": "https://www.assembly.go.kr/members/22nd/MOONDAELIM"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2490102",
+    "cityCode": "4900",
+    "name": "제주시을",
+    "city": "제주특별자치도",
+    "region": "jeju",
+    "slug": "jeju-je-ju-si-eul",
+    "member": {
+      "name": "김한규",
+      "party": "더불어민주당",
+      "origNm": "제주 제주시을",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMHANKYU"
+    },
+    "bye2026": null,
+    "vacancy": null
+  },
+  {
+    "code": "2490201",
+    "cityCode": "4900",
+    "name": "서귀포시",
+    "city": "제주특별자치도",
+    "region": "jeju",
+    "slug": "jeju-seo-gwi-po-si",
+    "member": {
+      "name": "김성범",
+      "party": "더불어민주당",
+      "origNm": "제주 서귀포시",
+      "url": "https://www.assembly.go.kr/members/22nd/KIMSUNGBUM"
+    },
+    "bye2026": {
+      "name": "김성범",
+      "party": "더불어민주당"
+    },
+    "vacancy": null
+  }
+]

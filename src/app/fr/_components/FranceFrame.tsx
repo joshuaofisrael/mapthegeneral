@@ -71,9 +71,9 @@ export function FranceFrame({
       <SourceList sources={sources} heading={lang === "fr" ? "Sources" : "Sources"} />
       <p className="mt-3 text-xs leading-5 text-ink-muted">
         {lang === "fr"
-          ? "Informations publiques de l’INSEE, de Service-Public, de Légifrance et de data.gouv.fr réutilisées sous la "
-          : "Public information from INSEE, Service-Public, Légifrance and data.gouv.fr reused under the "}
-        <a className="underline" href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/">
+          ? "Informations publiques de l’INSEE, de l’Assemblée nationale, du ministère de l’Intérieur, de Service-Public et de Légifrance réutilisées sous la "
+          : "Public information from INSEE, the National Assembly, the Ministry of the Interior, Service-Public and Légifrance reused under the "}
+        <a className="underline" href="https://www.data.gouv.fr/pages/legal/licences/etalab-2.0">
           {lang === "fr" ? "Licence Ouverte / Open Licence 2.0 (Etalab)" : "Licence Ouverte / Open Licence 2.0 (Etalab)"}
         </a>
         {lang === "fr"

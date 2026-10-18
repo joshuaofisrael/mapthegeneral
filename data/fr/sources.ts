@@ -1,13 +1,14 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ_L2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
     id: "sp-f1939",
     name: "Service-Public, « Quelles sont les dates des prochaines élections ? » (F1939), vérifié le 1er juillet 2026",
     url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F1939",
-    readOn: READ,
+    readOn: READ_L2,
   },
   {
     id: "sp-f1940",
@@ -62,6 +63,72 @@ export const SOURCES: SourceRef[] = [
     name: "La Poste, Base officielle des codes postaux, jeu référencé sur data.gouv.fr",
     url: "https://www.data.gouv.fr/datasets/base-officielle-des-codes-postaux",
     readOn: READ,
+  },
+  {
+    id: "an-deputes",
+    name: "Assemblée nationale, députés en exercice, fichier AMO des mandats actifs, catalogue du 17 octobre 2026",
+    url: "https://data.assemblee-nationale.fr/acteurs/deputes-en-exercice",
+    readOn: READ_L2,
+  },
+  {
+    id: "an-licence",
+    name: "Assemblée nationale, Licence Ouverte / Open Licence",
+    url: "https://data.assemblee-nationale.fr/licence-ouverte-open-licence",
+    readOn: READ_L2,
+  },
+  {
+    id: "rne",
+    name: "Ministère de l'Intérieur, Répertoire national des élus, mis à jour le 11 août 2026, Licence Ouverte 2.0",
+    url: "https://www.data.gouv.fr/datasets/repertoire-national-des-elus-1",
+    readOn: READ_L2,
+  },
+  {
+    id: "lo-2",
+    name: "Etalab, Licence Ouverte 2.0",
+    url: "https://www.data.gouv.fr/pages/legal/licences/etalab-2.0",
+    readOn: READ_L2,
+  },
+  {
+    id: "decret-2021-483",
+    name: "Décret n° 2021-483 du 21 avril 2021 (JORFTEXT000043403678)",
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043403678",
+    readOn: READ_L2,
+  },
+  {
+    id: "decret-2024-527",
+    name: "Décret n° 2024-527 du 9 juin 2024 (JORFTEXT000049689654)",
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049689654",
+    readOn: READ_L2,
+  },
+  {
+    id: "decret-2025-848",
+    name: "Décret n° 2025-848 du 27 août 2025 (JORFTEXT000052142190)",
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052142190",
+    readOn: READ_L2,
+  },
+  {
+    id: "code-l49",
+    name: "Code électoral, article L49, version en vigueur depuis le 30 juin 2020",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039446215",
+    readOn: READ_L2,
+  },
+  {
+    id: "loi-77-808",
+    name: "Loi n° 77-808 du 19 juillet 1977 relative à la publication et à la diffusion de certains sondages d'opinion, article 11",
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000522846",
+    readOn: READ_L2,
+  },
+  {
+    id: "rgpd",
+    name: "Règlement (UE) 2016/679 (RGPD)",
+    url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    readOn: READ_L2,
+  },
+  {
+    id: "loi-78-17",
+    name: "Loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés",
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460",
+    readOn: READ_L2,
   },
 ];
 
