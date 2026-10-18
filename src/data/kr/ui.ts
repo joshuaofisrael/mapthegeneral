@@ -22,15 +22,15 @@ const EN = {
   below: "Eup, myeon, and dong",
   unofficial: "Unofficial information. Confirm with your official election office.",
   candidateGap:
-    "This release does not reprint candidate lists or constituency names. The National Assembly page read on 17 October 2026 gives the size of the chamber. It does not name the 254 constituency seats one by one.",
+    "This release does not reprint candidate lists. Names of the 254 constituencies, and the current constituency member where the National Assembly search lists one, are on the constituency pages.",
   officeholderGap:
-    "The name of the sitting head is not copied here. The 9th nationwide simultaneous local elections were held on 3 June 2026. This page does not reprint a winner list and does not say who holds the office on 17 October 2026.",
+    "Where the 3 June 2026 winner roster prints a name for this office, that name is on the si, gun, or gu page. This page does not repeat the roster.",
   nextLocalGap:
     "Article 34(1)3 of the Public Official Election Act sets the polling day for the next election held because a local council term or a local-government head’s term is expiring. No later instrument naming that calendar day was read on 17 October 2026, so this page does not print one.",
   populationGap:
     "Table 1-1 of the administrative-area book, as read, prints counts of administrative units. This page does not copy a population figure from a later table in that book.",
   localPagesGap:
-    "Pages for si, gun, and gu, and for eup, myeon, and dong, are not in this release. National Assembly constituency pages are not in this release.",
+    "Pages for eup, myeon, and dong are not in this release. Section 7-5 rows marked ◦ are gu that are not autonomous, and they have no page. Jeju’s two administrative si have no basic-government page.",
   postcodeGap:
     "A postcode search is not part of this release. Section 7-5 prints an office postcode for each government in that table. That is not a nationwide postcode file.",
   resultsGap:
@@ -59,15 +59,15 @@ const KO = {
   below: "읍·면·동",
   unofficial: "비공식 정보입니다. 공식 선거관리기관에서 확인하십시오.",
   candidateGap:
-    "이 배포는 후보자 명부와 선거구 이름을 옮기지 않습니다. 2026년 10월 17일에 읽은 국회 페이지는 의원 정수를 적습니다. 지역구 254곳을 하나씩 적지는 않습니다.",
+    "이 배포는 후보자 명부를 옮기지 않습니다. 지역구 254곳의 이름과, 국회 검색이 지역구 의원을 적은 경우 그 이름은 지역구 페이지에 있습니다.",
   officeholderGap:
-    "현직 단체장의 이름은 여기에 옮기지 않습니다. 제9회 전국동시지방선거는 2026년 6월 3일에 실시되었습니다. 이 페이지는 당선인 명부를 옮기지 않으며, 2026년 10월 17일 현재 누가 재직하는지도 적지 않습니다.",
+    "2026년 6월 3일 당선인명부가 이 단체의 이름을 적으면, 그 이름은 시·군·구 페이지에 있습니다. 이 페이지는 명부를 반복하지 않습니다.",
   nextLocalGap:
     "공직선거법 제34조제1항제3호는 지방의회의원과 지방자치단체의 장에 대한 임기만료 선거의 선거일을 정합니다. 2026년 10월 17일에 그 달력 날짜를 적은 이후 문서를 읽지 않았으므로, 이 페이지는 그 날짜를 적지 않습니다.",
   populationGap:
     "읽은 행정구역 책자의 1-1 총괄표는 행정구역 수를 적습니다. 이 페이지는 그 책자의 다른 표에서 인구를 옮기지 않습니다.",
   localPagesGap:
-    "시·군·구 페이지와 읍·면·동 페이지는 이 배포에 없습니다. 국회의원 지역선거구 페이지도 이 배포에 없습니다.",
+    "읍·면·동 페이지는 이 배포에 없습니다. 7-5에서 ◦로 표시된 줄은 자치구가 아닌 구이며, 페이지가 없습니다. 제주의 행정시 2곳도 기초자치단체 페이지가 없습니다.",
   postcodeGap:
     "우편번호 검색은 이 배포에 없습니다. 7-5는 그 표의 각 단체 사무소 우편번호를 적습니다. 그것은 전국 우편번호 파일이 아닙니다.",
   resultsGap:

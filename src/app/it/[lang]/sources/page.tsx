@@ -50,8 +50,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       title={it ? "Fonti delle pagine italiane" : "Sources for the Italy pages"}
       lede={
         it
-          ? "Ogni scheda sotto è stata letta il 17 ottobre 2026. Stampa e Wikipedia non sono usate come fonte di un fatto."
-          : "Each item below was read on 17 October 2026. News reports and Wikipedia are not used as the source of a fact."
+          ? "Le schede del livello nazionale portano la data 17 ottobre 2026. Le schede del livello province e collegi portano la data 18 ottobre 2026. Stampa e Wikipedia non sono usate come fonte di un fatto."
+          : "National-level items are dated 17 October 2026. Province and constituency items are dated 18 October 2026. News reports and Wikipedia are not used as the source of a fact."
       }
       officeHref={dait.url}
       officeLabel="Dipartimento per gli Affari Interni e Territoriali"
@@ -60,8 +60,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       <div className="prose-legal">
         <p>
           {it
-            ? "Ciò che non è in queste fonti non è inventato. Restano aperte, tra le altre, la presidenza del Consiglio in carica, i presidenti regionali, le liste dei candidati, lo scrutinio del Senato del 2022, la Valle d'Aosta e l'estero nella tabella della Camera, il giorno della prossima elezione politica e il CAP."
-            : "What is not in these sources is not invented. Still open, among other gaps, are the sitting President of the Council, the regional presidents, candidate lists, the 2022 Senate count, Valle d'Aosta and the overseas constituency in the Chamber table, the day of the next general election, and postcodes."}
+            ? "Ciò che non è in queste fonti non è inventato. Restano aperte, tra le altre, la presidenza del Consiglio in carica, i presidenti regionali, il senatore in carica per ciascun collegio, le liste dei candidati, i comuni, la circoscrizione Estero, il giorno della prossima elezione politica e il CAP."
+            : "What is not in these sources is not invented. Still open, among other gaps, are the sitting President of the Council, the regional presidents, the sitting senator for each constituency, candidate lists, municipalities, the overseas constituency, the day of the next general election, and postcodes."}
         </p>
         <h2>{it ? "Licenze e attribuzione" : "Licences and attribution"}</h2>
         <p>
@@ -71,8 +71,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
           </a>{" "}
           (<a href="https://www.istat.it/note-legali/">{it ? "note legali ISTAT" : "ISTAT legal notes"}</a>).{" "}
           {it
-            ? "I testi della Costituzione, delle leggi e dei decreti sono atti ufficiali esclusi dal diritto d'autore (art. 5 della legge 22 aprile 1941, n. 633). I fatti delle altre fonti ufficiali sono riassunti con parole nostre e con la citazione di ogni pagina. Non sono riprodotti immagini, loghi o emblemi."
-            : "The texts of the Constitution, laws and decrees are official acts excluded from copyright (article 5 of Law no. 633 of 22 April 1941). Facts from the other official sources are summarised in our own words with a citation to each page. No images, logos or emblems are reproduced."}
+            ? "I testi della Costituzione, delle leggi e dei decreti sono atti ufficiali esclusi dal diritto d'autore (art. 5 della legge 22 aprile 1941, n. 633). I fatti delle altre fonti ufficiali sono riassunti con parole nostre e con la citazione di ogni pagina. Non sono riprodotti immagini, loghi o emblemi. I nomi dei deputati vengono dall'endpoint SPARQL della Camera, con attribuzione. La pagina di catalogo del dataset il 18 ottobre 2026 ha restituito un errore, quindi da quella pagina non è stata copiata una licenza. I file degli amministratori del Ministero dell'interno non stampano una riga di licenza: sono copiati solo nome, carica e date dell'ufficio pubblico, con attribuzione, e non i dati di nascita."
+            : "The texts of the Constitution, laws and decrees are official acts excluded from copyright (article 5 of Law no. 633 of 22 April 1941). Facts from the other official sources are summarised in our own words with a citation to each page. No images, logos or emblems are reproduced. Deputy names come from the Chamber SPARQL endpoint, with attribution. The dataset catalogue page returned an error on 18 October 2026, so no licence line was copied from that page. The Interior Ministry administrator files did not print a licence line; only the public-office name, role and dates are copied, with attribution, and birth data are not."}
         </p>
       </div>
     </ItalyFrame>

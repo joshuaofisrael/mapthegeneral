@@ -1,6 +1,7 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ_LEVEL2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -104,6 +105,54 @@ export const SOURCES: SourceRef[] = [
     name: "Poste Italiane, banche dati territoriali, CAP Professional",
     url: "https://business.poste.it/professionisti-imprese/territorial-databanks.html",
     readOn: READ,
+  },
+  {
+    id: "dlgs-177-2020",
+    name: "Decreto legislativo 23 dicembre 2020, n. 177, determinazione dei collegi uninominali e plurinominali (20G00198)",
+    url: "https://www.gazzettaufficiale.it/eli/id/2020/12/29/20G00198/sg",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "collegi-xlsx",
+    name: "Dipartimento per le riforme istituzionali, tavole Excel allegate al decreto legislativo n. 177/2020 (tabelle A.1, A.2, B.1 e B.2)",
+    url: "https://www.riformeistituzionali.gov.it/it/i-nuovi-collegi-elettorali/",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "anagrafe-incarica",
+    name: "Ministero dell'interno, amministratori locali e regionali in carica al 24 agosto 2026 (file provinciali e metropolitani)",
+    url: "https://dait.interno.gov.it/elezioni/open-data/amministratori-locali-e-regionali-in-carica",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "camera-deputati-19",
+    name: "Camera dei deputati, dati.camera.it, deputati della XIX legislatura con mandato senza endDate (interrogazione SPARQL)",
+    url: "https://dati.camera.it/sparql",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "senato-senatori-19",
+    name: "Senato della Repubblica, dati.senato.it, senatori della XIX legislatura (CSV senza codice di collegio)",
+    url: "https://dati.senato.it/DatiSenato/browse/composizione?legislatura=19",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "legge-180-2026",
+    name: "Legge 9 ottobre 2026, n. 180, disposizioni in materia di elezioni della Camera e del Senato (26G00201)",
+    url: "https://www.normattiva.it/eli/id/2026/10/09/26G00201/ORIGINAL",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "legge-28-2000",
+    name: "Legge 22 febbraio 2000, n. 28, articolo 8, sondaggi politici ed elettorali",
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-02-22;28~art8",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "dait-speciale",
+    name: "Dipartimento per gli affari interni e territoriali, Speciale elezioni (suppletiva Camera Abruzzo e turno straordinario del 15-16 novembre 2026)",
+    url: "https://dait.interno.gov.it/elezioni/speciale-elezioni",
+    readOn: READ_LEVEL2,
   },
 ];
 

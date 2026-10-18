@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { KoreaFrame } from "@/app/kr/frame";
 import { krPageMetadata } from "@/data/kr/metadata";
-import { NA_ELECTION_SLUG, asKrLang, electionsPath, formatKrDate, krHome, krRoot, naElectionPath, sectionPath } from "@/data/kr/paths";
+import { NA_ELECTION_SLUG, asKrLang, constituencyIndexPath, electionsPath, formatKrDate, krHome, krRoot, naElectionPath, sectionPath } from "@/data/kr/paths";
 import { sourceById, sourcesById } from "@/data/kr/sources";
 import { ui } from "@/data/kr/ui";
 
@@ -95,8 +95,8 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
         <h2>{ko ? "정수" : "Size of the chamber"}</h2>
         <p>
           {ko
-            ? "국회 페이지는 의원수를 300인으로 적고, 그 가운데 지역구 254인, 비례대표 46인이라고 적습니다. 지역구는 그 국회의원지역구에서 유효투표의 다수를 얻은 사람을 당선인으로 결정한다고 적습니다. 비례대표는 의석할당정당이 비례대표 국회의원 선거에서 얻은 득표 비율에 따라 배분한다고 적습니다. 별표의 선거구 구역은 옮기지 않습니다."
-            : "The National Assembly page says the chamber has 300 members, of whom 254 are constituency members and 46 are proportional members. It says a constituency member is the person with the most valid votes in that constituency. It says proportional seats are distributed by the share of the vote won by parties allocated seats. The annexed table of constituency boundaries is not copied."}
+            ? "국회 페이지는 의원수를 300인으로 적고, 그 가운데 지역구 254인, 비례대표 46인이라고 적습니다. 지역구는 그 국회의원지역구에서 유효투표의 다수를 얻은 사람을 당선인으로 결정한다고 적습니다. 비례대표는 의석할당정당이 비례대표 국회의원 선거에서 얻은 득표 비율에 따라 배분한다고 적습니다. 별표의 선거구 구역 문장은 옮기지 않습니다. 선관위 목록의 지역구 이름은 지역구 페이지에 있습니다."
+            : "The National Assembly page says the chamber has 300 members, of whom 254 are constituency members and 46 are proportional members. It says a constituency member is the person with the most valid votes in that constituency. It says proportional seats are distributed by the share of the vote won by parties allocated seats. The annexed wording of constituency boundaries is not copied. Names from the National Election Commission list are on the constituency pages."}
         </p>
       </section>
       <GapNote label={copy.gap} text={copy.candidateGap} />
@@ -107,6 +107,10 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
         {" · "}
         <Link className="text-navy underline" href={sectionPath(lang, "candidates")}>
           {copy.candidates}
+        </Link>
+        {" · "}
+        <Link className="text-navy underline" href={constituencyIndexPath(lang)}>
+          {lang === "ko" ? "지역구" : "Constituencies"}
         </Link>
       </p>
     </KoreaFrame>

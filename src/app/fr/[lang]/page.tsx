@@ -13,7 +13,17 @@ import {
 } from "../../../../data/fr/places";
 import { franceMetadata } from "../../../../data/fr/seo";
 import { sourceById, sourcesById } from "../../../../data/fr/sources";
-import { electionsPath, franceHome, presidentialPath, regionPath } from "../../../../data/fr/paths";
+import { constituenciesOutsideDepartments } from "../../../../data/fr/level2";
+import {
+  circonscriptionsIndexPath,
+  constituencyPath,
+  departementsIndexPath,
+  electionsPath,
+  franceHome,
+  presidentialPath,
+  regionPath,
+  sourcesPath,
+} from "../../../../data/fr/paths";
 
 export function generateStaticParams() {
   return [{ lang: "fr" }, { lang: "en" }];
@@ -102,8 +112,8 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
           label={fr ? "Lacune" : "Gap"}
           text={
             fr
-              ? "Les noms des présidents de région et des maires ne sont pas sur cette page. Les pages de départements et de communes ne sont pas dans cette livraison."
-              : "Names of regional presidents and mayors are not on this page. Department and commune pages are not in this release."
+            ? "Les noms des présidents de région ne sont pas sur cette page. Les départements et les circonscriptions législatives ont une page. Les communes n’en ont pas."
+            : "Names of regional presidents are not on this page. Departments and legislative constituencies have a page. Communes do not."
           }
         />
       </section>
@@ -144,8 +154,8 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
         </p>
         <p>
           {fr
-            ? `Collectivités et territoires d’outre-mer imprimés dans le fichier COG, sans page dans cette livraison : ${COMERS.map((item) => item.officialName).join(", ")}.`
-            : `Overseas collectivities and territories printed in the COG file, with no page in this release: ${COMERS.map((item) => item.officialName).join(", ")}.`}
+            ? `Collectivités et territoires d’outre-mer imprimés dans le fichier COG, sans page de collectivité : ${COMERS.map((item) => item.officialName).join(", ")}. Les circonscriptions législatives que l’Assemblée nationale place hors d’un département du COG sont listées plus bas.`
+            : `Overseas collectivities and territories printed in the COG file, with no collectivity page: ${COMERS.map((item) => item.officialName).join(", ")}. Legislative constituencies that the National Assembly places outside a COG department are listed below.`}
         </p>
         <GapNote
           label={fr ? "Lacune" : "Gap"}
@@ -155,6 +165,32 @@ export default async function FranceNationalPage({ params }: { params: Promise<{
               : "La Poste publishes the Base officielle des codes postaux on data.gouv.fr. This release does not link a postcode to a commune, because commune pages are not published."
           }
         />
+      </section>
+
+      <section className="prose-legal">
+        <h2>{fr ? "Départements et circonscriptions" : "Departments and constituencies"}</h2>
+        <p>
+          <Link className="text-navy underline" href={departementsIndexPath(lang)}>
+            {fr ? "101 départements" : "101 departments"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={circonscriptionsIndexPath(lang)}>
+            {fr ? "577 circonscriptions législatives" : "577 legislative constituencies"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={sourcesPath(lang)}>
+            {fr ? "Sources, lois et licences" : "Sources, laws and licences"}
+          </Link>
+        </p>
+        <ul>
+          {constituenciesOutsideDepartments().map((constituency) => (
+            <li key={constituency.uid}>
+              <Link className="text-navy underline" href={constituencyPath(lang, constituency.slug)}>
+                {constituency.libelle}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <LinkGrid

@@ -2,7 +2,7 @@
   "code": "fr",
   "name": "France",
   "href": "/fr/",
-  "summary": "Presidential election on Sunday, 18 April 2027, with a runoff on Sunday, 2 May 2027, as published by Service-Public. This release has the national page and 18 regions, in French and English. Department and commune pages are not in this release.",
+  "summary": "Presidential election on Sunday, 18 April 2027, with a runoff on Sunday, 2 May 2027, as published by Service-Public. This release has the national page, 18 regions, 101 departments and 577 legislative constituencies, in French and English. Commune pages are not in this release.",
   "links": [
     { "href": "/fr/en/", "label": "English" },
     { "href": "/fr/fr/", "label": "Français" },

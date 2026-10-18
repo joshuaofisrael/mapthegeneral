@@ -197,6 +197,14 @@ export default async function TurkeyNationalPage({ params }: { params: Promise<{
           <Link className="text-navy underline" href={`${path}sources/`}>
             {copy.sources}
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={`${path}ilce/`}>
+            {tr ? "İlçeler" : "Districts"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={`${path}secim-cevresi/`}>
+            {tr ? "Seçim çevreleri" : "Constituencies"}
+          </Link>
         </p>
         <GapNote label={copy.gap} text={copy.candidateGap} />
         <GapNote label={copy.gap} text={copy.postcodeGap} />
