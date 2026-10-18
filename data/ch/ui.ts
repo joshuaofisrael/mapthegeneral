@@ -44,8 +44,9 @@ const UI = {
     alphaNearby: "Vorheriger und nächster Name im alphabetischen Index",
     parent: "Übergeordnete Seiten",
     unofficial: "Inoffizielle Information. Bestätigen Sie sie bei Ihrer offiziellen Wahlbehörde.",
+    districts: "Bezirke im Gemeindeverzeichnis",
     districtGap:
-      "Seiten für Bezirke, Verwaltungskreise, Wahlkreise, Regionen und Gemeinden sind in dieser Ausgabe nicht veröffentlicht. Die Zahlen dazu stehen im amtlichen Gemeindeverzeichnis.",
+      "Gemeindeseiten sind in dieser Ausgabe nicht veröffentlicht. Die Zahl der politischen Gemeinden steht im amtlichen Gemeindeverzeichnis.",
     candidateGap:
       "Für die Nationalratswahlen vom 24. Oktober 2027 lag am 17. Oktober 2026 keine offizielle Kandidatinnen- und Kandidatenliste vor, die diese Seite abdrucken könnte.",
     governmentGap:
@@ -80,8 +81,9 @@ const UI = {
     alphaNearby: "Nom précédent et suivant dans l’index alphabétique",
     parent: "Pages supérieures",
     unofficial: "Information non officielle. Vérifiez-la auprès de votre autorité électorale officielle.",
+    districts: "Districts dans le répertoire des communes",
     districtGap:
-      "Les pages des districts, arrondissements, cercles électoraux, régions et communes ne sont pas publiées dans cette édition. Les chiffres figurent dans le répertoire officiel des communes.",
+      "Les pages des communes ne sont pas publiées dans cette édition. Le chiffre des communes politiques figure dans le répertoire officiel des communes.",
     candidateGap:
       "Au 17 octobre 2026, aucune liste officielle de candidatures pour l’élection du Conseil national du 24 octobre 2027 n’avait été lue pour être reproduite ici.",
     governmentGap:
@@ -116,8 +118,9 @@ const UI = {
     alphaNearby: "Nome precedente e successivo nell’indice alfabetico",
     parent: "Pagine superiori",
     unofficial: "Informazione non ufficiale. Confermatela presso l’ufficio elettorale ufficiale.",
+    districts: "Distretti nel repertorio dei comuni",
     districtGap:
-      "Le pagine di distretti, circondari, circoli elettorali, regioni e comuni non sono pubblicate in questa edizione. Le cifre stanno nel repertorio ufficiale dei comuni.",
+      "Le pagine dei comuni non sono pubblicate in questa edizione. La cifra dei comuni politici sta nel repertorio ufficiale dei comuni.",
     candidateGap:
       "Il 17 ottobre 2026 non era stata letta una lista ufficiale di candidature per l’elezione del Consiglio nazionale del 24 ottobre 2027 da riprodurre qui.",
     governmentGap:
@@ -152,8 +155,9 @@ const UI = {
     alphaNearby: "Previous and next names in the alphabetical index",
     parent: "Parent pages",
     unofficial: "Unofficial information. Confirm with your official election office.",
+    districts: "Districts in the commune register",
     districtGap:
-      "District, administrative-district, electoral-constituency, region, and municipality pages are not published in this release. The counts are in the official commune register.",
+      "Municipality pages are not published in this release. The count of political municipalities is in the official commune register.",
     candidateGap:
       "No official candidacy list for the National Council election of 24 October 2027 had been read for reprinting on 17 October 2026.",
     governmentGap:

@@ -1,12 +1,16 @@
 import Link from "@/components/AnchorLink";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
+import { LinkGrid } from "@/components/LinkGrid";
 import { ChFrame } from "../../frame";
 import { asChLang } from "../../lang";
 import { chMetadata } from "../../meta";
 import { CANTONS, cantonBySlug, cantonNeighbors } from "../../../../../data/ch/cantons";
-import { cantonPath, chHome, electionPath } from "../../../../../data/ch/search";
+import { districtsForCanton, SOLE_DISTRICT_NAME } from "../../../../../data/ch/districts";
+import { membersFor } from "../../../../../data/ch/members";
+import { cantonPath, chHome, districtPath, districtsIndexPath, electionPath } from "../../../../../data/ch/search";
 import { sourceById, sourcesById } from "../../../../../data/ch/sources";
+import type { ChLang } from "../../../../../data/ch/types";
 import { formatNumber, ui } from "../../../../../data/ch/ui";
 
 const OFFICE = sourceById("bk-nationalrat");
@@ -69,7 +73,7 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
       title={canton.officialName}
       lede={canton.abbr}
       officeHref={OFFICE.url}
-      sources={sourcesById(["bv-1999", "bbl-2025-2545", "sr-161-12", "admin-20250827", "agvch", "agvch-hist", "bk-nationalrat", "parlament-2023"])}
+      sources={sourcesById(["bv-1999", "bbl-2025-2545", "sr-161-12", "admin-20250827", "agvch", "agvch-hist", "opendata-hgv", "bk-nationalrat", "parlament-2023", "parlament-members", "parlament-opendata"])}
     >
       <dl className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-card p-4">
@@ -156,6 +160,7 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
         </p>
         <h2>{copy.government}</h2>
         <GapNote label={copy.gap} text={copy.governmentGap} />
+        <MemberLists lang={lang} abbr={canton.abbr} />
         <h2>{copy.nextElection}</h2>
         <GapNote label={copy.gap} text={copy.cantonalElectionGap} />
         <GapNote label={copy.gap} text={copy.districtGap} />
@@ -171,6 +176,8 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
           </p>
         )}
       </section>
+
+      <DistrictLinks lang={lang} abbr={canton.abbr} />
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
@@ -192,5 +199,88 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
         </ul>
       </section>
     </ChFrame>
+  );
+}
+
+function MemberLists({ lang, abbr }: { lang: ChLang; abbr: string }) {
+  const copy = ui(lang);
+  const national = membersFor(abbr, "N");
+  const states = membersFor(abbr, "S");
+  const note =
+    lang === "de"
+      ? "Parlamentsdienste, Webservice councillors/basicdetails, heruntergeladen am 18. Oktober 2026. Die Funktionsbezeichnung ist die Zeichenfolge des Dienstes und wird hier nicht in Ratspräsidium und Fraktionspräsidium aufgeteilt. Keine amtliche Veröffentlichung der Parlamentsdienste. Keine privaten Kontaktdaten."
+      : lang === "fr"
+        ? "Services du Parlement, service web councillors/basicdetails, téléchargé le 18 octobre 2026. La fonction est la chaîne du service et n’est pas séparée ici entre présidence du conseil et présidence de groupe. Ceci n’est pas une publication officielle des Services du Parlement. Aucune donnée de contact privée."
+        : lang === "it"
+          ? "Servizi del Parlamento, servizio web councillors/basicdetails, scaricato il 18 ottobre 2026. La funzione è la stringa del servizio e qui non è divisa tra presidenza del consiglio e presidenza di gruppo. Non è una pubblicazione ufficiale dei Servizi del Parlamento. Nessun dato di contatto privato."
+          : "Parliamentary Services, web service councillors/basicdetails, downloaded on 18 October 2026. Party and function strings below are the German response. The same service with lang=en returned the French strings, which are on the French page. The function string is not split here into chamber office and group office. This is not an official publication of the Parliamentary Services. No private contact details.";
+  return (
+    <section>
+      <h2 className="font-serif text-2xl font-semibold">{copy.nationalCouncil}</h2>
+      <p className="text-sm text-ink-muted">{note}</p>
+      <MemberList lang={lang} members={national} />
+      <h2 className="mt-6 font-serif text-2xl font-semibold">{copy.councilOfStates}</h2>
+      <MemberList lang={lang} members={states} />
+    </section>
+  );
+}
+
+function MemberList({ lang, members }: { lang: ChLang; members: ReturnType<typeof membersFor> }) {
+  const text = lang === "en" ? "de" : lang;
+  return (
+    <ul className="mt-3 space-y-1 text-sm">
+      {members.map((member) => {
+        const label = member[text];
+        return (
+          <li key={member.id}>
+            <a className="text-navy underline" href={member.biographyUrl} rel="noopener noreferrer">
+              {member.lastName} {member.firstName}
+            </a>
+            {` — ${label.party} · ${label.partyName} · ${label.functionLabel}`}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function DistrictLinks({ lang, abbr }: { lang: ChLang; abbr: string }) {
+  const copy = ui(lang);
+  const districts = districtsForCanton(abbr);
+  if (districts.length === 0) {
+    const name = SOLE_DISTRICT_NAME[abbr];
+    return (
+      <p className="text-sm">
+        {lang === "de"
+          ? `Das historisierte Verzeichnis führt für diesen Kanton einen einzigen Bezirkseintrag: «${name}». Dafür gibt es keine eigene Seite.`
+          : lang === "fr"
+            ? `Le répertoire historisé ne contient pour ce canton qu’une entrée de district : «${name}». Elle n’a pas de page propre.`
+            : lang === "it"
+              ? `Il repertorio storicizzato ha per questo cantone una sola voce di distretto: «${name}». Non ha una pagina propria.`
+              : `The historized register has one district entry for this canton: “${name}”. It does not have a page of its own.`}
+        {" "}
+        <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+          {copy.districts}
+        </Link>
+      </p>
+    );
+  }
+  const canton = CANTONS.find((item) => item.abbr === abbr);
+  return (
+    <div>
+      <LinkGrid
+        heading={copy.districts}
+        items={districts.map((district) => ({
+          href: districtPath(lang, canton?.slug ?? abbr.toLowerCase(), district.slug),
+          title: district.officialName,
+          detail: district.bfsNumber,
+        }))}
+      />
+      <p className="text-sm">
+        <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+          {copy.districts}
+        </Link>
+      </p>
+    </div>
   );
 }
