@@ -131,9 +131,21 @@ export const SOURCES: SourceRef[] = [
     readOn: READ_L2,
   },
   {
-    id: "aph-members",
-    name: "Parliament of Australia, List of Members, 48th Parliament, Volume 11.2 – 29 September 2026",
-    url: "https://www.aph.gov.au/-/media/03_Senators_and_Members/32_Members/Lists/Members_List.pdf",
+    id: "aec-2025-elected",
+    name: "Australian Electoral Commission, Tally Room, 2025 federal election, House of Representatives members elected",
+    url: "https://results.aec.gov.au/31496/Website/HouseMembersElected-31496.htm",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-farrer-2026",
+    name: "Australian Electoral Commission, Farrer by-election, Saturday 9 May 2026",
+    url: "https://www.aec.gov.au/Elections/supplementary_by_elections/2026-farrer/index.htm",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-by-elections",
+    name: "Australian Electoral Commission, supplementary and by-elections",
+    url: "https://www.aec.gov.au/Elections/supplementary_by_elections/",
     readOn: READ_L2,
   },
   {

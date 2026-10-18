@@ -1,9 +1,10 @@
 import raw from "./level2.json";
 
 export type FederalMember = {
+  /** Name as the AEC tally room prints it, e.g. "SMITH, David". */
   printed: string;
-  partyCode: string;
   party: string;
+  source: "aec-2025-elected" | "aec-farrer-2026";
 };
 
 export type Division = {

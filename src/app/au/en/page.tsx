@@ -214,8 +214,8 @@ export default function AustraliaNationalPage() {
         <h2>House divisions</h2>
         <p>
           The Commission’s profiles page, read on 18 October 2026, lists 150 House of Representatives divisions in place
-          for the 2025 federal election. Each division has its own page. The current member on those pages is taken from
-          the Parliament of Australia list dated 29 September 2026.
+          for the 2025 federal election. Each division has its own page. The member on those pages is the one the Australian
+          Electoral Commission declared elected in 2025, or at the Farrer by-election of 9 May 2026.
         </p>
         <p>
           <Link className="text-navy underline" href={houseIndexPath()}>

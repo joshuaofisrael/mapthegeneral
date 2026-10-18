@@ -53,15 +53,17 @@ export default function AustraliaSourcesPage() {
           (<a href="https://www.abs.gov.au/website-privacy-copyright-and-disclaimer">ABS copyright notice</a>).
         </p>
         <p>
-          Parliament of Australia website material, other than the Commonwealth Coat of Arms and where otherwise noted,
-          is under the{" "}
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-            Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International licence
-          </a>{" "}
-          (<a href="https://www.aph.gov.au/Help/Disclaimer_Privacy_Copyright">Parliament copyright notice</a>
-          ). Attribute it as Parliament of Australia website. These pages quote the member’s name line, electorate and
-          party legend from the 29 September 2026 list. They do not copy electorate-office addresses, telephone numbers
-          or email addresses.
+          Federal members on the House division pages are the members the Australian Electoral Commission declared
+          elected: the tally room list of House members elected at the 3 May 2025 federal election, and the Farrer
+          by-election of 9 May 2026. That material is © Commonwealth of Australia (Australian Electoral Commission),
+          under the{" "}
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>{" "}
+          (<a href="https://www.aec.gov.au/footer/copyright.htm">AEC copyright notice</a>). No AEC endorsement is
+          implied. These pages do not copy material from the Parliament of Australia website, which is under a
+          non-commercial licence (
+          <a href="https://www.aph.gov.au/Help/Disclaimer_Privacy_Copyright">Parliament copyright notice</a>
+          ). They link to the Parliament’s{" "}
+          <a href="https://www.aph.gov.au/Senators_and_Members/Members">members page</a> for the current list.
         </p>
         <p>
           Victorian Electoral Commission website material: © Victorian Electoral Commission, under the{" "}

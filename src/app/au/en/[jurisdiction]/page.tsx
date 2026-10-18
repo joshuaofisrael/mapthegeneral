@@ -60,7 +60,7 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
         [
           ...item.sourceIds,
           "aec-profiles",
-          "aph-members",
+          "aec-2025-elected",
           ...(slug === "victoria" ? ["vec-districts", "vec-regions", "pov-assembly", "pov-council", "acma-blackout"] : []),
         ].filter((id, index, all) => all.indexOf(id) === index),
       )}
@@ -170,8 +170,8 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
           {divisionsIn(slug).length} names on the Australian Electoral Commission profiles page, read on 18 October
           2026. That page says these are the electorates in place for the 2025 federal election, and that the site will
           be updated for the determined redistributions in South Australia, Tasmania and the Australian Capital
-          Territory before the next federal election. The current member on each page is the Parliament of Australia
-          list of 29 September 2026.
+          Territory before the next federal election. The member on each page is the one the Australian Electoral
+          Commission declared elected in 2025, or at the Farrer by-election of 9 May 2026.
         </p>
         <p className="mt-2 text-sm">
           <Link className="text-navy underline" href={stateHouseIndexPath(slug)}>

@@ -161,6 +161,8 @@ const divisionItems = states.flatMap((state) =>
   })),
 );
 
+const APH_MEMBERS_PAGE = "https://www.aph.gov.au/Senators_and_Members/Members";
+
 function divisionPage(row: (typeof divisionItems)[number], indexInState: number, stateRows: typeof divisionItems): string {
   const { item, state } = row;
   const path = row.href;
@@ -180,17 +182,21 @@ function divisionPage(row: (typeof divisionItems)[number], indexInState: number,
 </table>
 <p>${esc(AEC_NOTE)}</p>
 <p><a href="${esc(profile)}">Profile of electorate of ${esc(item.name)}</a></p>
-<h2>Current member</h2>
-<p>The Parliament of Australia List of Members, 48th Parliament, Volume 11.2 – 29 September 2026, prints ${esc(item.member.printed)} for ${esc(item.name)}, ${esc(item.stateLabel)}. The party code on that row is ${esc(item.member.partyCode)}. The legend in the same list expands ${esc(item.member.partyCode)} as ${esc(item.member.party)}.</p>
-<p>Electorate-office street addresses, telephone numbers and email addresses are printed in that list. They are not copied here.</p>
+<h2>Member</h2>
+${
+  item.member.source === "aec-farrer-2026"
+    ? `<p>The Australian Electoral Commission says David Farley was declared the elected member for Farrer on Thursday 28 May 2026, after the Farrer by-election of Saturday 9 May 2026. Its tally room lists ${esc(item.member.printed)}, ${esc(item.member.party)}, as elected.</p>`
+    : `<p>The Australian Electoral Commission tally room list of House members elected at the 3 May 2025 federal election prints ${esc(item.member.printed)}, ${esc(item.member.party)}, for ${esc(item.name)}.</p>`
+}
+<p>The Commission’s by-elections page, read on 18 October 2026, lists one House by-election since the 2025 federal election: Farrer, on 9 May 2026. This page does not track later changes. The Parliament of Australia publishes the <a href="${esc(APH_MEMBERS_PAGE)}">current members of the House</a>.</p>
 <h2>Elections</h2>
-<p>The Commission’s 2025 federal election page is headed Saturday 3 May 2025. It says the official results are as they were at the return of the writs (12 June 2025). This page does not say the member printed above is that result.</p>
+<p>The Commission’s 2025 federal election page is headed Saturday 3 May 2025. It says the official results are as they were at the return of the writs (12 June 2025). </p>
 <p>The Commission’s media release updated 23 July 2026 says the next federal election is due to be held between August 2027 and May 2028. The timetable page says the AEC has no role in determining the date of an election. This page does not name a polling day.</p>
 <p class="tools">Parent: <a href="${esc(parent)}">${esc(state.officialName)}</a> · <a href="${esc(indexPath)}">House divisions in ${esc(state.officialName)}</a> · <a href="${esc(houseIndexPath())}">All House divisions</a>. Alphabetical neighbours: ${near}.</p>`;
   return shell({
     path,
     title: item.name,
-    description: `${item.name} (${item.stateLabel}): House of Representatives division in place for the 2025 federal election, with the member printed on 29 September 2026. Unofficial information.`,
+    description: `${item.name} (${item.stateLabel}): House of Representatives division in place for the 2025 federal election, with the member the Australian Electoral Commission declared elected. Unofficial information.`,
     crumbs: baseCrumbs([
       { name: state.officialName, path: parent },
       { name: "House of Representatives", path: indexPath },
@@ -201,7 +207,14 @@ function divisionPage(row: (typeof divisionItems)[number], indexInState: number,
     lede: state.officialName,
     officeHref: "https://www.aec.gov.au/profiles/",
     body,
-    sourceIds: ["aec-profiles", "aec-2025", "aec-entitlement-2026", "aec-timetable", "aph-members"],
+    sourceIds: [
+      "aec-profiles",
+      "aec-2025",
+      item.member.source === "aec-farrer-2026" ? "aec-farrer-2026" : "aec-2025-elected",
+      "aec-by-elections",
+      "aec-entitlement-2026",
+      "aec-timetable",
+    ],
   });
 }
 
@@ -314,7 +327,7 @@ for (const state of states) {
       lede: `${rows.length} names on the Australian Electoral Commission profiles page, read on 18 October 2026.`,
       officeHref: "https://www.aec.gov.au/profiles/",
       body: `<p>${esc(AEC_NOTE)}</p>${list(rows.map((row) => ({ name: row.name, href: row.href })))}<p class="tools">Parent: <a href="${esc(jurisdictionPath(state.slug))}">${esc(state.officialName)}</a> · <a href="${esc(houseIndexPath())}">All House divisions</a>.</p>`,
-      sourceIds: ["aec-profiles", "aph-members"],
+      sourceIds: ["aec-profiles", "aec-2025-elected"],
     }),
   );
   written += 1;
@@ -340,7 +353,7 @@ writePage(
     lede: "150 divisions, listed on each state and territory page. Names are from the Australian Electoral Commission profiles page, read on 18 October 2026.",
     officeHref: "https://www.aec.gov.au/profiles/",
     body: `<p>${esc(AEC_NOTE)}</p>${grouped}<p class="tools"><a href="${esc(auHome())}">Australia</a> · <a href="${esc(assemblyIndexPath())}">Victorian Legislative Assembly districts</a> · <a href="${esc(councilIndexPath())}">Victorian Legislative Council regions</a>.</p>`,
-    sourceIds: ["aec-profiles", "aph-members"],
+    sourceIds: ["aec-profiles", "aec-2025-elected"],
   }),
 );
 written += 1;
