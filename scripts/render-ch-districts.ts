@@ -6,7 +6,7 @@ import { DISTRICTS, districtNeighbors, districtsForCanton, type District } from 
 import { districtPath, districtsIndexPath } from "../data/ch/search";
 import { sourceById, sourcesById } from "../data/ch/sources";
 import type { ChLang } from "../data/ch/types";
-import { formatNumber, ui } from "../data/ch/ui";
+import { formatNumber, localDate, trustCopy, ui } from "../data/ch/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -85,6 +85,7 @@ function pageDocument(input: {
   body: string;
 }): string {
   const copy = ui(input.lang);
+  const trust = trustCopy(input.lang);
   const canonical = absoluteUrl(input.path);
   const alternates = LANGS.map((code) => {
     const href = absoluteUrl(input.path.replace(/^\/ch\/(de|fr|it|en)\//, `/ch/${code}/`));
@@ -140,12 +141,12 @@ ${alternates}
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${esc(OFFICE)}">official election office</a>`)}</p>
-<header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(`/ch/${input.lang}/`)}">${esc(copy.switzerland)}</a> · <a href="/search/">Search</a> · ${langs}</header>
+<p class="banner">${esc(trust.before)}<a href="${esc(OFFICE)}">${esc(trust.link)}</a>${esc(trust.after)}</p>
+<header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(`/ch/${input.lang}/`)}">${esc(copy.switzerland)}</a> · <a href="/search/">${esc(trust.search)}</a> · ${langs}</header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${input.body}
-<p><strong>Last updated: ${esc(SITE.lastUpdated)}.</strong> ${esc(copied(input.lang))} <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
+<p><strong>${esc(trust.updated)}: ${esc(localDate(SITE.lastUpdated, input.lang))}.</strong> ${esc(copied(input.lang))} <a href="${esc(reportErrorHref(input.path))}">${esc(trust.report)}</a></p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
 <p>${esc(attribution(input.lang))}</p>

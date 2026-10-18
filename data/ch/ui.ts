@@ -179,3 +179,52 @@ export function officeLabel(lang: ChLang): string {
   if (lang === "it") return "Cancelleria federale";
   return "Federal Chancellery";
 }
+
+/** Localized "last updated / unofficial information / report an error" strings for Swiss pages. */
+const TRUST: Record<ChLang, { updated: string; before: string; link: string; after: string; report: string; search: string }> = {
+  de: {
+    updated: "Zuletzt aktualisiert",
+    before: "Inoffizielle Information. Bestätigen Sie sie bei Ihrer ",
+    link: "offiziellen Wahlbehörde",
+    after: ".",
+    report: "Fehler melden",
+    search: "Suche",
+  },
+  fr: {
+    updated: "Dernière mise à jour",
+    before: "Information non officielle. Vérifiez-la auprès de votre ",
+    link: "autorité électorale officielle",
+    after: ".",
+    report: "Signaler une erreur",
+    search: "Recherche",
+  },
+  it: {
+    updated: "Ultimo aggiornamento",
+    before: "Informazione non ufficiale. Confermatela presso l’",
+    link: "ufficio elettorale ufficiale",
+    after: ".",
+    report: "Segnala un errore",
+    search: "Ricerca",
+  },
+  en: {
+    updated: "Last updated",
+    before: "Unofficial information. Confirm with your ",
+    link: "official election office",
+    after: ".",
+    report: "Report an error",
+    search: "Search",
+  },
+};
+
+const DATE_LOCALE: Record<ChLang, string> = { de: "de-CH", fr: "fr-CH", it: "it-CH", en: "en-GB" };
+
+export function trustCopy(lang: ChLang) {
+  return TRUST[lang];
+}
+
+/** Formats an English site date such as "October 17, 2026" in the page language. */
+export function localDate(value: string, lang: ChLang): string {
+  const parsed = new Date(`${value} 12:00:00 UTC`);
+  if (Number.isNaN(parsed.getTime())) return value;
+  return new Intl.DateTimeFormat(DATE_LOCALE[lang], { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(parsed);
+}

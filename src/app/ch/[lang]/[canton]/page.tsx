@@ -208,12 +208,12 @@ function MemberLists({ lang, abbr }: { lang: ChLang; abbr: string }) {
   const states = membersFor(abbr, "S");
   const note =
     lang === "de"
-      ? "Parlamentsdienste, Webservice councillors/basicdetails, heruntergeladen am 18. Oktober 2026. Die Funktionsbezeichnung ist die Zeichenfolge des Dienstes und wird hier nicht in Ratspräsidium und Fraktionspräsidium aufgeteilt. Keine amtliche Veröffentlichung der Parlamentsdienste. Keine privaten Kontaktdaten."
+      ? "Quelle: Parlamentsdienste der Bundesversammlung, Bern. Webservice councillors/basicdetails, heruntergeladen am 18. Oktober 2026. Die Funktionsbezeichnung ist die Zeichenfolge des Dienstes und wird hier nicht in Ratspräsidium und Fraktionspräsidium aufgeteilt. Keine amtliche Veröffentlichung der Parlamentsdienste. Keine privaten Kontaktdaten."
       : lang === "fr"
-        ? "Services du Parlement, service web councillors/basicdetails, téléchargé le 18 octobre 2026. La fonction est la chaîne du service et n’est pas séparée ici entre présidence du conseil et présidence de groupe. Ceci n’est pas une publication officielle des Services du Parlement. Aucune donnée de contact privée."
+        ? "Source : «Parlamentsdienste der Bundesversammlung, Bern» (Services du Parlement de l’Assemblée fédérale, Berne). Service web councillors/basicdetails, téléchargé le 18 octobre 2026. La fonction est la chaîne du service et n’est pas séparée ici entre présidence du conseil et présidence de groupe. Ceci n’est pas une publication officielle des Services du Parlement. Aucune donnée de contact privée."
         : lang === "it"
-          ? "Servizi del Parlamento, servizio web councillors/basicdetails, scaricato il 18 ottobre 2026. La funzione è la stringa del servizio e qui non è divisa tra presidenza del consiglio e presidenza di gruppo. Non è una pubblicazione ufficiale dei Servizi del Parlamento. Nessun dato di contatto privato."
-          : "Parliamentary Services, web service councillors/basicdetails, downloaded on 18 October 2026. Party and function strings below are the German response. The same service with lang=en returned the French strings, which are on the French page. The function string is not split here into chamber office and group office. This is not an official publication of the Parliamentary Services. No private contact details.";
+          ? "Fonte: «Parlamentsdienste der Bundesversammlung, Bern» (Servizi del Parlamento dell’Assemblea federale, Berna). Servizio web councillors/basicdetails, scaricato il 18 ottobre 2026. La funzione è la stringa del servizio e qui non è divisa tra presidenza del consiglio e presidenza di gruppo. Non è una pubblicazione ufficiale dei Servizi del Parlamento. Nessun dato di contatto privato."
+          : "Source: “Parlamentsdienste der Bundesversammlung, Bern” (Parliamentary Services of the Federal Assembly, Bern). Web service councillors/basicdetails, downloaded on 18 October 2026. Party and function strings below are the German response. The same service with lang=en returned the French strings, which are on the French page. The function string is not split here into chamber office and group office. This is not an official publication of the Parliamentary Services. No private contact details.";
   return (
     <section>
       <h2 className="font-serif text-2xl font-semibold">{copy.nationalCouncil}</h2>

@@ -95,7 +95,7 @@ export const SOURCES: SourceRef[] = [
   },
   {
     id: "parlament-members",
-    name: "Parlamentsdienste, Webservice councillors/basicdetails, aktuelle Ratsmitglieder, heruntergeladen am 18. Oktober 2026",
+    name: "Parlamentsdienste der Bundesversammlung, Bern, Webservice councillors/basicdetails, aktuelle Ratsmitglieder, heruntergeladen am 18. Oktober 2026. Keine amtliche Veröffentlichung",
     url: "http://ws-old.parlament.ch/councillors/basicdetails?format=json",
     readOn: "2026-10-18",
   },
