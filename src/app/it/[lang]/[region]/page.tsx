@@ -1,16 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
+import { LinkGrid } from "@/components/LinkGrid";
 import { ItalyFrame } from "@/app/it/frame";
 import { formatNumber } from "@/data/italy/format";
+import { collegiInRegion, unitsInRegion } from "@/data/italy/level2";
 import { regionBySlug, regionNeighbors, REGIONS } from "@/data/italy/places";
-import { italyChooser, italyHome, otherLang, regionPath } from "@/data/italy/paths";
+import { collegioPath, collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitPath, unitsIndexPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
 import { ui, unitLabel } from "@/data/italy/ui";
 
-const RESERVED = new Set(["elections", "results", "parties", "faq", "sources"]);
+const RESERVED = new Set(["elections", "results", "parties", "faq", "sources", "unita", "collegi"]);
 
 export function generateStaticParams() {
   return ["it", "en"].flatMap((lang) => REGIONS.map((region) => ({ lang, region: region.slug })));
@@ -49,6 +51,8 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
   const path = regionPath(lang, slug);
   const neighbors = regionNeighbors(slug);
   const dait = sourceById("dait");
+  const units = unitsInRegion(slug);
+  const collegi = collegiInRegion(slug);
   const nameNote =
     region.article131Name !== region.istatName || (region.article116Name && region.article116Name !== region.istatName);
   return (
@@ -150,6 +154,15 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
             </li>
           ))}
         </ul>
+        <p>
+          <Link className="text-navy underline" href={unitsIndexPath(lang)}>
+            {it ? "Indice delle unità" : "Unit index"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={collegiIndexPath(lang)}>
+            {it ? "Indice dei collegi" : "Constituency index"}
+          </Link>
+        </p>
         <GapNote label={copy.gap} text={copy.subregionalGap} />
         <h2>{it ? "Elezione regionale" : "Regional election"}</h2>
         <GapNote label={copy.gap} text={copy.regionalElectionGap} />
@@ -175,6 +188,23 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
           {copy.results}
         </Link>
       </p>
+
+      <LinkGrid
+        heading={it ? "Unità territoriali" : "Territorial units"}
+        items={units.map((unit) => ({
+          href: unitPath(lang, region.slug, unit.slug),
+          title: unit.name,
+          detail: `${unitLabel(unit.type, lang)} · ${unit.code}`,
+        }))}
+      />
+      <LinkGrid
+        heading={it ? "Collegi Camera e Senato" : "Chamber and Senate constituencies"}
+        items={collegi.map((item) => ({
+          href: collegioPath(lang, item.house, item.slug),
+          title: item.name,
+          detail: item.house === "camera" ? (it ? "Camera" : "Chamber") : it ? "Senato" : "Senate",
+        }))}
+      />
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
