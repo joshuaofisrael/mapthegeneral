@@ -1,6 +1,7 @@
 import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
+const READ_LEVEL2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -116,6 +117,60 @@ export const SOURCES: SourceRef[] = [
     name: "Türkiye Cumhuriyeti Cumhurbaşkanlığı",
     url: "https://www.tccb.gov.tr/",
     readOn: READ,
+  },
+  {
+    id: "ysk-acik-2024-baskan",
+    name: "YSK Açık Veri Portalı, getSecilenAdaylar, secimId 20260, secimTuru 2 (31 Mart 2024 belediye başkanlığı, seçilenler)",
+    url: "https://acikveri.ysk.gov.tr/api/getSecilenAdaylar?secimId=20260&secimTuru=2",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ysk-acik-2023-mv",
+    name: "YSK Açık Veri Portalı, getSecilenAdaylar, secimId 20230, secimTuru 8 (14 Mayıs 2023 milletvekili, seçilenler)",
+    url: "https://acikveri.ysk.gov.tr/api/getSecilenAdaylar?secimId=20230&secimTuru=8",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ysk-acik-2023-cevre",
+    name: "YSK Açık Veri Portalı, getSecimCevresiList, secimId 20230 (14 Mayıs 2023 seçim çevreleri)",
+    url: "https://acikveri.ysk.gov.tr/api/getSecimCevresiList?secimId=20230",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ysk-2024-ilce-aday",
+    name: "YSK, 31 Mart 2024, ilçe belediye başkanı seçimi, parti ve bağımsız aday sayıları",
+    url: "https://www.ysk.gov.tr/doc/dosyalar/docs/2024MahalliIdareler/2024KesinAdayListeleri/ilce%20belediye%20ba%C5%9Fkan%C4%B1_aday%20say%C4%B1lar%C4%B1.pdf",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "tbmm-liste",
+    name: "Türkiye Büyük Millet Meclisi, 28. dönem milletvekilleri listesi",
+    url: "https://www.tbmm.gov.tr/milletvekili/liste",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ysk-secim-tarihleri",
+    name: "Yüksek Seçim Kurulu, yapılacak seçimler",
+    url: "https://www.ysk.gov.tr/tr/secim-tarihleri",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "kanun-5846",
+    name: "5846 sayılı Fikir ve Sanat Eserleri Kanunu, madde 31",
+    url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5846&MevzuatTur=1&MevzuatTertip=3",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "kanun-6698",
+    name: "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+    url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6698&MevzuatTur=1&MevzuatTertip=5",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "kanun-298",
+    name: "298 sayılı Seçimlerin Temel Hükümleri ve Seçmen Kütükleri Hakkında Kanun",
+    url: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=298&MevzuatTur=1&MevzuatTertip=4",
+    readOn: READ_LEVEL2,
   },
 ];
 

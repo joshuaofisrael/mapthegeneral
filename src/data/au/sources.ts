@@ -7,6 +7,7 @@ export type SourceRef = {
 };
 
 const READ = "2026-10-17";
+const READ_L2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -116,6 +117,96 @@ export const SOURCES: SourceRef[] = [
     name: "Australia Post, “Assignment of postcodes”",
     url: "https://auspost.com.au/about-us/corporate-information/our-organisation/policies/assignment-of-postcodes",
     readOn: READ,
+  },
+  {
+    id: "aec-profiles",
+    name: "Australian Electoral Commission, “Current electorate names”",
+    url: "https://www.aec.gov.au/profiles/",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-copyright",
+    name: "Australian Electoral Commission, copyright notice",
+    url: "https://www.aec.gov.au/footer/copyright.htm",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-2025-elected",
+    name: "Australian Electoral Commission, Tally Room, 2025 federal election, House of Representatives members elected",
+    url: "https://results.aec.gov.au/31496/Website/HouseMembersElected-31496.htm",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-farrer-2026",
+    name: "Australian Electoral Commission, Farrer by-election, Saturday 9 May 2026",
+    url: "https://www.aec.gov.au/Elections/supplementary_by_elections/2026-farrer/index.htm",
+    readOn: READ_L2,
+  },
+  {
+    id: "aec-by-elections",
+    name: "Australian Electoral Commission, supplementary and by-elections",
+    url: "https://www.aec.gov.au/Elections/supplementary_by_elections/",
+    readOn: READ_L2,
+  },
+  {
+    id: "aph-copyright",
+    name: "Parliament of Australia, Disclaimer / Privacy / Copyright",
+    url: "https://www.aph.gov.au/Help/Disclaimer_Privacy_Copyright",
+    readOn: READ_L2,
+  },
+  {
+    id: "vec-districts",
+    name: "Victorian Electoral Commission, “State districts”",
+    url: "https://www.vec.vic.gov.au/electoral-boundaries/state-districts",
+    readOn: READ_L2,
+  },
+  {
+    id: "vec-regions",
+    name: "Victorian Electoral Commission, “State regions”",
+    url: "https://www.vec.vic.gov.au/electoral-boundaries/state-regions",
+    readOn: READ_L2,
+  },
+  {
+    id: "vec-legal",
+    name: "Victorian Electoral Commission, Legal",
+    url: "https://www.vec.vic.gov.au/legal",
+    readOn: READ_L2,
+  },
+  {
+    id: "vec-2022-report",
+    name: "Victorian Electoral Commission, Report to Parliament on the 2022 Victorian State election and 2023 Narracan District supplementary election (October 2023)",
+    url: "https://www.parliament.vic.gov.au/4918e0/globalassets/tabled-paper-documents/tabled-paper-7587/vec-report-to-parliament-on-the-2022-victorian-state-election-and-2023-narracan-district-supplementary-election.pdf",
+    readOn: READ_L2,
+  },
+  {
+    id: "pov-assembly",
+    name: "Parliament of Victoria, Legislative Assembly members list (CSV), Last-Modified Sat, 17 Oct 2026 10:00:30 GMT",
+    url: "https://povwebsiteresourcestore.blob.core.windows.net/lists/assemblymembers.csv",
+    readOn: READ_L2,
+  },
+  {
+    id: "pov-council",
+    name: "Parliament of Victoria, Legislative Council members list (CSV), Last-Modified Sat, 17 Oct 2026 10:00:31 GMT",
+    url: "https://povwebsiteresourcestore.blob.core.windows.net/lists/councilmembers.csv",
+    readOn: READ_L2,
+  },
+  {
+    id: "pov-copyright",
+    name: "Parliament of Victoria, Copyright",
+    url: "https://www.parliament.vic.gov.au/copyright/",
+    readOn: READ_L2,
+  },
+  {
+    id: "pov-disclaimer",
+    name: "Parliament of Victoria, Disclaimer",
+    url: "https://www.parliament.vic.gov.au/disclaimer",
+    readOn: READ_L2,
+  },
+  {
+    id: "acma-blackout",
+    name: "Australian Communications and Media Authority, “Election and referendum blackout periods”",
+    url: "https://www.acma.gov.au/election-and-referendum-blackout-periods",
+    readOn: READ_L2,
   },
 ];
 

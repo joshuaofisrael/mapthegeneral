@@ -1,3 +1,15 @@
+import {
+  ASSEMBLY,
+  COUNCIL,
+  DIVISIONS,
+  assemblyIndexPath,
+  assemblyPath,
+  councilIndexPath,
+  councilPath,
+  divisionPath,
+  houseIndexPath,
+  stateHouseIndexPath,
+} from "@/data/au/level2";
 import { JURISDICTIONS } from "@/data/au/places";
 
 export type CountryCard = {
@@ -29,11 +41,13 @@ export const AU_COUNTRY: CountryCard = {
   name: "Australia",
   href: "/au/",
   blurb:
-    "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page and eight state and territory pages, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
+    "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, and Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
   links: [
     { href: "/au/en/", label: "English" },
     { href: "/au/en/elections/federal-next/", label: "Next federal election" },
     { href: "/au/en/victoria/", label: "Victoria, 28 November 2026" },
+    { href: "/au/en/victoria/assembly/", label: "Victorian Assembly districts" },
+    { href: "/au/en/house/", label: "House divisions" },
   ],
 };
 
@@ -61,5 +75,54 @@ export const AU_INDEX_ENTRIES: RegistryEntry[] = [
     title: item.officialName,
     kind: item.kind,
     text: `${item.officialName} ${item.federalDivisions} electorates`,
+  })),
+  {
+    path: houseIndexPath(),
+    lang: "en",
+    title: "House of Representatives divisions",
+    kind: "index",
+    text: "150 House of Representatives divisions Australian Electoral Commission",
+  },
+  {
+    path: assemblyIndexPath(),
+    lang: "en",
+    title: "Victorian Legislative Assembly districts",
+    kind: "index",
+    text: "88 Legislative Assembly districts Victoria 28 November 2026",
+  },
+  {
+    path: councilIndexPath(),
+    lang: "en",
+    title: "Victorian Legislative Council regions",
+    kind: "index",
+    text: "8 Legislative Council regions Victoria 28 November 2026",
+  },
+  ...JURISDICTIONS.map((item) => ({
+    path: stateHouseIndexPath(item.slug),
+    lang: "en" as const,
+    title: `${item.officialName} House of Representatives divisions`,
+    kind: "index",
+    text: `${item.officialName} House divisions`,
+  })),
+  ...DIVISIONS.map((item) => ({
+    path: divisionPath(item.jurisdictionSlug, item.slug),
+    lang: "en" as const,
+    title: item.name,
+    kind: "division",
+    text: `${item.name} ${item.stateLabel} ${item.member.printed} ${item.member.party}`,
+  })),
+  ...ASSEMBLY.map((item) => ({
+    path: assemblyPath(item.slug),
+    lang: "en" as const,
+    title: item.name,
+    kind: "district",
+    text: `${item.name} Legislative Assembly ${item.member ? `${item.member.display} ${item.member.party}` : ""}`,
+  })),
+  ...COUNCIL.map((item) => ({
+    path: councilPath(item.slug),
+    lang: "en" as const,
+    title: item.name,
+    kind: "region",
+    text: `${item.name} Legislative Council ${item.members.map((member) => member.display).join(" ")}`,
   })),
 ];

@@ -1,0 +1,4805 @@
+{
+  "directoryPrintedDate": "Sábado 17 de Octubre, 2026",
+  "districts": [
+    {
+      "entityCode": "01",
+      "entitySlug": "aguascalientes",
+      "number": 1,
+      "cabeceraLocalidad": "JESUS MARIA",
+      "cabeceraMunicipio": "JESUS MARIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "1",
+        "name": "Ambriz Delgadillo Humberto",
+        "entidadPrinted": "Aguascalientes",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "01",
+      "entitySlug": "aguascalientes",
+      "number": 2,
+      "cabeceraLocalidad": "AGUASCALIENTES",
+      "cabeceraMunicipio": "AGUASCALIENTES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "2",
+        "name": "Becerra Moreno Monica",
+        "entidadPrinted": "Aguascalientes",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "01",
+      "entitySlug": "aguascalientes",
+      "number": 3,
+      "cabeceraLocalidad": "AGUASCALIENTES",
+      "cabeceraMunicipio": "AGUASCALIENTES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "3",
+        "name": "Martínez López Paulo Gonzalo",
+        "entidadPrinted": "Aguascalientes",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 1,
+      "cabeceraLocalidad": "MEXICALI",
+      "cabeceraMunicipio": "MEXICALI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "4",
+        "name": "Ruiz López Alma Laura",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 2,
+      "cabeceraLocalidad": "MEXICALI",
+      "cabeceraMunicipio": "MEXICALI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "5",
+        "name": "Sánchez Arredondo Nancy Guadalupe",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 3,
+      "cabeceraLocalidad": "ENSENADA",
+      "cabeceraMunicipio": "ENSENADA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "6",
+        "name": "Moreno Ramírez Claudia Lisbeth",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 4,
+      "cabeceraLocalidad": "TIJUANA",
+      "cabeceraMunicipio": "TIJUANA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "7",
+        "name": "López Gorosave Rocío",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 5,
+      "cabeceraLocalidad": "TIJUANA",
+      "cabeceraMunicipio": "TIJUANA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "8",
+        "name": "Moreno Guerra Evangelina",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 6,
+      "cabeceraLocalidad": "TIJUANA",
+      "cabeceraMunicipio": "TIJUANA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "9",
+        "name": "Herrera Solórzano Gilberto",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 7,
+      "cabeceraLocalidad": "MEXICALI",
+      "cabeceraMunicipio": "MEXICALI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "10",
+        "name": "Fernández Samaniego José Armando",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 8,
+      "cabeceraLocalidad": "TIJUANA",
+      "cabeceraMunicipio": "TIJUANA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "11",
+        "name": "Gallardo García Fausto",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "02",
+      "entitySlug": "baja-california",
+      "number": 9,
+      "cabeceraLocalidad": "TECATE",
+      "cabeceraMunicipio": "TECATE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "12",
+        "name": "Brown Figueredo Hilda Araceli",
+        "entidadPrinted": "Baja California",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "03",
+      "entitySlug": "baja-california-sur",
+      "number": 1,
+      "cabeceraLocalidad": "LA PAZ",
+      "cabeceraMunicipio": "LA PAZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "513",
+        "name": "González Bareño Juan Carlos",
+        "entidadPrinted": "Baja California Sur",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "03",
+      "entitySlug": "baja-california-sur",
+      "number": 2,
+      "cabeceraLocalidad": "SAN JOSE DEL CABO",
+      "cabeceraMunicipio": "LOS CABOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "14",
+        "name": "Díaz Luis Armando",
+        "entidadPrinted": "Baja California Sur",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "04",
+      "entitySlug": "campeche",
+      "number": 1,
+      "cabeceraLocalidad": "SAN FRANCISCO DE CAMPECHE",
+      "cabeceraMunicipio": "CAMPECHE",
+      "indigena": true,
+      "indigenaPct": "57.95%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "15",
+        "name": "Castillo Quintana Elda Esther del Carmen",
+        "entidadPrinted": "Campeche",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "04",
+      "entitySlug": "campeche",
+      "number": 2,
+      "cabeceraLocalidad": "CIUDAD DEL CARMEN",
+      "cabeceraMunicipio": "CARMEN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "16",
+        "name": "Basto González Gabriela del Carmen",
+        "entidadPrinted": "Campeche",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 1,
+      "cabeceraLocalidad": "PIEDRAS NEGRAS",
+      "cabeceraMunicipio": "PIEDRAS NEGRAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "61",
+        "name": "Moreno Hernández Brígido Ramiro",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 2,
+      "cabeceraLocalidad": "SAN PEDRO",
+      "cabeceraMunicipio": "SAN PEDRO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "62",
+        "name": "Borrego Adame Francisco Javier",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 3,
+      "cabeceraLocalidad": "MONCLOVA",
+      "cabeceraMunicipio": "MONCLOVA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "63",
+        "name": "Kalionchiz De la Fuente Theodoros",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 4,
+      "cabeceraLocalidad": "SALTILLO",
+      "cabeceraMunicipio": "SALTILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "64",
+        "name": "Abramo Masso Yerico",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 5,
+      "cabeceraLocalidad": "TORREON",
+      "cabeceraMunicipio": "TORREON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "65",
+        "name": "Anaya Llamas José Guillermo",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 6,
+      "cabeceraLocalidad": "TORREON",
+      "cabeceraMunicipio": "TORREON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "66",
+        "name": "Cuevas Sánchez Cintia",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 7,
+      "cabeceraLocalidad": "SALTILLO",
+      "cabeceraMunicipio": "SALTILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "67",
+        "name": "Castro Villarreal Antonio Lorenzo",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "05",
+      "entitySlug": "coahuila-de-zaragoza",
+      "number": 8,
+      "cabeceraLocalidad": "RAMOS ARIZPE",
+      "cabeceraMunicipio": "RAMOS ARIZPE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "68",
+        "name": "Licerio Valdes Hilda Magdalena",
+        "entidadPrinted": "Coahuila",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "06",
+      "entitySlug": "colima",
+      "number": 1,
+      "cabeceraLocalidad": "COLIMA",
+      "cabeceraMunicipio": "COLIMA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "69",
+        "name": "Morán Sánchez Leoncio Alfonso",
+        "entidadPrinted": "Colima",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "06",
+      "entitySlug": "colima",
+      "number": 2,
+      "cabeceraLocalidad": "VALLE DE LAS GARZAS",
+      "cabeceraMunicipio": "MANZANILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "70",
+        "name": "Valencia de la Mora Gricelda",
+        "entidadPrinted": "Colima",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 1,
+      "cabeceraLocalidad": "PALENQUE",
+      "cabeceraMunicipio": "PALENQUE",
+      "indigena": true,
+      "indigenaPct": "71.806693%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "17",
+        "name": "Morelos Rodríguez Carlos",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 2,
+      "cabeceraLocalidad": "BOCHIL",
+      "cabeceraMunicipio": "BOCHIL",
+      "indigena": true,
+      "indigenaPct": "71.450142%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "18",
+        "name": "del Río Zenteno Karina Margarita",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 3,
+      "cabeceraLocalidad": "OCOSINGO",
+      "cabeceraMunicipio": "OCOSINGO",
+      "indigena": true,
+      "indigenaPct": "82.65781%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "19",
+        "name": "Vázquez Vázquez Alfredo",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 4,
+      "cabeceraLocalidad": "PICHUCALCO",
+      "cabeceraMunicipio": "PICHUCALCO",
+      "indigena": true,
+      "indigenaPct": "40.154745%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "20",
+        "name": "Zebadúa Alva Joaquín",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 5,
+      "cabeceraLocalidad": "SAN CRISTOBAL DE LAS CASAS",
+      "cabeceraMunicipio": "SAN CRISTOBAL DE LAS CASAS",
+      "indigena": true,
+      "indigenaPct": "69.164254%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "21",
+        "name": "Ramírez Guzmán Emilio Ramón",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 6,
+      "cabeceraLocalidad": "TUXTLA GUTIERREZ",
+      "cabeceraMunicipio": "TUXTLA GUTIERREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "22",
+        "name": "Esponda Torres Flor de María",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 7,
+      "cabeceraLocalidad": "TONALA",
+      "cabeceraMunicipio": "TONALA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "23",
+        "name": "Arreola Trinidad Azucena",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 8,
+      "cabeceraLocalidad": "COMITAN DE DOMINGUEZ",
+      "cabeceraMunicipio": "COMITAN DE DOMINGUEZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "24",
+        "name": "Albores Gleason Roberto Armando",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 9,
+      "cabeceraLocalidad": "TUXTLA GUTIERREZ",
+      "cabeceraMunicipio": "TUXTLA GUTIERREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "25",
+        "name": "Santiago Rodríguez Guillermo Rafael",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 10,
+      "cabeceraLocalidad": "VILLAFLORES",
+      "cabeceraMunicipio": "VILLAFLORES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "26",
+        "name": "Gonzalez Flandez Deliamaria",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 11,
+      "cabeceraLocalidad": "LAS MARGARITAS",
+      "cabeceraMunicipio": "LAS MARGARITAS",
+      "indigena": true,
+      "indigenaPct": "63.358191%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "27",
+        "name": "Moreno Villatoro Rosario del Carmen",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 12,
+      "cabeceraLocalidad": "TAPACHULA",
+      "cabeceraMunicipio": "TAPACHULA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "28",
+        "name": "Urbina Castañeda Rosa Irene",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "07",
+      "entitySlug": "chiapas",
+      "number": 13,
+      "cabeceraLocalidad": "HUEHUETAN",
+      "cabeceraMunicipio": "HUEHUETAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "29",
+        "name": "Villatoro Osorio Jorge Luis",
+        "entidadPrinted": "Chiapas",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 1,
+      "cabeceraLocalidad": "JUAREZ",
+      "cabeceraMunicipio": "JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "30",
+        "name": "Murguía Lardizábal Daniel",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 2,
+      "cabeceraLocalidad": "JUAREZ",
+      "cabeceraMunicipio": "JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "31",
+        "name": "Vargas Meraz Teresita de Jesús",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 3,
+      "cabeceraLocalidad": "JUAREZ",
+      "cabeceraMunicipio": "JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "32",
+        "name": "Aguilar Gil Lilia",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 4,
+      "cabeceraLocalidad": "JUAREZ",
+      "cabeceraMunicipio": "JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "33",
+        "name": "Pérez Cuéllar Alejandro",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 5,
+      "cabeceraLocalidad": "DELICIAS",
+      "cabeceraMunicipio": "DELICIAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "34",
+        "name": "Meléndez Ortega Juan Antonio",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 6,
+      "cabeceraLocalidad": "CHIHUAHUA",
+      "cabeceraMunicipio": "CHIHUAHUA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "35",
+        "name": "Granados Trespalacios María Angélica",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 7,
+      "cabeceraLocalidad": "CUAUHTEMOC",
+      "cabeceraMunicipio": "CUAUHTEMOC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "36",
+        "name": "Corral Ordóñez Jesús Roberto",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 8,
+      "cabeceraLocalidad": "CHIHUAHUA",
+      "cabeceraMunicipio": "CHIHUAHUA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "37",
+        "name": "Domínguez Domínguez César Alejandro",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "08",
+      "entitySlug": "chihuahua",
+      "number": 9,
+      "cabeceraLocalidad": "HIDALGO DEL PARRAL",
+      "cabeceraMunicipio": "HIDALGO DEL PARRAL",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "38",
+        "name": "Chávez Velázquez Noel",
+        "entidadPrinted": "Chihuahua",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 1,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "GUSTAVO A. MADERO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "539",
+        "name": "Álvarez López Jesús Emiliano",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 2,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "GUSTAVO A. MADERO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "40",
+        "name": "Benavides Castañeda José Alberto",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 3,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "AZCAPOTZALCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "41",
+        "name": "Jiménez Godoy Gabriela Georgina",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 4,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "IZTAPALAPA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "42",
+        "name": "Padierna Luna María de los Dolores",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 5,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "TLALPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "543",
+        "name": "Perea Cruz Jesús Irugami",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 6,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "LA MAGDALENA CONTRERAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "544",
+        "name": "Rodríguez Díaz de León Rosa Alejandra",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 7,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "GUSTAVO A. MADERO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "45",
+        "name": "Rendón Gómez Juan Guillermo",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 8,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "COYOACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "546",
+        "name": "Silva Andraca Ruth Maricela",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 9,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "TLAHUAC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "547",
+        "name": "Mejía Méndez Roberto",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 10,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "MIGUEL HIDALGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "48",
+        "name": "Zavala Gómez del Campo Margarita Ester",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 11,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "VENUSTIANO CARRANZA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "49",
+        "name": "Segura Trejo Elena Edith",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 12,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "CUAUHTEMOC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "50",
+        "name": "Sandoval Hernández Mónica Elizabeth",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 13,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "IZTACALCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "51",
+        "name": "Sánchez Cervantes Francisco Javier",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 14,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "TLALPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "52",
+        "name": "Hernández Mirón Carlos",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 15,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "BENITO JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "53",
+        "name": "Döring Casar Federico",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 16,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "ALVARO OBREGON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "54",
+        "name": "Piceno Carina",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 16"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 17,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "ALVARO OBREGON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "55",
+        "name": "Madrazo Silva Carlos Arturo",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 17"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 18,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "IZTAPALAPA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "56",
+        "name": "García Hernández Gabriel",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 18"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 19,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "COYOACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "57",
+        "name": "Téllez Hernández Héctor Saúl",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 19"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 20,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "IZTAPALAPA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "58",
+        "name": "Rojo Pimentel Ana Karina",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 20"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 21,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "XOCHIMILCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "59",
+        "name": "Acosta Ruiz José Carlos",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 21"
+      }
+    },
+    {
+      "entityCode": "09",
+      "entitySlug": "ciudad-de-mexico",
+      "number": 22,
+      "cabeceraLocalidad": "CIUDAD DE MEXICO",
+      "cabeceraMunicipio": "IZTAPALAPA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "60",
+        "name": "Zúñiga Cerón Marisela",
+        "entidadPrinted": "Ciudad de México",
+        "seatPrinted": "Dtto. 22"
+      }
+    },
+    {
+      "entityCode": "10",
+      "entitySlug": "durango",
+      "number": 1,
+      "cabeceraLocalidad": "VICTORIA DE DURANGO",
+      "cabeceraMunicipio": "DURANGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "71",
+        "name": "García Vidaña Martha Olivia",
+        "entidadPrinted": "Durango",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "10",
+      "entitySlug": "durango",
+      "number": 2,
+      "cabeceraLocalidad": "GOMEZ PALACIO",
+      "cabeceraMunicipio": "GOMEZ PALACIO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "572",
+        "name": "Del Valle Ramírez Alejandra",
+        "entidadPrinted": "Durango",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "10",
+      "entitySlug": "durango",
+      "number": 3,
+      "cabeceraLocalidad": "LERDO",
+      "cabeceraMunicipio": "LERDO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "73",
+        "name": "Villarreal Solis Gerardo",
+        "entidadPrinted": "Durango",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "10",
+      "entitySlug": "durango",
+      "number": 4,
+      "cabeceraLocalidad": "VICTORIA DE DURANGO",
+      "cabeceraMunicipio": "DURANGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "74",
+        "name": "Jiménez Delgado Silvia Patricia",
+        "entidadPrinted": "Durango",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 1,
+      "cabeceraLocalidad": "SAN LUIS DE LA PAZ",
+      "cabeceraMunicipio": "SAN LUIS DE LA PAZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "75",
+        "name": "Sánchez Sánchez Luis Gerardo",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 2,
+      "cabeceraLocalidad": "SAN MIGUEL DE ALLENDE",
+      "cabeceraMunicipio": "SAN MIGUEL DE ALLENDE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "76",
+        "name": "De la Vega Vargas Alma Rosa",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 3,
+      "cabeceraLocalidad": "LEON",
+      "cabeceraMunicipio": "LEON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "77",
+        "name": "Torres Graciano Fernando",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 4,
+      "cabeceraLocalidad": "GUANAJUATO",
+      "cabeceraMunicipio": "GUANAJUATO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "78",
+        "name": "Estrada Domínguez Francisco Javier",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 5,
+      "cabeceraLocalidad": "LEON",
+      "cabeceraMunicipio": "LEON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "79",
+        "name": "Ramírez Barba Éctor Jaime",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 6,
+      "cabeceraLocalidad": "LEON",
+      "cabeceraMunicipio": "LEON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "80",
+        "name": "Márquez Alcalá Laura Cristina",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 7,
+      "cabeceraLocalidad": "SAN FRANCISCO DEL RINCON",
+      "cabeceraMunicipio": "SAN FRANCISCO DEL RINCON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "81",
+        "name": "Gutiérrez Valtierra Diana Estefanía",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 8,
+      "cabeceraLocalidad": "SALAMANCA",
+      "cabeceraMunicipio": "SALAMANCA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "82",
+        "name": "Prieto Gallardo Ernesto Alejandro",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 9,
+      "cabeceraLocalidad": "IRAPUATO",
+      "cabeceraMunicipio": "IRAPUATO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "83",
+        "name": "Rodríguez Barroso Diego Angel",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 10,
+      "cabeceraLocalidad": "URIANGATO",
+      "cabeceraMunicipio": "URIANGATO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "84",
+        "name": "Calderón Díaz Alejandro",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 11,
+      "cabeceraLocalidad": "LEON",
+      "cabeceraMunicipio": "LEON",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "85",
+        "name": "Salim Alle Miguel Ángel",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 12,
+      "cabeceraLocalidad": "CELAYA",
+      "cabeceraMunicipio": "CELAYA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "86",
+        "name": "Rosales Cruz María Magdalena",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 13,
+      "cabeceraLocalidad": "VALLE DE SANTIAGO",
+      "cabeceraMunicipio": "VALLE DE SANTIAGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "87",
+        "name": "Higareda Segura Lucero",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 14,
+      "cabeceraLocalidad": "ACAMBARO",
+      "cabeceraMunicipio": "ACAMBARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "88",
+        "name": "Acosta Trujillo Juana",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "11",
+      "entitySlug": "guanajuato",
+      "number": 15,
+      "cabeceraLocalidad": "IRAPUATO",
+      "cabeceraMunicipio": "IRAPUATO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "89",
+        "name": "Aguirre Gallardo José Javier",
+        "entidadPrinted": "Guanajuato",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 1,
+      "cabeceraLocalidad": "CD. ALTAMIRANO",
+      "cabeceraMunicipio": "PUNGARABATO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "90",
+        "name": "Mora Eguiluz Celeste",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 2,
+      "cabeceraLocalidad": "ACAPULCO",
+      "cabeceraMunicipio": "ACAPULCO DE JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "91",
+        "name": "Domínguez Serna Yoloczin Lizbeth",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 3,
+      "cabeceraLocalidad": "ZIHUATANEJO",
+      "cabeceraMunicipio": "ZIHUATANEJO DE AZUETA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "92",
+        "name": "Cabrera Lagunas Ma. del Carmen",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 4,
+      "cabeceraLocalidad": "ACAPULCO",
+      "cabeceraMunicipio": "ACAPULCO DE JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "93",
+        "name": "Taja Ramírez Javier",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 5,
+      "cabeceraLocalidad": "TLAPA",
+      "cabeceraMunicipio": "TLAPA DE COMONFORT",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "94",
+        "name": "Olivares Mejía Gerardo",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 6,
+      "cabeceraLocalidad": "CHILAPA",
+      "cabeceraMunicipio": "CHILAPA DE ALVAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "95",
+        "name": "Nava García María del Carmen",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 7,
+      "cabeceraLocalidad": "CHILPANCINGO",
+      "cabeceraMunicipio": "CHILPANCINGO DE LOS BRAVO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "96",
+        "name": "Sánchez Barrios Carlos",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "12",
+      "entitySlug": "guerrero",
+      "number": 8,
+      "cabeceraLocalidad": "OMETEPEC",
+      "cabeceraMunicipio": "OMETEPEC",
+      "indigena": true,
+      "indigenaPct": "52.80%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "97",
+        "name": "De La Mora Torreblanca Marco Antonio",
+        "entidadPrinted": "Guerrero",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 1,
+      "cabeceraLocalidad": "HUEJUTLA DE REYES",
+      "cabeceraMunicipio": "HUEJUTLA DE REYES",
+      "indigena": true,
+      "indigenaPct": "81.49%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "98",
+        "name": "Andrade Zurutuza Daniel",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 2,
+      "cabeceraLocalidad": "IXMIQUILPAN",
+      "cabeceraMunicipio": "IXMIQUILPAN",
+      "indigena": true,
+      "indigenaPct": "60.06%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "99",
+        "name": "Salomón Durán Ciria Yamile",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 3,
+      "cabeceraLocalidad": "ACTOPAN",
+      "cabeceraMunicipio": "ACTOPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "100",
+        "name": "P. Ángeles Moreno Tatiana Tonantzin",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 4,
+      "cabeceraLocalidad": "TULANCINGO DE BRAVO",
+      "cabeceraMunicipio": "TULANCINGO DE BRAVO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "101",
+        "name": "De La Vega Sánchez Alma Lidia",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 5,
+      "cabeceraLocalidad": "EL LLANO PRIMERA SECCION",
+      "cabeceraMunicipio": "TULA DE ALLENDE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "102",
+        "name": "Cornejo Gómez Astrit Viridiana",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 6,
+      "cabeceraLocalidad": "PACHUCA DE SOTO",
+      "cabeceraMunicipio": "PACHUCA DE SOTO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "103",
+        "name": "Crespo Arroyo Ricardo",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "13",
+      "entitySlug": "hidalgo",
+      "number": 7,
+      "cabeceraLocalidad": "TEPEAPULCO",
+      "cabeceraMunicipio": "TEPEAPULCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "104",
+        "name": "Rubio Sánchez Mirna María de la Luz",
+        "entidadPrinted": "Hidalgo",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 1,
+      "cabeceraLocalidad": "TEQUILA",
+      "cabeceraMunicipio": "TEQUILA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "105",
+        "name": "Guízar Macías Francisco Javier",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 2,
+      "cabeceraLocalidad": "LAGOS DE MORENO",
+      "cabeceraMunicipio": "LAGOS DE MORENO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "106",
+        "name": "Gómez Villalobos Tecutli José Guadalupe",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 3,
+      "cabeceraLocalidad": "TEPATITLAN DE MORELOS",
+      "cabeceraMunicipio": "TEPATITLAN DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "107",
+        "name": "Iñiguez Franco José Mario",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 4,
+      "cabeceraLocalidad": "ZAPOPAN",
+      "cabeceraMunicipio": "ZAPOPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "108",
+        "name": "Álvarez Villaseñor Raúl",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 5,
+      "cabeceraLocalidad": "PUERTO VALLARTA",
+      "cabeceraMunicipio": "PUERTO VALLARTA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "109",
+        "name": "Blancas Mercado Bruno",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 6,
+      "cabeceraLocalidad": "NUEVO MEXICO",
+      "cabeceraMunicipio": "ZAPOPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "110",
+        "name": "Carranza Gómez Beatriz",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 7,
+      "cabeceraLocalidad": "TONALA",
+      "cabeceraMunicipio": "TONALA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "111",
+        "name": "García Hernández Claudia",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 8,
+      "cabeceraLocalidad": "GUADALAJARA",
+      "cabeceraMunicipio": "GUADALAJARA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "112",
+        "name": "Espinosa Sánchez Paola Milagros",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 9,
+      "cabeceraLocalidad": "GUADALAJARA",
+      "cabeceraMunicipio": "GUADALAJARA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "113",
+        "name": "Castellanos Polanco Favio",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 10,
+      "cabeceraLocalidad": "ZAPOPAN",
+      "cabeceraMunicipio": "ZAPOPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "114",
+        "name": "Borboa Becerra Omar Antonio",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 11,
+      "cabeceraLocalidad": "GUADALAJARA",
+      "cabeceraMunicipio": "GUADALAJARA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "115",
+        "name": "Gómez Pozos Merilyn",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 12,
+      "cabeceraLocalidad": "SANTA CRUZ DE LAS FLORES",
+      "cabeceraMunicipio": "TLAJOMULCO DE ZUÑIGA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "116",
+        "name": "González Pérez Sandra Beatriz",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 13,
+      "cabeceraLocalidad": "SANTA MARIA TEQUEPEXPAN",
+      "cabeceraMunicipio": "SAN PEDRO TLAQUEPAQUE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "117",
+        "name": "Sánchez González José Luis",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 14,
+      "cabeceraLocalidad": "TLAJOMULCO DE ZUÑIGA",
+      "cabeceraMunicipio": "TLAJOMULCO DE ZUÑIGA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "118",
+        "name": "Michel López Marcela",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 15,
+      "cabeceraLocalidad": "LA BARCA",
+      "cabeceraMunicipio": "LA BARCA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "119",
+        "name": "Vázquez Jiménez Alonso de Jesús",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 16,
+      "cabeceraLocalidad": "TLAQUEPAQUE",
+      "cabeceraMunicipio": "SAN PEDRO TLAQUEPAQUE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "120",
+        "name": "Maldonado Chavarín Alberto",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 16"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 17,
+      "cabeceraLocalidad": "JOCOTEPEC",
+      "cabeceraMunicipio": "JOCOTEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "121",
+        "name": "Ramírez Ramos Antonio de Jesús",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 17"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 18,
+      "cabeceraLocalidad": "AUTLAN DE NAVARRO",
+      "cabeceraMunicipio": "AUTLAN DE NAVARRO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "122",
+        "name": "Arreola Lopez Haidyd",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 18"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 19,
+      "cabeceraLocalidad": "CIUDAD GUZMAN",
+      "cabeceraMunicipio": "ZAPOTLAN EL GRANDE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "123",
+        "name": "Cárdenas Galván Clara",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 19"
+      }
+    },
+    {
+      "entityCode": "14",
+      "entitySlug": "jalisco",
+      "number": 20,
+      "cabeceraLocalidad": "TONALA",
+      "cabeceraMunicipio": "TONALA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "124",
+        "name": "Castillo Lozano Katia Alejandra",
+        "entidadPrinted": "Jalisco",
+        "seatPrinted": "Dtto. 20"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 1,
+      "cabeceraLocalidad": "JILOTEPEC DE ANDRES MOLINA ENRIQUEZ",
+      "cabeceraMunicipio": "JILOTEPEC",
+      "indigena": true,
+      "indigenaPct": "49.11%",
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "125",
+        "name": "Mendoza Mondragón María Luisa",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 2,
+      "cabeceraLocalidad": "SANTA MARIA TULTEPEC",
+      "cabeceraMunicipio": "TULTEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "126",
+        "name": "Vázquez García Dionicia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 3,
+      "cabeceraLocalidad": "ATLACOMULCO DE FABELA",
+      "cabeceraMunicipio": "ATLACOMULCO",
+      "indigena": true,
+      "indigenaPct": "65.43%",
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "127",
+        "name": "Castillo Gabino Diana",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 4,
+      "cabeceraLocalidad": "NICOLAS ROMERO",
+      "cabeceraMunicipio": "NICOLAS ROMERO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "128",
+        "name": "Carrasco Godínez Melva",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 5,
+      "cabeceraLocalidad": "TEOTIHUACAN DE ARISTA",
+      "cabeceraMunicipio": "TEOTIHUACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "129",
+        "name": "Galindo Alarcón Patricia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 6,
+      "cabeceraLocalidad": "COACALCO DE BERRIOZABAL",
+      "cabeceraMunicipio": "COACALCO DE BERRIOZABAL",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "130",
+        "name": "Villalpando Riquelme Julieta",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 7,
+      "cabeceraLocalidad": "CUAUTITLAN IZCALLI",
+      "cabeceraMunicipio": "CUAUTITLAN IZCALLI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "131",
+        "name": "Zagal Ramírez Xóchitl Nashielly",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 8,
+      "cabeceraLocalidad": "TULTITLAN DE MARIANO ESCOBEDO",
+      "cabeceraMunicipio": "TULTITLAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "632",
+        "name": "Juárez García Yessica",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 9,
+      "cabeceraLocalidad": "SAN FELIPE DEL PROGRESO",
+      "cabeceraMunicipio": "SAN FELIPE DEL PROGRESO",
+      "indigena": true,
+      "indigenaPct": "63.83%",
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "133",
+        "name": "Marin Rangel Ivan",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 10,
+      "cabeceraLocalidad": "ECATEPEC DE MORELOS",
+      "cabeceraMunicipio": "ECATEPEC DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "134",
+        "name": "Vilchis Contreras Luis Fernando",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 11,
+      "cabeceraLocalidad": "ECATEPEC DE MORELOS",
+      "cabeceraMunicipio": "ECATEPEC DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "135",
+        "name": "Arzola Vargas Xóchitl Teresa",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 12,
+      "cabeceraLocalidad": "IXTAPALUCA",
+      "cabeceraMunicipio": "IXTAPALUCA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "136",
+        "name": "Corona Arvizu Armando",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 13,
+      "cabeceraLocalidad": "ECATEPEC DE MORELOS",
+      "cabeceraMunicipio": "ECATEPEC DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "637",
+        "name": "Navarrete Rivera Alma Delia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 14,
+      "cabeceraLocalidad": "TEPEXPAN",
+      "cabeceraMunicipio": "ACOLMAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "138",
+        "name": "Garfias Alcantara Claudia Leticia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 15,
+      "cabeceraLocalidad": "CIUDAD ADOLFO LOPEZ MATEOS",
+      "cabeceraMunicipio": "ATIZAPAN DE ZARAGOZA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "139",
+        "name": "Anaya Martínez Josefina",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 16,
+      "cabeceraLocalidad": "ECATEPEC DE MORELOS",
+      "cabeceraMunicipio": "ECATEPEC DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "140",
+        "name": "Manzanilla Téllez Emilio",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 16"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 17,
+      "cabeceraLocalidad": "ECATEPEC DE MORELOS",
+      "cabeceraMunicipio": "ECATEPEC DE MORELOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "641",
+        "name": "Aguilera Claro Zaria",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 17"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 18,
+      "cabeceraLocalidad": "HUIXQUILUCAN DE DEGOLLADO",
+      "cabeceraMunicipio": "HUIXQUILUCAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "142",
+        "name": "Sánchez Juárez Claudia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 18"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 19,
+      "cabeceraLocalidad": "TLALNEPANTLA DE BAZ",
+      "cabeceraMunicipio": "TLALNEPANTLA DE BAZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "143",
+        "name": "Valdepeñas González Gabriela",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 19"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 20,
+      "cabeceraLocalidad": "OJO DE AGUA",
+      "cabeceraMunicipio": "TECAMAC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "144",
+        "name": "Ruiz Páez Montserrat",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 20"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 21,
+      "cabeceraLocalidad": "AMECAMECA DE JUAREZ",
+      "cabeceraMunicipio": "AMECAMECA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "145",
+        "name": "Millán Contreras Iván",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 21"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 22,
+      "cabeceraLocalidad": "NAUCALPAN DE JUAREZ",
+      "cabeceraMunicipio": "NAUCALPAN DE JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "146",
+        "name": "Moya Bastón Martha Amalia",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 22"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 23,
+      "cabeceraLocalidad": "LERMA DE VILLADA",
+      "cabeceraMunicipio": "LERMA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "647",
+        "name": "Hernández Pérez José Luis",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 23"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 24,
+      "cabeceraLocalidad": "NAUCALPAN DE JUAREZ",
+      "cabeceraMunicipio": "NAUCALPAN DE JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "148",
+        "name": "Durán Reveles José Luis",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 24"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 25,
+      "cabeceraLocalidad": "CHIMALHUACAN",
+      "cabeceraMunicipio": "CHIMALHUACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "149",
+        "name": "Avilés Domínguez Leide",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 25"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 26,
+      "cabeceraLocalidad": "TOLUCA DE LERDO",
+      "cabeceraMunicipio": "TOLUCA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "150",
+        "name": "Miranda Barrera Luis Enrique",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 26"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 27,
+      "cabeceraLocalidad": "METEPEC",
+      "cabeceraMunicipio": "METEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "151",
+        "name": "Santiago Pineda Wblester",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 27"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 28,
+      "cabeceraLocalidad": "ZUMPANGO DE OCAMPO",
+      "cabeceraMunicipio": "ZUMPANGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "152",
+        "name": "Domínguez Rodríguez Roberto Ángel",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 28"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 29,
+      "cabeceraLocalidad": "CD. NEZAHUALCOYOTL",
+      "cabeceraMunicipio": "NEZAHUALCOYOTL",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "153",
+        "name": "Ulloa Pérez Gerardo",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 29"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 30,
+      "cabeceraLocalidad": "CHIMALHUACAN",
+      "cabeceraMunicipio": "CHIMALHUACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "154",
+        "name": "Hernández Pérez César Agustín",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 30"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 31,
+      "cabeceraLocalidad": "CD. NEZAHUALCOYOTL",
+      "cabeceraMunicipio": "NEZAHUALCOYOTL",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "155",
+        "name": "Bautista Bravo Juan Angel",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 31"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 32,
+      "cabeceraLocalidad": "VALLE DE CHALCO SOLIDARIDAD",
+      "cabeceraMunicipio": "VALLE DE CHALCO SOLIDARIDAD",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "156",
+        "name": "Martínez Ventura Luis Enrique",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 32"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 33,
+      "cabeceraLocalidad": "CHALCO DE DIAZ COVARRUBIAS",
+      "cabeceraMunicipio": "CHALCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "157",
+        "name": "Burgos Hernández Anais Miriam",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 33"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 34,
+      "cabeceraLocalidad": "TOLUCA DE LERDO",
+      "cabeceraMunicipio": "TOLUCA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "158",
+        "name": "Álvarez Nemer Mónica Angélica",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 34"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 35,
+      "cabeceraLocalidad": "TENANCINGO DE DEGOLLADO",
+      "cabeceraMunicipio": "TENANCINGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "159",
+        "name": "Hernández Tapia Arturo Roberto",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 35"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 36,
+      "cabeceraLocalidad": "TEJUPILCO DE HIDALGO",
+      "cabeceraMunicipio": "TEJUPILCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "160",
+        "name": "Varela Domínguez Juan Carlos",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 36"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 37,
+      "cabeceraLocalidad": "TEOLOYUCAN",
+      "cabeceraMunicipio": "TEOLOYUCAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "161",
+        "name": "Zenteno Santaella Pedro Mario",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 37"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 38,
+      "cabeceraLocalidad": "TEXCOCO DE MORA",
+      "cabeceraMunicipio": "TEXCOCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "162",
+        "name": "Cuanalo Araujo Jesús Martín",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 38"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 39,
+      "cabeceraLocalidad": "LOS REYES ACAQUILPAN",
+      "cabeceraMunicipio": "LA PAZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "163",
+        "name": "Montalvo Luna José Luis",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 39"
+      }
+    },
+    {
+      "entityCode": "15",
+      "entitySlug": "mexico",
+      "number": 40,
+      "cabeceraLocalidad": "SAN MIGUEL ZINACANTEPEC",
+      "cabeceraMunicipio": "ZINACANTEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "164",
+        "name": "Huerta Romero Azucena",
+        "entidadPrinted": "México",
+        "seatPrinted": "Dtto. 40"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 1,
+      "cabeceraLocalidad": "LAZARO CARDENAS",
+      "cabeceraMunicipio": "LAZARO CARDENAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "165",
+        "name": "Godoy Rangel Leonel",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 2,
+      "cabeceraLocalidad": "APATZINGAN DE LA CONSTITUCION",
+      "cabeceraMunicipio": "APATZINGAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "166",
+        "name": "Cruz Lucatero José Luis",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 3,
+      "cabeceraLocalidad": "HEROICA ZITACUARO",
+      "cabeceraMunicipio": "ZITACUARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "167",
+        "name": "Bernal Martínez Mary Carmen",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 4,
+      "cabeceraLocalidad": "JIQUILPAN DE JUAREZ",
+      "cabeceraMunicipio": "JIQUILPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "168",
+        "name": "Ortega Tiburcio Rosa Guadalupe",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 5,
+      "cabeceraLocalidad": "ZAMORA DE HIDALGO",
+      "cabeceraMunicipio": "ZAMORA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "169",
+        "name": "Shember Domínguez Delhi Miroslava",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 6,
+      "cabeceraLocalidad": "CIUDAD HIDALGO",
+      "cabeceraMunicipio": "HIDALGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "170",
+        "name": "Téllez Marín José Luis",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 7,
+      "cabeceraLocalidad": "ZACAPU",
+      "cabeceraMunicipio": "ZACAPU",
+      "indigena": true,
+      "indigenaPct": "42.07%",
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "171",
+        "name": "Velázquez Vázquez Marcela",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 8,
+      "cabeceraLocalidad": "MORELIA",
+      "cabeceraMunicipio": "MORELIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "172",
+        "name": "Núñez Aguilar Ernesto",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 9,
+      "cabeceraLocalidad": "URUAPAN DEL PROGRESO",
+      "cabeceraMunicipio": "URUAPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "173",
+        "name": "Mendoza Arias Guadalupe Araceli",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 10,
+      "cabeceraLocalidad": "MORELIA",
+      "cabeceraMunicipio": "MORELIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "174",
+        "name": "Cortés Mendoza David Alejandro",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "16",
+      "entitySlug": "michoacan-de-ocampo",
+      "number": 11,
+      "cabeceraLocalidad": "PATZCUARO",
+      "cabeceraMunicipio": "PATZCUARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "175",
+        "name": "López Carrillo Vanessa",
+        "entidadPrinted": "Michoacán",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "17",
+      "entitySlug": "morelos",
+      "number": 1,
+      "cabeceraLocalidad": "CUERNAVACA",
+      "cabeceraMunicipio": "CUERNAVACA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "176",
+        "name": "Anaya Villegas Sandra",
+        "entidadPrinted": "Morelos",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "17",
+      "entitySlug": "morelos",
+      "number": 2,
+      "cabeceraLocalidad": "JIUTEPEC",
+      "cabeceraMunicipio": "JIUTEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "177",
+        "name": "Barrera Vázquez Ariadna",
+        "entidadPrinted": "Morelos",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "17",
+      "entitySlug": "morelos",
+      "number": 3,
+      "cabeceraLocalidad": "CUAUTLA",
+      "cabeceraMunicipio": "CUAUTLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "178",
+        "name": "Winkler Trujillo Cindy",
+        "entidadPrinted": "Morelos",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "17",
+      "entitySlug": "morelos",
+      "number": 4,
+      "cabeceraLocalidad": "LOS PILARES",
+      "cabeceraMunicipio": "JOJUTLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "179",
+        "name": "Flores Bustamante Juan Ángel",
+        "entidadPrinted": "Morelos",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "17",
+      "entitySlug": "morelos",
+      "number": 5,
+      "cabeceraLocalidad": "YAUTEPEC",
+      "cabeceraMunicipio": "YAUTEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "180",
+        "name": "Alonso Gutiérrez Agustín",
+        "entidadPrinted": "Morelos",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "18",
+      "entitySlug": "nayarit",
+      "number": 1,
+      "cabeceraLocalidad": "SANTIAGO IXCUINTLA",
+      "cabeceraMunicipio": "SANTIAGO IXCUINTLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "181",
+        "name": "Porras Baylón Any Marilú",
+        "entidadPrinted": "Nayarit",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "18",
+      "entitySlug": "nayarit",
+      "number": 2,
+      "cabeceraLocalidad": "TEPIC",
+      "cabeceraMunicipio": "TEPIC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "182",
+        "name": "Navarro Pérez Beatriz Andrea",
+        "entidadPrinted": "Nayarit",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "18",
+      "entitySlug": "nayarit",
+      "number": 3,
+      "cabeceraLocalidad": "COMPOSTELA",
+      "cabeceraMunicipio": "COMPOSTELA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "183",
+        "name": "Ortiz Rodríguez Jorge Armando",
+        "entidadPrinted": "Nayarit",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 1,
+      "cabeceraLocalidad": "SANTA CATARINA",
+      "cabeceraMunicipio": "SANTA CATARINA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "184",
+        "name": "Niño de Rivera Vela Homero Ricardo",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 2,
+      "cabeceraLocalidad": "APODACA",
+      "cabeceraMunicipio": "APODACA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "185",
+        "name": "Cantú Ramírez Andrés Mauricio",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 3,
+      "cabeceraLocalidad": "GRAL. ESCOBEDO",
+      "cabeceraMunicipio": "GRAL. ESCOBEDO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "686",
+        "name": "Palacios Medina Sandra Patricia",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 4,
+      "cabeceraLocalidad": "SAN NICOLAS DE LOS GARZA",
+      "cabeceraMunicipio": "SAN NICOLAS DE LOS GARZA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "687",
+        "name": "Zamora Ramírez Elisa Paola",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 5,
+      "cabeceraLocalidad": "MONTERREY",
+      "cabeceraMunicipio": "MONTERREY",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "188",
+        "name": "González Soto Santiago",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 6,
+      "cabeceraLocalidad": "MONTERREY",
+      "cabeceraMunicipio": "MONTERREY",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "189",
+        "name": "Gómez Cárdenas Annia Sarahí",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 7,
+      "cabeceraLocalidad": "FRACC. VALLE DE LINCOLN",
+      "cabeceraMunicipio": "GARCIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "190",
+        "name": "Guevara Garza Carlos Alberto",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 8,
+      "cabeceraLocalidad": "GUADALUPE",
+      "cabeceraMunicipio": "GUADALUPE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "191",
+        "name": "Quiroz Gallegos Adriana Belinda",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 9,
+      "cabeceraLocalidad": "LINARES",
+      "cabeceraMunicipio": "LINARES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "192",
+        "name": "Espinoza Eguía Juan Francisco",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 10,
+      "cabeceraLocalidad": "MONTERREY",
+      "cabeceraMunicipio": "MONTERREY",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "193",
+        "name": "González González Ana Isabel",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 11,
+      "cabeceraLocalidad": "GUADALUPE",
+      "cabeceraMunicipio": "GUADALUPE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "694",
+        "name": "Garza de la Garza Samantha Margarita",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 12,
+      "cabeceraLocalidad": "BENITO JUAREZ",
+      "cabeceraMunicipio": "JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "195",
+        "name": "de la Garza Villarreal Héctor Alfonso",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 13,
+      "cabeceraLocalidad": "SALINAS VICTORIA",
+      "cabeceraMunicipio": "SALINAS VICTORIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "196",
+        "name": "Quiroga Treviño Luis Orlando",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "19",
+      "entitySlug": "nuevo-leon",
+      "number": 14,
+      "cabeceraLocalidad": "PESQUERIA",
+      "cabeceraMunicipio": "PESQUERIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "197",
+        "name": "Gloria López José",
+        "entidadPrinted": "Nuevo León",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 1,
+      "cabeceraLocalidad": "SAN JUAN BAUTISTA TUXTEPEC",
+      "cabeceraMunicipio": "SAN JUAN BAUTISTA TUXTEPEC",
+      "indigena": true,
+      "indigenaPct": "62.836344%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "198",
+        "name": "Vázquez Ruíz Miriam de los Angeles",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 2,
+      "cabeceraLocalidad": "TEOTITLAN DE FLORES MAGON",
+      "cabeceraMunicipio": "TEOTITLAN DE FLORES MAGON",
+      "indigena": true,
+      "indigenaPct": "73.884387%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "199",
+        "name": "Juan Carlos Irma",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 3,
+      "cabeceraLocalidad": "HEROICA CIUDAD DE HUAJUAPAN DE LEON",
+      "cabeceraMunicipio": "HEROICA CIUDAD DE HUAJUAPAN DE LEON",
+      "indigena": true,
+      "indigenaPct": "58.054787%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "200",
+        "name": "García García Margarita",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 4,
+      "cabeceraLocalidad": "TLACOLULA DE MATAMOROS",
+      "cabeceraMunicipio": "TLACOLULA DE MATAMOROS",
+      "indigena": true,
+      "indigenaPct": "78.560893%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "201",
+        "name": "Jiménez Vásquez Naty Poob Pijy",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 5,
+      "cabeceraLocalidad": "SALINA CRUZ",
+      "cabeceraMunicipio": "SALINA CRUZ",
+      "indigena": true,
+      "indigenaPct": "64.642641%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "202",
+        "name": "Antonio Altamirano Carol",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 6,
+      "cabeceraLocalidad": "HEROICA CIUDAD DE TLAXIACO",
+      "cabeceraMunicipio": "HEROICA CIUDAD DE TLAXIACO",
+      "indigena": true,
+      "indigenaPct": "79.604447%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "203",
+        "name": "López Sánchez José Alejandro",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 7,
+      "cabeceraLocalidad": "CIUDAD IXTEPEC",
+      "cabeceraMunicipio": "CIUDAD IXTEPEC",
+      "indigena": true,
+      "indigenaPct": "73.304113%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "204",
+        "name": "Sánchez López Gloria",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 8,
+      "cabeceraLocalidad": "OAXACA DE JUAREZ",
+      "cabeceraMunicipio": "OAXACA DE JUAREZ",
+      "indigena": true,
+      "indigenaPct": "43.350459%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "205",
+        "name": "Bolaños-Cacho Cué Raúl",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 9,
+      "cabeceraLocalidad": "PUERTO ESCONDIDO",
+      "cabeceraMunicipio": "SAN PEDRO MIXTEPEC",
+      "indigena": true,
+      "indigenaPct": "78.897335%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "206",
+        "name": "Bautista Peláez María del Carmen",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "20",
+      "entitySlug": "oaxaca",
+      "number": 10,
+      "cabeceraLocalidad": "MIAHUATLAN DE PORFIRIO DIAZ",
+      "cabeceraMunicipio": "MIAHUATLAN DE PORFIRIO DIAZ",
+      "indigena": true,
+      "indigenaPct": "63.129491%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "207",
+        "name": "Cruz Mendoza Carmelo",
+        "entidadPrinted": "Oaxaca",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 1,
+      "cabeceraLocalidad": "HUAUCHINANGO DE DEGOLLADO",
+      "cabeceraMunicipio": "HUAUCHINANGO",
+      "indigena": true,
+      "indigenaPct": "57.646675%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "208",
+        "name": "Santander Soto Gissel",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 2,
+      "cabeceraLocalidad": "CUAUTILULCO BARRIO",
+      "cabeceraMunicipio": "ZACATLAN",
+      "indigena": true,
+      "indigenaPct": "59.588715%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "209",
+        "name": "Cruz Peláez Fatima Almendra",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 3,
+      "cabeceraLocalidad": "TEZIUTLAN",
+      "cabeceraMunicipio": "TEZIUTLAN",
+      "indigena": true,
+      "indigenaPct": "57.593059%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "710",
+        "name": "Reyes Cabrera Norma Sirley",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 4,
+      "cabeceraLocalidad": "LIBRES",
+      "cabeceraMunicipio": "LIBRES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "211",
+        "name": "González Hernández Juan Antonio",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 5,
+      "cabeceraLocalidad": "SAN MARTIN TEXMELUCAN DE LABASTIDA",
+      "cabeceraMunicipio": "SAN MARTIN TEXMELUCAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "212",
+        "name": "García Romero Rafaela Vianey",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 6,
+      "cabeceraLocalidad": "HEROICA PUEBLA DE ZARAGOZA",
+      "cabeceraMunicipio": "PUEBLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "213",
+        "name": "Carvajal Hidalgo Alejandro",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 7,
+      "cabeceraLocalidad": "TEPEACA",
+      "cabeceraMunicipio": "TEPEACA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "214",
+        "name": "Rivera Vivanco Claudia",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 8,
+      "cabeceraLocalidad": "CIUDAD SERDAN",
+      "cabeceraMunicipio": "CHALCHICOMULA DE SESMA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "215",
+        "name": "Mier Bañuelos Carlos Ignacio",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 9,
+      "cabeceraLocalidad": "HEROICA PUEBLA DE ZARAGOZA",
+      "cabeceraMunicipio": "PUEBLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "216",
+        "name": "Gali López José Antonio",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 10,
+      "cabeceraLocalidad": "CHOLULA DE RIVADAVIA",
+      "cabeceraMunicipio": "SAN PEDRO CHOLULA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "217",
+        "name": "Pérez Popoca María Fabiola Karina",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 11,
+      "cabeceraLocalidad": "HEROICA PUEBLA DE ZARAGOZA",
+      "cabeceraMunicipio": "PUEBLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "218",
+        "name": "López Ruíz José Antonio",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 12,
+      "cabeceraLocalidad": "HEROICA PUEBLA DE ZARAGOZA",
+      "cabeceraMunicipio": "PUEBLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "219",
+        "name": "Merino Escamilla Nora Yessica",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 13,
+      "cabeceraLocalidad": "ATLIXCO",
+      "cabeceraMunicipio": "ATLIXCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "220",
+        "name": "Carrillo Cubillas Mario Miguel",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 14,
+      "cabeceraLocalidad": "IZUCAR DE MATAMOROS",
+      "cabeceraMunicipio": "IZUCAR DE MATAMOROS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "221",
+        "name": "Castillo López Eduardo",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 15,
+      "cabeceraLocalidad": "TEHUACAN",
+      "cabeceraMunicipio": "TEHUACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "222",
+        "name": "Orozco Caballero María del Rosario",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "21",
+      "entitySlug": "puebla",
+      "number": 16,
+      "cabeceraLocalidad": "AJALPAN",
+      "cabeceraMunicipio": "AJALPAN",
+      "indigena": true,
+      "indigenaPct": "62.071345%",
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "223",
+        "name": "Alatriste Cantú Adolfo",
+        "entidadPrinted": "Puebla",
+        "seatPrinted": "Dtto. 16"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 1,
+      "cabeceraLocalidad": "CADEREYTA DE MONTES",
+      "cabeceraMunicipio": "CADEREYTA DE MONTES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "224",
+        "name": "Herrera Ruiz Gilberto",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 2,
+      "cabeceraLocalidad": "SAN JUAN DEL RIO",
+      "cabeceraMunicipio": "SAN JUAN DEL RIO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "225",
+        "name": "Astudillo Suárez Ricardo",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 3,
+      "cabeceraLocalidad": "SANTIAGO DE QUERETARO",
+      "cabeceraMunicipio": "QUERETARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "226",
+        "name": "García Jimeno Alcocer Ma. Lorena",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 4,
+      "cabeceraLocalidad": "SANTIAGO DE QUERETARO",
+      "cabeceraMunicipio": "QUERETARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "227",
+        "name": "Sosa Pichardo Roberto",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 5,
+      "cabeceraLocalidad": "PEDRO ESCOBEDO",
+      "cabeceraMunicipio": "PEDRO ESCOBEDO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "228",
+        "name": "Calzada Mercado Mario",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "22",
+      "entitySlug": "queretaro",
+      "number": 6,
+      "cabeceraLocalidad": "SANTIAGO DE QUERETARO",
+      "cabeceraMunicipio": "QUERETARO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 5,
+      "deputy": {
+        "id": "229",
+        "name": "Fernández Fuentes Luis Humberto",
+        "entidadPrinted": "Querétaro",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "23",
+      "entitySlug": "quintana-roo",
+      "number": 1,
+      "cabeceraLocalidad": "PLAYA DEL CARMEN",
+      "cabeceraMunicipio": "SOLIDARIDAD",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "230",
+        "name": "Carrillo Soberanis Juan Luis",
+        "entidadPrinted": "Quintana Roo",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "23",
+      "entitySlug": "quintana-roo",
+      "number": 2,
+      "cabeceraLocalidad": "CHETUMAL",
+      "cabeceraMunicipio": "OTHON P. BLANCO",
+      "indigena": true,
+      "indigenaPct": "49.651985%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "231",
+        "name": "Xix Euan Elda María",
+        "entidadPrinted": "Quintana Roo",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "23",
+      "entitySlug": "quintana-roo",
+      "number": 3,
+      "cabeceraLocalidad": "CANCUN",
+      "cabeceraMunicipio": "BENITO JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "232",
+        "name": "Aldana Navarro Luis Humberto",
+        "entidadPrinted": "Quintana Roo",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "23",
+      "entitySlug": "quintana-roo",
+      "number": 4,
+      "cabeceraLocalidad": "CANCUN",
+      "cabeceraMunicipio": "BENITO JUAREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "233",
+        "name": "Ávila Vera Mildred Concepción",
+        "entidadPrinted": "Quintana Roo",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 1,
+      "cabeceraLocalidad": "MATEHUALA",
+      "cabeceraMunicipio": "MATEHUALA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "234",
+        "name": "Velazco Bautista Aremy",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 2,
+      "cabeceraLocalidad": "SOLEDAD DE GRACIANO SANCHEZ",
+      "cabeceraMunicipio": "SOLEDAD DE GRACIANO SANCHEZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "235",
+        "name": "Fernández Martínez José Luis",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 3,
+      "cabeceraLocalidad": "RIOVERDE",
+      "cabeceraMunicipio": "RIOVERDE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "236",
+        "name": "Bautista Villegas Oscar",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 4,
+      "cabeceraLocalidad": "CIUDAD VALLES",
+      "cabeceraMunicipio": "CIUDAD VALLES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "237",
+        "name": "Castillo Morales Francisco Adrián",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 5,
+      "cabeceraLocalidad": "SAN LUIS POTOSI",
+      "cabeceraMunicipio": "SAN LUIS POTOSI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "238",
+        "name": "Azuara Zúñiga David",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 6,
+      "cabeceraLocalidad": "SAN LUIS POTOSI",
+      "cabeceraMunicipio": "SAN LUIS POTOSI",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "239",
+        "name": "Valladares Eichelmann Juan Carlos",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "24",
+      "entitySlug": "san-luis-potosi",
+      "number": 7,
+      "cabeceraLocalidad": "TAMAZUNCHALE",
+      "cabeceraMunicipio": "TAMAZUNCHALE",
+      "indigena": true,
+      "indigenaPct": "80.341873%",
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "240",
+        "name": "García Antonio Briceyda",
+        "entidadPrinted": "San Luis Potosí",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 1,
+      "cabeceraLocalidad": "MAZATLAN",
+      "cabeceraMunicipio": "MAZATLAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "741",
+        "name": "Jaime Ontiveros Sara",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 2,
+      "cabeceraLocalidad": "LOS MOCHIS",
+      "cabeceraMunicipio": "AHOME",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "242",
+        "name": "Ayala Leyva Ana Elizabeth",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 3,
+      "cabeceraLocalidad": "GUAMUCHIL",
+      "cabeceraMunicipio": "SALVADOR ALVARADO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "243",
+        "name": "García Hernández Jesús Fernando",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 4,
+      "cabeceraLocalidad": "GUASAVE",
+      "cabeceraMunicipio": "GUASAVE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "244",
+        "name": "Pompa Robles Felicita",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 5,
+      "cabeceraLocalidad": "CULIACAN DE ROSALES",
+      "cabeceraMunicipio": "CULIACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "745",
+        "name": "González Carrillo Luis Sebastián",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 6,
+      "cabeceraLocalidad": "MAZATLAN",
+      "cabeceraMunicipio": "MAZATLAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "246",
+        "name": "Carrazco Macías Olegaria",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "25",
+      "entitySlug": "sinaloa",
+      "number": 7,
+      "cabeceraLocalidad": "CULIACAN DE ROSALES",
+      "cabeceraMunicipio": "CULIACAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "247",
+        "name": "Villegas Sánchez Merary",
+        "entidadPrinted": "Sinaloa",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 1,
+      "cabeceraLocalidad": "SAN LUIS RIO COLORADO",
+      "cabeceraMunicipio": "SAN LUIS RIO COLORADO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "248",
+        "name": "Baldenebro Arredondo Manuel de Jesús",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 2,
+      "cabeceraLocalidad": "NOGALES",
+      "cabeceraMunicipio": "NOGALES",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "249",
+        "name": "Pujol Irastorza Jesús Antonio",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 3,
+      "cabeceraLocalidad": "HERMOSILLO",
+      "cabeceraMunicipio": "HERMOSILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "250",
+        "name": "Barreras Samaniego Diana Karina",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 4,
+      "cabeceraLocalidad": "GUAYMAS",
+      "cabeceraMunicipio": "GUAYMAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "251",
+        "name": "Flores Robles Ramón Angel",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 5,
+      "cabeceraLocalidad": "HERMOSILLO",
+      "cabeceraMunicipio": "HERMOSILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "252",
+        "name": "Mendoza Ruiz Jacobo",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 6,
+      "cabeceraLocalidad": "CD. OBREGON",
+      "cabeceraMunicipio": "CAJEME",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "253",
+        "name": "Acosta Islas Anabel",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "26",
+      "entitySlug": "sonora",
+      "number": 7,
+      "cabeceraLocalidad": "NAVOJOA",
+      "cabeceraMunicipio": "NAVOJOA",
+      "indigena": true,
+      "indigenaPct": "55.79287%",
+      "circunscripcion": 1,
+      "deputy": {
+        "id": "254",
+        "name": "Higuera Esquer Alma Manuela",
+        "entidadPrinted": "Sonora",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 1,
+      "cabeceraLocalidad": "MACUSPANA",
+      "cabeceraMunicipio": "MACUSPANA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "255",
+        "name": "Gutiérrez Bocanegra Julio Ernesto",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 2,
+      "cabeceraLocalidad": "HEROICA CARDENAS",
+      "cabeceraMunicipio": "CARDENAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "256",
+        "name": "Peña Vidal Iván",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 3,
+      "cabeceraLocalidad": "COMALCALCO",
+      "cabeceraMunicipio": "COMALCALCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "257",
+        "name": "Graniel Zenteno Rosa Margarita",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 4,
+      "cabeceraLocalidad": "VILLAHERMOSA",
+      "cabeceraMunicipio": "CENTRO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "258",
+        "name": "Lastra Bastar Jaime Humberto",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 5,
+      "cabeceraLocalidad": "PARAISO",
+      "cabeceraMunicipio": "PARAISO",
+      "indigena": true,
+      "indigenaPct": "41.39%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "259",
+        "name": "Milland Pérez Beatriz",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "27",
+      "entitySlug": "tabasco",
+      "number": 6,
+      "cabeceraLocalidad": "RANCHERIA IXTACOMITAN 1RA SECCION",
+      "cabeceraMunicipio": "CENTRO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "260",
+        "name": "Mollinedo Cano Tey",
+        "entidadPrinted": "Tabasco",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 1,
+      "cabeceraLocalidad": "NUEVO LAREDO",
+      "cabeceraMunicipio": "NUEVO LAREDO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "261",
+        "name": "Canturosas Villarreal Carlos Enrique",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 2,
+      "cabeceraLocalidad": "REYNOSA",
+      "cabeceraMunicipio": "REYNOSA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "262",
+        "name": "Hernández Sáenz Claudia Alejandra",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 3,
+      "cabeceraLocalidad": "RIO BRAVO",
+      "cabeceraMunicipio": "RIO BRAVO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "263",
+        "name": "De Los Santos Flores Casandra Prisilla",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 4,
+      "cabeceraLocalidad": "H. MATAMOROS",
+      "cabeceraMunicipio": "MATAMOROS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "264",
+        "name": "López Hernández Mario Alberto",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 5,
+      "cabeceraLocalidad": "CIUDAD VICTORIA",
+      "cabeceraMunicipio": "VICTORIA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "265",
+        "name": "Braña Mojica José",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 6,
+      "cabeceraLocalidad": "CIUDAD MANTE",
+      "cabeceraMunicipio": "EL MANTE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "266",
+        "name": "Narro Panameño Blanca Araceli",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 7,
+      "cabeceraLocalidad": "REYNOSA",
+      "cabeceraMunicipio": "REYNOSA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "267",
+        "name": "Elizondo Guerra Olga Juliana",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "28",
+      "entitySlug": "tamaulipas",
+      "number": 8,
+      "cabeceraLocalidad": "TAMPICO",
+      "cabeceraMunicipio": "TAMPICO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "268",
+        "name": "Nader Nasrallah Jesús Antonio",
+        "entidadPrinted": "Tamaulipas",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "29",
+      "entitySlug": "tlaxcala",
+      "number": 1,
+      "cabeceraLocalidad": "APIZACO",
+      "cabeceraMunicipio": "APIZACO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "269",
+        "name": "Aguilar López José Alejandro",
+        "entidadPrinted": "Tlaxcala",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "29",
+      "entitySlug": "tlaxcala",
+      "number": 2,
+      "cabeceraLocalidad": "TLAXCALA DE XICOHTENCATL",
+      "cabeceraMunicipio": "TLAXCALA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "270",
+        "name": "Vázquez Conchas Raymundo",
+        "entidadPrinted": "Tlaxcala",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "29",
+      "entitySlug": "tlaxcala",
+      "number": 3,
+      "cabeceraLocalidad": "ZACATELCO",
+      "cabeceraMunicipio": "ZACATELCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 4,
+      "deputy": {
+        "id": "271",
+        "name": "Garay Loredo Irma Yordana",
+        "entidadPrinted": "Tlaxcala",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 1,
+      "cabeceraLocalidad": "PANUCO",
+      "cabeceraMunicipio": "PANUCO",
+      "indigena": true,
+      "indigenaPct": "40.31%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "772",
+        "name": "Guzmán González Denisse",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 2,
+      "cabeceraLocalidad": "ALAMO",
+      "cabeceraMunicipio": "ALAMO TEMAPACHE",
+      "indigena": true,
+      "indigenaPct": "59.66%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "273",
+        "name": "Cervantes de la Cruz Elizabeth",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 3,
+      "cabeceraLocalidad": "COSOLEACAQUE",
+      "cabeceraMunicipio": "COSOLEACAQUE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "274",
+        "name": "Armenta Oliveros Magaly",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 4,
+      "cabeceraLocalidad": "BOCA DEL RIO",
+      "cabeceraMunicipio": "BOCA DEL RIO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "775",
+        "name": "Vera Maria del Rosario",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 5,
+      "cabeceraLocalidad": "POZA RICA DE HIDALGO",
+      "cabeceraMunicipio": "POZA RICA DE HIDALGO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "276",
+        "name": "Velázquez Vallejo Francisco Javier",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 6,
+      "cabeceraLocalidad": "PAPANTLA DE OLARTE",
+      "cabeceraMunicipio": "PAPANTLA",
+      "indigena": true,
+      "indigenaPct": "67.83%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "277",
+        "name": "Pérez Bernabe Jaime Humberto",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 7,
+      "cabeceraLocalidad": "MARTINEZ DE LA TORRE",
+      "cabeceraMunicipio": "MARTINEZ DE LA TORRE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "278",
+        "name": "Herrera Villavicencio Mónica",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 7"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 8,
+      "cabeceraLocalidad": "LAS TRANCAS",
+      "cabeceraMunicipio": "EMILIANO ZAPATA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "279",
+        "name": "Mier Acolt Jorge Alberto",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 8"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 9,
+      "cabeceraLocalidad": "COATEPEC",
+      "cabeceraMunicipio": "COATEPEC",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "280",
+        "name": "González Naveda Adrián",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 9"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 10,
+      "cabeceraLocalidad": "XALAPA",
+      "cabeceraMunicipio": "XALAPA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "281",
+        "name": "Ferráez Centeno Ana Miriam",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 10"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 11,
+      "cabeceraLocalidad": "COATZACOALCOS",
+      "cabeceraMunicipio": "COATZACOALCOS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "782",
+        "name": "Villegas García Isidro Enrique",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 11"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 12,
+      "cabeceraLocalidad": "VERACRUZ",
+      "cabeceraMunicipio": "VERACRUZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "783",
+        "name": "Villacis Palacios Zoraya",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 12"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 13,
+      "cabeceraLocalidad": "HUATUSCO",
+      "cabeceraMunicipio": "HUATUSCO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "284",
+        "name": "Hernández Rodríguez Blanca Estela",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 13"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 14,
+      "cabeceraLocalidad": "MINATITLAN",
+      "cabeceraMunicipio": "MINATITLAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "285",
+        "name": "Ramírez Cisneros Jessica",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 14"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 15,
+      "cabeceraLocalidad": "ORIZABA",
+      "cabeceraMunicipio": "ORIZABA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "286",
+        "name": "Villegas Guarneros Dulce María Corina",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 15"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 16,
+      "cabeceraLocalidad": "CORDOBA",
+      "cabeceraMunicipio": "CORDOBA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "787",
+        "name": "Jímenez Castañeda Ángel Etiem",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 16"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 17,
+      "cabeceraLocalidad": "COSAMALOAPAN",
+      "cabeceraMunicipio": "COSAMALOAPAN",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "288",
+        "name": "Corro Mendoza Margarita",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 17"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 18,
+      "cabeceraLocalidad": "ZONGOLICA",
+      "cabeceraMunicipio": "ZONGOLICA",
+      "indigena": true,
+      "indigenaPct": "62.93%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "789",
+        "name": "Puertos Chimalhua Jonathan",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 18"
+      }
+    },
+    {
+      "entityCode": "30",
+      "entitySlug": "veracruz-de-ignacio-de-la-llave",
+      "number": 19,
+      "cabeceraLocalidad": "SAN ANDRES TUXTLA",
+      "cabeceraMunicipio": "SAN ANDRES TUXTLA",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "290",
+        "name": "Tenorio Adame Paola",
+        "entidadPrinted": "Veracruz",
+        "seatPrinted": "Dtto. 19"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 1,
+      "cabeceraLocalidad": "VALLADOLID",
+      "cabeceraMunicipio": "VALLADOLID",
+      "indigena": true,
+      "indigenaPct": "84.527387%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "291",
+        "name": "Barrera Puc Rocío Natalí",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 2,
+      "cabeceraLocalidad": "PROGRESO",
+      "cabeceraMunicipio": "PROGRESO",
+      "indigena": true,
+      "indigenaPct": "76.26837%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "292",
+        "name": "Sánchez Reyes Jorge Luis",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 3,
+      "cabeceraLocalidad": "MERIDA",
+      "cabeceraMunicipio": "MERIDA",
+      "indigena": true,
+      "indigenaPct": "43.14%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "293",
+        "name": "Brito Zapata Óscar Iván",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 4,
+      "cabeceraLocalidad": "MERIDA",
+      "cabeceraMunicipio": "MERIDA",
+      "indigena": true,
+      "indigenaPct": "43.14%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "294",
+        "name": "Rodríguez Heredia María Isabel",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 4"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 5,
+      "cabeceraLocalidad": "UMAN",
+      "cabeceraMunicipio": "UMAN",
+      "indigena": true,
+      "indigenaPct": "81.295657%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "295",
+        "name": "Villanueva Moo Jazmín Yaneli",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 5"
+      }
+    },
+    {
+      "entityCode": "31",
+      "entitySlug": "yucatan",
+      "number": 6,
+      "cabeceraLocalidad": "MERIDA",
+      "cabeceraMunicipio": "MERIDA",
+      "indigena": true,
+      "indigenaPct": "47.430373%",
+      "circunscripcion": 3,
+      "deputy": {
+        "id": "296",
+        "name": "Saiden Quiroz Jessica",
+        "entidadPrinted": "Yucatán",
+        "seatPrinted": "Dtto. 6"
+      }
+    },
+    {
+      "entityCode": "32",
+      "entitySlug": "zacatecas",
+      "number": 1,
+      "cabeceraLocalidad": "FRESNILLO",
+      "cabeceraMunicipio": "FRESNILLO",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "297",
+        "name": "Luévano Cantú María Soledad",
+        "entidadPrinted": "Zacatecas",
+        "seatPrinted": "Dtto. 1"
+      }
+    },
+    {
+      "entityCode": "32",
+      "entitySlug": "zacatecas",
+      "number": 2,
+      "cabeceraLocalidad": "JEREZ DE GARCIA SALINAS",
+      "cabeceraMunicipio": "JEREZ",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "798",
+        "name": "López Hernández Edna Berenice",
+        "entidadPrinted": "Zacatecas",
+        "seatPrinted": "Dtto. 2"
+      }
+    },
+    {
+      "entityCode": "32",
+      "entitySlug": "zacatecas",
+      "number": 3,
+      "cabeceraLocalidad": "ZACATECAS",
+      "cabeceraMunicipio": "ZACATECAS",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "799",
+        "name": "Mejía Haro Antonio",
+        "entidadPrinted": "Zacatecas",
+        "seatPrinted": "Dtto. 3"
+      }
+    },
+    {
+      "entityCode": "32",
+      "entitySlug": "zacatecas",
+      "number": 4,
+      "cabeceraLocalidad": "GUADALUPE",
+      "cabeceraMunicipio": "GUADALUPE",
+      "indigena": false,
+      "indigenaPct": null,
+      "circunscripcion": 2,
+      "deputy": {
+        "id": "300",
+        "name": "del Muro García Ana Luisa",
+        "entidadPrinted": "Zacatecas",
+        "seatPrinted": "Dtto. 4"
+      }
+    }
+  ]
+}
