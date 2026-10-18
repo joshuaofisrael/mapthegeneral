@@ -3,7 +3,7 @@ import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { JapanFrame } from "../frame";
 import { formatNumber } from "../../../../data/jp/format";
-import { japanHome, prefecturePath } from "../../../../data/jp/paths";
+import { blockPath, districtsIndexPath, japanHome, prefecturePath } from "../../../../data/jp/paths";
 import { BLOCKS, CENSUS_NATIONAL_POPULATION, PREFECTURES } from "../../../../data/jp/places";
 import { sourceById, sourcesById } from "../../../../data/jp/sources";
 import type { Lang } from "../../../../data/jp/types";
@@ -71,6 +71,9 @@ export default async function JapanNationalPage({ params }: { params: Promise<{ 
         "kantei-designate",
         "census-outline",
         "census-results",
+        "koukyo",
+        "shugiin-members",
+        "sangiin-hireiku",
       ])}
     >
       <section className="prose-legal">
@@ -134,7 +137,11 @@ export default async function JapanNationalPage({ params }: { params: Promise<{ 
           <tbody>
             {BLOCKS.map((block) => (
               <tr key={block.id}>
-                <td>{block.nameJa}</td>
+                <td>
+                  <Link className="text-navy underline" href={blockPath(lang, block.id)}>
+                    {block.nameJa}
+                  </Link>
+                </td>
                 <td>{formatNumber(block.seats, lang)}</td>
               </tr>
             ))}
@@ -164,6 +171,11 @@ export default async function JapanNationalPage({ params }: { params: Promise<{ 
           <Link className="text-navy underline" href={`${path}faq/`}>{copy.faq}</Link>
           {" · "}
           <Link className="text-navy underline" href={`${path}sources/`}>{copy.sources}</Link>
+        </p>
+        <p className="text-sm">
+          <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+            {ja ? "選挙区の一覧" : "District index"}
+          </Link>
         </p>
         <GapNote label={copy.gap} text={copy.localGap} />
         <GapNote label={copy.gap} text={copy.postcodeGap} />

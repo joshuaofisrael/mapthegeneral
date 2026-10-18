@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "ja" ? "出典" : "Sources",
     description:
       lang === "ja"
-        ? "日本のページのために2026年10月17日に読んだ公的資料です。"
-        : "Official sources read for the Japan pages on 17 October 2026.",
+        ? "日本のページの公的資料です。各項目に読んだ日があります。"
+        : "Official sources for the Japan pages. Each item shows the date it was read.",
     path,
     lang,
     alternatePath: `${japanHome(lang === "ja" ? "en" : "ja")}sources/`,
@@ -50,8 +50,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       title={ja ? "日本のページの出典" : "Sources for the Japan pages"}
       lede={
         ja
-          ? "各資料は2026年10月17日に読みました。報道とWikipediaは、事実の出典にしていません。"
-          : "Each item was read on 17 October 2026. News reports and Wikipedia are not used as the source of a fact."
+          ? "各資料に読んだ日を付けています。報道とWikipediaは、事実の出典にしていません。"
+          : "Each source shows the date it was read. News reports and Wikipedia are not used as the source of a fact."
       }
       officeHref={office.url}
       officeLabel="総務省"
@@ -60,8 +60,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       <div className="prose-legal">
         <p>
           {ja
-            ? "資料にないことは書きません。この公開で開いたままの未掲載は、衆議院議員の任期が終わる日、次の国政選挙の投票日、第51回の党派別議席、知事の氏名、市区町村、小選挙区、郵便番号です。人口は令和8年5月29日の人口速報です。令和8年9月29日の人口等基本集計は、結果ページの公表時期としては読みましたが、都道府県の数字の出典にはしていません。"
-            : "What is not in these sources is not invented. The gaps left open are the term-end date of the current House of Representatives, the next national polling day, party seats for the 51st general election, governors’ names, municipalities, single-member districts, and postcodes. Population is the preliminary count of 29 May 2026. The basic tabulation of 29 September 2026 was read as a release date on the results page and was not used for the prefecture figures."}
+            ? "資料にないことは書きません。開いたままの未掲載は、衆議院議員の任期が終わる日、次の国政選挙の投票日、第51回の党派別議席、知事の氏名、市区町村、郵便番号、別表第一の町丁目の列記です。衆議院比例代表の北海道は、別表第二が「八人」、議員一覧が7人です。参議院の東京都は、別表第三が「十二人」、一覧が11人です。その差は欠員とは書いていません。人口は令和8年5月29日の人口速報です。令和8年9月29日の人口等基本集計は、都道府県の数字の出典にはしていません。"
+            : "What is not in these sources is not invented. The gaps left open are the term-end date of the current House of Representatives, the next national polling day, party seats for the 51st general election, governors’ names, municipalities, postcodes, and the chome-level lists in Annex 1. For the Hokkaido proportional district, Annex 2 prints 八人 and the member list prints 7 names. For Tokyo in the House of Councillors, Annex 3 prints 十二人 and the list prints 11 names. That difference is not called a vacancy. Population is the preliminary count of 29 May 2026. The basic tabulation of 29 September 2026 was not used for the prefecture figures."}
         </p>
         <h2>{ja ? "利用規約と出典" : "Terms of use and attribution"}</h2>
         <p>
@@ -72,8 +72,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
             {ja ? "公共データ利用規約" : "Public Data License"}
           </a>
           {ja
-            ? "、政府標準利用規約など）に従い、各項目に出典と閲覧日を記載して利用しています。画像やロゴは転載していません。編集・加工した部分の責任は当サイトにあります。"
-            : ", the Government of Japan Standard Terms of Use, or the site’s own terms). The source and the date read are given for each item. No images or logos are reproduced. Any summary or edit is ours, not the source’s."}
+            ? "、政府標準利用規約）に従います。総務省のページは公共データ利用規約（第1.0版）により、出典を書き、編集したことを分けて書いています。衆議院と参議院のページは、出所を明示した引用の範囲で使い、写真は転載していません。氏名の空白は一つにしています。著作権法第13条第1号は、憲法その他の法令を、この章の権利の目的となることができないものとしています。公職選挙法の条文は、その法令データから写しています。画像やロゴは転載していません。編集は当サイト（Joshua Israel Ventures LLC）によるもので、国が作成した未加工の情報ではありません。"
+            : "). Ministry pages are used under the Public Data License 1.0, with the source named and edits marked as edits. House of Representatives and House of Councillors pages are quoted with the source named; no photographs are copied. Spaces inside names are collapsed to one. Article 13 of the Copyright Act says statutes are not the object of the rights in that chapter. Text of the Public Offices Election Act is taken from that statute. No images or logos are reproduced. Edits are by this site (Joshua Israel Ventures LLC), not an unedited government text."}
         </p>
       </div>
     </JapanFrame>

@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { JapanFrame } from "../../frame";
 import { formatNumber } from "../../../../../data/jp/format";
-import { japanHome, prefecturePath } from "../../../../../data/jp/paths";
+import { hcFor, smdsIn } from "../../../../../data/jp/level2";
+import { blockPath, districtsIndexPath, hcPath, japanHome, prefecturePath, smdPath } from "../../../../../data/jp/paths";
 import { blockById, censusNeighbors, prefectureBySlug, PREFECTURES } from "../../../../../data/jp/places";
 import { sourceById, sourcesById } from "../../../../../data/jp/sources";
 import type { Lang } from "../../../../../data/jp/types";
@@ -35,8 +36,8 @@ export async function generateMetadata({
     title: prefecture.officialName,
     description:
       lang === "ja"
-        ? `${prefecture.officialName}: 2025年10月1日の人口速報と、衆議院比例代表のブロック。非公式の情報です。`
-        : `${prefecture.officialName}: preliminary population at 1 October 2025 and the House proportional block. Unofficial information.`,
+        ? `${prefecture.officialName}: 人口速報、衆議院の小選挙区、参議院の選挙区。非公式の情報です。`
+        : `${prefecture.officialName}: preliminary population, House single-member districts, and the Councillors’ district. Unofficial information.`,
     path: prefecturePath(lang, slug),
     lang,
     alternatePath: prefecturePath(lang === "ja" ? "en" : "ja", slug),
@@ -58,6 +59,8 @@ export default async function PrefecturePage({
   const block = blockById(prefecture.blockId);
   const partner = prefecture.councillorsWith ? prefectureBySlug(prefecture.councillorsWith) : undefined;
   const neighbors = censusNeighbors(slug);
+  const districts = smdsIn(slug);
+  const councillors = hcFor(slug);
   const office = sourceById("soumu-senkyo");
   return (
     <JapanFrame
@@ -74,7 +77,7 @@ export default async function PrefecturePage({
       lede={ja ? undefined : prefecture.englishName}
       officeHref={office.url}
       officeLabel="総務省"
-      sources={sourcesById(["census-outline", "census-results", "soumu-kinds", "soumu-guide", "constitution"])}
+      sources={sourcesById(["census-outline", "census-results", "soumu-kinds", "soumu-guide", "constitution", "koukyo", "shugiin-members", "sangiin-hireiku"])}
     >
       <dl className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-card p-4">
@@ -103,13 +106,45 @@ export default async function PrefecturePage({
         <h2>{ja ? "このページの位置" : "Where this page sits"}</h2>
         <p>
           {ja
-            ? "この公開の地域の段は都道府県です。その下の市区町村と、衆議院の小選挙区は、まだページにしていません。"
-            : "The regional tier in this release is the prefecture. Municipalities, and the House of Representatives single-member districts, do not have pages yet."}
+            ? "この公開の地域の段は都道府県です。その下の市区町村は、まだページにしていません。衆議院の小選挙区と、この都道府県が属する比例代表、参議院の選挙区は、下の一覧から開けます。"
+            : "The regional tier in this release is the prefecture. Municipalities do not have pages yet. The single-member districts, the proportional block, and the Councillors’ district are linked below."}
         </p>
         <p>
           {ja
             ? "憲法第92条は、地方公共団体の組織と運営を、地方自治の本旨に基づいて法律で定めるとしています。第93条は、議会を置き、長と議員を住民が直接選挙するとしています。総務省は、都道府県知事と都道府県議会議員、市区町村長と市区町村議会議員を、別々の選挙として説明しています。"
             : "Article 92 says the organisation of local public bodies is fixed by law under the principle of local autonomy. Article 93 says each has an assembly and that residents directly elect the chief executive and the assembly members. The Ministry describes separate elections for prefectural governors, prefectural assembly members, municipal mayors, and municipal assembly members."}
+        </p>
+        <h2>{ja ? "衆議院の小選挙区" : "Single-member districts"}</h2>
+        <ul>
+          {districts.map((district) => (
+            <li key={district.n}>
+              <Link className="text-navy underline" href={smdPath(lang, slug, district.n)}>
+                {district.lawHeading}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p>
+          <Link className="text-navy underline" href={blockPath(lang, block.id)}>
+            {ja ? `比例代表 ${block.nameJa}` : `Proportional district ${block.nameJa}`}
+          </Link>
+        </p>
+        {councillors && (
+          <p>
+            <Link className="text-navy underline" href={hcPath(lang, councillors.canonical)}>
+              {councillors.lawName}
+            </Link>
+            {councillors.canonical !== slug
+              ? ja
+                ? "。別表第三の名称の、最初の都道府県の下にページを置いています。"
+                : ". The page sits under the first prefecture in the annex name."
+              : null}
+          </p>
+        )}
+        <p>
+          <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+            {ja ? "選挙区の一覧" : "District index"}
+          </Link>
         </p>
         {partner && (
           <p>
