@@ -105,7 +105,7 @@ function shell(input: {
 <script type="application/ld+json">${crumbsJson(input.crumbs)}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${tr ? `Resmî olmayan bilgi. <a href="${OFFICE}">Resmî seçim kurulunuzdan</a> teyit edin.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(home)}">${tr ? "Türkiye" : "Turkey"}</a> · <a href="/search/">${tr ? "Ara" : "Search"}</a> · <a href="${esc(input.otherPath)}">${tr ? "English" : "Türkçe"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav(input.crumbs)}</nav>

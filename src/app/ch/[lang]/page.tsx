@@ -13,7 +13,7 @@ import {
   POPULATION_2024,
   alphaCantons,
 } from "../../../../data/ch/cantons";
-import { cantonPath, chHome, electionPath } from "../../../../data/ch/search";
+import { cantonPath, chHome, districtsIndexPath, electionPath } from "../../../../data/ch/search";
 import { sourceById, sourcesById } from "../../../../data/ch/sources";
 import { formatNumber, ui } from "../../../../data/ch/ui";
 import type { ChLang } from "../../../../data/ch/types";
@@ -79,6 +79,9 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
     "bk-nationalrat",
     "agvch",
     "agvch-hist",
+    "opendata-hgv",
+    "parlament-members",
+    "admin-votes",
   ]);
 
   return (
@@ -255,6 +258,20 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
         <GapNote label={copy.gap} text={copy.candidateGap} />
         <GapNote label={copy.gap} text={copy.districtGap} />
         <p className="text-sm">
+          <Link className="text-navy underline" href={districtsIndexPath(lang)}>
+            {copy.districts}
+          </Link>
+        </p>
+        <p>
+          {lang === "de"
+            ? "Die Seite des Bundesrates «Die Volksabstimmungen», gelesen am 18. Oktober 2026, nennt eine Volksabstimmung vom 29. November 2026 und die Bezeichnungen AHV-Zusatzfinanzierung, Feuerwerksinitiative, Ehepaarbesteuerung und Kriegsmaterialgesetz. Diese Ausgabe veröffentlicht dazu keine Umfrage, keine Hochrechnung und kein Ergebnis."
+            : lang === "fr"
+              ? "La page allemande du Conseil fédéral «Die Volksabstimmungen», lue le 18 octobre 2026, indique une votation populaire du 29 novembre 2026 et les désignations AHV-Zusatzfinanzierung, Feuerwerksinitiative, Ehepaarbesteuerung et Kriegsmaterialgesetz. Cette édition n’en publie ni sondage, ni projection, ni résultat."
+              : lang === "it"
+                ? "La pagina tedesca del Consiglio federale «Die Volksabstimmungen», letta il 18 ottobre 2026, indica una votazione popolare del 29 novembre 2026 e le designazioni AHV-Zusatzfinanzierung, Feuerwerksinitiative, Ehepaarbesteuerung e Kriegsmaterialgesetz. Questa edizione non ne pubblica un sondaggio, una proiezione o un risultato."
+                : "The Federal Council’s German page “Die Volksabstimmungen”, read on 18 October 2026, lists a popular vote on 29 November 2026 and the labels AHV-Zusatzfinanzierung, Feuerwerksinitiative, Ehepaarbesteuerung and Kriegsmaterialgesetz. This release publishes no poll, projection, or result for that vote."}
+        </p>
+        <p className="text-sm">
           <Link className="text-navy underline" href={`${path}parties/`}>
             {copy.parties}
           </Link>
@@ -296,12 +313,12 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
       />
       <p className="text-sm text-ink-muted">
         {lang === "de"
-          ? `${CANTONS.length} Kantone. Die Seiten der Bezirke und der Gemeinden folgen nicht in dieser Ausgabe.`
+          ? `${CANTONS.length} Kantone. Die Bezirksseiten dieser Ausgabe stehen im Verzeichnis. Gemeindeseiten folgen nicht.`
           : lang === "fr"
-            ? `${CANTONS.length} cantons. Les pages des districts et des communes ne suivent pas dans cette édition.`
+            ? `${CANTONS.length} cantons. Les pages de districts de cette édition sont dans le répertoire. Les pages des communes ne suivent pas.`
             : lang === "it"
-              ? `${CANTONS.length} cantoni. Le pagine dei distretti e dei comuni non seguono in questa edizione.`
-              : `${CANTONS.length} cantons. District and municipality pages are not part of this release.`}
+              ? `${CANTONS.length} cantoni. Le pagine dei distretti di questa edizione stanno nel repertorio. Le pagine dei comuni non seguono.`
+              : `${CANTONS.length} cantons. This release’s district pages are in the register index. Municipality pages are not.`}
       </p>
     </ChFrame>
   );
