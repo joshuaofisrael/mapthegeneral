@@ -33,8 +33,9 @@ export default function AustraliaSourcesPage() {
         <p>
           What is not in these sources is not invented. Open gaps include the Governor-General’s name, the premiers and
           chief ministers, federal and state candidate lists, a polling day for the next federal election, Senate
-          counts, local government council pages, and a postcode search. Five Legislative Assembly districts had no row
-          in the Parliament of Victoria list read on 18 October 2026.
+          counts, local government council pages, and a postcode search. Victorian members are shown only where the
+          Victorian Electoral Commission results confirm them: 81 of 88 Legislative Assembly districts and 34 of 40
+          Legislative Council seats. The rest are marked as gaps.
         </p>
         <h2>Licences and attribution</h2>
         <p>
@@ -79,12 +80,15 @@ export default function AustraliaSourcesPage() {
           that report. They do not reproduce the report.
         </p>
         <p>
-          The Parliament of Victoria copyright page does not grant a Creative Commons licence. It says the website may
-          be downloaded and displayed for personal non-commercial use, research or study, or use within an organisation,
-          and that other reproduction needs permission. These pages do not reproduce the member lists. They report the
-          name, electorate, party and public office printed in the lists read on 18 October 2026, and link to those
-          lists. The Parliament’s disclaimer says the material is for information and accepts no liability for reliance
-          on it.
+          Victorian members on the Legislative Assembly and Legislative Council pages are the members the Victorian
+          Electoral Commission printed as elected: its 2022 state election results by district and by region, and its
+          by-election and supplementary election results since (Narracan 2023, Warrandyte 2023, Mulgrave 2023, Prahran
+          2025, Werribee 2025 and Nepean 2026). A name is shown only where that result still matches the sitting
+          member on 18 October 2026. Otherwise the page shows a gap. These pages do not copy the Parliament of
+          Victoria member lists, whose{" "}
+          <a href="https://www.parliament.vic.gov.au/copyright/">copyright page</a> allows only personal
+          non-commercial use, research or study, or use within an organisation. They link to the Parliament’s{" "}
+          <a href="https://www.parliament.vic.gov.au/members/">members page</a> for the current list.
         </p>
         <p>
           The ACMA page on election and referendum blackout periods, read on 18 October 2026, says there are no current

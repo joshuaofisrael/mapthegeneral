@@ -132,12 +132,28 @@ function list(items: { name: string; href: string }[]): string {
   return `<ul>${items.map((item) => `<li><a href="${esc(item.href)}">${esc(item.name)}</a></li>`).join("")}</ul>`;
 }
 
-function vicMember(member: VicMember): string {
-  const bits = [`<li>${esc(member.display)} — ${esc(member.party)}.`];
-  if (member.minister) bits.push(` Minister, as printed: ${esc(member.minister)}.`);
-  if (member.position) bits.push(` Position, as printed: ${esc(member.position)}.`);
-  bits.push(` Row marked last updated ${esc(member.rowUpdated)}.</li>`);
-  return bits.join("");
+const POV_MEMBERS_PAGE = "https://www.parliament.vic.gov.au/members/";
+
+const VEC_BY_ELECTION: Record<string, string> = {
+  "vec-narracan-2023": "the Narracan District supplementary election of Saturday 28 January 2023",
+  "vec-warrandyte-2023": "the Warrandyte District by-election of Saturday 26 August 2023",
+  "vec-mulgrave-2023": "the Mulgrave District by-election of Saturday 18 November 2023",
+  "vec-prahran-2025": "the Prahran District by-election of Saturday 8 February 2025",
+  "vec-werribee-2025": "the Werribee District by-election of Saturday 8 February 2025",
+  "vec-nepean-2026": "the Nepean District by-election of Saturday 2 May 2026",
+};
+
+function ordinal(n: number): string {
+  return ["", "1st", "2nd", "3rd", "4th", "5th"][n] ?? `${n}th`;
+}
+
+function vecDeclared(member: VicMember): string {
+  const event = VEC_BY_ELECTION[member.source] ?? "the 26 November 2022 state election";
+  return `<p>The Victorian Electoral Commission results for ${esc(event)} print the elected member as ${esc(member.printed)}, ${esc(member.party)}.</p>`;
+}
+
+function vicGap(what: string, extra = "", fill = "No name is filled in here."): string {
+  return `<p class="gap"><strong>Gap.</strong> The Victorian Electoral Commission results used here (the 2022 state election and the by-election and supplementary election results since) do not confirm ${what}. ${fill}${extra} The Parliament of Victoria publishes its <a href="${esc(POV_MEMBERS_PAGE)}">current members</a>.</p>`;
 }
 
 function baseCrumbs(extra: { name: string; path: string }[]): { name: string; path: string }[] {
@@ -228,16 +244,15 @@ function assemblyPage(item: AssemblyDistrict): string {
     index,
   );
   const member = item.member
-    ? `<ul>${vicMember(item.member)}</ul>`
-    : `<p class="gap"><strong>Gap.</strong> The Parliament of Victoria Legislative Assembly list read on 18 October 2026 (Last-Modified Sat, 17 Oct 2026 10:00:30 GMT) has no row for this district. The current member is not filled in here.</p>`;
+    ? `${vecDeclared(item.member)}\n<p>This page does not track changes after the Commission’s last declared result for this district. The Parliament of Victoria publishes its <a href="${esc(POV_MEMBERS_PAGE)}">current members</a>.</p>`
+    : vicGap("the current member for this district");
   const narracan =
     item.slug === "narracan-district"
-      ? `<p>The same report says the Narracan District election failed, and that a supplementary election for Narracan District was held on Saturday 28 January 2023. The member row above, where one is printed, is the Parliament list read on 18 October 2026. This page does not treat that row as the 2023 declaration.</p>`
+      ? `<p>The same report says the Narracan District election failed, and that a supplementary election for Narracan District was held on Saturday 28 January 2023.</p>`
       : "";
   const body = `<p>The Victorian Electoral Commission state-districts page says there are 88 electoral districts in Victoria, and that voters in a district elect one member of Parliament to represent them in Victoria’s Legislative Assembly.</p>
-<h2>Current member</h2>
+<h2>Member</h2>
 ${member}
-<p>Electorate-office street addresses, telephone numbers, email addresses and campaign websites in that list are not copied here.</p>
 <h2>Elections</h2>
 <p>The Commission’s report to Parliament says the Victorian State general election was held on 26 November 2022, and that on 26 November 2022 Victorians elected the 60th Parliament of Victoria.</p>
 ${narracan}
@@ -257,7 +272,15 @@ ${narracan}
     lede: "Victoria",
     officeHref: "https://www.vec.vic.gov.au/electoral-boundaries/state-districts",
     body,
-    sourceIds: ["vec-districts", "vec-state", "vic-parliament-2026", "vec-2022-report", "pov-assembly"],
+    sourceIds: [
+      "vec-districts",
+      item.member ? item.member.source : "vec-2022-districts",
+      "vec-by-elections",
+      "vec-state",
+      "vic-parliament-2026",
+      "vec-2022-report",
+      "pov-members",
+    ],
   });
 }
 
@@ -271,10 +294,18 @@ function councilPage(item: CouncilRegion): string {
     index,
   );
   const body = `<p>The Victorian Electoral Commission state-regions page says there are 8 electoral regions in Victoria, that each region is made up of 11 districts, and that voters in a region elect 5 members of Parliament to represent them in Victoria’s Legislative Council.</p>
-<h2>Current members</h2>
-<p>Five rows in the Parliament of Victoria Legislative Council list, read on 18 October 2026 (Last-Modified Sat, 17 Oct 2026 10:00:31 GMT). Sorted here by surname, then preferred name. That order is not a ranking in the list.</p>
-<ul>${item.members.map(vicMember).join("")}</ul>
-<p>Electorate-office street addresses, telephone numbers, email addresses and campaign websites in that list are not copied here.</p>
+<h2>Members</h2>
+<p>The Victorian Electoral Commission results by region for the 26 November 2022 state election print five members elected for ${esc(item.name)}, in order. Listed here are those members from that count who still held the seat on 18 October 2026:</p>
+<ul>${item.members.map((member) => `<li>${esc(ordinal(member.order))} elected: ${esc(member.printed)}, ${esc(member.party)}.</li>`).join("")}</ul>
+${
+  item.members.length < 5
+    ? vicGap(
+        `${5 - item.members.length === 1 ? "one of the five current members" : `${5 - item.members.length} of the five current members`} for this region`,
+        " The Commission’s page on by-elections and appointments says an upper house vacancy is filled by a person the party nominates, appointed at a joint sitting of Parliament, not by an election.",
+        5 - item.members.length === 1 ? "No name is filled in for that seat." : "No names are filled in for those seats.",
+      )
+    : `<p>This page does not track changes after the 2022 count. The Parliament of Victoria publishes its <a href="${esc(POV_MEMBERS_PAGE)}">current members</a>.</p>`
+}
 <h2>Elections</h2>
 <p>The Commission’s report to Parliament says the Victorian State general election was held on 26 November 2022, and that on 26 November 2022 Victorians elected the 60th Parliament of Victoria.</p>
 <p>The Commission says the next state election is on Saturday 28 November 2026. The Parliament of Victoria prints the same day and says nominations open on Wednesday 4 November 2026. On 18 October 2026 that day has not arrived. No candidate list is printed here. This page does not publish a poll, a projection, or a result call.</p>
@@ -282,7 +313,7 @@ function councilPage(item: CouncilRegion): string {
   return shell({
     path,
     title: item.name,
-    description: `${item.name}: Victorian Legislative Council region, five current members. Next state election Saturday 28 November 2026. Unofficial information.`,
+    description: `${item.name}: Victorian Legislative Council region, five members. Next state election Saturday 28 November 2026. Unofficial information.`,
     crumbs: baseCrumbs([
       { name: "Victoria", path: parent },
       { name: "Legislative Council regions", path: indexPath },
@@ -293,7 +324,7 @@ function councilPage(item: CouncilRegion): string {
     lede: "Victoria",
     officeHref: "https://www.vec.vic.gov.au/electoral-boundaries/state-regions",
     body,
-    sourceIds: ["vec-regions", "vec-state", "vic-parliament-2026", "vec-2022-report", "pov-council"],
+    sourceIds: ["vec-regions", "vec-2022-regions", "vec-state", "vic-parliament-2026", "vec-2022-report", "vec-appointments", "pov-members"],
   });
 }
 

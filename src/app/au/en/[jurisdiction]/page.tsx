@@ -61,7 +61,7 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
           ...item.sourceIds,
           "aec-profiles",
           "aec-2025-elected",
-          ...(slug === "victoria" ? ["vec-districts", "vec-regions", "pov-assembly", "pov-council", "acma-blackout"] : []),
+          ...(slug === "victoria" ? ["vec-districts", "vec-regions", "vec-2022-districts", "vec-2022-regions", "vec-by-elections", "pov-members", "acma-blackout"] : []),
         ].filter((id, index, all) => all.indexOf(id) === index),
       )}
     >

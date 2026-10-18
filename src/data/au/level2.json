@@ -2106,66 +2106,54 @@
       "name": "Albert Park District",
       "slug": "albert-park-district",
       "member": {
-        "display": "Ms Nina Taylor",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Cabinet Secretary",
-        "rowUpdated": "03/09/2026"
+        "printed": "TAYLOR, Nina",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Ashwood District",
       "slug": "ashwood-district",
       "member": {
-        "display": "Mr Matt Fregon",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Deputy Speaker of the Legislative Assembly",
-        "rowUpdated": "28/08/2026"
+        "printed": "FREGON, Matt",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Bass District",
       "slug": "bass-district",
       "member": {
-        "display": "Ms Jordan Crugnale",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "CRUGNALE, Jordan",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Bayswater District",
       "slug": "bayswater-district",
       "member": {
-        "display": "Mr Jackson Taylor",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "TAYLOR, Jackson",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Bellarine District",
       "slug": "bellarine-district",
       "member": {
-        "display": "Mrs Alison Marchant",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "MARCHANT, Alison",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Benambra District",
       "slug": "benambra-district",
       "member": {
-        "display": "Mr Bill Tilley",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "TILLEY, Bill",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
@@ -2177,22 +2165,18 @@
       "name": "Bendigo West District",
       "slug": "bendigo-west-district",
       "member": {
-        "display": "The Hon. Maree Edwards",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Speaker of the Legislative Assembly",
-        "rowUpdated": "15/10/2026"
+        "printed": "EDWARDS, Maree",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Bentleigh District",
       "slug": "bentleigh-district",
       "member": {
-        "display": "The Hon. Nick Staikos",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Housing, Building and Precincts, Minister for Homelessness, Minister for Seniors",
-        "position": "",
-        "rowUpdated": "22/09/2026"
+        "printed": "STAIKOS, Nick",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
@@ -2204,33 +2188,27 @@
       "name": "Box Hill District",
       "slug": "box-hill-district",
       "member": {
-        "display": "Hon. Paul Hamer",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Roads and Road Safety",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "HAMER, Paul",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Brighton District",
       "slug": "brighton-district",
       "member": {
-        "display": "Mr James Newbury",
-        "party": "Liberal Party",
-        "minister": "Shadow Attorney-General, Shadow Special Minister of State, Shadow Minister for Equality",
-        "position": "Manager of Opposition Business",
-        "rowUpdated": "28/08/2026"
+        "printed": "NEWBURY, James",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Broadmeadows District",
       "slug": "broadmeadows-district",
       "member": {
-        "display": "Ms Kathleen Matthews-Ward",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "MATTHEWS-WARD, Kathleen",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
@@ -2242,22 +2220,18 @@
       "name": "Bulleen District",
       "slug": "bulleen-district",
       "member": {
-        "display": "The Hon. Matthew Guy",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Public Transport, Shadow Minister for Ports and Freight",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "GUY, Matthew",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Bundoora District",
       "slug": "bundoora-district",
       "member": {
-        "display": "Hon. Colin Brooks",
-        "party": "Australian Labor Party",
-        "minister": "Treasurer, Minister for Industrial Relations",
-        "position": "",
-        "rowUpdated": "15/09/2026"
+        "printed": "BROOKS, Colin",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
@@ -2269,154 +2243,126 @@
       "name": "Caulfield District",
       "slug": "caulfield-district",
       "member": {
-        "display": "Mr David Southwick",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Planning, Shadow Minister for Housing and Building, Shadow Minister for Tourism and Major Events",
-        "position": "Deputy Leader of the Opposition, Deputy Leader of the Liberal Party",
-        "rowUpdated": "28/08/2026"
+        "printed": "SOUTHWICK, David",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Clarinda District",
       "slug": "clarinda-district",
       "member": {
-        "display": "Mr Meng Heang Tak",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "TAK, Meng Heang",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Cranbourne District",
       "slug": "cranbourne-district",
       "member": {
-        "display": "Ms Pauline Richards",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Health",
-        "rowUpdated": "03/09/2026"
+        "printed": "RICHARDS, Pauline",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Croydon District",
       "slug": "croydon-district",
       "member": {
-        "display": "The Hon. David Hodgett",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "HODGETT, David",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Dandenong District",
       "slug": "dandenong-district",
       "member": {
-        "display": "The Hon. Gabrielle Williams",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Education, Minister for Skills and Training, Minister for First Peoples, Minister for Women and Gender Equality",
-        "position": "Deputy Premier",
-        "rowUpdated": "28/08/2026"
+        "printed": "WILLIAMS, Gabrielle",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Eildon District",
       "slug": "eildon-district",
       "member": {
-        "display": "Ms Cindy McLeish",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Women, Shadow Minister for the Prevention of Family Violence, Shadow Minister for WorkSafe and TAC",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "McLEISH, Cindy",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Eltham District",
       "slug": "eltham-district",
       "member": {
-        "display": "Ms Vicki Ward",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Public Transport, Minister for Creative Industries",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "WARD, Vicki",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Essendon District",
       "slug": "essendon-district",
       "member": {
-        "display": "The Hon. Danny Pearson",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "PEARSON, Danny",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Eureka District",
       "slug": "eureka-district",
       "member": {
-        "display": "Hon. Michaela Settle",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Rural and Regional Development, Minister for Agriculture, Minister for Water",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "SETTLE, Michaela",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Euroa District",
       "slug": "euroa-district",
       "member": {
-        "display": "Mrs Annabelle Cleeland",
+        "printed": "CLEELAND, Annabelle",
         "party": "The Nationals",
-        "minister": "",
-        "position": "The Nationals Party Secretary, Shadow Assistant Minister for Health",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Evelyn District",
       "slug": "evelyn-district",
       "member": {
-        "display": "Ms Bridget Vallence",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Finance, Shadow Minister for Jobs and Skills, Shadow Minister for Trade and Investment",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "VALLENCE, Bridget",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Footscray District",
       "slug": "footscray-district",
       "member": {
-        "display": "Ms Katie Hall",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Housing and Homelessness, Parliamentary Secretary for Creative Industries",
-        "rowUpdated": "03/09/2026"
+        "printed": "HALL, Katie",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Frankston District",
       "slug": "frankston-district",
       "member": {
-        "display": "Hon. Paul Edbrooke",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Police, Minister for Crime Prevention, Minister for Emergency Services, Minister for Multicultural Affairs",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "EDBROOKE, Paul",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Geelong District",
       "slug": "geelong-district",
       "member": {
-        "display": "Ms Chris Couzens",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for First Peoples",
-        "rowUpdated": "28/08/2026"
+        "printed": "COUZENS, Christine",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
@@ -2428,616 +2374,496 @@
       "name": "Gippsland South District",
       "slug": "gippsland-south-district",
       "member": {
-        "display": "Mr Danny O'Brien",
+        "printed": "O'BRIEN, Danny",
         "party": "The Nationals",
-        "minister": "Shadow Minister for Regional Development and Liveability, Shadow Minister for Emergency Services, Shadow Minister for Roads and Road Safety",
-        "position": "Deputy Leader of the Coalition, Leader of The Nationals",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Glen Waverley District",
       "slug": "glen-waverley-district",
       "member": {
-        "display": "Mr John Mullahy",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Government Whip in the Legislative Assembly",
-        "rowUpdated": "28/08/2026"
+        "printed": "MULLAHY, John",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Greenvale District",
       "slug": "greenvale-district",
       "member": {
-        "display": "Mr Iwan Walters",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Multicultural Affairs, Parliamentary Secretary for Disability, Acting Speaker",
-        "rowUpdated": "04/09/2026"
+        "printed": "WALTERS, Iwan",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Hastings District",
       "slug": "hastings-district",
       "member": {
-        "display": "Mr Paul Mercurio",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "MERCURIO, Paul",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Hawthorn District",
       "slug": "hawthorn-district",
       "member": {
-        "display": "Mr John Pesutto",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "PESUTTO, John",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Ivanhoe District",
       "slug": "ivanhoe-district",
       "member": {
-        "display": "The Hon. Anthony Carbines",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Artificial Intelligence and the Digital Economy, Minister for Major Events, Minister for Medical Research, Minister for Racing, Minister for Economic Development",
-        "position": "Leader of the House",
-        "rowUpdated": "28/08/2026"
+        "printed": "CARBINES, Anthony",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Kalkallo District",
       "slug": "kalkallo-district",
       "member": {
-        "display": "The Hon. Ros Spence",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Corrections, Minister for Youth Justice, Minister for Victim Support, Minister for Community Sport",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "SPENCE, Ros",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Kew District",
       "slug": "kew-district",
       "member": {
-        "display": "Ms Jess Wilson",
-        "party": "Liberal Party",
-        "minister": "Leader of the Opposition, Shadow Treasurer",
-        "position": "Leader of the Liberal Party",
-        "rowUpdated": "28/08/2026"
+        "printed": "WILSON, Jess",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Kororoit District",
       "slug": "kororoit-district",
       "member": {
-        "display": "Hon. Luba Grigorovitch",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Youth, Minister for Carers and Volunteers",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "GRIGOROVITCH, Luba",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Lara District",
       "slug": "lara-district",
       "member": {
-        "display": "Ms Ella George",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Mental Health and Suicide Prevention",
-        "rowUpdated": "28/08/2026"
+        "printed": "GEORGE, Ella",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Laverton District",
       "slug": "laverton-district",
       "member": {
-        "display": "Ms Sarah Connolly",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "CONNOLLY, Sarah",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Lowan District",
       "slug": "lowan-district",
       "member": {
-        "display": "Ms Emma Kealy",
+        "printed": "KEALY, Emma",
         "party": "The Nationals",
-        "minister": "Shadow Minister for Agriculture, Shadow Minister for Mental Health",
-        "position": "Deputy Leader of The Nationals",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Macedon District",
       "slug": "macedon-district",
       "member": {
-        "display": "Hon. Mary-Anne Thomas",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "THOMAS, Mary-Anne",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Malvern District",
       "slug": "malvern-district",
       "member": {
-        "display": "The Hon. Michael O'Brien",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "O'BRIEN, Michael",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Melbourne District",
       "slug": "melbourne-district",
       "member": {
-        "display": "Ms Ellen Sandell",
-        "party": "The Australian Greens - Victoria",
-        "minister": "",
-        "position": "Leader of The Victorian Greens, Spokesperson for Climate Change and Emissions, Spokesperson for Gas and Resources, Spokesperson for Biodiversity, Environment and Forests, Spokesperson for Treasury and Finance, Spokesperson for Emergency Services and Climate Disaster Preparedness, Spokesperson for First Nations",
-        "rowUpdated": "28/08/2026"
+        "printed": "SANDELL, Ellen",
+        "party": "Australian Greens",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Melton District",
       "slug": "melton-district",
       "member": {
-        "display": "Mr Steve McGhie",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "McGHIE, Steve",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Mildura District",
       "slug": "mildura-district",
       "member": {
-        "display": "Ms Jade Benham",
+        "printed": "BENHAM, Jade",
         "party": "The Nationals",
-        "minister": "Shadow Minister for Water, Shadow Minister for Consumer Affairs, Shadow Minister for Disability, Ageing, Carers and Volunteers",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Mill Park District",
       "slug": "mill-park-district",
       "member": {
-        "display": "Hon. Lily D'Ambrosio",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "15/10/2026"
+        "printed": "D'AMBROSIO, Lily",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Monbulk District",
       "slug": "monbulk-district",
       "member": {
-        "display": "Ms Daniela De Martino",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Secretary to the Parliamentary Labor Party, Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "DE MARTINO, Daniela",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Mordialloc District",
       "slug": "mordialloc-district",
       "member": {
-        "display": "Hon. Tim Richardson",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Local Government, Minister for Consumer Affairs, Minister for Renters",
-        "position": "",
-        "rowUpdated": "03/09/2026"
+        "printed": "RICHARDSON, Tim",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Mornington District",
       "slug": "mornington-district",
       "member": {
-        "display": "Mr Chris Crewther",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "Liberal Party Whip in the Legislative Assembly, Shadow Assistant Minister to the Shadow Treasurer, Shadow Assistant Minister for Multicultural and Multifaith Affairs",
-        "rowUpdated": "28/08/2026"
+        "printed": "CREWTHER, Chris",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Morwell District",
       "slug": "morwell-district",
       "member": {
-        "display": "Mr Martin Cameron",
+        "printed": "CAMERON, Martin",
         "party": "The Nationals",
-        "minister": "",
-        "position": "The Nationals Whip in the Legislative Assembly, Shadow Assistant Minister for Energy Affordability, Shadow Assistant Minister for Small Business, Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Mulgrave District",
       "slug": "mulgrave-district",
       "member": {
-        "display": "Ms Eden Foster",
+        "printed": "FOSTER, Eden",
         "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-mulgrave-2023"
       }
     },
     {
       "name": "Murray Plains District",
       "slug": "murray-plains-district",
       "member": {
-        "display": "The Hon. Peter Walsh",
+        "printed": "WALSH, Peter",
         "party": "The Nationals",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "15/10/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Narracan District",
       "slug": "narracan-district",
       "member": {
-        "display": "Mr Wayne Farnham",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "Shadow Assistant Minister to the Leader of the Opposition (Regional), Shadow Assistant Minister for Planning, Shadow Assistant Minister for Housing and Building, Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "FARNHAM, Wayne",
+        "party": "Liberal",
+        "source": "vec-narracan-2023"
       }
     },
     {
       "name": "Narre Warren North District",
       "slug": "narre-warren-north-district",
       "member": {
-        "display": "Ms Belinda Wilson",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Deputy Government Whip in the Assembly",
-        "rowUpdated": "28/08/2026"
+        "printed": "WILSON, Belinda",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Narre Warren South District",
       "slug": "narre-warren-south-district",
       "member": {
-        "display": "Mr Gary Maas",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "MAAS, Gary",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Nepean District",
       "slug": "nepean-district",
       "member": {
-        "display": "Mr Anthony Marsh",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "MARSH, Anthony",
+        "party": "Liberal",
+        "source": "vec-nepean-2026"
       }
     },
     {
       "name": "Niddrie District",
       "slug": "niddrie-district",
       "member": {
-        "display": "The Hon. Ben Carroll",
-        "party": "Australian Labor Party",
-        "minister": "Premier",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "CARROLL, Ben",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Northcote District",
       "slug": "northcote-district",
       "member": {
-        "display": "Ms Kat Theophanous",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary to the Premier",
-        "rowUpdated": "03/09/2026"
+        "printed": "THEOPHANOUS, Kat",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Oakleigh District",
       "slug": "oakleigh-district",
       "member": {
-        "display": "Mr Steve Dimopoulos",
-        "party": "Australian Labor Party",
-        "minister": "Minister for WorkSafe and the TAC, Minister for Sport, Minister for Equality",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "DIMOPOULOS, Steve",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Ovens Valley District",
       "slug": "ovens-valley-district",
       "member": {
-        "display": "Mr Tim McCurdy",
+        "printed": "McCURDY, Tim",
         "party": "The Nationals",
-        "minister": "Shadow Minister for Liquor and Gaming, Shadow Minister for Racing, Shadow Minister for Veterans' Affairs",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Pakenham District",
       "slug": "pakenham-district",
       "member": {
-        "display": "Ms Emma Vulin",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "VULIN, Emma",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Pascoe Vale District",
       "slug": "pascoe-vale-district",
       "member": {
-        "display": "Mr Anthony Cianflone",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Community Safety",
-        "rowUpdated": "28/08/2026"
+        "printed": "CIANFLONE, Anthony",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Point Cook District",
       "slug": "point-cook-district",
       "member": {
-        "display": "Mr Mathew Hilakari",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Education",
-        "rowUpdated": "03/09/2026"
+        "printed": "HILAKARI, Mathew",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Polwarth District",
       "slug": "polwarth-district",
       "member": {
-        "display": "Mr Richard Riordan",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "RIORDAN, Richard",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Prahran District",
       "slug": "prahran-district",
       "member": {
-        "display": "Ms Rachel Westaway",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "Shadow Assistant Minister to the Leader of the Opposition (Metropolitan), Shadow Assistant Minister for Tourism, Hospitality and Major Events, Shadow Assistant Minister for Melbourne",
-        "rowUpdated": "28/08/2026"
+        "printed": "WESTAWAY, Rachel",
+        "party": "Liberal",
+        "source": "vec-prahran-2025"
       }
     },
     {
       "name": "Preston District",
       "slug": "preston-district",
       "member": {
-        "display": "Mr Nathan Lambert",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Children, Parliamentary Secretary for Climate Action, Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "LAMBERT, Nathan",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Richmond District",
       "slug": "richmond-district",
       "member": {
-        "display": "Ms Gabrielle de Vietri",
-        "party": "The Australian Greens - Victoria",
-        "minister": "",
-        "position": "Party Room Chair, Spokesperson for Public and Affordable Housing, Spokesperson for Renters' Rights, Spokesperson for Arts, Spokesperson for Peace and Disarmament, Spokesperson for Veterans",
-        "rowUpdated": "28/08/2026"
+        "printed": "DE VIETRI, Gabrielle",
+        "party": "Australian Greens",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Ringwood District",
       "slug": "ringwood-district",
-      "member": {
-        "display": "Mr Will Fowles",
-        "party": "Independent",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
-      }
+      "member": null
     },
     {
       "name": "Ripon District",
       "slug": "ripon-district",
       "member": {
-        "display": "Ms Martha Haylett",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Rural and Regional Development",
-        "rowUpdated": "03/09/2026"
+        "printed": "HAYLETT, Martha",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Rowville District",
       "slug": "rowville-district",
       "member": {
-        "display": "The Hon. Kim Wells",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "21/09/2026"
+        "printed": "WELLS, Kim",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Sandringham District",
       "slug": "sandringham-district",
       "member": {
-        "display": "Mr Brad Rowswell",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Education, Shadow Minister for Industrial Relations, Shadow Minister for Government Services",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "ROWSWELL, Brad",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Shepparton District",
       "slug": "shepparton-district",
       "member": {
-        "display": "Ms Kim O'Keeffe",
+        "printed": "O'KEEFFE, Kim",
         "party": "The Nationals",
-        "minister": "",
-        "position": "Shadow Assistant Minister for Regional Multicultural Affairs, Acting Speaker",
-        "rowUpdated": "21/09/2026"
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "South Barwon District",
       "slug": "south-barwon-district",
-      "member": {
-        "display": "Mr Darren Cheeseman",
-        "party": "Independent",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
-      }
+      "member": null
     },
     {
       "name": "South-West Coast District",
       "slug": "south-west-coast-district",
       "member": {
-        "display": "Ms Roma Britnell",
-        "party": "Liberal Party",
-        "minister": "",
-        "position": "Shadow Cabinet Secretary, Shadow Assistant Minister for Roads and Road Safety",
-        "rowUpdated": "28/08/2026"
+        "printed": "BRITNELL, Roma",
+        "party": "Liberal",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "St Albans District",
       "slug": "st-albans-district",
       "member": {
-        "display": "The Hon. Natalie Suleyman",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Trade, Tourism and Investment, Minister for Small and Family Business, Minister for Veterans",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "SULEYMAN, Natalie",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Sunbury District",
       "slug": "sunbury-district",
       "member": {
-        "display": "Mr Josh Bull",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary to the Treasurer, Parliamentary Secretary for Roads",
-        "rowUpdated": "03/09/2026"
+        "printed": "BULL, Josh",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Sydenham District",
       "slug": "sydenham-district",
       "member": {
-        "display": "The Hon. Natalie Hutchins",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "15/10/2026"
+        "printed": "HUTCHINS, Natalie",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Tarneit District",
       "slug": "tarneit-district",
       "member": {
-        "display": "Mr Dylan Wight",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for Jobs and Industrial Relations, Parliamentary Secretary for Racing and Major Events",
-        "rowUpdated": "04/09/2026"
+        "printed": "WIGHT, Dylan",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Thomastown District",
       "slug": "thomastown-district",
       "member": {
-        "display": "Ms Bronwyn Halfpenny",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Parliamentary Secretary for the State Electricity Commission",
-        "rowUpdated": "28/08/2026"
+        "printed": "HALFPENNY, Bronwyn",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Warrandyte District",
       "slug": "warrandyte-district",
       "member": {
-        "display": "Mrs Nicole Werner",
-        "party": "Liberal Party",
-        "minister": "Shadow Minister for Home Ownership and Housing Affordability, Shadow Minister for Youth, Shadow Minister for Child Protection",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "WERNER, Nicole",
+        "party": "Liberal",
+        "source": "vec-warrandyte-2023"
       }
     },
     {
       "name": "Wendouree District",
       "slug": "wendouree-district",
       "member": {
-        "display": "Ms Juliana Addison",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "ADDISON, Juliana",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Werribee District",
       "slug": "werribee-district",
       "member": {
-        "display": "Mr John Lister",
+        "printed": "LISTER, John",
         "party": "Australian Labor Party",
-        "minister": "",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "source": "vec-werribee-2025"
       }
     },
     {
       "name": "Williamstown District",
       "slug": "williamstown-district",
       "member": {
-        "display": "The Hon. Melissa Horne",
-        "party": "Australian Labor Party",
-        "minister": "Minister for Ports and Freight, Minister for Jobs, Minister for Industry and Advanced Manufacturing, Minister for Defence Industry",
-        "position": "",
-        "rowUpdated": "28/08/2026"
+        "printed": "HORNE, Melissa",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     },
     {
       "name": "Yan Yean District",
       "slug": "yan-yean-district",
       "member": {
-        "display": "Ms Lauren Kathage",
-        "party": "Australian Labor Party",
-        "minister": "",
-        "position": "Acting Speaker",
-        "rowUpdated": "28/08/2026"
+        "printed": "KATHAGE, Lauren",
+        "party": "Australian Labor Party - Victorian Branch",
+        "source": "vec-2022-districts"
       }
     }
   ],
@@ -3047,39 +2873,29 @@
       "slug": "eastern-victoria-region",
       "members": [
         {
-          "display": "Ms Melina Bath",
+          "printed": "HEATH, Renee",
+          "party": "Liberal",
+          "order": 1
+        },
+        {
+          "printed": "McINTOSH, Tom",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 2
+        },
+        {
+          "printed": "BATH, Melina",
           "party": "The Nationals",
-          "minister": "Shadow Minister for Public Land Management, Shadow Minister for Aboriginal Affairs, Shadow Minister for Outdoor Recreation",
-          "position": "Leader of The Nationals in the Legislative Council",
-          "rowUpdated": "10/08/2026"
+          "order": 3
         },
         {
-          "display": "Mr Jeff Bourman",
-          "party": "Shooters, Fishers and Farmers Party Victoria",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "SHING, Harriet",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 4
         },
         {
-          "display": "Dr Renee Heath",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Youth Justice, Shadow Minister for Crime Prevention and Victim Support, Shadow Minister for Bay Protection",
-          "position": "Opposition Whip in Legislative Council",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Mr Tom McIntosh",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "12/08/2026"
-        },
-        {
-          "display": "Hon. Harriet Shing",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "BOURMAN, Jeff",
+          "party": "Shooters, Fishers & Farmers Vic",
+          "order": 5
         }
       ]
     },
@@ -3088,39 +2904,24 @@
       "slug": "north-eastern-metropolitan-region",
       "members": [
         {
-          "display": "The Hon. Shaun Leane",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "President of the Legislative Council",
-          "rowUpdated": "10/08/2026"
+          "printed": "LEANE, Shaun",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 1
         },
         {
-          "display": "Mr Nick McGowan",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Environment, Shadow Minister for Fire Rescue Victoria",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "TERPSTRA, Sonja",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 3
         },
         {
-          "display": "Mr Aiv Puglielli",
-          "party": "The Australian Greens - Victoria",
-          "minister": "",
-          "position": "The Victorian Greens Whip - Legislative Council, Spokesperson for Legal Cannabis and Drug Harm Reduction, Spokesperson for LGBTIQA+ Equality, Spokesperson for Economic Justice and Consumer Rights, Spokesperson for Young People, Spokesperson for Free Uni and TAFE, Spokesperson for Workers' Rights",
-          "rowUpdated": "10/08/2026"
+          "printed": "McGOWAN, Nick",
+          "party": "Liberal",
+          "order": 4
         },
         {
-          "display": "Ms Sonja Terpstra",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Mr Richard Welch",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Industry, Shadow Minister for Manufacturing and Innovation, Shadow Minister for AI and the Digital Economy",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "PUGLIELLI, Aiv",
+          "party": "Australian Greens",
+          "order": 5
         }
       ]
     },
@@ -3129,39 +2930,19 @@
       "slug": "northern-metropolitan-region",
       "members": [
         {
-          "display": "The Hon. Enver Erdogan",
-          "party": "Australian Labor Party",
-          "minister": "Minister for Finance, Minister for Casino, Gaming and Liquor Regulation, Minister for Government Services",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "WATT, Sheena",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 1
         },
         {
-          "display": "Ms Anasina Gray-Barberio",
-          "party": "The Australian Greens - Victoria",
-          "minister": "",
-          "position": "Spokesperson for Multiculturalism and Anti-Racism, Spokesperson for Women, Gender Equality and Family Violence, Spokesperson for Child Protection, Spokesperson for Disability Rights and Services, Spokesperson for Community Services, Spokesperson for Ageing, Spokesperson for Sport, Spokesperson for Early Childhood Education and Kinder",
-          "rowUpdated": "23/09/2026"
+          "printed": "MULHOLLAND, Evan",
+          "party": "Liberal",
+          "order": 2
         },
         {
-          "display": "Mr Evan Mulholland",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Transport Infrastructure, Shadow Minister for Multicultural and Multifaith Affairs",
-          "position": "Deputy Leader of the Opposition in the Legislative Council, Deputy Leader of the Liberal Party in the Legislative Council",
-          "rowUpdated": "05/10/2026"
-        },
-        {
-          "display": "The Hon. Adem Somyurek",
-          "party": "Independent",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Ms Sheena Watt",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "Parliamentary Secretary for Public and Active Transport, Parliamentary Secretary for Community Sport",
-          "rowUpdated": "10/08/2026"
+          "printed": "ERDOGAN, Enver",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 4
         }
       ]
     },
@@ -3170,39 +2951,24 @@
       "slug": "northern-victoria-region",
       "members": [
         {
-          "display": "Mrs Gaelle Broad",
+          "printed": "LOVELL, Wendy",
+          "party": "Liberal",
+          "order": 1
+        },
+        {
+          "printed": "SYMES, Jaclyn",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 2
+        },
+        {
+          "printed": "BROAD, Gaelle",
           "party": "The Nationals",
-          "minister": "",
-          "position": "The National Party Whip in the Legislative Council, Shadow Assistant Minister for Regional Development and Agriculture",
-          "rowUpdated": "10/08/2026"
+          "order": 3
         },
         {
-          "display": "The Hon. Wendy Lovell",
-          "party": "Liberal Party",
-          "minister": "",
-          "position": "Deputy President of the Legislative Council",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Ms Georgie Purcell",
+          "printed": "PURCELL, Georgie",
           "party": "Animal Justice Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Ms Jaclyn Symes",
-          "party": "Australian Labor Party",
-          "minister": "Minister for Energy and Resources, Minister for Environment, Minister for Climate Action, Minister for the State Electricity Commission",
-          "position": "Leader of the Government in the Legislative Council",
-          "rowUpdated": "19/08/2026"
-        },
-        {
-          "display": "Ms Rikkie-Lee Tyrrell",
-          "party": "One Nation Victoria",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/09/2026"
+          "order": 4
         }
       ]
     },
@@ -3211,39 +2977,24 @@
       "slug": "south-eastern-metropolitan-region",
       "members": [
         {
-          "display": "Mr Michael Galea",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "TARLAMIS, Lee",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 1
         },
         {
-          "display": "Mrs Ann-Marie Hermans",
-          "party": "Liberal Party",
-          "minister": "",
-          "position": "Shadow Assistant Minister for Community Safety",
-          "rowUpdated": "10/08/2026"
+          "printed": "HERMANS, Ann-Marie",
+          "party": "Liberal",
+          "order": 2
         },
         {
-          "display": "Mr David Limbrick",
-          "party": "Libertarian Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "GALEA, Michael",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 3
         },
         {
-          "display": "Ms Rachel Payne",
+          "printed": "PAYNE, Rachel",
           "party": "Legalise Cannabis Victoria",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Mr Lee Tarlamis",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "Government Whip in the Legislative Council",
-          "rowUpdated": "10/08/2026"
+          "order": 4
         }
       ]
     },
@@ -3252,39 +3003,29 @@
       "slug": "southern-metropolitan-region",
       "members": [
         {
-          "display": "Mr Ryan Batchelor",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "Parliamentary Secretary for Emergency Services",
-          "rowUpdated": "10/08/2026"
+          "printed": "DAVIS, David",
+          "party": "Liberal",
+          "order": 1
         },
         {
-          "display": "Mr John Berger",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "BERGER, John",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 2
         },
         {
-          "display": "Ms Katherine Copsey",
-          "party": "The Australian Greens - Victoria",
-          "minister": "",
-          "position": "Deputy Party Room Chair, Spokesperson for Justice, Spokesperson for Public Transport and Roads, Spokesperson for Gambling Harm Reduction, Spokesperson for Animal Protection, Spokesperson for Major Events",
-          "rowUpdated": "10/08/2026"
+          "printed": "CROZIER, Georgie",
+          "party": "Liberal",
+          "order": 3
         },
         {
-          "display": "Ms Georgie Crozier",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Health, Shadow Minister for Ambulance Services, Shadow Minister for Medical Research",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "COPSEY, Katherine",
+          "party": "Australian Greens",
+          "order": 4
         },
         {
-          "display": "The Hon. David Davis",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Energy and Emissions Reduction, Shadow Minister for Resources, Shadow Minister for Arts and Creative Industries",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "BATCHELOR, Ryan",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 5
         }
       ]
     },
@@ -3293,39 +3034,24 @@
       "slug": "western-metropolitan-region",
       "members": [
         {
-          "display": "Hon. Lizzie Blandthorn",
-          "party": "Australian Labor Party",
-          "minister": "Minister for Children, Minister for Disability",
-          "position": "Deputy Leader of the Government in the Legislative Council",
-          "rowUpdated": "10/08/2026"
+          "printed": "BLANDTHORN, Lizzie",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 1
         },
         {
-          "display": "Mrs Moira Deeming",
-          "party": "Family First Victoria",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "17/09/2026"
+          "printed": "STITT, Ingrid",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 3
         },
         {
-          "display": "Mr David Ettershank",
+          "printed": "ETTERSHANK, David",
           "party": "Legalise Cannabis Victoria",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "order": 4
         },
         {
-          "display": "Mr Trung Luu",
-          "party": "Liberal Party",
-          "minister": "",
-          "position": "Secretary of the Parliamentary Liberal Party, Shadow Assistant Minister for Police and Corrections",
-          "rowUpdated": "10/08/2026"
-        },
-        {
-          "display": "Ms Ingrid Stitt",
-          "party": "Australian Labor Party",
-          "minister": "Minister for Health, Minister for Mental Health, Minister for Ambulance Services, Special Minister of State",
-          "position": "",
-          "rowUpdated": "10/09/2026"
+          "printed": "LUU, Trung",
+          "party": "Liberal",
+          "order": 5
         }
       ]
     },
@@ -3334,39 +3060,29 @@
       "slug": "western-victoria-region",
       "members": [
         {
-          "display": "Ms Jacinta Ermacora",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "14/10/2026"
+          "printed": "ERMACORA, Jacinta",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 1
         },
         {
-          "display": "Dr Sarah Mansfield",
-          "party": "The Australian Greens - Victoria",
-          "minister": "",
-          "position": "Leader of the Greens in the Legislative Council, Deputy Leader of the Victorian Greens, Spokesperson for Mental Health, Spokesperson for Agriculture, Spokesperson for Rural and Regional Communities, Spokesperson for Water, Spokesperson for Local Government, Spokesperson for Health, Spokesperson for Sustainable Cities and Planning",
-          "rowUpdated": "10/08/2026"
+          "printed": "McARTHUR, Bev",
+          "party": "Liberal",
+          "order": 2
         },
         {
-          "display": "Mrs Bev McArthur",
-          "party": "Liberal Party",
-          "minister": "Shadow Minister for Local Government, Shadow Minister for Small Business",
-          "position": "Leader of the Liberal Party in the Legislative Council, Leader of the Opposition in the Legislative Council",
-          "rowUpdated": "10/08/2026"
+          "printed": "TIERNEY, Gayle",
+          "party": "Australian Labor Party - Victorian Branch",
+          "order": 3
         },
         {
-          "display": "Mr Joe McCracken",
-          "party": "Liberal Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "10/08/2026"
+          "printed": "MANSFIELD, Sarah",
+          "party": "Australian Greens",
+          "order": 4
         },
         {
-          "display": "The Hon. Gayle Tierney",
-          "party": "Australian Labor Party",
-          "minister": "",
-          "position": "",
-          "rowUpdated": "08/09/2026"
+          "printed": "McCRACKEN, Joe",
+          "party": "Liberal",
+          "order": 5
         }
       ]
     }
