@@ -7,11 +7,12 @@
     "prebuild": "tsx scripts/build-indexes.ts && tsx scripts/render-municipalities.ts && tsx scripts/render-turkey-level2.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-ca-level2.ts && tsx scripts/render-mx-distritos.ts && tsx scripts/render-de-level2.ts && tsx scripts/render-jp-districts.ts",
     "predev": "tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-mx-distritos.ts",
     "build": "next build",
-    "postbuild": "node scripts/prune-export.mjs",
+    "postbuild": "node scripts/prune-export.mjs && tsx scripts/check-election-law.ts",
     "dev": "next dev",
     "start": "python3 -m http.server 3000 --directory out",
     "lint": "next lint",
-    "indexes": "tsx scripts/build-indexes.ts"
+    "indexes": "tsx scripts/build-indexes.ts",
+    "check:election-law": "tsx scripts/check-election-law.ts"
   },
   "dependencies": {
     "next": "^15.5.4",
