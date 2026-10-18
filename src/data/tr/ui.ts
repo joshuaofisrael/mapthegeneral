@@ -21,7 +21,7 @@ const EN = {
   postcodeGap:
     "A postcode search is not wired up. This release did not add an official open postcode-to-province file. Five-digit queries are not matched to a province.",
   mayorGap:
-    "The mayor’s name is not copied on this page. The Supreme Election Council proclaimed the 31 March 2024 local-election results in decision 2024/2367. Liste 2 covers 30 metropolitan mayoralties and Liste 3 covers 1,356 municipal mayoralties, with the cancelled contests named on Liste 3 left out of that total. This release does not reprint the name of the person elected in each place.",
+    "District pages name the ilçe belediye başkanı when the YSK open-data file of people elected on 31 March 2024 has one. Liste 3 leaves out seven cancelled contests. Three of those are districts: Aksaray-Güzelyurt, Kayseri-Pınarbaşı, and Şanlıurfa-Hilvan. The elected person’s name is not on those three district pages. The kaymakam’s name is not copied.",
   governorGap:
     "The governor’s name is not copied on this page. Article 126 of the Constitution says provincial administration is based on deconcentration. The Interior Ministry publishes the current governors.",
   candidateGap:
@@ -31,7 +31,7 @@ const EN = {
   localNextGap:
     "Law 2972 article 8 says ordinary local elections are held every five years, that 1 January of the fifth year is the start, and that polling day is the last Sunday of March of that year. Decision 2023/1565 applied that rule to 31 March 2024. No later decision setting the next ordinary local polling day was read on 17 October 2026, so this page does not print one.",
   lowerTierGap:
-    "District, municipality, town, village, and neighbourhood pages are not in this release. TÜİK’s 2025 statistical yearbook counts 81 provinces, 922 districts, 404 towns, and 18,249 villages, and its note says province centres (central districts) are not included in the district count.",
+    "Town, village, and neighbourhood pages are not in this release. TÜİK’s 2025 statistical yearbook counts 922 districts with a note that province centres are not included, plus 404 towns and 18,249 villages. This release publishes 973 districts from the YSK ilçe belediye başkanı list, not the yearbook’s 922.",
 };
 
 const TR = {
@@ -55,7 +55,7 @@ const TR = {
   postcodeGap:
     "Posta kodu araması bağlı değil. Bu sürüm, resmî ve açık bir posta kodu–il dosyası eklemedi. Beş haneli bir sorgu bir ile eşlenmez.",
   mayorGap:
-    "Belediye başkanının adı bu sayfada yok. Yüksek Seçim Kurulu, 31 Mart 2024 mahalli idareler seçiminin sonuçlarını 2024/2367 sayılı kararla ilan etti. Liste 2, 30 büyükşehir belediye başkanlığını; Liste 3, 1.356 belediye başkanlığını kapsar. Liste 3’te adı yazılan iptal edilen yarışlar bu toplama girmez. Bu sürüm, her yerde seçilen kişinin adını aktarmaz.",
+    "İlçe sayfaları, 31 Mart 2024 seçilenler dosyasında adı varsa ilçe belediye başkanını yazar. Liste 3, yedi iptal edilen yarışı toplama almaz. Bunların üçü ilçedir: Aksaray-Güzelyurt, Kayseri-Pınarbaşı ve Şanlıurfa-Hilvan. Seçilen kişinin adı o üç ilçe sayfasında yoktur. Kaymakamın adı kopyalanmadı.",
   governorGap:
     "Valinin adı bu sayfada yok. Anayasanın 126. maddesi, il idaresinin yetki genişliğine dayandığını söyler. Güncel valileri İçişleri Bakanlığı yayımlar.",
   candidateGap:
@@ -65,7 +65,7 @@ const TR = {
   localNextGap:
     "2972 sayılı Kanunun 8. maddesi, mahalli idareler seçimlerinin beş yılda bir yapıldığını, her seçim döneminin beşinci yılındaki 1 Ocak gününün başlangıç olduğunu ve aynı yılın Mart ayının son Pazar gününün oy günü olduğunu söyler. 2023/1565 sayılı karar bu kuralı 31 Mart 2024’e uygulamıştır. 17 Ekim 2026’da, bir sonraki olağan mahalli seçimin gününü belirleyen daha sonraki bir karar okunmadı; bu sayfa o günü yazmaz.",
   lowerTierGap:
-    "İlçe, belediye, belde, köy ve mahalle sayfaları bu sürümde yok. TÜİK’in 2025 istatistik yıllığı 81 il, 922 ilçe, 404 belde ve 18.249 köy sayar. Dipnot, il merkezlerinin (merkez ilçelerin) ilçe sayısına dahil olmadığını söyler.",
+    "Belde, köy ve mahalle sayfaları bu sürümde yoktur. TÜİK’in 2025 istatistik yıllığı, il merkezlerinin dahil olmadığı 922 ilçe ile 404 belde ve 18.249 köy sayar. Bu sürüm, YSK ilçe belediye başkanı listesindeki 973 ilçeyi yayımlar; yıllıktaki 922 sayısını değil.",
 };
 
 export function ui(lang: TrLang) {

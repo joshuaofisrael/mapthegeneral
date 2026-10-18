@@ -4,6 +4,13 @@ import { TurkeyFrame } from "@/app/tr/turkey-frame";
 import { formatNumber } from "@/data/tr/format";
 import { asTrLang } from "@/data/tr/lang";
 import { otherLang, provincePath, turkeyHome, turkeyMetadata } from "@/data/tr/metadata";
+import { LinkGrid } from "@/components/LinkGrid";
+import {
+  constituenciesInProvince,
+  constituencyPath,
+  districtPath,
+  districtsInProvince,
+} from "@/data/tr/level2";
 import { PROVINCES, constituencyBand, provinceBySlug, provinceNeighbors } from "@/data/tr/provinces";
 import { sourceById, sourcesById } from "@/data/tr/sources";
 import { ui } from "@/data/tr/ui";
@@ -51,6 +58,8 @@ export default async function ProvincePage({
   const path = provincePath(lang, slug);
   const neighbors = provinceNeighbors(slug);
   const band = constituencyBand(province.deputies2023);
+  const districts = districtsInProvince(slug);
+  const cevres = constituenciesInProvince(slug);
 
   return (
     <TurkeyFrame
@@ -152,6 +161,23 @@ export default async function ProvincePage({
         <GapNote label={copy.gap} text={copy.lowerTierGap} />
         <GapNote label={copy.gap} text={copy.candidateGap} />
       </section>
+
+      <LinkGrid
+        heading={tr ? "İlçeler" : "Districts"}
+        items={districts.map((district) => ({
+          href: districtPath(lang, slug, district.slug),
+          title: district.name,
+          detail: district.mayor ? district.mayor.name : tr ? "Başkan adı yok" : "No mayor name",
+        }))}
+      />
+      <LinkGrid
+        heading={tr ? "Seçim çevreleri" : "Constituencies"}
+        items={cevres.map((row) => ({
+          href: constituencyPath(lang, row.slug),
+          title: row.name,
+          detail: tr ? `${row.seats2023} sandalye, 2023` : `${row.seats2023} seats, 2023`,
+        }))}
+      />
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
