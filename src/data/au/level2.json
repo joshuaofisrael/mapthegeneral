@@ -1,0 +1,3374 @@
+{
+  "divisions": [
+    {
+      "name": "Bean",
+      "slug": "bean",
+      "stateLabel": "ACT",
+      "jurisdictionSlug": "australian-capital-territory",
+      "area": "1,913",
+      "profilePath": "/bean",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Smith, Mr David Philip Benedict Government Whip",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Canberra",
+      "slug": "canberra",
+      "stateLabel": "ACT",
+      "jurisdictionSlug": "australian-capital-territory",
+      "area": "312",
+      "profilePath": "/canberra",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Payne, Ms Alicia Emma",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Fenner",
+      "slug": "fenner",
+      "stateLabel": "ACT",
+      "jurisdictionSlug": "australian-capital-territory",
+      "area": "238",
+      "profilePath": "/fenner",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Leigh, The Hon Dr Andrew Keith Assistant Minister for Productivity, Competition, Charities and Treasury",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Banks",
+      "slug": "banks",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "61",
+      "profilePath": "/banks",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Soon, Mr Xian-Zhi (Zhi)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Barton",
+      "slug": "barton",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "42",
+      "profilePath": "/Barton",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Ambihaipahar, Ms Ash",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bennelong",
+      "slug": "bennelong",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "60",
+      "profilePath": "/bennelong",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Laxale, Mr Jerome Alexandre Alain",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Berowra",
+      "slug": "berowra",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "751",
+      "profilePath": "/berowra",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Leeser, Mr Julian",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Blaxland",
+      "slug": "blaxland",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "59",
+      "profilePath": "/blaxland",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Clare, The Hon Jason Dean Minister for Education",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bradfield",
+      "slug": "bradfield",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "105",
+      "profilePath": "/bradfield",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Boele, Ms Nicolette",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Calare",
+      "slug": "calare",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "32,648",
+      "profilePath": "/calare",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Gee, The Hon Andrew Robert",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Chifley",
+      "slug": "chifley",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "113",
+      "profilePath": "/chifley",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Husic, The Hon Edham Nurredin (Ed)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Cook",
+      "slug": "cook",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "67",
+      "profilePath": "/cook",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Kennedy, Mr Simon Peter",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Cowper",
+      "slug": "cowper",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "7,271",
+      "profilePath": "/cowper",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Conaghan, Mr Patrick John (Pat)",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Cunningham",
+      "slug": "cunningham",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "536",
+      "profilePath": "/cunningham",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Byrnes, Ms Alison Joy",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Dobell",
+      "slug": "dobell",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "675",
+      "profilePath": "/dobell",
+      "redistribution": "2024",
+      "member": {
+        "printed": "McBride, The Hon Emma Margaret Assistant Minister for Mental Health and Suicide Prevention Assistant Minister for Rural and Regional Health",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Eden-Monaro",
+      "slug": "eden-monaro",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "31,913",
+      "profilePath": "/eden-monaro",
+      "redistribution": "2024",
+      "member": {
+        "printed": "McBain, The Hon Kristy Louise Minister for Regional Development, Local Government and Territories Minister for Emergency Management",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Farrer",
+      "slug": "farrer",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "126,563",
+      "profilePath": "/farrer",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Farley, Mr David",
+        "partyCode": "ON",
+        "party": "One Nation"
+      }
+    },
+    {
+      "name": "Fowler",
+      "slug": "fowler",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "62",
+      "profilePath": "/fowler",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Le, Ms Dai Trang",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Gilmore",
+      "slug": "gilmore",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "6,322",
+      "profilePath": "/gilmore",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Phillips, Mrs Fiona Evon",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Grayndler",
+      "slug": "grayndler",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "34",
+      "profilePath": "/grayndler",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Albanese, The Hon Anthony Norman Prime Minister",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Greenway",
+      "slug": "greenway",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "90",
+      "profilePath": "/greenway",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Rowland, The Hon Michelle Anne Attorney-General",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Hughes",
+      "slug": "hughes",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "380",
+      "profilePath": "/hughes",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Moncrieff, Mr David Sidney",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Hume",
+      "slug": "hume",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "2,674",
+      "profilePath": "/hume",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Taylor, The Hon Angus James Leader of the Opposition",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Hunter",
+      "slug": "hunter",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "7,253",
+      "profilePath": "/hunter",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Repacholi, Mr Daniel Peter (Dan)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Kingsford Smith",
+      "slug": "kingsford-smith",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "61",
+      "profilePath": "/kingsford-smith",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Thistlethwaite, The Hon Matthew James (Matt) Assistant Minister for Immigration Assistant Minister for Foreign Affairs and Trade",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Lindsay",
+      "slug": "lindsay",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "325",
+      "profilePath": "/lindsay",
+      "redistribution": "2024",
+      "member": {
+        "printed": "McIntosh, Mrs Melissa Iris",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Lyne",
+      "slug": "lyne",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "16,041",
+      "profilePath": "/lyne",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Penfold, Ms Alison Louise",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Macarthur",
+      "slug": "macarthur",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "307",
+      "profilePath": "/macarthur",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Freelander, Dr Michael Randolph (Mike)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Mackellar",
+      "slug": "mackellar",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "222",
+      "profilePath": "/mackellar",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Scamps, Dr Sophie Anna",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Macquarie",
+      "slug": "macquarie",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "4,387",
+      "profilePath": "/macquarie",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Templeman, Ms Susan Raye",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "McMahon",
+      "slug": "mcmahon",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "179",
+      "profilePath": "/mcmahon",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Bowen, The Hon Christopher Eyles (Chris) Minister for Climate Change and Energy",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Mitchell",
+      "slug": "mitchell",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "79",
+      "profilePath": "/mitchell",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Hawke, The Hon Alexander George (Alex)",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Newcastle",
+      "slug": "newcastle",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "159",
+      "profilePath": "/newcastle",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Claydon, Ms Sharon Catherine Deputy Speaker",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "New England",
+      "slug": "new-england",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "75,237",
+      "profilePath": "/new-england",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Joyce, The Hon Barnaby Thomas Gerard",
+        "partyCode": "ON",
+        "party": "One Nation"
+      }
+    },
+    {
+      "name": "Page",
+      "slug": "page",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "19,335",
+      "profilePath": "/page",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Hogan, The Hon Kevin John Deputy Manager of Opposition Business",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Parkes",
+      "slug": "parkes",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "406,755",
+      "profilePath": "/parkes",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Chaffey, Mr Jamie Lesley",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Parramatta",
+      "slug": "parramatta",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "66",
+      "profilePath": "/parramatta",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Charlton, The Hon Dr Andrew Henry George Cabinet Secretary Assistant Minister for Science, Technology and the Digital Economy",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Paterson",
+      "slug": "paterson",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "948",
+      "profilePath": "/paterson",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Swanson, Ms Meryl Jane",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Reid",
+      "slug": "reid",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "49",
+      "profilePath": "/reid",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Sitou, Ms Sally",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Richmond",
+      "slug": "richmond",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "2,133",
+      "profilePath": "/richmond",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Elliot, The Hon Maria Justine (Justine)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Riverina",
+      "slug": "riverina",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "52,410",
+      "profilePath": "/riverina",
+      "redistribution": "2024",
+      "member": {
+        "printed": "McCormack, The Hon Michael Francis",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Robertson",
+      "slug": "robertson",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "939",
+      "profilePath": "/robertson",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Reid, Dr Gordon James",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Shortland",
+      "slug": "shortland",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "204",
+      "profilePath": "/shortland",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Conroy, The Hon Patrick Martin (Pat) Minister for Pacific Island Affairs Minister for Defence Industry",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Sydney",
+      "slug": "sydney",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "45",
+      "profilePath": "/sydney",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Plibersek, The Hon Tanya Joan Minister for Social Services",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Warringah",
+      "slug": "warringah",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "51",
+      "profilePath": "/warringah",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Steggall, Ms Zali OAM",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Watson",
+      "slug": "watson",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "51",
+      "profilePath": "/watson",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Burke, The Hon Anthony Stephen (Tony) Minister for the Arts Minister for Home Affairs Minister for Cyber Security Minister for Immigration and Citizenship Leader of the House",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Wentworth",
+      "slug": "wentworth",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "31",
+      "profilePath": "/wentworth",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Spender, Ms Allegra May",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Werriwa",
+      "slug": "werriwa",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "111",
+      "profilePath": "/werriwa",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Stanley, Ms Anne Maree Government Whip",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Whitlam",
+      "slug": "whitlam",
+      "stateLabel": "NSW",
+      "jurisdictionSlug": "new-south-wales",
+      "area": "2,996",
+      "profilePath": "/whitlam",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Berry, Ms Carol Gaye",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Lingiari",
+      "slug": "lingiari",
+      "stateLabel": "NT",
+      "jurisdictionSlug": "northern-territory",
+      "area": "1,348,073",
+      "profilePath": "/lingiari",
+      "redistribution": "2025",
+      "member": {
+        "printed": "Scrymgour, Ms Marion Rose",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Solomon",
+      "slug": "solomon",
+      "stateLabel": "NT",
+      "jurisdictionSlug": "northern-territory",
+      "area": "211",
+      "profilePath": "/solomon",
+      "redistribution": "2025",
+      "member": {
+        "printed": "Gosling, Mr Luke John OAM",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Blair",
+      "slug": "blair",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "6,472",
+      "profilePath": "/blair",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Neumann, The Hon Shayne Kenneth",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bonner",
+      "slug": "bonner",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "374",
+      "profilePath": "/bonner",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Cook, Ms Kara May George",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bowman",
+      "slug": "bowman",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "536",
+      "profilePath": "/bowman",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Pike, Mr Henry Jon",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Brisbane",
+      "slug": "brisbane",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "57",
+      "profilePath": "/brisbane",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Jarrett, Ms Madonna Louise",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Capricornia",
+      "slug": "capricornia",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "90,903",
+      "profilePath": "/capricornia",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Landry, The Hon Michelle Leanne Chief Nationals Whip",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Dawson",
+      "slug": "dawson",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "14,630",
+      "profilePath": "/dawson",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Willcox, Mr Andrew John",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Dickson",
+      "slug": "dickson",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "724",
+      "profilePath": "/dickson",
+      "redistribution": "2018",
+      "member": {
+        "printed": "France, Ms Allison Anne (Ali)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Fadden",
+      "slug": "fadden",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "387",
+      "profilePath": "/fadden",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Caldwell, Mr Cameron Mackenzie Opposition Chief Whip",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Fairfax",
+      "slug": "fairfax",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "1,004",
+      "profilePath": "/fairfax",
+      "redistribution": "2018",
+      "member": {
+        "printed": "O'Brien, Mr Edward Lynam (Ted) Deputy Leader of the Opposition",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Fisher",
+      "slug": "fisher",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "1,198",
+      "profilePath": "/fisher",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Wallace, Mr Andrew Bruce",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Flynn",
+      "slug": "flynn",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "132,824",
+      "profilePath": "/flynn",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Boyce, Mr Colin Einar",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Forde",
+      "slug": "forde",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "418",
+      "profilePath": "/forde",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Holzberger, Mr Rowan Aubrey Victor",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Griffith",
+      "slug": "griffith",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "57",
+      "profilePath": "/griffith",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Coffey, Ms Renee Kay",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Groom",
+      "slug": "groom",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "5,586",
+      "profilePath": "/groom",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Hamilton, Mr Garth Russell",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Herbert",
+      "slug": "herbert",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "941",
+      "profilePath": "/herbert",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Thompson, Mr Phillip OAM",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Hinkler",
+      "slug": "hinkler",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "3,818",
+      "profilePath": "/hinkler",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Batt, Mr David John Deputy Nationals Whip",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Kennedy",
+      "slug": "kennedy",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "567,377",
+      "profilePath": "/kennedy",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Katter, The Hon Robert Carl (Bob)",
+        "partyCode": "KAP",
+        "party": "Katter's Australian Party"
+      }
+    },
+    {
+      "name": "Leichhardt",
+      "slug": "leichhardt",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "148,559",
+      "profilePath": "/leichhardt",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Smith, Mr Matthew John Howe (Matt)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Lilley",
+      "slug": "lilley",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "144",
+      "profilePath": "/lilley",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Wells, The Hon Anika Shay Minister for Sport Minister for Communications",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Longman",
+      "slug": "longman",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "1,237",
+      "profilePath": "/longman",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Young, Mr Terry James Second Deputy Speaker",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Maranoa",
+      "slug": "maranoa",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "729,897",
+      "profilePath": "/maranoa",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Littleproud, The Hon David",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "McPherson",
+      "slug": "mcpherson",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "229",
+      "profilePath": "/mcpherson",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Rebello, Mr Leon Stefan",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Moncrieff",
+      "slug": "moncrieff",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "100",
+      "profilePath": "/moncrieff",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Bell, Ms Angie Marion",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Moreton",
+      "slug": "moreton",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "109",
+      "profilePath": "/moreton",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Campbell, Ms Julie-Ann Patricia",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Oxley",
+      "slug": "oxley",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "159",
+      "profilePath": "/oxley",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Dick, The Hon Dugald Milton (Milton) Speaker",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Petrie",
+      "slug": "petrie",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "152",
+      "profilePath": "/petrie",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Comer, Ms Emma Louise",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Rankin",
+      "slug": "rankin",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "131",
+      "profilePath": "/rankin",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Chalmers, The Hon Dr James Edward (Jim) Treasurer",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Ryan",
+      "slug": "ryan",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "370",
+      "profilePath": "/ryan",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Watson-Brown, Ms Elizabeth",
+        "partyCode": "AG",
+        "party": "Australian Greens"
+      }
+    },
+    {
+      "name": "Wide Bay",
+      "slug": "wide-bay",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "14,227",
+      "profilePath": "/wide-bay",
+      "redistribution": "2018",
+      "member": {
+        "printed": "O'Brien, Mr Llewellyn Stephen (Llew)",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Wright",
+      "slug": "wright",
+      "stateLabel": "Qld",
+      "jurisdictionSlug": "queensland",
+      "area": "7,577",
+      "profilePath": "/wright",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Buchholz, The Hon Scott",
+        "partyCode": "LNP",
+        "party": "Liberal National Party of Queensland"
+      }
+    },
+    {
+      "name": "Adelaide",
+      "slug": "adelaide",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "86",
+      "profilePath": "/adelaide",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Georganas, Mr Steven (Steve)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Barker",
+      "slug": "barker",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "65,206",
+      "profilePath": "/barker",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Pasin, Mr Antony (Tony)",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Boothby",
+      "slug": "boothby",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "115",
+      "profilePath": "/boothby",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Miller-Frost, Ms Louise Jane",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Grey",
+      "slug": "grey",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "908,595",
+      "profilePath": "/grey",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Venning, Mr Thomas Howard (Tom)",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Hindmarsh",
+      "slug": "hindmarsh",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "122",
+      "profilePath": "/hindmarsh",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Butler, The Hon Mark Christopher Minister for Disability and the National Disability Insurance Scheme Minister for Health and Ageing Deputy Leader of the House",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Kingston",
+      "slug": "kingston",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "165",
+      "profilePath": "/kingston",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Rishworth, The Hon Amanda Louise Minister for Employment and Workplace Relations",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Makin",
+      "slug": "makin",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "162",
+      "profilePath": "/makin",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Zappia, Mr Antonio (Tony)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Mayo",
+      "slug": "mayo",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "9,135",
+      "profilePath": "/mayo",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Sharkie, Ms Rebekha Carina Che",
+        "partyCode": "CA",
+        "party": "Centre Alliance"
+      }
+    },
+    {
+      "name": "Spence",
+      "slug": "spence",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "532",
+      "profilePath": "/spence",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Burnell, Mr Matt Paul",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Sturt",
+      "slug": "sturt",
+      "stateLabel": "SA",
+      "jurisdictionSlug": "south-australia",
+      "area": "97",
+      "profilePath": "/sturt",
+      "redistribution": "2018",
+      "member": {
+        "printed": "Clutterham, Ms Claire Louise",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bass",
+      "slug": "bass",
+      "stateLabel": "Tas.",
+      "jurisdictionSlug": "tasmania",
+      "area": "7,975",
+      "profilePath": "/bass",
+      "redistribution": "2017",
+      "member": {
+        "printed": "Teesdale, Ms Jessica Ann (Jess)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Braddon",
+      "slug": "braddon",
+      "stateLabel": "Tas.",
+      "jurisdictionSlug": "tasmania",
+      "area": "21,369",
+      "profilePath": "/braddon",
+      "redistribution": "2017",
+      "member": {
+        "printed": "Urquhart, Ms Anne Elizabeth",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Clark",
+      "slug": "clark",
+      "stateLabel": "Tas.",
+      "jurisdictionSlug": "tasmania",
+      "area": "292",
+      "profilePath": "/clark",
+      "redistribution": "2017",
+      "member": {
+        "printed": "Wilkie, Mr Andrew Damien",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Franklin",
+      "slug": "franklin",
+      "stateLabel": "Tas.",
+      "jurisdictionSlug": "tasmania",
+      "area": "10,009",
+      "profilePath": "/franklin",
+      "redistribution": "2017",
+      "member": {
+        "printed": "Collins, The Hon Julie Maree Minister for Agriculture, Fisheries and Forestry",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Lyons",
+      "slug": "lyons",
+      "stateLabel": "Tas.",
+      "jurisdictionSlug": "tasmania",
+      "area": "35,721",
+      "profilePath": "/lyons",
+      "redistribution": "2017",
+      "member": {
+        "printed": "White, The Hon Rebecca Peta Assistant Minister for Women Assistant Minister for Health and Aged Care Assistant Minister for Indigenous Health",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Aston",
+      "slug": "aston",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "124",
+      "profilePath": "/aston",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Doyle, Ms Mary Judith Jacinta",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Ballarat",
+      "slug": "ballarat",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "5,323",
+      "profilePath": "/ballarat",
+      "redistribution": "2024",
+      "member": {
+        "printed": "King, The Hon Catherine Fiona Minister for Infrastructure, Transport, Regional Development and Local Government",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bendigo",
+      "slug": "bendigo",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "6,178",
+      "profilePath": "/bendigo",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Chesters, Ms Lisa Marie",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bruce",
+      "slug": "bruce",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "142",
+      "profilePath": "/bruce",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Hill, The Hon Julian Christopher Assistant Minister for Citizenship, Customs and Multicultural Affairs Assistant Minister for International Education",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Calwell",
+      "slug": "calwell",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "191",
+      "profilePath": "/calwell",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Abdo, Mr Basem Jamal",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Casey",
+      "slug": "casey",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "2,624",
+      "profilePath": "/casey",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Violi, Mr Aaron Anthony",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Chisholm",
+      "slug": "chisholm",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "73",
+      "profilePath": "/chisholm",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Garland, Dr Carina Mary Lindsay",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Cooper",
+      "slug": "cooper",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "61",
+      "profilePath": "/cooper",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Kearney, The Hon Gerardine Mary (Ged) Assistant Minister for Social Services Assistant Minister for the Prevention of Family Violence",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Corangamite",
+      "slug": "corangamite",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "640",
+      "profilePath": "/corangamite",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Coker, Ms Elizabeth Ann (Libby)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Corio",
+      "slug": "corio",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "1,216",
+      "profilePath": "/corio",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Marles, The Hon Richard Donald Deputy Prime Minister Minister for Defence",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Deakin",
+      "slug": "deakin",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "98",
+      "profilePath": "/deakin",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Gregg, Mr Matthew John (Matt)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Dunkley",
+      "slug": "dunkley",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "148",
+      "profilePath": "/dunkley",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Belyea, Ms Jodie Anne",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Flinders",
+      "slug": "flinders",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "887",
+      "profilePath": "/flinders",
+      "redistribution": "2024",
+      "member": {
+        "printed": "McKenzie, Ms Zoe Anne",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Fraser",
+      "slug": "fraser",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "98",
+      "profilePath": "/fraser",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Mulino, The Hon Dr Daniel Assistant Treasurer Minister for Financial Services",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Gellibrand",
+      "slug": "gellibrand",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "144",
+      "profilePath": "/gellibrand",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Watts, The Hon Timothy Graham (Tim)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Gippsland",
+      "slug": "gippsland",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "33,131",
+      "profilePath": "/gippsland",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Chester, The Hon Darren Jeffrey Deputy Leader of the National Party",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Goldstein",
+      "slug": "goldstein",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "56",
+      "profilePath": "/goldstein",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Wilson, The Hon Timothy Robert (Tim)",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Gorton",
+      "slug": "gorton",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "207",
+      "profilePath": "/gorton",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Jordan-Baird, Ms Marion Alice Marguerite (Alice)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Hawke",
+      "slug": "hawke",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "1,986",
+      "profilePath": "/hawke",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Rae, The Hon Sam Thomas Minister for Aged Care and Seniors",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Holt",
+      "slug": "holt",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "252",
+      "profilePath": "/holt",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Fernando, Ms Cassandra Juanita",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Hotham",
+      "slug": "hotham",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "81",
+      "profilePath": "/hotham",
+      "redistribution": "2024",
+      "member": {
+        "printed": "O'Neil, The Hon Clare Ellen Minister for Housing Minister for Homelessness Minister for Cities",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Indi",
+      "slug": "indi",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "29,188",
+      "profilePath": "/indi",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Haines, Dr Helen Mary",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Isaacs",
+      "slug": "isaacs",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "158",
+      "profilePath": "/isaacs",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Dreyfus, The Hon Mark Alfred KC",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Jagajaga",
+      "slug": "jagajaga",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "137",
+      "profilePath": "/jagajaga",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Thwaites, The Hon Kate Lynne",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Kooyong",
+      "slug": "kooyong",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "59",
+      "profilePath": "/kooyong",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Ryan, Dr Monique Marie",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Lalor",
+      "slug": "lalor",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "180",
+      "profilePath": "/lalor",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Ryan, Ms Joanne Catherine Chief Government Whip",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "La Trobe",
+      "slug": "la-trobe",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "1,303",
+      "profilePath": "/la-trobe",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Wood, The Hon Jason Peter",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Macnamara",
+      "slug": "macnamara",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "38",
+      "profilePath": "/macnamara",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Burns, Mr Josh",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Mallee",
+      "slug": "mallee",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "83,412",
+      "profilePath": "/mallee",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Webster, Dr Anne Elizabeth",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Maribyrnong",
+      "slug": "maribyrnong",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "70",
+      "profilePath": "/maribyrnong",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Briskey, Ms Joanna Leigh (Jo)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "McEwen",
+      "slug": "mcewen",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "2,288",
+      "profilePath": "/mcewen",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Mitchell, Mr Robert George (Rob)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Melbourne",
+      "slug": "melbourne",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "39",
+      "profilePath": "/melbourne",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Witty, Ms Sarah Jane",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Menzies",
+      "slug": "menzies",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "102",
+      "profilePath": "/menzies",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Ng, Mr Gabriel James",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Monash",
+      "slug": "monash",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "8,255",
+      "profilePath": "/monash",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Aldred, Ms Mary Rose Opposition Whip",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Nicholls",
+      "slug": "nicholls",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "14,116",
+      "profilePath": "/nicholls",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Birrell, Mr Sam James",
+        "partyCode": "NATS",
+        "party": "The Nationals"
+      }
+    },
+    {
+      "name": "Scullin",
+      "slug": "scullin",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "174",
+      "profilePath": "/scullin",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Giles, The Hon Andrew James Minister for Skills and Training",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Wannon",
+      "slug": "wannon",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "34,270",
+      "profilePath": "/wannon",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Tehan, The Hon Daniel Thomas (Dan) Manager of Opposition Business",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Wills",
+      "slug": "wills",
+      "stateLabel": "Vic.",
+      "jurisdictionSlug": "victoria",
+      "area": "47",
+      "profilePath": "/wills",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Khalil, The Hon Peter Assistant Minister for Defence",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Brand",
+      "slug": "brand",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "309",
+      "profilePath": "/brand",
+      "redistribution": "2024",
+      "member": {
+        "printed": "King, The Hon Madeleine Mary Harvie Minister for Resources Minister for Northern Australia",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Bullwinkel",
+      "slug": "bullwinkel",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "9,508",
+      "profilePath": "/bullwinkel",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Cook, Dr Patricia Ann (Trish)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Burt",
+      "slug": "burt",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "222",
+      "profilePath": "/burt",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Keogh, The Hon Matt James Minister for Veterans' Affairs Minister for Defence Personnel",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Canning",
+      "slug": "canning",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "3,608",
+      "profilePath": "/canning",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Hastie, The Hon Andrew William",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Cowan",
+      "slug": "cowan",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "108",
+      "profilePath": "/cowan",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Aly, The Hon Dr Anne Minister for Small Business Minister for International Development Minister for Multicultural Affairs",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Curtin",
+      "slug": "curtin",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "92",
+      "profilePath": "/curtin",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Chaney, Ms Kate Ella",
+        "partyCode": "IND",
+        "party": "Independent"
+      }
+    },
+    {
+      "name": "Durack",
+      "slug": "durack",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "1,410,947",
+      "profilePath": "/durack",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Price, The Hon Melissa Lee",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Forrest",
+      "slug": "forrest",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "6,454",
+      "profilePath": "/forrest",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Small, Mr Benjamin John (Ben) Opposition Whip",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Fremantle",
+      "slug": "fremantle",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "191",
+      "profilePath": "/fremantle",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Wilson, The Hon Joshua Hamilton (Josh) Assistant Minister for Climate Change and Energy Assistant Minister for Emergency Management",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Hasluck",
+      "slug": "hasluck",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "258",
+      "profilePath": "/hasluck",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Lawrence, Ms Tania Natalie",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Moore",
+      "slug": "moore",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "102",
+      "profilePath": "/moore",
+      "redistribution": "2024",
+      "member": {
+        "printed": "French, Mr Thomas Alan (Tom)",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "O'Connor",
+      "slug": "oconnor",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "1,093,790",
+      "profilePath": "/oconnor",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Wilson, Mr Richard James (Rick)",
+        "partyCode": "LP",
+        "party": "Liberal Party of Australia"
+      }
+    },
+    {
+      "name": "Pearce",
+      "slug": "pearce",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "755",
+      "profilePath": "/pearce",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Roberts, Ms Tracey Gardner",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Perth",
+      "slug": "perth",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "69",
+      "profilePath": "/perth",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Gorman, The Hon Patrick Possum Assistant Minister to the Prime Minister Assistant Minister for the Public Service Assistant Minister for Employment and Workplace Relations",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Swan",
+      "slug": "swan",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "124",
+      "profilePath": "/swan",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Mascarenhas, Ms Zaneta Felice Antoinetta",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    },
+    {
+      "name": "Tangney",
+      "slug": "tangney",
+      "stateLabel": "WA",
+      "jurisdictionSlug": "western-australia",
+      "area": "97",
+      "profilePath": "/tangney",
+      "redistribution": "2024",
+      "member": {
+        "printed": "Lim, Mr Sam Bon Cheng",
+        "partyCode": "ALP",
+        "party": "Australian Labor Party"
+      }
+    }
+  ],
+  "assembly": [
+    {
+      "name": "Albert Park District",
+      "slug": "albert-park-district",
+      "member": {
+        "display": "Ms Nina Taylor",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Cabinet Secretary",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Ashwood District",
+      "slug": "ashwood-district",
+      "member": {
+        "display": "Mr Matt Fregon",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Deputy Speaker of the Legislative Assembly",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Bass District",
+      "slug": "bass-district",
+      "member": {
+        "display": "Ms Jordan Crugnale",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Bayswater District",
+      "slug": "bayswater-district",
+      "member": {
+        "display": "Mr Jackson Taylor",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Bellarine District",
+      "slug": "bellarine-district",
+      "member": {
+        "display": "Mrs Alison Marchant",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Benambra District",
+      "slug": "benambra-district",
+      "member": {
+        "display": "Mr Bill Tilley",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Bendigo East District",
+      "slug": "bendigo-east-district",
+      "member": null
+    },
+    {
+      "name": "Bendigo West District",
+      "slug": "bendigo-west-district",
+      "member": {
+        "display": "The Hon. Maree Edwards",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Speaker of the Legislative Assembly",
+        "rowUpdated": "15/10/2026"
+      }
+    },
+    {
+      "name": "Bentleigh District",
+      "slug": "bentleigh-district",
+      "member": {
+        "display": "The Hon. Nick Staikos",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Housing, Building and Precincts, Minister for Homelessness, Minister for Seniors",
+        "position": "",
+        "rowUpdated": "22/09/2026"
+      }
+    },
+    {
+      "name": "Berwick District",
+      "slug": "berwick-district",
+      "member": null
+    },
+    {
+      "name": "Box Hill District",
+      "slug": "box-hill-district",
+      "member": {
+        "display": "Hon. Paul Hamer",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Roads and Road Safety",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Brighton District",
+      "slug": "brighton-district",
+      "member": {
+        "display": "Mr James Newbury",
+        "party": "Liberal Party",
+        "minister": "Shadow Attorney-General, Shadow Special Minister of State, Shadow Minister for Equality",
+        "position": "Manager of Opposition Business",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Broadmeadows District",
+      "slug": "broadmeadows-district",
+      "member": {
+        "display": "Ms Kathleen Matthews-Ward",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Brunswick District",
+      "slug": "brunswick-district",
+      "member": null
+    },
+    {
+      "name": "Bulleen District",
+      "slug": "bulleen-district",
+      "member": {
+        "display": "The Hon. Matthew Guy",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Public Transport, Shadow Minister for Ports and Freight",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Bundoora District",
+      "slug": "bundoora-district",
+      "member": {
+        "display": "Hon. Colin Brooks",
+        "party": "Australian Labor Party",
+        "minister": "Treasurer, Minister for Industrial Relations",
+        "position": "",
+        "rowUpdated": "15/09/2026"
+      }
+    },
+    {
+      "name": "Carrum District",
+      "slug": "carrum-district",
+      "member": null
+    },
+    {
+      "name": "Caulfield District",
+      "slug": "caulfield-district",
+      "member": {
+        "display": "Mr David Southwick",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Planning, Shadow Minister for Housing and Building, Shadow Minister for Tourism and Major Events",
+        "position": "Deputy Leader of the Opposition, Deputy Leader of the Liberal Party",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Clarinda District",
+      "slug": "clarinda-district",
+      "member": {
+        "display": "Mr Meng Heang Tak",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Cranbourne District",
+      "slug": "cranbourne-district",
+      "member": {
+        "display": "Ms Pauline Richards",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Health",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Croydon District",
+      "slug": "croydon-district",
+      "member": {
+        "display": "The Hon. David Hodgett",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Dandenong District",
+      "slug": "dandenong-district",
+      "member": {
+        "display": "The Hon. Gabrielle Williams",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Education, Minister for Skills and Training, Minister for First Peoples, Minister for Women and Gender Equality",
+        "position": "Deputy Premier",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Eildon District",
+      "slug": "eildon-district",
+      "member": {
+        "display": "Ms Cindy McLeish",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Women, Shadow Minister for the Prevention of Family Violence, Shadow Minister for WorkSafe and TAC",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Eltham District",
+      "slug": "eltham-district",
+      "member": {
+        "display": "Ms Vicki Ward",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Public Transport, Minister for Creative Industries",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Essendon District",
+      "slug": "essendon-district",
+      "member": {
+        "display": "The Hon. Danny Pearson",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Eureka District",
+      "slug": "eureka-district",
+      "member": {
+        "display": "Hon. Michaela Settle",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Rural and Regional Development, Minister for Agriculture, Minister for Water",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Euroa District",
+      "slug": "euroa-district",
+      "member": {
+        "display": "Mrs Annabelle Cleeland",
+        "party": "The Nationals",
+        "minister": "",
+        "position": "The Nationals Party Secretary, Shadow Assistant Minister for Health",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Evelyn District",
+      "slug": "evelyn-district",
+      "member": {
+        "display": "Ms Bridget Vallence",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Finance, Shadow Minister for Jobs and Skills, Shadow Minister for Trade and Investment",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Footscray District",
+      "slug": "footscray-district",
+      "member": {
+        "display": "Ms Katie Hall",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Housing and Homelessness, Parliamentary Secretary for Creative Industries",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Frankston District",
+      "slug": "frankston-district",
+      "member": {
+        "display": "Hon. Paul Edbrooke",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Police, Minister for Crime Prevention, Minister for Emergency Services, Minister for Multicultural Affairs",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Geelong District",
+      "slug": "geelong-district",
+      "member": {
+        "display": "Ms Chris Couzens",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for First Peoples",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Gippsland East District",
+      "slug": "gippsland-east-district",
+      "member": null
+    },
+    {
+      "name": "Gippsland South District",
+      "slug": "gippsland-south-district",
+      "member": {
+        "display": "Mr Danny O'Brien",
+        "party": "The Nationals",
+        "minister": "Shadow Minister for Regional Development and Liveability, Shadow Minister for Emergency Services, Shadow Minister for Roads and Road Safety",
+        "position": "Deputy Leader of the Coalition, Leader of The Nationals",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Glen Waverley District",
+      "slug": "glen-waverley-district",
+      "member": {
+        "display": "Mr John Mullahy",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Government Whip in the Legislative Assembly",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Greenvale District",
+      "slug": "greenvale-district",
+      "member": {
+        "display": "Mr Iwan Walters",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Multicultural Affairs, Parliamentary Secretary for Disability, Acting Speaker",
+        "rowUpdated": "04/09/2026"
+      }
+    },
+    {
+      "name": "Hastings District",
+      "slug": "hastings-district",
+      "member": {
+        "display": "Mr Paul Mercurio",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Hawthorn District",
+      "slug": "hawthorn-district",
+      "member": {
+        "display": "Mr John Pesutto",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Ivanhoe District",
+      "slug": "ivanhoe-district",
+      "member": {
+        "display": "The Hon. Anthony Carbines",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Artificial Intelligence and the Digital Economy, Minister for Major Events, Minister for Medical Research, Minister for Racing, Minister for Economic Development",
+        "position": "Leader of the House",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Kalkallo District",
+      "slug": "kalkallo-district",
+      "member": {
+        "display": "The Hon. Ros Spence",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Corrections, Minister for Youth Justice, Minister for Victim Support, Minister for Community Sport",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Kew District",
+      "slug": "kew-district",
+      "member": {
+        "display": "Ms Jess Wilson",
+        "party": "Liberal Party",
+        "minister": "Leader of the Opposition, Shadow Treasurer",
+        "position": "Leader of the Liberal Party",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Kororoit District",
+      "slug": "kororoit-district",
+      "member": {
+        "display": "Hon. Luba Grigorovitch",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Youth, Minister for Carers and Volunteers",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Lara District",
+      "slug": "lara-district",
+      "member": {
+        "display": "Ms Ella George",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Mental Health and Suicide Prevention",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Laverton District",
+      "slug": "laverton-district",
+      "member": {
+        "display": "Ms Sarah Connolly",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Lowan District",
+      "slug": "lowan-district",
+      "member": {
+        "display": "Ms Emma Kealy",
+        "party": "The Nationals",
+        "minister": "Shadow Minister for Agriculture, Shadow Minister for Mental Health",
+        "position": "Deputy Leader of The Nationals",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Macedon District",
+      "slug": "macedon-district",
+      "member": {
+        "display": "Hon. Mary-Anne Thomas",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Malvern District",
+      "slug": "malvern-district",
+      "member": {
+        "display": "The Hon. Michael O'Brien",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Melbourne District",
+      "slug": "melbourne-district",
+      "member": {
+        "display": "Ms Ellen Sandell",
+        "party": "The Australian Greens - Victoria",
+        "minister": "",
+        "position": "Leader of The Victorian Greens, Spokesperson for Climate Change and Emissions, Spokesperson for Gas and Resources, Spokesperson for Biodiversity, Environment and Forests, Spokesperson for Treasury and Finance, Spokesperson for Emergency Services and Climate Disaster Preparedness, Spokesperson for First Nations",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Melton District",
+      "slug": "melton-district",
+      "member": {
+        "display": "Mr Steve McGhie",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Mildura District",
+      "slug": "mildura-district",
+      "member": {
+        "display": "Ms Jade Benham",
+        "party": "The Nationals",
+        "minister": "Shadow Minister for Water, Shadow Minister for Consumer Affairs, Shadow Minister for Disability, Ageing, Carers and Volunteers",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Mill Park District",
+      "slug": "mill-park-district",
+      "member": {
+        "display": "Hon. Lily D'Ambrosio",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "15/10/2026"
+      }
+    },
+    {
+      "name": "Monbulk District",
+      "slug": "monbulk-district",
+      "member": {
+        "display": "Ms Daniela De Martino",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Secretary to the Parliamentary Labor Party, Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Mordialloc District",
+      "slug": "mordialloc-district",
+      "member": {
+        "display": "Hon. Tim Richardson",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Local Government, Minister for Consumer Affairs, Minister for Renters",
+        "position": "",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Mornington District",
+      "slug": "mornington-district",
+      "member": {
+        "display": "Mr Chris Crewther",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "Liberal Party Whip in the Legislative Assembly, Shadow Assistant Minister to the Shadow Treasurer, Shadow Assistant Minister for Multicultural and Multifaith Affairs",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Morwell District",
+      "slug": "morwell-district",
+      "member": {
+        "display": "Mr Martin Cameron",
+        "party": "The Nationals",
+        "minister": "",
+        "position": "The Nationals Whip in the Legislative Assembly, Shadow Assistant Minister for Energy Affordability, Shadow Assistant Minister for Small Business, Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Mulgrave District",
+      "slug": "mulgrave-district",
+      "member": {
+        "display": "Ms Eden Foster",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Murray Plains District",
+      "slug": "murray-plains-district",
+      "member": {
+        "display": "The Hon. Peter Walsh",
+        "party": "The Nationals",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "15/10/2026"
+      }
+    },
+    {
+      "name": "Narracan District",
+      "slug": "narracan-district",
+      "member": {
+        "display": "Mr Wayne Farnham",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "Shadow Assistant Minister to the Leader of the Opposition (Regional), Shadow Assistant Minister for Planning, Shadow Assistant Minister for Housing and Building, Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Narre Warren North District",
+      "slug": "narre-warren-north-district",
+      "member": {
+        "display": "Ms Belinda Wilson",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Deputy Government Whip in the Assembly",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Narre Warren South District",
+      "slug": "narre-warren-south-district",
+      "member": {
+        "display": "Mr Gary Maas",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Nepean District",
+      "slug": "nepean-district",
+      "member": {
+        "display": "Mr Anthony Marsh",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Niddrie District",
+      "slug": "niddrie-district",
+      "member": {
+        "display": "The Hon. Ben Carroll",
+        "party": "Australian Labor Party",
+        "minister": "Premier",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Northcote District",
+      "slug": "northcote-district",
+      "member": {
+        "display": "Ms Kat Theophanous",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary to the Premier",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Oakleigh District",
+      "slug": "oakleigh-district",
+      "member": {
+        "display": "Mr Steve Dimopoulos",
+        "party": "Australian Labor Party",
+        "minister": "Minister for WorkSafe and the TAC, Minister for Sport, Minister for Equality",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Ovens Valley District",
+      "slug": "ovens-valley-district",
+      "member": {
+        "display": "Mr Tim McCurdy",
+        "party": "The Nationals",
+        "minister": "Shadow Minister for Liquor and Gaming, Shadow Minister for Racing, Shadow Minister for Veterans' Affairs",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Pakenham District",
+      "slug": "pakenham-district",
+      "member": {
+        "display": "Ms Emma Vulin",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Pascoe Vale District",
+      "slug": "pascoe-vale-district",
+      "member": {
+        "display": "Mr Anthony Cianflone",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Community Safety",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Point Cook District",
+      "slug": "point-cook-district",
+      "member": {
+        "display": "Mr Mathew Hilakari",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Education",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Polwarth District",
+      "slug": "polwarth-district",
+      "member": {
+        "display": "Mr Richard Riordan",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Prahran District",
+      "slug": "prahran-district",
+      "member": {
+        "display": "Ms Rachel Westaway",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "Shadow Assistant Minister to the Leader of the Opposition (Metropolitan), Shadow Assistant Minister for Tourism, Hospitality and Major Events, Shadow Assistant Minister for Melbourne",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Preston District",
+      "slug": "preston-district",
+      "member": {
+        "display": "Mr Nathan Lambert",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Children, Parliamentary Secretary for Climate Action, Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Richmond District",
+      "slug": "richmond-district",
+      "member": {
+        "display": "Ms Gabrielle de Vietri",
+        "party": "The Australian Greens - Victoria",
+        "minister": "",
+        "position": "Party Room Chair, Spokesperson for Public and Affordable Housing, Spokesperson for Renters' Rights, Spokesperson for Arts, Spokesperson for Peace and Disarmament, Spokesperson for Veterans",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Ringwood District",
+      "slug": "ringwood-district",
+      "member": {
+        "display": "Mr Will Fowles",
+        "party": "Independent",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Ripon District",
+      "slug": "ripon-district",
+      "member": {
+        "display": "Ms Martha Haylett",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Rural and Regional Development",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Rowville District",
+      "slug": "rowville-district",
+      "member": {
+        "display": "The Hon. Kim Wells",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "Sandringham District",
+      "slug": "sandringham-district",
+      "member": {
+        "display": "Mr Brad Rowswell",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Education, Shadow Minister for Industrial Relations, Shadow Minister for Government Services",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Shepparton District",
+      "slug": "shepparton-district",
+      "member": {
+        "display": "Ms Kim O'Keeffe",
+        "party": "The Nationals",
+        "minister": "",
+        "position": "Shadow Assistant Minister for Regional Multicultural Affairs, Acting Speaker",
+        "rowUpdated": "21/09/2026"
+      }
+    },
+    {
+      "name": "South Barwon District",
+      "slug": "south-barwon-district",
+      "member": {
+        "display": "Mr Darren Cheeseman",
+        "party": "Independent",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "South-West Coast District",
+      "slug": "south-west-coast-district",
+      "member": {
+        "display": "Ms Roma Britnell",
+        "party": "Liberal Party",
+        "minister": "",
+        "position": "Shadow Cabinet Secretary, Shadow Assistant Minister for Roads and Road Safety",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "St Albans District",
+      "slug": "st-albans-district",
+      "member": {
+        "display": "The Hon. Natalie Suleyman",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Trade, Tourism and Investment, Minister for Small and Family Business, Minister for Veterans",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Sunbury District",
+      "slug": "sunbury-district",
+      "member": {
+        "display": "Mr Josh Bull",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary to the Treasurer, Parliamentary Secretary for Roads",
+        "rowUpdated": "03/09/2026"
+      }
+    },
+    {
+      "name": "Sydenham District",
+      "slug": "sydenham-district",
+      "member": {
+        "display": "The Hon. Natalie Hutchins",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "15/10/2026"
+      }
+    },
+    {
+      "name": "Tarneit District",
+      "slug": "tarneit-district",
+      "member": {
+        "display": "Mr Dylan Wight",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for Jobs and Industrial Relations, Parliamentary Secretary for Racing and Major Events",
+        "rowUpdated": "04/09/2026"
+      }
+    },
+    {
+      "name": "Thomastown District",
+      "slug": "thomastown-district",
+      "member": {
+        "display": "Ms Bronwyn Halfpenny",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Parliamentary Secretary for the State Electricity Commission",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Warrandyte District",
+      "slug": "warrandyte-district",
+      "member": {
+        "display": "Mrs Nicole Werner",
+        "party": "Liberal Party",
+        "minister": "Shadow Minister for Home Ownership and Housing Affordability, Shadow Minister for Youth, Shadow Minister for Child Protection",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Wendouree District",
+      "slug": "wendouree-district",
+      "member": {
+        "display": "Ms Juliana Addison",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Werribee District",
+      "slug": "werribee-district",
+      "member": {
+        "display": "Mr John Lister",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Williamstown District",
+      "slug": "williamstown-district",
+      "member": {
+        "display": "The Hon. Melissa Horne",
+        "party": "Australian Labor Party",
+        "minister": "Minister for Ports and Freight, Minister for Jobs, Minister for Industry and Advanced Manufacturing, Minister for Defence Industry",
+        "position": "",
+        "rowUpdated": "28/08/2026"
+      }
+    },
+    {
+      "name": "Yan Yean District",
+      "slug": "yan-yean-district",
+      "member": {
+        "display": "Ms Lauren Kathage",
+        "party": "Australian Labor Party",
+        "minister": "",
+        "position": "Acting Speaker",
+        "rowUpdated": "28/08/2026"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "name": "Eastern Victoria Region",
+      "slug": "eastern-victoria-region",
+      "members": [
+        {
+          "display": "Ms Melina Bath",
+          "party": "The Nationals",
+          "minister": "Shadow Minister for Public Land Management, Shadow Minister for Aboriginal Affairs, Shadow Minister for Outdoor Recreation",
+          "position": "Leader of The Nationals in the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Jeff Bourman",
+          "party": "Shooters, Fishers and Farmers Party Victoria",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Dr Renee Heath",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Youth Justice, Shadow Minister for Crime Prevention and Victim Support, Shadow Minister for Bay Protection",
+          "position": "Opposition Whip in Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Tom McIntosh",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "12/08/2026"
+        },
+        {
+          "display": "Hon. Harriet Shing",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        }
+      ]
+    },
+    {
+      "name": "North-Eastern Metropolitan Region",
+      "slug": "north-eastern-metropolitan-region",
+      "members": [
+        {
+          "display": "The Hon. Shaun Leane",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "President of the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Nick McGowan",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Environment, Shadow Minister for Fire Rescue Victoria",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Aiv Puglielli",
+          "party": "The Australian Greens - Victoria",
+          "minister": "",
+          "position": "The Victorian Greens Whip - Legislative Council, Spokesperson for Legal Cannabis and Drug Harm Reduction, Spokesperson for LGBTIQA+ Equality, Spokesperson for Economic Justice and Consumer Rights, Spokesperson for Young People, Spokesperson for Free Uni and TAFE, Spokesperson for Workers' Rights",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Sonja Terpstra",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Richard Welch",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Industry, Shadow Minister for Manufacturing and Innovation, Shadow Minister for AI and the Digital Economy",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        }
+      ]
+    },
+    {
+      "name": "Northern Metropolitan Region",
+      "slug": "northern-metropolitan-region",
+      "members": [
+        {
+          "display": "The Hon. Enver Erdogan",
+          "party": "Australian Labor Party",
+          "minister": "Minister for Finance, Minister for Casino, Gaming and Liquor Regulation, Minister for Government Services",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Anasina Gray-Barberio",
+          "party": "The Australian Greens - Victoria",
+          "minister": "",
+          "position": "Spokesperson for Multiculturalism and Anti-Racism, Spokesperson for Women, Gender Equality and Family Violence, Spokesperson for Child Protection, Spokesperson for Disability Rights and Services, Spokesperson for Community Services, Spokesperson for Ageing, Spokesperson for Sport, Spokesperson for Early Childhood Education and Kinder",
+          "rowUpdated": "23/09/2026"
+        },
+        {
+          "display": "Mr Evan Mulholland",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Transport Infrastructure, Shadow Minister for Multicultural and Multifaith Affairs",
+          "position": "Deputy Leader of the Opposition in the Legislative Council, Deputy Leader of the Liberal Party in the Legislative Council",
+          "rowUpdated": "05/10/2026"
+        },
+        {
+          "display": "The Hon. Adem Somyurek",
+          "party": "Independent",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Sheena Watt",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "Parliamentary Secretary for Public and Active Transport, Parliamentary Secretary for Community Sport",
+          "rowUpdated": "10/08/2026"
+        }
+      ]
+    },
+    {
+      "name": "Northern Victoria Region",
+      "slug": "northern-victoria-region",
+      "members": [
+        {
+          "display": "Mrs Gaelle Broad",
+          "party": "The Nationals",
+          "minister": "",
+          "position": "The National Party Whip in the Legislative Council, Shadow Assistant Minister for Regional Development and Agriculture",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "The Hon. Wendy Lovell",
+          "party": "Liberal Party",
+          "minister": "",
+          "position": "Deputy President of the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Georgie Purcell",
+          "party": "Animal Justice Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Jaclyn Symes",
+          "party": "Australian Labor Party",
+          "minister": "Minister for Energy and Resources, Minister for Environment, Minister for Climate Action, Minister for the State Electricity Commission",
+          "position": "Leader of the Government in the Legislative Council",
+          "rowUpdated": "19/08/2026"
+        },
+        {
+          "display": "Ms Rikkie-Lee Tyrrell",
+          "party": "One Nation Victoria",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/09/2026"
+        }
+      ]
+    },
+    {
+      "name": "South-Eastern Metropolitan Region",
+      "slug": "south-eastern-metropolitan-region",
+      "members": [
+        {
+          "display": "Mr Michael Galea",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mrs Ann-Marie Hermans",
+          "party": "Liberal Party",
+          "minister": "",
+          "position": "Shadow Assistant Minister for Community Safety",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr David Limbrick",
+          "party": "Libertarian Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Rachel Payne",
+          "party": "Legalise Cannabis Victoria",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Lee Tarlamis",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "Government Whip in the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        }
+      ]
+    },
+    {
+      "name": "Southern Metropolitan Region",
+      "slug": "southern-metropolitan-region",
+      "members": [
+        {
+          "display": "Mr Ryan Batchelor",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "Parliamentary Secretary for Emergency Services",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr John Berger",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Katherine Copsey",
+          "party": "The Australian Greens - Victoria",
+          "minister": "",
+          "position": "Deputy Party Room Chair, Spokesperson for Justice, Spokesperson for Public Transport and Roads, Spokesperson for Gambling Harm Reduction, Spokesperson for Animal Protection, Spokesperson for Major Events",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Georgie Crozier",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Health, Shadow Minister for Ambulance Services, Shadow Minister for Medical Research",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "The Hon. David Davis",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Energy and Emissions Reduction, Shadow Minister for Resources, Shadow Minister for Arts and Creative Industries",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        }
+      ]
+    },
+    {
+      "name": "Western Metropolitan Region",
+      "slug": "western-metropolitan-region",
+      "members": [
+        {
+          "display": "Hon. Lizzie Blandthorn",
+          "party": "Australian Labor Party",
+          "minister": "Minister for Children, Minister for Disability",
+          "position": "Deputy Leader of the Government in the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mrs Moira Deeming",
+          "party": "Family First Victoria",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "17/09/2026"
+        },
+        {
+          "display": "Mr David Ettershank",
+          "party": "Legalise Cannabis Victoria",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Trung Luu",
+          "party": "Liberal Party",
+          "minister": "",
+          "position": "Secretary of the Parliamentary Liberal Party, Shadow Assistant Minister for Police and Corrections",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Ms Ingrid Stitt",
+          "party": "Australian Labor Party",
+          "minister": "Minister for Health, Minister for Mental Health, Minister for Ambulance Services, Special Minister of State",
+          "position": "",
+          "rowUpdated": "10/09/2026"
+        }
+      ]
+    },
+    {
+      "name": "Western Victoria Region",
+      "slug": "western-victoria-region",
+      "members": [
+        {
+          "display": "Ms Jacinta Ermacora",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "14/10/2026"
+        },
+        {
+          "display": "Dr Sarah Mansfield",
+          "party": "The Australian Greens - Victoria",
+          "minister": "",
+          "position": "Leader of the Greens in the Legislative Council, Deputy Leader of the Victorian Greens, Spokesperson for Mental Health, Spokesperson for Agriculture, Spokesperson for Rural and Regional Communities, Spokesperson for Water, Spokesperson for Local Government, Spokesperson for Health, Spokesperson for Sustainable Cities and Planning",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mrs Bev McArthur",
+          "party": "Liberal Party",
+          "minister": "Shadow Minister for Local Government, Shadow Minister for Small Business",
+          "position": "Leader of the Liberal Party in the Legislative Council, Leader of the Opposition in the Legislative Council",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "Mr Joe McCracken",
+          "party": "Liberal Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "10/08/2026"
+        },
+        {
+          "display": "The Hon. Gayle Tierney",
+          "party": "Australian Labor Party",
+          "minister": "",
+          "position": "",
+          "rowUpdated": "08/09/2026"
+        }
+      ]
+    }
+  ]
+}

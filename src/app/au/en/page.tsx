@@ -12,6 +12,7 @@ import {
   alphaJurisdictions,
 } from "@/data/au/places";
 import { sourceById, sourcesById } from "@/data/au/sources";
+import { assemblyIndexPath, councilIndexPath, houseIndexPath } from "@/data/au/level2";
 import { auHome, jurisdictionPath } from "@/countries/au";
 
 const aec = sourceById("aec-entitlement-2026");
@@ -36,6 +37,7 @@ export default function AustraliaNationalPage() {
       eyebrow="Federal election · due between August 2027 and May 2028"
       title="Australia"
       lede="The Australian Electoral Commission says the next federal election is due to be held between August 2027 and May 2028. No writ read on 17 October 2026 names a polling day."
+      updated="18 October 2026"
       officeHref={aec.url}
       officeLabel="Australian Electoral Commission"
       sources={sourcesById([
@@ -49,6 +51,10 @@ export default function AustraliaNationalPage() {
         "pm-about",
         "vec-state",
         "auspost-postcodes",
+        "aec-profiles",
+        "vec-districts",
+        "vec-regions",
+        "acma-blackout",
       ])}
     >
       <section className="prose-legal">
@@ -187,6 +193,34 @@ export default function AustraliaNationalPage() {
           <Link className="text-navy underline" href={jurisdictionPath("victoria")}>
             Victoria
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={assemblyIndexPath()}>
+            88 Legislative Assembly districts
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={councilIndexPath()}>
+            8 Legislative Council regions
+          </Link>
+        </p>
+        <p>
+          The Australian Communications and Media Authority blackout page, read on 18 October 2026, says there are no
+          current listings. It says the blackout applies to television and radio, from the end of the Wednesday before
+          polling day until the close of the poll, and that it does not apply to online services. This page does not
+          publish a poll, a projection, or a result call.
+        </p>
+      </section>
+
+      <section className="prose-legal">
+        <h2>House divisions</h2>
+        <p>
+          The Commission’s profiles page, read on 18 October 2026, lists 150 House of Representatives divisions in place
+          for the 2025 federal election. Each division has its own page. The current member on those pages is taken from
+          the Parliament of Australia list dated 29 September 2026.
+        </p>
+        <p>
+          <Link className="text-navy underline" href={houseIndexPath()}>
+            House of Representatives divisions
+          </Link>
         </p>
       </section>
 
@@ -198,7 +232,7 @@ export default function AustraliaNationalPage() {
         />
         <GapNote
           label="Gap"
-          text="The ABS Local Government Areas page says there are 567 Local Government Areas covering the whole of Australia, including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not match official legal boundaries and should only be used for statistical purposes. Council pages are not in this release. No elected government between the state or territory and the local council was described on the pages read."
+          text="The ABS Local Government Areas page says there are 567 Local Government Areas covering the whole of Australia, including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not match official legal boundaries and should only be used for statistical purposes. Local government council pages are not in this release. No elected government between the state or territory and the local council was described on the pages read."
         />
         <GapNote
           label="Gap"

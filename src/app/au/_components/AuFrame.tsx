@@ -17,6 +17,7 @@ export function AuFrame({
   officeHref,
   officeLabel,
   sources,
+  updated,
   children,
 }: {
   path: string;
@@ -27,6 +28,7 @@ export function AuFrame({
   officeHref: string;
   officeLabel: string;
   sources: SourceRef[];
+  updated?: string;
   children: ReactNode;
 }) {
   const crumbItems = crumbs.map((item, index) => ({
@@ -38,7 +40,7 @@ export function AuFrame({
       <JsonLd data={breadcrumbJsonLd(crumbs.map((item) => ({ name: item.name, path: item.path })))} />
       <Breadcrumbs items={crumbItems} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
-      <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
+      <ContentTrust updated={updated ?? SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>
       <SourceList sources={sources} heading="Sources" />
     </article>
