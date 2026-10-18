@@ -6,6 +6,7 @@ import { SEJM_CONSTITUENCY_TOTAL, SEJM_SEAT_TOTAL } from "../../../../../../data
 import { sourceById, sourcesById } from "../../../../../../data/pl/sources";
 import { ui } from "../../../../../../data/pl/ui";
 import { polandMetadata } from "../../../../../../data/pl/seo";
+import { senatOkregPath } from "../../../../../../data/pl/level2";
 import { polandHome } from "../../../../../../data/pl/paths";
 import type { Lang } from "../../../../../../data/pl/types";
 
@@ -64,7 +65,7 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
       }
       officeHref={pkw.url}
       officeLabel="Państwowa Komisja Wyborcza"
-      sources={sourcesById(["constitution", "kodeks", "sejm-first-sitting", "sejm-senior", "pkw-sejm-2023"])}
+      sources={sourcesById(["constitution", "kodeks", "sejm-first-sitting", "sejm-senior", "pkw-sejm-2023", "pkw-senat-20-2026"])}
     >
       <section className="prose-legal">
         <h2>{pl ? "Skąd jest to okno" : "Where the window comes from"}</h2>
@@ -83,13 +84,23 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
         <h2>{pl ? "Co się wybiera" : "What is elected"}</h2>
         <p>
           {pl
-            ? `Sejm: 460 posłów w ${SEJM_CONSTITUENCY_TOTAL} wielomandatowych okręgach z załącznika nr 1. Suma posłów w województwach na tej stronie wynosi ${SEJM_SEAT_TOTAL}. Senat: 100 senatorów według zasady większości, w okręgach z załącznika nr 2. Granic okręgów to wydanie nie rozpisuje.`
-            : `Sejm: 460 deputies in ${SEJM_CONSTITUENCY_TOTAL} multi-member constituencies in annex 1. The voivodeship deputy figures on this site add up to ${SEJM_SEAT_TOTAL}. Senate: 100 senators by majority, in the constituencies of annex 2. This release does not reprint constituency boundaries.`}
+            ? `Sejm: 460 posłów w ${SEJM_CONSTITUENCY_TOTAL} wielomandatowych okręgach z załącznika nr 1. Suma posłów w województwach na tej stronie wynosi ${SEJM_SEAT_TOTAL}. Senat: 100 senatorów według zasady większości, w okręgach z załącznika nr 2. Strony okręgów są podlinkowane z województw.`
+            : `Sejm: 460 deputies in ${SEJM_CONSTITUENCY_TOTAL} multi-member constituencies in annex 1. The voivodeship deputy figures on this site add up to ${SEJM_SEAT_TOTAL}. Senate: 100 senators by majority, in the constituencies of annex 2. Constituency pages are linked from the voivodeships.`}
         </p>
         <p>
           {pl
             ? "Do podziału mandatów w Sejmie art. 196 wpuszcza listy z co najmniej 5% ważnych głosów w kraju, a listy koalicyjne z co najmniej 8%. Obwieszczenie z 2023 r. przy dopuszczeniu list powołuje także art. 197 § 1. Ta strona nie podaje przykładu liczbowego."
             : "For the Sejm seat allocation, article 196 admits lists with at least 5 percent of valid votes nationally, and coalition lists with at least 8 percent. The 2023 announcement also cites article 197 § 1 when it admits lists. This page does not print a worked example."}
+        </p>
+        <p>
+          {pl
+            ? "Osobno serwis PKW odczytany 18 października 2026 r. podaje wybory uzupełniające do Senatu w okręgu nr 20 na 22 listopada 2026 r. To nie jest dzień z okna 2027 r. Ta strona nie podaje sondaży ani prognoz."
+            : "Separately, the Commission service read on 18 October 2026 gives a Senate by-election in constituency 20 on 22 November 2026. That is not a day inside the 2027 window. This page prints no polls or projections."}
+        </p>
+        <p>
+          <Link className="text-navy underline" href={senatOkregPath(lang, 20)}>
+            {pl ? "Okręg senacki nr 20" : "Senate constituency 20"}
+          </Link>
         </p>
         <GapNote label={copy.gap} text={copy.candidateGap} />
         <p>

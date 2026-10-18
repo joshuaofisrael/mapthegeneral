@@ -1,0 +1,3172 @@
+[
+  {
+    "num": 1,
+    "districtName": "Legnica",
+    "voivodeship": "dolnośląskie",
+    "voivodeshipSlug": "dolnoslaskie",
+    "seats": 12,
+    "okw": "LEGNICA",
+    "members": [
+      {
+        "id": 29,
+        "name": "Piotr Borys",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 60,
+        "name": "Zofia Czernow",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 135,
+        "name": "Łukasz Horbatowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 186,
+        "name": "Iwona Małgorzata Krawczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 188,
+        "name": "Robert Kropiwnicki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 197,
+        "name": "Krzysztof Kubów",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 225,
+        "name": "Marzena Anna Machałek",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 298,
+        "name": "Szymon Pogoda",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 324,
+        "name": "Tadeusz Samborski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 339,
+        "name": "Arkadiusz Sikora",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 428,
+        "name": "Elżbieta Witek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 457,
+        "name": "Wojciech Michał Zubowski",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      }
+    ]
+  },
+  {
+    "num": 2,
+    "districtName": "Wałbrzych",
+    "voivodeship": "dolnośląskie",
+    "voivodeshipSlug": "dolnoslaskie",
+    "seats": 8,
+    "okw": "WAŁBRZYCH",
+    "members": [
+      {
+        "id": 17,
+        "name": "Sylwia Bielawska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 41,
+        "name": "Marek Jan Chmielewski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 123,
+        "name": "Marcin Gwóźdź",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 494,
+        "name": "Robert Jagła",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 211,
+        "name": "Aleksandra Leo",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 477,
+        "name": "Grzegorz Macko",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 421,
+        "name": "Monika Wielichowska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 458,
+        "name": "Ireneusz Zyska",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      }
+    ]
+  },
+  {
+    "num": 3,
+    "districtName": "Wrocław",
+    "voivodeship": "dolnośląskie",
+    "voivodeshipSlug": "dolnoslaskie",
+    "seats": 14,
+    "okw": "WROCŁAW",
+    "members": [
+      {
+        "id": 23,
+        "name": "Izabela Bodnar",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 47,
+        "name": "Alicja Chybicka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 136,
+        "name": "Paweł Hreniak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 141,
+        "name": "Michał Jaros",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 479,
+        "name": "Krzysztof Mieszkowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 261,
+        "name": "Jolanta Niezgodzka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 347,
+        "name": "Anna Sobolak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 350,
+        "name": "Agnieszka Anna Soin",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 355,
+        "name": "Mirosława Stachowiak-Różecka",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 484,
+        "name": "Marta Stożek",
+        "clubId": "Razem",
+        "clubName": "Koło Poselskie Razem"
+      },
+      {
+        "id": 394,
+        "name": "Małgorzata Tracz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 397,
+        "name": "Krzysztof Tuduj",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 455,
+        "name": "Tomasz Zimoch",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 384,
+        "name": "Jacek Świat",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 4,
+    "districtName": "Bydgoszcz",
+    "voivodeship": "kujawsko-pomorskie",
+    "voivodeshipSlug": "kujawsko-pomorskie",
+    "seats": 12,
+    "okw": "BYDGOSZCZ",
+    "members": [
+      {
+        "id": 90,
+        "name": "Krzysztof Gawkowski",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 98,
+        "name": "Włodzisław Giziński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 157,
+        "name": "Iwona Karolewska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 181,
+        "name": "Bartosz Józef Kownacki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 182,
+        "name": "Iwona Maria Kozłowska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 189,
+        "name": "Piotr Król",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 164,
+        "name": "Agnieszka Maria Kłopotek",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 274,
+        "name": "Paweł Olszewski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 292,
+        "name": "Norbert Pietrykowski",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 330,
+        "name": "Łukasz Schreiber",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 373,
+        "name": "Paweł Szrot",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 462,
+        "name": "Magdalena Łośko",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 5,
+    "districtName": "Toruń",
+    "voivodeship": "kujawsko-pomorskie",
+    "voivodeshipSlug": "kujawsko-pomorskie",
+    "seats": 13,
+    "okw": "TORUŃ",
+    "members": [
+      {
+        "id": 6,
+        "name": "Jan Krzysztof Ardanowski",
+        "clubId": "Demokracja",
+        "clubName": "Koło Poselskie Demokracja Bezpośrednia"
+      },
+      {
+        "id": 27,
+        "name": "Joanna Borowiak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 95,
+        "name": "Anna Gembicka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 127,
+        "name": "Iwona Hartwich",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 151,
+        "name": "Mariusz Kałużny",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 472,
+        "name": "Piotr Kowal",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 256,
+        "name": "Arkadiusz Myrcha",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 341,
+        "name": "Marcin Skonieczka",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 351,
+        "name": "Zbigniew Sosnowski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 366,
+        "name": "Krzysztof Szczucki",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 377,
+        "name": "Tomasz Szymański",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 424,
+        "name": "Przemysław Wipler",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 223,
+        "name": "Krystian Łuczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 6,
+    "districtName": "Lublin",
+    "voivodeship": "lubelskie",
+    "voivodeshipSlug": "lubelskie",
+    "seats": 15,
+    "okw": "LUBLIN",
+    "members": [
+      {
+        "id": 461,
+        "name": "Anna Baluch",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 26,
+        "name": "Krzysztof Bojarski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 44,
+        "name": "Kazimierz Bogusław Choma",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 56,
+        "name": "Przemysław Czarnek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 59,
+        "name": "Jacek Czerniak",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 78,
+        "name": "Magdalena Filipek-Sobczak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 154,
+        "name": "Jan Kanthak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 187,
+        "name": "Michał Krawczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 489,
+        "name": "Bożena Lisowska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 248,
+        "name": "Michał Moskal",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 252,
+        "name": "Joanna Mucha",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 285,
+        "name": "Bartłomiej Pejo",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 343,
+        "name": "Sławomir Skwarek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 493,
+        "name": "Henryk Smolarz",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 398,
+        "name": "Sylwester Tułajew",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      }
+    ]
+  },
+  {
+    "num": 7,
+    "districtName": "Chełm",
+    "voivodeship": "lubelskie",
+    "voivodeshipSlug": "lubelskie",
+    "seats": 12,
+    "okw": "CHEŁM",
+    "members": [
+      {
+        "id": 65,
+        "name": "Anna Dąbrowska-Banaszek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 114,
+        "name": "Krzysztof Grabczuk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 118,
+        "name": "Małgorzata Gromadzka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 463,
+        "name": "Monika Pawłowska",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 311,
+        "name": "Marcin Romanowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 314,
+        "name": "Wiesław Różyński",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 321,
+        "name": "Jarosław Sachajko",
+        "clubId": "Demokracja",
+        "clubName": "Koło Poselskie Demokracja Bezpośrednia"
+      },
+      {
+        "id": 356,
+        "name": "Dariusz Stefaniuk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 399,
+        "name": "Witold Tumanowicz",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 446,
+        "name": "Sławomir Zawiślak",
+        "clubId": "Konfederacja_KP",
+        "clubName": "Koło Poselskie Konfederacja Korony Polskiej"
+      },
+      {
+        "id": 453,
+        "name": "Tomasz Zieliński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 63,
+        "name": "Sławomir Ćwik",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      }
+    ]
+  },
+  {
+    "num": 8,
+    "districtName": "Zielona Góra",
+    "voivodeship": "lubuskie",
+    "voivodeshipSlug": "lubuskie",
+    "seats": 12,
+    "okw": "ZIELONA GÓRA",
+    "members": [
+      {
+        "id": 9,
+        "name": "Marek Ast",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 64,
+        "name": "Władysław Dajczak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 70,
+        "name": "Robert Dowhan",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 198,
+        "name": "Anita Kucharska-Dziedzic",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 235,
+        "name": "Jerzy Materna",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 240,
+        "name": "Łukasz Mejza",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 264,
+        "name": "Maja Ewa Nowak",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 277,
+        "name": "Katarzyna Osos",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 300,
+        "name": "Elżbieta Anna Polak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 334,
+        "name": "Krystyna Sibińska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 344,
+        "name": "Waldemar Sługocki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 393,
+        "name": "Stanisław Tomczyszyn",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      }
+    ]
+  },
+  {
+    "num": 9,
+    "districtName": "Łódź",
+    "voivodeship": "łódzkie",
+    "voivodeshipSlug": "lodzkie",
+    "seats": 10,
+    "okw": "ŁÓDŹ",
+    "members": [
+      {
+        "id": 19,
+        "name": "Paweł Bliźniuk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 145,
+        "name": "Marcin Józefaciuk",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 260,
+        "name": "Małgorzata Niemczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 481,
+        "name": "Krzysztof Piątkowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 310,
+        "name": "Zbigniew Rau",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 376,
+        "name": "Ewa Szymanowska",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 486,
+        "name": "Włodzimierz Tomaszewski",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 395,
+        "name": "Tomasz Trela",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 425,
+        "name": "Aleksandra Karolina Uznańska-Wiśniewska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 432,
+        "name": "Agnieszka Wojciechowska van Heukelom",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 10,
+    "districtName": "Piotrków Trybunalski",
+    "voivodeship": "łódzkie",
+    "voivodeshipSlug": "lodzkie",
+    "seats": 9,
+    "okw": "PIOTRKÓW TRYBUNALSKI",
+    "members": [
+      {
+        "id": 50,
+        "name": "Krzysztof Ciecióra",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 162,
+        "name": "Dariusz Klimczak",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 216,
+        "name": "Grzegorz Lorek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 226,
+        "name": "Antoni Macierewicz",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 242,
+        "name": "Anna Milczanowska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 322,
+        "name": "Paweł Sałek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 387,
+        "name": "Robert Telus",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 426,
+        "name": "Adrian Witczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 434,
+        "name": "Bogusław Wołoszański",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 11,
+    "districtName": "Sieradz",
+    "voivodeship": "łódzkie",
+    "voivodeshipSlug": "lodzkie",
+    "seats": 12,
+    "okw": "SIERADZ",
+    "members": [
+      {
+        "id": 15,
+        "name": "Paweł Bejda",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 125,
+        "name": "Krzysztof Habura",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 126,
+        "name": "Agnieszka Hanajczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 213,
+        "name": "Joanna Lichocka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 238,
+        "name": "Marek Matuszewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 239,
+        "name": "Paulina Matysiak",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 301,
+        "name": "Piotr Polak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 318,
+        "name": "Paweł Rychlik",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 497,
+        "name": "Tomasz Rzymkowski",
+        "clubId": "Demokracja",
+        "clubName": "Koło Poselskie Demokracja Bezpośrednia"
+      },
+      {
+        "id": 392,
+        "name": "Cezary Tomczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 437,
+        "name": "Tadeusz Woźniak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 454,
+        "name": "Jolanta Zięba-Gzik",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      }
+    ]
+  },
+  {
+    "num": 12,
+    "districtName": "Kraków",
+    "voivodeship": "małopolskie",
+    "voivodeshipSlug": "malopolskie",
+    "seats": 8,
+    "okw": "KRAKÓW",
+    "members": [
+      {
+        "id": 22,
+        "name": "Rafał Bochenek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 147,
+        "name": "Filip Kaczyński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 165,
+        "name": "Łukasz Kmita",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 193,
+        "name": "Mariusz Krystian",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 203,
+        "name": "Władysław Kurowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 258,
+        "name": "Dorota Niedziela",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 352,
+        "name": "Marek Sowa",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 382,
+        "name": "Paweł Śliz",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      }
+    ]
+  },
+  {
+    "num": 13,
+    "districtName": "Kraków",
+    "voivodeship": "małopolskie",
+    "voivodeshipSlug": "malopolskie",
+    "seats": 14,
+    "okw": "KRAKÓW",
+    "members": [
+      {
+        "id": 1,
+        "name": "Andrzej Adamczyk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 16,
+        "name": "Konrad Berkowicz",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 72,
+        "name": "Elżbieta Duda",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 110,
+        "name": "Daria Gosek-Popiołek",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 465,
+        "name": "Dominik Jaśkowiec",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 171,
+        "name": "Rafał Komarewicz",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 491,
+        "name": "Aleksandra Kot",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 233,
+        "name": "Dorota Marek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 237,
+        "name": "Katarzyna Matusik-Lipiec",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 478,
+        "name": "Jerzy Meysztowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 278,
+        "name": "Jacek Osuch",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 309,
+        "name": "Ireneusz Raś",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 411,
+        "name": "Małgorzata Wassermann",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 380,
+        "name": "Agnieszka Ścigaj",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      }
+    ]
+  },
+  {
+    "num": 14,
+    "districtName": "Nowy Sącz",
+    "voivodeship": "małopolskie",
+    "voivodeshipSlug": "malopolskie",
+    "seats": 10,
+    "okw": "NOWY SĄCZ",
+    "members": [
+      {
+        "id": 14,
+        "name": "Barbara Bartuś",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 121,
+        "name": "Andrzej Gut-Mostowy",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 206,
+        "name": "Piotr Lachowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 267,
+        "name": "Urszula Nowogórska",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 480,
+        "name": "Anna Paluch",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 333,
+        "name": "Edward Siarka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 345,
+        "name": "Weronika Smarduch",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 388,
+        "name": "Ryszard Terlecki",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 418,
+        "name": "Patryk Wicher",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 422,
+        "name": "Ryszard Wilk",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      }
+    ]
+  },
+  {
+    "num": 15,
+    "districtName": "Tarnów",
+    "voivodeship": "małopolskie",
+    "voivodeshipSlug": "malopolskie",
+    "seats": 9,
+    "okw": "TARNÓW",
+    "members": [
+      {
+        "id": 10,
+        "name": "Urszula Augustyn",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 112,
+        "name": "Piotr Górnikiewicz",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 146,
+        "name": "Norbert Jakub Kaczmarczyk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 174,
+        "name": "Władysław Kosiniak-Kamysz",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 184,
+        "name": "Wiesław Krajewski",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 290,
+        "name": "Anna Pieczarka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 315,
+        "name": "Urszula Rusecka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 367,
+        "name": "Józefa Szczurek-Żelazko",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 408,
+        "name": "Robert Wardzała",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 16,
+    "districtName": "Płock",
+    "voivodeship": "mazowieckie",
+    "voivodeshipSlug": "mazowieckie",
+    "seats": 10,
+    "okw": "PŁOCK",
+    "members": [
+      {
+        "id": 28,
+        "name": "Kamil Bortniczuk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 48,
+        "name": "Anna Ewa Cicholska",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 88,
+        "name": "Elżbieta Gapińska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 474,
+        "name": "Maria Joanna Koźlakiewicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 195,
+        "name": "Adam Krzemiński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 476,
+        "name": "Wioletta Maria Kulpa",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 230,
+        "name": "Maciej Małecki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 275,
+        "name": "Mirosław Adam Orliński",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 492,
+        "name": "Rafał Romanowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 449,
+        "name": "Piotr Zgorzelski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      }
+    ]
+  },
+  {
+    "num": 17,
+    "districtName": "Radom",
+    "voivodeship": "mazowieckie",
+    "voivodeshipSlug": "mazowieckie",
+    "seats": 9,
+    "okw": "RADOM",
+    "members": [
+      {
+        "id": 79,
+        "name": "Radosław Fogiel",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 83,
+        "name": "Konrad Frysztak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 113,
+        "name": "Agnieszka Górska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 163,
+        "name": "Joanna Kluzik-Rostkowska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 176,
+        "name": "Andrzej Kosztowniak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 204,
+        "name": "Zbigniew Krzysztof Kuźmiuk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 205,
+        "name": "Anna Kwiecień",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 229,
+        "name": "Mirosław Maliszewski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 360,
+        "name": "Marek Suski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 18,
+    "districtName": "Siedlce",
+    "voivodeship": "mazowieckie",
+    "voivodeshipSlug": "mazowieckie",
+    "seats": 12,
+    "okw": "SIEDLCE",
+    "members": [
+      {
+        "id": 53,
+        "name": "Żaneta Cwalina-Śliwowska",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 57,
+        "name": "Arkadiusz Czartoryski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 116,
+        "name": "Marcin Grabowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 167,
+        "name": "Maria Koc",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 179,
+        "name": "Henryk Kowalczyk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 243,
+        "name": "Daniel Milewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 249,
+        "name": "Czesław Mroczek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 254,
+        "name": "Krzysztof Mulawa",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 482,
+        "name": "Mariusz Popielarz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 326,
+        "name": "Marek Sawicki",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 386,
+        "name": "Krzysztof Tchórzewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 436,
+        "name": "Grzegorz Woźniak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 19,
+    "districtName": "Warszawa",
+    "voivodeship": "mazowieckie",
+    "voivodeshipSlug": "mazowieckie",
+    "seats": 20,
+    "okw": "WARSZAWA",
+    "members": [
+      {
+        "id": 13,
+        "name": "Władysław Bartoszewski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 68,
+        "name": "Andrzej Domański",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 86,
+        "name": "Aleksandra Gajewska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 100,
+        "name": "Piotr Gliński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 470,
+        "name": "Bożenna Hołownia",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 138,
+        "name": "Klaudia Jachira",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 139,
+        "name": "Marek Jakubiak",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 150,
+        "name": "Sebastian Kaleta",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 488,
+        "name": "Jarosław Krajewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 218,
+        "name": "Katarzyna Anna Lubnauer",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 241,
+        "name": "Sławomir Mentzen",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 273,
+        "name": "Dorota Olko",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 286,
+        "name": "Ryszard Petru",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 291,
+        "name": "Katarzyna Maria Piekarska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 483,
+        "name": "Magdalena Roguska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 400,
+        "name": "Donald Tusk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 442,
+        "name": "Adrian Zandberg",
+        "clubId": "Razem",
+        "clubName": "Koło Poselskie Razem"
+      },
+      {
+        "id": 451,
+        "name": "Urszula Sara Zielińska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 222,
+        "name": "Dorota Łoboda",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 460,
+        "name": "Anna Maria Żukowska",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      }
+    ]
+  },
+  {
+    "num": 20,
+    "districtName": "Warszawa",
+    "voivodeship": "mazowieckie",
+    "voivodeshipSlug": "mazowieckie",
+    "seats": 12,
+    "okw": "WARSZAWA",
+    "members": [
+      {
+        "id": 32,
+        "name": "Karina Anna Bosak",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 20,
+        "name": "Mariusz Błaszczak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 45,
+        "name": "Dominika Chorosińska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 61,
+        "name": "Anita Czerwińska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 87,
+        "name": "Kinga Gajewska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 115,
+        "name": "Jan Grabiec",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 153,
+        "name": "Piotr Kandyba",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 208,
+        "name": "Maciej Lasek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 405,
+        "name": "Piotr Uściński",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 417,
+        "name": "Joanna Wicha",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 441,
+        "name": "Paweł Zalewski",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 459,
+        "name": "Bożena Żelazowska",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      }
+    ]
+  },
+  {
+    "num": 21,
+    "districtName": "Opole",
+    "voivodeship": "opolskie",
+    "voivodeshipSlug": "opolskie",
+    "seats": 12,
+    "okw": "OPOLE",
+    "members": [
+      {
+        "id": 62,
+        "name": "Katarzyna Czochara",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 106,
+        "name": "Adam Gomoła",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 143,
+        "name": "Danuta Jazłowiecka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 175,
+        "name": "Tomasz Kostuś",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 180,
+        "name": "Janusz Kowalski",
+        "clubId": "niez.",
+        "clubName": "Posłowie niezrzeszeni"
+      },
+      {
+        "id": 200,
+        "name": "Paweł Kukiz",
+        "clubId": "Demokracja",
+        "clubName": "Koło Poselskie Demokracja Bezpośrednia"
+      },
+      {
+        "id": 466,
+        "name": "Paweł Masełko",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 269,
+        "name": "Marcin Ociepa",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 337,
+        "name": "Tomasz Siemoniak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 340,
+        "name": "Włodzimierz Skalik",
+        "clubId": "Konfederacja_KP",
+        "clubName": "Koło Poselskie Konfederacja Korony Polskiej"
+      },
+      {
+        "id": 445,
+        "name": "Marcelina Zawisza",
+        "clubId": "Razem",
+        "clubName": "Koło Poselskie Razem"
+      },
+      {
+        "id": 448,
+        "name": "Witold Zembaczyński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 22,
+    "districtName": "Krosno",
+    "voivodeship": "podkarpackie",
+    "voivodeshipSlug": "podkarpackie",
+    "seats": 11,
+    "okw": "KROSNO",
+    "members": [
+      {
+        "id": 11,
+        "name": "Piotr Babinetz",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 46,
+        "name": "Tadeusz Chrzan",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 82,
+        "name": "Joanna Frydrych",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 199,
+        "name": "Marek Kuchciński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 202,
+        "name": "Maria Kurowska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 280,
+        "name": "Teresa Pamuła",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 312,
+        "name": "Bartosz Romowicz",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 319,
+        "name": "Marek Rząsa",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 329,
+        "name": "Anna Schmidt",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 404,
+        "name": "Piotr Uruski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 443,
+        "name": "Andrzej Tomasz Zapałowski",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      }
+    ]
+  },
+  {
+    "num": 23,
+    "districtName": "Rzeszów",
+    "voivodeship": "podkarpackie",
+    "voivodeshipSlug": "podkarpackie",
+    "seats": 15,
+    "okw": "RZESZÓW",
+    "members": [
+      {
+        "id": 39,
+        "name": "Elżbieta Burkiewicz",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 42,
+        "name": "Zbigniew Chmielowiec",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 74,
+        "name": "Adam Dziedzic",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 91,
+        "name": "Zdzisław Gawlik",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 105,
+        "name": "Kazimierz Gołojuch",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 155,
+        "name": "Fryderyk Sylwester Kapinos",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 178,
+        "name": "Paweł Kowal",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 210,
+        "name": "Ewa Leniart",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 490,
+        "name": "Michał Połuboczek",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 342,
+        "name": "Krystyna Skowrońska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 348,
+        "name": "Krzysztof Sobolewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 407,
+        "name": "Marcin Warchoł",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 410,
+        "name": "Jan Warzecha",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 415,
+        "name": "Rafał Weber",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 456,
+        "name": "Zbigniew Ziobro",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 24,
+    "districtName": "Białystok",
+    "voivodeship": "podlaskie",
+    "voivodeshipSlug": "podlaskie",
+    "seats": 14,
+    "okw": "BIAŁYSTOK",
+    "members": [
+      {
+        "id": 24,
+        "name": "Jacek Bogucki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 33,
+        "name": "Krzysztof Bosak",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 122,
+        "name": "Kazimierz Gwiazdowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 133,
+        "name": "Szymon Hołownia",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 183,
+        "name": "Stefan Krajewski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 259,
+        "name": "Jacek Niedźwiedzki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 271,
+        "name": "Barbara Okuła",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 496,
+        "name": "Bogumiła Olbryś",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 294,
+        "name": "Dariusz Piontkowski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 325,
+        "name": "Jacek Sasin",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 396,
+        "name": "Krzysztof Truskolaski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 452,
+        "name": "Jarosław Zieliński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 221,
+        "name": "Alicja Łepkowska-Gołaś",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 224,
+        "name": "Sebastian Łukaszewicz",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 25,
+    "districtName": "Gdańsk",
+    "voivodeship": "pomorskie",
+    "voivodeshipSlug": "pomorskie",
+    "seats": 12,
+    "okw": "GDAŃSK",
+    "members": [
+      {
+        "id": 2,
+        "name": "Piotr Adamowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 36,
+        "name": "Agnieszka Buczyńska",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 84,
+        "name": "Patryk Gabriel",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 156,
+        "name": "Jacek Karnowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 177,
+        "name": "Katarzyna Kotula",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 169,
+        "name": "Magdalena Małgorzata Kołodziejczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 302,
+        "name": "Agnieszka Pomaska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 297,
+        "name": "Kacper Płażyński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 331,
+        "name": "Jarosław Sellin",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 346,
+        "name": "Kazimierz Smoliński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 354,
+        "name": "Magdalena Sroka",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 406,
+        "name": "Jarosław Wałęsa",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 26,
+    "districtName": "Słupsk",
+    "voivodeship": "pomorskie",
+    "voivodeshipSlug": "pomorskie",
+    "seats": 14,
+    "okw": "SŁUPSK",
+    "members": [
+      {
+        "id": 5,
+        "name": "Dorota Arciszewska-Mielewczyk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 18,
+        "name": "Marek Biernacki",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 76,
+        "name": "Agnieszka Dziemianowicz-Bąk",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 134,
+        "name": "Marcin Horała",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 173,
+        "name": "Zbigniew Konwiński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 473,
+        "name": "Michał Kowalski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 196,
+        "name": "Henryka Krzywonos-Strycharska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 207,
+        "name": "Stanisław Lamczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 250,
+        "name": "Aleksander Mikołaj Mrówczyński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 263,
+        "name": "Barbara Nowacka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 295,
+        "name": "Kazimierz Plocke",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 336,
+        "name": "Rafał Siemaszko",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 485,
+        "name": "Krzysztof Szymański",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 391,
+        "name": "Wioleta Tomczak",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      }
+    ]
+  },
+  {
+    "num": 27,
+    "districtName": "Bielsko-Biała",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 9,
+    "okw": "BIELSKO-BIAŁA",
+    "members": [
+      {
+        "id": 71,
+        "name": "Przemysław Drabek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 80,
+        "name": "Bronisław Foltyn",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 93,
+        "name": "Grzegorz Gaża",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 306,
+        "name": "Grzegorz Puda",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 287,
+        "name": "Małgorzata Pępek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 359,
+        "name": "Mirosław Suchoń",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 375,
+        "name": "Stanisław Szwed",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 385,
+        "name": "Apoloniusz Tajner",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 487,
+        "name": "Maciej Tomczykiewicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 28,
+    "districtName": "Częstochowa",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 7,
+    "okw": "CZĘSTOCHOWA",
+    "members": [
+      {
+        "id": 40,
+        "name": "Lidia Burzyńska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 92,
+        "name": "Andrzej Gawron",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 99,
+        "name": "Szymon Giżyński",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 159,
+        "name": "Henryk Kiepura",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 212,
+        "name": "Izabela Leszczyna",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 370,
+        "name": "Andrzej Szewiński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 429,
+        "name": "Przemysław Witek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 29,
+    "districtName": "Katowice",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 9,
+    "okw": "KATOWICE",
+    "members": [
+      {
+        "id": 30,
+        "name": "Bożena Borys-Szopa",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 103,
+        "name": "Marta Golbik",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 124,
+        "name": "Marek Gzik",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 101,
+        "name": "Tomasz Głogowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 266,
+        "name": "Wanda Nowicka",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 358,
+        "name": "Piotr Paweł Strach",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 363,
+        "name": "Wojciech Szarama",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 374,
+        "name": "Krystyna Szumilas",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 420,
+        "name": "Jarosław Wiesław Wieczorek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 30,
+    "districtName": "Bielsko-Biała",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 9,
+    "okw": "BIELSKO-BIAŁA",
+    "members": [
+      {
+        "id": 81,
+        "name": "Roman Fritz",
+        "clubId": "Konfederacja_KP",
+        "clubName": "Koło Poselskie Konfederacja Korony Polskiej"
+      },
+      {
+        "id": 85,
+        "name": "Krzysztof Gadowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 137,
+        "name": "Paweł Jabłoński",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 194,
+        "name": "Marek Krząkała",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 209,
+        "name": "Gabriela Lenartowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 236,
+        "name": "Grzegorz Matusiak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 276,
+        "name": "Łukasz Osmalak",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 288,
+        "name": "Bolesław Piecha",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 435,
+        "name": "Michał Woś",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 31,
+    "districtName": "Katowice",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 12,
+    "okw": "KATOWICE",
+    "members": [
+      {
+        "id": 117,
+        "name": "Michał Gramatyka",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 172,
+        "name": "Maciej Konieczny",
+        "clubId": "Razem",
+        "clubName": "Koło Poselskie Razem"
+      },
+      {
+        "id": 471,
+        "name": "Urszula Koszutska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 168,
+        "name": "Ewa Kołodziej",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 190,
+        "name": "Wojciech Król",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 246,
+        "name": "Mateusz Morawiecki",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 299,
+        "name": "Jerzy Polaczek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 296,
+        "name": "Grzegorz Płaczek",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 313,
+        "name": "Monika Rosa",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 416,
+        "name": "Marek Wesoły",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 438,
+        "name": "Michał Wójcik",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 379,
+        "name": "Łukasz Ściebiorowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 32,
+    "districtName": "Katowice",
+    "voivodeship": "śląskie",
+    "voivodeshipSlug": "slaskie",
+    "seats": 9,
+    "okw": "KATOWICE",
+    "members": [
+      {
+        "id": 4,
+        "name": "Waldemar Andzel",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 21,
+        "name": "Mateusz Bochenek",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 499,
+        "name": "Bożena Borowiec",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 58,
+        "name": "Włodzimierz Czarzasty",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 67,
+        "name": "Barbara Dolniak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 228,
+        "name": "Ewa Malik",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 467,
+        "name": "Katarzyna Stachowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 409,
+        "name": "Robert Warwas",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 430,
+        "name": "Kamil Wnuk",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      }
+    ]
+  },
+  {
+    "num": 33,
+    "districtName": "Kielce",
+    "voivodeship": "świętokrzyskie",
+    "voivodeshipSlug": "swietokrzyskie",
+    "seats": 16,
+    "okw": "KIELCE",
+    "members": [
+      {
+        "id": 52,
+        "name": "Michał Cieślak",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 69,
+        "name": "Bartłomiej Dorywalski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 96,
+        "name": "Artur Daniel Gierada",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 97,
+        "name": "Roman Giertych",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 109,
+        "name": "Mariusz Gosek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 148,
+        "name": "Jarosław Kaczyński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 158,
+        "name": "Rafał Kasprzyk",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 191,
+        "name": "Anna Krupka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 192,
+        "name": "Andrzej Kryj",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 214,
+        "name": "Krzysztof Lipiec",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 270,
+        "name": "Marzena Okła-Drewnowicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 293,
+        "name": "Lucjan Marek Pietrzczyk",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 335,
+        "name": "Czesław Siekierski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 369,
+        "name": "Andrzej Szejna",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 412,
+        "name": "Michał Wawer",
+        "clubId": "Konfederacja",
+        "clubName": "Klub Poselski Konfederacja"
+      },
+      {
+        "id": 433,
+        "name": "Agata Wojtyszek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 34,
+    "districtName": "Elbląg",
+    "voivodeship": "warmińsko-mazurskie",
+    "voivodeshipSlug": "warminsko-mazurskie",
+    "seats": 8,
+    "okw": "ELBLĄG",
+    "members": [
+      {
+        "id": 94,
+        "name": "Elżbieta Gelert",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 107,
+        "name": "Robert Gontarz",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 108,
+        "name": "Stanisław Gorczyca",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 185,
+        "name": "Leonard Krasulski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 475,
+        "name": "Katarzyna Królak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 423,
+        "name": "Teresa Wilk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 450,
+        "name": "Zbigniew Ziejewski",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 381,
+        "name": "Andrzej Śliwka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      }
+    ]
+  },
+  {
+    "num": 35,
+    "districtName": "Olsztyn",
+    "voivodeship": "warmińsko-mazurskie",
+    "voivodeshipSlug": "warminsko-mazurskie",
+    "seats": 10,
+    "okw": "OLSZTYN",
+    "members": [
+      {
+        "id": 7,
+        "name": "Iwona Ewa Arent",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 43,
+        "name": "Artur Chojecki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 49,
+        "name": "Janusz Cichoń",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 51,
+        "name": "Janusz Cieszyński",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 201,
+        "name": "Marcin Kulasek",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 281,
+        "name": "Paweł Papke",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 282,
+        "name": "Urszula Pasławska",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 332,
+        "name": "Olga Ewa Semeniuk-Patkowska",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 431,
+        "name": "Anna Wojciechowska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 439,
+        "name": "Maciej Wróbel",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 36,
+    "districtName": "Kalisz",
+    "voivodeship": "wielkopolskie",
+    "voivodeshipSlug": "wielkopolskie",
+    "seats": 12,
+    "okw": "KALISZ",
+    "members": [
+      {
+        "id": 468,
+        "name": "Lidia Czechak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 75,
+        "name": "Jan Michał Dziedziczak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 120,
+        "name": "Andrzej Grzyb",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 149,
+        "name": "Piotr Kaleta",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 247,
+        "name": "Jan Mosiński",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 272,
+        "name": "Barbara Oliwiecka",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 284,
+        "name": "Karolina Pawliczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 364,
+        "name": "Wiesław Szczepański",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 353,
+        "name": "Katarzyna Sójka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 403,
+        "name": "Jarosław Urbaniak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 427,
+        "name": "Mariusz Witczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 464,
+        "name": "Alicja Łuczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 37,
+    "districtName": "Konin",
+    "voivodeship": "wielkopolskie",
+    "voivodeshipSlug": "wielkopolskie",
+    "seats": 9,
+    "okw": "KONIN",
+    "members": [
+      {
+        "id": 12,
+        "name": "Ryszard Bartosik",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 55,
+        "name": "Witold Wojciech Czarnecki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 66,
+        "name": "Zbigniew Dolata",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 128,
+        "name": "Paulina Hennig-Kloska",
+        "clubId": "Centrum",
+        "clubName": "Klub Parlamentarny Centrum"
+      },
+      {
+        "id": 131,
+        "name": "Zbigniew Hoffmann",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 170,
+        "name": "Michał Kołodziejczak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 265,
+        "name": "Tomasz Piotr Nowak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 307,
+        "name": "Michał Pyrzyk",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 389,
+        "name": "Tadeusz Tomaszewski",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      }
+    ]
+  },
+  {
+    "num": 38,
+    "districtName": "Piła",
+    "voivodeship": "wielkopolskie",
+    "voivodeshipSlug": "wielkopolskie",
+    "seats": 9,
+    "okw": "PIŁA",
+    "members": [
+      {
+        "id": 54,
+        "name": "Krzysztof Czarnecki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 102,
+        "name": "Piotr Głowski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 140,
+        "name": "Maria Małgorzata Janyska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 219,
+        "name": "Adam Luboński",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 283,
+        "name": "Krzysztof Paszyk",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 289,
+        "name": "Grzegorz Piechowiak",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 303,
+        "name": "Marcin Porzucek",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 317,
+        "name": "Jakub Rutnicki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 372,
+        "name": "Henryk Szopiński",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 39,
+    "districtName": "Poznań",
+    "voivodeship": "wielkopolskie",
+    "voivodeshipSlug": "wielkopolskie",
+    "seats": 10,
+    "okw": "POZNAŃ",
+    "members": [
+      {
+        "id": 31,
+        "name": "Marcin Bosacki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 161,
+        "name": "Katarzyna Kierzek-Koperska",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 327,
+        "name": "Ewa Schädler",
+        "clubId": "Polska2050",
+        "clubName": "Klub Parlamentarny Polska 2050"
+      },
+      {
+        "id": 357,
+        "name": "Franciszek Sterczewski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 378,
+        "name": "Szymon Szynkowski vel Sęk",
+        "clubId": "RozwojPlus",
+        "clubName": "Klub Parlamentarny Rozwój Plus"
+      },
+      {
+        "id": 371,
+        "name": "Adam Szłapka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 390,
+        "name": "Jacek Tomczak",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 402,
+        "name": "Katarzyna Ueberhan",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 440,
+        "name": "Bartłomiej Wróblewski",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 444,
+        "name": "Bartosz Zawieja",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 40,
+    "districtName": "Koszalin",
+    "voivodeship": "zachodniopomorskie",
+    "voivodeshipSlug": "zachodniopomorskie",
+    "seats": 8,
+    "okw": "KOSZALIN",
+    "members": [
+      {
+        "id": 104,
+        "name": "Małgorzata Golińska",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 469,
+        "name": "Barbara Grygorcewicz",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 130,
+        "name": "Czesław Hoc",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 132,
+        "name": "Marek Tomasz Hok",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 217,
+        "name": "Radosław Lubczyk",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 308,
+        "name": "Renata Rak",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 498,
+        "name": "Marek Subocz",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 361,
+        "name": "Paweł Suski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  },
+  {
+    "num": 41,
+    "districtName": "Szczecin",
+    "voivodeship": "zachodniopomorskie",
+    "voivodeshipSlug": "zachodniopomorskie",
+    "seats": 12,
+    "okw": "SZCZECIN",
+    "members": [
+      {
+        "id": 77,
+        "name": "Magdalena Filiks",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 119,
+        "name": "Marek Gróbarczyk",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 495,
+        "name": "Michał Jach",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 142,
+        "name": "Patryk Jaskulski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 231,
+        "name": "Arkadiusz Marchewka",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 234,
+        "name": "Dariusz Matecki",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 257,
+        "name": "Grzegorz Napieralski",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 262,
+        "name": "Sławomir Nitras",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      },
+      {
+        "id": 320,
+        "name": "Jarosław Rzepa",
+        "clubId": "PSL-TD",
+        "clubName": "Klub Parlamentarny Polskie Stronnictwo Ludowe - Trzecia Droga"
+      },
+      {
+        "id": 362,
+        "name": "Artur Szałabawka",
+        "clubId": "PiS",
+        "clubName": "Klub Parlamentarny Prawo i Sprawiedliwość"
+      },
+      {
+        "id": 419,
+        "name": "Dariusz Wieczorek",
+        "clubId": "Lewica",
+        "clubName": "Koalicyjny Klub Parlamentarny Lewicy (Nowa Lewica, PPS, Unia Pracy)"
+      },
+      {
+        "id": 220,
+        "name": "Artur Jarosław Łącki",
+        "clubId": "KO",
+        "clubName": "Klub Parlamentarny Koalicja Obywatelska - Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Zieloni"
+      }
+    ]
+  }
+]

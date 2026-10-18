@@ -1,0 +1,88 @@
+{
+  "file": "TERC_Urzedowy_2026-10-18",
+  "catalogDate": "2026-01-01",
+  "readOn": "2026-10-18",
+  "sourceUrl": "https://eteryt.stat.gov.pl/eTeryt/rejestr_teryt/udostepnianie_danych/baza_teryt/uzytkownicy_indywidualni/pobieranie/pliki_pelne.aspx",
+  "byVoivodeship": {
+    "dolnoslaskie": {
+      "land": 26,
+      "city": 4,
+      "gmina": 169
+    },
+    "kujawsko-pomorskie": {
+      "land": 19,
+      "city": 4,
+      "gmina": 144
+    },
+    "lubelskie": {
+      "land": 20,
+      "city": 4,
+      "gmina": 213
+    },
+    "lubuskie": {
+      "land": 12,
+      "city": 2,
+      "gmina": 82
+    },
+    "lodzkie": {
+      "land": 21,
+      "city": 3,
+      "gmina": 177
+    },
+    "malopolskie": {
+      "land": 19,
+      "city": 3,
+      "gmina": 183
+    },
+    "mazowieckie": {
+      "land": 37,
+      "city": 5,
+      "gmina": 314
+    },
+    "opolskie": {
+      "land": 11,
+      "city": 1,
+      "gmina": 71
+    },
+    "podkarpackie": {
+      "land": 21,
+      "city": 4,
+      "gmina": 160
+    },
+    "podlaskie": {
+      "land": 14,
+      "city": 3,
+      "gmina": 119
+    },
+    "pomorskie": {
+      "land": 16,
+      "city": 4,
+      "gmina": 123
+    },
+    "slaskie": {
+      "land": 17,
+      "city": 19,
+      "gmina": 167
+    },
+    "swietokrzyskie": {
+      "land": 13,
+      "city": 1,
+      "gmina": 102
+    },
+    "warminsko-mazurskie": {
+      "land": 19,
+      "city": 2,
+      "gmina": 116
+    },
+    "wielkopolskie": {
+      "land": 31,
+      "city": 4,
+      "gmina": 226
+    },
+    "zachodniopomorskie": {
+      "land": 18,
+      "city": 3,
+      "gmina": 113
+    }
+  }
+}

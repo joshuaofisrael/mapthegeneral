@@ -2,6 +2,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { PolandFrame } from "../../frame";
+import {
+  powiatHeading,
+  powiatIndexPath,
+  powiatPath,
+  powiatsIn,
+  sejmIndexPath,
+  sejmIn,
+  sejmOkregPath,
+  senatIndexPath,
+  senatIn,
+  senatOkregPath,
+  TERC_STATS,
+} from "../../../../../data/pl/level2";
 import { alphaNeighbors, alphaVoivodeships, voivodeshipBySlug } from "../../../../../data/pl/places";
 import { sourceById, sourcesById } from "../../../../../data/pl/sources";
 import { ui } from "../../../../../data/pl/ui";
@@ -47,6 +60,11 @@ export default async function VoivodeshipPage({ params }: { params: Promise<{ la
   const path = voivodeshipPath(lang, slug);
   const neighbors = alphaNeighbors(slug);
   const pkw = sourceById("pkw");
+  const stat = TERC_STATS[slug];
+  const powiats = powiatsIn(slug);
+  const sejmHere = sejmIn(slug);
+  const senatHere = senatIn(slug);
+  if (!stat) notFound();
   const seatNoun = item.sejmConstituencies === 1 ? (pl ? "okręg" : "constituency") : pl ? "okręgi" : "constituencies";
   return (
     <PolandFrame
@@ -67,7 +85,7 @@ export default async function VoivodeshipPage({ params }: { params: Promise<{ la
       }
       officeHref={pkw.url}
       officeLabel="Państwowa Komisja Wyborcza"
-      sources={sourcesById(["constitution", "kodeks", "samorzad-woj", "pkw-rady-2024", "mswia-jst", "teryt"])}
+      sources={sourcesById(["constitution", "kodeks", "samorzad-woj", "pkw-rady-2024", "mswia-jst", "teryt", "teryt-terc"])}
     >
       <dl className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-line bg-paper-card p-4">
@@ -130,10 +148,65 @@ export default async function VoivodeshipPage({ params }: { params: Promise<{ la
         <h2>{pl ? "Powiaty i gminy" : "Powiats and gminas"}</h2>
         <p>
           {pl
-            ? "Artykuł 164 ust. 1 Konstytucji nazywa gminę podstawową jednostką samorządu. Strona MSWiA podaje na 1 stycznia 2026 r. 314 powiatów i 2 479 gmin w całym kraju. TERYT liczy 380 powiatów, bo wlicza 66 miast na prawach powiatu. Żadne z tych źródeł, w tekście odczytanym na tę stronę, nie podaje liczby powiatów ani gmin tego województwa."
-            : "Article 164(1) of the Constitution calls the gmina the basic unit of self-government. The Interior Ministry page gives, at 1 January 2026, 314 powiats and 2,479 gminas in the whole country. TERYT counts 380 powiats because it includes the 66 cities with powiat status. Neither source, in the text read for this page, gives this voivodeship’s powiat or gmina count."}
+            ? `Plik TERC_Urzedowy_2026-10-18, katalog z datą 2026-01-01, odczytany 18 października 2026 r., ma w tym województwie ${stat.land} wierszy z NAZWA_DOD „powiat” i ${stat.city} wierszy miasta na prawach powiatu. Wierszy, których NAZWA_DOD zaczyna się od „gmina”, jest ${stat.gmina}. Artykuł 164 ust. 1 Konstytucji nazywa gminę podstawową jednostką samorządu.`
+            : `The file TERC_Urzedowy_2026-10-18, catalog date 2026-01-01, read on 18 October 2026, has ${stat.land} rows in this voivodeship with NAZWA_DOD “powiat” and ${stat.city} rows for a city with powiat status. Rows whose NAZWA_DOD starts with “gmina” number ${stat.gmina}. Article 164(1) of the Constitution calls the gmina the basic unit of self-government.`}
         </p>
-        <GapNote label={copy.gap} text={copy.localGap} />
+        <GapNote label={copy.gap} text={copy.gminaGap} />
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">{pl ? "Powiaty w tym województwie" : "Powiats in this voivodeship"}</h2>
+        <ul className="mt-3 columns-1 gap-x-6 text-sm sm:columns-2">
+          {powiats.map((powiat) => (
+            <li key={powiat.code} className="mb-1">
+              <a className="text-navy underline" href={powiatPath(lang, slug, powiat.slug)}>
+                {powiatHeading(powiat)}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <a className="text-navy underline" href={powiatIndexPath(lang)}>
+            {pl ? "Indeks powiatów" : "Powiat index"}
+          </a>
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="font-serif text-2xl font-semibold">{pl ? "Okręgi do Sejmu" : "Sejm constituencies"}</h2>
+        <ul className="mt-3 space-y-1 text-sm">
+          {sejmHere.map((okreg) => (
+            <li key={okreg.num}>
+              <a className="text-navy underline" href={sejmOkregPath(lang, okreg.num)}>
+                {pl ? `Okręg nr ${okreg.num}` : `Constituency ${okreg.num}`}
+              </a>
+              {` — ${okreg.districtName}, ${okreg.seats}`}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <a className="text-navy underline" href={sejmIndexPath(lang)}>
+            {pl ? "Indeks okręgów do Sejmu" : "Sejm constituency index"}
+          </a>
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="font-serif text-2xl font-semibold">{pl ? "Okręgi do Senatu" : "Senate constituencies"}</h2>
+        <ul className="mt-3 space-y-1 text-sm">
+          {senatHere.map((okreg) => (
+            <li key={okreg.num}>
+              <a className="text-navy underline" href={senatOkregPath(lang, okreg.num)}>
+                {pl ? `Okręg nr ${okreg.num}` : `Constituency ${okreg.num}`}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm">
+          <a className="text-navy underline" href={senatIndexPath(lang)}>
+            {pl ? "Indeks okręgów do Senatu" : "Senate constituency index"}
+          </a>
+        </p>
       </section>
 
       <section>

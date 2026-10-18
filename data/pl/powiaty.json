@@ -1,0 +1,3802 @@
+[
+  {
+    "woj": "02",
+    "pow": "01",
+    "code": "0201",
+    "name": "bolesławiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "boleslawiecki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "02",
+    "code": "0202",
+    "name": "dzierżoniowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "dzierzoniowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "03",
+    "code": "0203",
+    "name": "głogowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "glogowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "04",
+    "code": "0204",
+    "name": "górowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gorowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "05",
+    "code": "0205",
+    "name": "jaworski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "jaworski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "06",
+    "code": "0206",
+    "name": "karkonoski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "karkonoski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "07",
+    "code": "0207",
+    "name": "kamiennogórski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kamiennogorski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "08",
+    "code": "0208",
+    "name": "kłodzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "klodzki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "09",
+    "code": "0209",
+    "name": "legnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "legnicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "10",
+    "code": "0210",
+    "name": "lubański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubanski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "11",
+    "code": "0211",
+    "name": "lubiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubinski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "12",
+    "code": "0212",
+    "name": "lwówecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lwowecki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "13",
+    "code": "0213",
+    "name": "milicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "milicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "14",
+    "code": "0214",
+    "name": "oleśnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "olesnicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "15",
+    "code": "0215",
+    "name": "oławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "olawski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "16",
+    "code": "0216",
+    "name": "polkowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "polkowicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "17",
+    "code": "0217",
+    "name": "strzeliński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "strzelinski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "18",
+    "code": "0218",
+    "name": "średzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sredzki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "19",
+    "code": "0219",
+    "name": "świdnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "swidnicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "20",
+    "code": "0220",
+    "name": "trzebnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "trzebnicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "21",
+    "code": "0221",
+    "name": "wałbrzyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "walbrzyski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "22",
+    "code": "0222",
+    "name": "wołowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wolowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "23",
+    "code": "0223",
+    "name": "wrocławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wroclawski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "24",
+    "code": "0224",
+    "name": "ząbkowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zabkowicki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "25",
+    "code": "0225",
+    "name": "zgorzelecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zgorzelecki",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "26",
+    "code": "0226",
+    "name": "złotoryjski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zlotoryjski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "61",
+    "code": "0261",
+    "name": "Jelenia Góra",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "jelenia-gora",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "62",
+    "code": "0262",
+    "name": "Legnica",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "legnica",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "64",
+    "code": "0264",
+    "name": "Wrocław",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "wroclaw",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "02",
+    "pow": "65",
+    "code": "0265",
+    "name": "Wałbrzych",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "walbrzych",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "woj": "04",
+    "pow": "01",
+    "code": "0401",
+    "name": "aleksandrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "aleksandrowski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "02",
+    "code": "0402",
+    "name": "brodnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "brodnicki",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "03",
+    "code": "0403",
+    "name": "bydgoski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bydgoski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "04",
+    "code": "0404",
+    "name": "chełmiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "chelminski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "05",
+    "code": "0405",
+    "name": "golubsko-dobrzyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "golubsko-dobrzynski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "06",
+    "code": "0406",
+    "name": "grudziądzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "grudziadzki",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "07",
+    "code": "0407",
+    "name": "inowrocławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "inowroclawski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "08",
+    "code": "0408",
+    "name": "lipnowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lipnowski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "09",
+    "code": "0409",
+    "name": "mogileński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mogilenski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "10",
+    "code": "0410",
+    "name": "nakielski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nakielski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "11",
+    "code": "0411",
+    "name": "radziejowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "radziejowski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "12",
+    "code": "0412",
+    "name": "rypiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rypinski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "13",
+    "code": "0413",
+    "name": "sępoleński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sepolenski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "14",
+    "code": "0414",
+    "name": "świecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "swiecki",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "15",
+    "code": "0415",
+    "name": "toruński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "torunski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "16",
+    "code": "0416",
+    "name": "tucholski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tucholski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "17",
+    "code": "0417",
+    "name": "wąbrzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wabrzeski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "18",
+    "code": "0418",
+    "name": "włocławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wloclawski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "19",
+    "code": "0419",
+    "name": "żniński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zninski",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "61",
+    "code": "0461",
+    "name": "Bydgoszcz",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "bydgoszcz",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "62",
+    "code": "0462",
+    "name": "Grudziądz",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "grudziadz",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "63",
+    "code": "0463",
+    "name": "Toruń",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "torun",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "04",
+    "pow": "64",
+    "code": "0464",
+    "name": "Włocławek",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "wloclawek",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "woj": "06",
+    "pow": "01",
+    "code": "0601",
+    "name": "bialski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bialski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "02",
+    "code": "0602",
+    "name": "biłgorajski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bilgorajski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "03",
+    "code": "0603",
+    "name": "chełmski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "chelmski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "04",
+    "code": "0604",
+    "name": "hrubieszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "hrubieszowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "05",
+    "code": "0605",
+    "name": "janowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "janowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "06",
+    "code": "0606",
+    "name": "krasnostawski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krasnostawski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "07",
+    "code": "0607",
+    "name": "kraśnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krasnicki",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "08",
+    "code": "0608",
+    "name": "lubartowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubartowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "09",
+    "code": "0609",
+    "name": "lubelski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubelski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "10",
+    "code": "0610",
+    "name": "łęczyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "leczynski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "11",
+    "code": "0611",
+    "name": "łukowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lukowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "12",
+    "code": "0612",
+    "name": "opolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "opolski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "13",
+    "code": "0613",
+    "name": "parczewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "parczewski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "14",
+    "code": "0614",
+    "name": "puławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pulawski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "15",
+    "code": "0615",
+    "name": "radzyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "radzynski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "16",
+    "code": "0616",
+    "name": "rycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rycki",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "17",
+    "code": "0617",
+    "name": "świdnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "swidnicki",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "18",
+    "code": "0618",
+    "name": "tomaszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tomaszowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "19",
+    "code": "0619",
+    "name": "włodawski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wlodawski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "20",
+    "code": "0620",
+    "name": "zamojski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zamojski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "61",
+    "code": "0661",
+    "name": "Biała Podlaska",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "biala-podlaska",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "62",
+    "code": "0662",
+    "name": "Chełm",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "chelm",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "63",
+    "code": "0663",
+    "name": "Lublin",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "lublin",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "06",
+    "pow": "64",
+    "code": "0664",
+    "name": "Zamość",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "zamosc",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "woj": "08",
+    "pow": "01",
+    "code": "0801",
+    "name": "gorzowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gorzowski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "02",
+    "code": "0802",
+    "name": "krośnieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krosnienski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "03",
+    "code": "0803",
+    "name": "międzyrzecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "miedzyrzecki",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "04",
+    "code": "0804",
+    "name": "nowosolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowosolski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "05",
+    "code": "0805",
+    "name": "słubicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "slubicki",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "06",
+    "code": "0806",
+    "name": "strzelecko-drezdenecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "strzelecko-drezdenecki",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "07",
+    "code": "0807",
+    "name": "sulęciński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sulecinski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "08",
+    "code": "0808",
+    "name": "świebodziński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "swiebodzinski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "09",
+    "code": "0809",
+    "name": "zielonogórski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zielonogorski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "10",
+    "code": "0810",
+    "name": "żagański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zaganski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "11",
+    "code": "0811",
+    "name": "żarski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zarski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "12",
+    "code": "0812",
+    "name": "wschowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wschowski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "61",
+    "code": "0861",
+    "name": "Gorzów Wielkopolski",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "gorzow-wielkopolski",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "08",
+    "pow": "62",
+    "code": "0862",
+    "name": "Zielona Góra",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "zielona-gora",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "woj": "10",
+    "pow": "01",
+    "code": "1001",
+    "name": "bełchatowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "belchatowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "02",
+    "code": "1002",
+    "name": "kutnowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kutnowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "03",
+    "code": "1003",
+    "name": "łaski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "laski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "04",
+    "code": "1004",
+    "name": "łęczycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "leczycki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "05",
+    "code": "1005",
+    "name": "łowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lowicki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "06",
+    "code": "1006",
+    "name": "łódzki wschodni",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lodzki-wschodni",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "07",
+    "code": "1007",
+    "name": "opoczyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "opoczynski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "08",
+    "code": "1008",
+    "name": "pabianicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pabianicki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "09",
+    "code": "1009",
+    "name": "pajęczański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pajeczanski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "10",
+    "code": "1010",
+    "name": "piotrkowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "piotrkowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "11",
+    "code": "1011",
+    "name": "poddębicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "poddebicki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "12",
+    "code": "1012",
+    "name": "radomszczański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "radomszczanski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "13",
+    "code": "1013",
+    "name": "rawski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rawski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "14",
+    "code": "1014",
+    "name": "sieradzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sieradzki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "15",
+    "code": "1015",
+    "name": "skierniewicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "skierniewicki",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "16",
+    "code": "1016",
+    "name": "tomaszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tomaszowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "17",
+    "code": "1017",
+    "name": "wieluński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wielunski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "18",
+    "code": "1018",
+    "name": "wieruszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wieruszowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "19",
+    "code": "1019",
+    "name": "zduńskowolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zdunskowolski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "20",
+    "code": "1020",
+    "name": "zgierski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zgierski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "21",
+    "code": "1021",
+    "name": "brzeziński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "brzezinski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "61",
+    "code": "1061",
+    "name": "Łódź",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "lodz",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "62",
+    "code": "1062",
+    "name": "Piotrków Trybunalski",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "piotrkow-trybunalski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "10",
+    "pow": "63",
+    "code": "1063",
+    "name": "Skierniewice",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "skierniewice",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "woj": "12",
+    "pow": "01",
+    "code": "1201",
+    "name": "bocheński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bochenski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "02",
+    "code": "1202",
+    "name": "brzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "brzeski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "03",
+    "code": "1203",
+    "name": "chrzanowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "chrzanowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "04",
+    "code": "1204",
+    "name": "dąbrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "dabrowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "05",
+    "code": "1205",
+    "name": "gorlicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gorlicki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "06",
+    "code": "1206",
+    "name": "krakowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krakowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "07",
+    "code": "1207",
+    "name": "limanowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "limanowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "08",
+    "code": "1208",
+    "name": "miechowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "miechowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "09",
+    "code": "1209",
+    "name": "myślenicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "myslenicki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "10",
+    "code": "1210",
+    "name": "nowosądecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowosadecki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "11",
+    "code": "1211",
+    "name": "nowotarski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowotarski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "12",
+    "code": "1212",
+    "name": "olkuski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "olkuski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "13",
+    "code": "1213",
+    "name": "oświęcimski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "oswiecimski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "14",
+    "code": "1214",
+    "name": "proszowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "proszowicki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "15",
+    "code": "1215",
+    "name": "suski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "suski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "16",
+    "code": "1216",
+    "name": "tarnowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tarnowski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "17",
+    "code": "1217",
+    "name": "tatrzański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tatrzanski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "18",
+    "code": "1218",
+    "name": "wadowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wadowicki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "19",
+    "code": "1219",
+    "name": "wielicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wielicki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "61",
+    "code": "1261",
+    "name": "Kraków",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "krakow",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "62",
+    "code": "1262",
+    "name": "Nowy Sącz",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "nowy-sacz",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "12",
+    "pow": "63",
+    "code": "1263",
+    "name": "Tarnów",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "tarnow",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "woj": "14",
+    "pow": "01",
+    "code": "1401",
+    "name": "białobrzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bialobrzeski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "02",
+    "code": "1402",
+    "name": "ciechanowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ciechanowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "03",
+    "code": "1403",
+    "name": "garwoliński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "garwolinski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "04",
+    "code": "1404",
+    "name": "gostyniński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gostyninski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "05",
+    "code": "1405",
+    "name": "grodziski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "grodziski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "06",
+    "code": "1406",
+    "name": "grójecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "grojecki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "07",
+    "code": "1407",
+    "name": "kozienicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kozienicki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "08",
+    "code": "1408",
+    "name": "legionowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "legionowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "09",
+    "code": "1409",
+    "name": "lipski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lipski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "10",
+    "code": "1410",
+    "name": "łosicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "losicki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "11",
+    "code": "1411",
+    "name": "makowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "makowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "12",
+    "code": "1412",
+    "name": "miński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "minski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "13",
+    "code": "1413",
+    "name": "mławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mlawski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "14",
+    "code": "1414",
+    "name": "nowodworski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowodworski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "15",
+    "code": "1415",
+    "name": "ostrołęcki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrolecki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "16",
+    "code": "1416",
+    "name": "ostrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "17",
+    "code": "1417",
+    "name": "otwocki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "otwocki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "18",
+    "code": "1418",
+    "name": "piaseczyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "piaseczynski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "19",
+    "code": "1419",
+    "name": "płocki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "plocki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "20",
+    "code": "1420",
+    "name": "płoński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "plonski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "21",
+    "code": "1421",
+    "name": "pruszkowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pruszkowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "22",
+    "code": "1422",
+    "name": "przasnyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "przasnyski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "23",
+    "code": "1423",
+    "name": "przysuski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "przysuski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "24",
+    "code": "1424",
+    "name": "pułtuski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pultuski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "25",
+    "code": "1425",
+    "name": "radomski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "radomski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "26",
+    "code": "1426",
+    "name": "siedlecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "siedlecki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "27",
+    "code": "1427",
+    "name": "sierpecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sierpecki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "28",
+    "code": "1428",
+    "name": "sochaczewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sochaczewski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "29",
+    "code": "1429",
+    "name": "sokołowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sokolowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "30",
+    "code": "1430",
+    "name": "szydłowiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "szydlowiecki",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "32",
+    "code": "1432",
+    "name": "warszawski zachodni",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "warszawski-zachodni",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "33",
+    "code": "1433",
+    "name": "węgrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wegrowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "34",
+    "code": "1434",
+    "name": "wołomiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wolominski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "35",
+    "code": "1435",
+    "name": "wyszkowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wyszkowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "36",
+    "code": "1436",
+    "name": "zwoleński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zwolenski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "37",
+    "code": "1437",
+    "name": "żuromiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zurominski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "38",
+    "code": "1438",
+    "name": "żyrardowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zyrardowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "61",
+    "code": "1461",
+    "name": "Ostrołęka",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "ostroleka",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "62",
+    "code": "1462",
+    "name": "Płock",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "plock",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "63",
+    "code": "1463",
+    "name": "Radom",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "radom",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "64",
+    "code": "1464",
+    "name": "Siedlce",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "siedlce",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "14",
+    "pow": "65",
+    "code": "1465",
+    "name": "Warszawa",
+    "kind": "miasto stołeczne, na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "warszawa",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "woj": "16",
+    "pow": "01",
+    "code": "1601",
+    "name": "brzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "brzeski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "02",
+    "code": "1602",
+    "name": "głubczycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "glubczycki",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "03",
+    "code": "1603",
+    "name": "kędzierzyńsko-kozielski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kedzierzynsko-kozielski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "04",
+    "code": "1604",
+    "name": "kluczborski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kluczborski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "05",
+    "code": "1605",
+    "name": "krapkowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krapkowicki",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "06",
+    "code": "1606",
+    "name": "namysłowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "namyslowski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "07",
+    "code": "1607",
+    "name": "nyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nyski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "08",
+    "code": "1608",
+    "name": "oleski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "oleski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "09",
+    "code": "1609",
+    "name": "opolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "opolski",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "10",
+    "code": "1610",
+    "name": "prudnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "prudnicki",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "11",
+    "code": "1611",
+    "name": "strzelecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "strzelecki",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "16",
+    "pow": "61",
+    "code": "1661",
+    "name": "Opole",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "opole",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "woj": "18",
+    "pow": "01",
+    "code": "1801",
+    "name": "bieszczadzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bieszczadzki",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "02",
+    "code": "1802",
+    "name": "brzozowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "brzozowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "03",
+    "code": "1803",
+    "name": "dębicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "debicki",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "04",
+    "code": "1804",
+    "name": "jarosławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "jaroslawski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "05",
+    "code": "1805",
+    "name": "jasielski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "jasielski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "06",
+    "code": "1806",
+    "name": "kolbuszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kolbuszowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "07",
+    "code": "1807",
+    "name": "krośnieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krosnienski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "08",
+    "code": "1808",
+    "name": "leżajski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lezajski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "09",
+    "code": "1809",
+    "name": "lubaczowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubaczowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "10",
+    "code": "1810",
+    "name": "łańcucki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lancucki",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "11",
+    "code": "1811",
+    "name": "mielecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mielecki",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "12",
+    "code": "1812",
+    "name": "niżański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nizanski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "13",
+    "code": "1813",
+    "name": "przemyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "przemyski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "14",
+    "code": "1814",
+    "name": "przeworski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "przeworski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "15",
+    "code": "1815",
+    "name": "ropczycko-sędziszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ropczycko-sedziszowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "16",
+    "code": "1816",
+    "name": "rzeszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rzeszowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "17",
+    "code": "1817",
+    "name": "sanocki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sanocki",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "18",
+    "code": "1818",
+    "name": "stalowowolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "stalowowolski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "19",
+    "code": "1819",
+    "name": "strzyżowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "strzyzowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "20",
+    "code": "1820",
+    "name": "tarnobrzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tarnobrzeski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "21",
+    "code": "1821",
+    "name": "leski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "leski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "61",
+    "code": "1861",
+    "name": "Krosno",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "krosno",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "62",
+    "code": "1862",
+    "name": "Przemyśl",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "przemysl",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "63",
+    "code": "1863",
+    "name": "Rzeszów",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "rzeszow",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "18",
+    "pow": "64",
+    "code": "1864",
+    "name": "Tarnobrzeg",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "tarnobrzeg",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "woj": "20",
+    "pow": "01",
+    "code": "2001",
+    "name": "augustowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "augustowski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "02",
+    "code": "2002",
+    "name": "białostocki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bialostocki",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "03",
+    "code": "2003",
+    "name": "bielski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bielski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "04",
+    "code": "2004",
+    "name": "grajewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "grajewski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "05",
+    "code": "2005",
+    "name": "hajnowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "hajnowski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "06",
+    "code": "2006",
+    "name": "kolneński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kolnenski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "07",
+    "code": "2007",
+    "name": "łomżyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lomzynski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "08",
+    "code": "2008",
+    "name": "moniecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "moniecki",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "09",
+    "code": "2009",
+    "name": "sejneński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sejnenski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "10",
+    "code": "2010",
+    "name": "siemiatycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "siemiatycki",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "11",
+    "code": "2011",
+    "name": "sokólski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sokolski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "12",
+    "code": "2012",
+    "name": "suwalski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "suwalski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "13",
+    "code": "2013",
+    "name": "wysokomazowiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wysokomazowiecki",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "14",
+    "code": "2014",
+    "name": "zambrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zambrowski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "61",
+    "code": "2061",
+    "name": "Białystok",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "bialystok",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "62",
+    "code": "2062",
+    "name": "Łomża",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "lomza",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "20",
+    "pow": "63",
+    "code": "2063",
+    "name": "Suwałki",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "suwalki",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "woj": "22",
+    "pow": "01",
+    "code": "2201",
+    "name": "bytowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bytowski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "02",
+    "code": "2202",
+    "name": "chojnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "chojnicki",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "03",
+    "code": "2203",
+    "name": "człuchowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "czluchowski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "04",
+    "code": "2204",
+    "name": "gdański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gdanski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "05",
+    "code": "2205",
+    "name": "kartuski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kartuski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "06",
+    "code": "2206",
+    "name": "kościerski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "koscierski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "07",
+    "code": "2207",
+    "name": "kwidzyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kwidzynski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "08",
+    "code": "2208",
+    "name": "lęborski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "leborski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "09",
+    "code": "2209",
+    "name": "malborski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "malborski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "10",
+    "code": "2210",
+    "name": "nowodworski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowodworski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "11",
+    "code": "2211",
+    "name": "pucki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pucki",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "12",
+    "code": "2212",
+    "name": "słupski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "slupski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "13",
+    "code": "2213",
+    "name": "starogardzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "starogardzki",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "14",
+    "code": "2214",
+    "name": "tczewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tczewski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "15",
+    "code": "2215",
+    "name": "wejherowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wejherowski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "16",
+    "code": "2216",
+    "name": "sztumski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sztumski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "61",
+    "code": "2261",
+    "name": "Gdańsk",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "gdansk",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "62",
+    "code": "2262",
+    "name": "Gdynia",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "gdynia",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "63",
+    "code": "2263",
+    "name": "Słupsk",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "slupsk",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "22",
+    "pow": "64",
+    "code": "2264",
+    "name": "Sopot",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "sopot",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "woj": "24",
+    "pow": "01",
+    "code": "2401",
+    "name": "będziński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bedzinski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "02",
+    "code": "2402",
+    "name": "bielski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bielski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "03",
+    "code": "2403",
+    "name": "cieszyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "cieszynski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "04",
+    "code": "2404",
+    "name": "częstochowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "czestochowski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "05",
+    "code": "2405",
+    "name": "gliwicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gliwicki",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "06",
+    "code": "2406",
+    "name": "kłobucki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "klobucki",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "07",
+    "code": "2407",
+    "name": "lubliniecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lubliniecki",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "08",
+    "code": "2408",
+    "name": "mikołowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mikolowski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "09",
+    "code": "2409",
+    "name": "myszkowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "myszkowski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "10",
+    "code": "2410",
+    "name": "pszczyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pszczynski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "11",
+    "code": "2411",
+    "name": "raciborski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "raciborski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "12",
+    "code": "2412",
+    "name": "rybnicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rybnicki",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "13",
+    "code": "2413",
+    "name": "tarnogórski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "tarnogorski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "14",
+    "code": "2414",
+    "name": "bieruńsko-lędziński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bierunsko-ledzinski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "15",
+    "code": "2415",
+    "name": "wodzisławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wodzislawski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "16",
+    "code": "2416",
+    "name": "zawierciański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zawiercianski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "17",
+    "code": "2417",
+    "name": "żywiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zywiecki",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "61",
+    "code": "2461",
+    "name": "Bielsko-Biała",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "bielsko-biala",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "62",
+    "code": "2462",
+    "name": "Bytom",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "bytom",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "63",
+    "code": "2463",
+    "name": "Chorzów",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "chorzow",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "64",
+    "code": "2464",
+    "name": "Częstochowa",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "czestochowa",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "65",
+    "code": "2465",
+    "name": "Dąbrowa Górnicza",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "dabrowa-gornicza",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "66",
+    "code": "2466",
+    "name": "Gliwice",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "gliwice",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "67",
+    "code": "2467",
+    "name": "Jastrzębie-Zdrój",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "jastrzebie-zdroj",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "68",
+    "code": "2468",
+    "name": "Jaworzno",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "jaworzno",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "69",
+    "code": "2469",
+    "name": "Katowice",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "katowice",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "70",
+    "code": "2470",
+    "name": "Mysłowice",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "myslowice",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "71",
+    "code": "2471",
+    "name": "Piekary Śląskie",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "piekary-slaskie",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "72",
+    "code": "2472",
+    "name": "Ruda Śląska",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "ruda-slaska",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "73",
+    "code": "2473",
+    "name": "Rybnik",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "rybnik",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "74",
+    "code": "2474",
+    "name": "Siemianowice Śląskie",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "siemianowice-slaskie",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "75",
+    "code": "2475",
+    "name": "Sosnowiec",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "sosnowiec",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "76",
+    "code": "2476",
+    "name": "Świętochłowice",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "swietochlowice",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "77",
+    "code": "2477",
+    "name": "Tychy",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "tychy",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "78",
+    "code": "2478",
+    "name": "Zabrze",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "zabrze",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "24",
+    "pow": "79",
+    "code": "2479",
+    "name": "Żory",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "zory",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "woj": "26",
+    "pow": "01",
+    "code": "2601",
+    "name": "buski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "buski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "02",
+    "code": "2602",
+    "name": "jędrzejowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "jedrzejowski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "03",
+    "code": "2603",
+    "name": "kazimierski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kazimierski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "04",
+    "code": "2604",
+    "name": "kielecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kielecki",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "05",
+    "code": "2605",
+    "name": "konecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "konecki",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "06",
+    "code": "2606",
+    "name": "opatowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "opatowski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "07",
+    "code": "2607",
+    "name": "ostrowiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrowiecki",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "08",
+    "code": "2608",
+    "name": "pińczowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pinczowski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "09",
+    "code": "2609",
+    "name": "sandomierski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sandomierski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "10",
+    "code": "2610",
+    "name": "skarżyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "skarzyski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "11",
+    "code": "2611",
+    "name": "starachowicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "starachowicki",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "12",
+    "code": "2612",
+    "name": "staszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "staszowski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "13",
+    "code": "2613",
+    "name": "włoszczowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wloszczowski",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "26",
+    "pow": "61",
+    "code": "2661",
+    "name": "Kielce",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "kielce",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "woj": "28",
+    "pow": "01",
+    "code": "2801",
+    "name": "bartoszycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bartoszycki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "02",
+    "code": "2802",
+    "name": "braniewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "braniewski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "03",
+    "code": "2803",
+    "name": "działdowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "dzialdowski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "04",
+    "code": "2804",
+    "name": "elbląski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "elblaski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "05",
+    "code": "2805",
+    "name": "ełcki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "elcki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "06",
+    "code": "2806",
+    "name": "giżycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gizycki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "07",
+    "code": "2807",
+    "name": "iławski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ilawski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "08",
+    "code": "2808",
+    "name": "kętrzyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ketrzynski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "09",
+    "code": "2809",
+    "name": "lidzbarski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lidzbarski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "10",
+    "code": "2810",
+    "name": "mrągowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mragowski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "11",
+    "code": "2811",
+    "name": "nidzicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nidzicki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "12",
+    "code": "2812",
+    "name": "nowomiejski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowomiejski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "13",
+    "code": "2813",
+    "name": "olecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "olecki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "14",
+    "code": "2814",
+    "name": "olsztyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "olsztynski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "15",
+    "code": "2815",
+    "name": "ostródzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrodzki",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "16",
+    "code": "2816",
+    "name": "piski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "piski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "17",
+    "code": "2817",
+    "name": "szczycieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "szczycienski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "18",
+    "code": "2818",
+    "name": "gołdapski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "goldapski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "19",
+    "code": "2819",
+    "name": "węgorzewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wegorzewski",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "61",
+    "code": "2861",
+    "name": "Elbląg",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "elblag",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "28",
+    "pow": "62",
+    "code": "2862",
+    "name": "Olsztyn",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "olsztyn",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "woj": "30",
+    "pow": "01",
+    "code": "3001",
+    "name": "chodzieski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "chodzieski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "02",
+    "code": "3002",
+    "name": "czarnkowsko-trzcianecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "czarnkowsko-trzcianecki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "03",
+    "code": "3003",
+    "name": "gnieźnieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gnieznienski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "04",
+    "code": "3004",
+    "name": "gostyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gostynski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "05",
+    "code": "3005",
+    "name": "grodziski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "grodziski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "06",
+    "code": "3006",
+    "name": "jarociński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "jarocinski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "07",
+    "code": "3007",
+    "name": "kaliski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kaliski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "08",
+    "code": "3008",
+    "name": "kępiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kepinski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "09",
+    "code": "3009",
+    "name": "kolski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kolski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "10",
+    "code": "3010",
+    "name": "koniński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "koninski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "11",
+    "code": "3011",
+    "name": "kościański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "koscianski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "12",
+    "code": "3012",
+    "name": "krotoszyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "krotoszynski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "13",
+    "code": "3013",
+    "name": "leszczyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "leszczynski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "14",
+    "code": "3014",
+    "name": "międzychodzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "miedzychodzki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "15",
+    "code": "3015",
+    "name": "nowotomyski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "nowotomyski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "16",
+    "code": "3016",
+    "name": "obornicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "obornicki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "17",
+    "code": "3017",
+    "name": "ostrowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrowski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "18",
+    "code": "3018",
+    "name": "ostrzeszowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "ostrzeszowski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "19",
+    "code": "3019",
+    "name": "pilski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pilski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "20",
+    "code": "3020",
+    "name": "pleszewski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pleszewski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "21",
+    "code": "3021",
+    "name": "poznański",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "poznanski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "22",
+    "code": "3022",
+    "name": "rawicki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "rawicki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "23",
+    "code": "3023",
+    "name": "słupecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "slupecki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "24",
+    "code": "3024",
+    "name": "szamotulski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "szamotulski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "25",
+    "code": "3025",
+    "name": "średzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sredzki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "26",
+    "code": "3026",
+    "name": "śremski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "sremski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "27",
+    "code": "3027",
+    "name": "turecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "turecki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "28",
+    "code": "3028",
+    "name": "wągrowiecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wagrowiecki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "29",
+    "code": "3029",
+    "name": "wolsztyński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wolsztynski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "30",
+    "code": "3030",
+    "name": "wrzesiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "wrzesinski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "31",
+    "code": "3031",
+    "name": "złotowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "zlotowski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "61",
+    "code": "3061",
+    "name": "Kalisz",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "kalisz",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "62",
+    "code": "3062",
+    "name": "Konin",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "konin",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "63",
+    "code": "3063",
+    "name": "Leszno",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "leszno",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "30",
+    "pow": "64",
+    "code": "3064",
+    "name": "Poznań",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "poznan",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "woj": "32",
+    "pow": "01",
+    "code": "3201",
+    "name": "białogardzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "bialogardzki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "02",
+    "code": "3202",
+    "name": "choszczeński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "choszczenski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "03",
+    "code": "3203",
+    "name": "drawski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "drawski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "04",
+    "code": "3204",
+    "name": "goleniowski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "goleniowski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "05",
+    "code": "3205",
+    "name": "gryficki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gryficki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "06",
+    "code": "3206",
+    "name": "gryfiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "gryfinski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "07",
+    "code": "3207",
+    "name": "kamieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kamienski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "08",
+    "code": "3208",
+    "name": "kołobrzeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "kolobrzeski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "09",
+    "code": "3209",
+    "name": "koszaliński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "koszalinski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "10",
+    "code": "3210",
+    "name": "myśliborski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "mysliborski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "11",
+    "code": "3211",
+    "name": "policki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "policki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "12",
+    "code": "3212",
+    "name": "pyrzycki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "pyrzycki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "13",
+    "code": "3213",
+    "name": "sławieński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "slawienski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "14",
+    "code": "3214",
+    "name": "stargardzki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "stargardzki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "15",
+    "code": "3215",
+    "name": "szczecinecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "szczecinecki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "16",
+    "code": "3216",
+    "name": "świdwiński",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "swidwinski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "17",
+    "code": "3217",
+    "name": "wałecki",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "walecki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "18",
+    "code": "3218",
+    "name": "łobeski",
+    "kind": "powiat",
+    "stanNa": "2026-01-01",
+    "slug": "lobeski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "61",
+    "code": "3261",
+    "name": "Koszalin",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "koszalin",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "62",
+    "code": "3262",
+    "name": "Szczecin",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "szczecin",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "woj": "32",
+    "pow": "63",
+    "code": "3263",
+    "name": "Świnoujście",
+    "kind": "miasto na prawach powiatu",
+    "stanNa": "2026-01-01",
+    "slug": "swinoujscie",
+    "voivodeshipSlug": "zachodniopomorskie"
+  }
+]

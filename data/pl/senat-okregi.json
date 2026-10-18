@@ -1,0 +1,610 @@
+[
+  {
+    "num": 1,
+    "area": "obejmujący obszary powiatów: bolesławiecki, lubański, lwówecki, zgorzelecki.",
+    "senator": "Waldemar Witkowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 2,
+    "area": "obejmujący obszary powiatów: jaworski, jeleniogórski, kamiennogórski, złotoryjski oraz miasta na prawach powiatu: Jelenia Góra.",
+    "senator": "Marcin Zawiła",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 3,
+    "area": "obejmujący obszary powiatów: głogowski, legnicki, lubiński, polkowicki oraz miasta na prawach powiatu: Legnica.",
+    "senator": "Małgorzata Sekuła-Szmajdzińska",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 4,
+    "area": "obejmujący obszary powiatów: świdnicki, wałbrzyski oraz miasta na prawach powiatu: Wałbrzych.",
+    "senator": "Agnieszka Kołacz-Leszczyńska",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 5,
+    "area": "obejmujący obszary powiatów: dzierżoniowski, kłodzki, ząbkowicki.",
+    "senator": "Aleksander Szwed",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 6,
+    "area": "obejmujący obszary powiatów: górowski, milicki, oleśnicki, oławski, strzeliński, średzki, trzebnicki, wołowski, wrocławski.",
+    "senator": "Kazimierz Michał Ujazdowski",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 7,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Wrocław: Bieńkowice, Biskupin - Sępolno - Dąbie - Bartoszowice, Borek, Brochów, Gaj, Gajowice, Grabiszyn - Grabiszynek, Huby, Jagodno, Klecina, Krzyki - Partynice, Księże, Oporów, Plac Grunwaldzki, Powstańców Śląskich, Przedmieście Oławskie, Przedmieście Świdnickie, Stare Miasto, Tarnogaj, Wojszyce - Ołtaszyn, Zacisze - Zalesie - Szczytniki.",
+    "senator": "Grzegorz Schetyna",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 8,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Wrocław: Gądów - Popowice Pd, Jerzmanowo - Jarnołtów - Strachowice - Osiniec, Karłowice - Różanka, Kleczków, Kowale, Kużniki, Leśnica, Lipa Piotrowska, Maślice, Muchobór Mały, Muchobór Wielki, Nadodrze, Nowy Dwór, Ołbin, Osobowice - Rędzin, Pawłowice, Pilczyce - Kozanów - Popowice, Polanowice - Poświętne - Ligota, Pracze Odrzańskie, Psie Pole - Zawidawie, Sołtysowice, Swojczyce - Strachocin - Wojnów, Szczepin, Świniary, Widawa, Żerniki.",
+    "senator": "Barbara Zdrojewska",
+    "voivodeshipSlug": "dolnoslaskie"
+  },
+  {
+    "num": 9,
+    "area": "obejmujący obszary powiatów: bydgoski, świecki, tucholski oraz miasta na prawach powiatu: Bydgoszcz.",
+    "senator": "Andrzej Kobiak",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "num": 10,
+    "area": "obejmujący obszary powiatów: inowrocławski, mogileński, nakielski, sępoleński, żniński.",
+    "senator": "Ryszard Brejza",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "num": 11,
+    "area": "obejmujący obszary powiatów: chełmiński, toruński oraz miasta na prawach powiatu: Toruń.",
+    "senator": "Tomasz Lenz",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "num": 12,
+    "area": "obejmujący obszary powiatów: brodnicki, golubsko-dobrzyński, grudziądzki, rypiński, wąbrzeski oraz miasta na prawach powiatu: Grudziądz.",
+    "senator": "Ryszard Bober",
+    "voivodeshipSlug": "kujawsko-pomorskie"
+  },
+  {
+    "num": 13,
+    "area": "obejmujący obszary powiatów: aleksandrowski, lipnowski, radziejowski, włocławski oraz miasta na prawach powiatu: Włocławek.",
+    "senator": "Stanisław Pawlak",
+    "voivodeshipSlug": "kujawsko-pomorskie",
+    "alsoPrinted": {
+      "name": "Krzysztof Kukucki",
+      "note": "Mandat wygasł 22.04.2024r."
+    }
+  },
+  {
+    "num": 14,
+    "area": "obejmujący obszary powiatów: lubartowski, łukowski, opolski, puławski, rycki.",
+    "senator": "Stanisław Gogacz",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 15,
+    "area": "obejmujący obszary powiatów: janowski, kraśnicki, lubelski, łęczyński, świdnicki.",
+    "senator": "Grzegorz Czelej",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 16,
+    "area": "obejmujący obszar miasta na prawach powiatu: Lublin .",
+    "senator": "Jacek Trela",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 17,
+    "area": "obejmujący obszary powiatów: bialski, parczewski, radzyński oraz miasta na prawach powiatu: Biała Podlaska.",
+    "senator": "Grzegorz Bierecki",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 18,
+    "area": "obejmujący obszary powiatów: chełmski, krasnostawski, włodawski oraz miasta na prawach powiatu: Chełm.",
+    "senator": "Józef Zając",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 19,
+    "area": "obejmujący obszary powiatów: biłgorajski, hrubieszowski, tomaszowski, zamojski oraz miasta na prawach powiatu: Zamość.",
+    "senator": "Jerzy Chróścikowski",
+    "voivodeshipSlug": "lubelskie"
+  },
+  {
+    "num": 20,
+    "area": "obejmujący obszary powiatów: krośnieński, świebodziński, zielonogórski oraz miasta na prawach powiatu: Zielona Góra.",
+    "senator": "Mirosław Różański zmarł 24.08.2026r.",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "num": 21,
+    "area": "obejmujący obszary powiatów: gorzowski, międzyrzecki, strzelecko-drezdenecki, słubicki, sulęciński oraz miasta na prawach powiatu: Gorzów Wielkopolski.",
+    "senator": "Władysław Komarnicki",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "num": 22,
+    "area": "obejmujący obszary powiatów: nowosolski, wschowski, żagański, żarski.",
+    "senator": "Wadim Tyszkiewicz",
+    "voivodeshipSlug": "lubuskie"
+  },
+  {
+    "num": 23,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Łódź: Osiedle Bałuty Zachodnie, Osiedle Bałuty - Centrum, Osiedle Bałuty - Doły, Osiedle im. Józefa Montwiłła - Mireckiego, Osiedle Julianów - Marysin - Rogi, Osiedle Karolew - Retkinia Wschód, Osiedle Katedralna, Osiedle Koziny, Osiedle Lublinek - Pienista, Osiedle Łagiewniki, Osiedle Nad Nerem, Osiedle Radogoszcz, Osiedle Retkinia Zachód - Smulsko, Osiedle Stare Polesie, Osiedle Śródmieście - Wschód, Osiedle Teofilów - Wielkopolska, Osiedle Zdrowie - Mania, Osiedle Złotno",
+    "senator": "Artur Dunin",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 24,
+    "area": "obejmujący obszary powiatów: brzeziński, łódzki wschodni oraz część obszaru miasta na prawach powiatu Łódź: Osiedle Andrzejów, Osiedle Chojny, Osiedle Chojny - Dąbrowa, Osiedle Dolina Łódki, Osiedle Górniak, Osiedle Mileszki, Osiedle Nowosolna, Osiedle Nr 33, Osiedle Olechów - Janów, Osiedle Piastów - Kurak, Osiedle Rokicie, Osiedle Ruda, Osiedle Stary Widzew, Osiedle Stoki, Osiedle Widzew-Wschód, Osiedle Wiskitno, Osiedle Wzniesień Łódzkich, Osiedle Zarzew.",
+    "senator": "Krzysztof Kwiatkowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 25,
+    "area": "obejmujący obszary powiatów: kutnowski, łęczycki, łowicki, poddębicki.",
+    "senator": "Przemysław Błaszczyk",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 26,
+    "area": "obejmujący obszary powiatów: łaski, pabianicki, zgierski.",
+    "senator": "Marcin Karpiński",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 27,
+    "area": "obejmujący obszary powiatów: pajęczański, sieradzki, wieluński, wieruszowski, zduńskowolski.",
+    "senator": "Michał Seweryński",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 28,
+    "area": "obejmujący obszary powiatów: bełchatowski, piotrkowski, radomszczański oraz miasta na prawach powiatu: Piotrków Trybunalski.",
+    "senator": "Wiesław Dobkowski",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 29,
+    "area": "obejmujący obszary powiatów: opoczyński, rawski, skierniewicki, tomaszowski oraz miasta na prawach powiatu: Skierniewice.",
+    "senator": "Rafał Ambrozik",
+    "voivodeshipSlug": "lodzkie"
+  },
+  {
+    "num": 30,
+    "area": "obejmujący obszary powiatów: chrzanowski, myślenicki, oświęcimski, suski, wadowicki.",
+    "senator": "Andrzej Pająk",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 31,
+    "area": "obejmujący obszary powiatów: krakowski, miechowski, olkuski.",
+    "senator": "Marek Pęk",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 32,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Kraków: Dzielnica II, Dzielnica III, Dzielnica IV, Dzielnica XIV, Dzielnica XV, Dzielnica XVI, Dzielnica XVII, Dzielnica XVIII.",
+    "senator": "Jerzy Fedorowicz",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 33,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Kraków: Dzielnica I, Dzielnica V, Dzielnica VI, Dzielnica VII, Dzielnica VIII, Dzielnica IX, Dzielnica X, Dzielnica XI, Dzielnica XII, Dzielnica XIII.",
+    "senator": "Monika Jadwiga Piątkowska",
+    "voivodeshipSlug": "malopolskie",
+    "alsoPrinted": {
+      "name": "Bogdan Klich",
+      "note": "mandat wygasł 17.11.2024r."
+    }
+  },
+  {
+    "num": 34,
+    "area": "obejmujący obszary powiatów: bocheński, brzeski, proszowicki, wielicki.",
+    "senator": "Włodzimierz Bernacki",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 35,
+    "area": "obejmujący obszary powiatów: dąbrowski, tarnowski oraz miasta na prawach powiatu: Tarnów.",
+    "senator": "Kazimierz Wiatr",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 36,
+    "area": "obejmujący obszary powiatów: limanowski, nowotarski, tatrzański.",
+    "senator": "Jan Hamerski",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 37,
+    "area": "obejmujący obszary powiatów: gorlicki, nowosądecki oraz miasta na prawach powiatu: Nowy Sącz.",
+    "senator": "Wiktor Durlak",
+    "voivodeshipSlug": "malopolskie"
+  },
+  {
+    "num": 38,
+    "area": "obejmujący obszary powiatów: gostyniński, płocki, sierpecki, sochaczewski, żyrardowski oraz miasta na prawach powiatu: Płock.",
+    "senator": "Waldemar Pawlak",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 39,
+    "area": "obejmujący obszary powiatów: ciechanowski, mławski, płoński, przasnyski, żuromiński.",
+    "senator": "Krzysztof Bieńkowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 40,
+    "area": "obejmujący obszary powiatów: legionowski, nowodworski, warszawski zachodni, wołomiński.",
+    "senator": "Jolanta Hibner",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 41,
+    "area": "obejmujący obszary powiatów: grodziski, otwocki, piaseczyński, pruszkowski.",
+    "senator": "Michał Kamiński",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 42,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Warszawa: Praga Południe, Praga Północ, Rembertów, Targówek, Wesoła.",
+    "senator": "Marek Borowski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 43,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Warszawa: Mokotów, Ursynów, Wawer, Wilanów.",
+    "senator": "Małgorzata Kidawa-Błońska",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 44,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Warszawa: Białołęka, Bielany, Śródmieście, Żoliborz.",
+    "senator": "Adam Bodnar",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 45,
+    "area": "obejmujący część obszaru miasta na prawach powiatu Warszawa: Bemowo, Ochota, Ursus, Włochy, Wola.",
+    "senator": "Magdalena Biejat",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 46,
+    "area": "obejmujący obszary powiatów: makowski, ostrołęcki, ostrowski, pułtuski, wyszkowski oraz miasta na prawach powiatu: Ostrołęka.",
+    "senator": "Robert Mamątow",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 47,
+    "area": "obejmujący obszary powiatów: garwoliński, miński, węgrowski.",
+    "senator": "Maciej Górski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 48,
+    "area": "obejmujący obszary powiatów: łosicki, siedlecki, sokołowski oraz miasta na prawach powiatu: Siedlce.",
+    "senator": "Waldemar Kraska",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 49,
+    "area": "obejmujący obszary powiatów: białobrzeski, grójecki, kozienicki, przysuski.",
+    "senator": "Stanisław Karczewski",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 50,
+    "area": "obejmujący obszary powiatów: lipski, radomski, szydłowiecki, zwoleński oraz miasta na prawach powiatu: Radom.",
+    "senator": "Wojciech Skurkiewicz",
+    "voivodeshipSlug": "mazowieckie"
+  },
+  {
+    "num": 51,
+    "area": "obejmujący obszary powiatów: brzeski, kluczborski, namysłowski, nyski, prudnicki.",
+    "senator": "Tadeusz Jarmuziewicz",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "num": 52,
+    "area": "obejmujący obszar powiatu: opolski oraz miasta na prawach powiatu: Opole.",
+    "senator": "Piotr Woźniak",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "num": 53,
+    "area": "obejmujący obszary powiatów: głubczycki, kędzierzyńsko-kozielski, krapkowicki, oleski, strzelecki.",
+    "senator": "Beniamin Godyla",
+    "voivodeshipSlug": "opolskie"
+  },
+  {
+    "num": 54,
+    "area": "obejmujący obszary powiatów: leżajski, niżański, stalowowolski, tarnobrzeski oraz miasta na prawach powiatu: Tarnobrzeg.",
+    "senator": "Janina Sagatowska",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "num": 55,
+    "area": "obejmujący obszary powiatów: dębicki, kolbuszowski, mielecki, ropczycko-sędziszowski, strzyżowski.",
+    "senator": "Zdzisław Pupa",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "num": 56,
+    "area": "obejmujący obszary powiatów: łańcucki, rzeszowski oraz miasta na prawach powiatu: Rzeszów.",
+    "senator": "Józef Jodłowski",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "num": 57,
+    "area": "obejmujący obszary powiatów: brzozowski, jasielski, krośnieński oraz miasta na prawach powiatu: Krosno.",
+    "senator": "Alicja Zając",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "num": 58,
+    "area": "obejmujący obszary powiatów: bieszczadzki, jarosławski, leski, lubaczowski, przemyski, przeworski, sanocki oraz miasta na prawach powiatu: Przemyśl.",
+    "senator": "Mieczysław Golba",
+    "voivodeshipSlug": "podkarpackie"
+  },
+  {
+    "num": 59,
+    "area": "obejmujący obszary powiatów: augustowski, grajewski, kolneński, łomżyński, moniecki, sejneński, suwalski, zambrowski oraz miast na prawach powiatu: Łomża i Suwałki.",
+    "senator": "Marek Komorowski",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "num": 60,
+    "area": "obejmujący obszary powiatów: białostocki, sokólski oraz miasta na prawach powiatu: Białystok.",
+    "senator": "Maciej Żywno",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "num": 61,
+    "area": "obejmujący obszary powiatów: bielski, hajnowski, siemiatycki, wysokomazowiecki.",
+    "senator": "Anna Bogucka",
+    "voivodeshipSlug": "podlaskie"
+  },
+  {
+    "num": 62,
+    "area": "obejmujący obszary powiatów: lęborski, słupski, wejherowski oraz miasta na prawach powiatu: Słupsk.",
+    "senator": "Kazimierz Kleina",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 63,
+    "area": "obejmujący obszary powiatów: bytowski, chojnicki, człuchowski, kartuski, kościerski.",
+    "senator": "Anna Górska",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 64,
+    "area": "obejmujący obszar powiatu: pucki oraz miasta na prawach powiatu: Gdynia.",
+    "senator": "Sławomir Rybicki",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 65,
+    "area": "obejmujący obszary miast na prawach powiatu: Gdańsk, Sopot.",
+    "senator": "Bogdan Borusewicz",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 66,
+    "area": "obejmujący obszary powiatów: gdański, starogardzki, tczewski.",
+    "senator": "Ryszard Świlski",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 67,
+    "area": "obejmujący obszary powiatów: kwidzyński, malborski, nowodworski, sztumski.",
+    "senator": "Leszek Czarnobaj",
+    "voivodeshipSlug": "pomorskie"
+  },
+  {
+    "num": 68,
+    "area": "obejmujący obszary powiatów: częstochowski, kłobucki, lubliniecki, myszkowski.",
+    "senator": "Ryszard Majer",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 69,
+    "area": "obejmujący obszar miasta na prawach powiatu: Częstochowa.",
+    "senator": "Wojciech Konieczny",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 70,
+    "area": "obejmujący obszary powiatów: gliwicki, tarnogórski oraz miasta na prawach powiatu: Gliwice.",
+    "senator": "Zygmunt Frankiewicz",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 71,
+    "area": "obejmujący obszary miast na prawach powiatu: Bytom, Zabrze.",
+    "senator": "Halina Bieda",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 72,
+    "area": "obejmujący obszary powiatów: raciborski, wodzisławski oraz miast na prawach powiatu: Jastrzębie-Zdrój, Żory.",
+    "senator": "Henryk Piotr Siedlaczek",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 73,
+    "area": "obejmujący obszary powiatów: mikołowski, rybnicki oraz miasta na prawach powiatu: Rybnik.",
+    "senator": "Piotr Masłowski",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 74,
+    "area": "obejmujący obszar miast na prawach powiatu: Chorzów, Piekary Śląskie, Ruda Śląska, Siemianowice Śląskie, Świętochłowice.",
+    "senator": "Gabriela Morawska-Stanecka",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 75,
+    "area": "obejmujący obszar powiatu: bieruńsko-lędziński oraz miast na prawach powiatu: Mysłowice, Tychy.",
+    "senator": "Andrzej Dziuba",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 76,
+    "area": "obejmujący obszary powiatów: będziński, zawierciański oraz miasta na prawach powiatu: Dąbrowa Górnicza.",
+    "senator": "Beata Małecka-Libera",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 77,
+    "area": "obejmujący obszary miast na prawach powiatu: Jaworzno, Sosnowiec.",
+    "senator": "Joanna Sekuła",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 78,
+    "area": "obejmujący obszary powiatów: bielski, pszczyński oraz miasta na prawach powiatu: Bielsko-Biała.",
+    "senator": "Agnieszka Gorgoń-Komor",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 79,
+    "area": "obejmujący obszary powiatów: cieszyński, żywiecki.",
+    "senator": "Andrzej Kalata",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 80,
+    "area": "obejmujący obszar miasta na prawach powiatu: Katowice.",
+    "senator": "Maciej Kopiec",
+    "voivodeshipSlug": "slaskie"
+  },
+  {
+    "num": 81,
+    "area": "obejmujący obszary powiatów: buski, jędrzejowski, kazimierski, konecki, pińczowski, staszowski, włoszczowski.",
+    "senator": "Jacek Włosowicz",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "num": 82,
+    "area": "obejmujący obszary powiatów: opatowski, ostrowiecki, sandomierski, skarżyski, starachowicki.",
+    "senator": "Jarosław Rusiecki",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "num": 83,
+    "area": "obejmujący obszar powiatu: kielecki oraz miasta na prawach powiatu: Kielce.",
+    "senator": "Krzysztof Słoń",
+    "voivodeshipSlug": "swietokrzyskie"
+  },
+  {
+    "num": 84,
+    "area": "obejmujący obszary powiatów: bartoszycki, braniewski, elbląski, lidzbarski oraz miasta na prawach powiatu: Elbląg.",
+    "senator": "Jerzy Wcisła",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "num": 85,
+    "area": "obejmujący obszary powiatów: działdowski, iławski, nowomiejski, ostródzki.",
+    "senator": "Gustaw Marek Brzezin",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "num": 86,
+    "area": "obejmujący obszary powiatów: nidzicki, olsztyński, szczycieński. oraz miasta na prawach powiatu: Olsztyn.",
+    "senator": "Ewa Monika Kaliszuk",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "num": 87,
+    "area": "obejmujący obszary powiatów: ełcki, giżycki, gołdapski, kętrzyński, mrągowski, olecki, piski, węgorzewski. stan prawny na 10.08.2019 r.",
+    "senator": "Jolanta Piotrowska",
+    "voivodeshipSlug": "warminsko-mazurskie"
+  },
+  {
+    "num": 88,
+    "area": "obejmujący obszary powiatów: chodzieski, czarnkowsko-trzcianecki, pilski, wągrowiecki, złotowski.",
+    "senator": "Adam Szejnfeld",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 89,
+    "area": "obejmujący obszary powiatów: grodziski, międzychodzki, nowotomyski, obornicki, szamotulski, wolsztyński.",
+    "senator": "Jan Filip Libicki",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 90,
+    "area": "obejmujący obszar powiatu: poznański.",
+    "senator": "Waldy Dzikowski",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 91,
+    "area": "obejmujący obszar miasta na prawach powiatu: Poznań.",
+    "senator": "Rafał Grupiński",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 92,
+    "area": "obejmujący obszary powiatów: gnieźnieński, słupecki, średzki, śremski, wrzesiński.",
+    "senator": "Grzegorz Fedorowicz",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 93,
+    "area": "obejmujący obszary powiatów: kolski, koniński, turecki oraz miasta na prawach powiatu: Konin.",
+    "senator": "Leszek Galemba",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 94,
+    "area": "obejmujący obszary powiatów: gostyński, kościański, leszczyński, rawicki oraz miasta na prawach powiatu: Leszno.",
+    "senator": "Wojciech Ziemniak",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 95,
+    "area": "obejmujący obszary powiatów: kępiński, krotoszyński, ostrowski, ostrzeszowski.",
+    "senator": "Ewa Matecka",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 96,
+    "area": "obejmujący obszary powiatów: jarociński, kaliski, pleszewski oraz miasta na prawach powiatu: Kalisz.",
+    "senator": "Janusz Pęcherz",
+    "voivodeshipSlug": "wielkopolskie"
+  },
+  {
+    "num": 97,
+    "area": "obejmujący obszar powiatu: policki oraz miasta na prawach powiatu: Szczecin.",
+    "senator": "Tomasz Grodzki",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "num": 98,
+    "area": "obejmujący obszary powiatów: goleniowski, gryficki, gryfiński, kamieński, łobeski, myśliborski, pyrzycki, stargardzki oraz miasta na prawach powiatu: Świnoujście.",
+    "senator": "Magdalena Kochan",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "num": 99,
+    "area": "obejmujący obszary powiatów: białogardzki, choszczeński, drawski, kołobrzeski, świdwiński, wałecki.",
+    "senator": "Janusz Gromek",
+    "voivodeshipSlug": "zachodniopomorskie"
+  },
+  {
+    "num": 100,
+    "area": "obejmujący obszary powiatów: koszaliński, sławieński, szczecinecki oraz miasta na prawach powiatu: Koszalin.",
+    "senator": "Stanisław Gawłowski",
+    "voivodeshipSlug": "zachodniopomorskie"
+  }
+]
