@@ -1,8 +1,13 @@
+import { CONSTITUENCIES, LOCAL_UNITS } from "../kr/level2";
 import { alphaRegions, REGIONS } from "../kr/places";
 import {
+  constituencyIndexPath,
+  constituencyPath,
   electionsPath,
   krHome,
   krRoot,
+  localIndexPath,
+  localPath,
   naElectionPath,
   regionPath,
   sectionPath,
@@ -17,7 +22,7 @@ export const KR_REGISTRY = {
   electionHref: "/kr/en/elections/national-assembly-2028/",
   electionLabel: "12 April 2028",
   summary:
-    "National Assembly election on 12 April 2028, from the 22nd term printed by the National Assembly minutes index and article 34 of the Public Official Election Act. This release has the national pages and 16 upper-level local governments, in Korean and English.",
+    "National Assembly election on 12 April 2028. This release has the national pages, 16 upper-level governments, 226 basic si, gun, and gu from the Interior Ministry book plus 3 Incheon names that appear only on the 3 June 2026 winner roster, and 254 National Assembly constituencies, in Korean and English.",
 } as const;
 
 type IndexEntry = {
@@ -39,6 +44,8 @@ function labels(lang: KrLang) {
       results: "결과",
       faq: "질문",
       sources: "출처",
+      local: "시·군·구",
+      constituencies: "국회의원 지역구",
     };
   }
   return {
@@ -50,6 +57,8 @@ function labels(lang: KrLang) {
     results: "Results",
     faq: "FAQ",
     sources: "Sources",
+    local: "Si, gun, and gu",
+    constituencies: "National Assembly constituencies",
   };
 }
 
@@ -70,7 +79,21 @@ function languageEntries(lang: KrLang): IndexEntry[] {
     { path: sectionPath(lang, "candidates"), lang, title: copy.candidates, kind: "candidates", text: "후보자 candidates" },
     { path: sectionPath(lang, "results"), lang, title: copy.results, kind: "results", text: "개표 결과 results" },
     { path: sectionPath(lang, "faq"), lang, title: copy.faq, kind: "faq", text: "faq 질문" },
-    { path: sectionPath(lang, "sources"), lang, title: copy.sources, kind: "sources", text: "출처 sources 중앙선거관리위원회 행정안전부" },
+    { path: sectionPath(lang, "sources"), lang, title: copy.sources, kind: "sources", text: "출처 sources 중앙선거관리위원회 행정안전부 공공누리" },
+    {
+      path: localIndexPath(lang),
+      lang,
+      title: copy.local,
+      kind: "locals",
+      text: "시 군 구 기초자치단체 si gun gu",
+    },
+    {
+      path: constituencyIndexPath(lang),
+      lang,
+      title: copy.constituencies,
+      kind: "constituencies",
+      text: "국회의원지역구 constituency 제22대",
+    },
   ];
   const regions = alphaRegions().map((region) => ({
     path: regionPath(lang, region.slug),
@@ -79,7 +102,21 @@ function languageEntries(lang: KrLang): IndexEntry[] {
     kind: "region",
     text: `${region.officialName} ${region.kindKo} ${region.kindEn} ${region.offices.map((office) => office.host).join(" ")}`,
   }));
-  return [...fixed, ...regions];
+  const locals = LOCAL_UNITS.map((unit) => ({
+    path: localPath(lang, unit.region, unit.slug),
+    lang,
+    title: unit.name,
+    kind: "local",
+    text: `${unit.name} ${unit.bookParent} ${unit.kind} ${unit.head?.name ?? ""} ${unit.head?.party ?? ""}`,
+  }));
+  const constituencies = CONSTITUENCIES.map((row) => ({
+    path: constituencyPath(lang, row.slug),
+    lang,
+    title: `${row.city} ${row.name}`,
+    kind: "constituency",
+    text: `${row.city} ${row.name} ${row.member?.name ?? ""} ${row.member?.party ?? ""} ${row.member?.origNm ?? ""}`,
+  }));
+  return [...fixed, ...regions, ...locals, ...constituencies];
 }
 
 export function krIndexEntries(): IndexEntry[] {
