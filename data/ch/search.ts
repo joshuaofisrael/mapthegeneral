@@ -1,4 +1,5 @@
 import { alphaCantons, CANTONS } from "./cantons";
+import { DISTRICTS } from "./districts";
 import type { ChLang } from "./types";
 import { ui } from "./ui";
 
@@ -14,6 +15,14 @@ export function electionPath(lang: ChLang): string {
 
 export function cantonPath(lang: ChLang, slug: string): string {
   return `${chHome(lang)}${slug}/`;
+}
+
+export function districtsIndexPath(lang: ChLang): string {
+  return `${chHome(lang)}districts/`;
+}
+
+export function districtPath(lang: ChLang, cantonSlug: string, districtSlug: string): string {
+  return `${cantonPath(lang, cantonSlug)}${districtSlug}/`;
 }
 
 export type ChIndexEntry = {
@@ -106,7 +115,25 @@ function entriesFor(lang: ChLang): ChIndexEntry[] {
     kind: "canton",
     text: `${canton.officialName} ${canton.article1Name} ${canton.ordinanceName} ${canton.abbr} ${copy.cantons}`,
   }));
-  return [...fixed, ...cantons];
+  const byAbbr = new Map(CANTONS.map((canton) => [canton.abbr, canton]));
+  const districts = DISTRICTS.map((district) => {
+    const canton = byAbbr.get(district.canton);
+    return {
+      path: districtPath(lang, canton?.slug ?? district.canton.toLowerCase(), district.slug),
+      lang,
+      title: district.officialName,
+      kind: "district",
+      text: `${district.officialName} ${district.shortName} ${district.bfsNumber} ${canton?.officialName ?? ""} ${canton?.abbr ?? ""}`,
+    };
+  });
+  const index = {
+    path: districtsIndexPath(lang),
+    lang,
+    title: copy.districts,
+    kind: "districts",
+    text: "Bezirke districts distretti Wahlkreis Verwaltungskreis Region",
+  };
+  return [...fixed, index, ...cantons, ...districts];
 }
 
 export function switzerlandEntries(): ChIndexEntry[] {
