@@ -174,67 +174,6 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     rules: [],
   },
   {
-    id: "fr-2027-presidentielle-t1",
-    country: "fr",
-    localLang: "fr",
-    election: {
-      en: "Presidential election, first round (date as printed on service-public.fr page F1939; check the convening decree)",
-      local: "élection présidentielle, premier tour (date imprimée sur la fiche F1939 ; vérifier le décret de convocation)",
-    },
-    pollingDay: "2027-04-18",
-    trackerOpensAt: "2027-04-18T20:00:00+02:00",
-    officialResults: { label: "Ministère de l’Intérieur, résultats des élections", url: "https://www.resultats-elections.interieur.gouv.fr/" },
-    rules: [
-      {
-        kind: "poll-ban",
-        start: "2027-04-17T00:00:00+02:00",
-        end: "2027-04-18T20:00:00+02:00",
-        citation: {
-          label: "Loi n° 77-808 du 19 juillet 1977, article 11",
-          url: "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032454547",
-        },
-        en: "Law 77-808, article 11: for a presidential election, no election poll may be published, broadcast or commented on from 00:00 on the Saturday before the vote until the last polling station in metropolitan France closes. This site prints no polls in that window.",
-        local:
-          "Article 11 de la loi n° 77-808 : pour l’élection présidentielle, aucun sondage électoral ne peut être publié, diffusé ou commenté à compter du samedi précédant le scrutin à zéro heure et jusqu’à la fermeture du dernier bureau de vote en métropole. Ce site ne publie aucun sondage pendant cette période.",
-      },
-      {
-        kind: "results-embargo",
-        start: "2027-04-17T00:00:00+02:00",
-        end: "2027-04-18T20:00:00+02:00",
-        citation: {
-          label: "Code électoral, articles L49 et L52-2",
-          url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006070239/",
-        },
-        en: "Electoral Code articles L49 and L52-2: no campaign messages from midnight on the day before the vote, and no results, partial or final, before the last polling station in metropolitan France closes.",
-        local:
-          "Code électoral, articles L49 et L52-2 : aucun message de propagande à partir de la veille du scrutin à zéro heure, et aucun résultat, partiel ou définitif, avant la fermeture du dernier bureau de vote en métropole.",
-      },
-    ],
-  },
-  {
-    id: "kr-2027-04-07",
-    country: "kr",
-    localLang: "ko",
-    election: { en: "By-elections, 7 April 2027", local: "2027년 4월 7일 재·보궐선거" },
-    pollingDay: "2027-04-07",
-    trackerOpensAt: "2027-04-07T20:00:00+09:00",
-    officialResults: { label: "중앙선거관리위원회 선거통계시스템", url: "https://info.nec.go.kr/" },
-    rules: [
-      {
-        kind: "poll-ban",
-        start: "2027-04-01T00:00:00+09:00",
-        end: "2027-04-07T20:00:00+09:00",
-        citation: {
-          label: "공직선거법 제108조 제1항",
-          url: "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B3%B5%EC%A7%81%EC%84%A0%EA%B1%B0%EB%B2%95",
-        },
-        en: "Public Official Election Act article 108(1) forbids publishing or quoting polls on party support or likely winners from six days before polling day until voting ends. This site prints no polls for these by-elections until 20:00 on 7 April 2027.",
-        local:
-          "공직선거법 제108조제1항은 선거일 전 6일부터 투표마감시각까지 정당 지지도나 당선인을 예상하게 하는 여론조사의 결과를 공표하거나 인용하여 보도하는 것을 금지합니다. 이 사이트는 2027년 4월 7일 20시까지 이 선거에 관한 여론조사를 싣지 않습니다.",
-      },
-    ],
-  },
-  {
     id: "mx-2027-federal",
     country: "mx",
     localLang: "es",
