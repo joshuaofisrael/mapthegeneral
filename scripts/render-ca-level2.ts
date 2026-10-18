@@ -33,6 +33,9 @@ const DISTRICT_SOURCES = [
 ] as const;
 const DIVISION_SOURCES = ["sgc-2021-en", "sgc-2021-fr", "statcan-licence"] as const;
 const OGL = "Contains information licensed under the Open Government Licence – Canada.";
+const OGL_FR = "Contient des informations visées par la Licence du gouvernement ouvert – Canada.";
+const STATCAN_FR =
+  "Adapté de Statistique Canada, Classification géographique type (CGT) 2021, fichier de structure, date de référence 2021. Ceci ne constitue pas une approbation de ce produit par Statistique Canada.";
 const STATCAN =
   "Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date 2021. This does not constitute an endorsement by Statistics Canada of this product.";
 
@@ -125,10 +128,13 @@ function shell(input: {
   const frPath = lang === "fr" ? path : otherPath;
   const canonical = absoluteUrl(path);
   const pageTitle = `${title} · ${SITE.name}`;
-  const banner = SITE.officialNotUs.replace(
-    "official election office",
-    `<a href="${OFFICE}">official election office</a>`,
-  );
+  const banner =
+    lang === "fr"
+      ? `Information non officielle. Confirmez-la auprès de votre <a href="${OFFICE}">bureau électoral officiel</a>.`
+      : SITE.officialNotUs.replace(
+          "official election office",
+          `<a href="${OFFICE}">official election office</a>`,
+        );
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -253,7 +259,7 @@ function districtPage(lang: CaLang, district: District): string {
 <h2>${fr ? "Élection fédérale" : "Federal election"}</h2>
 <p>${esc(election)}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(gap)}</p>
-<p>${esc(OGL)}</p>
+<p>${esc(fr ? OGL_FR : OGL)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(regionHref)}">${esc(regionLabel)}</a> · <a href="${esc(districtIndexPath(lang))}">${fr ? "Index des circonscriptions" : "District index"}</a> · <a href="/ca/${lang}/">Canada</a>. ${near}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, DISTRICT_SOURCES)}</ul>`;
@@ -306,7 +312,7 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
 </table>
 <p>${esc(lead)}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(gap)}</p>
-<p>${esc(STATCAN)}</p>
+<p>${esc(fr ? STATCAN_FR : STATCAN)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(regionHref)}">${esc(regionLabel)}</a> · <a href="${esc(divisionIndexPath(lang))}">${fr ? "Index des divisions" : "Division index"}</a> · <a href="/ca/${lang}/">Canada</a>. ${near}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, DIVISION_SOURCES)}</ul>`;

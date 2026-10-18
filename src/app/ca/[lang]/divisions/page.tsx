@@ -54,8 +54,9 @@ export default async function DivisionIndexPage({ params }: { params: Promise<{ 
       sources={sourcesById(["sgc-2021-en", "sgc-2021-fr", "statcan-licence"])}
     >
       <p className="text-sm">
-        Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date
-        2021. This does not constitute an endorsement by Statistics Canada of this product.
+        {lang === "fr"
+          ? "Adapté de Statistique Canada, Classification géographique type (CGT) 2021, fichier de structure, date de référence 2021. Ceci ne constitue pas une approbation de ce produit par Statistique Canada."
+          : "Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date 2021. This does not constitute an endorsement by Statistics Canada of this product."}
       </p>
       {alphaRegions(lang).map((region) => (
         <section key={region.slug}>

@@ -56,11 +56,14 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       </p>
       <h2 className="mt-6 font-serif text-xl font-semibold">{fr ? "Licences et attribution" : "Licences and attribution"}</h2>
       <p className="mt-2 text-sm leading-6 text-ink-muted">
-        Contains information licensed under the Open Government Licence – Canada.
+        {lang === "fr"
+          ? "Contient des informations visées par la Licence du gouvernement ouvert – Canada."
+          : "Contains information licensed under the Open Government Licence – Canada."}
       </p>
       <p className="mt-2 text-sm leading-6 text-ink-muted">
-        Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date
-        2021. This does not constitute an endorsement by Statistics Canada of this product.
+        {lang === "fr"
+          ? "Adapté de Statistique Canada, Classification géographique type (CGT) 2021, fichier de structure, date de référence 2021. Ceci ne constitue pas une approbation de ce produit par Statistique Canada."
+          : "Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date 2021. This does not constitute an endorsement by Statistics Canada of this product."}
       </p>
       <p className="mt-2 text-sm leading-6 text-ink-muted">
         {fr ? (
