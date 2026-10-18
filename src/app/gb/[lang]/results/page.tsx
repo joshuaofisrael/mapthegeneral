@@ -82,7 +82,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
       </div>
       <GapNote
         label="Gap"
-        text="Parties with no constituency won are on the source page and are not copied here. This page does not invent a figure for the seats outside the printed winner column. There is no result to copy for a UK Parliament election after 4 July 2024."
+        text="Parties with no constituency won are on the source page and are not copied here. This page does not invent a figure for the seats outside the printed winner column. By-election vote counts after 4 July 2024 are not copied here."
       />
       <p className="text-sm">
         <Link className="text-navy underline" href="/gb/en/elections/general-election/">

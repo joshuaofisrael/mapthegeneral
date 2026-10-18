@@ -7,6 +7,7 @@ export type SourceRef = {
 };
 
 const READ = "2026-10-17";
+const READ_LEVEL2 = "2026-10-18";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -86,6 +87,84 @@ export const SOURCES: SourceRef[] = [
     name: "Office for National Statistics, Population estimates for the UK, England, Wales, Scotland and Northern Ireland: mid-2024 (release 26 September 2025)",
     url: "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2024",
     readOn: READ,
+  },
+  {
+    id: "members-constituencies",
+    name: "UK Parliament Members API, constituency search (current constituencies and current representation)",
+    url: "https://members-api.parliament.uk/api/Location/Constituency/Search?skip=0&take=20",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ons-pcon-2024",
+    name: "data.gov.uk, Westminster Parliamentary Constituencies (July 2024) Names and Codes in the UK (V2). The page prints Licence: Not set.",
+    url: "https://www.data.gov.uk/dataset/90293fcf-9268-4a1a-be3d-d4a20d314604/westminster-parliamentary-constituencies-july-2024-names-and-codes-in-the-uk-v2",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ons-geog-licences",
+    name: "Office for National Statistics, Geography licences (lookup products under the Open Government Licence v3.0)",
+    url: "https://www.ons.gov.uk/methodology/geography/licences",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "commons-by-elections",
+    name: "UK Parliament election results, by-elections in the 59th Parliament",
+    url: "https://electionresults.parliament.uk/parliament-periods/59/by-elections",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "sp-open-data",
+    name: "Scottish Parliament Open Data API (members, constituencies, regions, parties, member parties, and current election statuses)",
+    url: "https://data.parliament.scot/api/ApiList",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "sp-copyright",
+    name: "Scottish Parliament, copyright and the Scottish Parliament Copyright Licence",
+    url: "https://www.parliament.scot/about/copyright",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "senedd-open-data",
+    name: "Senedd, Open data (datasets for re-use under the Open Government Licence)",
+    url: "https://senedd.wales/help/open-data/",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "senedd-members",
+    name: "Senedd meeting-information service, GetCouncillorsByWard",
+    url: "http://business.senedd.wales/mgwebservice.asmx/GetCouncillorsByWard",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "senedd-find",
+    name: "Senedd, Find a Member of the Senedd",
+    url: "https://senedd.wales/find-a-member-of-the-senedd/",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ni-members",
+    name: "Northern Ireland Assembly Open Data, GetAllCurrentMembers_JSON",
+    url: "http://data.niassembly.gov.uk/members.asmx/GetAllCurrentMembers_JSON",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ni-ogl",
+    name: "Northern Ireland Assembly Open Data, licence statement",
+    url: "http://data.niassembly.gov.uk/",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "ogl-v3",
+    name: "The National Archives, Open Government Licence v3.0",
+    url: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    readOn: READ_LEVEL2,
+  },
+  {
+    id: "rpa-66a",
+    name: "Representation of the People Act 1983, section 66A (prohibition on publication of exit polls)",
+    url: "https://www.legislation.gov.uk/ukpga/1983/2/section/66A",
+    readOn: READ_LEVEL2,
   },
 ];
 
