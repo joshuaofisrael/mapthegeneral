@@ -34,19 +34,18 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 | au-vic-2026 | Victoria state election, 28 Nov 2026 | No results embargo in law; broadcasters' ad blackout (BSA 1992 Sch. 2 cl. 3A) does not cover this site; authorisation (Electoral Act 2002 s. 83) applies to paid, printed or regulated-entity material, which this site does not publish | 28 Nov 2026 18:00 AEDT (07:00 UTC) | vec.vic.gov.au/results |
 | es-2026-generales | Spain, general election, 29 Nov 2026 | LOREG art. 69.7 (5-day poll ban); arts. 51 and 53 (reflection day) | 29 Nov 2026 21:00 CET (Canary Islands close) | infoelectoral.interior.gob.es |
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
-| fr-2027-presidentielle-t1 | France, presidential first round | Loi 77-808 art. 11; Code électoral L49, L52-2 | 20:00 Paris on polling day | resultats-elections.interieur.gouv.fr |
-| kr-2027-04-07 | Korea, by-elections, 7 Apr 2027 | 공직선거법 제108조 (6-day poll ban) | 7 Apr 2027 20:00 KST | info.nec.go.kr |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
 
-Countries with no election window yet (GB, CA, DE federal, JP, TR, AU federal) get
-one added here before any tracker is built. Their standing rules:
+Countries with no election window yet (GB, CA, AU federal) get one added here before
+any tracker is built. Their standing rules:
 
 - **GB:** RPA 1983 s. 66A, no exit poll before the poll closes (22:00).
 - **CA:** Canada Elections Act s. 328(2), no new election survey results on polling
   day before every polling station in the district closes. (s. 329, the old ban on
   early results, was repealed in 2014.)
-- **DE:** BWahlG § 32(2), no exit-poll results before 18:00.
-- **JP:** Public Offices Election Act art. 138-3 (no publishing of "popularity votes"
-  predicting winners); art. 129 (no campaigning on polling day).
-- **TR:** Law 298 art. 80, no news, forecast or comment on the vote or results until
-  18:00 on polling day; 18:00–21:00 only Supreme Election Council (YSK) releases.
+
+## Removed countries (18 October 2026)
+
+Germany, France, Japan, South Korea and Türkiye were removed from the site on Joshua's
+instruction to omit any jurisdiction with an open legal question. No tracker is to be
+built for them. See the election-law matrix for the reason for each.

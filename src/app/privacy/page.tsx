@@ -120,10 +120,8 @@ export default function PrivacyPage() {
         <h2 id="national-privacy-laws">Other national privacy laws</h2>
         <p>
           Requests under other national laws, including Switzerland’s Federal Act on Data Protection,
-          the United Kingdom GDPR, Korea’s Personal Information Protection Act, Japan’s Act on the
-          Protection of Personal Information, Türkiye’s Law No. 6698, Mexico’s federal personal data
-          law, Canada’s PIPEDA and Australia’s Privacy Act 1988, go to the same address and are handled
-          the same way.
+          the United Kingdom GDPR, Mexico’s federal personal data law, Canada’s PIPEDA and
+          Australia’s Privacy Act 1988, go to the same address and are handled the same way.
         </p>
         <h2>U.S. state privacy rights</h2>
         <p>

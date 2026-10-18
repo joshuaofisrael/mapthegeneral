@@ -7,7 +7,7 @@ import { ELECTION_WINDOWS } from "@/data/election-law";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Imprint (Impressum, mentions légales, aviso legal, note legali)",
+  title: "Legal notice (aviso legal, note legali, nota prawna)",
   description: `Publisher details for ${SITE.name}: ${SITE.legalName}, ${SITE.location}, USA. Election-law notices and the dates this site holds back polls and results.`,
   path: "/imprint",
 });
@@ -25,12 +25,12 @@ function fmt(iso: string): string {
 export default function ImprintPage() {
   return (
     <div className="mx-auto max-w-3xl">
-      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Imprint", path: "/imprint" }])} />
-      <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Imprint" }]} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Legal notice", path: "/imprint" }])} />
+      <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Legal notice" }]} />
       <PageHeader
         eyebrow={`Last updated ${SITE.lastUpdated}`}
-        title="Imprint"
-        lede="Impressum · Mentions légales · Aviso legal · Note legali · Nota prawna · 발행인 정보 · 運営者情報 · Künye"
+        title="Legal notice"
+        lede="Aviso legal · Note legali · Nota prawna · Publisher details"
       />
       <div className="prose-legal">
         <h2>Publisher</h2>
