@@ -200,6 +200,7 @@ ${body}
 <p>${attribution(lang)}</p>
 </main>
 <footer class="wrap">© 2026 Joshua Israel Ventures LLC. 5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322.</footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
 `;

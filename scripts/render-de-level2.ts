@@ -121,6 +121,7 @@ ${input.body}
 <p><strong>${de ? "Gelesen am 18. Oktober 2026." : "Read on 18 October 2026."}</strong> <a href="${esc(reportErrorHref(input.path))}">${de ? "Fehler melden" : "Report an error"}</a></p>
 </main>
 <footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
 `;

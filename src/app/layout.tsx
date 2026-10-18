@@ -89,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${sourceSans.variable} ${sourceSerif.variable} font-sans`}>
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <SiteShell>{children}</SiteShell>
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
       </body>
     </html>
   );

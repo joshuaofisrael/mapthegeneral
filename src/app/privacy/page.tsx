@@ -47,6 +47,7 @@ export default function PrivacyPage() {
           </li>
           <li>Hosting: GitHub Pages keeps security logs, including IP addresses, under GitHub’s own policy.</li>
           <li>Email you choose to send us.</li>
+          <li>Visit counts: the site uses Cloudflare Web Analytics, which is cookieless and counts page views without setting cookies or using local storage.</li>
         </ul>
         <h2>What we do not collect</h2>
         <ul>

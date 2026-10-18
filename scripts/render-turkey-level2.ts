@@ -119,6 +119,7 @@ ${input.body}
 <p class="gap">${tr ? "KVKK: sayfa, kamu görevi için resmî listede basılmış adı ve parti etiketini tekrarlar. Fotoğraf, telefon, adres veya özgeçmiş eklemez." : "KVKK: this page repeats only the name and party label already printed for the public office. It adds no photograph, telephone number, address, or biography."}</p>
 </main>
 <footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
 `;

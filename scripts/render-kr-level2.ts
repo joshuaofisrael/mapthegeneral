@@ -133,6 +133,7 @@ ${input.body}
 <ul>${sourceItems(lang, input.sourceIds)}</ul>
 </main>
 <footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. ${ko ? "출처: 각 항목의 읽은 날." : "Attribution: the read date on each source."}</footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
 `;
