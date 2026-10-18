@@ -176,8 +176,8 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         <h2>{tr ? "31 Mart 2024" : "31 March 2024"}</h2>
         <p>
           {tr
-            ? "2024/2367 sayılı karar, 31 Mart 2024 mahalli idareler genel seçiminin genel sonucunun ilanına karar verir. Liste 2, 30 büyükşehir belediye başkanlığı seçildiğini yazar. Liste 3, 1.356 belediye başkanlığı seçildiğini yazar ve yedi yarışın iptal edildiği için toplama girmediğini not eder. Seçilen kişilerin adları bu sürümde yok."
-            : "Decision 2024/2367 proclaims the general result of the 31 March 2024 local elections. Liste 2 states that 30 metropolitan mayoralties were filled. Liste 3 states that 1,356 municipal mayoralties were filled and notes that seven contests were cancelled and left out of that total. The names of the people elected are not in this release."}
+            ? "2024/2367 sayılı karar, 31 Mart 2024 mahalli idareler genel seçiminin genel sonucunun ilanına karar verir. Liste 2, 30 büyükşehir belediye başkanlığı seçildiğini yazar. Liste 3, 1.356 belediye başkanlığı seçildiğini yazar ve yedi yarışın iptal edildiği için toplama girmediğini not eder. İlçe belediye başkanının adı, açık veri dosyasında varsa ilçe sayfasındadır. Bu sonuç sayfası her adı yeniden yazmaz."
+            : "Decision 2024/2367 proclaims the general result of the 31 March 2024 local elections. Liste 2 states that 30 metropolitan mayoralties were filled. Liste 3 states that 1,356 municipal mayoralties were filled and notes that seven contests were cancelled and left out of that total. The ilçe belediye başkanı is named on the district page when the open-data file has one. This results page does not repeat every name."}
         </p>
         <p>
           <Link className="text-navy underline" href={`${home}elections/2028/`}>

@@ -11,7 +11,15 @@ import {
   regionBySlug,
   regionNeighbors,
 } from "../../../../../data/fr/places";
-import { electionsPath, franceHome, regionPath } from "../../../../../data/fr/paths";
+import { constituenciesForDepartment } from "../../../../../data/fr/level2";
+import {
+  circonscriptionsIndexPath,
+  constituencyPath,
+  departmentPath,
+  electionsPath,
+  franceHome,
+  regionPath,
+} from "../../../../../data/fr/paths";
 import { franceMetadata } from "../../../../../data/fr/seo";
 import { sourceById, sourcesById } from "../../../../../data/fr/sources";
 
@@ -158,8 +166,8 @@ export default async function RegionPage({
           label={fr ? "Lacune" : "Gap"}
           text={
             fr
-              ? "Le nom de la personne qui préside l’exécutif régional n’est pas copié ici. Les pages de départements et de communes ne sont pas publiées dans cette livraison. Le tableau ci-dessous reprend les départements du COG ; ce ne sont pas des liens."
-              : "The name of the person who presides over the regional executive is not copied here. Department and commune pages are not published in this release. The table below repeats the COG departments; they are not links."
+              ? "Le nom de la personne qui préside l’exécutif régional n’est pas copié ici. Les pages de communes ne sont pas publiées. Le nom, le président et les élections de chaque département sont sur la page liée."
+              : "The name of the person who presides over the regional executive is not copied here. Commune pages are not published. Each department’s name, president and elections are on the linked page."
           }
         />
       </section>
@@ -180,7 +188,11 @@ export default async function RegionPage({
             {departments.map((department) => (
               <tr key={department.code}>
                 <td>{department.code}</td>
-                <td>{department.officialName}</td>
+                <td>
+                  <Link className="text-navy underline" href={departmentPath(lang, slug, department.slug)}>
+                    {department.officialName}
+                  </Link>
+                </td>
                 <td>{department.chefLieu}</td>
                 <td>{formatOptional(department.communes, lang)}</td>
                 <td>{formatOptional(department.populationMunicipale, lang)}</td>
@@ -192,6 +204,28 @@ export default async function RegionPage({
           {fr
             ? "Population : fichier d’ensemble France hors Mayotte lorsqu’il contient le département. Communes, nom et chef-lieu : COG au 1er janvier 2026. Pour les départements présents dans les deux fichiers, le nombre de communes du fichier de population est égal au nombre de lignes TYPECOM « COM » du COG."
             : "Population: the ensemble file for France excluding Mayotte, when it contains the department. Communes, name and chef-lieu: COG at 1 January 2026. For departments present in both files, the commune count in the population file equals the number of TYPECOM “COM” rows in the COG."}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {fr ? "Circonscriptions législatives" : "Legislative constituencies"}
+        </h2>
+        <ul className="mt-3 space-y-1 text-sm">
+          {departments.flatMap((department) =>
+            constituenciesForDepartment(department.code).map((constituency) => (
+              <li key={constituency.uid}>
+                <Link className="text-navy underline" href={constituencyPath(lang, constituency.slug)}>
+                  {constituency.libelle}
+                </Link>
+              </li>
+            )),
+          )}
+        </ul>
+        <p className="mt-2 text-sm">
+          <Link className="text-navy underline" href={circonscriptionsIndexPath(lang)}>
+            {fr ? "Index des 577 circonscriptions" : "Index of the 577 constituencies"}
+          </Link>
         </p>
       </section>
 

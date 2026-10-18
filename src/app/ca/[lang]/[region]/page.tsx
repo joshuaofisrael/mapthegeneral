@@ -4,7 +4,8 @@ import { GapNote } from "@/components/GapNote";
 import { CanadaFrame } from "@/app/ca/_components/CanadaFrame";
 import { formatNumber } from "@/data/ca/format";
 import { asCaLang } from "@/data/ca/lang";
-import { canadaHome, regionPath } from "@/data/ca/paths";
+import { districtName, districtsIn, divisionName, divisionsIn } from "@/data/ca/level2";
+import { canadaHome, districtPath, divisionPath, regionPath } from "@/data/ca/paths";
 import { REGIONS, regionBySlug, regionName, regionNeighbors } from "@/data/ca/places";
 import { regionNotes } from "@/data/ca/region-notes";
 import { caMetadata } from "@/data/ca/seo";
@@ -160,6 +161,34 @@ export default async function RegionPage({
         {showsNextGap && <GapNote label={copy.gap} text={copy.nextGap} />}
         <GapNote label={copy.gap} text={copy.senateGap} />
         <GapNote label={copy.gap} text={copy.municipalityGap} />
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {fr ? "Circonscriptions électorales fédérales" : "Federal electoral districts"}
+        </h2>
+        <ul className="mt-3 columns-1 gap-8 text-sm sm:columns-2">
+          {districtsIn(slug, lang).map((district) => (
+            <li key={district.slug} className="mb-1 break-inside-avoid">
+              <Link className="text-navy underline" href={districtPath(lang, slug, district.slug)}>
+                {districtName(district, lang)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">{fr ? "Divisions de recensement" : "Census divisions"}</h2>
+        <ul className="mt-3 columns-1 gap-8 text-sm sm:columns-2">
+          {divisionsIn(slug, lang).map((division) => (
+            <li key={division.slug} className="mb-1 break-inside-avoid">
+              <Link className="text-navy underline" href={divisionPath(lang, slug, division.slug)}>
+                {divisionName(division, lang)}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <p className="text-sm text-ink-muted">

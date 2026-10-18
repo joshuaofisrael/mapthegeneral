@@ -4,7 +4,7 @@ import { LinkGrid } from "@/components/LinkGrid";
 import { CanadaFrame } from "@/app/ca/_components/CanadaFrame";
 import { formatNumber } from "@/data/ca/format";
 import { asCaLang } from "@/data/ca/lang";
-import { canadaHome, electionPath, regionPath } from "@/data/ca/paths";
+import { canadaHome, districtIndexPath, divisionIndexPath, electionPath, regionPath } from "@/data/ca/paths";
 import {
   CANADA_POPULATION,
   COMMONS_SEATS,
@@ -200,6 +200,14 @@ export default async function CanadaNationalPage({ params }: { params: Promise<{
           <Link className="text-navy underline" href={`${path}sources/`}>
             {copy.sources}
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={districtIndexPath(lang)}>
+            {fr ? "Circonscriptions" : "Districts"}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={divisionIndexPath(lang)}>
+            {fr ? "Divisions de recensement" : "Census divisions"}
+          </Link>
         </p>
       </section>
 
@@ -213,8 +221,8 @@ export default async function CanadaNationalPage({ params }: { params: Promise<{
       />
       <p className="text-sm text-ink-muted">
         {fr
-          ? `${REGIONS.length} pages : 10 provinces et 3 territoires. Les noms sont ceux de la page française de la Chambre.`
-          : `${REGIONS.length} pages: 10 provinces and 3 territories. The names are the ones on the English House page.`}
+          ? `${REGIONS.length} pages de provinces et de territoires. Les noms sont ceux de la page française de la Chambre. Les circonscriptions fédérales et les divisions de recensement sont liées depuis chaque province ou territoire.`
+          : `${REGIONS.length} province and territory pages. The names are the ones on the English House page. Federal electoral districts and census divisions are linked from each province or territory.`}
       </p>
     </CanadaFrame>
   );
