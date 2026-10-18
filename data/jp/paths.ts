@@ -1,5 +1,6 @@
+import { LEVEL2 } from "./level2";
 import type { Lang } from "./types";
-import { blockById, PREFECTURES } from "./places";
+import { blockById, PREFECTURES, prefectureBySlug } from "./places";
 
 export const LANGS: Lang[] = ["ja", "en"];
 
@@ -9,6 +10,22 @@ export function japanHome(lang: Lang): string {
 
 export function prefecturePath(lang: Lang, slug: string): string {
   return `/jp/${lang}/${slug}/`;
+}
+
+export function districtsIndexPath(lang: Lang): string {
+  return `/jp/${lang}/districts/`;
+}
+
+export function smdPath(lang: Lang, slug: string, n: number): string {
+  return `/jp/${lang}/${slug}/s${n}/`;
+}
+
+export function blockPath(lang: Lang, id: string): string {
+  return `/jp/${lang}/pr/${id}/`;
+}
+
+export function hcPath(lang: Lang, canonicalSlug: string): string {
+  return `/jp/${lang}/${canonicalSlug}/sangiin/`;
 }
 
 export type JapanIndexEntry = {
@@ -62,5 +79,37 @@ export function japanEntries(lang: Lang): JapanIndexEntry[] {
       text: `${prefecture.officialName} ${prefecture.englishName} ${block.nameJa}`,
     };
   });
-  return [...fixed, ...prefectures];
+  const index: JapanIndexEntry = {
+    path: districtsIndexPath(lang),
+    lang,
+    title: ja ? "選挙区" : "Districts",
+    kind: "index",
+    text: "選挙区 小選挙区 比例代表 参議院 districts",
+  };
+  const districts = LEVEL2.smd.map((district) => {
+    const prefecture = prefectureBySlug(district.prefecture);
+    const name = prefecture?.officialName ?? district.prefecture;
+    return {
+      path: smdPath(lang, district.prefecture, district.n),
+      lang,
+      title: `${name} ${district.lawHeading}`,
+      kind: "district",
+      text: `${name} ${district.lawHeading} ${district.listLabel} ${district.member.name} ${prefecture?.englishName ?? ""}`,
+    };
+  });
+  const blocks = LEVEL2.blocks.map((block) => ({
+    path: blockPath(lang, block.id),
+    lang,
+    title: block.nameJa,
+    kind: "block",
+    text: `${block.nameJa} ${block.listLabel} ${block.seatsKanji} ${block.members.map((member) => member.name).join(" ")}`,
+  }));
+  const councillors = LEVEL2.hc.map((district) => ({
+    path: hcPath(lang, district.canonical),
+    lang,
+    title: district.lawName,
+    kind: "constituency",
+    text: `${district.lawName} ${district.listName} ${district.seatsKanji} ${district.members.map((member) => member.name).join(" ")}`,
+  }));
+  return [...fixed, ...prefectures, index, ...districts, ...blocks, ...councillors];
 }
