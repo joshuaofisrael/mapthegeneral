@@ -142,6 +142,16 @@ function baseCrumbs(lang: DeLang, extra: { name: string; path: string }[]): { na
   ];
 }
 
+const DL_DE = `<a href="https://www.govdata.de/dl-de/by-2-0">Datenlizenz Deutschland – Namensnennung – Version 2.0</a>`;
+const BWL_NOTE: Record<DeLang, string> = {
+  de: `Quelle: © Die Bundeswahlleiterin, Wiesbaden 2024 und 2025. Lizenz: ${DL_DE}. Daten in eigener Darstellung, ohne Änderung der Zahlen.`,
+  en: `Source: © Die Bundeswahlleiterin, Wiesbaden 2024 and 2025. Licence: ${DL_DE}. Data presented in our own layout; figures unchanged.`,
+};
+const DESTATIS_NOTE: Record<DeLang, string> = {
+  de: "Daten im Auftrag der Herausgebergemeinschaft Statistische Ämter des Bundes und der Länder, Statistisches Bundesamt (Destatis), 2026. Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellenangabe gestattet.",
+  en: "Data on behalf of the joint publishers Statistical Offices of the Federation and the Länder, Statistisches Bundesamt (Destatis), 2026. Reproduction and distribution, including excerpts, permitted with source attribution.",
+};
+
 function kreisPage(lang: DeLang, kreis: Kreis): string {
   const de = lang === "de";
   const land = landBySlug(kreis.land);
@@ -210,7 +220,8 @@ ${nextBlock}
     de ? "Benachbarte Namen" : "Nearby names"
   }: ${neighborBits.join(" · ") || "—"}</p>
 <h2>${de ? "Quellen" : "Sources"}</h2>
-<ul>${sourceItems(ids)}</ul>`;
+<ul>${sourceItems(ids)}</ul>
+<p class="note">${DESTATIS_NOTE[lang]}</p>`;
   return shell({
     lang,
     path,
@@ -279,7 +290,8 @@ ${seat}
     de ? "Vorherige und nächste Nummer" : "Previous and next number"
   }: ${neighborBits.join(" · ") || "—"}</p>
 <h2>${de ? "Quellen" : "Sources"}</h2>
-<ul>${sourceItems(["bwl-wkr-names", "bwl-kerg2", "bwl-gewaehlte", "bwl-opendata", "bwahlg-1", "bwl-2029"])}</ul>`;
+<ul>${sourceItems(["bwl-wkr-names", "bwl-kerg2", "bwl-gewaehlte", "bwl-opendata", "bwahlg-1", "bwl-2029"])}</ul>
+<p class="note">${BWL_NOTE[lang]}</p>`;
   return shell({
     lang,
     path,
