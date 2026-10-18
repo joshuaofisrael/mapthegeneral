@@ -20,6 +20,11 @@ const FAQ = {
         "Esa página imprime 500 diputaciones: 300 de mayoría relativa y 200 de representación proporcional. No lista senadurías para 2027.",
     },
     {
+      question: "¿Dónde están los distritos federales?",
+      answer:
+        "Hay una página por cada uno de los 300 distritos uninominales, enlazada desde su entidad. La cabecera sale del descriptivo del acuerdo INE/CG875/2022 y el nombre de la diputación, del listado de la Cámara leído el 18 de octubre de 2026. Las cinco circunscripciones están en una página aparte.",
+    },
+    {
       question: "¿Hay candidaturas en esta web?",
       answer:
         "No. La lectura del 17 de octubre de 2026 no encontró listas proclamadas para el 6 de junio de 2027, y esta entrega no tiene fichas de candidaturas.",
@@ -44,6 +49,11 @@ const FAQ = {
       question: "How many deputies are elected?",
       answer:
         "That page prints 500 deputies: 300 by relative majority and 200 by proportional representation. It does not list Senate seats for 2027.",
+    },
+    {
+      question: "Where are the federal districts?",
+      answer:
+        "There is a page for each of the 300 single-member districts, linked from its entidad. The cabecera comes from the descriptivo of agreement INE/CG875/2022, and the deputy’s name from the Chamber directory read on 18 October 2026. The five constituencies are on a separate page.",
     },
     {
       question: "Are there candidacies on this site?",
