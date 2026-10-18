@@ -116,13 +116,13 @@ export const AU_INDEX_ENTRIES: RegistryEntry[] = [
     lang: "en" as const,
     title: item.name,
     kind: "district",
-    text: `${item.name} Legislative Assembly ${item.member ? `${item.member.display} ${item.member.party}` : ""}`,
+    text: `${item.name} Legislative Assembly ${item.member ? `${item.member.printed} ${item.member.party}` : ""}`,
   })),
   ...COUNCIL.map((item) => ({
     path: councilPath(item.slug),
     lang: "en" as const,
     title: item.name,
     kind: "region",
-    text: `${item.name} Legislative Council ${item.members.map((member) => member.display).join(" ")}`,
+    text: `${item.name} Legislative Council ${item.members.map((member) => member.printed).join(" ")}`,
   })),
 ];
