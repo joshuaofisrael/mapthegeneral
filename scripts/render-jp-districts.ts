@@ -95,7 +95,7 @@ function page(input: {
 <script type="application/ld+json">${jsonLd}</script>
 </head>
 <body>
-<p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
+<p class="banner">${ja ? `非公式の情報です。<a href="${OFFICE}">公式の選挙管理委員会</a>で確認してください。` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
 <header class="wrap tools"><a href="/">${esc(SITE.name)}</a> · <a href="${esc(japanHome(input.lang))}">${ja ? "日本" : "Japan"}</a> · <a href="/search/">${ja ? "検索" : "Search"}</a> · <a href="${esc(otherPath)}">${ja ? "English" : "日本語"}</a></header>
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
