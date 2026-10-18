@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy practices for ${SITE.name}: no accounts, no cookies, no analytics, browser-only search, and GitHub Pages hosting logs. ${SITE.legalName} is the controller.`,
+  description: `Privacy practices for ${SITE.name}: no accounts, no cookies, only cookieless Cloudflare Web Analytics with no ad tracking, browser-only search, and GitHub Pages hosting logs. ${SITE.legalName} is the controller.`,
   path: "/privacy",
 });
 
@@ -31,7 +31,8 @@ export default function PrivacyPage() {
           The site is operated by {SITE.legalName}, a {SITE.entityType}. Business address:{" "}
           {SITE.location}. {SITE.name} is a static informational website. It has no user accounts, no
           comments, no advertising, no email sign-up, and no payments. It does not use cookies or
-          tracking pixels, and it does not load an analytics script.
+          advertising trackers. The only analytics it loads is cookieless Cloudflare Web
+          Analytics, which counts page views with no cookies or ad tracking.
         </p>
         <h2>Who is responsible</h2>
         <p>

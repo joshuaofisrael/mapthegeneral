@@ -27,8 +27,8 @@ export const SITE = {
   addressCountry: "US",
   location: "5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322",
   officialNotUs: "Unofficial information. Confirm with your official election office.",
-  lastUpdated: "October 17, 2026",
-  lastUpdatedIso: "2026-10-17",
+  lastUpdated: "October 18, 2026",
+  lastUpdatedIso: "2026-10-18",
   siblingUrl: "https://mapthemidterms.com",
   siblingName: "Map the Midterms",
 } as const;
