@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { contactMailto, SITE } from "@/data/site";
+import { FORMSUBMIT_PRIVACY, FORMSUBMIT_URL } from "@/components/ContactForm";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -30,7 +31,7 @@ export default function PrivacyPage() {
           This policy explains what information is involved when you visit {SITE.name} ({SITE.url}).
           The site is operated by {SITE.legalName}, a {SITE.entityType}. Business address:{" "}
           {SITE.location}. {SITE.name} is a static informational website. It has no user accounts, no
-          comments, no advertising, no email sign-up, and no payments. It does not use cookies or
+          comments, no advertising, no email sign-up, and no payments. Its contact form is processed by FormSubmit. It does not use cookies or
           advertising trackers. The only analytics it loads is cookieless Cloudflare Web
           Analytics, which counts page views with no cookies or ad tracking.
         </p>
@@ -47,7 +48,7 @@ export default function PrivacyPage() {
             host receives that address in the ordinary request log. We do not receive a separate copy.
           </li>
           <li>Hosting: GitHub Pages keeps security logs, including IP addresses, under GitHub’s own policy.</li>
-          <li>Email you choose to send us.</li>
+          <li>Messages you choose to send us by email or through the contact form (delivered by FormSubmit).</li>
           <li>Visit counts: the site uses Cloudflare Web Analytics, which is cookieless and counts page views without setting cookies or using local storage.</li>
         </ul>
         <h2>What we do not collect</h2>
@@ -76,17 +77,29 @@ export default function PrivacyPage() {
           we can reply. Please do not send identity documents or ballot photos. Mail is delivered
           through Google, which processes messages under its own terms.
         </p>
+        <h2 id="contact-form">Contact form (FormSubmit)</h2>
+        <p>
+          The form on the <Link href="/contact/">contact page</Link> is processed by{" "}
+          <a href={FORMSUBMIT_URL} rel="noopener noreferrer">FormSubmit</a> (formsubmit.co), a
+          third-party form service. When you submit it, your name, email address, message, and the
+          page you were reporting (if any) are sent to FormSubmit, which emails them to {SITE.email}{" "}
+          so {SITE.legalName} can read and reply. FormSubmit may show a spam check (captcha) and
+          processes submissions under its own{" "}
+          <a href={FORMSUBMIT_PRIVACY} rel="noopener noreferrer">privacy policy</a>. We use what you
+          send only to reply or keep an ordinary business record, and we never add you to a mailing
+          list. The form is optional; you can email us directly instead.
+        </p>
         <h2>Retention</h2>
         <p>
-          We keep emails for as long as needed to respond and for ordinary business records. GitHub
+          We keep emails and contact form messages for as long as needed to respond and for ordinary business records. GitHub
           keeps its security logs under its own practices.
         </p>
         <h2>European Economic Area, including Spain, and the United Kingdom</h2>
         <p>
           If the EU or UK General Data Protection Regulation applies to you, {SITE.legalName} is the
-          controller for personal information we process, such as email you send us. The legal basis
+          controller for personal information we process, such as email or contact form messages you send us. The legal basis
           is our legitimate interest in answering that message and in publishing a free information
-          site, and your decision to write to us. Hosting logs are processed by GitHub. You may ask
+          site, and your decision to write to us. Hosting logs are processed by GitHub, and contact form messages by FormSubmit. You may ask
           to access, correct, or delete personal information we hold, or object to its use, and you
           may complain to a supervisory authority, including the Agencia Española de Protección de
           Datos.

@@ -4,12 +4,13 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { ReportedPageNote } from "@/components/ReportedPageNote";
+import { ContactForm } from "@/components/ContactForm";
 import { contactMailto, SITE } from "@/data/site";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: `Contact ${SITE.name}, a brand of ${SITE.legalName}. Error reports are welcome.`,
+  description: `Contact ${SITE.name}, a brand of ${SITE.legalName}, with the contact form or by email. Error reports are welcome.`,
   path: "/contact",
 });
 
@@ -25,9 +26,11 @@ export default function ContactPage() {
       />
       <div className="prose-legal">
         <p>
-          Email <a href={contactMailto()}>{SITE.email}</a>. This reaches {SITE.legalName}. There is no
-          contact form.
+          Use the form below, or email <a href={contactMailto()}>{SITE.email}</a>. Both reach{" "}
+          {SITE.legalName}. We reply by email.
         </p>
+        <h2>Contact form</h2>
+        <ContactForm />
         <p>
           {SITE.legalName}
           <br />
@@ -35,7 +38,7 @@ export default function ContactPage() {
         </p>
         <h2>Error reports</h2>
         <p>
-          Error reports are welcome. Email the page address and what should be corrected, with a
+          Error reports are welcome. Use the form or email the page address and what should be corrected, with a
           source if you have one. Corrections are made promptly.
         </p>
         <Suspense fallback={null}>
