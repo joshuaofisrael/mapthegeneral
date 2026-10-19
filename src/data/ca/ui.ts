@@ -23,7 +23,7 @@ const EN = {
   kindProvince: "Province",
   kindTerritory: "Territory",
   municipalityGap:
-    "Census subdivisions and municipalities are not in this release. No official list of mayors, or of candidates for a future election, was copied onto this page.",
+    "Mayors, reeves, and councillors are not copied. No provincial directory of those officeholders was read. Incorporated municipalities are linked from census divisions in Ontario and Quebec. British Columbia, Alberta, and the other provinces and territories are not in this release. Candidate lists are not on this page.",
   postcodeGap:
     "A postal-code search is not wired up. This release did not add an official open postal-code dataset. A postal-code query is not matched to a municipality.",
   candidateGap:
@@ -58,7 +58,7 @@ const FR = {
   kindProvince: "Province",
   kindTerritory: "Territoire",
   municipalityGap:
-    "Les subdivisions de recensement et les municipalités ne font pas partie de cette livraison. Aucune liste officielle de maires ni de candidatures à une élection future n’est copiée sur cette page.",
+    "Les maires, préfets et conseillers ne sont pas copiés. Aucun répertoire provincial de ces titulaires n’a été lu. Les municipalités constituées sont liées depuis les divisions de recensement de l’Ontario et du Québec. La Colombie-Britannique, l’Alberta et les autres provinces et territoires ne font pas partie de cette livraison. Les listes de candidatures ne figurent pas sur cette page.",
   postcodeGap:
     "La recherche par code postal n’est pas branchée. Cette livraison n’ajoute pas un jeu de données ouvert et officiel de codes postaux. Une requête de code postal n’est pas appariée à une municipalité.",
   candidateGap:

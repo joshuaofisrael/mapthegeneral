@@ -5,7 +5,8 @@ import { CanadaFrame } from "@/app/ca/_components/CanadaFrame";
 import { formatNumber } from "@/data/ca/format";
 import { asCaLang } from "@/data/ca/lang";
 import { districtName, districtsIn, divisionName, divisionsIn } from "@/data/ca/level2";
-import { canadaHome, districtPath, divisionPath, regionPath } from "@/data/ca/paths";
+import { seatsIn } from "@/data/ca/level3";
+import { canadaHome, districtPath, divisionPath, legislatureIndexPath, legislaturePath, regionPath } from "@/data/ca/paths";
 import { REGIONS, regionBySlug, regionName, regionNeighbors } from "@/data/ca/places";
 import { regionNotes } from "@/data/ca/region-notes";
 import { caMetadata } from "@/data/ca/seo";
@@ -161,6 +162,39 @@ export default async function RegionPage({
         {showsNextGap && <GapNote label={copy.gap} text={copy.nextGap} />}
         <GapNote label={copy.gap} text={copy.senateGap} />
         <GapNote label={copy.gap} text={copy.municipalityGap} />
+      </section>
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {fr ? "Circonscriptions de l’assemblée" : "Legislative assembly districts"}
+        </h2>
+        {seatsIn(slug, lang).length > 0 ? (
+          <>
+            <p className="mt-2 text-sm">
+              <Link className="text-navy underline" href={legislatureIndexPath(lang, slug)}>
+                {fr ? "Index de l’assemblée" : "Legislature index"}
+              </Link>
+            </p>
+            <ul className="mt-3 columns-1 gap-8 text-sm sm:columns-2">
+              {seatsIn(slug, lang).map((seat) => (
+                <li key={seat.slug} className="mb-1 break-inside-avoid">
+                  <Link className="text-navy underline" href={legislaturePath(lang, slug, seat.slug)}>
+                    {seat.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : (
+          <GapNote
+            label={copy.gap}
+            text={
+              fr
+                ? "Les circonscriptions de cette assemblée ne font pas partie de cette livraison."
+                : "The electoral districts of this legislature are not in this release."
+            }
+          />
+        )}
       </section>
 
       <section>
