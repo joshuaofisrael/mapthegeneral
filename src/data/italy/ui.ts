@@ -34,7 +34,7 @@ const EN = {
   candidateGap:
     "Candidate profiles and proclaimed lists are not in this release.",
   subregionalGap:
-    "Municipality pages are not in this release.",
+    "Municipality pages in this chunk are linked from each territorial unit. Municipalities not listed there are not in this chunk.",
   resultsGap:
     "This page does not declare a winner, a majority, or a government. Figures below are copied from the cited archive page and stay unofficial here.",
 };
@@ -73,7 +73,7 @@ const IT = {
   candidateGap:
     "Le schede dei candidati e le liste proclamate non sono in questa consegna.",
   subregionalGap:
-    "Le pagine dei comuni non sono in questa consegna.",
+    "Le pagine dei comuni di questa consegna sono collegate da ogni unità territoriale. I comuni non elencati lì non sono in questo blocco.",
   resultsGap:
     "Questa pagina non dichiara un vincitore, una maggioranza o un governo. Le cifre sotto sono copiate dalla pagina d'archivio citata e qui restano non ufficiali.",
 };

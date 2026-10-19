@@ -16,6 +16,7 @@ import {
   italyHome,
   otherLang,
   regionPath,
+  comuniIndexPath,
   unitPath,
   unitsIndexPath,
 } from "../src/data/italy/paths";
@@ -189,6 +190,7 @@ ${offices}
       ? "Non è stato letto un decreto di convocazione della prossima elezione di questo livello. La data di elezione sopra, se c'è, è quella stampata nell'anagrafe, non uno scrutinio."
       : "No decree calling the next election at this level was read. An election date above, where present, is the date printed in the register, not a results table."
   }</p>
+<p class="tools">${it ? "Comuni" : "Municipalities"}: <a href="${esc(comuniIndexPath(lang, unit.regionSlug, unit.slug))}">${it ? "Indice dei comuni pubblicati per questa unità" : "Index of municipalities published for this unit"}</a></p>
 <p class="tools">${it ? "Livello superiore" : "Parent"}: <a href="${esc(regionPath(lang, region.slug))}">${esc(region.istatName)}</a> · <a href="${esc(unitsIndexPath(lang))}">${it ? "Indice" : "Index"}</a>. ${esc(copy.alphaNearby)}: ${neighbors(lang, unit)}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, ["istat-elenco-xlsx", "istat-codici", "anagrafe-incarica", "dait"])}</ul>`;
