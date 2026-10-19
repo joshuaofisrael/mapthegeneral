@@ -2,10 +2,11 @@
   "code": "gb",
   "name": "United Kingdom",
   "href": "/gb/",
-  "summary": "UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page, England, Scotland, Wales and Northern Ireland, the 650 Westminster constituencies, Scottish Parliament constituencies and regions, Senedd constituencies and Northern Ireland Assembly constituencies, in English. Council, ward and candidate pages are not in this release.",
+  "summary": "UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page, England, Scotland, Wales and Northern Ireland, the 650 Westminster constituencies, Scottish Parliament constituencies and regions, Senedd constituencies, Northern Ireland Assembly constituencies, 361 local authority districts, 21 English county councils, and directly elected mayoral bodies, in English. Ward, parish and candidate pages are not in this release.",
   "links": [
     { "href": "/gb/en/", "label": "English" },
     { "href": "/gb/en/constituencies/", "label": "Constituencies" },
+    { "href": "/gb/en/councils/", "label": "Councils" },
     { "href": "/gb/en/elections/general-election/", "label": "No later than 15 August 2029" }
   ]
 }

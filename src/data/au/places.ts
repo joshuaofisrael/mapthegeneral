@@ -69,16 +69,17 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election",
     officeLabel: "NSW Electoral Commission",
-    sourceIds: ["nswec-2027", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["nswec-2027", "nswec-vtr-2023", "nswec-past", "nswec-lg-results", "nswec-copyright", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The NSW Electoral Commission page for the 2027 NSW State election prints Saturday, 13 March 2027, and calls it the election of the 59th Parliament of NSW.",
       "That page says New South Wales is divided into 93 state electoral districts. At that election, voters in each district elect one person to the Legislative Assembly, and voters also elect 21 of the 42 members of the Legislative Council. It says voting is compulsory and that Australians aged 18 and over are required to enrol and vote.",
-      "The same page refers to the 2023 NSW State election. The passage read does not print a calendar day for that election.",
+      "The same page refers to the 2023 NSW State election. The passage read on 17 October 2026 does not print a calendar day for that election. The Commission’s virtual tally room for that election, read on 19 October 2026, is headed Saturday 25 March 2023.",
+      "The Commission’s past-results page, read on 19 October 2026, lists three current local by-elections: Cobar Shire Council on 28 November 2026, City of Coffs Harbour Council on 12 December 2026, and Hunter’s Hill Council (South Ward) on 12 December 2026, each for one councillor. No candidate list is printed.",
     ],
     gaps: [
-      "The name of the Premier, the parties forming the state government, and the current seat totals of the Legislative Assembly were not on the page read. They are not filled in here.",
+      "The name of the Premier was not on the pages read.",
       "No candidate list for 13 March 2027 was on the page read.",
-      "Council pages are not in this release. No elected body between the state and local government was described on the pages read.",
+      "A current mayor was not published on a central page read for the local government areas. Not published centrally. The next statewide local government polling day was not on the pages read. The local results page prints 14 September 2024 for the 2024 NSW Local Government elections.",
     ],
   },
   {
@@ -96,7 +97,7 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.vec.vic.gov.au/voting/types-of-elections/state-elections",
     officeLabel: "Victorian Electoral Commission",
-    sourceIds: ["vec-state", "vic-parliament-2026", "vec-2022-report", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["vec-state", "vic-parliament-2026", "vec-2022-report", "vec-councils", "vec-local", "vec-2024-councils", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Victorian Electoral Commission says state elections are held on the last Saturday in November every 4 years, and that this date is set by the Electoral Act 2002 (Vic). It says the next state election is on Saturday 28 November 2026.",
       "The Commission says the Legislative Assembly has 88 members, one for each district, and the Legislative Council has 40 members, five for each region. It says a person must enrol and vote if they are 18 or older, an Australian citizen, and have lived in Victoria for longer than a month.",
@@ -106,8 +107,8 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     gaps: [
       "The name of the Premier was not on the pages read.",
-      "Nominations for 28 November 2026, on the Parliament of Victoria timeline, open on Wednesday 4 November 2026. On 18 October 2026 that day has not arrived. No candidate list was read, and none is printed here.",
-      "Local government council pages are not in this release.",
+      "Nominations for 28 November 2026, on the Parliament of Victoria timeline, open on Wednesday 4 November 2026. On 19 October 2026 that day has not arrived. No candidate list was read, and none is printed here.",
+      "The Victorian Electoral Commission local-council page says councillors decide who will act as mayor, except that Melbourne City Council elections elect a lord mayor and deputy lord mayor. Current mayors were not on the index read on 19 October 2026. The next council election day was not on that page. The 2024 results index does not print a calendar day.",
     ],
   },
   {
@@ -125,15 +126,15 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.ecq.qld.gov.au/_resource/documents/pdf/about-us/publications/strategic-plans/Strategic-Plan-2025-2029.pdf",
     officeLabel: "Electoral Commission of Queensland",
-    sourceIds: ["ecq-plan", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["ecq-plan", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Electoral Commission of Queensland Strategic Plan 2025–2029 places a state general election in October 2028 and local government elections in March 2028. The plan does not print a calendar day. This page does not turn those months into a Saturday.",
       "The Australian Electoral Commission’s 23 July 2026 determination says Queensland keeps 30 House of Representatives electorates at the next federal election, and that a redistribution of those federal electorates was expected to commence in the weeks after that determination. Redistributed names and boundaries were not read.",
     ],
     gaps: [
-      "The date of the last Queensland state election, the size of the Legislative Assembly, and the name of the Premier were not on the pages read.",
+      "The date of the last Queensland state election, the size of the Legislative Assembly, the name of the Premier, and the Legislative Assembly district list were not read. The Electoral Commission of Queensland website returned HTTP 403 on 19 October 2026.",
       "No candidate list was read.",
-      "Local government pages are not in this release.",
+      "Local pages in this release use ABS statistical names and codes. A council legal roll and current mayors were not copied. The strategic plan places local government elections in March 2028 and does not print a calendar day.",
     ],
   },
   {
@@ -150,14 +151,15 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.elections.wa.gov.au/elections/state",
     officeLabel: "Western Australian Electoral Commission",
-    sourceIds: ["waec-state", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["waec-state", "waec-lgx-2026", "waec-copyright", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Western Australian Electoral Commission state-elections page says the last WA State Election was held on Saturday 8 March 2025.",
+      "The Commission’s page titled “2026 December Local Government Extraordinary Elections”, read on 19 October 2026, says those elections will take place on Thursday 3 December as postal elections. It prints nominations opening on 13 October 2026 and closing at 4:00pm on 20 October, and says enrolment closed on 7 October for these elections. The copyright notice does not grant a licence to reproduce the list of local governments. That list is not copied. No candidate list, poll, or count is printed.",
     ],
     gaps: [
       "That page does not print the next state polling day. This page does not forecast one.",
-      "The name of the Premier, the size of the Legislative Assembly and the Legislative Council, and any candidate list were not on the page read.",
-      "Local government pages are not in this release.",
+      "The name of the Premier, the size of the Legislative Assembly and the Legislative Council, and the district list were not copied. The copyright notice requires prior written permission before reproducing the Commission’s material, apart from fair dealing.",
+      "Current mayors are not published centrally under a reuse licence. ABS statistical areas are listed instead of a copied council roll.",
     ],
   },
   {
@@ -174,16 +176,18 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.ecsa.sa.gov.au/",
     officeLabel: "Electoral Commission of South Australia",
-    sourceIds: ["ecsa-home", "ecsa-lc-2026", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["ecsa-home", "ecsa-lc-2026", "ecsa-ha-2026", "ecsa-council-2027", "ecsa-copyright", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Electoral Commission of South Australia home page is titled “South Australian Elections 2026” and links to a 2026 state election page. The home page, as read, does not print a polling day.",
       "The Commission’s 2026 Legislative Council results page says that, following the final distribution of preferences conducted at 11am on Monday 4 May 2026, 11 candidates were declared elected. This page does not reprint those names. The polling day of the election is not in that passage.",
+      "The Commission’s notice of House of Assembly results, read on 19 October 2026, says the House of Assembly elections were held on Saturday, 21 March 2026. The notice points to a Government Gazette for the votes of the two unexcluded candidates. That table is not copied here.",
+      "The Commission says the next periodic local government council elections will be held in April 2027, moved from November 2026. Close of voting is printed as 5pm on Wednesday 7 April 2027.",
     ],
     gaps: [
-      "House of Assembly totals for the 2026 state election were not on the pages read. This page does not supply them.",
+      "House of Assembly district names and elected members were not on the notice page itself. They are not copied from the Gazette.",
       "The name of the Premier was not on the pages read.",
       "The next state polling day after 2026 was not read.",
-      "Council pages are not in this release.",
+      "Current mayors were not published centrally on the pages read.",
     ],
   },
   {
@@ -199,7 +203,7 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     officeHref: "https://www.tec.tas.gov.au/house-of-assembly/elections-2025/",
     officeLabel: "Tasmanian Electoral Commission",
-    sourceIds: ["tec-2025", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
+    sourceIds: ["tec-2025", "tec-hoa-2025", "tec-lg-2026", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Tasmanian Electoral Commission says a general election for the House of Assembly was held on Saturday 19 July 2025, and that polling closed at 6 pm that day.",
       "The Commission says Tasmania has five divisions: Bass, Braddon, Clark, Franklin and Lyons. It says seven members will be elected to represent each division for a term of up to four years, and that voting is compulsory.",
@@ -208,8 +212,8 @@ export const JURISDICTIONS: Jurisdiction[] = [
     ],
     gaps: [
       "The Commission’s page does not print the next House of Assembly polling day. It says the term is up to four years. This page does not turn that into a calendar day.",
-      "The names of members elected on 19 July 2025, and the name of the Premier, were not copied from a results table read for this release.",
-      "Council pages are not in this release.",
+      "The names of members elected on 19 July 2025, and the name of the Premier, were not copied. A copyright licence page for the Commission was not found on 19 October 2026.",
+      "The Commission’s 2026 local government elections page prints close of poll at 2 pm on Tuesday 27 October. On 19 October 2026 that time has not arrived. No candidate list, return rate, or count is printed. Local pages use ABS statistical names.",
     ],
   },
   {
@@ -222,15 +226,16 @@ export const JURISDICTIONS: Jurisdiction[] = [
     house2025: [{ party: "Australian Labor Party", seats: 3 }],
     officeHref: "https://www.elections.act.gov.au/elections",
     officeLabel: "Elections ACT",
-    sourceIds: ["elections-act", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03", "abs-non-abs"],
+    sourceIds: ["elections-act", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03", "abs-non-abs"],
     paragraphs: [
       "The Elections ACT elections page says the next ACT Legislative Assembly election will be held in October 2028. It does not print a calendar day.",
       "A link on that page is labelled “11th Legislative Assembly (2024-2028)”. The page read does not print the 2024 polling day.",
       "The ABS Non ABS Structures unit summary prints 3 Local Government Area codes for the ACT. Those codes are statistical areas, not a statement that the Territory has three elected councils. No separate municipal government was described on the pages read.",
     ],
     gaps: [
-      "The name of the Chief Minister, the size of the Legislative Assembly, and a calendar day for the next election were not on the pages read.",
+      "The name of the Chief Minister, the size of the Legislative Assembly, the electorate names, and a calendar day for the next election were not on the pages read. Elections ACT returned HTTP 403 on 19 October 2026.",
       "No candidate list was read.",
+      "The only spatial Local Government Area kept from the 2025 ABS extract, after dropping two non-spatial special purpose codes, is Unincorporated ACT. It is not described as an elected council.",
     ],
   },
   {
@@ -243,14 +248,15 @@ export const JURISDICTIONS: Jurisdiction[] = [
     house2025: [{ party: "Australian Labor Party", seats: 2 }],
     officeHref: "https://www.aec.gov.au/media/2026/07-23.htm",
     officeLabel: "Australian Electoral Commission",
-    sourceIds: ["aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03", "abs-non-abs"],
+    sourceIds: ["aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03", "abs-non-abs", "abs-lga-2025", "abs-lga-map"],
     paragraphs: [
-      "No Northern Territory Electoral Commission page was read on 17 October 2026. This page does not print a territory election date.",
-      "The ABS Non ABS Structures unit summary prints 22 Local Government Area codes for the Northern Territory, including the Australia total’s treatment of unincorporated areas described on the Local Government Areas page. Council pages are not in this release.",
+      "No Northern Territory Electoral Commission page was read on 17 October 2026. A direct request on 19 October 2026 returned HTTP 403. This page does not print a territory election date.",
+      "The ABS 2025 Local Government Area extract lists spatial areas for the Northern Territory, including Unincorporated NT. The explanatory page says East Arnhem was split to create Groote Archipelago, with code changes. Current mayors were not published centrally.",
     ],
     gaps: [
-      "The last and next Legislative Assembly elections, the size of the Assembly, and the name of the Chief Minister were not read.",
+      "The last and next Legislative Assembly elections, the size of the Assembly, the district list, and the name of the Chief Minister were not read.",
       "No candidate list was read.",
+      "Last and next council election days were not read.",
     ],
   },
 ];

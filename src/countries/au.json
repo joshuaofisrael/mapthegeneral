@@ -2,7 +2,7 @@
   "code": "au",
   "name": "Australia",
   "href": "/au/",
-  "summary": "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, and Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
+  "summary": "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, New South Wales’s 93 Legislative Assembly districts, Tasmania’s 5 House of Assembly divisions, Victoria’s 79 local councils, and ABS 2025 Local Government Areas for the other states and territories, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
   "links": [
     {
       "href": "/au/en/",
@@ -23,6 +23,14 @@
     {
       "href": "/au/en/house/",
       "label": "House divisions"
+    },
+    {
+      "href": "/au/en/victoria/local-councils/",
+      "label": "Victorian local councils"
+    },
+    {
+      "href": "/au/en/new-south-wales/assembly/",
+      "label": "NSW Legislative Assembly"
     }
   ]
 }
