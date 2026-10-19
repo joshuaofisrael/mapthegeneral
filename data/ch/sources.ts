@@ -79,7 +79,7 @@ export const SOURCES: SourceRef[] = [
     id: "agvch-hist",
     name: "Bundesamt für Statistik, historisiertes Gemeindeverzeichnis, TXT-Fassung eCH-0071 Version 1.2.0, Dateien 20260101_GDEHist_KT, _BEZ und _GDE",
     url: "https://www.agvchapp.bfs.admin.ch/file/txt/dz-b-00.04-hgv-01.zip",
-    readOn: READ,
+    readOn: "2026-10-19",
   },
   {
     id: "bfs-agvch-page",
@@ -91,7 +91,7 @@ export const SOURCES: SourceRef[] = [
     id: "opendata-hgv",
     name: "opendata.swiss, Swiss official commune’s historicized list, Bundesamt für Statistik, Kennzeichen «Open use»",
     url: "https://opendata.swiss/en/dataset/historisiertes-gemeindeverzeichnis-der-schweiz",
-    readOn: "2026-10-18",
+    readOn: "2026-10-19",
   },
   {
     id: "parlament-members",
