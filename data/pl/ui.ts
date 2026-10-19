@@ -19,8 +19,8 @@ const EN = {
   nextElection: "Next election",
   government: "Offices",
   localGap:
-    "Gmina pages are not in this release. Powiat pages and Sejm and Senate constituency pages are.",
-  gminaGap: "Gmina pages are not in this release.",
+    "Gmina pages from the 19 October 2026 TERC file are in this release. Candidate lists and wards are not.",
+  gminaGap: "Gmina pages from the 19 October 2026 TERC file are linked from each powiat page and from the gmina index.",
   officeNameGap:
     "No official list read for this page names the starosta or the prezydent miasta. The name is not filled in from anywhere else.",
   officeholderGap:
@@ -55,8 +55,8 @@ const PL: typeof EN = {
   nextElection: "Następne wybory",
   government: "Urzędy",
   localGap:
-    "Stron gmin nie ma w tym wydaniu. Strony powiatów oraz okręgów do Sejmu i Senatu są.",
-  gminaGap: "Stron gmin nie ma w tym wydaniu.",
+    "Strony gmin z pliku TERC z 19 października 2026 r. są w tym wydaniu. List kandydatów i obwodów nie ma.",
+  gminaGap: "Strony gmin z pliku TERC z 19 października 2026 r. są podlinkowane ze strony powiatu i z indeksu gmin.",
   officeNameGap:
     "Na potrzeby tej strony nie odczytano urzędowego wykazu, który podaje starostę albo prezydenta miasta. Nazwiska nie uzupełniono z innego miejsca.",
   officeholderGap:

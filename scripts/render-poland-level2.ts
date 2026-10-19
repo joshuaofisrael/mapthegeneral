@@ -19,6 +19,7 @@ import {
   type SejmOkreg,
   type SenatOkreg,
 } from "../data/pl/level2";
+import { gminaIndexPath, gminaPath, gminasIn, powiatGminaIndexPath } from "../data/pl/gminy";
 import { voivodeshipBySlug } from "../data/pl/places";
 import { polandHome, voivodeshipPath } from "../data/pl/paths";
 import { sourcesById } from "../data/pl/sources";
@@ -72,6 +73,8 @@ function shell(input: {
   description: string;
   crumbs: { name: string; path: string }[];
   body: string;
+  updatedPl?: string;
+  updatedEn?: string;
 }): string {
   const pl = input.lang === "pl";
   const other: Lang = pl ? "en" : "pl";
@@ -79,7 +82,9 @@ function shell(input: {
   const plHref = absoluteUrl(pl ? input.path : otherPath);
   const enHref = absoluteUrl(pl ? otherPath : input.path);
   const canonical = absoluteUrl(input.path);
-  const updated = pl ? "Ostatnia aktualizacja tej strony: 18 października 2026 r." : "Last updated: 18 October 2026.";
+  const updated = pl
+    ? (input.updatedPl ?? "Ostatnia aktualizacja tej strony: 18 października 2026 r.")
+    : (input.updatedEn ?? "Last updated: 18 October 2026.");
   return `<!DOCTYPE html>
 <html lang="${input.lang}">
 <head>
@@ -159,6 +164,10 @@ function powiatPage(lang: Lang, powiat: Powiat): string {
     { name: voj.name, path: voivodeshipPath(lang, voj.slug) },
     { name: heading, path },
   ];
+  const children = gminasIn(powiat.voivodeshipSlug, powiat.slug);
+  const gminaLinks = children
+    .map((gmina) => `<li><a href="${esc(gminaPath(lang, gmina))}">${esc(gmina.name)}</a> — ${esc(gmina.kind)}</li>`)
+    .join("");
   const body = `<p class="eyebrow">${esc(eyebrow)}</p>
 <h1>${esc(heading)}</h1>
 <p class="lede">${esc(voj.name)}</p>
@@ -174,10 +183,23 @@ function powiatPage(lang: Lang, powiat: Powiat): string {
 <h2>${pl ? "Wybory" : "Elections"}</h2>
 <p>${esc(election)}</p>
 <p>${esc(next)}</p>
+<h2>${pl ? "Gminy" : "Gminas"}</h2>
+<p>${pl ? `Plik TERC_Urzedowy_2026-10-19, katalog z datą 2026-01-01, ma w tej jednostce ${children.length} wierszy, których NAZWA_DOD zaczyna się od „gmina”.` : `The file TERC_Urzedowy_2026-10-19, catalog date 2026-01-01, has ${children.length} rows in this unit whose NAZWA_DOD starts with “gmina”.`}</p>
+<ul>${gminaLinks}</ul>
+<p class="tools"><a href="${esc(powiatGminaIndexPath(lang, powiat.voivodeshipSlug, powiat.slug))}">${pl ? "Indeks gmin tego powiatu" : "Gmina index for this powiat"}</a> · <a href="${esc(gminaIndexPath(lang))}">${pl ? "Wszystkie gminy" : "All gminas"}</a></p>
 <p class="tools">${pl ? "Strony nadrzędne" : "Parent pages"}: <a href="${esc(voivodeshipPath(lang, voj.slug))}">${esc(voj.name)}</a> · <a href="${esc(powiatIndexPath(lang))}">${pl ? "Powiaty" : "Powiats"}</a> · <a href="${esc(polandHome(lang))}">${pl ? "Polska" : "Poland"}</a>. ${pl ? "Sąsiednie nazwy" : "Nearby names"}: ${near}</p>
 <h2>${pl ? "Źródła" : "Sources"}</h2>
-<ul>${sourceList(city ? ["teryt-terc", "teryt-zasady", "pkw-wojt-2024"] : ["teryt-terc", "teryt-zasady", "pkw-rady-2024"])}</ul>`;
-  return shell({ lang, path, title: heading, description, crumbs, body });
+<ul>${sourceList(city ? ["teryt-terc", "teryt-terc-20261019", "teryt-zasady", "pkw-wojt-2024"] : ["teryt-terc", "teryt-terc-20261019", "teryt-zasady", "pkw-rady-2024"])}</ul>`;
+  return shell({
+    lang,
+    path,
+    title: heading,
+    description,
+    crumbs,
+    body,
+    updatedPl: "Ostatnia aktualizacja tej strony: 19 października 2026 r.",
+    updatedEn: "Last updated: 19 October 2026.",
+  });
 }
 
 function sejmPage(lang: Lang, okreg: SejmOkreg): string {
