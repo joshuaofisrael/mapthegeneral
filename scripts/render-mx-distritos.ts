@@ -1,4 +1,4 @@
-import { mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { circunscripcionByNumber } from "../src/data/mx/circunscripciones";
@@ -179,7 +179,17 @@ ${indigena}
 }
 
 for (const lang of ["es", "en"] as const) {
-  rmSync(join(publicDir, "mx", lang), { recursive: true, force: true });
+  const langDir = join(publicDir, "mx", lang);
+  if (!existsSync(langDir)) continue;
+  for (const entity of readdirSync(langDir, { withFileTypes: true })) {
+    if (!entity.isDirectory()) continue;
+    const entityDir = join(langDir, entity.name);
+    for (const child of readdirSync(entityDir, { withFileTypes: true })) {
+      if (child.isDirectory() && /^distrito-\d+$/.test(child.name)) {
+        rmSync(join(entityDir, child.name), { recursive: true, force: true });
+      }
+    }
+  }
 }
 
 let written = 0;

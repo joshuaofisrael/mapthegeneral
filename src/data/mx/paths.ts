@@ -26,3 +26,11 @@ export function districtPath(lang: Lang, entitySlug: string, number: number): st
   const slug = `distrito-${String(number).padStart(2, "0")}`;
   return `${entityPath(lang, entitySlug)}${slug}/`;
 }
+
+export function municipiosIndexPath(lang: Lang, entitySlug: string): string {
+  return `${entityPath(lang, entitySlug)}municipios/`;
+}
+
+export function municipioPath(lang: Lang, entitySlug: string, slug: string): string {
+  return `${entityPath(lang, entitySlug)}${slug}/`;
+}

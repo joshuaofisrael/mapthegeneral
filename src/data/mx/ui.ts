@@ -23,9 +23,9 @@ const EN = {
   candidateGap:
     "This release has no candidate pages. The INE page for the 2026-2027 process, read on 17 October 2026, does not publish proclaimed lists. This page does not name candidates.",
   officeholderGap:
-    "The name of the person who holds the gubernatura, the Jefatura de Gobierno, or a presidencia municipal is not copied here. No official list of those officeholders was read for this release.",
+    "The name of the person who holds the gubernatura or the Jefatura de Gobierno is not copied here. No official list of those officeholders was read for this release.",
   municipalityGap:
-    "Municipality and alcaldía pages are not in this release. The count below is the number of rows the INEGI municipal catalog returned for this entidad on 17 October 2026.",
+    "Each entidad page links to every municipio or alcaldía in the INEGI catalog read on 19 October 2026. Those pages do not name the person in office. The INAFED open-data file read that day does not print a term covering the date. Cabecera names and the date of the previous local election are not copied.",
   districts: "Federal districts",
   circunscripciones: "Plurinominal constituencies",
   groupGap:
@@ -61,9 +61,9 @@ const ES = {
   candidateGap:
     "Esta entrega no tiene páginas de candidaturas. La página del INE del proceso 2026-2027, leída el 17 de octubre de 2026, no publica listas proclamadas. Esta página no nombra candidaturas.",
   officeholderGap:
-    "No se copia aquí el nombre de quien ejerce la gubernatura, la Jefatura de Gobierno o una presidencia municipal. Para esta entrega no se leyó una lista oficial de esas personas.",
+    "No se copia aquí el nombre de quien ejerce la gubernatura o la Jefatura de Gobierno. Para esta entrega no se leyó una lista oficial de esas personas.",
   municipalityGap:
-    "Las páginas de municipios y alcaldías no están en esta entrega. La cifra de abajo es el número de filas que el catálogo municipal del INEGI devolvió para esta entidad el 17 de octubre de 2026.",
+    "Cada página de entidad enlaza todos los municipios o alcaldías del catálogo del INEGI leído el 19 de octubre de 2026. Esas páginas no nombran a quien está en el cargo. El archivo de datos abiertos del INAFED leído ese día no imprime un periodo que cubra la fecha. No se copian cabeceras ni la fecha de la elección local anterior.",
   districts: "Distritos federales",
   circunscripciones: "Circunscripciones plurinominales",
   groupGap:
