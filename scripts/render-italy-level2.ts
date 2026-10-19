@@ -21,7 +21,7 @@ import {
   unitsIndexPath,
 } from "../src/data/italy/paths";
 import { regionBySlug } from "../src/data/italy/places";
-import { sourcesById } from "../src/data/italy/sources";
+import { sourceById, sourcesById } from "../src/data/italy/sources";
 import type { ItLang } from "../src/data/italy/types";
 import { ui, unitLabel } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
@@ -163,13 +163,16 @@ function unitPage(lang: ItLang, unit: Level2Unit): string {
             ? "I file degli amministratori provinciali e metropolitani aggiornati al 24 agosto 2026 non stampano, per questo nome, un presidente della provincia, un sindaco metropolitano o un commissario straordinario."
             : "The provincial and metropolitan administrator files updated on 24 August 2026 do not print a provincial president, a metropolitan mayor, or an extraordinary commissioner for this name."
         }</p>`
-      : unit.offices
-          .map((office) =>
-            it
-              ? `<p>Il file aggiornato al 24 agosto 2026 stampa «${esc(office.role)}»: ${esc(office.given)} ${esc(office.surname)}. Data elezione ${esc(office.electedOn)}. Data entrata in carica ${esc(office.enteredOn)}.</p>`
-              : `<p>The file updated on 24 August 2026 prints “${esc(office.role)}”: ${esc(office.given)} ${esc(office.surname)}. Election date ${esc(office.electedOn)}. Date of taking office ${esc(office.enteredOn)}.</p>`,
-          )
-          .join("");
+      : `<p>${
+          it
+            ? `Carica stampata nell'anagrafe aggiornata al 24 agosto 2026: ${unit.offices.map((office) => `«${esc(office.role)}»`).join(", ")}.`
+            : `Office printed in the register updated on 24 August 2026: ${unit.offices.map((office) => `“${esc(office.role)}”`).join(", ")}.`
+        }</p>`;
+  const officeholders = `<p>${
+    it
+      ? `Questa pagina non riporta i nomi dei presidenti di provincia, dei sindaci metropolitani o dei commissari. La fonte ufficiale per gli amministratori in carica è l'<a href="${esc(sourceById("anagrafe").url)}">Anagrafe degli amministratori locali e regionali</a> del Ministero dell'Interno.`
+      : `This page does not list the names of provincial presidents, metropolitan mayors or commissioners. The official source for current officeholders is the Interior Ministry's <a href="${esc(sourceById("anagrafe").url)}">register of local and regional administrators</a>.`
+  }</p>`;
   const body = `<p class="eyebrow">${esc(typeName)}</p>
 <h1>${esc(unit.name)}</h1>
 <p class="lede">${esc(region.istatName)} · ${it ? "codice ISTAT" : "ISTAT code"} ${esc(unit.code)}</p>
@@ -185,15 +188,16 @@ function unitPage(lang: ItLang, unit: Level2Unit): string {
   }</p>
 <h2>${it ? "Carica" : "Office"}</h2>
 ${offices}
+${officeholders}
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${
     it
-      ? "Non è stato letto un decreto di convocazione della prossima elezione di questo livello. La data di elezione sopra, se c'è, è quella stampata nell'anagrafe, non uno scrutinio."
-      : "No decree calling the next election at this level was read. An election date above, where present, is the date printed in the register, not a results table."
+      ? "Non è stato letto un decreto di convocazione della prossima elezione di questo livello."
+      : "No decree calling the next election at this level was read."
   }</p>
 <p class="tools">${it ? "Comuni" : "Municipalities"}: <a href="${esc(comuniIndexPath(lang, unit.regionSlug, unit.slug))}">${it ? "Indice dei comuni pubblicati per questa unità" : "Index of municipalities published for this unit"}</a></p>
 <p class="tools">${it ? "Livello superiore" : "Parent"}: <a href="${esc(regionPath(lang, region.slug))}">${esc(region.istatName)}</a> · <a href="${esc(unitsIndexPath(lang))}">${it ? "Indice" : "Index"}</a>. ${esc(copy.alphaNearby)}: ${neighbors(lang, unit)}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>
-<ul>${sourceList(lang, ["istat-elenco-xlsx", "istat-codici", "anagrafe-incarica", "dait"])}</ul>`;
+<ul>${sourceList(lang, ["istat-elenco-xlsx", "istat-codici", "anagrafe", "anagrafe-incarica", "dait"])}</ul>`;
   return shell({
     lang,
     path,

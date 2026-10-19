@@ -64,7 +64,6 @@ Regenerate the distilled files:
 
 ```bash
 python3 scripts/extract-municipalities.py /path/to/29005.csv src/data/spain/municipalities.json
-python3 scripts/extract-mayors.py /path/to/ficha.xlsx src/data/spain/mayors.json
 ```
 
 Facts that were not on a source read on 17 October 2026 are marked as gaps. That includes current regional cabinets, the rest of a municipal council, proclaimed candidacies, a 2027 calendar day, and postcodes.

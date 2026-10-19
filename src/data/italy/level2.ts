@@ -1,11 +1,8 @@
 import raw from "./level2.json";
 
+/** Office title only. Officeholder names are not kept (Joshua, 19 Oct 2026: avoid legal risk). */
 export type Level2Office = {
   role: string;
-  surname: string;
-  given: string;
-  electedOn: string;
-  enteredOn: string;
 };
 
 export type Level2Unit = {
