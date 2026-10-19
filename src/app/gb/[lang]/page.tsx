@@ -173,6 +173,8 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
         />
         <p>
           <Link href="/gb/en/constituencies/">Westminster, Scottish Parliament, Senedd and Assembly constituencies</Link>
+          {" · "}
+          <Link href="/gb/en/councils/">Principal councils and directly elected mayors</Link>
         </p>
       </section>
 

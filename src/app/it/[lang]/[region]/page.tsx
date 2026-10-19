@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { ItalyFrame } from "@/app/it/frame";
+import { regionChunkSentence } from "@/data/italy/comuni";
 import { formatNumber } from "@/data/italy/format";
 import { collegiInRegion, unitsInRegion } from "@/data/italy/level2";
 import { regionBySlug, regionNeighbors, REGIONS } from "@/data/italy/places";
@@ -163,7 +164,7 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
             {it ? "Indice dei collegi" : "Constituency index"}
           </Link>
         </p>
-        <GapNote label={copy.gap} text={copy.subregionalGap} />
+        <p>{regionChunkSentence(lang, region.slug, region.comuni)}</p>
         <h2>{it ? "Elezione regionale" : "Regional election"}</h2>
         <GapNote label={copy.gap} text={copy.regionalElectionGap} />
         <h2>{it ? "Presidenza" : "Presidency"}</h2>
