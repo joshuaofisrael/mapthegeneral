@@ -51,8 +51,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
     >
       <p className="text-sm text-ink-muted">
         {fr
-          ? `${SOURCES.length} sources. Cette livraison ajoute 343 circonscriptions électorales fédérales et 293 divisions de recensement. Les subdivisions de recensement et les municipalités ne sont pas dans cette livraison.`
-          : `${SOURCES.length} sources. This release adds 343 federal electoral districts and 293 census divisions. Census subdivisions and municipalities are not in this release.`}
+          ? `${SOURCES.length} sources. Cette livraison ajoute des circonscriptions d’assemblée pour neuf provinces et territoires, et les municipalités constituées de l’Ontario et du Québec. La Colombie-Britannique, l’Alberta et les autres provinces et territoires restent pour une livraison suivante. Les maires ne sont pas copiés.`
+          : `${SOURCES.length} sources. This release adds legislative assembly districts for nine provinces and territories, and the incorporated municipalities of Ontario and Quebec. British Columbia, Alberta, and the other provinces and territories remain for a later release. Mayors are not copied.`}
       </p>
       <h2 className="mt-6 font-serif text-xl font-semibold">{fr ? "Licences et attribution" : "Licences and attribution"}</h2>
       <p className="mt-2 text-sm leading-6 text-ink-muted">
@@ -64,6 +64,11 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
         {lang === "fr"
           ? "Adapté de Statistique Canada, Classification géographique type (CGT) 2021, fichier de structure, date de référence 2021. Ceci ne constitue pas une approbation de ce produit par Statistique Canada."
           : "Adapted from Statistics Canada, Standard Geographical Classification (SGC) 2021, structure file, reference date 2021. This does not constitute an endorsement by Statistics Canada of this product."}
+      </p>
+      <p className="mt-2 text-sm leading-6 text-ink-muted">
+        {lang === "fr"
+          ? "Adapté de Statistique Canada, fichier numérique des limites du Recensement de 2021, table d’attributs des subdivisions de recensement, date de référence 2021, et du tableau 1.5 du Dictionnaire du Recensement de la population de 2021, no 98-301-X au catalogue. Ceci ne constitue pas une approbation de ce produit par Statistique Canada."
+          : "Adapted from Statistics Canada, 2021 Census digital boundary file, census subdivision attribute table, reference date 2021, and from Dictionary, Census of Population, 2021, table 1.5, catalogue no. 98-301-X. This does not constitute an endorsement by Statistics Canada of this product."}
       </p>
       <p className="mt-2 text-sm leading-6 text-ink-muted">
         {fr ? (

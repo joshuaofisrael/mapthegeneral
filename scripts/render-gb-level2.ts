@@ -184,7 +184,6 @@ function westminsterBody(seat: WestminsterSeat, prev?: WestminsterSeat, next?: W
     description,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: NATION_NAME[seat.nation], path: nationPath(seat.nation) },
       { name: "Westminster constituencies", path: westminsterNationIndex(seat.nation) },
@@ -223,7 +222,6 @@ function spConstBody(seat: SpConstituency, prev?: SpConstituency, next?: SpConst
     description: `${seat.name}: ${seat.member.displayName}, ${seat.member.party}. Scottish Parliament constituency. Unofficial information.`,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Scotland", path: nationPath("scotland") },
       { name: "Scottish Parliament", path: SCOTTISH_PARLIAMENT_INDEX },
@@ -274,7 +272,6 @@ function spRegionBody(region: SpRegion, prev?: SpRegion, next?: SpRegion): strin
     description: `${region.name}: Scottish Parliament region, ${region.members.length} current regional members. Unofficial information.`,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Scotland", path: nationPath("scotland") },
       { name: "Scottish Parliament", path: SCOTTISH_PARLIAMENT_INDEX },
@@ -323,7 +320,6 @@ function seneddBody(seat: SeneddSeat, prev?: SeneddSeat, next?: SeneddSeat): str
     description: `${seat.name}: Senedd constituency, six current members. Unofficial information.`,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Wales", path: nationPath("wales") },
       { name: "Senedd constituencies", path: SENEDD_INDEX },
@@ -361,7 +357,6 @@ function assemblyBody(seat: AssemblySeat, prev?: AssemblySeat, next?: AssemblySe
     description: `${seat.name}: Northern Ireland Assembly constituency, five current MLAs. Unofficial information.`,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Northern Ireland", path: nationPath("northern-ireland") },
       { name: "Assembly constituencies", path: ASSEMBLY_INDEX },
@@ -409,7 +404,6 @@ for (const nation of NATIONS) {
       description: `${seats.length} Westminster constituencies in ${NATION_NAME[nation]}, with the current MP named on each page. Unofficial information.`,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: NATION_NAME[nation], path: nationPath(nation) },
         { name: "Westminster constituencies", path: westminsterNationIndex(nation) },
@@ -454,7 +448,6 @@ write(
     description: "73 Scottish Parliament constituencies and 8 regions, with current members. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Scotland", path: nationPath("scotland") },
       { name: "Scottish Parliament", path: SCOTTISH_PARLIAMENT_INDEX },
@@ -493,7 +486,6 @@ write(
     description: "16 Senedd constituencies under the 2026 system, with current members. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Wales", path: nationPath("wales") },
       { name: "Senedd constituencies", path: SENEDD_INDEX },
@@ -517,7 +509,6 @@ write(
     description: "18 Northern Ireland Assembly constituencies and current MLAs. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Northern Ireland", path: nationPath("northern-ireland") },
       { name: "Assembly constituencies", path: ASSEMBLY_INDEX },
@@ -547,7 +538,6 @@ write(
     description: "650 Westminster constituencies on 2024 boundaries, listed by nation. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Westminster constituencies", path: WESTMINSTER_INDEX },
     ],
@@ -572,7 +562,6 @@ write(
     description: "Westminster, Scottish Parliament, Senedd and Northern Ireland Assembly constituencies. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Constituencies", path: CONSTITUENCY_HUB },
     ],

@@ -2,7 +2,7 @@
   "code": "it",
   "href": "/it/",
   "name": "Italy",
-  "summary": "Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree for the next general election was read, so this release does not print that polling day. National page, 20 regions, 110 ISTAT supra-municipal units, and the constituencies in legislative decree 177/2020, in Italian and English. Municipality pages are not in this release.",
+  "summary": "Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree for the next general election was read, so this release does not print that polling day. National page, 20 regions, 110 ISTAT supra-municipal units, and the constituencies in legislative decree 177/2020, in Italian and English. This chunk adds 1,889 municipalities: every flagged capoluogo, all of Lombardia, and part of Lazio. No central 2027 local-election list was read.",
   "links": [
     { "href": "/it/en/", "label": "English" },
     { "href": "/it/it/", "label": "Italiano" },

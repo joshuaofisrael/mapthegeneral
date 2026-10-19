@@ -54,7 +54,6 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
       path="/gb/en/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
       ]}
       eyebrow="UK Parliament · no later than 15 August 2029"
@@ -173,6 +172,8 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
         />
         <p>
           <Link href="/gb/en/constituencies/">Westminster, Scottish Parliament, Senedd and Assembly constituencies</Link>
+          {" · "}
+          <Link href="/gb/en/councils/">Principal councils and directly elected mayors</Link>
         </p>
       </section>
 

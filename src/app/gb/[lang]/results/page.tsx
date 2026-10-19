@@ -36,7 +36,6 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
       path="/gb/en/results/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "Results", path: "/gb/en/results/" },
       ]}

@@ -1,13 +1,26 @@
 import { CA_LANGS } from "../data/ca/lang";
 import { districtName, DISTRICTS, divisionName, DIVISIONS } from "../data/ca/level2";
-import { canadaHome, districtIndexPath, districtPath, divisionIndexPath, divisionPath, electionPath, regionPath } from "../data/ca/paths";
-import { alphaRegions, regionName } from "../data/ca/places";
+import { LEGISLATURE, MUNICIPALITIES, municipalityName } from "../data/ca/level3";
+import {
+  canadaHome,
+  districtIndexPath,
+  districtPath,
+  divisionIndexPath,
+  divisionPath,
+  electionPath,
+  legislatureIndexPath,
+  legislaturePath,
+  municipalityIndexPath,
+  municipalityPath,
+  regionPath,
+} from "../data/ca/paths";
+import { alphaRegions, regionBySlug, regionName } from "../data/ca/places";
 import type { CaLang } from "../data/ca/types";
 
 export const CANADA_HOME_CARD = {
   href: "/ca/",
   title: "Canada",
-  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, and 293 census divisions, in English and French.",
+  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, 293 census divisions, legislative assembly districts for nine provinces and territories, and incorporated municipalities in Ontario and Quebec, in English and French.",
   links: [
     { href: "/ca/en/", label: "English" },
     { href: "/ca/fr/", label: "Français" },
@@ -126,6 +139,56 @@ export function canadaIndexEntries(): Entry[] {
       text: `${division.nameEn} ${division.nameFr} ${division.code}`,
     })),
   );
+  const divisionByCode = new Map(DIVISIONS.map((division) => [division.code, division]));
+  const legislatures = CA_LANGS.flatMap((lang) => {
+    const fr = lang === "fr";
+    const indexes = [...new Set(LEGISLATURE.map((seat) => seat.region))].map((regionSlug) => {
+      const region = regionBySlug(regionSlug);
+      if (!region) throw new Error(regionSlug);
+      const label = regionName(region, lang);
+      return {
+        path: legislatureIndexPath(lang, regionSlug),
+        lang,
+        title: fr ? `Assemblée, ${label}` : `Legislature, ${label}`,
+        kind: "legislature-index",
+        text: `${label} ${region.nameEn}`,
+      };
+    });
+    const seats = LEGISLATURE.map((seat) => ({
+      path: legislaturePath(lang, seat.region, seat.slug),
+      lang,
+      title: seat.name,
+      kind: "legislature",
+      text: `${seat.name} ${seat.code}`,
+    }));
+    return [...indexes, ...seats];
+  });
+  const municipalities = CA_LANGS.flatMap((lang) => {
+    const fr = lang === "fr";
+    const indexes = [...new Set(MUNICIPALITIES.map((place) => place.cd))].map((code) => {
+      const division = divisionByCode.get(code);
+      if (!division) throw new Error(code);
+      return {
+        path: municipalityIndexPath(lang, division.region, division.slug),
+        lang,
+        title: fr ? `Municipalités, ${divisionName(division, lang)}` : `Municipalities, ${divisionName(division, lang)}`,
+        kind: "municipality-index",
+        text: `${division.code} ${division.nameEn}`,
+      };
+    });
+    const places = MUNICIPALITIES.map((place) => {
+      const division = divisionByCode.get(place.cd);
+      if (!division) throw new Error(place.code);
+      return {
+        path: municipalityPath(lang, place.region, division.slug, place.slug),
+        lang,
+        title: municipalityName(place, lang),
+        kind: "municipality",
+        text: `${place.nameEn} ${place.nameFr} ${place.code}`,
+      };
+    });
+    return [...indexes, ...places];
+  });
   return [
     {
       path: "/ca/",
@@ -140,5 +203,7 @@ export function canadaIndexEntries(): Entry[] {
     ...indexes,
     ...districts,
     ...divisions,
+    ...legislatures,
+    ...municipalities,
   ];
 }

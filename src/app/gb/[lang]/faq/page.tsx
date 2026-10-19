@@ -56,7 +56,6 @@ export default async function FaqPage({ params }: { params: Promise<{ lang: stri
       path="/gb/en/faq/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "FAQ", path: "/gb/en/faq/" },
       ]}

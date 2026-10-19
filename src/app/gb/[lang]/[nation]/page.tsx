@@ -21,6 +21,16 @@ import {
   westminsterSeatPath,
   type NationSlug,
 } from "@/data/gb/level2";
+import {
+  COUNTIES,
+  COUNTIES_INDEX,
+  MAYORS,
+  MAYORS_INDEX,
+  councilPath,
+  councilsIn,
+  mayorPath,
+  nationCouncilsIndex,
+} from "@/data/gb/level3";
 import { nationBySlug, NATIONS, POPULATION_GROWTH } from "@/data/gb/places";
 import { gbMetadata } from "@/data/gb/seo";
 import { sourceById, sourcesById } from "@/data/gb/sources";
@@ -37,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!nation) return {};
   return gbMetadata({
     title: nation.name,
-    description: `${nation.name}: Westminster constituencies and current members, plus devolved seats where that legislature sits in ${nation.name}. Unofficial information.`,
+    description: `${nation.name}: Westminster constituencies, devolved seats where that legislature sits here, and principal councils. Unofficial information.`,
     path: `/gb/en/${slug}/`,
   });
 }
@@ -55,7 +65,6 @@ export default async function NationPage({ params }: { params: Promise<{ lang: s
       path={`/gb/en/${slug}/`}
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: nation.name, path: `/gb/en/${slug}/` },
       ]}
@@ -158,10 +167,62 @@ export default async function NationPage({ params }: { params: Promise<{ lang: s
             </p>
           </>
         ) : null}
+        <SeatLinks
+          heading="Councils"
+          intro={`Local authority districts in ${nation.name} from LAD_APR_2025_UK_NC_v2, read on 19 October 2026. Council leaders are not named.`}
+          seats={councilsIn(slug as NationSlug).map((council) => ({
+            href: councilPath(council),
+            title: council.name,
+            detail: council.code,
+          }))}
+        />
+        <p className="text-sm">
+          <Link className="text-navy underline" href={nationCouncilsIndex(slug as NationSlug)}>
+            Council index for {nation.name}
+          </Link>
+        </p>
+        {slug === "england" ? (
+          <>
+            <SeatLinks
+              heading="County councils"
+              intro="The 21 English county councils in CTY_DEC_2025_EN_NC. Metropolitan counties are not listed."
+              seats={COUNTIES.slice()
+                .sort((a, b) => a.name.localeCompare(b.name, "en"))
+                .map((council) => ({
+                  href: councilPath(council),
+                  title: council.name,
+                  detail: council.code,
+                }))}
+            />
+            <p className="text-sm">
+              <Link className="text-navy underline" href={COUNTIES_INDEX}>
+                County council index
+              </Link>
+            </p>
+            <SeatLinks
+              heading="Directly elected mayors"
+              intro="Combined authorities the GOV.UK factsheets describe as having a directly elected mayor, plus the Greater London Authority. The factsheets do not name the current mayor."
+              seats={MAYORS.map((mayor) => ({
+                href: mayorPath(mayor),
+                title: mayor.name,
+                detail: mayor.code ?? "Greater London Authority",
+              }))}
+            />
+            <p className="text-sm">
+              <Link className="text-navy underline" href={MAYORS_INDEX}>
+                Mayors index
+              </Link>
+            </p>
+          </>
+        ) : null}
         <h2>Not in this release</h2>
         <GapNote
           label="Gap"
-          text="Local-authority pages, ward pages, parish pages and candidate lists are not published. English regions are not separate pages."
+          text={
+            slug === "england"
+              ? "Ward pages, parish pages and candidate lists are not published. Council leaders are not named. English regions are not separate pages. The factsheet read on 19 October 2026 does not name the current mayor."
+              : "Ward pages, community council pages and candidate lists are not published. Council leaders are not named."
+          }
         />
       </section>
     </GbFrame>
@@ -180,7 +241,7 @@ function nationBody(slug: string): {
       lede: "The GOV.UK devolution guidance read for this page describes devolution to Scotland, Wales and Northern Ireland. It does not describe a devolved parliament for England.",
       officeId: "ec-schedule",
       officeLabel: "Electoral Commission",
-      sourceIds: ["govuk-devolution", "ec-schedule", "ec-2026-dates", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "ons-geog-licences"],
+      sourceIds: ["govuk-devolution", "ec-schedule", "ec-2026-dates", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "ons-geog-licences", "ons-lad-apr-2025", "ons-cty-dec-2025", "govuk-election-cycles", "govuk-devolution-factsheets"],
       paragraphs: [
         "GOV.UK titles the guidance “Devolution: Guidance for civil servants” and describes it as explaining devolution to Scotland, Wales and Northern Ireland. The word England does not appear in the page text that was read.",
         "The Electoral Commission schedule lists English local government in May 2025, May 2026 (including London boroughs), May 2027, May 2028 and May 2029. It lists combined-authority mayoral elections in those years except May 2027, and local mayoral elections in May 2025, May 2026, May 2027 and May 2028. It lists the Mayor of London and the London Assembly, and Police and Crime Commissioners in England and Wales, in May 2028.",
@@ -193,7 +254,7 @@ function nationBody(slug: string): {
       lede: "gov.scot says John Swinney MSP was reappointed First Minister in May 2026. The Electoral Commission set Scottish Parliament polling day on Thursday 7 May 2026.",
       officeId: "gov-scot-swinney",
       officeLabel: "gov.scot",
-      sourceIds: ["gov-scot-swinney", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "sp-open-data", "sp-copyright"],
+      sourceIds: ["gov-scot-swinney", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "sp-open-data", "sp-copyright", "ons-lad-apr-2025", "ons-wd-pcon-2025"],
       paragraphs: [
         "The gov.scot page for John Swinney MSP says he was reappointed First Minister in May 2026, and that he was appointed First Minister in May 2024. The page does not print a seat total for the Scottish Parliament.",
         "The Electoral Commission key-dates page includes Scottish Parliament elections in the elections on Thursday 7 May 2026. It says ID is not required to vote in Scottish Parliament elections. The corporate-plan table lists Scottish council elections in May 2027 and does not print a day.",
@@ -206,7 +267,7 @@ function nationBody(slug: string): {
       lede: "GOV.WALES lists Rt Hon Rhun ap Iorwerth MS as First Minister of Wales. The Electoral Commission set Senedd Cymru polling day on Thursday 7 May 2026.",
       officeId: "gov-wales-fm",
       officeLabel: "GOV.WALES",
-      sourceIds: ["gov-wales-fm", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "senedd-members", "senedd-find", "senedd-open-data"],
+      sourceIds: ["gov-wales-fm", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "senedd-members", "senedd-find", "senedd-open-data", "ons-lad-apr-2025", "ons-wd-pcon-2025"],
       paragraphs: [
         "The GOV.WALES page is titled “Rt Hon Rhun ap Iorwerth MS: First Minister of Wales”. The biography that was read says he was first elected as the Member for Ynys Môn in a by-election in August 2013. That page does not print the date he became First Minister.",
         "The Electoral Commission key-dates page includes Senedd Cymru elections in the elections on Thursday 7 May 2026, and says ID is not required to vote in Senedd elections. The corporate-plan table lists Welsh local government in May 2027 and does not print a day. The GOV.WALES responsibilities list includes “Senedd electoral system”.",
@@ -218,7 +279,7 @@ function nationBody(slug: string): {
     lede: "The Executive Office says Michelle O’Neill MLA is the First Minister and Emma Little-Pengelly MLA is the deputy First Minister. The Electoral Commission lists the Northern Ireland Assembly in May 2027.",
     officeId: "executive-office-ni",
     officeLabel: "The Executive Office",
-    sourceIds: ["executive-office-ni", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "ni-members", "ni-ogl"],
+    sourceIds: ["executive-office-ni", "ec-schedule", "ec-2026-dates", "govuk-devolution", "ons-mid-2024", "members-constituencies", "ons-pcon-2024", "ni-members", "ni-ogl", "ons-lad-apr-2025", "ons-wd-pcon-2025"],
     paragraphs: [
       "The Executive Office page says Michelle O’Neill MLA is the First Minister and Emma Little-Pengelly MLA is the deputy First Minister. It names Aisling Reilly and Pam Cameron as the Junior Ministers. It does not print a seat total for the Assembly.",
       "The Electoral Commission corporate-plan table lists the Northern Ireland Assembly and Northern Ireland local government in May 2027. It does not print a day. The key-dates page for Thursday 7 May 2026 does not list a Northern Ireland election.",

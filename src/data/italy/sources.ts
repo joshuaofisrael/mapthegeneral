@@ -2,6 +2,7 @@ import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
 const READ_LEVEL2 = "2026-10-18";
+const READ_LEVEL3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -153,6 +154,30 @@ export const SOURCES: SourceRef[] = [
     name: "Dipartimento per gli affari interni e territoriali, Speciale elezioni (suppletiva Camera Abruzzo e turno straordinario del 15-16 novembre 2026)",
     url: "https://dait.interno.gov.it/elezioni/speciale-elezioni",
     readOn: READ_LEVEL2,
+  },
+  {
+    id: "istat-comuni-chunk",
+    name: "ISTAT, Elenco-comuni-italiani.xlsx, foglio «CODICI al 21_02_2026», denominazione, codici e flag capoluogo di ciascun comune",
+    url: "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.xlsx",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "anagrafe-comuni",
+    name: "Ministero dell'interno, open data degli amministratori in carica al 24 agosto 2026 (sindaciincarica.csv, maggiororgano.csv, ammcom.csv)",
+    url: "https://dait.interno.gov.it/elezioni/open-data/amministratori-locali-e-regionali-in-carica",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "collegi-comune-codes",
+    name: "Dipartimento per le riforme istituzionali, tabelle A.1 e B.1 del decreto legislativo n. 177/2020, colonna del codice ISTAT del comune",
+    url: "https://www.riformeistituzionali.gov.it/it/i-nuovi-collegi-elettorali/",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "dait-speciale-19",
+    name: "Dipartimento per gli affari interni e territoriali, Speciale elezioni, riletta il 19 ottobre 2026",
+    url: "https://dait.interno.gov.it/elezioni/speciale-elezioni",
+    readOn: READ_LEVEL3,
   },
 ];
 
