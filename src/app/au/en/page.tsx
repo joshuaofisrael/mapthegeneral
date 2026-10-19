@@ -13,6 +13,7 @@ import {
 } from "@/data/au/places";
 import { sourceById, sourcesById } from "@/data/au/sources";
 import { assemblyIndexPath, councilIndexPath, houseIndexPath } from "@/data/au/level2";
+import { areasIn, localIndexPath, localPath, stateAssemblyIndexPath } from "@/data/au/level3";
 import { auHome, jurisdictionPath } from "@/countries/au";
 
 const aec = sourceById("aec-entitlement-2026");
@@ -37,7 +38,7 @@ export default function AustraliaNationalPage() {
       eyebrow="Federal election · due between August 2027 and May 2028"
       title="Australia"
       lede="The Australian Electoral Commission says the next federal election is due to be held between August 2027 and May 2028. No writ read on 17 October 2026 names a polling day."
-      updated="18 October 2026"
+      updated="19 October 2026"
       officeHref={aec.url}
       officeLabel="Australian Electoral Commission"
       sources={sourcesById([
@@ -48,6 +49,11 @@ export default function AustraliaNationalPage() {
         "abs-erp-2026-03",
         "abs-lga",
         "abs-non-abs",
+        "abs-lga-2025",
+        "abs-lga-map",
+        "tec-lg-2026",
+        "waec-lgx-2026",
+        "waec-copyright",
         "pm-about",
         "vec-state",
         "auspost-postcodes",
@@ -177,8 +183,9 @@ export default function AustraliaNationalPage() {
           population was {ERP_NATIONAL_PERSONS.toLocaleString("en-AU")} people at 31 March 2026. The same release’s
           state table prints figures in thousands, to one decimal. Those figures are on each state and territory page.
           The table’s Australia row is marked as including Other Territories comprising Jervis Bay Territory, Christmas
-          Island, the Cocos (Keeling) Islands and Norfolk Island. Those territories do not have their own pages in this
-          release.
+          Island, the Cocos (Keeling) Islands and Norfolk Island. The 2025 ABS extract has pages for Christmas Island,
+          Cocos (Keeling) Islands and Unincorporated Other Territories. Norfolk Island is not a separate code in that
+          extract.
         </p>
       </section>
 
@@ -201,6 +208,10 @@ export default function AustraliaNationalPage() {
           <Link className="text-navy underline" href={councilIndexPath()}>
             8 Legislative Council regions
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={localIndexPath("victoria")}>
+            79 local councils
+          </Link>
         </p>
         <p>
           The Australian Communications and Media Authority blackout page, read on 18 October 2026, says there are no
@@ -221,18 +232,58 @@ export default function AustraliaNationalPage() {
           <Link className="text-navy underline" href={houseIndexPath()}>
             House of Representatives divisions
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("new-south-wales")}>
+            93 NSW Legislative Assembly districts
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("tasmania")}>
+            5 Tasmanian House of Assembly divisions
+          </Link>
         </p>
       </section>
 
+      <section className="prose-legal">
+        <h2>Local government</h2>
+        <p>
+          The ABS Local Government Areas page, read on 19 October 2026, says there are 567 Local Government Areas,
+          including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not
+          match official legal boundaries and should only be used for statistical purposes. This release keeps the 548
+          spatial areas from the ASGS2025 MapServer extract. Victoria’s 79 councils use the Victorian Electoral
+          Commission’s names, with the matching ABS code. The other areas use the ABS name and code.
+        </p>
+        <p>
+          The Tasmanian Electoral Commission page for the 2026 local government elections prints close of poll at 2 pm
+          on Tuesday 27 October. On 19 October 2026 that time has not arrived. This site does not publish a candidate
+          list, a return rate, or a count for that election.
+        </p>
+        <p>
+          The Western Australian Electoral Commission page titled “2026 December Local Government Extraordinary
+          Elections” says those elections will take place on Thursday 3 December as postal elections. Nominations open
+          on 13 October 2026 and close at 4:00pm on 20 October. The Commission’s copyright notice does not grant a
+          licence to copy its list of local governments. That list is not copied. No candidate list or count is printed.
+        </p>
+        <p>
+          <Link className="text-navy underline" href={localIndexPath("other-territories")}>
+            Other Territories local government areas
+          </Link>
+        </p>
+        <ul className="mt-3 text-sm">
+          {areasIn("other-territories").map((area) => (
+            <li key={localPath(area)} className="py-0.5">
+              <Link className="text-navy underline" href={localPath(area)}>
+                {area.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="space-y-3">
-        <h2 className="font-serif text-2xl font-semibold">Candidates, local pages, and postcodes</h2>
+        <h2 className="font-serif text-2xl font-semibold">Candidates and postcodes</h2>
         <GapNote
           label="Gap"
-          text="No writ for the next federal election was read, so there is no federal candidate list to publish. Candidate profiles are not in this release."
-        />
-        <GapNote
-          label="Gap"
-          text="The ABS Local Government Areas page says there are 567 Local Government Areas covering the whole of Australia, including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not match official legal boundaries and should only be used for statistical purposes. Local government council pages are not in this release. No elected government between the state or territory and the local council was described on the pages read."
+          text="No writ for the next federal election was read, so there is no federal candidate list to publish. Candidate profiles are not in this release. Queensland, Western Australia, South Australia, the Australian Capital Territory and the Northern Territory lower-house district lists were not copied: the commission site was blocked, the copyright notice does not allow reproduction, or the notice page did not itself list the districts."
         />
         <GapNote
           label="Gap"

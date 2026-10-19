@@ -15,6 +15,7 @@ import {
   divisionsIn,
   stateHouseIndexPath,
 } from "@/data/au/level2";
+import { areasIn, districtsIn, localIndexPath, localPath, stateAssemblyIndexPath, stateAssemblyPath } from "@/data/au/level3";
 import { sourcesById } from "@/data/au/sources";
 import { auHome, jurisdictionPath } from "@/countries/au";
 
@@ -55,7 +56,7 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
       lede={`${item.federalDivisions} House of Representatives electorates in the Australian Electoral Commission’s determination of 23 July 2026.`}
       officeHref={item.officeHref}
       officeLabel={item.officeLabel}
-      updated="18 October 2026"
+      updated="19 October 2026"
       sources={sourcesById(
         [
           ...item.sourceIds,
@@ -143,8 +144,8 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
           <section>
             <h2 className="font-serif text-2xl font-semibold">Legislative Council regions</h2>
             <p className="mt-2 text-sm leading-6 text-ink-muted">
-              8 names on the Commission’s state-regions page, read on 18 October 2026. Local government councils are a
-              later page.
+              8 names on the Commission’s state-regions page, read on 18 October 2026. Local councils are a separate list
+              below.
             </p>
             <p className="mt-2 text-sm">
               <Link className="text-navy underline" href={councilIndexPath()}>
@@ -163,6 +164,59 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
           </section>
         </>
       ) : null}
+
+      {districtsIn(slug).length > 0 ? (
+        <section>
+          <h2 className="font-serif text-2xl font-semibold">
+            {slug === "tasmania" ? "House of Assembly divisions" : "Legislative Assembly districts"}
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-ink-muted">
+            {districtsIn(slug).length} names from the official list read on 19 October 2026.
+            {slug === "tasmania"
+              ? " Member names were not copied."
+              : " The member is the one the NSW Electoral Commission declared elected, including a later by-election where the Commission prints one."}
+          </p>
+          <p className="mt-2 text-sm">
+            <Link className="text-navy underline" href={stateAssemblyIndexPath(slug)}>
+              District index
+            </Link>
+          </p>
+          <ul className="mt-3 columns-1 gap-x-6 text-sm sm:columns-2">
+            {districtsIn(slug).map((district) => (
+              <li key={district.slug} className="py-0.5">
+                <Link className="text-navy underline" href={stateAssemblyPath(slug, district.slug)}>
+                  {district.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <section>
+        <h2 className="font-serif text-2xl font-semibold">
+          {slug === "victoria" ? "Local councils" : "Local government areas"}
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-ink-muted">
+          {slug === "victoria"
+            ? "79 names on the Victorian Electoral Commission local-councils page, read on 19 October 2026, plus Unincorporated Vic from the ABS 2025 extract. ABS codes are statistical approximations and do not match official legal boundaries."
+            : `${areasIn(slug).length} names in the Australian Bureau of Statistics ASGS2025 Local Government Area extract, read on 19 October 2026, excluding non-spatial special purpose codes. These are statistical names. They do not match official legal boundaries.`}
+        </p>
+        <p className="mt-2 text-sm">
+          <Link className="text-navy underline" href={localIndexPath(slug)}>
+            {slug === "victoria" ? "Local council index" : "Local government area index"}
+          </Link>
+        </p>
+        <ul className="mt-3 columns-1 gap-x-6 text-sm sm:columns-2">
+          {areasIn(slug).map((area) => (
+            <li key={localPath(area)} className="py-0.5">
+              <Link className="text-navy underline" href={localPath(area)}>
+                {area.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">House of Representatives divisions</h2>

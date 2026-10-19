@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { CANTONS } from "../data/ch/cantons";
 import { DISTRICTS, districtNeighbors, districtsForCanton, type District } from "../data/ch/districts";
 import { districtPath, districtsIndexPath } from "../data/ch/search";
+import { districtCommuneLater, publishedCommuneBlock } from "./ch-commune-block";
 import { sourceById, sourcesById } from "../data/ch/sources";
 import type { ChLang } from "../data/ch/types";
 import { formatNumber, localDate, trustCopy, ui } from "../data/ch/ui";
@@ -186,7 +187,10 @@ function districtPage(lang: ChLang, district: District): string {
 </table>
 <p>${esc(constituency(lang, canton.officialName))}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(officeGap(lang))}</p>
-<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(copy.districtGap)}</p>
+${
+  publishedCommuneBlock(lang, canton.slug, district.canton, district.slug) ??
+  `<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(districtCommuneLater(lang))}</p>`
+}
 <p class="tools">${esc(copy.parent)}: <a href="${esc(`/ch/${lang}/${canton.slug}/`)}">${esc(canton.officialName)}</a> · <a href="${esc(districtsIndexPath(lang))}">${esc(copy.districts)}</a>. ${esc(copy.alphaNearby)}: ${near}</p>
 `;
   return pageDocument({

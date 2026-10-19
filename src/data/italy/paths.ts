@@ -22,6 +22,14 @@ export function unitPath(lang: ItLang, regionSlug: string, unitSlug: string): st
   return `/it/${lang}/${regionSlug}/${unitSlug}/`;
 }
 
+export function comuniIndexPath(lang: ItLang, regionSlug: string, unitSlug: string): string {
+  return `/it/${lang}/${regionSlug}/${unitSlug}/comuni/`;
+}
+
+export function comunePath(lang: ItLang, regionSlug: string, unitSlug: string, comuneSlug: string): string {
+  return `/it/${lang}/${regionSlug}/${unitSlug}/${comuneSlug}/`;
+}
+
 export function collegiIndexPath(lang: ItLang): string {
   return `/it/${lang}/collegi/`;
 }

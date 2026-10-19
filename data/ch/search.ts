@@ -1,4 +1,5 @@
 import { alphaCantons, CANTONS } from "./cantons";
+import { COMMUNES } from "./communes";
 import { DISTRICTS } from "./districts";
 import type { ChLang } from "./types";
 import { ui } from "./ui";
@@ -23,6 +24,16 @@ export function districtsIndexPath(lang: ChLang): string {
 
 export function districtPath(lang: ChLang, cantonSlug: string, districtSlug: string): string {
   return `${cantonPath(lang, cantonSlug)}${districtSlug}/`;
+}
+
+export function communePath(lang: ChLang, cantonSlug: string, districtSlug: string, communeSlug: string): string {
+  const base = districtSlug ? districtPath(lang, cantonSlug, districtSlug) : cantonPath(lang, cantonSlug);
+  return `${base}${communeSlug}/`;
+}
+
+export function communesIndexPath(lang: ChLang, cantonSlug: string, districtSlug: string): string {
+  const base = districtSlug ? districtPath(lang, cantonSlug, districtSlug) : cantonPath(lang, cantonSlug);
+  return `${base}communes/`;
 }
 
 export type ChIndexEntry = {
@@ -133,7 +144,40 @@ function entriesFor(lang: ChLang): ChIndexEntry[] {
     kind: "districts",
     text: "Bezirke districts distretti Wahlkreis Verwaltungskreis Region",
   };
-  return [...fixed, index, ...cantons, ...districts];
+  const communeIndexes = new Map<string, (typeof COMMUNES)[number]>();
+  for (const commune of COMMUNES) communeIndexes.set(`${commune.canton}/${commune.districtSlug}`, commune);
+  const communeIndexEntries = [...communeIndexes.values()].map((commune) => {
+    const canton = byAbbr.get(commune.canton);
+    const cantonSlug = canton?.slug ?? commune.canton.toLowerCase();
+    const place = commune.districtSlug ? commune.districtName : (canton?.officialName ?? commune.districtName);
+    const title =
+      lang === "de"
+        ? `Gemeinden · ${place}`
+        : lang === "fr"
+          ? `Communes · ${place}`
+          : lang === "it"
+            ? `Comuni · ${place}`
+            : `Municipalities · ${place}`;
+    return {
+      path: communesIndexPath(lang, cantonSlug, commune.districtSlug),
+      lang,
+      title,
+      kind: "communes",
+      text: `${place} ${commune.canton} ${commune.districtBfs}`,
+    };
+  });
+  const communeEntries = COMMUNES.map((commune) => {
+    const canton = byAbbr.get(commune.canton);
+    const cantonSlug = canton?.slug ?? commune.canton.toLowerCase();
+    return {
+      path: communePath(lang, cantonSlug, commune.districtSlug, commune.slug),
+      lang,
+      title: commune.name,
+      kind: "commune",
+      text: `${commune.name} ${commune.bfs} ${commune.canton} ${commune.districtName}`,
+    };
+  });
+  return [...fixed, index, ...cantons, ...districts, ...communeIndexEntries, ...communeEntries];
 }
 
 export function switzerlandEntries(): ChIndexEntry[] {
