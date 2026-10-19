@@ -8,6 +8,7 @@ export type SourceRef = {
 
 const READ = "2026-10-17";
 const READ_L2 = "2026-10-18";
+const READ_L3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -261,6 +262,102 @@ export const SOURCES: SourceRef[] = [
     name: "Australian Communications and Media Authority, “Election and referendum blackout periods”",
     url: "https://www.acma.gov.au/election-and-referendum-blackout-periods",
     readOn: READ_L2,
+  },
+  {
+    id: "nswec-copyright",
+    name: "NSW Electoral Commission, Copyright",
+    url: "https://www.elections.nsw.gov.au/copyright",
+    readOn: READ_L3,
+  },
+  {
+    id: "nswec-vtr-2023",
+    name: "NSW Electoral Commission virtual tally room, elected candidates, Saturday 25 March 2023",
+    url: "https://pastvtr.elections.nsw.gov.au/SG2301/LA/state/elected",
+    readOn: READ_L3,
+  },
+  {
+    id: "nswec-past",
+    name: "NSW Electoral Commission, state election results (by-elections and current elections)",
+    url: "https://elections.nsw.gov.au/elections/past-results/state-election-results",
+    readOn: READ_L3,
+  },
+  {
+    id: "nswec-lg-results",
+    name: "NSW Electoral Commission, local government election results",
+    url: "https://elections.nsw.gov.au/elections/past-results/local-government-election-results",
+    readOn: READ_L3,
+  },
+  {
+    id: "vec-councils",
+    name: "Victorian Electoral Commission, local councils (79 councils)",
+    url: "https://www.vec.vic.gov.au/electoral-boundaries/local-councils",
+    readOn: READ_L3,
+  },
+  {
+    id: "vec-local",
+    name: "Victorian Electoral Commission, “Local council elections”",
+    url: "https://www.vec.vic.gov.au/voting/types-of-elections/local-council-elections",
+    readOn: READ_L3,
+  },
+  {
+    id: "vec-2024-councils",
+    name: "Victorian Electoral Commission, “2024 council election results”",
+    url: "https://www.vec.vic.gov.au/results/council-election-results/2024-council-election-results",
+    readOn: READ_L3,
+  },
+  {
+    id: "abs-lga-2025",
+    name: "Australian Bureau of Statistics, Local Government Areas (2025 areas now available)",
+    url: "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/non-abs-structures/local-government-areas",
+    readOn: READ_L3,
+  },
+  {
+    id: "abs-lga-map",
+    name: "Australian Bureau of Statistics, ASGS2025 Local Government Area MapServer (codes and names, no geometry)",
+    url: "https://geo.abs.gov.au/arcgis/rest/services/ASGS2025/LGA/MapServer",
+    readOn: READ_L3,
+  },
+  {
+    id: "ecsa-copyright",
+    name: "Electoral Commission of South Australia, Copyright",
+    url: "https://www.ecsa.sa.gov.au/copyright",
+    readOn: READ_L3,
+  },
+  {
+    id: "ecsa-council-2027",
+    name: "Electoral Commission of South Australia, council candidates (2027 periodic elections timetable)",
+    url: "https://www.ecsa.sa.gov.au/parties-and-candidates/council-candidates",
+    readOn: READ_L3,
+  },
+  {
+    id: "ecsa-ha-2026",
+    name: "Electoral Commission of South Australia, notice of House of Assembly results, elections held 21 March 2026",
+    url: "https://www.ecsa.sa.gov.au/se2026news/se2026-results-unexcluded",
+    readOn: READ_L3,
+  },
+  {
+    id: "waec-copyright",
+    name: "Western Australian Electoral Commission, Copyright",
+    url: "https://www.elections.wa.gov.au/copyright",
+    readOn: READ_L3,
+  },
+  {
+    id: "waec-lgx-2026",
+    name: "Western Australian Electoral Commission, 2026 December local government extraordinary elections",
+    url: "https://www.elections.wa.gov.au/elections/local-government-elections/2026-december-local-government-extraordinary-elections",
+    readOn: READ_L3,
+  },
+  {
+    id: "tec-hoa-2025",
+    name: "Tasmanian Electoral Commission, 2025 state election",
+    url: "https://www.tec.tas.gov.au/house-of-assembly/elections-2025/index.html",
+    readOn: READ_L3,
+  },
+  {
+    id: "tec-lg-2026",
+    name: "Tasmanian Electoral Commission, 2026 local government elections",
+    url: "https://www.tec.tas.gov.au/local-government/elections-2026/index.html",
+    readOn: READ_L3,
   },
 ];
 
