@@ -1,3 +1,4 @@
+import { allGminy, gminaIndexPath, gminaPath, powiatGminaIndexPath } from "./gminy";
 import {
   allPowiats,
   allSejmOkregi,
@@ -93,6 +94,13 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
       kind: "index",
       text: "Senat okręg wyborczy senator",
     },
+    {
+      path: gminaIndexPath(lang),
+      lang,
+      title: pl ? "Gminy" : "Gminas",
+      kind: "index",
+      text: "gmina TERC wójt burmistrz prezydent miasta rada",
+    },
   ];
   const powiats = allPowiats().map((item) => ({
     path: powiatPath(lang, item.voivodeshipSlug, item.slug),
@@ -108,6 +116,20 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
     kind: "sejm-okreg",
     text: `Sejm ${item.num} ${item.districtName} ${item.okw} ${item.voivodeship} ${item.members.map((member) => member.name).join(" ")}`,
   }));
+  const gminaIndexes = allPowiats().map((item) => ({
+    path: powiatGminaIndexPath(lang, item.voivodeshipSlug, item.slug),
+    lang,
+    title: pl ? `Gminy — ${powiatHeading(item)}` : `Gminas — ${powiatHeading(item)}`,
+    kind: "index",
+    text: `gminy ${powiatHeading(item)} ${item.voivodeshipSlug}`,
+  }));
+  const gminas = allGminy().map((item) => ({
+    path: gminaPath(lang, item),
+    lang,
+    title: `${item.name} — ${item.kind}`,
+    kind: "gmina",
+    text: `${item.name} ${item.kind} ${item.code} ${item.powiatSlug} ${item.elected ?? ""}`,
+  }));
   const senat = allSenatOkregi().map((item) => ({
     path: senatOkregPath(lang, item.num),
     lang,
@@ -115,5 +137,5 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
     kind: "senat-okreg",
     text: `Senat ${item.num} ${item.vacant ? "mandat nieobsadzony wybory uzupełniające 22 listopada 2026" : item.senator} ${item.alsoPrinted?.name ?? ""} ${item.area}`,
   }));
-  return [...fixed, ...indexes, ...regions, ...powiats, ...sejm, ...senat];
+  return [...fixed, ...indexes, ...regions, ...powiats, ...gminaIndexes, ...gminas, ...sejm, ...senat];
 }

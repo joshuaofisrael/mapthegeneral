@@ -2,6 +2,7 @@ import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
 const READ_L2 = "2026-10-18";
+const READ_L3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -171,6 +172,48 @@ export const SOURCES: SourceRef[] = [
     name: "Postanowienie Prezydenta Rzeczypospolitej Polskiej z dnia 25 września 2026 r. w sprawie zarządzenia wyborów uzupełniających do Senatu Rzeczypospolitej Polskiej (Dz.U. 2026 poz. 1255)",
     url: "https://www.dziennikustaw.gov.pl/DU/2026/1255",
     readOn: READ_L2,
+  },
+  {
+    id: "teryt-terc-20261019",
+    name: "Główny Urząd Statystyczny, plik pełny TERC_Urzedowy_2026-10-19 (katalog z datą 2026-01-01), pobrany ze strony plików pełnych eTERYT",
+    url: "https://eteryt.stat.gov.pl/eTeryt/rejestr_teryt/udostepnianie_danych/baza_teryt/uzytkownicy_indywidualni/pobieranie/pliki_pelne.aspx",
+    readOn: READ_L3,
+  },
+  {
+    id: "pkw-wybrani-wbp-2024",
+    name: "Państwowa Komisja Wyborcza, plik wybrani_wojt_burmistrz_prezydent_utf8.csv z archiwum wybrani_wojt_burmistrz_prezydent_csv.zip (wybory samorządowe 2024)",
+    url: "https://samorzad2024.pkw.gov.pl/samorzad2024/data/csv/wybrani_wojt_burmistrz_prezydent_csv.zip",
+    readOn: READ_L3,
+  },
+  {
+    id: "pkw-okregi-rady-gmin-2024",
+    name: "Państwowa Komisja Wyborcza, plik okręgów do rad gmin z archiwum okregi_rady_gmin_csv.zip (wybory samorządowe 2024). Na stronach jest tylko suma kolumny „Liczba mandatów”",
+    url: "https://samorzad2024.pkw.gov.pl/samorzad2024/data/csv/okregi_rady_gmin_csv.zip",
+    readOn: READ_L3,
+  },
+  {
+    id: "pkw-wbp-tura2-2024",
+    name: "Obwieszczenie Państwowej Komisji Wyborczej z dnia 22 kwietnia 2024 r. uzupełniające obwieszczenie z dnia 9 kwietnia 2024 r. o zbiorczych wynikach wyborów wójtów, burmistrzów i prezydentów miast (Dz.U. 2024 poz. 617)",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2024/617/text.html",
+    readOn: READ_L3,
+  },
+  {
+    id: "samorzad-gmina",
+    name: "Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 15 maja 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o samorządzie gminnym (Dz.U. 2026 poz. 662)",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/662/text.pdf",
+    readOn: READ_L3,
+  },
+  {
+    id: "samorzad-gmina-1273",
+    name: "Ustawa z dnia 4 września 2026 r. o zmianie ustawy o samorządzie gminnym (Dz.U. 2026 poz. 1273). Zmienia art. 36 i art. 37. Nie zmienia art. 16 ani art. 26",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2026/1273/text.pdf",
+    readOn: READ_L3,
+  },
+  {
+    id: "rm-karkonoski-2020",
+    name: "Rozporządzenie Rady Ministrów z dnia 29 lipca 2020 r. w sprawie zmiany nazwy powiatu jeleniogórskiego na powiat karkonoski (Dz.U. 2020 poz. 1331)",
+    url: "https://dziennikustaw.gov.pl/DU/2020/1331",
+    readOn: READ_L3,
   },
 ];
 

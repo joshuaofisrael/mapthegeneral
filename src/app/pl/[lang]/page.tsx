@@ -7,6 +7,7 @@ import { alphaVoivodeships, SEJM_CONSTITUENCY_TOTAL, SEJM_SEAT_TOTAL } from "../
 import { sourceById, sourcesById } from "../../../../data/pl/sources";
 import { ui } from "../../../../data/pl/ui";
 import { polandMetadata } from "../../../../data/pl/seo";
+import { gminaIndexPath } from "../../../../data/pl/gminy";
 import { powiatIndexPath, sejmIndexPath, senatIndexPath } from "../../../../data/pl/level2";
 import { polandHome, voivodeshipPath } from "../../../../data/pl/paths";
 import type { Lang } from "../../../../data/pl/types";
@@ -218,6 +219,10 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
             : "The Commission’s announcement of 9 April 2024 gives the aggregate results of the council elections held on 7 April 2024: 16 voivodeship sejmiki and 552 councillors of those sejmiki. The voivodeship self-government act, consolidated text Dziennik Ustaw 2026 item 720, says in article 16(2) that a sejmik’s term lasts five years, counting from election day. This page does not set the day of the next local elections."}
         </p>
         <p>
+          <Link className="text-navy underline" href={gminaIndexPath(lang)}>
+            {pl ? "Gminy" : "Gminas"}
+          </Link>
+          {" · "}
           <Link className="text-navy underline" href={powiatIndexPath(lang)}>
             {pl ? "Powiaty" : "Powiats"}
           </Link>
@@ -230,7 +235,7 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
             {pl ? "Okręgi do Senatu" : "Senate constituencies"}
           </Link>
         </p>
-        <GapNote label={copy.gap} text={copy.localGap} />
+        <p>{copy.localGap}</p>
         <GapNote label={copy.gap} text={copy.populationGap} />
         <GapNote label={copy.gap} text={copy.postcodeGap} />
       </section>

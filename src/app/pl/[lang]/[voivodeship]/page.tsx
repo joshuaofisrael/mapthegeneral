@@ -19,6 +19,7 @@ import { alphaNeighbors, alphaVoivodeships, voivodeshipBySlug } from "../../../.
 import { sourceById, sourcesById } from "../../../../../data/pl/sources";
 import { ui } from "../../../../../data/pl/ui";
 import { polandMetadata } from "../../../../../data/pl/seo";
+import { gminaIndexPath } from "../../../../../data/pl/gminy";
 import { polandHome, voivodeshipPath } from "../../../../../data/pl/paths";
 import type { Lang } from "../../../../../data/pl/types";
 
@@ -151,7 +152,12 @@ export default async function VoivodeshipPage({ params }: { params: Promise<{ la
             ? `Plik TERC_Urzedowy_2026-10-18, katalog z datą 2026-01-01, odczytany 18 października 2026 r., ma w tym województwie ${stat.land} wierszy z NAZWA_DOD „powiat” i ${stat.city} wierszy miasta na prawach powiatu. Wierszy, których NAZWA_DOD zaczyna się od „gmina”, jest ${stat.gmina}. Artykuł 164 ust. 1 Konstytucji nazywa gminę podstawową jednostką samorządu.`
             : `The file TERC_Urzedowy_2026-10-18, catalog date 2026-01-01, read on 18 October 2026, has ${stat.land} rows in this voivodeship with NAZWA_DOD “powiat” and ${stat.city} rows for a city with powiat status. Rows whose NAZWA_DOD starts with “gmina” number ${stat.gmina}. Article 164(1) of the Constitution calls the gmina the basic unit of self-government.`}
         </p>
-        <GapNote label={copy.gap} text={copy.gminaGap} />
+        <p>
+          {copy.gminaGap}{" "}
+          <Link className="text-navy underline" href={gminaIndexPath(lang)}>
+            {pl ? "Indeks gmin" : "Gmina index"}
+          </Link>
+        </p>
       </section>
 
       <section>

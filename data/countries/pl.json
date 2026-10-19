@@ -3,7 +3,7 @@
   "nameEn": "Poland",
   "nameLocal": "Polska",
   "href": "/pl/",
-  "summaryEn": "Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Gmina pages are not in this release.",
+  "summaryEn": "Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 2,479 gminas, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Candidate lists and wards are not in this release.",
   "languages": [
     { "code": "pl", "label": "Polski", "href": "/pl/pl/" },
     { "code": "en", "label": "English", "href": "/pl/en/" }
