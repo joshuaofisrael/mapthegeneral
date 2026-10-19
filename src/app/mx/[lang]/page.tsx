@@ -72,6 +72,8 @@ export default async function MexicoNationalPage({ params }: { params: Promise<{
         "ine-cg130-2023",
         "ine-cg526-2026",
         "camara-lxvi",
+        "inegi-mgem",
+        "inafed-presidentes",
       ])}
     >
       <section className="prose-legal">
@@ -146,8 +148,8 @@ export default async function MexicoNationalPage({ params }: { params: Promise<{
         <h2>{es ? "Población" : "Population"}</h2>
         <p>
           {es
-            ? `El servicio del Catálogo Único, leído el 17 de octubre de 2026, devolvió 32 entidades. Su metadato dice que la fuente estadística es el Censo de Población y Vivienda, 2020. El servicio no imprime un total nacional. La suma de los 32 campos pob_total es ${formatNumber(POPULATION_SUM, lang)}. El catálogo municipal devolvió ${formatNumber(MUNICIPALITY_CATALOG_COUNT, lang)} filas.`
-            : `The Unique Catalog service, read on 17 October 2026, returned 32 entidades. Its metadata says the statistical source is the 2020 Census of Population and Housing. The service does not print a national total. The 32 pob_total fields add up to ${formatNumber(POPULATION_SUM, lang)}. The municipal catalog returned ${formatNumber(MUNICIPALITY_CATALOG_COUNT, lang)} rows.`}
+            ? `El servicio del Catálogo Único, leído el 17 de octubre de 2026, devolvió 32 entidades. Su metadato dice que la fuente estadística es el Censo de Población y Vivienda, 2020. El servicio no imprime un total nacional. La suma de los 32 campos pob_total es ${formatNumber(POPULATION_SUM, lang)}. El catálogo municipal, leído el 19 de octubre de 2026, devolvió ${formatNumber(MUNICIPALITY_CATALOG_COUNT, lang)} filas. Nueve no traen pob_total. La suma de las que sí lo traen es la misma cifra.`
+            : `The Unique Catalog service, read on 17 October 2026, returned 32 entidades. Its metadata says the statistical source is the 2020 Census of Population and Housing. The service does not print a national total. The 32 pob_total fields add up to ${formatNumber(POPULATION_SUM, lang)}. The municipal catalog, read on 19 October 2026, returned ${formatNumber(MUNICIPALITY_CATALOG_COUNT, lang)} rows. Nine do not include pob_total. The sum of the rows that do is the same figure.`}
         </p>
       </section>
 

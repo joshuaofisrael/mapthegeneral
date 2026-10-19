@@ -1,6 +1,7 @@
 import { CIRCUNSCRIPCIONES } from "@/data/mx/circunscripciones";
 import { DISTRICTS, padDistrict } from "@/data/mx/distritos";
 import { alphaEntities, ENTITIES, entityBySlug } from "@/data/mx/entities";
+import { entitySlugFor, MUNICIPIOS } from "@/data/mx/municipios";
 import {
   circunscripcionesPath,
   districtPath,
@@ -8,6 +9,8 @@ import {
   electionPath,
   entityPath,
   mexicoHome,
+  municipioPath,
+  municipiosIndexPath,
   type Lang,
 } from "@/data/mx/paths";
 
@@ -16,7 +19,7 @@ export const countryCard = {
   name: "Mexico",
   path: "/mx/",
   summary:
-    "Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts with the sitting deputy and the cabecera, and the five plurinominal constituencies, in Spanish and English. Municipality pages are not in this release.",
+    "Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts, the five plurinominal constituencies, and the 2,478 INEGI catalog rows (municipios and the 16 alcaldías of Ciudad de México), in Spanish and English. Sitting municipal presidents are not named.",
   links: [
     { href: "/mx/en/", label: "English" },
     { href: "/mx/es/", label: "Español" },
@@ -118,7 +121,25 @@ function languageEntries(lang: Lang): IndexEntry[] {
       text: `${entity?.name ?? ""} ${number} ${district.cabeceraLocalidad} ${district.cabeceraMunicipio} ${district.deputy.name} circunscripcion ${district.circunscripcion}`,
     };
   });
-  return [...fixed, ...entities, ...districts];
+  const indexes = alphaEntities().map((entity) => ({
+    path: municipiosIndexPath(lang, entity.slug),
+    lang,
+    title: entity.code === "09" ? (es ? `Alcaldías, ${entity.name}` : `Alcaldías, ${entity.name}`) : es ? `Municipios, ${entity.name}` : `Municipalities, ${entity.name}`,
+    kind: "municipalities",
+    text: `${entity.name} ${entity.code} municipios alcaldias`,
+  }));
+  const places = MUNICIPIOS.map((place) => {
+    const slug = entitySlugFor(place);
+    const entity = entityBySlug(slug);
+    return {
+      path: municipioPath(lang, slug, place.slug),
+      lang,
+      title: place.name,
+      kind: place.code.startsWith("09") ? "alcaldia" : "municipality",
+      text: `${place.name} ${place.code} ${entity?.name ?? ""}`,
+    };
+  });
+  return [...fixed, ...entities, ...districts, ...indexes, ...places];
 }
 
 export function indexEntries(): IndexEntry[] {

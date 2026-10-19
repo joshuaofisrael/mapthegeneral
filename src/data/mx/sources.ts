@@ -7,6 +7,7 @@ export type SourceRef = {
 
 const READ = "2026-10-17";
 const READ_L2 = "2026-10-18";
+const READ_L3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -92,6 +93,24 @@ export const SOURCES: SourceRef[] = [
     name: "Cámara de Diputados, Ley General de Instituciones y Procedimientos Electorales, artículos 213 y 214",
     url: "http://www.diputados.gob.mx/LeyesBiblio/pdf/LGIPE.pdf",
     readOn: READ_L2,
+  },
+  {
+    id: "inegi-mgem",
+    name: "INEGI, Servicio Web del Catálogo Único, recurso mgem (municipios y alcaldías). Metadato: Censo de Población y Vivienda, 2020",
+    url: "https://www.inegi.org.mx/servicios/catalogoUnico.html",
+    readOn: READ_L3,
+  },
+  {
+    id: "ine-cartografia-mun",
+    name: "INE, cartografía para pautas de radio y televisión, shapefiles de municipios y de distritos federales, vigencia a partir del 1 de octubre de 2026",
+    url: "https://pautas.ine.mx/transparencia/mapas/",
+    readOn: READ_L3,
+  },
+  {
+    id: "inafed-presidentes",
+    name: "INAFED, datos.gob.mx, «Presidentas y Presidentes municipales en gobiernos actuales». La ficha imprime la última actualización el 2 de junio de 2025, 23:03 UTC. Licencia Creative Commons Atribución 4.0",
+    url: "https://www.datos.gob.mx/dataset/presidentas_presidentes_municipales",
+    readOn: READ_L3,
   },
 ];
 

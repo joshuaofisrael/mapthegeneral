@@ -20,6 +20,11 @@ const FAQ = {
         "Esa página imprime 500 diputaciones: 300 de mayoría relativa y 200 de representación proporcional. No lista senadurías para 2027.",
     },
     {
+      question: "¿Hay páginas de municipios?",
+      answer:
+        "Sí. El catálogo mgem del INEGI, leído el 19 de octubre de 2026, tiene 2,478 filas, con las 16 alcaldías de la Ciudad de México. Cada fila está enlazada desde su entidad. Esas páginas no nombran a quien preside el ayuntamiento o la alcaldía.",
+    },
+    {
       question: "¿Dónde están los distritos federales?",
       answer:
         "Hay una página por cada uno de los 300 distritos uninominales, enlazada desde su entidad. La cabecera sale del descriptivo del acuerdo INE/CG875/2022 y el nombre de la diputación, del listado de la Cámara leído el 18 de octubre de 2026. Las cinco circunscripciones están en una página aparte.",
@@ -49,6 +54,11 @@ const FAQ = {
       question: "How many deputies are elected?",
       answer:
         "That page prints 500 deputies: 300 by relative majority and 200 by proportional representation. It does not list Senate seats for 2027.",
+    },
+    {
+      question: "Are there municipality pages?",
+      answer:
+        "Yes. The INEGI mgem catalog, read on 19 October 2026, has 2,478 rows, including the 16 alcaldías of Mexico City. Each row is linked from its entidad. Those pages do not name the person who holds the ayuntamiento or the alcaldía.",
     },
     {
       question: "Where are the federal districts?",
