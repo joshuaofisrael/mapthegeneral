@@ -65,7 +65,6 @@ export default async function NationPage({ params }: { params: Promise<{ lang: s
       path={`/gb/en/${slug}/`}
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: nation.name, path: `/gb/en/${slug}/` },
       ]}

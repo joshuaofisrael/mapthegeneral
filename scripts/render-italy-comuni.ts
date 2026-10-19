@@ -12,7 +12,7 @@ import {
   unitPath,
 } from "../src/data/italy/paths";
 import { REGIONS, regionBySlug } from "../src/data/italy/places";
-import { sourcesById } from "../src/data/italy/sources";
+import { sourceById, sourcesById } from "../src/data/italy/sources";
 import type { ItLang } from "../src/data/italy/types";
 import { ui } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
@@ -22,15 +22,7 @@ const publicDir = join(root, "public");
 const chunkPath = join(root, "src/data/italy/comuni-chunk1.json");
 const OFFICE = "https://dait.interno.gov.it/elezioni";
 const HTML_BUDGET = 27_000_000;
-const SOURCE_IDS = ["istat-comuni-chunk", "anagrafe-comuni", "collegi-comune-codes", "dait-speciale-19"];
-
-type Mayor = {
-  role: string;
-  given: string;
-  surname: string;
-  electedOn: string;
-  enteredOn: string;
-};
+const SOURCE_IDS = ["istat-comuni-chunk", "anagrafe", "collegi-comune-codes", "dait-speciale-19"];
 
 export type ComuneRecord = {
   code: string;
@@ -46,9 +38,6 @@ export type ComuneRecord = {
   unitCode: string;
   unitName: string;
   slug: string;
-  mayor: Mayor[];
-  mayorFrom: "" | "sindaci" | "maggior";
-  council: [string, string, string, string][];
   camera: string[];
   cameraVia: "" | "2026" | "2017" | "conflict";
   senate: string[];
@@ -58,7 +47,6 @@ export type ComuneRecord = {
 
 type ChunkFile = {
   readOn: string;
-  anagrafeUpdated: string;
   no2027List: true;
   multiCap: { region: string; code: string; name: string; flags: number }[];
   comuni: ComuneRecord[];
@@ -153,55 +141,11 @@ function sourceList(lang: ItLang): string {
     .join("");
 }
 
-function person(given: string, surname: string): string {
-  return `${given} ${surname}`.trim();
-}
-
-function mayorBlock(lang: ItLang, comune: ComuneRecord): string {
-  const it = lang === "it";
-  if (comune.mayor.length === 0) {
-    return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
-      it
-        ? "I file dei sindaci e del maggior organo aggiornati al 24/08/2026 non hanno una riga il cui nome normalizzato coincide con la denominazione ISTAT di questo comune."
-        : "The mayor file and the maggior-organo file updated on 24/08/2026 have no row whose normalised name matches this municipality’s ISTAT name."
-    }</p>`;
-  }
-  const file =
-    comune.mayorFrom === "sindaci"
-      ? it
-        ? "Il file dei sindaci aggiornato al 24/08/2026"
-        : "The mayor file updated on 24/08/2026"
-      : it
-        ? "Il file del maggior organo aggiornato al 24/08/2026"
-        : "The maggior-organo file updated on 24/08/2026";
-  return comune.mayor
-    .map((office) =>
-      it
-        ? `<p>${file} stampa «${esc(office.role)}»: ${esc(person(office.given, office.surname))}. data_elezione ${esc(office.electedOn)}. data_entrata_in_carica ${esc(office.enteredOn)}.</p>`
-        : `<p>${file} prints “${esc(office.role)}”: ${esc(person(office.given, office.surname))}. data_elezione ${esc(office.electedOn)}. data_entrata_in_carica ${esc(office.enteredOn)}.</p>`,
-    )
-    .join("");
-}
-
-function councilBlock(lang: ItLang, comune: ComuneRecord): string {
-  const it = lang === "it";
-  if (comune.council.length === 0) {
-    return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
-      it
-        ? "Il file degli amministratori comunali aggiornato al 24/08/2026 non ha, per questo nome, una riga con carica di consigliere o di assessore."
-        : "The municipal-administrator file updated on 24/08/2026 has no councillor or assessor row for this name."
-    }</p>`;
-  }
-  const items = comune.council
-    .map(([role, incarico, given, surname]) => {
-      const extra = incarico ? (it ? `, incarico «${esc(incarico)}»` : `, incarico “${esc(incarico)}”`) : "";
-      return `<li>${esc(role)}${extra} — ${esc(person(given, surname))}</li>`;
-    })
-    .join("");
-  const lead = it
-    ? `Il file degli amministratori comunali aggiornato al 24/08/2026 elenca ${comune.council.length} righe con queste cariche. Non sono copiati data di nascita, luogo di nascita, titolo di studio, professione né la stringa della lista. Le date della riga non sono ripetute qui: per il sindaco o l'organo straordinario restano nel paragrafo sopra.`
-    : `The municipal-administrator file updated on 24/08/2026 lists ${comune.council.length} rows with these roles. Birth date, birthplace, education, profession and the electoral-list string are not copied. Row dates are not repeated here; the mayor or extraordinary officer keeps the dates in the paragraph above.`;
-  return `<p>${lead}</p><ul>${items}</ul>`;
+function officeholdersBlock(lang: ItLang): string {
+  const url = sourceById("anagrafe").url;
+  return lang === "it"
+    ? `<p>Questa pagina non riporta i nomi di sindaci, consiglieri o assessori. Gli amministratori in carica sono pubblicati dal Ministero dell'interno nell'<a href="${esc(url)}">Anagrafe degli amministratori locali e regionali</a>, che è la fonte ufficiale.</p>`
+    : `<p>This page does not list the names of the mayor, councillors or assessori. Current officeholders are published by the Ministry of the Interior in the <a href="${esc(url)}">Anagrafe degli amministratori locali e regionali</a> (register of local and regional administrators), which is the official source.</p>`;
 }
 
 function calledBlock(lang: ItLang, comune: ComuneRecord): string {
@@ -219,8 +163,8 @@ function calledBlock(lang: ItLang, comune: ComuneRecord): string {
   }
   return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
     it
-      ? "Il 19 ottobre 2026 non è stato letto un giorno, pubblicato in modo centrale, per la prossima elezione comunale di questo comune. La data sopra, se c'è, è la data_elezione stampata nel file, non uno scrutinio. Questa pagina non ricava un giorno di votazione da una durata dell'incarico."
-      : "No centrally published day for the next municipal election of this municipality was read on 19 October 2026. A date above, where present, is the data_elezione printed in the file, not a results table. This page does not turn a term of office into a polling day."
+      ? "Il 19 ottobre 2026 non è stato letto un giorno, pubblicato in modo centrale, per la prossima elezione comunale di questo comune. Questa pagina non ricava un giorno di votazione da una durata dell'incarico."
+      : "No centrally published day for the next municipal election of this municipality was read on 19 October 2026. This page does not turn a term of office into a polling day."
   }</p>`;
 }
 
@@ -320,10 +264,8 @@ ${names}
 <tr><th>${it ? "Codice numerico al 21/02/2026" : "Numeric code at 21/02/2026"}</th><td>${esc(comune.numeric)}</td></tr>
 <tr><th>${it ? "Flag capoluogo nel foglio" : "Capoluogo flag in the sheet"}</th><td>${comune.cap ? "1" : "0"}</td></tr>
 </table>
-<h2>${it ? "Sindaco o organo straordinario" : "Mayor or extraordinary officer"}</h2>
-${mayorBlock(lang, comune)}
-<h2>${it ? "Consiglio e giunta nel file comunale" : "Council and executive board in the municipal file"}</h2>
-${councilBlock(lang, comune)}
+<h2>${it ? "Amministratori in carica" : "Current officeholders"}</h2>
+${officeholdersBlock(lang)}
 <h2>${it ? "Elezione comunale" : "Municipal election"}</h2>
 ${calledBlock(lang, comune)}
 <h2>${it ? "Collegi della Camera e del Senato" : "Chamber and Senate constituencies"}</h2>
@@ -467,8 +409,7 @@ function select(records: ComuneRecord[], multiCap: ChunkFile["multiCap"]): Comun
   }
   const file: ChunkFile = {
     readOn: "2026-10-19",
-    anagrafeUpdated: "24/08/2026",
-    no2027List: true,
+        no2027List: true,
     multiCap,
     comuni: chosen,
   };
@@ -529,7 +470,13 @@ if (selectMode) {
   };
   const chosen = select(
     raw.records.map((record) => {
-      const { pool: _pool, ...rest } = record;
+      // Never carry officeholder names into pages or data (legal-risk rule).
+      const { pool: _pool, mayor: _mayor, mayorFrom: _mayorFrom, council: _council, ...rest } = record as ComuneRecord & {
+        pool?: boolean;
+        mayor?: unknown;
+        mayorFrom?: unknown;
+        council?: unknown;
+      };
       return rest;
     }),
     raw.multiCap,

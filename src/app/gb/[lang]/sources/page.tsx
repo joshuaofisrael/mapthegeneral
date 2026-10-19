@@ -26,7 +26,6 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       path="/gb/en/sources/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "Sources", path: "/gb/en/sources/" },
       ]}

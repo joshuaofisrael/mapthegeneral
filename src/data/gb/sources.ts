@@ -239,6 +239,18 @@ export const SOURCES: SourceRef[] = [
     url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
     readOn: READ_LEVEL3,
   },
+  {
+    id: "elections-act-2022-s13",
+    name: "Elections Act 2022, section 13 (Mayors and Police and Crime Commissioners: simple majority system)",
+    url: "https://www.legislation.gov.uk/ukpga/2022/37/section/13",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "edcea-2026-sch30",
+    name: "English Devolution and Community Empowerment Act 2026, Schedule 30 (Mayors and PCCs: supplementary vote system), with commencement information",
+    url: "https://www.legislation.gov.uk/ukpga/2026/23/schedule/30",
+    readOn: READ_LEVEL3,
+  },
 ];
 
 export function sourceById(id: string): SourceRef {
