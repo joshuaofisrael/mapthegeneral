@@ -112,7 +112,7 @@ ${input.body}
 <h2>Sources</h2>
 <ul>${sources}</ul>
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. Australian data on this page is reused under the licences listed on <a href="/au/en/sources/">Licences and attribution</a>, including <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> material from the Australian Bureau of Statistics (© Commonwealth of Australia), the NSW Electoral Commission (© State of New South Wales through the NSW Electoral Commission) and the Victorian Electoral Commission. Unofficial, and not endorsed by the bodies named here.</footer>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
