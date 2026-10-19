@@ -4,7 +4,7 @@
   "private": true,
   "description": "Map the General — a global, nonpartisan election guide operated by Joshua Israel Ventures LLC.",
   "scripts": {
-    "prebuild": "tsx scripts/build-indexes.ts && tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-ca-level2.ts && tsx scripts/render-mx-distritos.ts",
+    "prebuild": "tsx scripts/build-indexes.ts && tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-ca-level2.ts && tsx scripts/render-ca-level3.ts && tsx scripts/render-mx-distritos.ts",
     "predev": "tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-mx-distritos.ts",
     "build": "next build",
     "postbuild": "node scripts/prune-export.mjs && tsx scripts/check-election-law.ts",
