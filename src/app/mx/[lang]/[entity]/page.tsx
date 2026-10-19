@@ -5,7 +5,8 @@ import { MexicoFrame } from "@/app/mx/_components/Frame";
 import { ENTITIES, entityBySlug, entityNeighbors } from "@/data/mx/entities";
 import { districtsByEntity, padDistrict } from "@/data/mx/distritos";
 import { circunscripcionForEntity } from "@/data/mx/circunscripciones";
-import { circunscripcionesPath, districtPath, districtsIndexPath, entityPath, mexicoHome } from "@/data/mx/paths";
+import { municipiosByEntitySlug } from "@/data/mx/municipios";
+import { circunscripcionesPath, districtPath, districtsIndexPath, entityPath, mexicoHome, municipioPath, municipiosIndexPath } from "@/data/mx/paths";
 import { sourcesById } from "@/data/mx/sources";
 import { ui } from "@/data/mx/ui";
 import { formatNumber } from "@/lib/format";
@@ -83,9 +84,12 @@ export default async function EntityPage({
       sources={sourcesById([
         "ine-2027",
         "inegi-catalogo",
+        "inegi-mgem",
         "ine-cg875-anexo",
         "ine-cg526-2026",
         "ine-cg130-2023",
+        "ine-cartografia-mun",
+        "inafed-presidentes",
         "camara-lxvi",
       ])}
     >
@@ -112,15 +116,34 @@ export default async function EntityPage({
         <h2>{es ? "Catálogo municipal" : "Municipal catalog"}</h2>
         <p>
           {es
-            ? `El servicio mgem devolvió ${formatNumber(entity.municipalities, lang)} filas para la clave ${entity.code}.`
-            : `The mgem service returned ${formatNumber(entity.municipalities, lang)} rows for code ${entity.code}.`}
+            ? `El servicio mgem, leído el 19 de octubre de 2026, devolvió ${formatNumber(entity.municipalities, lang)} filas para la clave ${entity.code}. Cada fila tiene página.`
+            : `The mgem service, read on 19 October 2026, returned ${formatNumber(entity.municipalities, lang)} rows for code ${entity.code}. Each row has a page.`}
           {entity.code === "09"
             ? es
               ? " Esas filas son las alcaldías de la Ciudad de México en el catálogo."
               : " Those rows are the alcaldías of Mexico City in the catalog."
             : ""}
         </p>
-        <GapNote label={copy.gap} text={copy.municipalityGap} />
+        <p>
+          <Link className="text-navy underline" href={municipiosIndexPath(lang, slug)}>
+            {entity.code === "09" ? (es ? "Índice de alcaldías" : "Alcaldía index") : es ? "Índice de municipios" : "Municipality index"}
+          </Link>
+        </p>
+        <ul className="mt-4 columns-1 gap-x-6 sm:columns-2">
+          {municipiosByEntitySlug(slug).map((row) => (
+            <li key={row.code} className="break-inside-avoid">
+              <Link className="text-navy underline" href={municipioPath(lang, slug, row.slug)}>
+                {row.name}
+              </Link>
+              <span className="text-sm text-ink-muted"> {row.code}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-sm text-ink-muted">
+          {es
+            ? "Esas páginas no nombran a quien está en el cargo. No copian el campo nom_cab ni la fecha de la elección local anterior."
+            : "Those pages do not name the person in office. They do not copy the nom_cab field or the date of the previous local election."}
+        </p>
       </section>
 
       <section>

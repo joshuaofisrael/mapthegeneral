@@ -43,6 +43,44 @@ export type ElectionWindow = {
 
 export const ELECTION_WINDOWS: ElectionWindow[] = [
   {
+    id: "ca-bc-2026",
+    country: "ca",
+    localLang: "fr",
+    election: {
+      en: "British Columbia provincial general election, 24 October 2026",
+      local: "élection générale provinciale de la Colombie-Britannique, 24 octobre 2026",
+    },
+    pollingDay: "2026-10-24",
+    trackerOpensAt: "2026-10-24T20:00:00-07:00",
+    officialResults: { label: "Elections BC, 2026 Provincial Election", url: "https://elections.bc.ca/2026-provincial-election/" },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-10-24T00:00:00-07:00",
+        end: "2026-10-24T20:00:00-07:00",
+        citation: {
+          label: "Election Act (British Columbia), RSBC 1996, c. 106, section 233.1",
+          url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol26/consol26/96106_11",
+        },
+        en: "Election Act section 233.1 forbids publishing, broadcasting or transmitting new election opinion survey results in an electoral district on general voting day before all voting stations there close. This site prints no polls for this election, and shows no counts until voting closes at 20:00 Pacific time on 24 October 2026.",
+        local:
+          "L’article 233.1 de l’Election Act interdit de publier, de diffuser ou de transmettre, le jour du scrutin général et avant la fermeture de tous les bureaux de vote d’une circonscription, des résultats de sondages électoraux non encore rendus publics. Ce site ne publie aucun sondage sur cette élection et n’affiche aucun résultat avant la fermeture des bureaux de vote à 20 h, heure du Pacifique, le 24 octobre 2026.",
+      },
+      {
+        kind: "silence",
+        start: "2026-10-24T00:00:00-07:00",
+        end: "2026-10-24T20:00:00-07:00",
+        citation: {
+          label: "Election Act (British Columbia), RSBC 1996, c. 106, section 233",
+          url: "https://www.bclaws.gov.bc.ca/civix/document/id/consol26/consol26/96106_11",
+        },
+        en: "Election Act section 233 forbids publishing, broadcasting or transmitting election advertising on general voting day before all voting stations close. This site carries no election advertising and publishes no new content about this election until voting closes.",
+        local:
+          "L’article 233 de l’Election Act interdit de publier, de diffuser ou de transmettre de la publicité électorale le jour du scrutin général avant la fermeture de tous les bureaux de vote. Ce site ne diffuse aucune publicité électorale et ne publie aucun nouveau contenu sur cette élection avant la fermeture des bureaux de vote.",
+      },
+    ],
+  },
+  {
     id: "it-2026-chieti",
     country: "it",
     localLang: "it",

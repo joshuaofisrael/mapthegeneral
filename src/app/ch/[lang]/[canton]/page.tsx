@@ -6,9 +6,10 @@ import { ChFrame } from "../../frame";
 import { asChLang } from "../../lang";
 import { chMetadata } from "../../meta";
 import { CANTONS, cantonBySlug, cantonNeighbors } from "../../../../../data/ch/cantons";
+import { communeCantonPublished, communesForParent } from "../../../../../data/ch/communes";
 import { districtsForCanton, SOLE_DISTRICT_NAME } from "../../../../../data/ch/districts";
 import { membersFor } from "../../../../../data/ch/members";
-import { cantonPath, chHome, districtPath, districtsIndexPath, electionPath } from "../../../../../data/ch/search";
+import { cantonPath, chHome, communePath, communesIndexPath, districtPath, districtsIndexPath, electionPath } from "../../../../../data/ch/search";
 import { sourceById, sourcesById } from "../../../../../data/ch/sources";
 import type { ChLang } from "../../../../../data/ch/types";
 import { formatNumber, ui } from "../../../../../data/ch/ui";
@@ -163,7 +164,38 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
         <MemberLists lang={lang} abbr={canton.abbr} />
         <h2>{copy.nextElection}</h2>
         <GapNote label={copy.gap} text={copy.cantonalElectionGap} />
-        <GapNote label={copy.gap} text={copy.districtGap} />
+        {communeCantonPublished(canton.abbr) ? (
+          <p>
+            {canton.abbr === "GE"
+              ? lang === "de"
+                ? "Die Seiten der politischen Gemeinden dieses Kantons stehen in dieser Ausgabe unter dem Kanton. Der Gemeindevorstand ist nicht zentral veröffentlicht."
+                : lang === "fr"
+                  ? "Les pages des communes politiques de ce canton figurent dans cette édition sous le canton. L’exécutif communal n’est pas publié de manière centrale."
+                  : lang === "it"
+                    ? "Le pagine dei comuni politici di questo cantone stanno in questa edizione sotto il cantone. L’esecutivo comunale non è pubblicato a livello centrale."
+                    : "Political-municipality pages for this canton are listed under the canton in this release. The executive head is not published centrally."
+              : lang === "de"
+                ? "Die Seiten der politischen Gemeinden dieses Kantons hängen in dieser Ausgabe an der Bezirksseite. Der Gemeindevorstand ist nicht zentral veröffentlicht."
+                : lang === "fr"
+                  ? "Les pages des communes politiques de ce canton sont reliées, dans cette édition, à la page du district. L’exécutif communal n’est pas publié de manière centrale."
+                  : lang === "it"
+                    ? "Le pagine dei comuni politici di questo cantone sono collegate, in questa edizione, alla pagina del distretto. L’esecutivo comunale non è pubblicato a livello centrale."
+                    : "Political-municipality pages for this canton are linked from each district page in this release. The executive head is not published centrally."}
+          </p>
+        ) : (
+          <GapNote
+            label={copy.gap}
+            text={
+              lang === "de"
+                ? "Gemeindeseiten dieses Kantons folgen in einer späteren Ausgabe. Die Zahl der politischen Gemeinden steht im amtlichen Gemeindeverzeichnis."
+                : lang === "fr"
+                  ? "Les pages des communes de ce canton suivent dans une édition ultérieure. Le chiffre des communes politiques figure dans le répertoire officiel des communes."
+                  : lang === "it"
+                    ? "Le pagine dei comuni di questo cantone seguono in un’edizione successiva. La cifra dei comuni politici sta nel repertorio ufficiale dei comuni."
+                    : "Municipality pages for this canton are left for a later release. The count of political municipalities is in the official commune register."
+            }
+          />
+        )}
         {slug === "ai" && (
           <p>
             {lang === "de"
@@ -178,6 +210,7 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
       </section>
 
       <DistrictLinks lang={lang} abbr={canton.abbr} />
+      {canton.abbr === "GE" && communeCantonPublished("GE") && <GenevaCommunes lang={lang} />}
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
@@ -241,6 +274,29 @@ function MemberList({ lang, members }: { lang: ChLang; members: ReturnType<typeo
         );
       })}
     </ul>
+  );
+}
+
+function GenevaCommunes({ lang }: { lang: ChLang }) {
+  const list = communesForParent("GE", "");
+  return (
+    <div>
+      <p className="text-sm">
+        <Link className="text-navy underline" href={communesIndexPath(lang, "ge", "")}>
+          {lang === "de" ? "Politische Gemeinden" : lang === "fr" ? "Communes politiques" : lang === "it" ? "Comuni politici" : "Political municipalities"}
+        </Link>
+      </p>
+      <ul className="mt-3 space-y-1 text-sm">
+        {list.map((commune) => (
+          <li key={commune.bfs}>
+            <Link className="text-navy underline" href={communePath(lang, "ge", "", commune.slug)}>
+              {commune.name}
+            </Link>
+            {` · ${commune.bfs}`}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -12,7 +12,16 @@ import {
   type CensusDivision,
   type District,
 } from "../src/data/ca/level2";
-import { districtIndexPath, districtPath, divisionIndexPath, divisionPath, regionPath } from "../src/data/ca/paths";
+import { municipalitiesIn, municipalityName } from "../src/data/ca/level3";
+import {
+  districtIndexPath,
+  districtPath,
+  divisionIndexPath,
+  divisionPath,
+  municipalityIndexPath,
+  municipalityPath,
+  regionPath,
+} from "../src/data/ca/paths";
 import { regionBySlug, regionName } from "../src/data/ca/places";
 import { sourcesById } from "../src/data/ca/sources";
 import type { CaLang } from "../src/data/ca/types";
@@ -291,9 +300,22 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
   const lead = fr
     ? `Le fichier de structure de la Classification géographique type (CGT) 2021 inscrit cette division de recensement (niveau 3) en ${regionLabel}. Le titre de classe est le nom ci-dessus. Le fichier ne dit pas si cette division est un gouvernement municipal et ne nomme pas de titulaire. Il ne donne pas la population.`
     : `The Standard Geographical Classification (SGC) 2021 structure file lists this census division (level 3) in ${regionLabel}. The class title is the name above. The file does not say whether this division is a municipal government, and it does not name an officeholder. It does not give a population.`;
-  const gap = fr
-    ? "Aucune liste officielle lue pour cette page ne nomme un dirigeant ni un jour de scrutin pour cette division de recensement. Cette page n’en devine pas. Les subdivisions de recensement et les municipalités ne font pas partie de cette livraison."
-    : "No official list read for this page names a head of council or a polling day for this census division. This page does not guess one. Census subdivisions and municipalities are not in this release.";
+  const places = municipalitiesIn(division.code, lang);
+  const gap = places.length
+    ? fr
+      ? "Aucun maire, préfet ou conseil n’est copié. Aucun répertoire provincial de ces titulaires n’a été lu pour cette division. Les listes de candidatures ne figurent pas sur cette page."
+      : "No mayor, reeve, or council is copied. No provincial directory of those officeholders was read for this division. Candidate lists are not on this page."
+    : fr
+      ? "Les municipalités de cette division de recensement ne font pas partie de cette livraison."
+      : "Municipalities in this census division are not in this release.";
+  const placeLinks = places.length
+    ? `<h2>${fr ? "Municipalités" : "Municipalities"}</h2><p><a href="${esc(municipalityIndexPath(lang, division.region, division.slug))}">${fr ? "Index des municipalités" : "Municipality index"}</a></p><ul>${places
+        .map(
+          (place) =>
+            `<li><a href="${esc(municipalityPath(lang, division.region, division.slug, place.slug))}">${esc(municipalityName(place, lang))}</a></li>`,
+        )
+        .join("")}</ul>`
+    : "";
   const near = neighborLine(
     lang,
     neighbors.prev
@@ -313,6 +335,7 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
 </table>
 <p>${esc(lead)}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(gap)}</p>
+${placeLinks}
 <p>${esc(fr ? STATCAN_FR : STATCAN)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(regionHref)}">${esc(regionLabel)}</a> · <a href="${esc(divisionIndexPath(lang))}">${fr ? "Index des divisions" : "Division index"}</a> · <a href="/ca/${lang}/">Canada</a>. ${near}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>

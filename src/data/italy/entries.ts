@@ -1,6 +1,7 @@
+import { COMUNI } from "./comuni";
 import { COLLEGI, UNITS } from "./level2";
 import { alphaRegions } from "./places";
-import { collegioPath, collegiIndexPath, italyChooser, italyHome, regionPath, unitPath, unitsIndexPath } from "./paths";
+import { collegioPath, collegiIndexPath, comunePath, comuniIndexPath, italyChooser, italyHome, regionPath, unitPath, unitsIndexPath } from "./paths";
 import type { ItLang } from "./types";
 
 export type ItalyIndexEntry = {
@@ -89,5 +90,28 @@ export function italySearchEntries(): ItalyIndexEntry[] {
       text: `${item.name} ${item.house} ${item.circoscrizione} ${item.regionName}`,
     })),
   );
-  return [chooser, ...fixed("en"), ...fixed("it"), ...regions, ...indexes, ...units, ...collegi];
+  const unitKeys = new Map<string, (typeof COMUNI)[number]>();
+  for (const comune of COMUNI) {
+    const key = `${comune.regionSlug}/${comune.unitSlug}`;
+    if (!unitKeys.has(key)) unitKeys.set(key, comune);
+  }
+  const comuniIndexes = (["en", "it"] as const).flatMap((lang) =>
+    [...unitKeys.values()].map((comune) => ({
+      path: comuniIndexPath(lang, comune.regionSlug, comune.unitSlug),
+      lang,
+      title: lang === "it" ? `Comuni · ${comune.unitName}` : `Municipalities · ${comune.unitName}`,
+      kind: "index",
+      text: `${comune.unitName} comuni`,
+    })),
+  );
+  const comuni = (["en", "it"] as const).flatMap((lang) =>
+    COMUNI.map((comune) => ({
+      path: comunePath(lang, comune.regionSlug, comune.unitSlug, comune.slug),
+      lang,
+      title: comune.name,
+      kind: "comune",
+      text: `${comune.name} ${comune.code} ${comune.unitName}`,
+    })),
+  );
+  return [chooser, ...fixed("en"), ...fixed("it"), ...regions, ...indexes, ...units, ...collegi, ...comuniIndexes, ...comuni];
 }

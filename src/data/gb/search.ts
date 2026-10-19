@@ -1,4 +1,5 @@
 import { gbLevel2SearchEntries } from "./level2";
+import { gbLevel3SearchEntries } from "./level3";
 import { GB_FIXED_PAGES, gbNationPages } from "./paths";
 
 export type GbIndexEntry = {
@@ -25,5 +26,9 @@ export function gbSearchEntries(): GbIndexEntry[] {
     ...page,
     lang: "en",
   }));
-  return [...fixed, ...nations, ...level2];
+  const level3: GbIndexEntry[] = gbLevel3SearchEntries().map((page) => ({
+    ...page,
+    lang: "en",
+  }));
+  return [...fixed, ...nations, ...level2, ...level3];
 }

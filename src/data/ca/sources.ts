@@ -2,6 +2,7 @@ import type { SourceRef } from "./types";
 
 const READ = "2026-10-17";
 const READ_LEVEL2 = "2026-10-18";
+const READ_LEVEL3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -213,6 +214,120 @@ export const SOURCES: SourceRef[] = [
     name: "Personal Information Protection and Electronic Documents Act (S.C. 2000, c. 5)",
     url: "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/",
     readOn: READ_LEVEL2,
+  },
+  {
+    id: "sgc-csd-dict",
+    name: "Statistics Canada, Dictionary, Census of Population, 2021, table 1.5, Census subdivision types by province and territory",
+    url: "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/tab/index-eng.cfm?ID=t1_5",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "sgc-csd-def",
+    name: "Statistics Canada, Dictionary, Census of Population, 2021, definition of census subdivision (CSD)",
+    url: "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/definition-eng.cfm?ID=geo012",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "csd-boundary-2021",
+    name: "Statistics Canada, 2021 Census digital boundary file, census subdivision attribute table (CSDUID, CSDNAME, CSDTYPE), reference date 2021",
+    url: "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Digital_boundary_files/MapServer/9",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "on-mpp",
+    name: "Legislative Assembly of Ontario, Current MPPs",
+    url: "https://www.ola.org/en/members/current",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "on-mea",
+    name: "Municipal Elections Act, 1996, S.O. 1996, c. 32, Sched., consolidated text on ontario.ca (currency date 14 October 2026)",
+    url: "https://www.ontario.ca/laws/statute/96m32",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "qc-deputes",
+    name: "Assemblée nationale du Québec, Députés en fonction",
+    url: "https://www.assnat.qc.ca/fr/deputes/index.html",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "qc-circonscriptions-2026",
+    name: "Élections Québec, Liste des circonscriptions 2026 (CSV), linked from La carte électorale : délimitation finale",
+    url: "https://www.electionsquebec.qc.ca/cartes-electorales/revision-de-la-carte-electorale-du-quebec/la-carte-electorale-delimitation-finale/",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "qc-muni-act",
+    name: "Loi sur les élections et les référendums dans les municipalités, RLRQ, c. E-2.2, articles 1 à 3",
+    url: "https://www.legisquebec.gouv.qc.ca/fr/document/lc/E-2.2",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "bc-ed-codes",
+    name: "Elections BC, Electoral District Codes, 2023 Electoral Boundaries Redistribution",
+    url: "https://elections.bc.ca/docs/2023-electoral-district-names-codes.pdf",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "bc-leg-find",
+    name: "Legislative Assembly of British Columbia, Find MLA by Constituency",
+    url: "https://www.leg.bc.ca/members/find-mla-by-constituency",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "bc-lga-52",
+    name: "Local Government Act, R.S.B.C. 2015, c. 1, section 52, general local elections every 4 years (Act current to 6 October 2026)",
+    url: "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/r15001_03#section52",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ab-mla",
+    name: "Legislative Assembly of Alberta, Members of the Legislative Assembly",
+    url: "https://www.assembly.ab.ca/members/members-of-the-legislative-assembly",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ab-laea",
+    name: "Local Authorities Election Act, R.S.A. 2000, c. L-21, sections 10 to 12 (consolidation current to 18 December 2025)",
+    url: "https://kings-printer.alberta.ca/serve_pdf.cfm?file=L21.pdf&type=Acts",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ab-muni-next",
+    name: "Alberta.ca, Municipal elections – Overview",
+    url: "https://www.alberta.ca/municipal-elections-overview",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "mb-mla",
+    name: "Legislative Assembly of Manitoba, MLA Alphabetical Listing",
+    url: "https://www.gov.mb.ca/legislature/members/mla_list_alphabetical.html",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "sk-mla",
+    name: "Legislative Assembly of Saskatchewan, Members of the Legislative Assembly",
+    url: "https://www.legassembly.sk.ca/mlas/",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ns-mla",
+    name: "Nova Scotia Legislature, MLAs, 65th Assembly",
+    url: "https://nslegislature.ca/members/profiles",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "pei-mla",
+    name: "Legislative Assembly of Prince Edward Island, Members",
+    url: "https://www.assembly.pe.ca/members",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "nu-mla",
+    name: "Legislative Assembly of Nunavut, Members of the Legislative Assembly",
+    url: "https://www.assembly.nu.ca/members/mla",
+    readOn: READ_LEVEL3,
   },
 ];
 
