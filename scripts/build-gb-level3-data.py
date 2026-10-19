@@ -1008,12 +1008,12 @@ def main() -> None:
             "extraCountyCode": None,
             "memberCodes": [council["code"] for council in councils if council["regionCode"] == "E12000007"],
             "pcon": gla_pcon,
-            "voteNote": "The factsheet says the Mayor of London election will be done by Supplementary Vote, as will further elections.",
+            "voteNote": "The Elections Act 2022, section 13 (in force 26 October 2022), changed Mayor of London elections to the simple majority (first-past-the-post) system, and the May 2024 election used it. The English Devolution and Community Empowerment Act 2026 (Royal Assent 29 April 2026), Schedule 30, paragraphs 1 and 2, would return the Mayor of London to the supplementary vote where there are three or more candidates. On 19 October 2026 legislation.gov.uk marked those paragraphs as prospective (not yet in force).",
         }
     )
     for item in mayors:
         if item["page"] != "gla":
-            item["voteNote"] = "The factsheet says the mayoral election will be done by Supplementary Vote, as will further elections."
+            item["voteNote"] = "The English Devolution and Community Empowerment Act 2026 (Royal Assent 29 April 2026), Schedule 30, paragraphs 12 to 19, return combined authority and combined county authority mayors to the supplementary vote where there are three or more candidates. On 19 October 2026 legislation.gov.uk recorded those paragraphs in force from 18 June 2026 under S.I. 2026/656, regulation 2(b), with the savings in regulation 3. Before that, the Elections Act 2022, section 13, used the simple majority (first-past-the-post) system."
         if item["lgr"]:
             item["lgrText"] = lgr
         else:

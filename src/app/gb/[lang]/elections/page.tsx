@@ -27,7 +27,6 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
       path="/gb/en/elections/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "Elections", path: "/gb/en/elections/" },
       ]}

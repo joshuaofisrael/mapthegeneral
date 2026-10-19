@@ -54,7 +54,6 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
       path="/gb/en/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
       ]}
       eyebrow="UK Parliament · no later than 15 August 2029"

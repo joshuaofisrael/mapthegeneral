@@ -35,7 +35,6 @@ export default async function GeneralElectionPage({ params }: { params: Promise<
       path="/gb/en/elections/general-election/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "Elections", path: "/gb/en/elections/" },
         { name: "No later than 15 August 2029", path: "/gb/en/elections/general-election/" },

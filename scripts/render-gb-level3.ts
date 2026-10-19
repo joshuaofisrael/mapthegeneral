@@ -243,7 +243,6 @@ function councilBody(council: Council, peers: { href: string; name: string }[], 
     description,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: NATION_NAME[council.nation], path: nationPath(council.nation) },
       { name: "Councils", path: nationCouncilsIndex(council.nation) },
@@ -306,7 +305,6 @@ function mayorBody(mayor: MayorBody, peers: { href: string; name: string }[], in
     description,
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "England", path: nationPath("england") },
       { name: "Mayors", path: MAYORS_INDEX },
@@ -334,7 +332,7 @@ ${linkList(members.map((item) => ({ href: councilPath(item), name: item.name, de
 ${linkList(seats.map((seat) => ({ href: westminsterSeatPath(seat), name: seat.name, detail: seat.gss })))}
 ${nearby(peers, index)}
 <h2>Sources</h2>
-<ul>${sourcesHtml(["govuk-devolution-factsheets", "govuk-election-cycles", "ons-cauth-may-2025", "ons-lad-cauth-2025", "ons-wd-pcon-2025", "ons-geog-licences", "ogl-v3", "ec-schedule"])}</ul>`,
+<ul>${sourcesHtml(["govuk-devolution-factsheets", "elections-act-2022-s13", "edcea-2026-sch30", "govuk-election-cycles", "ons-cauth-may-2025", "ons-lad-cauth-2025", "ons-wd-pcon-2025", "ons-geog-licences", "ogl-v3", "ec-schedule"])}</ul>`,
   });
 }
 
@@ -391,7 +389,6 @@ for (const nation of NATIONS) {
       description: `Principal councils in ${NATION_NAME[nation]}, with ONS codes. Unofficial information.`,
       crumbs: [
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: NATION_NAME[nation], path: nationPath(nation) },
         { name: "Councils", path: nationCouncilsIndex(nation) },
@@ -414,7 +411,6 @@ emit(
     description: "21 English county councils in CTY_DEC_2025_EN_NC. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "England", path: nationPath("england") },
       { name: "County councils", path: COUNTIES_INDEX },
@@ -439,7 +435,6 @@ emit(
     description: "Combined authorities with a directly elected mayor, and the Greater London Authority. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "England", path: nationPath("england") },
       { name: "Mayors", path: MAYORS_INDEX },
@@ -462,7 +457,6 @@ emit(
     description: "United Kingdom principal councils and directly elected mayors. Unofficial information.",
     crumbs: [
       { name: "Home", path: "/" },
-      { name: "United Kingdom", path: "/gb/" },
       { name: "United Kingdom", path: "/gb/en/" },
       { name: "Councils", path: COUNCILS_HUB },
     ],

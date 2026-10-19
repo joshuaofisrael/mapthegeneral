@@ -29,7 +29,6 @@ export default async function PartiesPage({ params }: { params: Promise<{ lang: 
       path="/gb/en/parties/"
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "United Kingdom", path: "/gb/" },
         { name: "United Kingdom", path: "/gb/en/" },
         { name: "Parties", path: "/gb/en/parties/" },
       ]}
