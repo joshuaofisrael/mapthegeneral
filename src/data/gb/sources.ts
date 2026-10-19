@@ -8,6 +8,7 @@ export type SourceRef = {
 
 const READ = "2026-10-17";
 const READ_LEVEL2 = "2026-10-18";
+const READ_LEVEL3 = "2026-10-19";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -110,7 +111,7 @@ export const SOURCES: SourceRef[] = [
     id: "commons-by-elections",
     name: "UK Parliament election results, by-elections in the 59th Parliament",
     url: "https://electionresults.parliament.uk/parliament-periods/59/by-elections",
-    readOn: READ_LEVEL2,
+    readOn: READ_LEVEL3,
   },
   {
     id: "sp-open-data",
@@ -164,7 +165,79 @@ export const SOURCES: SourceRef[] = [
     id: "rpa-66a",
     name: "Representation of the People Act 1983, section 66A (prohibition on publication of exit polls)",
     url: "https://www.legislation.gov.uk/ukpga/1983/2/section/66A",
-    readOn: READ_LEVEL2,
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "govuk-election-cycles",
+    name: "GOV.UK, Local authority, combined authority, and county combined authority election cycles in England (updated 22 July 2025)",
+    url: "https://www.gov.uk/government/publications/election-timetable-in-england/election-timetable-in-england",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "govuk-devolution-factsheets",
+    name: "GOV.UK, English devolution: Area factsheets (published 10 July 2025)",
+    url: "https://www.gov.uk/government/publications/english-devolution-area-factsheets/english-devolution-area-factsheets",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-lad-apr-2025",
+    name: "ONS Open Geography Portal, Local Authority Districts (April 2025) Names and Codes in the UK (V2)",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LAD_APR_2025_UK_NC_v2/FeatureServer/0/query?where=1%3D1&outFields=LAD25CD,LAD25NM,LAD25NMW&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-cty-dec-2025",
+    name: "ONS Open Geography Portal, Counties (December 2025) Names and Codes in England",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/CTY_DEC_2025_EN_NC/FeatureServer/0/query?where=1%3D1&outFields=CTY25CD,CTY25NM&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-cauth-may-2025",
+    name: "ONS Open Geography Portal, Combined Authorities (May 2025) Names and Codes in England",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/CAUTH_MAY_2025_EN_NC/FeatureServer/0/query?where=1%3D1&outFields=CAUTH25CD,CAUTH25NM&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-rgn-dec-2025",
+    name: "ONS Open Geography Portal, Regions (December 2025) Names and Codes in England",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/RGN_DEC_2025_EN_NC/FeatureServer/0/query?where=1%3D1&outFields=RGN25CD,RGN25NM,RGN25NMW&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-lad-rgn-2025",
+    name: "ONS Open Geography Portal, LAD25_RGN25_EN_LU_v2 (local authority district to region lookup)",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LAD25_RGN25_EN_LU_v2/FeatureServer/0/query?where=1%3D1&outFields=LAD25CD,RGN25CD,RGN25NM&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-lad-cauth-2025",
+    name: "ONS Open Geography Portal, LAD25_CAUTH25_EN_LU (local authority district to combined authority lookup)",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LAD25_CAUTH25_EN_LU/FeatureServer/0/query?where=1%3D1&outFields=LAD25CD,CAUTH25CD,CAUTH25NM&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-lad-ctyua-2025",
+    name: "ONS Open Geography Portal, LAD25_CTYUA25_UK_LU_v2 (local authority district to county and unitary authority lookup)",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/LAD25_CTYUA25_UK_LU_v2/FeatureServer/0/query?where=1%3D1&outFields=LAD25CD,CTYUA25CD,CTYUA25NM&returnGeometry=false&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ons-wd-pcon-2025",
+    name: "ONS Open Geography Portal, WD25_PCON24_LAD25_CTYUA25_UK_LU (ward to Westminster constituency to local authority lookup)",
+    url: "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/WD25_PCON24_LAD25_CTYUA25_UK_LU/FeatureServer/0/query?where=1%3D1&outFields=LAD25CD,PCON24CD,CTYUA25CD&returnGeometry=false&returnCountOnly=true&f=json",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "dpa-2018-s1",
+    name: "Data Protection Act 2018, section 1",
+    url: "https://www.legislation.gov.uk/ukpga/2018/12/section/1",
+    readOn: READ_LEVEL3,
+  },
+  {
+    id: "ico-principles",
+    name: "Information Commissioner’s Office, A guide to the data protection principles (Article 5 of the UK GDPR)",
+    url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
+    readOn: READ_LEVEL3,
   },
 ];
 
