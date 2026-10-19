@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { SpainFrame } from "@/components/SpainFrame";
-import { mayorByCode, mayorSentence } from "@/data/spain/mayors";
 import { autonomousCityMunicipality } from "@/data/spain/municipalities";
 import {
   CITIES,
@@ -67,7 +66,6 @@ export default async function CommunityPage({
   const provinces = provincesIn(slug);
   const city = CITIES.find((item) => item.slug === slug);
   const cityRow = autonomousCityMunicipality(slug);
-  const cityMayor = cityRow ? mayorByCode(cityRow.code) : undefined;
   const population = populationOfCommunity(slug);
   const seats = congressSeatsOfCommunity(slug);
   const neighbors = alphaCommunityNeighbors(slug);
@@ -178,8 +176,13 @@ export default async function CommunityPage({
               : `Table 29005 prints one municipality on this city code: ${cityRow.code} ${cityRow.name}, Total ${formatNumber(cityRow.population, lang)} for 2025. There is no province between the autonomous city and that municipality, so this page is the municipality page.`}
           </p>
           <p className="text-sm leading-6">{copy.populationSeriesCity}</p>
-          {cityMayor && <p className="text-sm leading-6">{mayorSentence(cityMayor, lang)}</p>}
-          <GapNote label={copy.gap} text={copy.mayorGap} />
+          <p className="text-sm leading-6">
+            {copy.mayorOfficial}{" "}
+            <a className="underline" href={sourceById("mpt-alcaldes-2023").url}>
+              Consulta de Cargos Representativos Locales
+            </a>
+            .
+          </p>
         </section>
       )}
 

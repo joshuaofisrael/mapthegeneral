@@ -2,7 +2,6 @@ import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
-import { mayorByCode, mayorSentence } from "../src/data/spain/mayors";
 import {
   isOnlyMunicipalityWithCapitalPopulation,
   municipalityNeighbors,
@@ -10,7 +9,7 @@ import {
   type Municipality,
 } from "../src/data/spain/municipalities";
 import { communityBySlug, provinceBySlug } from "../src/data/spain/places";
-import { sourcesById } from "../src/data/spain/sources";
+import { sourceById, sourcesById } from "../src/data/spain/sources";
 import type { Community, Lang, Province } from "../src/data/spain/types";
 import { ui } from "../src/data/spain/ui";
 import { formatNumber } from "../src/lib/format";
@@ -38,8 +37,6 @@ function page(lang: Lang, municipality: Municipality, province: Province, commun
   const provinceHref = provincePath(lang, community.slug, province.slug);
   const communityHref = communityPath(lang, community.slug);
   const population = formatNumber(municipality.population, lang);
-  const mayor = mayorByCode(municipality.code);
-  if (!mayor) throw new Error(`No mayor row for ${municipality.code}`);
   const neighbors = neighborLinks(lang, municipality);
   const sameName = province.capital === municipality.name && province.capitalPopulation === municipality.population;
   const uniqueCapital =
@@ -133,8 +130,7 @@ ${capitalNote ? `<p>${esc(capitalNote)}</p>` : ""}
 <h2>${esc(es ? "Elecciones municipales" : "Municipal elections")}</h2>
 <p>${esc(copy.localElection)}</p>
 <h2>${esc(es ? "Alcaldía" : "Mayor")}</h2>
-<p>${esc(mayorSentence(mayor, lang))}</p>
-<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(copy.mayorGap)}</p>
+<p>${esc(copy.mayorOfficial)} <a href="${esc(sourceById("mpt-alcaldes-2023").url)}">${esc(es ? "Consulta de Cargos Representativos Locales" : "Consulta de Cargos Representativos Locales (local officeholders lookup)")}</a>.</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(provinceHref)}">${esc(province.decreeName)}</a> · <a href="${esc(communityHref)}">${esc(community.officialName)}</a>. ${esc(copy.alphaNearby)}:${neighbors ? neighbors.replace(/^ · /, " ") : ""}</p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>

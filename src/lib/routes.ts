@@ -4,7 +4,6 @@ import { AU_INDEX_ENTRIES } from "../countries/au";
 import { indexEntries as mexicoIndexEntries } from "../countries/mx";
 import { gbSearchEntries } from "../data/gb/search";
 import { absoluteUrl } from "../data/site";
-import { mayorByCode } from "../data/spain/mayors";
 import { autonomousCityMunicipality, pageMunicipalities } from "../data/spain/municipalities";
 import {
   alphaCommunities,
@@ -140,7 +139,7 @@ function spainEntries(lang: Lang): IndexEntry[] {
       lang,
       title: municipality.name,
       kind: "municipality",
-      text: `${municipality.name} ${municipality.code} ${mayorByCode(municipality.code)?.given ?? ""} ${mayorByCode(municipality.code)?.surname1 ?? ""} ${mayorByCode(municipality.code)?.surname2 ?? ""} ${province?.decreeName ?? ""} ${community?.officialName ?? ""}`,
+      text: `${municipality.name} ${municipality.code} ${province?.decreeName ?? ""} ${community?.officialName ?? ""}`,
     };
   });
   return [...fixed, ...communities, ...provinces, ...cities, ...municipalities];

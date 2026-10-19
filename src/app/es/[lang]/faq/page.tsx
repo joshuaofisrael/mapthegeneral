@@ -42,7 +42,7 @@ const FAQ = {
     {
       question: "¿Quién es el alcalde?",
       answer:
-        "La Ficha de Alcaldes de la Legislatura 2023, del Ministerio de Política Territorial y Memoria Democrática, imprime una fila por municipio: cargo, fecha de posesión y partido, tal como están en el fichero. El resto del pleno no está en esa ficha y no se copia aquí.",
+        "Este sitio no publica los nombres de alcaldes ni concejales. La fuente oficial de los cargos locales actuales es la Consulta de Cargos Representativos Locales del Ministerio de Política Territorial y Memoria Democrática (concejales.redsara.es/consulta).",
     },
     {
       question: "¿Cuándo son las próximas elecciones municipales?",
@@ -83,7 +83,7 @@ const FAQ = {
     {
       question: "Who is the mayor?",
       answer:
-        "The Ficha de Alcaldes de la Legislatura 2023, from the Ministerio de Política Territorial y Memoria Democrática, prints one row per municipality: office, date of taking office, and party, as written in the file. The rest of the council is not in that file and is not copied here.",
+        "This site does not list the names of mayors or councillors. The official source for current local officeholders is the Consulta de Cargos Representativos Locales of the Ministerio de Política Territorial y Memoria Democrática (concejales.redsara.es/consulta).",
     },
     {
       question: "When are the next municipal elections?",

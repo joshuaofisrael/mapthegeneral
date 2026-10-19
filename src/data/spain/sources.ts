@@ -113,8 +113,8 @@ export const SOURCES: SourceRef[] = [
   },
   {
     id: "mpt-alcaldes-2023",
-    name: "Ministerio de Política Territorial y Memoria Democrática, Ficha de Alcaldes de la Legislatura 2023 (descarga getAlcaldesLegislatura de la consulta de alcaldes y concejales)",
-    url: "https://concejales.redsara.es/consulta/getAlcaldesLegislatura",
+    name: "Ministerio de Política Territorial y Memoria Democrática, Consulta de Cargos Representativos Locales (official source for current mayors and councillors)",
+    url: "https://concejales.redsara.es/consulta/",
     readOn: READ,
   },
   {
