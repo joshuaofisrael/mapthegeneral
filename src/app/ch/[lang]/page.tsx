@@ -13,6 +13,7 @@ import {
   POPULATION_2024,
   alphaCantons,
 } from "../../../../data/ch/cantons";
+import { COMMUNE_CANTONS } from "../../../../data/ch/communes";
 import { cantonPath, chHome, districtsIndexPath, electionPath } from "../../../../data/ch/search";
 import { sourceById, sourcesById } from "../../../../data/ch/sources";
 import { formatNumber, ui } from "../../../../data/ch/ui";
@@ -256,7 +257,6 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
           {lang === "de" ? "Kandidaturen und Parteien" : lang === "fr" ? "Candidatures et partis" : lang === "it" ? "Candidature e partiti" : "Candidates and parties"}
         </h2>
         <GapNote label={copy.gap} text={copy.candidateGap} />
-        <GapNote label={copy.gap} text={copy.districtGap} />
         <p className="text-sm">
           <Link className="text-navy underline" href={districtsIndexPath(lang)}>
             {copy.districts}
@@ -312,13 +312,16 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
         }))}
       />
       <p className="text-sm text-ink-muted">
-        {lang === "de"
-          ? `${CANTONS.length} Kantone. Die Bezirksseiten dieser Ausgabe stehen im Verzeichnis. Gemeindeseiten folgen nicht.`
-          : lang === "fr"
-            ? `${CANTONS.length} cantons. Les pages de districts de cette édition sont dans le répertoire. Les pages des communes ne suivent pas.`
-            : lang === "it"
-              ? `${CANTONS.length} cantoni. Le pagine dei distretti di questa edizione stanno nel repertorio. Le pagine dei comuni non seguono.`
-              : `${CANTONS.length} cantons. This release’s district pages are in the register index. Municipality pages are not.`}
+        {(() => {
+          const names = COMMUNE_CANTONS.map((abbr) => CANTONS.find((canton) => canton.abbr === abbr)?.officialName).join(", ");
+          return lang === "de"
+            ? `${CANTONS.length} Kantone. Die Bezirksseiten dieser Ausgabe stehen im Verzeichnis. Gemeindeseiten in dieser Ausgabe: ${names}. Sie hängen am Bezirk. Die übrigen Kantone folgen später.`
+            : lang === "fr"
+              ? `${CANTONS.length} cantons. Les pages de districts de cette édition sont dans le répertoire. Pages de communes dans cette édition : ${names}. Elles sont reliées au district. Les autres cantons suivent plus tard.`
+              : lang === "it"
+                ? `${CANTONS.length} cantoni. Le pagine dei distretti di questa edizione stanno nel repertorio. Pagine di comuni in questa edizione: ${names}. Sono collegate al distretto. Gli altri cantoni seguono più tardi.`
+                : `${CANTONS.length} cantons. This release’s district pages are in the register index. Municipality pages in this release: ${names}. They are linked from the district page. The other cantons follow later.`;
+        })()}
       </p>
     </ChFrame>
   );

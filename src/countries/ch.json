@@ -2,13 +2,14 @@
   "code": "ch",
   "name": "Switzerland",
   "href": "/ch/",
-  "summary": "National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, and 135 district names from the FSO historized commune register, in German, French, Italian, and English. Municipality pages are not in this release.",
+  "summary": "National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, 135 district names, and 1,065 political-municipality pages for Zürich, Bern / Berne, Vaud, Aargau and St. Gallen, from the FSO historized commune register (1 January 2026), in German, French, Italian and English. Municipality pages for the other cantons follow in a later release.",
   "links": [
     { "href": "/ch/de/", "label": "Deutsch" },
     { "href": "/ch/fr/", "label": "Français" },
     { "href": "/ch/it/", "label": "Italiano" },
     { "href": "/ch/en/", "label": "English" },
     { "href": "/ch/en/elections/nationalrat-2027/", "label": "24 October 2027" },
-    { "href": "/ch/en/districts/", "label": "Districts" }
+    { "href": "/ch/en/districts/", "label": "Districts" },
+    { "href": "/ch/en/zh/zuerich/zuerich/", "label": "Zürich" }
   ]
 }
