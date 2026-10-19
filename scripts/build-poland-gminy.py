@@ -7,7 +7,7 @@ Inputs (not committed; they contain ward-boundary text):
   /tmp/pl-l3/okregi_rady_gmin_csv.zip
 
 The JSON keeps the public-role fields only: TERC identity, the PKW office title,
-the elected name, the registering committee, and the sum of „Liczba mandatów”.
+and the sum of „Liczba mandatów”. No officeholder names or committees are kept (Joshua, 19 Oct 2026: avoid legal risk).
 """
 
 from __future__ import annotations
@@ -184,8 +184,6 @@ def main() -> None:
             "powiatSlug": parent["slug"],
             "powiatCode": parent["code"],
             "office": None,
-            "elected": None,
-            "committee": None,
             "seats": seats.get(code),
             "seatRows": seat_rows.get(code, 0),
             "senat": senat_of.get(parent["code"]),
@@ -195,8 +193,6 @@ def main() -> None:
         winner = winners.get(code)
         if winner:
             item["office"] = winner["office"] or None
-            item["elected"] = winner["elected"] or None
-            item["committee"] = winner["committee"] or None
         grouped[(parent["voivodeshipSlug"], parent["slug"])].append(item)
         records.append(item)
 

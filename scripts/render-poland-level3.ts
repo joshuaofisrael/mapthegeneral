@@ -17,6 +17,7 @@ import { sourcesById } from "../data/pl/sources";
 import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 
+const PKW_RESULTS = "https://samorzad2024.pkw.gov.pl/samorzad2024/";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const OFFICE = "https://pkw.gov.pl/";
@@ -131,23 +132,15 @@ function writePage(path: string, html: string): void {
 
 function officeHtml(lang: Lang, gmina: Gmina): string {
   const pl = lang === "pl";
-  if (!gmina.office && !gmina.elected) {
-    return `<p class="gap">${
-      pl
-        ? "Luka. Tej gminy nie ma w pliku PKW z wybranymi wójtami, burmistrzami i prezydentami miast. Nazwiska nie uzupełniono."
-        : "Gap. This gmina has no row in the PKW file of elected wójtowie, burmistrzowie and prezydenci miast. The name is not filled in."
-    }</p>`;
-  }
-  const elected = gmina.elected ? esc(gmina.elected) : pl ? "puste pole" : "empty cell";
-  const committee = gmina.committee ? ` ${pl ? "Komitet" : "Committee"}: ${esc(gmina.committee)}.` : "";
-  const note = gmina.elected
-    ? pl
-      ? " Plik nie potwierdza urzędu na 19 października 2026 r."
-      : " The file does not confirm the office on 19 October 2026."
-    : pl
-      ? " Nazwiska nie uzupełniono."
-      : " The name is not filled in.";
-  return `<p>${esc(gmina.office ?? "")}: ${elected}.${committee}${note}</p>`;
+  const link = `<a href="${esc(PKW_RESULTS)}">${pl ? "Państwowa Komisja Wyborcza" : "National Electoral Commission (PKW)"}</a>`;
+  const title = gmina.office
+    ? `<p>${pl ? "Organ wykonawczy" : "Executive office"}: ${esc(gmina.office)}.</p>`
+    : `<p class="gap">${pl ? "Luka. Tej gminy nie ma w pliku PKW z wybranymi wójtami, burmistrzami i prezydentami miast." : "Gap. This gmina has no row in the PKW file of elected wójtowie, burmistrzowie and prezydenci miast."}</p>`;
+  return `${title}<p>${
+    pl
+      ? `Ta strona nie podaje nazwisk wójtów, burmistrzów, prezydentów miast ani komitetów wyborczych. Oficjalnym źródłem wyników wyborów samorządowych jest ${link}.`
+      : `This page does not list the names of wójtowie, burmistrzowie or prezydenci miast, or their election committees. The official source for local election results is the ${link}.`
+  }</p>`;
 }
 
 function councilHtml(lang: Lang, gmina: Gmina): string {

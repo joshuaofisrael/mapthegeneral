@@ -17,10 +17,6 @@ export type Gmina = {
   powiatCode: string;
   /** PKW column „Wybierany organ”, or null when the file has no row. */
   office: string | null;
-  /** PKW column „Wybrany kandydat”, or null when the cell is empty or the row is absent. */
-  elected: string | null;
-  /** PKW column „Komitet zgłaszający kandydata”, or null when the cell is empty or the row is absent. */
-  committee: string | null;
   /** Sum of „Liczba mandatów” in the PKW gmina-council okręg file, or null when that file has no row. */
   seats: number | null;
   /** Senate okręg whose area sentence names this powiat as a whole unit. */

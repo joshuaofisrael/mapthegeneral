@@ -128,7 +128,7 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
     lang,
     title: `${item.name} — ${item.kind}`,
     kind: "gmina",
-    text: `${item.name} ${item.kind} ${item.code} ${item.powiatSlug} ${item.elected ?? ""}`,
+    text: `${item.name} ${item.kind} ${item.code} ${item.powiatSlug}`,
   }));
   const senat = allSenatOkregi().map((item) => ({
     path: senatOkregPath(lang, item.num),
