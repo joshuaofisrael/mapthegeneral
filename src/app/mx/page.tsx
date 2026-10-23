@@ -8,7 +8,7 @@ import { sourceById } from "@/data/mx/sources";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Mexico",
+  title: "Mexico — languages",
   description:
     "Mexico on Map the General: the federal election of 6 June 2027, in Spanish and English. Unofficial information.",
   path: "/mx/",

@@ -35,8 +35,12 @@ export default function HomePage() {
           Map the General
         </h1>
         <p className="mt-4 text-lg leading-8 text-ink-muted">
-          {SITE.name} is a nonpartisan information site for elections in first-world countries. It is
-          operated by {SITE.legalName}. It is not a government site and it does not tell you how to vote.
+          {SITE.name} is an unofficial, independent guide to elections in{" "}
+          <a className="font-medium text-navy underline" href="#countries">
+            the countries covered so far
+          </a>
+          . It is not affiliated with any government or election authority, and it does not tell you how
+          to vote.
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
       </section>
@@ -54,7 +58,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
+      <section id="countries">
         <h2 className="font-serif text-2xl font-semibold">Countries</h2>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           <li className="rounded-xl border border-line bg-paper-card p-5 shadow-card">

@@ -29,7 +29,7 @@ const FAQ = [
   {
     question: "Is this an official website?",
     answer:
-      "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+      "No. It is unofficial information on this site. Confirm it with the official election office.",
   },
 ];
 
@@ -41,7 +41,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "FAQ",
+    title: "United Kingdom FAQ",
     description:
       "Questions about the UK Parliament election and the 4 July 2024 result, answered from the Electoral Commission, legislation.gov.uk, GOV.UK and the UK Parliament.",
     path: "/gb/en/faq/",

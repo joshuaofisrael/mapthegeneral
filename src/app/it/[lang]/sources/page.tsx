@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${italyHome(lang)}sources/`;
   return italyMetadata({
-    title: lang === "it" ? "Fonti" : "Sources",
+    title: lang === "it" ? "Fonti, Italia" : "Italy sources",
     description:
       lang === "it"
         ? "Fonti ufficiali lette per le pagine italiane il 17 ottobre 2026: Costituzione, Gazzetta Ufficiale, ISTAT, Camera, Quirinale, Ministero dell'interno."

@@ -18,6 +18,7 @@ import { sourcesById } from "../src/data/au/sources";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 import { auHome, jurisdictionPath } from "../src/countries/au";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -98,6 +99,7 @@ function shell(input: {
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -115,7 +117,7 @@ ${input.body}
 <h2>Sources</h2>
 <ul>${sources}</ul>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. Australian data on this page is reused under the licences listed on <a href="/au/en/sources/">Licences and attribution</a>, including <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> material from the Australian Bureau of Statistics (© Commonwealth of Australia), the NSW Electoral Commission (© State of New South Wales through the NSW Electoral Commission) and the Victorian Electoral Commission. Unofficial, and not endorsed by the bodies named here.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}. Australian data on this page is reused under the licences listed on <a href="/au/en/sources/">Licences and attribution</a>, including <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> material from the Australian Bureau of Statistics (© Commonwealth of Australia), the NSW Electoral Commission (© State of New South Wales through the NSW Electoral Commission) and the Victorian Electoral Commission. Unofficial, and not endorsed by the bodies named here.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

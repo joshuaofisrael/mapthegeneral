@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/data/site";
+import { socialImageMetadata, socialImageUrl } from "@/lib/social";
 import { otherLangPath } from "./paths";
 import type { CaLang } from "./types";
 
@@ -32,11 +33,13 @@ export function caMetadata(input: {
       siteName: SITE.name,
       type: "website",
       locale: input.lang === "fr" ? "fr_CA" : "en_CA",
+      images: socialImageMetadata(),
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: socialTitle,
       description: input.description,
+      images: [socialImageUrl()],
     },
   };
 }

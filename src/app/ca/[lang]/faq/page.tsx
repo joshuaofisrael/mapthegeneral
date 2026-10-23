@@ -37,7 +37,7 @@ const FAQ = {
     {
       question: "Est-ce un site officiel ?",
       answer:
-        "Non. C’est une information non officielle de Joshua Israel Ventures LLC. Il faut la confirmer auprès du bureau électoral officiel.",
+        "Non. C’est une information non officielle de ce site. Il faut la confirmer auprès du bureau électoral officiel.",
     },
   ],
   en: [
@@ -69,7 +69,7 @@ const FAQ = {
     {
       question: "Is this an official site?",
       answer:
-        "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+        "No. It is unofficial information on this site. Confirm it with the official election office.",
     },
   ],
 } as const;
@@ -82,7 +82,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Questions fréquentes" : "FAQ",
+    title: lang === "fr" ? "Questions fréquentes, Canada" : "Canada FAQ",
     description:
       lang === "fr"
         ? "Questions sur la date du 15 octobre 2029, les résultats du 28 avril 2025 et le caractère non officiel de ces pages."

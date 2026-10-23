@@ -18,6 +18,7 @@ import { ui } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -25,6 +26,7 @@ const chunkPath = join(root, "src/data/italy/comuni-chunk1.json");
 const OFFICE = "https://dait.interno.gov.it/elezioni";
 const HTML_BUDGET = 27_000_000;
 const SOURCE_IDS = ["istat-comuni-chunk", "anagrafe", "collegi-comune-codes", "dait-speciale-19"];
+const duplicateComuneNames = new Set<string>();
 
 export type ComuneRecord = {
   code: string;
@@ -111,7 +113,8 @@ function shell(opts: {
 <meta property="og:url" content="${esc(absoluteUrl(opts.path))}">
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="${it ? "it_IT" : "en_GB"}">
+<meta property="og:locale" content="${it ? "it_IT" : "en_US"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -123,7 +126,7 @@ ${ADSENSE_HEAD_TAGS}
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${opts.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 </body>
 </html>
 `;
@@ -280,7 +283,9 @@ ${collegioBlock(lang, comune)}
   return shell({
     lang,
     path,
-    title: `${comune.name} · ${SITE.name}`,
+    title: duplicateComuneNames.has(comune.name)
+      ? `${comune.name}, ${comune.unitName} · ${SITE.name}`
+      : `${comune.name} · ${SITE.name}`,
     description: it
       ? `${comune.name}: comune ${comune.code}, ${comune.unitName}, ${region.istatName}. Informazione non ufficiale.`
       : `${comune.name}: municipality ${comune.code}, ${comune.unitName}, ${region.istatName}. Unofficial information.`,
@@ -435,7 +440,15 @@ function select(records: ComuneRecord[], multiCap: ChunkFile["multiCap"]): Comun
   return chosen;
 }
 
+function noteDuplicateComuneNames(list: ComuneRecord[]) {
+  duplicateComuneNames.clear();
+  const counts = new Map<string, number>();
+  for (const comune of list) counts.set(comune.name, (counts.get(comune.name) ?? 0) + 1);
+  for (const [name, count] of counts) if (count > 1) duplicateComuneNames.add(name);
+}
+
 function writePages(list: ComuneRecord[]) {
+  noteDuplicateComuneNames(list);
   const grouped = group(list);
   let pages = 0;
   let bytes = 0;

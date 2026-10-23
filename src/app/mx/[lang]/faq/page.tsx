@@ -42,7 +42,7 @@ const FAQ = {
     {
       question: "¿Es una web oficial?",
       answer:
-        "No. Es información no oficial de Joshua Israel Ventures LLC. Hay que confirmarla con el Instituto Nacional Electoral.",
+        "No. Es información no oficial de este sitio. Hay que confirmarla con el Instituto Nacional Electoral.",
     },
   ],
   en: [
@@ -78,7 +78,7 @@ const FAQ = {
     {
       question: "Is this an official website?",
       answer:
-        "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the National Electoral Institute.",
+        "No. It is unofficial information on this site. Confirm it with the National Electoral Institute.",
     },
   ],
 };
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${mexicoHome(lang)}faq/`;
   return pageMetadata({
-    title: lang === "es" ? "Preguntas frecuentes" : "FAQ",
+    title: lang === "es" ? "Preguntas frecuentes, México" : "Mexico FAQ",
     description:
       lang === "es"
         ? "Preguntas sobre la elección federal del 6 de junio de 2027, con respuestas tomadas de la página del INE."

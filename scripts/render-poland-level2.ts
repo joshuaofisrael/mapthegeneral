@@ -27,6 +27,7 @@ import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -105,6 +106,7 @@ function shell(input: {
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="${pl ? "pl_PL" : "en_US"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(input.crumbs)}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -117,7 +119,7 @@ ${ADSENSE_HEAD_TAGS}
 ${input.body}
 <p><strong>${esc(updated)}</strong> <a href="${esc(reportErrorHref(input.path))}">${pl ? "Zgłoś błąd" : "Report an error"}</a></p>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

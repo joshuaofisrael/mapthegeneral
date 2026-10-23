@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${polandHome(lang)}results/`;
   return polandMetadata({
-    title: lang === "pl" ? "Wyniki" : "Results",
+    title: lang === "pl" ? "Wyniki" : "Poland results",
     description:
       lang === "pl"
         ? "Przedruk obwieszczeń PKW o Sejmie i Senacie z 2023 r. oraz o Prezydencie z 2025 r. Strona nie ogłasza zwycięzcy wyborów z 2027 r."

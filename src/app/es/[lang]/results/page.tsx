@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}results/`;
   return pageMetadata({
-    title: lang === "es" ? "Resultados" : "Results",
+    title: lang === "es" ? "Resultados de España" : "Spain results",
     description:
       lang === "es"
         ? "Resultados de las elecciones del 29 de noviembre de 2026. No hay escrutinio que reproducir. Esta página no proclama ganadores."

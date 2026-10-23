@@ -16,6 +16,7 @@ import { ui } from "../src/data/mx/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -140,6 +141,7 @@ function page(lang: Lang, district: District): string {
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="${es ? "es_MX" : "en_US"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -174,7 +176,7 @@ ${indigena}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

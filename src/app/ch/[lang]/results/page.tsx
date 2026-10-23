@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang((await params).lang);
   const copy = ui(lang);
   return chMetadata({
-    title: copy.results,
+    title:
+      lang === "fr" ? "Résultats en Suisse" : lang === "it" ? "Risultati in Svizzera" : lang === "en" ? "Switzerland results" : copy.results,
     description:
       lang === "de"
         ? "Mandate des Nationalrats 2023, wie sie das BFS druckt. Für den 24. Oktober 2027 gibt es kein Ergebnis. Diese Seite ruft keine Wahl aus."

@@ -59,7 +59,7 @@ const byPath = new Map(indexed.map((item) => [item.path, item]));
 const lines = [
   `# ${SITE.name}`,
   "",
-  `> ${SITE.description} ${SITE.brandSentence} Business address: ${SITE.location}. ${SITE.officialNotUs}`,
+  `> ${SITE.description} Publisher: ${SITE.name}. Business address: ${SITE.location}. ${SITE.officialNotUs}`,
   "",
   "## Pages",
   "",

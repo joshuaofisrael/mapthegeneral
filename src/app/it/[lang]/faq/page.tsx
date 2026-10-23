@@ -33,7 +33,7 @@ const FAQ = {
     {
       question: "È un sito ufficiale?",
       answer:
-        "No. È informazione non ufficiale di Joshua Israel Ventures LLC. Va confermata con l'ufficio elettorale ufficiale.",
+        "No. È informazione non ufficiale di questo sito. Va confermata con l'ufficio elettorale ufficiale.",
     },
   ],
   en: [
@@ -60,7 +60,7 @@ const FAQ = {
     {
       question: "Is this an official website?",
       answer:
-        "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+        "No. It is unofficial information on this site. Confirm it with the official election office.",
     },
   ],
 };
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${italyHome(lang)}faq/`;
   return italyMetadata({
-    title: lang === "it" ? "Domande frequenti" : "FAQ",
+    title: lang === "it" ? "Domande frequenti, Italia" : "Italy FAQ",
     description:
       lang === "it"
         ? "Domande sulla Camera, sul Senato e sulla prossima elezione politica, con risposte prese dalla Costituzione e dai decreti letti."

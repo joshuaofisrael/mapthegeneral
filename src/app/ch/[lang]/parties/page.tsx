@@ -15,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang((await params).lang);
   const copy = ui(lang);
   return chMetadata({
-    title: copy.parties,
+    title:
+      lang === "fr" ? "Partis en Suisse" : lang === "it" ? "Partiti in Svizzera" : lang === "en" ? "Switzerland parties" : copy.parties,
     description:
       lang === "de"
         ? "Das Parteienregister der Bundeskanzlei wird hier nicht abgedruckt. Die Nationalratswahl 2027 hat noch keine gelesene Kandidaturenliste."

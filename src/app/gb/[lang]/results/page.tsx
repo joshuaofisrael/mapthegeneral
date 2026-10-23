@@ -21,7 +21,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "Results",
+    title: "United Kingdom results",
     description:
       "Published results of the UK general election of 4 July 2024. There is no count for a later UK Parliament election. This page does not call an election.",
     path: "/gb/en/results/",

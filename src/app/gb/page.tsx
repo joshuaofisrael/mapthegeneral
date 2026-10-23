@@ -9,7 +9,7 @@ import { gbMetadata } from "@/data/gb/seo";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 
 export const metadata = gbMetadata({
-  title: "United Kingdom",
+  title: "United Kingdom — language",
   description:
     "United Kingdom on Map the General: the UK Parliament general election, no later than 15 August 2029, in English. Unofficial information.",
   path: "/gb/",

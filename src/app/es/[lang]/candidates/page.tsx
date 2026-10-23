@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}candidates/`;
   return pageMetadata({
-    title: lang === "es" ? "Candidaturas" : "Candidates",
+    title: lang === "es" ? "Candidaturas" : "Spain candidates",
     description:
       lang === "es"
         ? "Índice de candidaturas por circunscripción. Las listas proclamadas del 29 de noviembre de 2026 aún no están en el BOE en la lectura del 17 de octubre de 2026."

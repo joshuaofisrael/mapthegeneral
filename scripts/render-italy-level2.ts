@@ -27,6 +27,7 @@ import { ui, unitLabel } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -100,7 +101,8 @@ function shell(opts: {
 <meta property="og:url" content="${esc(absoluteUrl(opts.path))}">
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="${it ? "it_IT" : "en_GB"}">
+<meta property="og:locale" content="${it ? "it_IT" : "en_US"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -112,7 +114,7 @@ ${ADSENSE_HEAD_TAGS}
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${opts.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

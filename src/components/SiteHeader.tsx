@@ -21,7 +21,7 @@ export function SiteHeader() {
           <span className="block font-serif text-lg font-semibold tracking-tight text-ink sm:text-xl">
             {SITE.name}
           </span>
-          <span className="block truncate text-xs text-ink-muted">Unofficial election guide</span>
+          <span className="block truncate text-xs text-ink-muted">Unofficial, independent guide</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex" aria-label="Primary">
           {PRIMARY_NAV.map((item) => (

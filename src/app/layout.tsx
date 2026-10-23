@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   applicationName: SITE.name,
-  authors: [{ name: SITE.legalName }],
-  creator: SITE.legalName,
-  publisher: SITE.legalName,
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  publisher: SITE.name,
   robots: { index: true, follow: true },
 };
 
@@ -38,9 +38,9 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": ORG_ID,
-  name: SITE.legalName,
-  legalName: SITE.legalName,
-  url: SITE.url,
+  name: SITE.name,
+  url: `${SITE.url}/`,
+  description: SITE.description,
   address: {
     "@type": "PostalAddress",
     streetAddress: SITE.streetAddress,
@@ -49,24 +49,12 @@ const organizationJsonLd = {
     postalCode: SITE.postalCode,
     addressCountry: SITE.addressCountry,
   },
-  identifier: {
-    "@type": "PropertyValue",
-    name: "Florida Sunbiz Document Number",
-    value: SITE.sunbizDocumentNumber,
-  },
-  brand: {
-    "@type": "Brand",
-    name: SITE.name,
-    url: SITE.url,
-  },
-  description: `Florida limited liability company that owns and operates informational websites. ${SITE.name} is a brand of ${SITE.legalName}, not a separate company.`,
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE.name,
-  alternateName: `${SITE.name} by ${SITE.legalName}`,
   url: `${SITE.url}/`,
   description: SITE.description,
   inLanguage: ["en", "es", "pl", "fr", "it", "de"],

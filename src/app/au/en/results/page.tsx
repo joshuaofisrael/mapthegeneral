@@ -7,7 +7,7 @@ import { sourceById, sourcesById } from "@/data/au/sources";
 import { auHome } from "@/countries/au";
 
 export const metadata = auPageMetadata({
-  title: "Results",
+  title: "Australia results",
   description:
     "House of Representatives final results for the federal election of 3 May 2025, copied from the AEC tally room. This page does not call a race. Unofficial information.",
   path: "/au/en/results",

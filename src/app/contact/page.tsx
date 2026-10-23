@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { ReportedPageNote } from "@/components/ReportedPageNote";
 import { ContactForm } from "@/components/ContactForm";
-import { SITE } from "@/data/site";
+import { SITE } from "@/data/legal-entity";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({

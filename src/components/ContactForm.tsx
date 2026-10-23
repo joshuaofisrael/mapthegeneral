@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { CONTACT_FORM_ACTION } from "@/data/contact";
-import { absoluteUrl, SITE } from "@/data/site";
+import { SITE } from "@/data/legal-entity";
+import { absoluteUrl } from "@/data/site";
 import { ReportedPageField } from "@/components/ReportedPageField";
 
 export { CONTACT_FORM_ACTION, FORMSUBMIT_PRIVACY, FORMSUBMIT_URL } from "@/data/contact";

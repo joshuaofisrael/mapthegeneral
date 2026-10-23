@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 import {
   isOnlyMunicipalityWithCapitalPopulation,
   municipalityNeighbors,
@@ -20,6 +21,13 @@ import { communityPath, municipalityPath, provincePath, spainHome } from "../src
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const OFFICE = "https://www.juntaelectoralcentral.es/";
+const DUPLICATE_MUNICIPALITY_NAMES = (() => {
+  const counts = new Map<string, number>();
+  for (const municipality of pageMunicipalities()) {
+    counts.set(municipality.name, (counts.get(municipality.name) ?? 0) + 1);
+  }
+  return new Set([...counts].filter(([, count]) => count > 1).map(([name]) => name));
+})();
 const SOURCE_IDS = ["ine-29005", "rd-1117-2025", "rd-207-2023", "loreg-boe", "mpt-alcaldes-2023"] as const;
 
 function esc(value: string): string {
@@ -66,7 +74,9 @@ function page(lang: Lang, municipality: Municipality, province: Province, commun
   const description = es
     ? `${municipality.name} (${municipality.code}): Total ${population} en la tabla 29005 del INE, periodo 2025. Información no oficial.`
     : `${municipality.name} (${municipality.code}): Total ${population} in INE table 29005, period 2025. Unofficial information.`;
-  const title = `${municipality.name} · ${SITE.name}`;
+  const title = DUPLICATE_MUNICIPALITY_NAMES.has(municipality.name)
+    ? `${municipality.name}, ${province.decreeName} · ${SITE.name}`
+    : `${municipality.name} · ${SITE.name}`;
   const canonical = absoluteUrl(path);
   const capitalNote = sameName
     ? es
@@ -109,6 +119,7 @@ function page(lang: Lang, municipality: Municipality, province: Province, commun
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="${es ? "es_ES" : "en_US"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -138,7 +149,7 @@ ${capitalNote ? `<p>${esc(capitalNote)}</p>` : ""}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

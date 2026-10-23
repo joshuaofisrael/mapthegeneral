@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/data/site";
 import type { Lang } from "@/data/spain/types";
+import { socialImageMetadata, socialImageUrl } from "@/lib/social";
 
 export function pageMetadata(input: {
   title: string;
@@ -21,6 +22,16 @@ export function pageMetadata(input: {
       : undefined;
 
   const socialTitle = input.path === "/" ? `${SITE.name} · ${SITE.tagline}` : `${input.title} · ${SITE.name}`;
+  const locale =
+    input.path.startsWith("/mx/") && input.lang === "es"
+      ? "es_MX"
+      : input.path.startsWith("/au/")
+        ? "en_AU"
+        : input.path.startsWith("/gb/")
+          ? "en_GB"
+          : input.lang === "es"
+            ? "es_ES"
+            : "en_US";
 
   return {
     title: input.path === "/" ? { absolute: socialTitle } : input.title,
@@ -36,12 +47,14 @@ export function pageMetadata(input: {
       url,
       siteName: SITE.name,
       type: "website",
-      locale: input.lang === "es" ? "es_ES" : "en_US",
+      locale,
+      images: socialImageMetadata(),
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: socialTitle,
       description: input.description,
+      images: [socialImageUrl()],
     },
   };
 }

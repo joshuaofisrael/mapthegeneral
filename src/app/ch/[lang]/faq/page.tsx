@@ -115,7 +115,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang((await params).lang);
   const copy = ui(lang);
   return chMetadata({
-    title: copy.faq,
+    title:
+      lang === "fr"
+        ? "Questions fréquentes, Suisse"
+        : lang === "it"
+          ? "Domande frequenti, Svizzera"
+          : lang === "en"
+            ? "Switzerland FAQ"
+            : copy.faq,
     description:
       lang === "de"
         ? "Kurze Antworten zur Nationalratswahl vom 24. Oktober 2027, gebunden an Verfassung, Verordnung und Bundesrat."

@@ -36,6 +36,7 @@ import { sourcesById } from "../src/data/gb/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 import { formatIsoDate } from "../src/lib/format";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -108,6 +109,7 @@ function page(input: {
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
+${socialMetaTags()}
 <link rel="stylesheet" href="/gb/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
@@ -120,7 +122,7 @@ ${ADSENSE_HEAD_TAGS}
 <p><strong>Records read 18 October 2026.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
 ${input.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. ${input.licence} Unofficial, and not endorsed by the bodies named here.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}. ${input.licence} Unofficial, and not endorsed by the bodies named here.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
