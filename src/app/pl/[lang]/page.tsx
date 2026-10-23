@@ -126,6 +126,10 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
             : "That window is not the by-election. The Commission service read on 18 October 2026 is titled “Wybory uzupełniające do Senatu w okręgu wyborczym nr 20” and prints the date 22 November 2026. It names the President’s order of 25 September 2026 calling that election. This page prints no poll, projection, or result of that vote."}
         </p>
         <p>
+          <Link className="text-navy underline" href={`${path}elections/senat-20-2026/`}>
+            {pl ? "Wybory uzupełniające, 22 listopada 2026 r." : "By-election, 22 November 2026"}
+          </Link>
+          {" · "}
           <Link className="text-navy underline" href={`${path}senat/20/`}>
             {pl ? "Okręg senacki nr 20" : "Senate constituency 20"}
           </Link>

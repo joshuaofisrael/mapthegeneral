@@ -98,6 +98,10 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
             : "Separately, the Commission service read on 18 October 2026 gives a Senate by-election in constituency 20 on 22 November 2026. That is not a day inside the 2027 window. This page prints no polls or projections."}
         </p>
         <p>
+          <Link className="text-navy underline" href={`${polandHome(lang)}elections/senat-20-2026/`}>
+            {pl ? "Wybory uzupełniające, 22 listopada 2026 r." : "By-election, 22 November 2026"}
+          </Link>
+          {" · "}
           <Link className="text-navy underline" href={senatOkregPath(lang, 20)}>
             {pl ? "Okręg senacki nr 20" : "Senate constituency 20"}
           </Link>
