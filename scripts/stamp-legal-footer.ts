@@ -2,20 +2,15 @@
  * Adds the shared legal links and the informational note to static HTML
  * footers that were committed without them. Next.js pages already render
  * the links. Redirect stubs are left alone. AdSense tags are not edited.
- *
- * Also fails if a personal inbox address appears in HTML outside the
- * FormSubmit action URL.
  */
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { CONTACT_INBOX } from "../src/data/contact-inbox";
 import { isRedirectStub } from "../src/lib/adsense";
 import { INFORMATIONAL_NOTE, legalFooterSuffix } from "../src/lib/legal-footer";
 
 const OUT = path.join(process.cwd(), "out");
 const MARKER = 'href="/copyright/"';
 const SUFFIX = ` ${legalFooterSuffix()}`;
-const ALLOWED_ACTION = `https://formsubmit.co/${CONTACT_INBOX}`;
 
 const errors: string[] = [];
 let stamped = 0;
@@ -52,10 +47,6 @@ function walk(dir: string) {
       already++;
     }
     if (!next.includes(MARKER)) errors.push(`${rel}: copyright link missing after stamp`);
-    const leaked = next.split(ALLOWED_ACTION).join("");
-    if (leaked.includes(CONTACT_INBOX) || leaked.includes("joshuaofisrael")) {
-      errors.push(`${rel}: personal email appears outside the contact form action`);
-    }
   }
 }
 

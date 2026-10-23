@@ -1,12 +1,9 @@
 import { Suspense } from "react";
-import { CONTACT_INBOX } from "@/data/contact-inbox";
+import { CONTACT_FORM_ACTION } from "@/data/contact";
 import { absoluteUrl, SITE } from "@/data/site";
 import { ReportedPageField } from "@/components/ReportedPageField";
 
-/** FormSubmit endpoint. Static export, so this is a plain HTML POST form. */
-export const CONTACT_FORM_ACTION = `https://formsubmit.co/${CONTACT_INBOX}`;
-export const FORMSUBMIT_URL = "https://formsubmit.co/";
-export const FORMSUBMIT_PRIVACY = "https://formsubmit.co/privacy.pdf";
+export { CONTACT_FORM_ACTION, FORMSUBMIT_PRIVACY, FORMSUBMIT_URL } from "@/data/contact";
 
 const inputClass = "mt-1 w-full rounded-md border border-line bg-white px-3 py-2 text-ink";
 
@@ -15,7 +12,7 @@ export function ContactForm() {
     <form
       action={CONTACT_FORM_ACTION}
       method="POST"
-      className="not-prose my-6 rounded-xl border border-line bg-paper-card p-5 shadow-card"
+      className="relative not-prose my-6 rounded-xl border border-line bg-paper-card p-5 shadow-card"
     >
       <input type="hidden" name="_subject" value={`New message from ${SITE.name} (mapthegeneral.com)`} />
       <input type="hidden" name="_next" value={absoluteUrl("/contact/thanks")} />
@@ -24,15 +21,13 @@ export function ContactForm() {
       <Suspense fallback={null}>
         <ReportedPageField />
       </Suspense>
-      {/* Honeypot: hidden from people; bots that fill it are dropped by FormSubmit. */}
-      <input
-        type="text"
-        name="_honey"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        style={{ display: "none" }}
-      />
+      {/* Honeypot: off-screen, ignored by people; FormSubmit drops the submission if it is filled. */}
+      <div aria-hidden="true" className="absolute -left-[10000px] h-px w-px overflow-hidden">
+        <label>
+          Company
+          <input type="text" name="_honey" tabIndex={-1} autoComplete="off" defaultValue="" />
+        </label>
+      </div>
       <div className="grid gap-4">
         <label className="block text-sm">
           <span className="font-medium text-ink">Name</span>
