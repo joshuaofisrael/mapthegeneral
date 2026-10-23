@@ -23,6 +23,7 @@ import {
 import { padDistrict } from "../src/data/mx/distritos";
 import { sourcesById } from "../src/data/mx/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -115,6 +116,7 @@ function shell(opts: {
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${banner}</p>

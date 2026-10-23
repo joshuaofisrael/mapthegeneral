@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { DIVISIONS, divisionName } from "../src/data/ca/level2";
 import {
   CSD_TYPE_LABEL,
@@ -157,6 +158,7 @@ function shell(input: {
 <meta property="og:locale" content="${lang === "fr" ? "fr_CA" : "en_CA"}">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(crumbs)}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${banner}</p>

@@ -3,6 +3,7 @@ import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteShell } from "@/components/SiteShell";
 import { SITE } from "@/data/site";
+import { ADSENSE_CLIENT, ADSENSE_SCRIPT_SRC } from "@/lib/adsense";
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -86,6 +87,10 @@ const websiteJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+        <script async src={ADSENSE_SCRIPT_SRC} crossOrigin="anonymous" />
+      </head>
       <body className={`${sourceSans.variable} ${sourceSerif.variable} font-sans`}>
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <SiteShell>{children}</SiteShell>

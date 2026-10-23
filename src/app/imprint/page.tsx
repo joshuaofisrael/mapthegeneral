@@ -28,7 +28,7 @@ export default function ImprintPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Legal notice", path: "/imprint" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Legal notice" }]} />
       <PageHeader
-        eyebrow={`Last updated ${SITE.lastUpdated}`}
+        eyebrow="Last updated 23 October 2026"
         title="Legal notice"
         lede="Aviso legal · Note legali · Nota prawna · Publisher details"
       />
@@ -45,7 +45,7 @@ export default function ImprintPage() {
         <p>
           {SITE.brandNote} The publisher is responsible for the content of this site. {SITE.name} is
           not run by, paid for by, or acting for any party, candidate, campaign, third-party campaigner
-          or government. It carries no paid advertising and no electoral advertising.
+          or government. It may show Google display advertisements. It carries no electoral advertising.
         </p>
         <h2>What this site does not publish</h2>
         <ul>
