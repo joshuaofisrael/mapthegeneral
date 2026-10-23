@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { socialMetaTags } from "../src/lib/social";
 import {
   districtName,
   districtNeighbors,
@@ -164,6 +165,7 @@ function shell(input: {
 <meta property="og:site_name" content="${esc(SITE.name)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="${lang === "fr" ? "fr_CA" : "en_CA"}">
+${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(crumbs)}</script>
 ${ADSENSE_HEAD_TAGS}

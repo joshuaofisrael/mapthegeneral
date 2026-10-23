@@ -22,7 +22,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Résultats" : "Results",
+    title: lang === "fr" ? "Résultats au Canada" : "Canada results",
     description:
       lang === "fr"
         ? "Reproduction des résultats officiels du scrutin du 28 avril 2025 publiés par Élections Canada. Cette page ne déclare pas un vainqueur."

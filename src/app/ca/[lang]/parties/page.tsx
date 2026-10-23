@@ -15,7 +15,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Partis" : "Parties",
+    title: lang === "fr" ? "Partis au Canada" : "Canada parties",
     description:
       lang === "fr"
         ? "Partis politiques enregistrés imprimés par Élections Canada le 17 octobre 2026. Ce n’est pas une liste de candidatures pour 2029."

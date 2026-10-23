@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}sources/`;
   return pageMetadata({
-    title: lang === "es" ? "Fuentes" : "Sources",
+    title: lang === "es" ? "Fuentes de España" : "Spain sources",
     description:
       lang === "es"
         ? "Fuentes oficiales leídas para las páginas de España el 17 de octubre de 2026: BOE, Junta Electoral Central, Infoelectoral, INE, Congreso y Senado."

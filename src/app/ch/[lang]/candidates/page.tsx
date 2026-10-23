@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang((await params).lang);
   const copy = ui(lang);
   return chMetadata({
-    title: copy.candidates,
+    title: lang === "en" ? "Switzerland candidates" : copy.candidates,
     description:
       lang === "de"
         ? "Keine Kandidaturenliste für den 24. Oktober 2027 war am 17. Oktober 2026 gelesen. Diese Seite nennt keine Namen."

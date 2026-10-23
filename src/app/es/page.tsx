@@ -8,7 +8,7 @@ import { sourceById } from "@/data/spain/sources";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Spain",
+  title: "Spain — languages",
   description:
     "Spain on Map the General: the general election of 29 November 2026, in Spanish and English. Unofficial information.",
   path: "/es",

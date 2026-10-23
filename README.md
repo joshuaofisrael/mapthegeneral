@@ -1,6 +1,6 @@
 # Map the General
 
-Public, nonpartisan election guide for first-world countries.
+Public, nonpartisan election guide for the countries covered so far: Australia, Canada, Italy, Mexico, Poland, Spain, Switzerland, and the United Kingdom.
 
 **Map the General** is a brand of **Joshua Israel Ventures LLC**, a Florida limited liability company (Sunbiz document number **L26000261819**, ACTIVE). It is not a separate company and is not claimed here as a filed DBA or trademark.
 

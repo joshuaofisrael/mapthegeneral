@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${italyHome(lang)}faq/`;
   return italyMetadata({
-    title: lang === "it" ? "Domande frequenti" : "FAQ",
+    title: lang === "it" ? "Domande frequenti, Italia" : "Italy FAQ",
     description:
       lang === "it"
         ? "Domande sulla Camera, sul Senato e sulla prossima elezione politica, con risposte prese dalla Costituzione e dai decreti letti."

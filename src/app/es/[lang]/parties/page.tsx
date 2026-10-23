@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}parties/`;
   return pageMetadata({
-    title: lang === "es" ? "Partidos" : "Parties",
+    title: lang === "es" ? "Partidos" : "Spain parties",
     description:
       lang === "es"
         ? "Las candidaturas de las elecciones del 29 de noviembre de 2026 no están proclamadas en las fuentes leídas el 17 de octubre de 2026. Esta página no enumera partidos."

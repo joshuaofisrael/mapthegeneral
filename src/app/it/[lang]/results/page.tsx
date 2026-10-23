@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${italyHome(lang)}results/`;
   return italyMetadata({
-    title: lang === "it" ? "Risultati" : "Results",
+    title: lang === "it" ? "Risultati in Italia" : "Italy results",
     description:
       lang === "it"
         ? "Cifre dell'archivio Eligendo per la Camera del 25 settembre 2022, area Italia esclusa la Valle d'Aosta. Questa pagina non proclama un vincitore."

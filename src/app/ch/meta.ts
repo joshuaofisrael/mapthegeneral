@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/data/site";
+import { socialImageMetadata, socialImageUrl } from "@/lib/social";
 import { CH_LANGS, type ChLang } from "../../../data/ch/types";
 
 const OG: Record<ChLang, string> = {
@@ -31,11 +32,13 @@ export function chMetadata(input: { title: string; description: string; path: st
       siteName: SITE.name,
       type: "website",
       locale: OG[input.lang],
+      images: socialImageMetadata(),
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: socialTitle,
       description: input.description,
+      images: [socialImageUrl()],
     },
   };
 }

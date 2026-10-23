@@ -14,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang((await params).lang);
   const copy = ui(lang);
   return chMetadata({
-    title: copy.sources,
+    title:
+      lang === "fr" ? "Sources, Suisse" : lang === "it" ? "Fonti, Svizzera" : lang === "en" ? "Switzerland sources" : copy.sources,
     description:
       lang === "de"
         ? "Amtliche Quellen der Schweiz-Seiten, gelesen am 17. Oktober 2026: Bundesverfassung, Bundesblatt, Bundesrat, Bundeskanzlei, Parlament und BFS."

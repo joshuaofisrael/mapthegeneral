@@ -82,7 +82,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Questions fréquentes" : "FAQ",
+    title: lang === "fr" ? "Questions fréquentes, Canada" : "Canada FAQ",
     description:
       lang === "fr"
         ? "Questions sur la date du 15 octobre 2029, les résultats du 28 avril 2025 et le caractère non officiel de ces pages."

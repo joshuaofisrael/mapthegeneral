@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "../../src/data/site";
+import { socialImageMetadata, socialImageUrl } from "../../src/lib/social";
 import type { Lang } from "./types";
 
 export function polandMetadata(input: {
@@ -32,11 +33,13 @@ export function polandMetadata(input: {
       siteName: SITE.name,
       type: "website",
       locale: input.lang === "pl" ? "pl_PL" : "en_US",
+      images: socialImageMetadata(),
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: socialTitle,
       description: input.description,
+      images: [socialImageUrl()],
     },
   };
 }

@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${mexicoHome(lang)}faq/`;
   return pageMetadata({
-    title: lang === "es" ? "Preguntas frecuentes" : "FAQ",
+    title: lang === "es" ? "Preguntas frecuentes, México" : "Mexico FAQ",
     description:
       lang === "es"
         ? "Preguntas sobre la elección federal del 6 de junio de 2027, con respuestas tomadas de la página del INE."

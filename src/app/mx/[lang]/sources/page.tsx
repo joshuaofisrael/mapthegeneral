@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${mexicoHome(lang)}sources/`;
   return pageMetadata({
-    title: lang === "es" ? "Fuentes" : "Sources",
+    title: lang === "es" ? "Fuentes de México" : "Mexico sources",
     description:
       lang === "es"
         ? "Fuentes oficiales de las páginas de México: INE, INEGI, Diario Oficial, Cámara de Diputados y Presidencia, con la fecha de lectura de cada ficha."

@@ -13,7 +13,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Sources" : "Sources",
+    title: lang === "fr" ? "Sources du Canada" : "Canada sources",
     description:
       lang === "fr"
         ? "Sources officielles des pages du Canada, avec la date de lecture de chaque source."

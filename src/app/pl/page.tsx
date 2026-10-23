@@ -8,7 +8,7 @@ import { sourceById } from "../../../data/pl/sources";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Poland",
+  title: "Poland — languages",
   description:
     "Poland on Map the General: the Sejm and Senate election window of 14 October to 12 November 2027, in Polish and English. Unofficial information.",
   path: "/pl/",

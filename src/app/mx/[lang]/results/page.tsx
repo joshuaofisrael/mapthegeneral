@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${mexicoHome(lang)}results/`;
   return pageMetadata({
-    title: lang === "es" ? "Resultados" : "Results",
+    title: lang === "es" ? "Resultados de México" : "Mexico results",
     description:
       lang === "es"
         ? "Resultados de la elección del 6 de junio de 2027. No hay escrutinio que reproducir. Esta página no canta la elección."

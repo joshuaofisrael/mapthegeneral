@@ -8,7 +8,7 @@ import { sourceById } from "@/data/ca/sources";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Canada",
+  title: "Canada — languages",
   description:
     "Canada on Map the General: the federal general election fixed for 15 October 2029, in English and French. Unofficial information.",
   path: "/ca",

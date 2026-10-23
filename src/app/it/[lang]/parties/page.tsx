@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${italyHome(lang)}parties/`;
   return italyMetadata({
-    title: lang === "it" ? "Partiti" : "Parties",
+    title: lang === "it" ? "Partiti in Italia" : "Italy parties",
     description:
       lang === "it"
         ? "Questa consegna non elenca i partiti. Le candidature non sono riprodotte."

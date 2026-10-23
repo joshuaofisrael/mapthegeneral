@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/data/site";
+import { socialImageMetadata, socialImageUrl } from "@/lib/social";
 import type { ItLang } from "./types";
 
 export function italyMetadata(input: {
@@ -28,7 +29,13 @@ export function italyMetadata(input: {
       siteName: SITE.name,
       type: "website",
       locale: input.lang === "it" ? "it_IT" : "en_US",
+      images: socialImageMetadata(),
     },
-    twitter: { card: "summary", title: socialTitle, description: input.description },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description: input.description,
+      images: [socialImageUrl()],
+    },
   };
 }

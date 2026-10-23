@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}faq/`;
   return pageMetadata({
-    title: lang === "es" ? "Preguntas frecuentes" : "FAQ",
+    title: lang === "es" ? "Preguntas frecuentes, España" : "Spain FAQ",
     description:
       lang === "es"
         ? "Preguntas sobre la elección del 29 de noviembre de 2026, con respuestas tomadas de los decretos y de la Junta Electoral Central."

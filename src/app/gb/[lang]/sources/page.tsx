@@ -11,7 +11,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "Sources",
+    title: "United Kingdom sources",
     description:
       "Official sources for the United Kingdom pages: legislation.gov.uk, the Electoral Commission, UK Parliament, the Scottish Parliament, the Senedd, the Northern Ireland Assembly, GOV.UK and the ONS.",
     path: "/gb/en/sources/",

@@ -9,7 +9,7 @@ export const SITE = {
   name: "Map the General",
   tagline: "A global, nonpartisan election guide",
   description:
-    "Unofficial, sourced election pages for first-world countries. Spain’s general election is Sunday, 29 November 2026. Map the General is a brand of Joshua Israel Ventures LLC. Not an official election website.",
+    "Unofficial, independent election pages for the countries covered so far. Spain’s general election is Sunday, 29 November 2026. Map the General is a brand of Joshua Israel Ventures LLC. Not an official election website.",
   url: publicSiteUrl(),
   brandNote:
     "Map the General is a brand of Joshua Israel Ventures LLC. It is only a brand name: it is not a separate company and not a DBA or fictitious name. All business on and through this site is done by Joshua Israel Ventures LLC.",

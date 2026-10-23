@@ -14,7 +14,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "Parties",
+    title: "United Kingdom parties",
     description:
       "Parties with constituencies won on 4 July 2024, and current House of Commons party names from the UK Parliament Members API. Unofficial information.",
     path: "/gb/en/parties/",
