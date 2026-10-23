@@ -1,7 +1,6 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { SITE } from "@/data/site";
 
 function safeReportPath(value: string | null): string | null {
   if (!value) return null;
@@ -15,14 +14,10 @@ export function ReportedPageNote() {
   const path = safeReportPath(useSearchParams().get("url"));
   if (!path) return null;
 
-  const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(
-    `${SITE.emailSubject} Error report`,
-  )}&body=${encodeURIComponent(`Page: ${path}\n\nWhat should be corrected:\n`)}`;
-
   return (
     <p>
-      You are reporting an error on <strong>{path}</strong>. <a href={mailto}>Email this report</a>. The
-      message includes that page address.
+      You are reporting an error on <strong>{path}</strong>. The form includes that page address. Send
+      the correction there. See the <a href="/copyright/#corrections">corrections policy</a>.
     </p>
   );
 }

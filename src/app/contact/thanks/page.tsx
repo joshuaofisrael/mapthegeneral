@@ -2,7 +2,7 @@ import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import { contactMailto, SITE } from "@/data/site";
+import { SITE } from "@/data/site";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -27,9 +27,9 @@ export default function ContactThanksPage() {
       <PageHeader eyebrow="Contact" title="Thank you" lede="Your message was sent." />
       <div className="prose-legal">
         <p>
-          Thank you for contacting {SITE.name}. Your message was delivered to {SITE.legalName} by
-          email, and we reply by email. If you need to add anything, email{" "}
-          <a href={contactMailto()}>{SITE.email}</a>.
+          Thank you for contacting {SITE.name}. Your message was delivered to {SITE.legalName}, and we
+          reply by email. If you need to add anything, use the <Link href="/contact/">contact form</Link>{" "}
+          again.
         </p>
         <p>
           We are not an election office. Confirm dates, lists, and results with the official office

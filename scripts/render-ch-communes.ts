@@ -9,6 +9,7 @@ import { sourcesById } from "../data/ch/sources";
 import type { ChLang } from "../data/ch/types";
 import { localDate, trustCopy, ui } from "../data/ch/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import {
   communeHeading,
@@ -230,7 +231,7 @@ ${input.body}
 <ul>${sources}</ul>
 <p>${esc(attribution(input.lang))}</p>
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

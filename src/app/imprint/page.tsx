@@ -2,7 +2,7 @@ import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import { contactMailto, SITE } from "@/data/site";
+import { SITE } from "@/data/site";
 import { ELECTION_WINDOWS } from "@/data/election-law";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
@@ -40,12 +40,13 @@ export default function ImprintPage() {
           <br />
           {SITE.location}, United States.
           <br />
-          Email: <a href={contactMailto()}>{SITE.email}</a> · <Link href="/contact/">Contact form</Link>
+          <Link href="/contact/">Contact form</Link>
         </p>
         <p>
           {SITE.brandNote} The publisher is responsible for the content of this site. {SITE.name} is
           not run by, paid for by, or acting for any party, candidate, campaign, third-party campaigner
-          or government. It may show Google display advertisements. It carries no electoral advertising.
+          or government. It may show Google display advertisements. It does not sell electoral
+          advertising. See the <Link href="/advertising/">advertising disclosure</Link>.
         </p>
         <h2>What this site does not publish</h2>
         <ul>
@@ -77,7 +78,8 @@ export default function ImprintPage() {
         <h2>Related pages</h2>
         <p>
           <Link href="/privacy/">Privacy</Link> · <Link href="/disclaimer/">Disclaimer</Link> ·{" "}
-          <Link href="/terms/">Terms</Link> · <Link href="/about/">About</Link>
+          <Link href="/terms/">Terms</Link> · <Link href="/copyright/">Copyright</Link> ·{" "}
+          <Link href="/advertising/">Advertising</Link> · <Link href="/about/">About</Link>
         </p>
       </div>
     </div>

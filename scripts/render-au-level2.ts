@@ -19,6 +19,7 @@ import {
 import { JURISDICTIONS, alphaJurisdictions } from "../src/data/au/places";
 import { sourcesById } from "../src/data/au/sources";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { auHome, jurisdictionPath } from "../src/countries/au";
 
@@ -111,7 +112,7 @@ ${input.body}
 <h2>Sources</h2>
 <ul>${sources}</ul>
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
