@@ -215,6 +215,30 @@ export const SOURCES: SourceRef[] = [
     url: "https://dziennikustaw.gov.pl/DU/2020/1331",
     readOn: READ_L3,
   },
+  {
+    id: "postanowienie-senat-20-pdf",
+    name: "Postanowienie Prezydenta Rzeczypospolitej Polskiej z dnia 25 września 2026 r. w sprawie zarządzenia wyborów uzupełniających do Senatu (Dz.U. 2026 poz. 1255), plik PDF w serwisie wyborów",
+    url: "https://wybory.gov.pl/senat20261122/statics/PKW_AKTUALNOSCI/uploaded_files/1790383652_postanowienie.pdf",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "pkw-senat-20-kandydaci",
+    name: "Państwowa Komisja Wyborcza, plik kandydaci_senat_utf8.csv w archiwum kandydaci_senat_csv.zip (wybory uzupełniające do Senatu, okręg nr 20)",
+    url: "https://wybory.gov.pl/senat20261122/data/csv/kandydaci_senat_csv.1791978806.zip",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "pkw-senat-20-okregi",
+    name: "Państwowa Komisja Wyborcza, plik okregi_senat_utf8.csv w archiwum okregi_senat_csv.zip (wybory uzupełniające do Senatu, okręg nr 20)",
+    url: "https://wybory.gov.pl/senat20261122/data/csv/okregi_senat_csv.1791978806.zip",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "ustawa-otwarte-dane",
+    name: "Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (tekst na api.sejm.gov.pl)",
+    url: "https://api.sejm.gov.pl/eli/acts/DU/2021/1641/text.html",
+    readOn: "2026-10-23",
+  },
 ];
 
 const byId = new Map(SOURCES.map((source) => [source.id, source]));

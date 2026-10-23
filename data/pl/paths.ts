@@ -58,6 +58,15 @@ export function polandEntries(lang: Lang): PolandIndexEntry[] {
       text: "Sejm Senat 2027 Prezydent art. 98",
     },
     {
+      path: `${home}elections/senat-20-2026/`,
+      lang,
+      title: pl
+        ? "Wybory uzupełniające do Senatu w okręgu nr 20, 22 listopada 2026 r."
+        : "Senate by-election in constituency 20, 22 November 2026",
+      kind: "election",
+      text: "Senat okręg 20 22 listopada 2026 wybory uzupełniające PKW lubuskie Zielona Góra",
+    },
+    {
       path: `${home}results/`,
       lang,
       title: pl ? "Wyniki" : "Results",
