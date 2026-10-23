@@ -24,6 +24,17 @@ body {
   @apply mt-8 mb-3 font-serif text-2xl font-semibold text-ink;
 }
 
+.country-article .prose-legal h2,
+.country-article .guide-block h2 {
+  border-top: 3px solid var(--country-accent, #1e4a73);
+  padding-top: 0.85rem;
+}
+
+.country-card {
+  border-top-width: 3px;
+  border-top-style: solid;
+}
+
 .prose-legal h3 {
   @apply mt-6 mb-2 font-serif text-xl font-semibold text-ink;
 }

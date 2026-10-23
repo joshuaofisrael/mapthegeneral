@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryHero } from "@/components/CountryHero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
 import { JsonLd } from "@/components/JsonLd";
@@ -21,6 +22,7 @@ export default function MexicoCountryPage() {
     <div>
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Mexico", path: "/mx/" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Mexico" }]} />
+      <CountryHero code="mx" priority />
       <PageHeader
         eyebrow="México"
         title="Mexico"

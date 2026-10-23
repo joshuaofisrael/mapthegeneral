@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { SeatTable } from "@/components/SeatTable";
@@ -79,6 +80,7 @@ export default async function SpainNationalPage({ params }: { params: Promise<{ 
       officeLabel="Junta Electoral Central"
       sources={sources}
     >
+      <CountryGuide code="es" lang={lang} />
       <section className="prose-legal">
         <h2>{es ? "Convocatoria" : "The calling of the election"}</h2>
         <p>

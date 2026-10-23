@@ -1,0 +1,11 @@
+{
+  "code": "se",
+  "name": "Sweden",
+  "href": "/se/",
+  "summary": "National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.",
+  "links": [
+    { "href": "/se/en/", "label": "English" },
+    { "href": "/se/en/elections/riksdag-2030/", "label": "8 September 2030" },
+    { "href": "/se/en/sources/", "label": "Sources" }
+  ]
+}

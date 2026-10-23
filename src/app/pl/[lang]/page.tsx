@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CountryGuide } from "@/components/CountryGuide";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
@@ -93,6 +94,7 @@ export default async function PolandNationalPage({ params }: { params: Promise<{
         "poczta",
       ])}
     >
+      <CountryGuide code="pl" lang={lang} />
       <section className="prose-legal">
         <h2>{pl ? "Następne wybory do Sejmu i Senatu" : "The next Sejm and Senate election"}</h2>
         <p>

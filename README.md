@@ -1,6 +1,6 @@
 # Map the General
 
-Public, nonpartisan election guide for the countries covered so far: Australia, Canada, Italy, Mexico, Poland, Spain, Switzerland, and the United Kingdom.
+Public, nonpartisan election guide for the countries covered so far: Australia, Canada, Ireland, Italy, Mexico, Norway, Poland, Spain, Sweden, Switzerland, and the United Kingdom. Ireland, Norway and Sweden are national hubs only: no municipality pages and no live tracker.
 
 **Publisher:** Map the General.
 

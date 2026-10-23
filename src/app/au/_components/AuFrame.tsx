@@ -5,8 +5,10 @@ import { PageHeader } from "@/components/PageHeader";
 import { SourceList } from "@/components/SourceList";
 import { SITE } from "@/data/site";
 import type { SourceRef } from "@/data/au/sources";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function AuFrame({
   path,
@@ -36,9 +38,10 @@ export function AuFrame({
     label: item.name,
   }));
   return (
-    <article lang="en">
+    <article lang="en" className="country-article" data-country="au" style={{ "--country-accent": countryAccent("au") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs.map((item) => ({ name: item.name, path: item.path })))} />
       <Breadcrumbs items={crumbItems} />
+      <RouteHero country="au" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust updated={updated ?? SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>

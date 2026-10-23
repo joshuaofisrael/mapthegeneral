@@ -14,6 +14,7 @@ import {
 } from "../data/spain/places";
 import { canadaIndexEntries } from "../countries/ca";
 import { polandEntries } from "../../data/pl/paths";
+import { HUBS, hubEn, hubHome, type HubCode } from "../data/new-hubs";
 import type { Lang } from "../data/spain/types";
 
 export const LANGS: Lang[] = ["es", "en"];
@@ -48,7 +49,7 @@ export type IndexEntry = {
 };
 
 const STATIC_EN: IndexEntry[] = [
-  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland italy united kingdom canada australia switzerland elections" },
+  { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland italy united kingdom canada australia switzerland ireland norway sweden elections" },
   { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "unofficial independent guide" },
@@ -152,6 +153,26 @@ function registryEntries(): IndexEntry[] {
   return [...mexicoIndexEntries()];
 }
 
+const HUB_CODES: HubCode[] = ["ie", "no", "se"];
+
+function hubIndexEntries(): IndexEntry[] {
+  return HUB_CODES.flatMap((code) => {
+    const hub = HUBS[code];
+    const home = hubHome(code);
+    const en = hubEn(code);
+    const elections = hubEn(code, "elections");
+    const election = hubEn(code, `elections/${hub.electionSlug}`);
+    return [
+      { path: home, lang: "en-only", title: hub.name, kind: "country", text: `${hub.name} ${hub.blurb}` },
+      { path: en, lang: "en", title: hub.name, kind: "country", text: hub.blurb },
+      { path: elections, lang: "en", title: `Elections in ${hub.name}`, kind: "elections", text: hub.electionName },
+      { path: election, lang: "en", title: hub.electionName, kind: "election", text: `${hub.name} ${hub.electionName}` },
+      { path: hubEn(code, "faq"), lang: "en", title: `${hub.name} questions`, kind: "faq", text: `${hub.name} faq` },
+      { path: hubEn(code, "sources"), lang: "en", title: `${hub.name} sources`, kind: "sources", text: `${hub.name} official sources` },
+    ];
+  });
+}
+
 export function searchIndex(): IndexEntry[] {
   const seen = new Set<string>();
   const rows = [
@@ -166,6 +187,7 @@ export function searchIndex(): IndexEntry[] {
     ...italySearchEntries(),
     ...canadaIndexEntries(),
     ...switzerlandEntries(),
+    ...hubIndexEntries(),
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;

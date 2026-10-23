@@ -8,8 +8,10 @@ import { SITE } from "@/data/site";
 import type { ItLang, SourceRef } from "@/data/italy/types";
 import { ui } from "@/data/italy/ui";
 import { italyHome } from "@/data/italy/paths";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function ItalyFrame({
   lang,
@@ -40,7 +42,7 @@ export function ItalyFrame({
       ? path.replace(/^\/it\/(it|en)\//, `/it/${target}/`)
       : italyHome(target);
   return (
-    <article lang={lang}>
+    <article lang={lang} className="country-article" data-country="it" style={{ "--country-accent": countryAccent("it") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <p className="mb-4 text-sm text-ink-muted">
         <Link className={lang === "it" ? "font-semibold text-ink" : "text-navy underline"} href={swapped("it")}>
@@ -57,6 +59,7 @@ export function ItalyFrame({
           label: item.name,
         }))}
       />
+      <RouteHero country="it" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>

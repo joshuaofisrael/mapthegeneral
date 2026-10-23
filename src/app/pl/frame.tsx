@@ -6,9 +6,11 @@ import { SourceList } from "@/components/SourceList";
 import { SITE } from "@/data/site";
 import { ui } from "../../../data/pl/ui";
 import type { Lang, SourceRef } from "../../../data/pl/types";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 function swapLang(path: string, lang: Lang): string {
   return path.replace(/^\/pl\/(pl|en)\//, `/pl/${lang}/`);
@@ -43,7 +45,7 @@ export function PolandFrame({
     label: item.name,
   }));
   return (
-    <article lang={lang}>
+    <article lang={lang} className="country-article" data-country="pl" style={{ "--country-accent": countryAccent("pl") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs.map((item) => ({ name: item.name, path: item.path })))} />
       <p className="mb-4 text-sm text-ink-muted">
         <Link className={lang === "pl" ? "font-semibold text-ink" : "text-navy underline"} href={swapLang(path, "pl")}>
@@ -55,6 +57,7 @@ export function PolandFrame({
         </Link>
       </p>
       <Breadcrumbs items={crumbItems} />
+      <RouteHero country="pl" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust
         updated={SITE.lastUpdated}

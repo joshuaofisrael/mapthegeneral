@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { AuFrame } from "@/app/au/_components/AuFrame";
@@ -63,6 +64,7 @@ export default function AustraliaNationalPage() {
         "acma-blackout",
       ])}
     >
+      <CountryGuide code="au" lang="en" />
       <section className="prose-legal">
         <h2>Next federal election</h2>
         <p>

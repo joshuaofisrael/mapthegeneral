@@ -1,0 +1,11 @@
+{
+  "code": "ie",
+  "name": "Ireland",
+  "href": "/ie/",
+  "summary": "National hub in English. The Electoral Commission says the most recent Dáil election was Friday 29 November 2024, and that a general election has to take place at least every five years. No next polling day was printed on the pages read on 23 October 2026. No municipality pages and no candidate names.",
+  "links": [
+    { "href": "/ie/en/", "label": "English" },
+    { "href": "/ie/en/elections/next-dail/", "label": "Next Dáil election" },
+    { "href": "/ie/en/sources/", "label": "Sources" }
+  ]
+}

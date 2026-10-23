@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CountryHero } from "@/components/CountryHero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
 import { JsonLd } from "@/components/JsonLd";
@@ -21,6 +22,7 @@ export default function ItalyCountryPage() {
     <div>
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Italy", path: "/it" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Italy" }]} />
+      <CountryHero code="it" priority />
       <PageHeader
         eyebrow="Italia"
         title="Italy"

@@ -1,0 +1,11 @@
+{
+  "code": "no",
+  "name": "Norway",
+  "href": "/no/",
+  "summary": "National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.",
+  "links": [
+    { "href": "/no/en/", "label": "English" },
+    { "href": "/no/en/elections/storting-2029/", "label": "September 2029" },
+    { "href": "/no/en/sources/", "label": "Sources" }
+  ]
+}

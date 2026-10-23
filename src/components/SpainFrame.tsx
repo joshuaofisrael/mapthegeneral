@@ -7,8 +7,10 @@ import { SourceList } from "@/components/SourceList";
 import { SITE } from "@/data/site";
 import type { SourceRef, Lang } from "@/data/spain/types";
 import { ui } from "@/data/spain/ui";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function SpainFrame({
   lang,
@@ -39,10 +41,11 @@ export function SpainFrame({
     label: item.name,
   }));
   return (
-    <article lang={lang}>
+    <article lang={lang} className="country-article" data-country="es" style={{ "--country-accent": countryAccent("es") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs.map((item) => ({ name: item.name, path: item.path })))} />
       <LanguageSwitch lang={lang} path={path} />
       <Breadcrumbs items={crumbItems} />
+      <RouteHero country="es" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust
         updated={SITE.lastUpdated}

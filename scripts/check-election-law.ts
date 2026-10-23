@@ -12,7 +12,8 @@
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import { ELECTION_WINDOWS, trackerOpen } from "../src/data/election-law";
+import { ELECTION_WINDOWS, STANDING_RULES, trackerOpen } from "../src/data/election-law";
+import { registryCountries } from "../src/lib/country-registry";
 
 const OUT = path.join(process.cwd(), "out");
 const now = Date.now();
@@ -36,7 +37,7 @@ for (const item of ELECTION_WINDOWS) {
 }
 
 const KW =
-  "(?:opinion poll|voting intention|exit poll|sondage|sondaggi[oa]? (?:politic|elettoral)|encuesta|sondeo|sondaż|여론조사|umfrage|wählerbefragung|hochrechnung|kamuoyu araştırma|anket|世論調査|出口調査|prognos[ei]|seat projection)";
+  "(?:opinion poll|voting intention|exit poll|sondage|sondaggi[oa]? (?:politic|elettoral)|encuesta|sondeo|sondaż|여론조사|umfrage|wählerbefragung|hochrechnung|kamuoyu araştırma|anket|世論調査|出口調査|prognos[ei]|seat projection|meningsmåling|meningsmaling|opinionsundersökning|opinionsundersokning|pobalbhreith)";
 const PCT = "\\d{1,2}(?:[.,]\\d)?\\s?%";
 const POLL_FIGURE = new RegExp(`${KW}[^<]{0,120}?${PCT}|${PCT}[^<]{0,120}?${KW}`, "i");
 
@@ -70,9 +71,27 @@ if (existsSync(OUT)) {
   }
 }
 
+const standingCountries = new Set<string>();
+for (const rule of STANDING_RULES) {
+  if (!/^[a-z]{2}$/.test(rule.country)) errors.push(`${rule.country}: standing rule needs a two-letter country code`);
+  if (standingCountries.has(rule.country)) errors.push(`${rule.country}: duplicate standing rule`);
+  standingCountries.add(rule.country);
+  if (!rule.note.trim()) errors.push(`${rule.country}: standing rule needs a note`);
+  if (!rule.citation.url.startsWith("https://")) errors.push(`${rule.country}: standing-rule citation must be https`);
+}
+
+const covered = new Set<string>([...ELECTION_WINDOWS.map((item) => item.country), ...standingCountries]);
+for (const card of registryCountries()) {
+  if (!covered.has(card.code)) {
+    errors.push(`${card.code}: registry country has no election window and no standing rule`);
+  }
+}
+
 if (errors.length) {
   console.error(`election-law: ${errors.length} problem(s)`);
   for (const line of errors.slice(0, 50)) console.error(`  - ${line}`);
   process.exit(1);
 }
-console.log(`election-law: ${ELECTION_WINDOWS.length} windows valid; ${scanned} HTML files carry no poll figures.`);
+console.log(
+  `election-law: ${ELECTION_WINDOWS.length} windows valid; ${STANDING_RULES.length} standing rules; ${scanned} HTML files carry no poll figures.`,
+);

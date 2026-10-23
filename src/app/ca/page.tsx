@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryHero } from "@/components/CountryHero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
 import { JsonLd } from "@/components/JsonLd";
@@ -21,6 +22,7 @@ export default function CanadaCountryPage() {
     <div>
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Canada", path: "/ca" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Canada" }]} />
+      <CountryHero code="ca" priority />
       <PageHeader
         eyebrow="Canada"
         title="Canada"

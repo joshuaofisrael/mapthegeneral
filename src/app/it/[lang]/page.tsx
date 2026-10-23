@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CountryGuide } from "@/components/CountryGuide";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
@@ -76,6 +77,7 @@ export default async function ItalyNationalPage({ params }: { params: Promise<{ 
         "poste-cap",
       ])}
     >
+      <CountryGuide code="it" lang={lang} />
       <section className="prose-legal">
         <h2>{copy.parliament}</h2>
         <p>

@@ -49,6 +49,13 @@ export default function CopyrightPage() {
           <li>Imply that {SITE.legalName}, a government, a party, or a candidate endorses you.</li>
           <li>Use the text or the name {SITE.name} in campaign advertising or fundraising.</li>
         </ul>
+        <h2>AI-generated images</h2>
+        <p>
+          The country photographs on this site are AI-generated images made for {SITE.name}. Each is captioned
+          “AI-generated image” on the page. They depict public places, they do not depict a real event, and they do not
+          depict real people. They are not official photographs and not a record of an election. The same note is on
+          the <Link href="/about/">about page</Link>.
+        </p>
         <h2>Official material and licences</h2>
         <p>
           Laws, results, maps, and lists published by an election office or a parliament stay under

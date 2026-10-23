@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { MexicoFrame } from "@/app/mx/_components/Frame";
@@ -76,6 +77,7 @@ export default async function MexicoNationalPage({ params }: { params: Promise<{
         "inafed-presidentes",
       ])}
     >
+      <CountryGuide code="mx" lang={lang} />
       <section className="prose-legal">
         <h2>{es ? "La elección de 2027" : "The 2027 election"}</h2>
         <p>
