@@ -61,13 +61,16 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
     >
       <ul className="space-y-3">
         <li>
-          <a className="font-serif text-xl font-semibold text-navy hover:underline" href={senatOkregPath(lang, 20)}>
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={`${path}senat-20-2026/`}>
             {pl ? "Senat, okręg nr 20, 22 listopada 2026" : "Senate, constituency 20, 22 November 2026"}
-          </a>
+          </Link>
           <p className="mt-1 text-sm text-ink-muted">
             {pl
-              ? "Serwis PKW odczytany 18 października 2026 r. Ta strona nie podaje sondaży ani prognoz."
-              : "Commission service read on 18 October 2026. This page prints no polls or projections."}
+              ? "Postanowienie Prezydenta z 25 września 2026 r. i serwis PKW odczytany 23 października 2026 r. Ta strona nie podaje sondaży ani prognoz."
+              : "Presidential order of 25 September 2026 and the Commission service read on 23 October 2026. This page prints no polls or projections."}{" "}
+            <a className="text-navy underline" href={senatOkregPath(lang, 20)}>
+              {pl ? "Strona okręgu" : "Constituency page"}
+            </a>
           </p>
         </li>
         <li>

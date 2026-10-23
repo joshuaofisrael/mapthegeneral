@@ -199,6 +199,15 @@ export default async function VoivodeshipPage({ params }: { params: Promise<{ la
 
       <section className="mt-8">
         <h2 className="font-serif text-2xl font-semibold">{pl ? "Okręgi do Senatu" : "Senate constituencies"}</h2>
+        {slug === "lubuskie" ? (
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href={`${polandHome(lang)}elections/senat-20-2026/`}>
+              {pl
+                ? "Wybory uzupełniające do Senatu w okręgu nr 20, 22 listopada 2026 r."
+                : "Senate by-election in constituency 20, 22 November 2026"}
+            </Link>
+          </p>
+        ) : null}
         <ul className="mt-3 space-y-1 text-sm">
           {senatHere.map((okreg) => (
             <li key={okreg.num}>
