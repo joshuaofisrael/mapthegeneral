@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { ChFrame } from "../frame";
@@ -108,6 +109,7 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
       officeHref={OFFICE.url}
       sources={sources}
     >
+      <CountryGuide code="ch" lang={lang} />
       <section className="prose-legal">
         <h2>{lang === "de" ? "Bund" : lang === "fr" ? "Confédération" : lang === "it" ? "Confederazione" : "Confederation"}</h2>
         <p>

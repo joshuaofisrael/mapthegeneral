@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { GbFrame } from "@/app/gb/_components/GbFrame";
@@ -63,6 +64,7 @@ export default async function UnitedKingdomPage({ params }: { params: Promise<{ 
       officeLabel="Electoral Commission"
       sources={sources}
     >
+      <CountryGuide code="gb" lang="en" />
       <section className="prose-legal">
         <h2>Next UK Parliament election</h2>
         <p>

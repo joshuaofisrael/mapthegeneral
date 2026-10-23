@@ -5,8 +5,10 @@ import { PageHeader } from "@/components/PageHeader";
 import { SourceList } from "@/components/SourceList";
 import { SITE } from "@/data/site";
 import type { SourceRef } from "@/data/gb/sources";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function GbFrame({
   path,
@@ -30,7 +32,7 @@ export function GbFrame({
   children: ReactNode;
 }) {
   return (
-    <article lang="en">
+    <article lang="en" className="country-article" data-country="gb" style={{ "--country-accent": countryAccent("gb") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <Breadcrumbs
         items={crumbs.map((item, index) => ({
@@ -38,6 +40,7 @@ export function GbFrame({
           label: item.name,
         }))}
       />
+      <RouteHero country="gb" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>

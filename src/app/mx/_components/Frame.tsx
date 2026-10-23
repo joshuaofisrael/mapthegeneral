@@ -8,8 +8,11 @@ import { SITE } from "@/data/site";
 import type { Lang } from "@/data/mx/paths";
 import type { SourceRef } from "@/data/mx/sources";
 import { ui } from "@/data/mx/ui";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import Link from "@/components/AnchorLink";
+import type { CSSProperties } from "react";
 
 export function MexicoFrame({
   lang,
@@ -38,7 +41,7 @@ export function MexicoFrame({
   const other: Lang = lang === "es" ? "en" : "es";
   const otherPath = path.replace(/^\/mx\/(es|en)\//, `/mx/${other}/`);
   return (
-    <article lang={lang}>
+    <article lang={lang} className="country-article" data-country="mx" style={{ "--country-accent": countryAccent("mx") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <p className="mb-4 text-sm text-ink-muted">
         <Link className={lang === "es" ? "font-semibold text-ink" : "text-navy underline"} href={lang === "es" ? path : otherPath}>
@@ -55,6 +58,7 @@ export function MexicoFrame({
           label: item.name,
         }))}
       />
+      <RouteHero country="mx" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>

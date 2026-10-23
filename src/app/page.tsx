@@ -1,12 +1,15 @@
 import Link from "@/components/AnchorLink";
+import { CountryHero } from "@/components/CountryHero";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
+import { countryAccent } from "@/data/heroes";
 import { SITE } from "@/data/site";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
 import { registryCountries } from "@/lib/country-registry";
 import { pageMetadata } from "@/lib/metadata";
+import type { CSSProperties } from "react";
 
 export const metadata = pageMetadata({
   title: SITE.name,
@@ -60,46 +63,69 @@ export default function HomePage() {
 
       <section id="countries">
         <h2 className="font-serif text-2xl font-semibold">Countries</h2>
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
+          Each card opens that country’s guide. Where a card shows a photograph, it is an AI-generated image of a public
+          place, and the country page captions it “AI-generated image”. Those images are not placed on municipality
+          pages. Ireland, Norway and Sweden have no photograph in this release.
+        </p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
-          <li className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
-            <h3 className="font-serif text-2xl font-semibold">
-              <Link className="hover:text-navy" href="/es/">
-                Spain
-              </Link>
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-ink-muted">
-              General election for the Congreso de los Diputados and the Senado, Sunday, 29 November
-              2026, called by Real Decreto 806/2026. This release has the national page,{" "}
-              {COMMUNITIES.length} autonomous communities and cities, 50 provinces, and{" "}
-              {MUNICIPALITY_PAGE_COUNT.toLocaleString("en-US")} municipalities, in Spanish and English.
-            </p>
-            <p className="mt-3 flex flex-wrap gap-4 text-sm">
-              <Link className="font-medium text-navy hover:underline" href="/es/en/">
-                English
-              </Link>
-              <Link className="font-medium text-navy hover:underline" href="/es/es/">
-                Español
-              </Link>
-              <Link className="font-medium text-navy hover:underline" href="/es/en/elections/cortes-generales-2026/">
-                29 November 2026
-              </Link>
-            </p>
-          </li>
-          {extraCountries.map((country) => (
-            <li key={country.code} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+          <li
+            className="country-card overflow-hidden rounded-xl border border-line bg-paper-card shadow-card"
+            style={{ "--country-accent": countryAccent("es"), borderTopColor: countryAccent("es") } as CSSProperties}
+          >
+            <CountryHero code="es" priority={false} sizes="(min-width: 768px) 34rem, 100vw" framed={false} />
+            <div className="p-5">
               <h3 className="font-serif text-2xl font-semibold">
-                <Link className="hover:text-navy" href={country.href}>
-                  {country.name}
+                <Link className="hover:text-navy" href="/es/">
+                  Spain
                 </Link>
               </h3>
-              <p className="mt-2 text-sm leading-6 text-ink-muted">{country.summary}</p>
-              <p className="mt-3 flex flex-wrap gap-4 text-sm">
-                {country.links.map((link) => (
-                  <Link key={link.href} className="font-medium text-navy hover:underline" href={link.href}>
-                    {link.label}
-                  </Link>
-                ))}
+              <p className="mt-2 text-sm leading-6 text-ink-muted">
+                General election for the Congreso de los Diputados and the Senado, Sunday, 29 November
+                2026, called by Real Decreto 806/2026. This release has the national page,{" "}
+                {COMMUNITIES.length} autonomous communities and cities, 50 provinces, and{" "}
+                {MUNICIPALITY_PAGE_COUNT.toLocaleString("en-US")} municipalities, in Spanish and English.
               </p>
+              <p className="mt-3 flex flex-wrap gap-4 text-sm">
+                <Link className="font-medium text-navy hover:underline" href="/es/en/">
+                  English
+                </Link>
+                <Link className="font-medium text-navy hover:underline" href="/es/es/">
+                  Español
+                </Link>
+                <Link className="font-medium text-navy hover:underline" href="/es/en/elections/cortes-generales-2026/">
+                  29 November 2026
+                </Link>
+              </p>
+            </div>
+          </li>
+          {extraCountries.map((country) => (
+            <li
+              key={country.code}
+              className="country-card overflow-hidden rounded-xl border border-line bg-paper-card shadow-card"
+              style={
+                {
+                  "--country-accent": countryAccent(country.code),
+                  borderTopColor: countryAccent(country.code),
+                } as CSSProperties
+              }
+            >
+              <CountryHero code={country.code} priority={false} sizes="(min-width: 768px) 34rem, 100vw" framed={false} />
+              <div className="p-5">
+                <h3 className="font-serif text-2xl font-semibold">
+                  <Link className="hover:text-navy" href={country.href}>
+                    {country.name}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-ink-muted">{country.summary}</p>
+                <p className="mt-3 flex flex-wrap gap-4 text-sm">
+                  {country.links.map((link) => (
+                    <Link key={link.href} className="font-medium text-navy hover:underline" href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

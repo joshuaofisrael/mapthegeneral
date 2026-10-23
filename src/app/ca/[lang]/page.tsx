@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { CountryGuide } from "@/components/CountryGuide";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { CanadaFrame } from "@/app/ca/_components/CanadaFrame";
@@ -83,6 +84,7 @@ export default async function CanadaNationalPage({ params }: { params: Promise<{
         "ec-home",
       ])}
     >
+      <CountryGuide code="ca" lang={lang} />
       <section className="prose-legal">
         <h2>{fr ? "Prochaine élection fédérale" : "Next federal election"}</h2>
         <p>

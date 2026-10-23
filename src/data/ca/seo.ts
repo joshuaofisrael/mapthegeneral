@@ -33,13 +33,13 @@ export function caMetadata(input: {
       siteName: SITE.name,
       type: "website",
       locale: input.lang === "fr" ? "fr_CA" : "en_CA",
-      images: socialImageMetadata(),
+      images: socialImageMetadata(input.path),
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
       description: input.description,
-      images: [socialImageUrl()],
+      images: [socialImageUrl(input.path)],
     },
   };
 }

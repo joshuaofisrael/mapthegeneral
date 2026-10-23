@@ -47105,6 +47105,24 @@
 - [Winterthur](https://mapthegeneral.com/ch/en/zh/winterthur/winterthur/)
 - [Zell (ZH)](https://mapthegeneral.com/ch/en/zh/winterthur/zell-zh/)
 - [Zürich](https://mapthegeneral.com/ch/en/zh/zuerich/zuerich/)
+- [Ireland](https://mapthegeneral.com/ie/)
+- [Ireland](https://mapthegeneral.com/ie/en/)
+- [Elections in Ireland](https://mapthegeneral.com/ie/en/elections/)
+- [Next Dáil election](https://mapthegeneral.com/ie/en/elections/next-dail/)
+- [Ireland questions](https://mapthegeneral.com/ie/en/faq/)
+- [Ireland sources](https://mapthegeneral.com/ie/en/sources/)
+- [Norway](https://mapthegeneral.com/no/)
+- [Norway](https://mapthegeneral.com/no/en/)
+- [Elections in Norway](https://mapthegeneral.com/no/en/elections/)
+- [Storting election, September 2029](https://mapthegeneral.com/no/en/elections/storting-2029/)
+- [Norway questions](https://mapthegeneral.com/no/en/faq/)
+- [Norway sources](https://mapthegeneral.com/no/en/sources/)
+- [Sweden](https://mapthegeneral.com/se/)
+- [Sweden](https://mapthegeneral.com/se/en/)
+- [Elections in Sweden](https://mapthegeneral.com/se/en/elections/)
+- [Elections of 8 September 2030](https://mapthegeneral.com/se/en/elections/riksdag-2030/)
+- [Sweden questions](https://mapthegeneral.com/se/en/faq/)
+- [Sweden sources](https://mapthegeneral.com/se/en/sources/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 
@@ -47116,10 +47134,16 @@ Switzerland (https://mapthegeneral.com/ch/): National Council election on 24 Oct
 
 United Kingdom (https://mapthegeneral.com/gb/): UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page, England, Scotland, Wales and Northern Ireland, the 650 Westminster constituencies, Scottish Parliament constituencies and regions, Senedd constituencies, Northern Ireland Assembly constituencies, 361 local authority districts, 21 English county councils, and directly elected mayoral bodies, in English. Ward, parish and candidate pages are not in this release.
 
+Ireland (https://mapthegeneral.com/ie/): National hub in English. The Electoral Commission says the most recent Dáil election was Friday 29 November 2024, and that a general election has to take place at least every five years. No next polling day was printed on the pages read on 23 October 2026. No municipality pages and no candidate names.
+
 Italy (https://mapthegeneral.com/it/): Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree for the next general election was read, so this release does not print that polling day. National page, 20 regions, 110 ISTAT supra-municipal units, and the constituencies in legislative decree 177/2020, in Italian and English. This chunk adds 1,889 municipalities: every flagged capoluogo, all of Lombardia, and part of Lazio. No central 2027 local-election list was read.
 
 Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts, the five plurinominal constituencies, and the 2,478 INEGI catalog rows (municipios and the 16 alcaldías of Ciudad de México), in Spanish and English. Sitting municipal presidents are not named.
 
+Norway (https://mapthegeneral.com/no/): National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.
+
 Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 2,479 gminas, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Candidate lists and wards are not in this release.
+
+Sweden (https://mapthegeneral.com/se/): National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml

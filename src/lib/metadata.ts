@@ -48,13 +48,13 @@ export function pageMetadata(input: {
       siteName: SITE.name,
       type: "website",
       locale,
-      images: socialImageMetadata(),
+      images: socialImageMetadata(input.path),
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
       description: input.description,
-      images: [socialImageUrl()],
+      images: [socialImageUrl(input.path)],
     },
   };
 }

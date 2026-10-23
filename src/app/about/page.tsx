@@ -27,7 +27,16 @@ export default function AboutPage() {
           {SITE.name} publishes sourced pages about elections. The first country in this release is
           Spain, including the general election called for Sunday, 29 November 2026. Pages name the
           official source and the date that source was read. Where a fact was not on a source read for
-          this release, the page says so.
+          this release, the page says so. Ireland, Norway and Sweden are national hubs added from official
+          pages read on 23 October 2026. They have no municipality pages, no candidate names and no live tracker.
+        </p>
+        <h2>Images</h2>
+        <p>
+          The photographs on the home-page country cards, on each country hub, and at the top of election pages are
+          AI-generated images. Every one is captioned “AI-generated image”. They show a public building or place
+          connected with that country. They are not photographs of a real event, they contain no real people, and they
+          are not official election pictures. Municipality pages do not carry them. Pages for a country without one of
+          these images use the plain site card instead.
         </p>
         <h2>What this site is not</h2>
         <ul>

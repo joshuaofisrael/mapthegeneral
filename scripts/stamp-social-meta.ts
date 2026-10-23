@@ -28,7 +28,13 @@ function walk(dir: string) {
     if (!name.endsWith(".html")) continue;
     scanned++;
     const before = readFileSync(full, "utf8");
-    const after = ensureSocialHead(before);
+    const rel = path.relative(OUT, full).split(path.sep).join("/");
+    const route = rel.endsWith("/index.html")
+      ? `/${rel.slice(0, -"index.html".length)}`
+      : rel.endsWith(".html")
+        ? `/${rel.slice(0, -".html".length)}`
+        : undefined;
+    const after = ensureSocialHead(before, route);
     if (after === before) {
       unchanged++;
       continue;

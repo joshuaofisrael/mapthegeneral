@@ -9,7 +9,10 @@ import { otherLangPath } from "@/data/ca/paths";
 import type { SourceRef, CaLang } from "@/data/ca/types";
 import { ui } from "@/data/ca/ui";
 import { SITE } from "@/data/site";
+import { RouteHero } from "@/components/CountryHero";
+import { countryAccent } from "@/data/heroes";
 import { breadcrumbJsonLd } from "@/lib/metadata";
+import type { CSSProperties } from "react";
 
 export function CanadaFrame({
   lang,
@@ -40,7 +43,7 @@ export function CanadaFrame({
     label: item.name,
   }));
   return (
-    <article lang={lang}>
+    <article lang={lang} className="country-article" data-country="ca" style={{ "--country-accent": countryAccent("ca") } as CSSProperties}>
       <JsonLd data={breadcrumbJsonLd(crumbs.map((item) => ({ name: item.name, path: item.path })))} />
       <p className="mb-4 text-sm text-ink-muted">
         <Link className={lang === "en" ? "font-semibold text-ink" : "text-navy underline"} href={otherLangPath(path, "en")}>
@@ -52,6 +55,7 @@ export function CanadaFrame({
         </Link>
       </p>
       <Breadcrumbs items={crumbItems} />
+      <RouteHero country="ca" path={path} />
       <PageHeader eyebrow={eyebrow} title={title} lede={lede} />
       <ContentTrust updated={SITE.lastUpdated} pagePath={path} officeHref={officeHref} officeLabel={officeLabel} />
       <div className="mt-8 space-y-8">{children}</div>

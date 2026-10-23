@@ -36,13 +36,29 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
 
-Countries with no election window yet (GB, CA, AU federal) get one added here before
-any tracker is built. Their standing rules:
+Countries with no election window yet get one added here before any tracker is
+built. `STANDING_RULES` in `src/data/election-law.ts` records the countries that
+have pages but no dated window. The build check requires every country card in
+the registry to have a window or a standing rule.
 
-- **GB:** RPA 1983 s. 66A, no exit poll before the poll closes (22:00).
+- **GB:** RPA 1983 s. 66A, no exit poll before the poll closes (22:00). Standing rule, no tracker.
 - **CA:** Canada Elections Act s. 328(2), no new election survey results on polling
   day before every polling station in the district closes. (s. 329, the old ban on
-  early results, was repealed in 2014.)
+  early results, was repealed in 2014.) British Columbia’s 24 October 2026 window
+  is the dated row. A federal tracker still needs its own window.
+- **AU federal:** the dated row is the Victoria state election. A federal tracker
+  still needs its own window.
+- **IE:** no next Dáil polling day was printed. No tracker. See the standing rule.
+- **NO:** next Storting election stated as September 2029, with no day. The
+  Directorate’s summary of § 21-8 is the citation. Lovdata was not opened. No tracker.
+- **SE:** next ordinary elections stated as 8 September 2030. No poll-publication
+  ban was found on the English authority pages read on 23 October 2026, and the
+  election act was not read section by section. No tracker.
+
+New Zealand was not onboarded. Its general election is Saturday 7 November 2026
+and the regulated period was already open on 23 October 2026. Japan and South
+Korea stay removed. Germany stays excluded. The editorial note is
+`docs/country-onboarding-assessment-2026-10.md`. That note is not legal advice.
 
 ## Removed countries (18 October 2026)
 

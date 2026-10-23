@@ -236,6 +236,52 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
   },
 ];
 
+/**
+ * Countries with pages but no dated window. The build check requires every
+ * registry country to appear here or on a window. These notes are not a
+ * tracker and they do not open one.
+ */
+export type StandingRule = {
+  country: string;
+  note: string;
+  citation: Citation;
+};
+
+export const STANDING_RULES: StandingRule[] = [
+  {
+    country: "gb",
+    note: "No dated window. Representation of the People Act 1983 section 66A forbids publishing an exit poll before the close of the poll. This site publishes no exit poll and no United Kingdom tracker until a window is added.",
+    citation: {
+      label: "Representation of the People Act 1983, section 66A",
+      url: "https://www.legislation.gov.uk/ukpga/1983/2/section/66A",
+    },
+  },
+  {
+    country: "ie",
+    note: "No dated window and no polling day was printed for the next Dáil election. Broadcaster guidelines are not a rule for this website. The Electoral Commission says Part V of the Electoral Reform Act 2022 has not been commenced. This site publishes no polls, no candidate photographs and no Ireland tracker.",
+    citation: {
+      label: "Electoral Commission, regulation of political advertising",
+      url: "https://www.electoralcommission.ie/regulation-of-political-advertising/",
+    },
+  },
+  {
+    country: "no",
+    note: "No dated window. The next Storting election is stated as September 2029, with no day. The Directorate’s summary of section 21-8 forbids publication of results before 21:00 on election day, including forecasts based on surveys that day or the day before. Lovdata was not opened. This site publishes no Norway tracker.",
+    citation: {
+      label: "Valgdirektoratet, changes in the new election act",
+      url: "https://valgmedarbeiderportalen.valg.no/artikler/regelverksendringer-ny-valglov",
+    },
+  },
+  {
+    country: "se",
+    note: "No dated window for a blackout. The next ordinary elections are stated as 8 September 2030. No poll-publication ban was found on the Valmyndigheten English pages read on 23 October 2026, and the election act was not read section by section. This site publishes no polls and no Sweden tracker.",
+    citation: {
+      label: "Valmyndigheten, future elections, published 16 October 2026",
+      url: "https://val.se/english/future-elections/2026-elections---the-riksdag-and-regional-and-municipal-councils",
+    },
+  },
+];
+
 /** Rules that are in force at `now` for a given country path segment. */
 export function activeRules(country: string, now: number): { window: ElectionWindow; rule: LawRule }[] {
   const out: { window: ElectionWindow; rule: LawRule }[] = [];
