@@ -359,6 +359,36 @@ export const SOURCES: SourceRef[] = [
     url: "https://www.tec.tas.gov.au/local-government/elections-2026/index.html",
     readOn: READ_L3,
   },
+  {
+    id: "vec-2026",
+    name: "Victorian Electoral Commission, “2026 state election”",
+    url: "https://www.vec.vic.gov.au/voting/2026-state-election",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "vec-preferential",
+    name: "Victorian Electoral Commission, “Preferential voting”",
+    url: "https://www.vec.vic.gov.au/voting/how-voting-works/preferential-voting",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "vec-postal-2026",
+    name: "Victorian Electoral Commission, “Vote by post” (2026 state election)",
+    url: "https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "vec-legal",
+    name: "Victorian Electoral Commission, “Legal” (Creative Commons Attribution 4.0, excluding images, video, branding and third-party content)",
+    url: "https://www.vec.vic.gov.au/legal",
+    readOn: "2026-10-23",
+  },
+  {
+    id: "vec-results",
+    name: "Victorian Electoral Commission, results",
+    url: "https://www.vec.vic.gov.au/results",
+    readOn: "2026-10-23",
+  },
 ];
 
 export function sourceById(id: string): SourceRef {

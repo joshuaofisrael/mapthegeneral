@@ -54,7 +54,8 @@ export const AU_COUNTRY: CountryCard = {
   links: [
     { href: "/au/en/", label: "English" },
     { href: "/au/en/elections/federal-next/", label: "Next federal election" },
-    { href: "/au/en/victoria/", label: "Victoria, 28 November 2026" },
+    { href: "/au/en/elections/victoria-2026/", label: "Victoria state election, 28 November 2026" },
+    { href: "/au/en/victoria/", label: "Victoria" },
     { href: "/au/en/victoria/assembly/", label: "Victorian Assembly districts" },
     { href: "/au/en/house/", label: "House divisions" },
     { href: "/au/en/victoria/local-councils/", label: "Victorian local councils" },
@@ -72,6 +73,13 @@ const FIXED: RegistryEntry[] = [
     title: "Next federal election",
     kind: "election",
     text: "federal election August 2027 May 2028 Australian Electoral Commission 150",
+  },
+  {
+    path: "/au/en/elections/victoria-2026/",
+    lang: "en",
+    title: "Victorian state election, 28 November 2026",
+    kind: "election",
+    text: "Victoria state election 28 November 2026 Legislative Assembly Legislative Council Victorian Electoral Commission",
   },
   { path: "/au/en/results/", lang: "en", title: "Results", kind: "results", text: "3 May 2025 House of Representatives tally room" },
   { path: "/au/en/sources/", lang: "en", title: "Sources", kind: "sources", text: "AEC ABS electoral commission" },

@@ -39,10 +39,15 @@ export default function AustraliaElectionsPage() {
           </p>
         </li>
         <li>
-          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={jurisdictionPath("victoria")}>
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={`${path}victoria-2026/`}>
             Victoria, Saturday 28 November 2026
           </Link>
-          <p className="mt-1 text-sm text-ink-muted">Victorian Electoral Commission and Parliament of Victoria.</p>
+          <p className="mt-1 text-sm text-ink-muted">
+            Victorian Electoral Commission and Parliament of Victoria, re-read on 23 October 2026.{" "}
+            <Link className="text-navy underline" href={jurisdictionPath("victoria")}>
+              Victoria
+            </Link>
+          </p>
         </li>
         <li>
           <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={jurisdictionPath("new-south-wales")}>
