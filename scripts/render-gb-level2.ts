@@ -34,6 +34,7 @@ import {
 import { nationPath } from "../src/data/gb/paths";
 import { sourcesById } from "../src/data/gb/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { formatIsoDate } from "../src/lib/format";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -108,6 +109,7 @@ function page(input: {
 <meta property="og:locale" content="en_GB">
 <link rel="stylesheet" href="/gb/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>

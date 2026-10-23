@@ -14,6 +14,7 @@ import { circunscripcionesPath, districtPath, districtsIndexPath, entityPath, me
 import { sourcesById } from "../src/data/mx/sources";
 import { ui } from "../src/data/mx/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -140,6 +141,7 @@ function page(lang: Lang, district: District): string {
 <meta property="og:locale" content="${es ? "es_MX" : "en_US"}">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${es ? `Información no oficial. Confírmela con su <a href="${OFFICE}">autoridad electoral oficial</a>.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>

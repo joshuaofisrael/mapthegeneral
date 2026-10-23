@@ -19,6 +19,7 @@ import {
 import { JURISDICTIONS, alphaJurisdictions } from "../src/data/au/places";
 import { sourcesById } from "../src/data/au/sources";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { auHome, jurisdictionPath } from "../src/countries/au";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -95,6 +96,7 @@ function shell(input: {
 <meta property="og:locale" content="en_US">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">Unofficial information. Confirm with your <a href="${esc(input.officeHref)}">official election office</a>.</p>

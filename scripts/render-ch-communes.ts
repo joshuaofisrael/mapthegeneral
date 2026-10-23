@@ -9,6 +9,7 @@ import { sourcesById } from "../data/ch/sources";
 import type { ChLang } from "../data/ch/types";
 import { localDate, trustCopy, ui } from "../data/ch/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import {
   communeHeading,
   communeListMarkup,
@@ -216,6 +217,7 @@ ${alternates}
 <meta property="og:locale" content="${OG[input.lang]}">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${esc(trust.before)}<a href="${esc(OFFICE)}">${esc(trust.link)}</a>${esc(trust.after)}</p>

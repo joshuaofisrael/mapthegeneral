@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy practices for ${SITE.name}: no accounts, no cookies, only cookieless Cloudflare Web Analytics with no ad tracking, browser-only search, and GitHub Pages hosting logs. ${SITE.legalName} is the controller.`,
+  description: `Privacy practices for ${SITE.name}: no accounts, cookieless Cloudflare Web Analytics, Google AdSense advertising cookies with a consent request for the EEA, the UK, and Switzerland, browser-only search, and GitHub Pages hosting logs. ${SITE.legalName} is the controller.`,
   path: "/privacy",
 });
 
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Privacy" }]} />
       <PageHeader
-        eyebrow={`Last updated ${SITE.lastUpdated}`}
+        eyebrow="Last updated 23 October 2026"
         title="Privacy Policy"
         lede={`How ${SITE.legalName} handles information on ${SITE.name}.`}
       />
@@ -31,9 +31,10 @@ export default function PrivacyPage() {
           This policy explains what information is involved when you visit {SITE.name} ({SITE.url}).
           The site is operated by {SITE.legalName}, a {SITE.entityType}. Business address:{" "}
           {SITE.location}. {SITE.name} is a static informational website. It has no user accounts, no
-          comments, no advertising, no email sign-up, and no payments. Its contact form is processed by FormSubmit. It does not use cookies or
-          advertising trackers. The only analytics it loads is cookieless Cloudflare Web
-          Analytics, which counts page views with no cookies or ad tracking.
+          comments, no email sign-up, and no payments. Its contact form is processed by FormSubmit.
+          It may show advertisements from Google AdSense. Google and its partners may use cookies
+          for those ads, as described under Advertising. The only analytics it loads is cookieless
+          Cloudflare Web Analytics, which counts page views with no cookies or ad tracking.
         </p>
         <h2>Who is responsible</h2>
         <p>
@@ -50,13 +51,14 @@ export default function PrivacyPage() {
           <li>Hosting: GitHub Pages keeps security logs, including IP addresses, under GitHub’s own policy.</li>
           <li>Messages you choose to send us by email or through the contact form (delivered by FormSubmit).</li>
           <li>Visit counts: the site uses Cloudflare Web Analytics, which is cookieless and counts page views without setting cookies or using local storage.</li>
+          <li>Advertising: Google may set cookies when AdSense ads are served. See Advertising below.</li>
         </ul>
         <h2>What we do not collect</h2>
         <ul>
-          <li>We do not set cookies and we do not use local storage for tracking.</li>
-          <li>We do not use Google Analytics, advertising networks, or social-media pixels.</li>
+          <li>We do not set our own cookies, and we do not use local storage for tracking.</li>
+          <li>We do not use Google Analytics, social-media pixels, or any advertising network other than Google AdSense.</li>
           <li>We do not collect national identity numbers, voter numbers, or ballot images.</li>
-          <li>We do not sell or share personal information.</li>
+          <li>We do not sell personal information.</li>
         </ul>
         <h2>Hosting</h2>
         <p>
@@ -94,6 +96,130 @@ export default function PrivacyPage() {
           We keep emails and contact form messages for as long as needed to respond and for ordinary business records. GitHub
           keeps its security logs under its own practices.
         </p>
+        <h2 id="advertising">Advertising</h2>
+        <p>
+          {SITE.name} may show advertisements provided by Google AdSense. Google and its advertising
+          partners may use cookies to serve and measure ads on this site. Google describes that use at{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . You can manage ads in your Google account at{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          Visitors in the European Economic Area, the United Kingdom, and Switzerland are asked for
+          consent before those advertising cookies are used. The message is Google’s consent message
+          for European regulations. It is shown through the AdSense script. This site does not add a
+          second consent banner.
+        </p>
+        <p>
+          Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
+        </p>
+        <h2>Publicidad</h2>
+        <p>
+          {SITE.name} puede mostrar anuncios de Google AdSense. Google y sus socios publicitarios
+          pueden usar cookies para mostrar y medir anuncios en este sitio. Google describe ese uso en{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . La configuración de anuncios de Google está en{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          A las personas que visitan desde el Espacio Económico Europeo, el Reino Unido y Suiza se
+          les pide consentimiento antes de usar esas cookies publicitarias. El mensaje es el de
+          Google para la normativa europea y se muestra con el script de AdSense. Este sitio no añade
+          un segundo aviso. Las preguntas se envían por la <Link href="/contact/">página de contacto</Link>.
+        </p>
+        <h2>Werbung</h2>
+        <p>
+          {SITE.name} kann Anzeigen von Google AdSense zeigen. Google und seine Werbepartner können
+          Cookies verwenden, um Anzeigen auf dieser Website auszuliefern und zu messen. Google
+          beschreibt das unter{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . Die Google-Anzeigeneinstellungen sind unter{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          Besucherinnen und Besuchern aus dem Europäischen Wirtschaftsraum, dem Vereinigten
+          Königreich und der Schweiz wird vor der Verwendung dieser Werbe-Cookies eine Einwilligung
+          abgefragt. Die Meldung ist die von Google für europäische Vorschriften und erscheint über
+          das AdSense-Skript. Diese Website fügt kein zweites Banner hinzu. Fragen gehen über die{" "}
+          <Link href="/contact/">Kontaktseite</Link>.
+        </p>
+        <h2>Publicité</h2>
+        <p>
+          {SITE.name} peut afficher des annonces fournies par Google AdSense. Google et ses
+          partenaires publicitaires peuvent utiliser des cookies pour diffuser et mesurer des annonces
+          sur ce site. Google décrit cet usage sur{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . Les paramètres des annonces Google sont sur{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          Les visiteurs de l’Espace économique européen, du Royaume-Uni et de la Suisse sont invités
+          à donner leur consentement avant l’usage de ces cookies publicitaires. Le message est celui
+          de Google pour la réglementation européenne et s’affiche par le script AdSense. Ce site
+          n’ajoute pas un second bandeau. Les questions passent par la{" "}
+          <Link href="/contact/">page de contact</Link>.
+        </p>
+        <h2>Pubblicità</h2>
+        <p>
+          {SITE.name} può mostrare annunci di Google AdSense. Google e i suoi partner pubblicitari
+          possono usare cookie per erogare e misurare gli annunci su questo sito. Google descrive
+          questo uso su{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . Le impostazioni degli annunci Google sono su{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          Ai visitatori dello Spazio economico europeo, del Regno Unito e della Svizzera viene chiesto
+          il consenso prima dell’uso di questi cookie pubblicitari. Il messaggio è quello di Google
+          per la normativa europea e compare tramite lo script AdSense. Questo sito non aggiunge un
+          secondo avviso. Le domande vanno inviate dalla <Link href="/contact/">pagina dei contatti</Link>.
+        </p>
+        <h2>Reklama</h2>
+        <p>
+          {SITE.name} może wyświetlać reklamy Google AdSense. Google i jego partnerzy reklamowi mogą
+          używać plików cookie, aby wyświetlać i mierzyć reklamy na tej stronie. Google opisuje to
+          użycie na stronie{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
+            https://policies.google.com/technologies/partner-sites
+          </a>
+          . Ustawienia reklam Google są na stronie{" "}
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer">
+            https://www.google.com/settings/ads
+          </a>
+          .
+        </p>
+        <p>
+          Osoby odwiedzające z Europejskiego Obszaru Gospodarczego, Wielkiej Brytanii i Szwajcarii są
+          proszone o zgodę, zanim te reklamowe pliki cookie zostaną użyte. Komunikat jest komunikatem
+          Google dotyczącym przepisów europejskich i pojawia się przez skrypt AdSense. Ta strona nie
+          dodaje drugiego banera. Pytania należy wysyłać przez{" "}
+          <Link href="/contact/">stronę kontaktową</Link>.
+        </p>
         <h2>European Economic Area, including Spain, and the United Kingdom</h2>
         <p>
           If the EU or UK General Data Protection Regulation applies to you, {SITE.legalName} is the
@@ -125,9 +251,10 @@ export default function PrivacyPage() {
         </p>
         <h2>U.S. state privacy rights</h2>
         <p>
-          We do not sell or share personal information for cross-context behavioural advertising, and
-          we do not profile you. A browser privacy signal does not change a site that sets no cookies
-          and runs no advertising.
+          We do not sell personal information, and we do not build our own profile of visitors.
+          Google may use cookies for advertising as described under Advertising, including ads that
+          Google personalises. A browser privacy signal is separate from the consent choice Google
+          shows to visitors in the European Economic Area, the United Kingdom, and Switzerland.
         </p>
         <h2>Children</h2>
         <p>

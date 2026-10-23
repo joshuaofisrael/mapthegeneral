@@ -20,7 +20,7 @@ The United States 2026 midterms are on the sibling site [Map the Midterms](https
 - Typed local modules under `src/data/`
 - GitHub Pages + GitHub Actions
 
-No cookies, no analytics, no accounts. Search runs in the browser against `public/search/index.json`. Internal links are normal anchors, so each page is a full document. After `next build`, the export drops Next’s per-route `index.txt` payloads so the Pages artifact stays under GitHub’s 1 GB site limit.
+No accounts. Cloudflare Web Analytics is cookieless. Google AdSense may set advertising cookies; visitors in the EEA, the UK, and Switzerland are asked for consent through Google’s own message. See `docs/adsense-consent.md`. Search runs in the browser against `public/search/index.json`. Internal links are normal anchors, so each page is a full document. After `next build`, the export drops Next’s per-route `index.txt` payloads so the Pages artifact stays under GitHub’s 1 GB site limit.
 
 ## Scripts
 

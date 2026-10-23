@@ -2,6 +2,7 @@ import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import {
   isOnlyMunicipalityWithCapitalPopulation,
   municipalityNeighbors,
@@ -109,6 +110,7 @@ function page(lang: Lang, municipality: Municipality, province: Province, commun
 <meta property="og:locale" content="${es ? "es_ES" : "en_US"}">
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
+${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>

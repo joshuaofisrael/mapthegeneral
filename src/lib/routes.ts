@@ -53,7 +53,7 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
   { path: "/disclaimer/", lang: "en-only", title: "Disclaimer", kind: "legal", text: "unofficial nonpartisan" },
-  { path: "/privacy/", lang: "en-only", title: "Privacy", kind: "legal", text: "privacy GDPR cookies" },
+  { path: "/privacy/", lang: "en-only", title: "Privacy", kind: "legal", text: "privacy GDPR cookies advertising adsense consent" },
   { path: "/terms/", lang: "en-only", title: "Terms of Use", kind: "legal", text: "terms" },
   { path: "/contact/", lang: "en-only", title: "Contact", kind: "legal", text: "contact error report" },
   { path: "/imprint/", lang: "en-only", title: "Legal notice", kind: "legal", text: "legal notice publisher election law" },
