@@ -25,6 +25,7 @@ import { polandHome, voivodeshipPath } from "../data/pl/paths";
 import { sourcesById } from "../data/pl/sources";
 import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -116,7 +117,7 @@ ${ADSENSE_HEAD_TAGS}
 ${input.body}
 <p><strong>${esc(updated)}</strong> <a href="${esc(reportErrorHref(input.path))}">${pl ? "Zgłoś błąd" : "Report an error"}</a></p>
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

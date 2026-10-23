@@ -2,7 +2,7 @@ import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import { contactMailto, SITE } from "@/data/site";
+import { SITE } from "@/data/site";
 import { FORMSUBMIT_PRIVACY, FORMSUBMIT_URL } from "@/components/ContactForm";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
@@ -39,7 +39,8 @@ export default function PrivacyPage() {
         <h2>Who is responsible</h2>
         <p>
           {SITE.brandNote} {SITE.legalName} is the data controller for personal information it
-          collects through {SITE.name}. Privacy requests go to <a href={contactMailto()}>{SITE.email}</a>.
+          collects through {SITE.name}. Privacy requests, including requests to access, correct, or
+          delete information, go through the <Link href="/contact/">contact page</Link>.
         </p>
         <h2>What the site collects</h2>
         <ul>
@@ -73,23 +74,25 @@ export default function PrivacyPage() {
           Fonts are served from this website. The site does not embed third-party frames. Links to
           official election offices leave {SITE.name}, and those sites have their own policies.
         </p>
-        <h2>Email you send us</h2>
+        <h2>Messages you send us</h2>
         <p>
-          If you email <a href={contactMailto()}>{SITE.email}</a>, we receive whatever you include so
-          we can reply. Please do not send identity documents or ballot photos. Mail is delivered
-          through Google, which processes messages under its own terms.
+          If you write through the <Link href="/contact/">contact page</Link>, we receive whatever you
+          include so we can reply. Please do not send identity documents or ballot photos. The form
+          is delivered by FormSubmit, described below. A message that reaches us by email is delivered
+          through Google, which processes it under its own terms. The site does not publish a personal
+          email address.
         </p>
         <h2 id="contact-form">Contact form (FormSubmit)</h2>
         <p>
           The form on the <Link href="/contact/">contact page</Link> is processed by{" "}
           <a href={FORMSUBMIT_URL} rel="noopener noreferrer">FormSubmit</a> (formsubmit.co), a
           third-party form service. When you submit it, your name, email address, message, and the
-          page you were reporting (if any) are sent to FormSubmit, which emails them to {SITE.email}{" "}
-          so {SITE.legalName} can read and reply. FormSubmit may show a spam check (captcha) and
+          page you were reporting (if any) are sent to FormSubmit, which delivers them to{" "}
+          {SITE.legalName} so the message can be read and answered. FormSubmit may show a spam check (captcha) and
           processes submissions under its own{" "}
           <a href={FORMSUBMIT_PRIVACY} rel="noopener noreferrer">privacy policy</a>. We use what you
           send only to reply or keep an ordinary business record, and we never add you to a mailing
-          list. The form is optional; you can email us directly instead.
+          list. The form is how you reach us. The site does not publish a personal email address.
         </p>
         <h2>Retention</h2>
         <p>
@@ -117,6 +120,9 @@ export default function PrivacyPage() {
         </p>
         <p>
           Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
+          The <Link href="/advertising/">advertising disclosure</Link> says that ads are Google AdSense,
+          that the site does not sell political advertising or endorsements, and that it has no
+          affiliate links.
         </p>
         <h2>Publicidad</h2>
         <p>
@@ -223,23 +229,23 @@ export default function PrivacyPage() {
         <h2>European Economic Area, including Spain, and the United Kingdom</h2>
         <p>
           If the EU or UK General Data Protection Regulation applies to you, {SITE.legalName} is the
-          controller for personal information we process, such as email or contact form messages you send us. The legal basis
+          controller for personal information we process, such as contact form messages you send us. The legal basis
           is our legitimate interest in answering that message and in publishing a free information
           site, and your decision to write to us. Hosting logs are processed by GitHub, and contact form messages by FormSubmit. You may ask
-          to access, correct, or delete personal information we hold, or object to its use, and you
-          may complain to a supervisory authority, including the Agencia Española de Protección de
+          to access, correct, or delete personal information we hold, or object to its use, through the{" "}
+          <Link href="/contact/">contact page</Link>. You may complain to a supervisory authority, including the Agencia Española de Protección de
           Datos.
         </p>
         <h2 id="people-named">People named on this site</h2>
         <p>
-          Pages name elected officeholders, candidates and mayors, with the office, constituency and
-          party or list they stood for. These details come only from official public sources: election
+          Pages name elected officeholders and candidates when an official public source names them,
+          with the office, constituency and party or list they stood for. These details come only from official public sources: election
           commissions, parliaments, official gazettes and government registers, each cited on the page.
           {SITE.legalName} publishes them so voters can see who holds or seeks public office. Party
           affiliation is published because the person made it public by standing for election or
           taking office. The site publishes no private addresses, phone numbers, identity numbers,
           dates of birth or photos of private individuals. A person named on the site can ask for a
-          correction or object to publication at <a href={contactMailto()}>{SITE.email}</a>; a
+          correction or object to publication through the <Link href="/contact/">contact page</Link>; a
           correction is made when the official source shows a different fact. Entries change when the
           official source changes.
         </p>
@@ -247,7 +253,8 @@ export default function PrivacyPage() {
         <p>
           Requests under other national laws, including Switzerland’s Federal Act on Data Protection,
           the United Kingdom GDPR, Mexico’s federal personal data law, Canada’s PIPEDA and
-          Australia’s Privacy Act 1988, go to the same address and are handled the same way.
+          Australia’s Privacy Act 1988, go through the <Link href="/contact/">contact page</Link> and
+          are handled the same way. Deletion requests use that form.
         </p>
         <h2>U.S. state privacy rights</h2>
         <p>
@@ -258,13 +265,15 @@ export default function PrivacyPage() {
         </p>
         <h2>Children</h2>
         <p>
-          The site is not directed to children under 13, and we do not knowingly collect personal
-          information from children.
+          The site is not directed at children, including children under 13, and we do not knowingly
+          collect personal information from children. A parent who believes we have a child’s
+          information can ask for it to be deleted through the <Link href="/contact/">contact page</Link>.
         </p>
         <h2>Contact</h2>
         <p>
-          {SITE.legalName}, {SITE.location}. <a href={contactMailto()}>{SITE.email}</a>. See also the{" "}
-          <Link href="/disclaimer">disclaimer</Link> and <Link href="/terms">terms of use</Link>.
+          {SITE.legalName}, {SITE.location}. <Link href="/contact/">Contact page</Link>. See also the{" "}
+          <Link href="/disclaimer/">disclaimer</Link>, <Link href="/terms/">terms of use</Link>, and{" "}
+          <Link href="/copyright/">copyright and corrections policy</Link>.
         </p>
       </div>
     </div>

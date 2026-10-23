@@ -25,6 +25,7 @@ import { sourceById, sourcesById } from "../src/data/italy/sources";
 import type { ItLang } from "../src/data/italy/types";
 import { ui, unitLabel } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -111,7 +112,7 @@ ${ADSENSE_HEAD_TAGS}
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${opts.body}
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

@@ -23,6 +23,7 @@ import {
 import { padDistrict } from "../src/data/mx/distritos";
 import { sourcesById } from "../src/data/mx/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -127,7 +128,7 @@ ${opts.body}
 <h2>${es ? "Fuentes" : "Sources"}</h2>
 <ul>${sources}</ul>
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

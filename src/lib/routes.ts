@@ -57,6 +57,8 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/terms/", lang: "en-only", title: "Terms of Use", kind: "legal", text: "terms" },
   { path: "/contact/", lang: "en-only", title: "Contact", kind: "legal", text: "contact error report" },
   { path: "/imprint/", lang: "en-only", title: "Legal notice", kind: "legal", text: "legal notice publisher election law" },
+  { path: "/copyright/", lang: "en-only", title: "Copyright and corrections", kind: "legal", text: "copyright DMCA corrections content use" },
+  { path: "/advertising/", lang: "en-only", title: "Advertising", kind: "legal", text: "advertising adsense affiliate disclosure no endorsement" },
   { path: "/es/", lang: "en-only", title: "Spain", kind: "country", text: "España Spain elecciones generales" },
 ];
 

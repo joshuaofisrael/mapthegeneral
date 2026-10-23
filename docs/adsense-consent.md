@@ -41,6 +41,8 @@ No other analytics, tag manager, or cookie script is loaded. The site does not u
 
 The only privacy page is English, at `/privacy/`. Country sections of the site use other languages; the legal pages do not have separate locale routes. The advertising section on `/privacy/` is written in English and repeated in Spanish, German, French, Italian, and Polish. It links to Google's partner-sites policy and to Google ads settings, says European visitors are asked for consent, and points questions to the [contact page](https://mapthegeneral.com/contact/). It does not print a personal email address.
 
+The advertising disclosure is a separate page at `/advertising/`. It says the ads are Google AdSense, that the site does not sell political advertising and does not endorse candidates or parties, and that there are no affiliate links. Cookie and consent detail stays on `/privacy/`. Copyright notices and the corrections log are at `/copyright/`. Both pages are linked from the footer and do not print a personal email address.
+
 ## Checks
 
 `scripts/check-adsense.ts` runs after the static export. It fails the build if any non-redirect page lacks either tag in `<head>`, if `ads.txt` is missing or different, if `robots.txt` blocks the AdSense crawlers, or if the `out/` directory is 1 GB or larger.

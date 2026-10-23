@@ -5,12 +5,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { ReportedPageNote } from "@/components/ReportedPageNote";
 import { ContactForm } from "@/components/ContactForm";
-import { contactMailto, SITE } from "@/data/site";
+import { SITE } from "@/data/site";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: `Contact ${SITE.name}, a brand of ${SITE.legalName}, with the contact form or by email. Error reports are welcome.`,
+  description: `Contact ${SITE.name}, a brand of ${SITE.legalName}, with the contact form. Error reports and copyright notices are welcome.`,
   path: "/contact",
 });
 
@@ -26,8 +26,8 @@ export default function ContactPage() {
       />
       <div className="prose-legal">
         <p>
-          Use the form below, or email <a href={contactMailto()}>{SITE.email}</a>. Both reach{" "}
-          {SITE.legalName}. We reply by email.
+          Use the form below. It reaches {SITE.legalName}. We reply by email. The site does not
+          publish a personal email address.
         </p>
         <h2>Contact form</h2>
         <ContactForm />
@@ -38,8 +38,9 @@ export default function ContactPage() {
         </p>
         <h2>Error reports</h2>
         <p>
-          Error reports are welcome. Use the form or email the page address and what should be corrected, with a
-          source if you have one. Corrections are made promptly.
+          Error reports are welcome. Use the form. Include the page address and what should be corrected, with a
+          source if you have one. Material corrections are logged on the{" "}
+          <Link href="/copyright/#corrections">copyright page</Link>.
         </p>
         <Suspense fallback={null}>
           <ReportedPageNote />
@@ -50,8 +51,9 @@ export default function ContactPage() {
           named on the page.
         </p>
         <p>
-          See the <Link href="/terms">terms of use</Link>, <Link href="/privacy">privacy policy</Link>,
-          and <Link href="/disclaimer">disclaimer</Link>.
+          See the <Link href="/terms/">terms of use</Link>, <Link href="/disclaimer/">disclaimer</Link>,{" "}
+          <Link href="/privacy/">privacy policy</Link>, <Link href="/copyright/">copyright and corrections</Link>,
+          and <Link href="/advertising/">advertising disclosure</Link>.
         </p>
       </div>
     </div>

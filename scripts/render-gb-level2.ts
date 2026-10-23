@@ -34,6 +34,7 @@ import {
 import { nationPath } from "../src/data/gb/paths";
 import { sourcesById } from "../src/data/gb/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { formatIsoDate } from "../src/lib/format";
 
@@ -119,7 +120,7 @@ ${ADSENSE_HEAD_TAGS}
 <p><strong>Records read 18 October 2026.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
 ${input.body}
 </main>
-<footer class="wrap">© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. ${input.licence} Unofficial, and not endorsed by the bodies named here.</footer>
+${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}. ${input.licence} Unofficial, and not endorsed by the bodies named here.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

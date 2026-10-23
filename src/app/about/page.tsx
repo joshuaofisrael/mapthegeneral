@@ -2,7 +2,7 @@ import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import { contactMailto, SITE } from "@/data/site";
+import { SITE } from "@/data/site";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -32,7 +32,8 @@ export default function AboutPage() {
           Business address: {SITE.location}. {SITE.brandNote}
         </p>
         <p>
-          Contact: <a href={contactMailto()}>{SITE.email}</a> with the subject line {SITE.emailSubject}.
+          Contact: use the <Link href="/contact/">contact page</Link>. The site does not publish a
+          personal email address.
         </p>
         <h2>What this site is</h2>
         <p>
@@ -54,8 +55,9 @@ export default function AboutPage() {
           <a href={SITE.siblingUrl}>{SITE.siblingName}</a>, another brand of the same company.
         </p>
         <p>
-          Read the <Link href="/disclaimer">disclaimer</Link>, <Link href="/privacy">privacy policy</Link>,
-          and <Link href="/terms">terms of use</Link>.
+          Read the <Link href="/disclaimer/">disclaimer</Link>, <Link href="/privacy/">privacy policy</Link>,{" "}
+          <Link href="/terms/">terms of use</Link>, <Link href="/copyright/">copyright and corrections</Link>,
+          and <Link href="/advertising/">advertising disclosure</Link>.
         </p>
       </div>
     </div>

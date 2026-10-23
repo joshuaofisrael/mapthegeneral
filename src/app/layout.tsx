@@ -40,7 +40,6 @@ const organizationJsonLd = {
   "@id": ORG_ID,
   name: SITE.legalName,
   legalName: SITE.legalName,
-  email: SITE.email,
   url: SITE.url,
   address: {
     "@type": "PostalAddress",

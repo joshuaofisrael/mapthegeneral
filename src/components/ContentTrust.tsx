@@ -1,5 +1,6 @@
 import Link from "@/components/AnchorLink";
 import { reportErrorHref } from "@/data/site";
+import { INFORMATIONAL_NOTE } from "@/lib/legal-footer";
 
 /** The sentence is fixed: "Unofficial information. Confirm with your official election office." */
 export function ContentTrust({
@@ -35,6 +36,9 @@ export function ContentTrust({
             {copy.report}
           </Link>
         </p>
+        <p className="mt-1" lang="en">
+          {INFORMATIONAL_NOTE}
+        </p>
       </div>
     );
   }
@@ -53,6 +57,9 @@ export function ContentTrust({
         <Link className="font-medium text-navy underline underline-offset-2" href={reportErrorHref(pagePath)}>
           Report an error
         </Link>
+      </p>
+      <p className="mt-1" lang="en">
+        {INFORMATIONAL_NOTE}
       </p>
     </div>
   );

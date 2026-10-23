@@ -1,9 +1,10 @@
 import { Suspense } from "react";
+import { CONTACT_INBOX } from "@/data/contact-inbox";
 import { absoluteUrl, SITE } from "@/data/site";
 import { ReportedPageField } from "@/components/ReportedPageField";
 
 /** FormSubmit endpoint. Static export, so this is a plain HTML POST form. */
-export const CONTACT_FORM_ACTION = `https://formsubmit.co/${SITE.email}`;
+export const CONTACT_FORM_ACTION = `https://formsubmit.co/${CONTACT_INBOX}`;
 export const FORMSUBMIT_URL = "https://formsubmit.co/";
 export const FORMSUBMIT_PRIVACY = "https://formsubmit.co/privacy.pdf";
 

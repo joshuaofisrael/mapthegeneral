@@ -18,8 +18,6 @@ export const SITE = {
   entityType: "Florida limited liability company",
   sunbizDocumentNumber: "L26000261819",
   sunbizStatus: "ACTIVE",
-  email: "joshuaofisrael@gmail.com",
-  emailSubject: "[Contact: Map the General]",
   streetAddress: "5640 W Maple Rd, Ste 101",
   locality: "West Bloomfield",
   region: "MI",
@@ -34,12 +32,14 @@ export const SITE = {
 } as const;
 
 export const LEGAL_NAV = [
-  { href: "/disclaimer", label: "Disclaimer" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-  { href: "/imprint", label: "Legal notice" },
+  { href: "/terms/", label: "Terms" },
+  { href: "/disclaimer/", label: "Disclaimer" },
+  { href: "/privacy/", label: "Privacy" },
+  { href: "/copyright/", label: "Copyright" },
+  { href: "/advertising/", label: "Advertising" },
+  { href: "/imprint/", label: "Legal notice" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ] as const;
 
 export const PRIMARY_NAV = [
@@ -47,10 +47,6 @@ export const PRIMARY_NAV = [
   { href: "/search/", label: "Search" },
   { href: "/about/", label: "About" },
 ] as const;
-
-export function contactMailto(): string {
-  return `mailto:${SITE.email}?subject=${encodeURIComponent(SITE.emailSubject)}`;
-}
 
 /** Report-an-error target. The page path is the `url` query on /contact/. */
 export function reportErrorHref(path: string): string {

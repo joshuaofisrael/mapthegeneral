@@ -73,10 +73,10 @@ export function SiteFooter() {
             {`© ${COPYRIGHT_YEAR} ${SITE.legalName}. All rights reserved. ${SITE.name} is owned and operated by ${SITE.legalName}.`}
           </p>
           <p className="mt-2 text-xs leading-5 text-white/80">
-            {SITE.legalName}, {SITE.location}. Contact{" "}
-            <a className="underline" href={`mailto:${SITE.email}`}>
-              {SITE.email}
-            </a>
+            {SITE.legalName}, {SITE.location}.{" "}
+            <Link className="underline" href="/contact/">
+              Contact
+            </Link>
             . Sunbiz document number {SITE.sunbizDocumentNumber} ({SITE.sunbizStatus}).
           </p>
         </div>
