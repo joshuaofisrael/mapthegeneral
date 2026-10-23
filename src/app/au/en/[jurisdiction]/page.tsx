@@ -127,6 +127,10 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
               is published here.
             </p>
             <p className="mt-2 text-sm">
+              <Link className="text-navy underline" href={`${auHome()}elections/victoria-2026/`}>
+                State election, Saturday 28 November 2026
+              </Link>
+              {" · "}
               <Link className="text-navy underline" href={assemblyIndexPath()}>
                 District index
               </Link>

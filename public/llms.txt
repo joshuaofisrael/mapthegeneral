@@ -30136,6 +30136,7 @@
 - [Australia](https://mapthegeneral.com/au/en/)
 - [Elections in Australia](https://mapthegeneral.com/au/en/elections/)
 - [Next federal election](https://mapthegeneral.com/au/en/elections/federal-next/)
+- [Victorian state election, 28 November 2026](https://mapthegeneral.com/au/en/elections/victoria-2026/)
 - [Results](https://mapthegeneral.com/au/en/results/)
 - [Sources](https://mapthegeneral.com/au/en/sources/)
 - [FAQ](https://mapthegeneral.com/au/en/faq/)

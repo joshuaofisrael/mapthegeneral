@@ -197,6 +197,10 @@ export default function AustraliaNationalPage() {
           4 November 2026.
         </p>
         <p>
+          <Link className="text-navy underline" href={`${path}elections/victoria-2026/`}>
+            State election, 28 November 2026
+          </Link>
+          {" · "}
           <Link className="text-navy underline" href={jurisdictionPath("victoria")}>
             Victoria
           </Link>

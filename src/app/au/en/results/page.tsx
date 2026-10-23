@@ -104,6 +104,10 @@ export default function AustraliaResultsPage() {
         <Link className="text-navy underline" href={`${auHome()}elections/federal-next/`}>
           Next federal election
         </Link>
+        {" · "}
+        <Link className="text-navy underline" href={`${auHome()}elections/victoria-2026/`}>
+          Victorian state election, 28 November 2026
+        </Link>
       </p>
     </AuFrame>
   );
