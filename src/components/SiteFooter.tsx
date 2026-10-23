@@ -10,8 +10,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-site gap-10 px-4 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <p className="font-serif text-2xl font-semibold">{SITE.name}</p>
-          <p className="mt-3 max-w-lg text-sm leading-6 text-white/80">{SITE.brandNote}</p>
-          <p className="mt-4 text-sm leading-6 text-white/80">{SITE.officialNotUs}</p>
+          <p className="mt-3 max-w-lg text-sm leading-6 text-white/80">{SITE.officialNotUs}</p>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-white/60">Explore</p>
@@ -70,14 +69,7 @@ export function SiteFooter() {
             ))}
           </p>
           <p className="mt-4 text-sm font-medium leading-6 text-white">
-            {`© ${COPYRIGHT_YEAR} ${SITE.legalName}. All rights reserved. ${SITE.name} is owned and operated by ${SITE.legalName}.`}
-          </p>
-          <p className="mt-2 text-xs leading-5 text-white/80">
-            {SITE.legalName}, {SITE.location}.{" "}
-            <Link className="underline" href="/contact/">
-              Contact
-            </Link>
-            . Sunbiz document number {SITE.sunbizDocumentNumber} ({SITE.sunbizStatus}).
+            {`© ${COPYRIGHT_YEAR} ${SITE.name}.`}
           </p>
         </div>
       </div>

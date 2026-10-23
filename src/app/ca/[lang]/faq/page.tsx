@@ -37,7 +37,7 @@ const FAQ = {
     {
       question: "Est-ce un site officiel ?",
       answer:
-        "Non. C’est une information non officielle de Joshua Israel Ventures LLC. Il faut la confirmer auprès du bureau électoral officiel.",
+        "Non. C’est une information non officielle de ce site. Il faut la confirmer auprès du bureau électoral officiel.",
     },
   ],
   en: [
@@ -69,7 +69,7 @@ const FAQ = {
     {
       question: "Is this an official site?",
       answer:
-        "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+        "No. It is unofficial information on this site. Confirm it with the official election office.",
     },
   ],
 } as const;

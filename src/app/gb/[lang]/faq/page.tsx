@@ -29,7 +29,7 @@ const FAQ = [
   {
     question: "Is this an official website?",
     answer:
-      "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the official election office.",
+      "No. It is unofficial information on this site. Confirm it with the official election office.",
   },
 ];
 

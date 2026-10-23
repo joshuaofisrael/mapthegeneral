@@ -42,7 +42,7 @@ const FAQ = {
     {
       question: "¿Es una web oficial?",
       answer:
-        "No. Es información no oficial de Joshua Israel Ventures LLC. Hay que confirmarla con el Instituto Nacional Electoral.",
+        "No. Es información no oficial de este sitio. Hay que confirmarla con el Instituto Nacional Electoral.",
     },
   ],
   en: [
@@ -78,7 +78,7 @@ const FAQ = {
     {
       question: "Is this an official website?",
       answer:
-        "No. It is unofficial information from Joshua Israel Ventures LLC. Confirm it with the National Electoral Institute.",
+        "No. It is unofficial information on this site. Confirm it with the National Electoral Institute.",
     },
   ],
 };

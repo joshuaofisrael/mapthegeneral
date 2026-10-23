@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "About",
-  description: `About ${SITE.name}, a global election guide operated by ${SITE.legalName}.`,
+  description: `About ${SITE.name}, an unofficial, independent election guide for the countries covered so far.`,
   path: "/about",
 });
 
@@ -18,23 +18,10 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "About" }]} />
       <PageHeader
         eyebrow="About"
-        title={`Who operates ${SITE.name}`}
-        lede="A nonpartisan election guide published by Joshua Israel Ventures LLC."
+        title={SITE.name}
+        lede="An unofficial, independent guide to elections in the countries covered so far."
       />
       <div className="prose-legal">
-        <h2>Who we are</h2>
-        <p>
-          <strong>{SITE.brandSentence}</strong>
-        </p>
-        <p>
-          <strong>{SITE.name}</strong> is owned and operated by <strong>{SITE.legalName}</strong>, a{" "}
-          {SITE.entityType} (Sunbiz document number {SITE.sunbizDocumentNumber}, {SITE.sunbizStatus}).
-          Business address: {SITE.location}. {SITE.brandNote}
-        </p>
-        <p>
-          Contact: use the <Link href="/contact/">contact page</Link>. The site does not publish a
-          personal email address.
-        </p>
         <h2>What this site is</h2>
         <p>
           {SITE.name} publishes sourced pages about elections. The first country in this release is
@@ -52,7 +39,12 @@ export default function AboutPage() {
         </ul>
         <p>
           The United States 2026 midterm pages are on{" "}
-          <a href={SITE.siblingUrl}>{SITE.siblingName}</a>, another brand of the same company.
+          <a href={SITE.siblingUrl}>{SITE.siblingName}</a>.
+        </p>
+        <p>
+          Who operates this site is stated on the <Link href="/imprint/">legal notice</Link>. Use the{" "}
+          <Link href="/contact/">contact page</Link> to write in. This site does not publish a personal
+          email address.
         </p>
         <p>
           Read the <Link href="/disclaimer/">disclaimer</Link>, <Link href="/privacy/">privacy policy</Link>,{" "}

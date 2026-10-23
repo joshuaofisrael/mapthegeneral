@@ -233,7 +233,7 @@ ${input.body}
 <ul>${sources}</ul>
 <p>${esc(attribution(input.lang))}</p>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.legalName)}. ${esc(SITE.location)}.`)}
+${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
@@ -339,9 +339,13 @@ function patchDistricts(): number {
       const file = join(publicDir, districtPath(lang, canton.slug, district.slug), "index.html");
       const html = readFileSync(file, "utf8");
       const needle = oldCommuneGapParagraph(lang);
-      if (!html.includes(needle)) throw new Error(`Gap paragraph missing in ${file}`);
       const block = publishedCommuneBlock(lang, canton.slug, district.canton, district.slug);
-      const next = html.replace(needle, block ?? laterCommuneGapParagraph(lang));
+      const replacement = block ?? laterCommuneGapParagraph(lang);
+      if (!html.includes(needle)) {
+        if (!html.includes(replacement)) throw new Error(`Gap paragraph missing in ${file}`);
+        continue;
+      }
+      const next = html.replace(needle, replacement);
       if (next === html) throw new Error(`No change ${file}`);
       writeFileSync(file, next);
       patched += 1;

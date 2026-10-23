@@ -39,8 +39,8 @@ export default function HomePage() {
           <a className="font-medium text-navy underline" href="#countries">
             the countries covered so far
           </a>
-          . It is operated by {SITE.legalName}. It is not affiliated with any government or election
-          authority, and it does not tell you how to vote.
+          . It is not affiliated with any government or election authority, and it does not tell you how
+          to vote.
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
       </section>

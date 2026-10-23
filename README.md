@@ -2,7 +2,9 @@
 
 Public, nonpartisan election guide for the countries covered so far: Australia, Canada, Italy, Mexico, Poland, Spain, Switzerland, and the United Kingdom.
 
-**Map the General** is a brand of **Joshua Israel Ventures LLC**, a Florida limited liability company (Sunbiz document number **L26000261819**, ACTIVE). It is not a separate company and is not claimed here as a filed DBA or trademark.
+**Publisher:** Map the General.
+
+**Map the General** is a brand of **Joshua Israel Ventures LLC**, a Florida limited liability company (Sunbiz document number **L26000261819**, ACTIVE). It is not a separate company and is not claimed here as a filed DBA or trademark. The public site names that company only on the legal pages.
 
 Business address: **5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322**.
 

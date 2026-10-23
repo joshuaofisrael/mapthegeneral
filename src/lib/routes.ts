@@ -51,7 +51,7 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "countries spain mexico poland italy united kingdom canada australia switzerland elections" },
   { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
-  { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "Joshua Israel Ventures LLC" },
+  { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "unofficial independent guide" },
   { path: "/disclaimer/", lang: "en-only", title: "Disclaimer", kind: "legal", text: "unofficial nonpartisan" },
   { path: "/privacy/", lang: "en-only", title: "Privacy", kind: "legal", text: "privacy GDPR cookies advertising adsense consent" },
   { path: "/terms/", lang: "en-only", title: "Terms of Use", kind: "legal", text: "terms" },
