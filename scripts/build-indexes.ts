@@ -1,13 +1,14 @@
 import { execSync } from "node:child_process";
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { electionSitemapLastmod } from "../src/data/election-seo";
 import { SITE, absoluteUrl } from "../src/data/site";
 import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/data/spain/municipalities";
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { registryCountries } from "../src/lib/country-registry";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
-import { buildDateIso, resolveLastmod, sourceFilesForPath } from "../src/lib/sitemap-lastmod";
+import { buildDateIso, loadGitFileDates, resolveLastmod, sourceFilesForPath } from "../src/lib/sitemap-lastmod";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BUILD_DATE = buildDateIso();
@@ -18,23 +19,26 @@ function write(path: string, body: string) {
   writeFileSync(full, body);
 }
 
-function gitDates(): Map<string, string> {
-  const out = execSync("git log --pretty=format:%cs --name-only", {
-    cwd: root,
-    encoding: "utf8",
-    maxBuffer: 256 * 1024 * 1024,
-  });
-  const dates = new Map<string, string>();
-  let current = "";
-  for (const line of out.split("\n")) {
-    if (/^\d{4}-\d{2}-\d{2}$/.test(line)) {
-      current = line;
-      continue;
+/** Lastmod values already published. Kept for unchanged pages when git history is missing. */
+function previousLastmods(): Map<string, string> {
+  const dir = join(root, "public", "sitemaps");
+  const found = new Map<string, string>();
+  if (!existsSync(dir)) return found;
+  const base = SITE.url.replace(/\/+$/, "");
+  for (const name of readdirSync(dir)) {
+    if (!name.endsWith(".xml")) continue;
+    const xml = readFileSync(join(dir, name), "utf8");
+    for (const match of xml.matchAll(/<loc>([^<]+)<\/loc><lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/g)) {
+      const loc = match[1];
+      let path = "/";
+      if (loc !== base && loc !== `${base}/`) {
+        const rest = loc.startsWith(base) ? loc.slice(base.length) : loc;
+        path = `/${rest.replace(/^\/+|\/+$/g, "")}/`;
+      }
+      found.set(path, match[2]);
     }
-    if (!line || !current || dates.has(line)) continue;
-    dates.set(line, current);
   }
-  return dates;
+  return found;
 }
 
 function dirtyFiles(): Set<string> {
@@ -58,17 +62,33 @@ function appPageFiles(dir: string, prefix: string): string[] {
 }
 
 const pageFiles = appPageFiles(join(root, "src", "app"), "src/app/");
-const dates = gitDates();
+const history = loadGitFileDates(root);
+const dates = history.dates;
 const dirty = dirtyFiles();
+const previous = history.available ? new Map<string, string>() : previousLastmods();
 const lastmodByPath = new Map<string, string>();
 let missingSources = 0;
+
+if (!history.available) {
+  console.log(
+    `indexes: git history is shallow or missing; lastmod uses an explicit election date, the build date for pages generated or changed, or the previous sitemap date (${previous.size} urls)`,
+  );
+}
 
 function lastmodFor(path: string): string {
   const cached = lastmodByPath.get(path);
   if (cached) return cached;
   const files = sourceFilesForPath(path, pageFiles, (rel) => existsSync(join(root, rel)));
   if (files.length === 0) missingSources += 1;
-  const value = resolveLastmod({ files, gitDates: dates, dirty, buildDate: BUILD_DATE });
+  const value = resolveLastmod({
+    files,
+    gitDates: dates,
+    dirty,
+    buildDate: BUILD_DATE,
+    historyAvailable: history.available,
+    explicit: electionSitemapLastmod(path),
+    previous: previous.get(path),
+  });
   lastmodByPath.set(path, value);
   return value;
 }
