@@ -306,13 +306,34 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
     ? `Le fichier de structure de la Classification géographique type (CGT) 2021 inscrit cette division de recensement (niveau 3) en ${regionLabel}. Le titre de classe est le nom ci-dessus. Le fichier ne dit pas si cette division est un gouvernement municipal et ne nomme pas de titulaire. Il ne donne pas la population.`
     : `The Standard Geographical Classification (SGC) 2021 structure file lists this census division (level 3) in ${regionLabel}. The class title is the name above. The file does not say whether this division is a municipal government, and it does not name an officeholder. It does not give a population.`;
   const places = municipalitiesIn(division.code, lang);
-  const gap = places.length
+  const legacy = division.region === "ontario" || division.region === "quebec";
+  const released =
+    legacy ||
+    division.region === "british-columbia" ||
+    division.region === "alberta" ||
+    division.region === "manitoba" ||
+    division.region === "saskatchewan" ||
+    division.region === "nova-scotia" ||
+    division.region === "new-brunswick";
+  const gap = !released
     ? fr
-      ? "Aucun maire, préfet ou conseil n’est copié. Aucun répertoire provincial de ces titulaires n’a été lu pour cette division. Les listes de candidatures ne figurent pas sur cette page."
-      : "No mayor, reeve, or council is copied. No provincial directory of those officeholders was read for this division. Candidate lists are not on this page."
-    : fr
       ? "Les municipalités de cette division de recensement ne font pas partie de cette livraison."
-      : "Municipalities in this census division are not in this release.";
+      : "Municipalities in this census division are not in this release."
+    : legacy
+      ? places.length
+        ? fr
+          ? "Aucun maire, préfet ou conseil n’est copié. Aucun répertoire provincial de ces titulaires n’a été lu pour cette division. Les listes de candidatures ne figurent pas sur cette page."
+          : "No mayor, reeve, or council is copied. No provincial directory of those officeholders was read for this division. Candidate lists are not on this page."
+        : fr
+          ? "Les municipalités de cette division de recensement ne font pas partie de cette livraison."
+          : "Municipalities in this census division are not in this release."
+      : places.length
+        ? fr
+          ? "Aucun maire, préfet ou conseil n’est copié. Lorsqu’un répertoire provincial a été lu, il est lié depuis chaque page de municipalité. Les listes de candidatures ne figurent pas sur cette page."
+          : "No mayor, reeve, or council is copied. Where a provincial directory was read, it is linked from each municipality page. Candidate lists are not on this page."
+        : fr
+          ? "La liste de la CGT 2021 utilisée pour cette livraison ne contient aucune municipalité constituée dans cette division de recensement."
+          : "The SGC 2021 list used for this release has no incorporated municipality in this census division.";
   const placeLinks = places.length
     ? `<h2>${fr ? "Municipalités" : "Municipalities"}</h2><p><a href="${esc(municipalityIndexPath(lang, division.region, division.slug))}">${fr ? "Index des municipalités" : "Municipality index"}</a></p><ul>${places
         .map(

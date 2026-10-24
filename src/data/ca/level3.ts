@@ -54,6 +54,7 @@ export const CSD_TYPE_LABEL: Record<string, string> = {
   RMU: "RMU – Resort Municipality",
   SM: "SM – Specialized municipality",
   SV: "SV – Summer village",
+  HAM: "HAM – Hamlet",
   T: "T – Town",
   TP: "TP – Township",
   TV: "TV – Town / Ville",
@@ -82,6 +83,12 @@ const SEAT_COUNTS: Record<string, number> = {
 const MUNI_COUNTS: Record<string, number> = {
   ontario: 414,
   quebec: 1130,
+  "british-columbia": 160,
+  alberta: 326,
+  manitoba: 138,
+  saskatchewan: 775,
+  "nova-scotia": 40,
+  "new-brunswick": 104,
 };
 
 function assertLevel3(): void {
@@ -135,7 +142,7 @@ function assertLevel3(): void {
   for (const seat of byRegion.get("british-columbia") ?? []) {
     if (seat.gap !== "dissolved" || seat.member) throw new Error(`BC seat ${seat.name} should have no current member`);
   }
-  if (MUNICIPALITIES.length !== 1544) throw new Error(`Expected 1544 municipalities, found ${MUNICIPALITIES.length}`);
+  if (MUNICIPALITIES.length !== 3087) throw new Error(`Expected 3087 municipalities, found ${MUNICIPALITIES.length}`);
   const divisionByCode = new Map(DIVISIONS.map((division) => [division.code, division]));
   const muniSlugs = new Set<string>();
   const muniCounts: Record<string, number> = {};
