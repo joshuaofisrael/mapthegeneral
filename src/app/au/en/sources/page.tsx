@@ -22,7 +22,7 @@ export default function AustraliaSourcesPage() {
         { name: "Australia", path: auHome() },
         { name: "Sources", path },
       ]}
-      updated="19 October 2026"
+      updated="24 October 2026"
       title="Sources for the Australia pages"
       lede="The date after each item is the day that page was read. News reports and Wikipedia are not used as the source of a fact."
       officeHref={aec.url}
@@ -33,10 +33,11 @@ export default function AustraliaSourcesPage() {
         <p>
           What is not in these sources is not invented. Open gaps include the Governor-General’s name, the premiers and
           chief ministers, federal and state candidate lists, a polling day for the next federal election, Senate
-          counts, Queensland, Western Australian, South Australian, ACT and Northern Territory lower-house district
-          rolls, current mayors, and a postcode search. Victorian members are shown only where the Victorian Electoral
-          Commission results confirm them: 81 of 88 Legislative Assembly districts and 34 of 40 Legislative Council
-          seats. The rest are marked as gaps.
+          counts, the elected members for Queensland, Western Australia, South Australia, the Australian Capital
+          Territory and the Northern Territory, current mayors, an official local-area-to-division correspondence, and a
+          postcode search. Victorian members are shown only where the Victorian Electoral Commission results confirm
+          them: 81 of 88 Legislative Assembly districts and 34 of 40 Legislative Council seats. The rest are marked as
+          gaps.
         </p>
         <h2>Licences and attribution</h2>
         <p>
@@ -127,11 +128,52 @@ export default function AustraliaSourcesPage() {
         <p>
           The Western Australian Electoral Commission copyright page, read on 19 October 2026, says that apart from fair
           dealing, no part of its material may be reproduced without the prior written permission of the Electoral
-          Commissioner. District names, the extraordinary-election council list, and member names were not copied. A
+          Commissioner. The Commission’s district names, the extraordinary-election council list, and member names were
+          not copied. The 59 Western Australian district pages use the ABS State Electoral Division names instead. A
           Tasmanian Electoral Commission copyright licence page was not found on 19 October 2026. The five division
           names already printed by the Commission are repeated. Member names and the 2026 candidate list were not
-          copied. Electoral Commission of Queensland, Elections ACT and the Northern Territory Electoral Commission
-          sites returned HTTP 403, so their rolls were not copied.
+          copied. On 24 October 2026 a direct request to the Electoral Commission of Queensland copyright page, Elections
+          ACT, and the Northern Territory Electoral Commission returned HTTP 403, so their rolls and member names were
+          not copied. Facts those Queensland pages do state, including 93 state electorates, 77 local government areas,
+          and the election on Saturday 26 October 2024, are reported in our own words.
+        </p>
+        <p>
+          State Electoral Division names and codes added on 24 October 2026 are from the Australian Bureau of Statistics
+          ASGS2025 MapServer: © Commonwealth of Australia,{" "}
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>
+          . The ABS says these are mesh block approximations and do not match official legal boundaries. Special-purpose
+          codes for no usual address and for migratory, offshore and shipping populations are not given district pages.
+          Queensland’s 93 ABS names match the count on the Commission’s boundaries page. South Australia’s 47 ABS names
+          match the Government of South Australia “State Electorates 2026” dataset, which stores the same names in
+          capitals. That dataset is the districts determined by the Electoral Districts Boundaries Commission, licensed{" "}
+          <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> (
+          <a href="https://data.sa.gov.au/data/dataset/state-electorates">data.sa.gov.au</a>
+          ).
+        </p>
+        <p>
+          Queensland local government area names and state codes are from the Queensland Government dataset “Local
+          government area boundaries - Queensland”, © State of Queensland,{" "}
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>{" "}
+          (
+          <a href="https://www.data.qld.gov.au/dataset/local-government-area-boundaries-queensland">data.qld.gov.au</a>
+          ). The dataset names 78 areas. The Commission’s boundaries page says there are 77. Both figures are kept. The
+          Constitution of Queensland 2001 section 19B and the Local Government Electoral Act 2011 (Qld) section 23 are
+          cited for the statutory election rules. Queensland legislation on legislation.qld.gov.au is © State of
+          Queensland, Creative Commons Attribution 4.0 (
+          <a href="https://www.legislation.qld.gov.au/copyright">legislation copyright</a>
+          ). Mayors were not copied: a licence for the department directory was not retrieved. No Saturday was calculated
+          from “the last Saturday in October” or “the last Saturday in March”.
+        </p>
+        <p>
+          No opinion poll, exit poll, projection, or result call is published. The Victorian state-election window in
+          the blackout table is unchanged. Tasmania’s 2026 local government elections close at 2 pm on Tuesday 27
+          October 2026. On 24 October 2026 that time has not arrived. No count, return rate, or candidate list for that
+          election is published. The Western Australian extraordinary elections of Thursday 3 December 2026 are not
+          given a candidate list or a count. The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A, the
+          Commonwealth Electoral Act 1918, the Electoral Act 2002 (Vic), the Privacy Act 1988 (Cth), and the state Acts
+          cited above were the election and privacy laws checked for this release. Only officeholder names already
+          printed by a source under a licence that allows reuse are shown, and only in their public role. No personal
+          address is published.
         </p>
         <p>
           Facts from the other official sites listed below are reported in our own words with a citation to each page.
