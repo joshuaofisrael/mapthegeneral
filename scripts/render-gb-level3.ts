@@ -131,7 +131,7 @@ ${ADSENSE_HEAD_TAGS}
 <p><strong>Records read 19 October 2026.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
 ${input.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.name)}. ${licence} Unofficial, and not endorsed by the bodies named here.`)}
+${withLegalFooter(`${licence} Unofficial, and not endorsed by the bodies named here.`)}
 ${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>

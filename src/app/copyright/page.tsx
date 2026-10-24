@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LegalCopyrightNotice } from "@/components/LegalCopyrightNotice";
 import { PageHeader } from "@/components/PageHeader";
 import { CORRECTIONS } from "@/data/corrections";
 import { SITE } from "@/data/legal-entity";
@@ -152,6 +153,7 @@ export default function CopyrightPage() {
           <Link href="/contact/">Contact</Link>
         </p>
       </div>
+      <LegalCopyrightNotice />
     </div>
   );
 }

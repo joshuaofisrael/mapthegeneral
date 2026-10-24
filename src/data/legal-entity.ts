@@ -7,6 +7,10 @@ import { SITE as publicSite } from "./site";
  */
 const legalName = "Joshua Israel Ventures LLC";
 
+/** Exact copyright line for the legal pages. Do not place it on other pages or in the site footer. */
+export const COPYRIGHT_NOTICE =
+  "© 2026 Joshua Israel Ventures LLC. All rights reserved. Map the General is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company.";
+
 export const LEGAL_ENTITY = {
   legalName,
   entityType: "Florida limited liability company",

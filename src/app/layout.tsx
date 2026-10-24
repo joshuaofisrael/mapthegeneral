@@ -41,6 +41,10 @@ const organizationJsonLd = {
   name: SITE.name,
   url: `${SITE.url}/`,
   description: SITE.description,
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Joshua Israel Ventures LLC",
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: SITE.streetAddress,

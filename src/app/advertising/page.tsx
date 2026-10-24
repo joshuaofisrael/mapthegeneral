@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LegalCopyrightNotice } from "@/components/LegalCopyrightNotice";
 import { PageHeader } from "@/components/PageHeader";
 import { SITE } from "@/data/legal-entity";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
@@ -65,6 +66,7 @@ export default function AdvertisingPage() {
           {SITE.legalName}, {SITE.location}. Use the <Link href="/contact/">contact page</Link>.
         </p>
       </div>
+      <LegalCopyrightNotice />
     </div>
   );
 }

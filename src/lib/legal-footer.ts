@@ -17,6 +17,9 @@ export function legalFooterSuffix(): string {
   return `<nav aria-label="Legal">${staticLegalNavHtml()}</nav><br>${INFORMATIONAL_NOTE}`;
 }
 
-export function withLegalFooter(innerHtml: string): string {
-  return `<footer class="wrap">${innerHtml} ${legalFooterSuffix()}</footer>`;
+/** Static document footer. The copyright line is not included; it belongs on the legal pages only. */
+export function withLegalFooter(innerHtml = ""): string {
+  const note = innerHtml.trim();
+  const suffix = legalFooterSuffix();
+  return `<footer class="wrap">${note ? `${note} ${suffix}` : suffix}</footer>`;
 }

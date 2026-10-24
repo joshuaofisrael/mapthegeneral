@@ -2,8 +2,6 @@ import Link from "@/components/AnchorLink";
 import { LEGAL_NAV, SITE } from "@/data/site";
 import { alphaCommunities } from "@/data/spain/places";
 
-const COPYRIGHT_YEAR = 2026;
-
 export function SiteFooter() {
   return (
     <footer className="mt-16 border-t border-line bg-navy-deep text-white">
@@ -67,9 +65,6 @@ export function SiteFooter() {
                 {index < list.length - 1 ? " · " : ""}
               </span>
             ))}
-          </p>
-          <p className="mt-4 text-sm font-medium leading-6 text-white">
-            {`© ${COPYRIGHT_YEAR} ${SITE.name}.`}
           </p>
         </div>
       </div>

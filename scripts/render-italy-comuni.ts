@@ -128,7 +128,7 @@ ${ADSENSE_HEAD_TAGS}
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${opts.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
+${withLegalFooter("")}
 ${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>
