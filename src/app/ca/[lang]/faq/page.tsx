@@ -32,7 +32,7 @@ const FAQ = {
     {
       question: "Y a-t-il des pages de municipalités ou un code postal ?",
       answer:
-        "Non dans cette livraison. Aucun jeu de données ouvert et officiel de codes postaux n’a été ajouté, et aucune liste de maires n’est copiée.",
+        "Oui pour l’Ontario, le Québec, la Colombie-Britannique, l’Alberta, le Manitoba, la Saskatchewan, la Nouvelle-Écosse et le Nouveau-Brunswick, à partir de la liste de la CGT 2021 utilisée ici, en français et en anglais. Terre-Neuve-et-Labrador, l’Île-du-Prince-Édouard et les territoires ne font pas partie de cette livraison. Aucun jeu de données ouvert et officiel de codes postaux n’a été ajouté, et aucune liste de maires n’est copiée.",
     },
     {
       question: "Est-ce un site officiel ?",
@@ -64,7 +64,7 @@ const FAQ = {
     {
       question: "Are there municipality pages or a postal-code search?",
       answer:
-        "Not in this release. No official open postal-code dataset was added, and no list of mayors is copied.",
+        "Yes for Ontario, Quebec, British Columbia, Alberta, Manitoba, Saskatchewan, Nova Scotia, and New Brunswick, from the SGC 2021 list used here, in English and French. Newfoundland and Labrador, Prince Edward Island, and the territories are not in this release. No official open postal-code dataset was added, and no list of mayors is copied.",
     },
     {
       question: "Is this an official site?",

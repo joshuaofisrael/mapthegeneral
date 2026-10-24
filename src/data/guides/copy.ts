@@ -179,7 +179,7 @@ const caEn: Guide = {
         ],
         [
           t(
-            "Provinces and territories run their own elections under their own statutes. This release also has municipality pages for Ontario and Quebec. It does not name mayors.",
+            "Provinces and territories run their own elections under their own statutes. This release also has municipality pages for Ontario, Quebec, British Columbia, Alberta, Manitoba, Saskatchewan, Nova Scotia, and New Brunswick. It does not name mayors.",
           ),
         ],
       ],

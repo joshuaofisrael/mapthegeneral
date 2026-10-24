@@ -3,6 +3,7 @@ import type { SourceRef } from "./types";
 const READ = "2026-10-17";
 const READ_LEVEL2 = "2026-10-18";
 const READ_LEVEL3 = "2026-10-19";
+const READ_MUNI = "2026-10-24";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -277,9 +278,111 @@ export const SOURCES: SourceRef[] = [
   },
   {
     id: "bc-lga-52",
-    name: "Local Government Act, R.S.B.C. 2015, c. 1, section 52, general local elections every 4 years (Act current to 6 October 2026)",
+    name: "Local Government Act, R.S.B.C. 2015, c. 1, section 52, general local elections every 4 years (Act current to 20 October 2026)",
     url: "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/r15001_03#section52",
-    readOn: READ_LEVEL3,
+    readOn: READ_MUNI,
+  },
+  {
+    id: "bc-van-toc",
+    name: "Vancouver Charter, table of contents, Part I, section 9, General local election (section text not read)",
+    url: "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/vanch_00",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "bc-local-governments",
+    name: "Province of British Columbia, Local governments",
+    url: "https://www2.gov.bc.ca/gov/content/governments/local-governments",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "ab-officials",
+    name: "Alberta.ca, Find a municipal official",
+    url: "https://www.alberta.ca/find-a-municipal-official",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "ab-ogl",
+    name: "Open Government Licence – Alberta",
+    url: "https://open.alberta.ca/licence",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "mb-muni-elections",
+    name: "Manitoba Municipal and Northern Relations, Municipal Elections 2026",
+    url: "https://www.gov.mb.ca/mr/mfas/elections.html",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "mb-election-faq",
+    name: "Manitoba Municipal and Northern Relations, Municipal election FAQ",
+    url: "https://www.gov.mb.ca/mr/mfas/election_faq.html",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "sk-muni-dates",
+    name: "Government of Saskatchewan, Election dates and workshops for municipalities",
+    url: "https://www.saskatchewan.ca/government/municipal-administration/elections/election-dates-and-workshops-for-municipalities",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "sk-muni-directory",
+    name: "Government of Saskatchewan, Municipal directory",
+    url: "https://www.saskatchewan.ca/government/municipal-administration/municipal-directory",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "ns-mea",
+    name: "Municipal Elections Act, R.S.N.S. 1989, c. 300, sections 2 and 10, office consolidation on nslegislature.ca",
+    url: "https://nslegislature.ca/sites/default/files/legc/statutes%20HTML/municipal%20elections.htm",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "ns-muni-elections",
+    name: "Government of Nova Scotia, Municipal elections",
+    url: "https://novascotia.ca/municipal-elections/",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "nb-local-process",
+    name: "Government of New Brunswick, The local government general election process",
+    url: "https://www.gnb.ca/en/topic/family-home-community/communty-local-gov/local-resource-manual/local-election-process.html",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "nb-mea",
+    name: "Municipal Elections Act, R.S.N.B. 1973, c. M-21.01, section 3 (consolidation current to 13 December 2023)",
+    url: "https://laws.gnb.ca/en/document/cs/M-21.01",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "nl-2025-date",
+    name: "Government of Newfoundland and Labrador, Public advisory: New date for municipal general election 2025, news release of 1 November 2024",
+    url: "https://www.gov.nl.ca/releases/2024/mpa/1101n05/",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "pei-mga",
+    name: "Municipal Government Act, R.S.P.E.I. 1988, c. M-12.1, sections 32 and 37",
+    url: "https://www.princeedwardisland.ca/sites/default/files/legislation/m-12.1-municipal_government_act.pdf",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "pei-candidates",
+    name: "Government of Prince Edward Island, Candidate information for municipal elections",
+    url: "https://www.princeedwardisland.ca/en/information/housing-and-communities/candidate-information-for-municipal-elections",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "nwt-elections-home",
+    name: "Elections NWT, home page",
+    url: "https://www.electionsnwt.ca/en",
+    readOn: READ_MUNI,
+  },
+  {
+    id: "nu-muni",
+    name: "Elections Nunavut, About municipal council elections",
+    url: "https://www.elections.nu.ca/en/municipal-elections/municipal-council/about-municipal-council-elections",
+    readOn: READ_MUNI,
   },
   {
     id: "ab-mla",
@@ -297,7 +400,7 @@ export const SOURCES: SourceRef[] = [
     id: "ab-muni-next",
     name: "Alberta.ca, Municipal elections – Overview",
     url: "https://www.alberta.ca/municipal-elections-overview",
-    readOn: READ_LEVEL3,
+    readOn: READ_MUNI,
   },
   {
     id: "mb-mla",
