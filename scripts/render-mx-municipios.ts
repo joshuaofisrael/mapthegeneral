@@ -25,6 +25,7 @@ import { sourcesById } from "../src/data/mx/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -254,7 +255,14 @@ function placePage(lang: Lang, row: Municipio): string {
 <p class="gap"><strong>${es ? "Laguna" : "Gap"}.</strong> ${esc(officeText(lang, row))}</p>
 <h2>${es ? "Elecciones" : "Elections"}</h2>
 <p>${esc(electionText(lang, entity.code, entity.ine.presidencias, entity.ine.alcaldias, entity.municipalities))}</p>
-<p class="tools">${es ? "Páginas superiores" : "Parent pages"}: <a href="${esc(entityPath(lang, entitySlug))}">${esc(entity.name)}</a> · <a href="${esc(municipiosIndexPath(lang, entitySlug))}">${es ? "Índice" : "Index"}</a> · <a href="${esc(mexicoHome(lang))}">${es ? "México" : "Mexico"}</a>.${near ? ` ${es ? "Anterior y siguiente:" : "Previous and next:"} ${near}` : ""}</p>`;
+<p class="tools">${es ? "Páginas superiores" : "Parent pages"}: <a href="${esc(entityPath(lang, entitySlug))}">${esc(entity.name)}</a> · <a href="${esc(municipiosIndexPath(lang, entitySlug))}">${es ? "Índice" : "Index"}</a> · <a href="${esc(mexicoHome(lang))}">${es ? "México" : "Mexico"}</a>.${near ? ` ${es ? "Anterior y siguiente:" : "Previous and next:"} ${near}` : ""}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`mx:${row.code}`)
+    .map((code) => MUNICIPIOS.find((item) => item.code === code))
+    .filter((item): item is Municipio => Boolean(item))
+    .map((item) => ({ href: municipioPath(lang, entitySlugFor(item), item.slug), name: item.name })),
+)}`;
   return shell({ lang, path, title, description, crumbs, body });
 }
 

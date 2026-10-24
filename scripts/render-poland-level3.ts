@@ -18,6 +18,8 @@ import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 
 const PKW_RESULTS = "https://samorzad2024.pkw.gov.pl/samorzad2024/";
@@ -130,6 +132,7 @@ ${input.body}
 <p><strong>${esc(updated)}</strong> <a href="${esc(reportErrorHref(input.path))}">${pl ? "Zgłoś błąd" : "Report an error"}</a></p>
 </main>
 ${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
+${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>
 `;
@@ -252,6 +255,13 @@ ${electionsHtml(lang)}
 <h2>${pl ? "Okręgi" : "Constituencies"}</h2>
 ${constituencyHtml(lang, gmina)}
 <p><a href="${esc(powiatPath(lang, powiat.voivodeshipSlug, powiat.slug))}">${esc(parentHeading)}</a> · <a href="${esc(powiatGminaIndexPath(lang, powiat.voivodeshipSlug, powiat.slug))}">${pl ? "Gminy" : "Gminas"}</a> · <a href="${esc(voivodeshipPath(lang, voj.slug))}">${esc(voj.name)}</a>${near ? ` · ${near}` : ""}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`pl:${gmina.code}`)
+    .map((code) => allGminy().find((item) => item.code === code))
+    .filter((item): item is Gmina => Boolean(item))
+    .map((item) => ({ href: gminaPath(lang, item), name: item.name })),
+)}
 <p>${pl ? "Źródła" : "Sources"}: <a href="https://api.sejm.gov.pl/eli/acts/DU/2026/662/text.pdf">Dz.U. 2026 poz. 662</a>, <a href="https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf">1261</a>, <a href="https://api.sejm.gov.pl/eli/acts/DU/2024/617/text.html">2024 poz. 617</a>.${extra} <a href="${esc(indexSources)}">TERC, PKW${pl ? "" : ", Senate"}</a>.</p>`;
   return shell({ lang, path, title, description, crumbs, body });
 }

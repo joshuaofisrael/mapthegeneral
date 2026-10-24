@@ -33,6 +33,8 @@ import { sourcesById } from "../src/data/gb/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -130,6 +132,7 @@ ${ADSENSE_HEAD_TAGS}
 ${input.body}
 </main>
 ${withLegalFooter(`© 2026 ${esc(SITE.name)}. ${licence} Unofficial, and not endorsed by the bodies named here.`)}
+${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>
 `;
@@ -280,6 +283,13 @@ ${split}
 ${districts}
 ${devolved(council.nation)}
 ${nearby(peers, index)}
+${nearbyPlacesParagraph(
+  "en",
+  nearbyIds(`gb:${council.code}`)
+    .map((code) => councilByCode(code))
+    .filter((item): item is Council => Boolean(item))
+    .map((item) => ({ href: councilPath(item), name: item.name })),
+)}
 <h2>Sources</h2>
 <ul>${sourcesHtml(councilSources(council))}</ul>`,
   });

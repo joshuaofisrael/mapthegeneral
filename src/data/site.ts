@@ -1,5 +1,17 @@
 const DEFAULT_SITE_URL = "https://mapthegeneral.com";
 
+/** 160 is the limit for both code points and UTF-8 bytes. A curly apostrophe made the old line 162 bytes. */
+function homepageDescription(): string {
+  const description =
+    "Unofficial, independent election pages for countries covered so far. The Spanish general election is Sunday, 29 November 2026. Not an official election website.";
+  const chars = [...description].length;
+  const bytes = new TextEncoder().encode(description).length;
+  if (chars > 160 || bytes > 160) {
+    throw new Error(`Homepage description is ${chars} characters and ${bytes} bytes; the limit is 160.`);
+  }
+  return description;
+}
+
 function publicSiteUrl(): string {
   const raw = process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL;
   return raw.replace(/\/+$/, "");
@@ -8,8 +20,7 @@ function publicSiteUrl(): string {
 export const SITE = {
   name: "Map the General",
   tagline: "A global, nonpartisan election guide",
-  description:
-    "Unofficial, independent election pages for the countries covered so far. Spain’s general election is Sunday, 29 November 2026. Not an official election website.",
+  description: homepageDescription(),
   url: publicSiteUrl(),
   streetAddress: "5640 W Maple Rd, Ste 101",
   locality: "West Bloomfield",

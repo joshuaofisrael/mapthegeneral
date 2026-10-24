@@ -19,6 +19,7 @@ import { sourcesById } from "../src/data/au/sources";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import { auHome, jurisdictionPath } from "../src/countries/au";
 
@@ -480,7 +481,13 @@ function renderDistricts() {
           h1: item.name,
           lede: copy.lede,
           officeHref: copy.office,
-          body: `${copy.body}${nearby(links, index)}<p><a href="${esc(indexHref)}">${esc(chamber)}</a> · <a href="${esc(jurisdictionPath(slug))}">${esc(parent)}</a></p>`,
+          body: `${copy.body}${nearby(links, index)}${nearbyPlacesParagraph(
+            "en",
+            nearbyIds(`au-dist:${slug}/${item.slug}`)
+              .map((id) => items.find((other) => other.slug === id))
+              .filter((other): other is NonNullable<typeof other> => Boolean(other))
+              .map((other) => ({ href: stateAssemblyPath(slug, other.slug), name: other.name })),
+          )}<p><a href="${esc(indexHref)}">${esc(chamber)}</a> · <a href="${esc(jurisdictionPath(slug))}">${esc(parent)}</a></p>`,
           sourceIds: copy.sources,
           updated: copy.updated,
         }),
@@ -562,7 +569,13 @@ function renderAreas() {
           h1,
           lede,
           officeHref: areaOffice(item),
-          body: `${areaBody(item)}${nearby(siblings, indexIn)}<p><a href="${esc(indexHref)}">${esc(title)}</a> · <a href="${esc(parentPath)}">${esc(parentName)}</a></p>`,
+          body: `${areaBody(item)}${nearby(siblings, indexIn)}${nearbyPlacesParagraph(
+            "en",
+            nearbyIds(`au-area:${slug}/${item.slug}`)
+              .map((id) => items.find((other) => other.slug === id && other.group === item.group))
+              .filter((other): other is NonNullable<typeof other> => Boolean(other))
+              .map((other) => ({ href: localPath(other), name: other.name })),
+          )}<p><a href="${esc(indexHref)}">${esc(title)}</a> · <a href="${esc(parentPath)}">${esc(parentName)}</a></p>`,
           sourceIds: areaSources(item),
           updated: item.jurisdictionSlug === "queensland" ? UPDATED_24 : UPDATED,
         }),

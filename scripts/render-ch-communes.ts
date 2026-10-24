@@ -11,6 +11,7 @@ import { localDate, trustCopy, ui } from "../data/ch/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import {
   communeHeading,
@@ -298,6 +299,16 @@ ${short}
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(executiveGap(lang))}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(electionGap(lang))}</p>
 <p class="tools">${esc(copy.parent)}: ${parentBits.join(" · ")}. ${esc(copy.alphaNearby)}: ${near}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`ch:${commune.bfs}`)
+    .map((bfs) => COMMUNES.find((item) => item.bfs === bfs))
+    .filter((item): item is Commune => Boolean(item))
+    .map((item) => ({
+      href: communePath(lang, canton.slug, item.districtSlug, item.slug),
+      name: item.name,
+    })),
+)}
 `;
   return pageDocument({ lang, path, title: commune.name, description, crumbs, body });
 }
