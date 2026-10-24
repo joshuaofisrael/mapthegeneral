@@ -39,7 +39,7 @@ export default function AustraliaNationalPage() {
       eyebrow="Federal election · due between August 2027 and May 2028"
       title="Australia"
       lede="The Australian Electoral Commission says the next federal election is due to be held between August 2027 and May 2028. No writ read on 17 October 2026 names a polling day."
-      updated="19 October 2026"
+      updated="24 October 2026"
       officeHref={aec.url}
       officeLabel="Australian Electoral Commission"
       sources={sourcesById([
@@ -62,6 +62,10 @@ export default function AustraliaNationalPage() {
         "vec-districts",
         "vec-regions",
         "acma-blackout",
+        "abs-sed-2025",
+        "qld-lga-boundaries",
+        "ecq-boundaries",
+        "sa-electorates-2026",
       ])}
     >
       <CountryGuide code="au" lang="en" />
@@ -246,6 +250,26 @@ export default function AustraliaNationalPage() {
           <Link className="text-navy underline" href={stateAssemblyIndexPath("tasmania")}>
             5 Tasmanian House of Assembly divisions
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("queensland")}>
+            93 Queensland Legislative Assembly districts
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("western-australia")}>
+            59 Western Australian districts (ABS names)
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("south-australia")}>
+            47 South Australian House of Assembly districts
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("australian-capital-territory")}>
+            5 ACT Legislative Assembly electorates
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={stateAssemblyIndexPath("northern-territory")}>
+            25 Northern Territory divisions (ABS names)
+          </Link>
         </p>
       </section>
 
@@ -256,11 +280,14 @@ export default function AustraliaNationalPage() {
           including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not
           match official legal boundaries and should only be used for statistical purposes. This release keeps the 548
           spatial areas from the ASGS2025 MapServer extract. Victoria’s 79 councils use the Victorian Electoral
-          Commission’s names, with the matching ABS code. The other areas use the ABS name and code.
+          Commission’s names, with the matching ABS code. Queensland’s 78 areas use the names in the Queensland
+          Government local government area boundaries dataset, CC BY 4.0, read on 24 October 2026, with the matching
+          ABS code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are
+          kept. The other areas use the ABS name and code.
         </p>
         <p>
           The Tasmanian Electoral Commission page for the 2026 local government elections prints close of poll at 2 pm
-          on Tuesday 27 October. On 19 October 2026 that time has not arrived. This site does not publish a candidate
+          on Tuesday 27 October. On 24 October 2026 that time has not arrived. This site does not publish a candidate
           list, a return rate, or a count for that election.
         </p>
         <p>
@@ -289,7 +316,7 @@ export default function AustraliaNationalPage() {
         <h2 className="font-serif text-2xl font-semibold">Candidates and postcodes</h2>
         <GapNote
           label="Gap"
-          text="No writ for the next federal election was read, so there is no federal candidate list to publish. Candidate profiles are not in this release. Queensland, Western Australia, South Australia, the Australian Capital Territory and the Northern Territory lower-house district lists were not copied: the commission site was blocked, the copyright notice does not allow reproduction, or the notice page did not itself list the districts."
+          text="No writ for the next federal election was read, so there is no federal candidate list to publish. Candidate profiles are not in this release. Lower-house member names for Queensland, Western Australia, South Australia, the Australian Capital Territory and the Northern Territory were not copied: the commission roll was blocked, the copyright notice does not allow reproduction, or the Gazette table was not on the notice page. Current mayors were not copied."
         />
         <GapNote
           label="Gap"

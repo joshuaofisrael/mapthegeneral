@@ -5,6 +5,7 @@ import {
   LOCAL_AREAS,
   STATE_DISTRICTS,
   areasIn,
+  chamberTitle,
   districtsIn,
   localIndexPath,
   localPath,
@@ -24,6 +25,7 @@ import { auHome, jurisdictionPath } from "../src/countries/au";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const UPDATED = "19 October 2026";
+const UPDATED_24 = "24 October 2026";
 
 const ABS_CAVEAT =
   "The Australian Bureau of Statistics says a Local Government Area is a Mesh Block approximation of a gazetted local government boundary. It says those approximations do not match official legal boundaries and should only be used for statistical purposes.";
@@ -59,6 +61,7 @@ function shell(input: {
   officeHref: string;
   body: string;
   sourceIds: string[];
+  updated?: string;
 }): string {
   const canonical = absoluteUrl(input.path);
   const jsonLd = JSON.stringify({
@@ -112,7 +115,7 @@ ${ADSENSE_HEAD_TAGS}
 <p class="eyebrow">${esc(input.eyebrow)}</p>
 <h1>${esc(input.h1)}</h1>
 <p class="lede">${esc(input.lede)}</p>
-<p><strong>Last updated: ${UPDATED}.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
+<p><strong>Last updated: ${input.updated ?? UPDATED}.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
 ${input.body}
 <h2>Sources</h2>
 <ul>${sources}</ul>
@@ -154,7 +157,78 @@ function parentCrumbs(slug: string, indexName: string, indexHref: string, pageNa
   return crumbs;
 }
 
-function districtBody(item: StateDistrict): { body: string; sources: string[]; office: string; lede: string } {
+const SED_CAVEAT =
+  "The Australian Bureau of Statistics says a State Electoral Division is a Mesh Block approximation of a state electoral district. It says those approximations do not match official legal boundaries and should only be used for statistical purposes.";
+
+function absDistrictLine(item: StateDistrict): string {
+  return `<p>ABS State Electoral Division code <strong>${esc(item.absCode ?? "")}</strong>, name <strong>${esc(item.name)}</strong>, in the ASGS2025 MapServer extract read on 24 October 2026. ${SED_CAVEAT}</p>`;
+}
+
+function districtBody(item: StateDistrict): { body: string; sources: string[]; office: string; lede: string; updated: string } {
+  if (item.jurisdictionSlug === "queensland") {
+    return {
+      office: "https://www.ecq.qld.gov.au/2024sge",
+      updated: UPDATED_24,
+      lede: `${item.name}, a Queensland Legislative Assembly electoral district. ABS State Electoral Division code ${item.absCode}.`,
+      sources: ["abs-sed-2025", "ecq-boundaries", "ecq-2024", "qld-const-19b", "ecq-plan"],
+      body: `${absDistrictLine(item)}
+<p>The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates. A copyright page for the Commission was not retrieved that day, because a direct request returned HTTP 403, so the Commission’s district roll and the Gazette notice of elected candidates were not copied. The member for ${esc(item.name)} is not printed. Not published under a confirmed reuse licence.</p>
+<p>The Commission’s 2024 state general election page says the election was held on Saturday 26 October 2024, and that all results have been declared. It says polling places were open from 8am to 6pm. This page does not reprint a count.</p>
+<p>The Constitution of Queensland 2001, section 19B, says the normal polling day for an ordinary general election is the last Saturday in October in the fourth calendar year after the calendar year of the last ordinary general election, unless polling is postponed under that section. The Commission’s Strategic Plan 2025–2029 places a state general election in October 2028 and does not print a calendar day. This page does not calculate that Saturday. No candidate list is printed.</p>
+<p>${NO_CALL}</p>
+<p>Which House of Representatives division this district falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
+    };
+  }
+  if (item.jurisdictionSlug === "western-australia") {
+    return {
+      office: "https://www.elections.wa.gov.au/elections/state",
+      updated: UPDATED_24,
+      lede: `${item.name}, a Western Australian Legislative Assembly electoral district. ABS State Electoral Division code ${item.absCode}.`,
+      sources: ["abs-sed-2025", "waec-state", "waec-copyright"],
+      body: `${absDistrictLine(item)}
+<p>The Western Australian Electoral Commission state-elections page says the last WA State election was held on Saturday 8 March 2025. That page does not print the next state polling day. This page does not forecast one.</p>
+<p>The Commission’s copyright notice says that, apart from fair dealing, no part of its material may be reproduced without the prior written permission of the Electoral Commissioner. The Commission’s district list and the member for ${esc(item.name)} were not copied. Not published under a reuse licence.</p>
+<p>${NO_CALL}</p>
+<p>Which House of Representatives division this district falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
+    };
+  }
+  if (item.jurisdictionSlug === "south-australia") {
+    return {
+      office: "https://www.ecsa.sa.gov.au/",
+      updated: UPDATED_24,
+      lede: `${item.name}, a South Australian House of Assembly electoral district. ABS State Electoral Division code ${item.absCode}.`,
+      sources: ["abs-sed-2025", "sa-electorates-2026", "ecsa-ha-2026", "ecsa-copyright"],
+      body: `${absDistrictLine(item)}
+<p>The Government of South Australia dataset “State Electorates 2026”, licensed Creative Commons Attribution 4.0, read on 24 October 2026, is the state electoral districts determined by the Electoral Districts Boundaries Commission. In that file this district is stored in capitals as <strong>${esc(item.name.toUpperCase())}</strong>. The words are the same as the ABS name.</p>
+<p>The Electoral Commission of South Australia notice of House of Assembly results says those elections were held on Saturday, 21 March 2026. The notice points to a Government Gazette for the votes of the two unexcluded candidates. That table was not copied. The member for ${esc(item.name)} is not printed.</p>
+<p>The next state polling day after 2026 was not on the pages read. No candidate list is printed. ${NO_CALL}</p>
+<p>Which House of Representatives division this district falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
+    };
+  }
+  if (item.jurisdictionSlug === "australian-capital-territory") {
+    return {
+      office: "https://www.elections.act.gov.au/elections",
+      updated: UPDATED_24,
+      lede: `${item.name}, an Australian Capital Territory Legislative Assembly electorate. ABS State Electoral Division code ${item.absCode}.`,
+      sources: ["abs-sed-2025", "elections-act"],
+      body: `${absDistrictLine(item)}
+<p>The Elections ACT elections page, read on 17 October 2026, says the next ACT Legislative Assembly election will be held in October 2028. It does not print a calendar day. A direct request on 24 October 2026 returned HTTP 403, so the Commission’s electorate roll and the members elected for ${esc(item.name)} were not copied. Not published under a confirmed reuse licence.</p>
+<p>${NO_CALL}</p>
+<p>Which House of Representatives division this electorate falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
+    };
+  }
+  if (item.jurisdictionSlug === "northern-territory") {
+    return {
+      office: "https://ntec.nt.gov.au/",
+      updated: UPDATED_24,
+      lede: `${item.name}, a Northern Territory Legislative Assembly division. ABS State Electoral Division code ${item.absCode}.`,
+      sources: ["abs-sed-2025"],
+      body: `${absDistrictLine(item)}
+<p>The Northern Territory Electoral Commission site returned HTTP 403 on 24 October 2026, so its division roll was not copied. The member for ${esc(item.name)} is not printed. Last and next election days were not read. Not published centrally.</p>
+<p>${NO_CALL}</p>
+<p>Which House of Representatives division this division falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
+    };
+  }
   if (item.jurisdictionSlug === "new-south-wales") {
     const member =
       item.memberKind === "by-election" && item.declaration
@@ -162,6 +236,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
         : `<p>The NSW Electoral Commission virtual tally room for the state general election of Saturday 25 March 2023 prints the elected candidate as ${esc(item.memberPrinted ?? "")}, ${esc(item.memberParty ?? "")}.</p>`;
     return {
       office: "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election",
+      updated: UPDATED,
       lede: `${item.name}, a New South Wales Legislative Assembly district. One member is elected for the district.`,
       sources:
         item.memberKind === "by-election"
@@ -174,6 +249,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
   }
   return {
     office: "https://www.tec.tas.gov.au/house-of-assembly/elections-2025/index.html",
+    updated: UPDATED,
     lede: `${item.name}, one of the five Tasmanian House of Assembly divisions.`,
     sources: ["tec-hoa-2025"],
     body: `<p>The Tasmanian Electoral Commission says a general election for the House of Assembly was held on Saturday 19 July 2025, and that polling closed at 6 pm that day. It says seven members are elected for each of the five divisions, for a term of up to four years.</p>
@@ -187,7 +263,9 @@ function areaOffice(area: LocalArea): string {
   if (area.group === "vic-council") return "https://www.vec.vic.gov.au/electoral-boundaries/local-councils";
   if (area.jurisdictionSlug === "new-south-wales") return "https://elections.nsw.gov.au/elections/past-results/local-government-election-results";
   if (area.jurisdictionSlug === "south-australia") return "https://www.ecsa.sa.gov.au/parties-and-candidates/council-candidates";
-  if (area.jurisdictionSlug === "queensland") return "https://www.ecq.qld.gov.au/_resource/documents/pdf/about-us/publications/strategic-plans/Strategic-Plan-2025-2029.pdf";
+  if (area.jurisdictionSlug === "queensland") {
+    return "https://www.dlgwv.qld.gov.au/local-government/for-the-community/local-government-directory/search-the-local-government-directory";
+  }
   if (area.jurisdictionSlug === "tasmania") return "https://www.tec.tas.gov.au/local-government/elections-2026/index.html";
   if (area.jurisdictionSlug === "western-australia") return "https://www.elections.wa.gov.au/copyright";
   return "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/non-abs-structures/local-government-areas";
@@ -198,7 +276,7 @@ function areaSources(area: LocalArea): string[] {
   if (area.group === "vic-council") ids.push("vec-councils", "vec-local", "vec-2024-councils", "vec-legal");
   if (area.jurisdictionSlug === "new-south-wales") ids.push("nswec-lg-results", "nswec-copyright", "nswec-past");
   if (area.jurisdictionSlug === "south-australia") ids.push("ecsa-council-2027", "ecsa-copyright");
-  if (area.jurisdictionSlug === "queensland") ids.push("ecq-plan");
+  if (area.jurisdictionSlug === "queensland") ids.push("qld-lga-boundaries", "qld-lgea-s23", "ecq-boundaries", "ecq-plan");
   if (area.jurisdictionSlug === "tasmania") ids.push("tec-lg-2026");
   if (area.jurisdictionSlug === "western-australia") ids.push("waec-copyright");
   if (area.flags.includes("christmas") || area.flags.includes("cocos")) ids.push("abs-lga-2025");
@@ -253,7 +331,7 @@ function electionParagraph(area: LocalArea): string {
     return `<p>The Electoral Commission of South Australia says the next periodic local government council elections will be held in April 2027, moved from November 2026. The timetable on that page prints close of voting (polling day) at 5pm on Wednesday 7 April 2027. Rolls close at 5pm on Monday 4 January 2027. Nominations open on Tuesday 26 January 2027 and close at 12 noon on Tuesday 9 February 2027. No candidate list is printed here.${rename}</p>`;
   }
   if (area.jurisdictionSlug === "queensland") {
-    return `<p>The Electoral Commission of Queensland Strategic Plan 2025–2029 places local government elections in March 2028. The plan does not print a calendar day. A last local election day was not on the pages read. The Commission’s website returned HTTP 403 to a direct request on 19 October 2026, so a council roll was not copied from it.</p>`;
+    return `<p>The Local Government Electoral Act 2011 (Qld) section 23 says a quadrennial election must be held in, and every fourth year after, 2012, on the last Saturday in March. It also says a regulation may fix a different Saturday for a particular year. The Electoral Commission of Queensland Strategic Plan 2025–2029 places local government elections in March 2028 and does not print a calendar day. The calendar day of the last quadrennial election was not in those sources. This page does not calculate a Saturday. No candidate list is printed.</p>`;
   }
   if (area.jurisdictionSlug === "tasmania") {
     return `<p>The Tasmanian Electoral Commission page titled “2026 local government elections” prints close of poll at 2 pm on Tuesday 27 October, and counting commencing from 9 am on Wednesday 28 October. The page is the 2026 election. On 19 October 2026 that close of poll has not arrived. The page says ballot packs are delivered by post from Monday 5 October, and that there are 29 councils. This page does not publish a candidate list, a return rate, or a count. A Commission copyright licence page was not found, so council legal names were not copied from the Commission.</p>`;
@@ -283,6 +361,9 @@ function officeParagraph(area: LocalArea): string {
   if (area.group === "vic-council") {
     return `<p>The Victorian Electoral Commission says that in a local council election people vote for councillors, and that after the councillors are elected they decide who will act as mayor. The current mayor was not on the council index read on 19 October 2026. Not published centrally.</p>`;
   }
+  if (area.jurisdictionSlug === "queensland" && area.stateCode) {
+    return `<p>A current mayor and the current councillors were not copied. The Queensland local government directory lists council officers. A copyright licence for that directory was not retrieved on 24 October 2026, because a direct request returned HTTP 403. Not published under a confirmed reuse licence.</p>`;
+  }
   return `<p>A current mayor or council membership was not published on a central page whose licence permits this publisher to copy it. Not published centrally.</p>`;
 }
 
@@ -291,25 +372,78 @@ function areaBody(area: LocalArea): string {
   const official =
     area.group === "vic-council"
       ? `<p>Official council name, as the Victorian Electoral Commission prints it: ${esc(area.name)}.</p>`
-      : "";
+      : area.jurisdictionSlug === "queensland" && area.stateCode
+        ? `<p>Official name in the Queensland Government local government area boundaries dataset, read on 24 October 2026: ${esc(area.name)}. State code <strong>${esc(area.stateCode)}</strong>. The dataset is licensed Creative Commons Attribution 4.0.</p>`
+        : "";
   const islands =
     area.flags.includes("christmas") || area.flags.includes("cocos")
       ? `<p>The MapServer state name for this code is Other Territories. The ABS Local Government Areas page also says that in ASGS Edition 3, Cocos (Keeling) Islands and Christmas Island are included as Western Australian Local Government Areas, reflecting their administration at the local government level. This page does not resolve that difference. The 2025 page says Cocos Islands was renamed Cocos (Keeling) Islands.</p>`
       : "";
-  return `${official}${code}${islands}${officeParagraph(area)}${electionParagraph(area)}<p>${NO_CALL}</p><p>${NO_MAP}</p>`;
+  const mapped =
+    area.jurisdictionSlug === "queensland" && area.stateCode
+      ? "The local government area boundaries dataset read on 24 October 2026 does not name a House of Representatives division or a state electoral district for this area. It is not guessed from a boundary."
+      : NO_MAP;
+  return `${official}${code}${islands}${officeParagraph(area)}${electionParagraph(area)}<p>${NO_CALL}</p><p>${mapped}</p>`;
+}
+
+const DISTRICT_ORDER = [
+  "new-south-wales",
+  "queensland",
+  "western-australia",
+  "south-australia",
+  "tasmania",
+  "australian-capital-territory",
+  "northern-territory",
+];
+
+function districtIndexSources(slug: string): string[] {
+  if (slug === "tasmania") return ["tec-hoa-2025"];
+  if (slug === "new-south-wales") return ["nswec-vtr-2023", "nswec-copyright"];
+  if (slug === "queensland") return ["abs-sed-2025", "ecq-boundaries", "ecq-2024"];
+  if (slug === "western-australia") return ["abs-sed-2025", "waec-copyright"];
+  if (slug === "south-australia") return ["abs-sed-2025", "sa-electorates-2026", "ecsa-copyright"];
+  if (slug === "australian-capital-territory") return ["abs-sed-2025", "elections-act"];
+  return ["abs-sed-2025"];
+}
+
+function districtIndexOffice(slug: string): string {
+  if (slug === "tasmania") return "https://www.tec.tas.gov.au/house-of-assembly/elections-2025/index.html";
+  if (slug === "new-south-wales") return "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election";
+  if (slug === "queensland") return "https://www.ecq.qld.gov.au/electoral-boundaries";
+  if (slug === "western-australia") return "https://www.elections.wa.gov.au/copyright";
+  if (slug === "south-australia") return "https://data.sa.gov.au/data/dataset/state-electorates";
+  if (slug === "australian-capital-territory") return "https://www.elections.act.gov.au/elections";
+  return "https://ntec.nt.gov.au/";
+}
+
+function districtIndexLede(slug: string, count: number): string {
+  if (slug === "queensland") {
+    return `${count} names from the Australian Bureau of Statistics ASGS 2025 State Electoral Division list. The Electoral Commission of Queensland says Queensland is divided into 93 state electorates. Members were not copied.`;
+  }
+  if (slug === "western-australia") {
+    return `${count} names from the ABS ASGS 2025 State Electoral Division list. The Western Australian Electoral Commission district list was not copied. Its copyright notice requires prior written permission.`;
+  }
+  if (slug === "south-australia") {
+    return `${count} names. The Government of South Australia State Electorates 2026 dataset, CC BY 4.0, stores the same names in capitals. Members were not copied from the Government Gazette.`;
+  }
+  if (slug === "australian-capital-territory") {
+    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not electorates and have no page. Elections ACT returned HTTP 403 on 24 October 2026, so its roll was not copied.`;
+  }
+  if (slug === "northern-territory") {
+    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not divisions and have no page. The Northern Territory Electoral Commission site returned HTTP 403 on 24 October 2026, so its roll was not copied.`;
+  }
+  return `${count} names. Each name links to its own page.`;
 }
 
 function renderDistricts() {
-  for (const slug of ["new-south-wales", "tasmania"]) {
+  for (const slug of DISTRICT_ORDER) {
     const items = districtsIn(slug);
+    if (items.length === 0) continue;
     const parent = jurisdictionName(slug);
     const indexHref = stateAssemblyIndexPath(slug);
     const links = items.map((item) => ({ name: item.name, href: stateAssemblyPath(slug, item.slug) }));
-    const chamber = slug === "tasmania" ? "House of Assembly divisions" : "Legislative Assembly districts";
-    const office =
-      slug === "tasmania"
-        ? "https://www.tec.tas.gov.au/house-of-assembly/elections-2025/index.html"
-        : "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election";
+    const chamber = chamberTitle(slug);
+    const fresh = slug !== "new-south-wales" && slug !== "tasmania";
     writePage(
       indexHref,
       shell({
@@ -325,10 +459,11 @@ function renderDistricts() {
         ],
         eyebrow: parent,
         h1: chamber,
-        lede: `${items.length} names. Each name links to its own page.`,
-        officeHref: office,
+        lede: districtIndexLede(slug, items.length),
+        officeHref: districtIndexOffice(slug),
         body: list(links),
-        sourceIds: slug === "tasmania" ? ["tec-hoa-2025"] : ["nswec-vtr-2023", "nswec-copyright"],
+        sourceIds: districtIndexSources(slug),
+        updated: fresh ? UPDATED_24 : UPDATED,
       }),
     );
     items.forEach((item, index) => {
@@ -347,6 +482,7 @@ function renderDistricts() {
           officeHref: copy.office,
           body: `${copy.body}${nearby(links, index)}<p><a href="${esc(indexHref)}">${esc(chamber)}</a> · <a href="${esc(jurisdictionPath(slug))}">${esc(parent)}</a></p>`,
           sourceIds: copy.sources,
+          updated: copy.updated,
         }),
       );
     });
@@ -379,7 +515,9 @@ function renderAreas() {
     const lede =
       slug === "victoria"
         ? "79 local councils named by the Victorian Electoral Commission, then the ABS unincorporated area that is not one of those councils."
-        : `${items.length} Local Government Areas in the ABS ASGS2025 extract, excluding non-spatial special purpose codes. Names are the statistical names, not a copied legal roll.`;
+        : slug === "queensland"
+          ? "78 names from the Queensland Government local government area boundaries dataset (CC BY 4.0), with the matching ABS 2025 code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are kept. Mayors were not copied."
+          : `${items.length} Local Government Areas in the ABS ASGS2025 extract, excluding non-spatial special purpose codes. Names are the statistical names, not a copied legal roll.`;
     const body =
       slug === "victoria"
         ? `<h2>79 local councils</h2>${list(councils.map((item) => ({ name: item.name, href: localPath(item) })))}<h2>Not one of the 79 councils</h2>${list(rest.map((item) => ({ name: item.name, href: localPath(item) })))}`
@@ -397,6 +535,7 @@ function renderAreas() {
         officeHref: areaOffice(items[0]),
         body,
         sourceIds: areaSources(items[0]),
+        updated: slug === "queensland" ? UPDATED_24 : UPDATED,
       }),
     );
     const councilLinks = councils.map((item) => ({ name: item.name, href: localPath(item) }));
@@ -409,7 +548,9 @@ function renderAreas() {
       const lede =
         item.group === "vic-council"
           ? `${item.name}, a Victorian local council. ABS statistical code ${item.absCode} (${item.absName}).`
-          : `${item.absName}, ABS Local Government Area code ${item.absCode}, ${parentName}.`;
+          : item.jurisdictionSlug === "queensland" && item.stateCode
+            ? `${item.name}, a Queensland local government area. State code ${item.stateCode}. ABS statistical code ${item.absCode} (${item.absName}).`
+            : `${item.absName}, ABS Local Government Area code ${item.absCode}, ${parentName}.`;
       writePage(
         path,
         shell({
@@ -423,6 +564,7 @@ function renderAreas() {
           officeHref: areaOffice(item),
           body: `${areaBody(item)}${nearby(siblings, indexIn)}<p><a href="${esc(indexHref)}">${esc(title)}</a> · <a href="${esc(parentPath)}">${esc(parentName)}</a></p>`,
           sourceIds: areaSources(item),
+          updated: item.jurisdictionSlug === "queensland" ? UPDATED_24 : UPDATED,
         }),
       );
     });

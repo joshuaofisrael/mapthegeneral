@@ -15,7 +15,7 @@ import {
   divisionsIn,
   stateHouseIndexPath,
 } from "@/data/au/level2";
-import { areasIn, districtsIn, localIndexPath, localPath, stateAssemblyIndexPath, stateAssemblyPath } from "@/data/au/level3";
+import { areasIn, chamberTitle, districtsIn, localIndexPath, localPath, stateAssemblyIndexPath, stateAssemblyPath } from "@/data/au/level3";
 import { sourcesById } from "@/data/au/sources";
 import { auHome, jurisdictionPath } from "@/countries/au";
 
@@ -56,7 +56,15 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
       lede={`${item.federalDivisions} House of Representatives electorates in the Australian Electoral Commission’s determination of 23 July 2026.`}
       officeHref={item.officeHref}
       officeLabel={item.officeLabel}
-      updated="19 October 2026"
+      updated={
+        slug === "queensland" ||
+        slug === "western-australia" ||
+        slug === "south-australia" ||
+        slug === "australian-capital-territory" ||
+        slug === "northern-territory"
+          ? "24 October 2026"
+          : "19 October 2026"
+      }
       sources={sourcesById(
         [
           ...item.sourceIds,
@@ -171,14 +179,21 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
 
       {districtsIn(slug).length > 0 ? (
         <section>
-          <h2 className="font-serif text-2xl font-semibold">
-            {slug === "tasmania" ? "House of Assembly divisions" : "Legislative Assembly districts"}
-          </h2>
+          <h2 className="font-serif text-2xl font-semibold">{chamberTitle(slug)}</h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">
-            {districtsIn(slug).length} names from the official list read on 19 October 2026.
             {slug === "tasmania"
-              ? " Member names were not copied."
-              : " The member is the one the NSW Electoral Commission declared elected, including a later by-election where the Commission prints one."}
+              ? `${districtsIn(slug).length} names from the official list read on 19 October 2026. Member names were not copied.`
+              : slug === "new-south-wales"
+                ? `${districtsIn(slug).length} names from the official list read on 19 October 2026. The member is the one the NSW Electoral Commission declared elected, including a later by-election where the Commission prints one.`
+                : slug === "queensland"
+                  ? `${districtsIn(slug).length} names from the Australian Bureau of Statistics ASGS 2025 State Electoral Division list, read on 24 October 2026. The Electoral Commission of Queensland says Queensland is divided into 93 state electorates. Elected members were not copied.`
+                  : slug === "western-australia"
+                    ? `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. The Western Australian Electoral Commission district list was not copied. Its copyright notice requires prior written permission.`
+                    : slug === "south-australia"
+                      ? `${districtsIn(slug).length} names. The Government of South Australia State Electorates 2026 dataset, CC BY 4.0, stores the same names in capitals. The House of Assembly elections were held on Saturday 21 March 2026. The Gazette table of members was not copied.`
+                      : slug === "australian-capital-territory"
+                        ? `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. Elections ACT returned HTTP 403 that day, so its roll was not copied. The page read on 17 October 2026 says the next election is in October 2028 and does not print a calendar day.`
+                        : `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. The Northern Territory Electoral Commission site returned HTTP 403 that day, so its roll was not copied.`}
           </p>
           <p className="mt-2 text-sm">
             <Link className="text-navy underline" href={stateAssemblyIndexPath(slug)}>
@@ -204,7 +219,9 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
         <p className="mt-2 text-sm leading-6 text-ink-muted">
           {slug === "victoria"
             ? "79 names on the Victorian Electoral Commission local-councils page, read on 19 October 2026, plus Unincorporated Vic from the ABS 2025 extract. ABS codes are statistical approximations and do not match official legal boundaries."
-            : `${areasIn(slug).length} names in the Australian Bureau of Statistics ASGS2025 Local Government Area extract, read on 19 October 2026, excluding non-spatial special purpose codes. These are statistical names. They do not match official legal boundaries.`}
+            : slug === "queensland"
+              ? "78 names in the Queensland Government local government area boundaries dataset, CC BY 4.0, read on 24 October 2026, with the matching ABS 2025 code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are kept. Mayors were not copied. ABS codes are statistical approximations and do not match official legal boundaries."
+              : `${areasIn(slug).length} names in the Australian Bureau of Statistics ASGS2025 Local Government Area extract, read on 19 October 2026, excluding non-spatial special purpose codes. These are statistical names. They do not match official legal boundaries.`}
         </p>
         <p className="mt-2 text-sm">
           <Link className="text-navy underline" href={localIndexPath(slug)}>
