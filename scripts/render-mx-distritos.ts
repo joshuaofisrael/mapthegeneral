@@ -176,7 +176,7 @@ ${indigena}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
+${withLegalFooter("")}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>

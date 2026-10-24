@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LegalCopyrightNotice } from "@/components/LegalCopyrightNotice";
 import { PageHeader } from "@/components/PageHeader";
 import { SITE } from "@/data/legal-entity";
 import { FORMSUBMIT_PRIVACY, FORMSUBMIT_URL } from "@/components/ContactForm";
@@ -276,6 +277,7 @@ export default function PrivacyPage() {
           <Link href="/copyright/">copyright and corrections policy</Link>.
         </p>
       </div>
+      <LegalCopyrightNotice />
     </div>
   );
 }

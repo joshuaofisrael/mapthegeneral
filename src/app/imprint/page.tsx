@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LegalCopyrightNotice } from "@/components/LegalCopyrightNotice";
 import { PageHeader } from "@/components/PageHeader";
 import { SITE } from "@/data/legal-entity";
 import { ELECTION_WINDOWS } from "@/data/election-law";
@@ -79,9 +80,10 @@ export default function ImprintPage() {
         <p>
           <Link href="/privacy/">Privacy</Link> · <Link href="/disclaimer/">Disclaimer</Link> ·{" "}
           <Link href="/terms/">Terms</Link> · <Link href="/copyright/">Copyright</Link> ·{" "}
-          <Link href="/advertising/">Advertising</Link> · <Link href="/about/">About</Link>
+          <Link href="/advertising/">Advertising</Link> ·           <Link href="/about/">About</Link>
         </p>
       </div>
+      <LegalCopyrightNotice />
     </div>
   );
 }

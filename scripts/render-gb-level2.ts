@@ -122,7 +122,7 @@ ${ADSENSE_HEAD_TAGS}
 <p><strong>Records read 18 October 2026.</strong> <a href="${esc(reportErrorHref(input.path))}">Report an error</a></p>
 ${input.body}
 </main>
-${withLegalFooter(`© 2026 ${esc(SITE.name)}. ${input.licence} Unofficial, and not endorsed by the bodies named here.`)}
+${withLegalFooter(`${input.licence} Unofficial, and not endorsed by the bodies named here.`)}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
 </body>
 </html>
