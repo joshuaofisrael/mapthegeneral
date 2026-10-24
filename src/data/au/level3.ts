@@ -9,6 +9,8 @@ export type StateDistrict = {
   memberParty: string | null;
   memberKind: "general-2023" | "by-election" | "gap";
   declaration: string | null;
+  /** ABS ASGS 2025 State Electoral Division code, when the page uses that list. */
+  absCode?: string;
 };
 
 export type LocalArea = {
@@ -21,7 +23,18 @@ export type LocalArea = {
   kind: "council" | "abs" | "unincorporated";
   flags: string[];
   vecPath: string | null;
+  /** State boundaries dataset code, exactly as printed, when a reuse licence covers it. */
+  stateCode?: string;
 };
+
+/** Index heading for a state or territory lower-house list. */
+export function chamberTitle(slug: string): string {
+  if (slug === "tasmania") return "House of Assembly divisions";
+  if (slug === "south-australia") return "House of Assembly districts";
+  if (slug === "australian-capital-territory") return "Legislative Assembly electorates";
+  if (slug === "northern-territory") return "Legislative Assembly divisions";
+  return "Legislative Assembly districts";
+}
 
 export const STATE_DISTRICTS = raw.districts as StateDistrict[];
 export const LOCAL_AREAS = raw.areas as LocalArea[];
@@ -70,9 +83,21 @@ for (const item of LOCAL_AREAS) {
   if (!/^\d{5}$/.test(item.absCode)) throw new Error(`Bad LGA code ${item.absCode} ${item.name}`);
 }
 
-if (STATE_DISTRICTS.length !== 98) throw new Error(`Expected 98 state districts, found ${STATE_DISTRICTS.length}`);
+if (STATE_DISTRICTS.length !== 327) throw new Error(`Expected 327 state districts, found ${STATE_DISTRICTS.length}`);
 if (districtsIn("new-south-wales").length !== 93) throw new Error("Expected 93 NSW districts");
+if (districtsIn("queensland").length !== 93) throw new Error("Expected 93 Queensland districts");
+if (districtsIn("western-australia").length !== 59) throw new Error("Expected 59 Western Australian districts");
+if (districtsIn("south-australia").length !== 47) throw new Error("Expected 47 South Australian districts");
 if (districtsIn("tasmania").length !== 5) throw new Error("Expected 5 Tasmanian divisions");
+if (districtsIn("australian-capital-territory").length !== 5) throw new Error("Expected 5 ACT electorates");
+if (districtsIn("northern-territory").length !== 25) throw new Error("Expected 25 Northern Territory divisions");
+const absDistrictCodes = STATE_DISTRICTS.filter((item) => item.absCode);
+if (absDistrictCodes.length !== 229) throw new Error(`Expected 229 ABS-coded districts, found ${absDistrictCodes.length}`);
+for (const item of absDistrictCodes) {
+  if (!item.absCode || !/^\d{5}$/.test(item.absCode)) throw new Error(`Bad SED code ${item.absCode} ${item.name}`);
+}
+const qldNamed = LOCAL_AREAS.filter((item) => item.jurisdictionSlug === "queensland" && item.stateCode);
+if (qldNamed.length !== 78) throw new Error(`Expected 78 Queensland state area codes, found ${qldNamed.length}`);
 if (LOCAL_AREAS.length !== 548) throw new Error(`Expected 548 local areas, found ${LOCAL_AREAS.length}`);
 if (LOCAL_AREAS.filter((item) => item.group === "vic-council").length !== 79) {
   throw new Error("Expected 79 Victorian councils");

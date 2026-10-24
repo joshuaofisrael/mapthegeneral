@@ -389,6 +389,48 @@ export const SOURCES: SourceRef[] = [
     url: "https://www.vec.vic.gov.au/results",
     readOn: "2026-10-23",
   },
+  {
+    id: "abs-sed-2025",
+    name: "Australian Bureau of Statistics, ASGS2025 State Electoral Division MapServer (codes and names, no geometry)",
+    url: "https://geo.abs.gov.au/arcgis/rest/services/ASGS2025/SED/MapServer",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "ecq-boundaries",
+    name: "Electoral Commission of Queensland, “Electoral boundaries” (93 state electorates; 77 local government areas)",
+    url: "https://www.ecq.qld.gov.au/electoral-boundaries",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "ecq-2024",
+    name: "Electoral Commission of Queensland, “2024 State General Election” (Saturday 26 October 2024)",
+    url: "https://www.ecq.qld.gov.au/2024sge",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "qld-const-19b",
+    name: "Constitution of Queensland 2001, section 19B (polling day for an ordinary general election), © State of Queensland, CC BY 4.0",
+    url: "https://www.legislation.qld.gov.au/view/whole/html/inforce/current/act-2001-080",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "qld-lgea-s23",
+    name: "Local Government Electoral Act 2011 (Qld), section 23 (date of quadrennial elections), © State of Queensland, CC BY 4.0",
+    url: "https://www.legislation.qld.gov.au/view/whole/html/inforce/current/act-2011-027",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "qld-lga-boundaries",
+    name: "Queensland Government, “Local government area boundaries - Queensland”, data.qld.gov.au, CC BY 4.0",
+    url: "https://www.data.qld.gov.au/dataset/local-government-area-boundaries-queensland",
+    readOn: "2026-10-24",
+  },
+  {
+    id: "sa-electorates-2026",
+    name: "Government of South Australia, “State Electorates” (2026), determined by the Electoral Districts Boundaries Commission, CC BY 4.0",
+    url: "https://data.sa.gov.au/data/dataset/state-electorates",
+    readOn: "2026-10-24",
+  },
 ];
 
 export function sourceById(id: string): SourceRef {

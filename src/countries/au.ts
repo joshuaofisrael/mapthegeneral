@@ -13,6 +13,7 @@ import {
 import {
   LOCAL_AREAS,
   STATE_DISTRICTS,
+  chamberTitle,
   districtsIn,
   localIndexPath,
   localPath,
@@ -50,7 +51,7 @@ export const AU_COUNTRY: CountryCard = {
   name: "Australia",
   href: "/au/",
   blurb:
-    "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, New South Wales’s 93 Legislative Assembly districts, Tasmania’s 5 House of Assembly divisions, Victoria’s 79 local councils, and ABS 2025 Local Government Areas for the other states and territories, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
+    "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, New South Wales’s 93 and Queensland’s 93 Legislative Assembly districts, South Australia’s 47 House of Assembly districts, the ABS 2025 State Electoral Division names for Western Australia (59), the Australian Capital Territory (5) and the Northern Territory (25), Tasmania’s 5 House of Assembly divisions, Victoria’s 79 local councils, Queensland’s 78 local government areas under the State boundaries names, and ABS 2025 Local Government Areas for the other states and territories, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026.",
   links: [
     { href: "/au/en/", label: "English" },
     { href: "/au/en/elections/federal-next/", label: "Next federal election" },
@@ -60,6 +61,8 @@ export const AU_COUNTRY: CountryCard = {
     { href: "/au/en/house/", label: "House divisions" },
     { href: "/au/en/victoria/local-councils/", label: "Victorian local councils" },
     { href: "/au/en/new-south-wales/assembly/", label: "NSW Legislative Assembly" },
+    { href: "/au/en/queensland/assembly/", label: "Queensland Legislative Assembly" },
+    { href: "/au/en/queensland/local-government/", label: "Queensland local government areas" },
   ],
 };
 
@@ -144,13 +147,15 @@ export const AU_INDEX_ENTRIES: RegistryEntry[] = [
     kind: "region",
     text: `${item.name} Legislative Council ${item.members.map((member) => member.printed).join(" ")}`,
   })),
-  ...["new-south-wales", "tasmania"].map((slug) => ({
-    path: stateAssemblyIndexPath(slug),
-    lang: "en" as const,
-    title: `${JURISDICTIONS.find((item) => item.slug === slug)?.officialName ?? slug} state districts`,
-    kind: "index",
-    text: `${districtsIn(slug).length} state electoral districts`,
-  })),
+  ...["new-south-wales", "queensland", "western-australia", "south-australia", "tasmania", "australian-capital-territory", "northern-territory"].map(
+    (slug) => ({
+      path: stateAssemblyIndexPath(slug),
+      lang: "en" as const,
+      title: `${JURISDICTIONS.find((item) => item.slug === slug)?.officialName ?? slug} ${chamberTitle(slug)}`,
+      kind: "index",
+      text: `${districtsIn(slug).length} ${chamberTitle(slug)}`,
+    }),
+  ),
   ...STATE_DISTRICTS.map((item) => ({
     path: stateAssemblyPath(item.jurisdictionSlug, item.slug),
     lang: "en" as const,
