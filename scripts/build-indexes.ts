@@ -1,4 +1,5 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { execSync } from "node:child_process";
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, absoluteUrl } from "../src/data/site";
@@ -6,9 +7,10 @@ import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { registryCountries } from "../src/lib/country-registry";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
+import { buildDateIso, resolveLastmod, sourceFilesForPath } from "../src/lib/sitemap-lastmod";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const LASTMOD = "2026-10-17";
+const BUILD_DATE = buildDateIso();
 
 function write(path: string, body: string) {
   const full = join(root, path);
@@ -16,12 +18,64 @@ function write(path: string, body: string) {
   writeFileSync(full, body);
 }
 
+function gitDates(): Map<string, string> {
+  const out = execSync("git log --pretty=format:%cs --name-only", {
+    cwd: root,
+    encoding: "utf8",
+    maxBuffer: 256 * 1024 * 1024,
+  });
+  const dates = new Map<string, string>();
+  let current = "";
+  for (const line of out.split("\n")) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(line)) {
+      current = line;
+      continue;
+    }
+    if (!line || !current || dates.has(line)) continue;
+    dates.set(line, current);
+  }
+  return dates;
+}
+
+function dirtyFiles(): Set<string> {
+  const listed = execSync("git diff --name-only HEAD && git ls-files --others --exclude-standard", {
+    cwd: root,
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+  });
+  return new Set(listed.split("\n").map((line) => line.trim()).filter(Boolean));
+}
+
+function appPageFiles(dir: string, prefix: string): string[] {
+  const found: string[] = [];
+  for (const name of readdirSync(dir, { withFileTypes: true })) {
+    const rel = `${prefix}${name.name}`;
+    const full = join(dir, name.name);
+    if (name.isDirectory()) found.push(...appPageFiles(full, `${rel}/`));
+    else if (name.name === "page.tsx") found.push(rel);
+  }
+  return found;
+}
+
+const pageFiles = appPageFiles(join(root, "src", "app"), "src/app/");
+const dates = gitDates();
+const dirty = dirtyFiles();
+const lastmodByPath = new Map<string, string>();
+let missingSources = 0;
+
+function lastmodFor(path: string): string {
+  const cached = lastmodByPath.get(path);
+  if (cached) return cached;
+  const files = sourceFilesForPath(path, pageFiles, (rel) => existsSync(join(root, rel)));
+  if (files.length === 0) missingSources += 1;
+  const value = resolveLastmod({ files, gitDates: dates, dirty, buildDate: BUILD_DATE });
+  lastmodByPath.set(path, value);
+  return value;
+}
+
 function urlset(paths: string[]): string {
   const rows = paths
-    .map(
-      (path) =>
-        `  <url><loc>${absoluteUrl(path)}</loc><lastmod>${LASTMOD}</lastmod></url>`,
-    )
+    .map((path) => `  <url><loc>${absoluteUrl(path)}</loc><lastmod>${lastmodFor(path)}</lastmod></url>`)
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
 }
@@ -45,7 +99,7 @@ for (const name of bucketNames) {
 const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${bucketNames
-  .map((name) => `  <sitemap><loc>${SITE.url}/sitemaps/${name}.xml</loc><lastmod>${LASTMOD}</lastmod></sitemap>`)
+  .map((name) => `  <sitemap><loc>${SITE.url}/sitemaps/${name}.xml</loc><lastmod>${BUILD_DATE}</lastmod></sitemap>`)
   .join("\n")}
 </sitemapindex>
 `;
@@ -76,6 +130,10 @@ const lines = [
 ];
 write("public/llms.txt", lines.join("\n"));
 
+const distinct = new Set(lastmodByPath.values());
+if (missingSources > 0) {
+  console.log(`indexes: ${missingSources} paths had no source file; lastmod fell back to ${BUILD_DATE}`);
+}
 console.log(
-  `indexes: ${paths.length} urls (${bucketNames.map((name) => `${name} ${buckets.get(name)?.length ?? 0}`).join(", ")})`,
+  `indexes: ${paths.length} urls (${bucketNames.map((name) => `${name} ${buckets.get(name)?.length ?? 0}`).join(", ")}); lastmod days ${distinct.size}; index ${BUILD_DATE}`,
 );

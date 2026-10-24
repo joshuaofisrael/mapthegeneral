@@ -11,5 +11,11 @@
   "election": {
     "href": "/pl/en/elections/sejm-senat-2027/",
     "label": "14 October–12 November 2027"
-  }
+  },
+  "extraLinks": [
+    {
+      "href": "/pl/en/elections/senat-20-2026/",
+      "label": "Senate by-election, 22 November 2026"
+    }
+  ]
 }

@@ -41,6 +41,11 @@ export default function AustraliaCountryPage() {
             The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028.
             It has not named a polling day.
           </p>
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href="/au/en/elections/victoria-2026/">
+              Victorian state election, Saturday 28 November 2026
+            </Link>
+          </p>
         </li>
       </ul>
     </div>
