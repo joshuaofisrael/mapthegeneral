@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import { DIVISIONS, divisionName } from "../src/data/ca/level2";
 import {
@@ -206,6 +208,7 @@ ${ADSENSE_HEAD_TAGS}
 ${body}
 </main>
 ${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
+${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>
 `;
@@ -298,6 +301,16 @@ ${codeRow}
 <p>${esc(seatMember(seat, lang))}</p>
 <p>${esc(quiet)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(regionHref)}">${esc(regionLabel)}</a> · <a href="${esc(legislatureIndexPath(lang, seat.region))}">${fr ? "Index de l’assemblée" : "Legislature index"}</a>. ${near}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`ca-seat:${seat.region}/${seat.slug}`)
+    .map((id) => {
+      const slug = id.slice(id.indexOf("/") + 1);
+      return LEGISLATURE.find((item) => item.region === seat.region && item.slug === slug);
+    })
+    .filter((item): item is LegislatureSeat => Boolean(item))
+    .map((item) => ({ href: legislaturePath(lang, item.region, item.slug), name: item.name })),
+)}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, SEAT_SOURCES[seat.region])}</ul>`;
   const description = fr
@@ -624,6 +637,19 @@ ${reference}<h2>${fr ? "Conseil" : "Council"}</h2>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(mapped)}</p>
 <p>${esc(fr ? STATCAN_FR : STATCAN)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(divisionHref)}">${esc(divisionLabel)}</a> · <a href="${esc(municipalityIndexPath(lang, place.region, division.slug))}">${fr ? "Index des municipalités" : "Municipality index"}</a> · <a href="${esc(regionHref)}">${esc(regionLabel)}</a>. ${near}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`ca:${place.code}`)
+    .map((code) => MUNICIPALITIES.find((item) => item.code === code))
+    .filter((item): item is Municipality => Boolean(item))
+    .map((item) => {
+      const parent = DIVISION_BY_CODE.get(item.cd);
+      return parent
+        ? { href: municipalityPath(lang, item.region, parent.slug, item.slug), name: municipalityName(item, lang) }
+        : undefined;
+    })
+    .filter((item): item is { href: string; name: string } => Boolean(item)),
+)}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, muniSourceIds(place))}</ul>`;
   const description = fr

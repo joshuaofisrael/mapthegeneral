@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import {
   isOnlyMunicipalityWithCapitalPopulation,
@@ -146,6 +147,16 @@ ${capitalNote ? `<p>${esc(capitalNote)}</p>` : ""}
 <h2>${esc(es ? "Alcaldía" : "Mayor")}</h2>
 <p>${esc(copy.mayorOfficial)} <a href="${esc(sourceById("mpt-alcaldes-2023").url)}">${esc(es ? "Consulta de Cargos Representativos Locales" : "Consulta de Cargos Representativos Locales (local officeholders lookup)")}</a>.</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(provinceHref)}">${esc(province.decreeName)}</a> · <a href="${esc(communityHref)}">${esc(community.officialName)}</a>. ${esc(copy.alphaNearby)}:${neighbors ? neighbors.replace(/^ · /, " ") : ""}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`es:${municipality.code}`)
+    .map((code) => pageMunicipalities().find((item) => item.code === code))
+    .filter((item): item is Municipality => Boolean(item))
+    .map((item) => ({
+      href: municipalityPath(lang, item.communitySlug, item.provinceSlug, item.slug),
+      name: item.name,
+    })),
+)}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
 </main>

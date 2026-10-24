@@ -18,6 +18,8 @@ import { ui } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
+import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -127,6 +129,7 @@ ${ADSENSE_HEAD_TAGS}
 ${opts.body}
 </main>
 ${withLegalFooter(`© 2026 ${esc(SITE.name)}.`)}
+${CLOUDFLARE_BEACON_TAG}
 </body>
 </html>
 `;
@@ -278,6 +281,16 @@ ${calledBlock(lang, comune)}
 ${collegioBlock(lang, comune)}
 <p class="tools">${it ? "Livello superiore" : "Parent"}: <a href="${esc(unitPath(lang, comune.regionSlug, comune.unitSlug))}">${esc(comune.unitName)}</a> · <a href="${esc(comuniIndexPath(lang, comune.regionSlug, comune.unitSlug))}">${it ? "Indice dei comuni" : "Municipality index"}</a> · <a href="${esc(regionPath(lang, region.slug))}">${esc(region.istatName)}</a></p>
 <p class="tools">${esc(copy.alphaNearby)}: ${near || "—"}</p>
+${nearbyPlacesParagraph(
+  lang,
+  nearbyIds(`it:${comune.code}`)
+    .map((code) => siblings.find((item) => item.code === code))
+    .filter((item): item is ComuneRecord => Boolean(item))
+    .map((item) => ({
+      href: comunePath(lang, item.regionSlug, item.unitSlug, item.slug),
+      name: item.name,
+    })),
+)}
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang)}</ul>`;
   return shell({
