@@ -67,6 +67,12 @@ export type ElectionSeoProfile = {
   organizerUrl: string;
   /** Existing country OG image. Omitted from JSON-LD when the file is missing. */
   imagePath?: string;
+  /**
+   * ISO content date for sitemap lastmod. A shallow clone cannot date the
+   * page from git, and a commit made west of UTC can fall on the previous
+   * calendar day. This value is used in those cases when it is newer.
+   */
+  lastmod: string;
   homeLinks: HomeElectionLink[];
   pages: ElectionSeoPage[];
 };
@@ -168,6 +174,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Victorian Electoral Commission",
     organizerUrl: VEC_HOME,
     imagePath: "/images/og/au.webp",
+    lastmod: "2026-10-24",
     homeLinks: [
       {
         href: "/au/en/elections/victoria-2026/",
@@ -336,6 +343,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Państwowa Komisja Wyborcza",
     organizerUrl: PKW_HOME,
     imagePath: "/images/og/pl.webp",
+    lastmod: "2026-10-24",
     homeLinks: [
       {
         href: "/pl/en/elections/senat-20-2026/",
@@ -677,4 +685,12 @@ export function upcomingElectionCards(asOf = utcToday()): HomeElectionLink[] {
 
 export function profileById(id: string): ElectionSeoProfile | undefined {
   return ELECTION_SEO_PROFILES.find((profile) => profile.id === id);
+}
+
+/** Explicit sitemap lastmod for a rendered election page, if the registry names one. */
+export function electionSitemapLastmod(path: string): string | undefined {
+  for (const profile of ELECTION_SEO_PROFILES) {
+    if (profile.pages.some((page) => page.path === path)) return profile.lastmod;
+  }
+  return undefined;
 }
