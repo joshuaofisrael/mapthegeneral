@@ -18,6 +18,7 @@ type LocalizedCard = {
   summaryEn: string;
   languages?: { code: string; label: string; href: string }[];
   election?: { href: string; label: string };
+  extraLinks?: { href: string; label: string }[];
 };
 
 function readDir(dir: string): unknown[] {
@@ -39,7 +40,11 @@ function normalize(raw: unknown): CountryCard {
     name: c.nameEn,
     href: c.href,
     summary: c.summaryEn,
-    links: [...(c.languages ?? []).map(({ href, label }) => ({ href, label })), ...(c.election ? [c.election] : [])],
+    links: [
+      ...(c.languages ?? []).map(({ href, label }) => ({ href, label })),
+      ...(c.election ? [c.election] : []),
+      ...(c.extraLinks ?? []),
+    ],
   };
 }
 

@@ -4,10 +4,10 @@
   "private": true,
   "description": "Map the General — a global, nonpartisan election guide.",
   "scripts": {
-    "prebuild": "tsx scripts/build-indexes.ts && tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-italy-comuni.ts && tsx scripts/render-ca-level2.ts && tsx scripts/render-ca-level3.ts && tsx scripts/render-mx-distritos.ts && tsx scripts/render-mx-municipios.ts",
+    "prebuild": "tsx scripts/render-upcoming-elections.ts && tsx scripts/build-indexes.ts && tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-italy-comuni.ts && tsx scripts/render-ca-level2.ts && tsx scripts/render-ca-level3.ts && tsx scripts/render-mx-distritos.ts && tsx scripts/render-mx-municipios.ts",
     "predev": "tsx scripts/render-municipalities.ts && tsx scripts/render-italy-level2.ts && tsx scripts/render-italy-comuni.ts && tsx scripts/render-mx-distritos.ts && tsx scripts/render-mx-municipios.ts",
     "build": "next build",
-    "postbuild": "node scripts/prune-export.mjs && tsx scripts/stamp-adsense-html.ts && tsx scripts/stamp-legal-footer.ts && tsx scripts/stamp-social-meta.ts && tsx scripts/check-election-law.ts && tsx scripts/check-adsense.ts && node scripts/check-no-inbox.mjs && node scripts/check-owner-name.mjs",
+    "postbuild": "node scripts/prune-export.mjs && tsx scripts/stamp-adsense-html.ts && tsx scripts/stamp-legal-footer.ts && tsx scripts/stamp-social-meta.ts && tsx scripts/check-election-law.ts && tsx scripts/check-election-seo.ts && tsx scripts/check-adsense.ts && node scripts/check-no-inbox.mjs && node scripts/check-owner-name.mjs",
     "dev": "next dev",
     "start": "python3 -m http.server 3000 --directory out",
     "lint": "next lint",

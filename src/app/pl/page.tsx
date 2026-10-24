@@ -39,6 +39,11 @@ export default function PolandCountryPage() {
           <p className="mt-2 text-sm leading-6 text-ink-muted">
             Wybory do Sejmu i Senatu: okno od 14 października do 12 listopada 2027 r. Dzień wyznacza Prezydent.
           </p>
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href="/pl/pl/elections/senat-20-2026/">
+              Wybory uzupełniające do Senatu, 22 listopada 2026 r.
+            </Link>
+          </p>
         </li>
         <li className="rounded-xl border border-line bg-paper-card p-5">
           <h2 className="font-serif text-2xl font-semibold">
@@ -48,6 +53,11 @@ export default function PolandCountryPage() {
           </h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">
             Sejm and Senate: 14 October to 12 November 2027. The President sets the day.
+          </p>
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href="/pl/en/elections/senat-20-2026/">
+              Senate by-election, 22 November 2026
+            </Link>
           </p>
         </li>
       </ul>
