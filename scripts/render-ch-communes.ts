@@ -2,6 +2,13 @@ import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CANTONS } from "../data/ch/cantons";
+import {
+  communeElectionNote,
+  communeExecutiveNote,
+  communeRegisterRead,
+  executiveDirectoryLink,
+  extraCommuneSourceIds,
+} from "../data/ch/commune-notes";
 import { COMMUNES, communesForParent, type Commune } from "../data/ch/communes";
 import { DISTRICTS } from "../data/ch/districts";
 import { communePath, communesIndexPath, districtPath } from "../data/ch/search";
@@ -39,7 +46,13 @@ function cantonByAbbr(abbr: string) {
   return canton;
 }
 
-function copied(lang: ChLang): string {
+function copied(lang: ChLang, iso = "2026-10-19"): string {
+  if (iso === "2026-10-25") {
+    if (lang === "de") return "Kopie vom 25. Oktober 2026.";
+    if (lang === "fr") return "Copie du 25 octobre 2026.";
+    if (lang === "it") return "Copia del 25 ottobre 2026.";
+    return "Copied on 25 October 2026.";
+  }
   if (lang === "de") return "Kopie vom 19. Oktober 2026.";
   if (lang === "fr") return "Copie du 19 octobre 2026.";
   if (lang === "it") return "Copia del 19 ottobre 2026.";
@@ -120,6 +133,12 @@ function shortSource(lang: ChLang, id: string): string {
     "bv-1999": "Bundesverfassung, Art. 149 Abs. 3",
     "admin-20250827": "Bundesrat, Medienmitteilung vom 27. August 2025",
     "bbl-2022-2547": "Bundesrat, Kreisschreiben BBl 2022 2547",
+    "ge-muni-2025": "Staat Genf, Elections municipales 2025 - dates importantes",
+    "ge-notice-20250323": "Staat Genf, erläuternde Notiz zur Wahl vom 23. März 2025",
+    "lu-kom-2024": "Kanton Luzern, Kommunalwahlen 2024",
+    "ti-archivio": "Kanton Tessin, Staatskanzlei, Archivio delle elezioni",
+    "vs-ace-2024": "Staatsrat Wallis, Beschluss vom 27. März 2024",
+    "vs-presidents": "Kanton Wallis, Seite der Gemeindepräsidien",
   };
   const fr: Record<string, string> = {
     "agvch-hist": "OFS, liste historisée des communes, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -127,6 +146,12 @@ function shortSource(lang: ChLang, id: string): string {
     "bv-1999": "Constitution fédérale, art. 149 al. 3",
     "admin-20250827": "Conseil fédéral, communiqué du 27 août 2025",
     "bbl-2022-2547": "Conseil fédéral, circulaire FF 2022 2547",
+    "ge-muni-2025": "État de Genève, Elections municipales 2025 - dates importantes",
+    "ge-notice-20250323": "État de Genève, notice explicative du scrutin du 23 mars 2025",
+    "lu-kom-2024": "Canton de Lucerne, Kommunalwahlen 2024",
+    "ti-archivio": "Canton du Tessin, Chancellerie d’État, Archivio delle elezioni",
+    "vs-ace-2024": "Conseil d’État du Valais, arrêté du 27 mars 2024",
+    "vs-presidents": "Canton du Valais, page des présidences communales",
   };
   const it: Record<string, string> = {
     "agvch-hist": "UST, repertorio storicizzato dei comuni, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -134,6 +159,12 @@ function shortSource(lang: ChLang, id: string): string {
     "bv-1999": "Costituzione federale, art. 149 cpv. 3",
     "admin-20250827": "Consiglio federale, comunicato del 27 agosto 2025",
     "bbl-2022-2547": "Consiglio federale, circolare FF 2022 2547",
+    "ge-muni-2025": "Stato di Ginevra, Elections municipales 2025 - dates importantes",
+    "ge-notice-20250323": "Stato di Ginevra, nota esplicativa dello scrutinio del 23 marzo 2025",
+    "lu-kom-2024": "Cantone di Lucerna, Kommunalwahlen 2024",
+    "ti-archivio": "Cantone Ticino, Cancelleria dello Stato, Archivio delle elezioni",
+    "vs-ace-2024": "Consiglio di Stato del Vallese, decreto del 27 marzo 2024",
+    "vs-presidents": "Cantone Vallese, pagina delle presidenze comunali",
   };
   const en: Record<string, string> = {
     "agvch-hist": "FSO, historized commune register, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -141,22 +172,29 @@ function shortSource(lang: ChLang, id: string): string {
     "bv-1999": "Federal Constitution, art. 149 para. 3",
     "admin-20250827": "Federal Council release of 27 August 2025",
     "bbl-2022-2547": "Federal Council circular, BBl 2022 2547",
+    "ge-muni-2025": "State of Geneva, Elections municipales 2025 - dates importantes",
+    "ge-notice-20250323": "State of Geneva, explanatory notice for the 23 March 2025 ballot",
+    "lu-kom-2024": "Canton of Lucerne, Kommunalwahlen 2024",
+    "ti-archivio": "Canton of Ticino, Cantonal Chancellery, Archivio delle elezioni",
+    "vs-ace-2024": "Council of State of Valais, decree of 27 March 2024",
+    "vs-presidents": "Canton of Valais, page of communal presidencies",
   };
   const table = lang === "de" ? de : lang === "fr" ? fr : lang === "it" ? it : en;
   return table[id] ?? id;
 }
 
-function attribution(lang: ChLang): string {
+function attribution(lang: ChLang, iso = "2026-10-19"): string {
+  const when = copied(lang, iso).replace(/\.$/, "");
   if (lang === "de") {
-    return "Quelle: Bundesamt für Statistik (BFS), Historisiertes Gemeindeverzeichnis der Schweiz, eCH-0071 1.2.0. Kopie vom 19. Oktober 2026. opendata.swiss: «Open use». Keine amtliche Veröffentlichung des BFS. Der volle Titel steht auf der Quellenseite.";
+    return `Quelle: Bundesamt für Statistik (BFS), Historisiertes Gemeindeverzeichnis der Schweiz, eCH-0071 1.2.0. ${when}. opendata.swiss: «Open use». Keine amtliche Veröffentlichung des BFS. Der volle Titel steht auf der Quellenseite.`;
   }
   if (lang === "fr") {
-    return "Source : Office fédéral de la statistique (OFS), liste historisée des communes de Suisse, eCH-0071 1.2.0. Copie du 19 octobre 2026. opendata.swiss : « Open use ». Ceci n’est pas une publication officielle de l’OFS. Le titre complet est sur la page des sources.";
+    return `Source : Office fédéral de la statistique (OFS), liste historisée des communes de Suisse, eCH-0071 1.2.0. ${when}. opendata.swiss : « Open use ». Ceci n’est pas une publication officielle de l’OFS. Le titre complet est sur la page des sources.`;
   }
   if (lang === "it") {
-    return "Fonte: Ufficio federale di statistica (UST), repertorio storicizzato dei comuni della Svizzera, eCH-0071 1.2.0. Copia del 19 ottobre 2026. opendata.swiss: «Open use». Non è una pubblicazione ufficiale dell’UST. Il titolo completo è nella pagina delle fonti.";
+    return `Fonte: Ufficio federale di statistica (UST), repertorio storicizzato dei comuni della Svizzera, eCH-0071 1.2.0. ${when}. opendata.swiss: «Open use». Non è una pubblicazione ufficiale dell’UST. Il titolo completo è nella pagina delle fonti.`;
   }
-  return "Source: Federal Statistical Office (FSO), Swiss official commune’s historicized list, eCH-0071 1.2.0. Copied on 19 October 2026. opendata.swiss: “Open use”. This is not an official FSO publication. The full title is on the sources page.";
+  return `Source: Federal Statistical Office (FSO), Swiss official commune’s historicized list, eCH-0071 1.2.0. ${when}. opendata.swiss: “Open use”. This is not an official FSO publication. The full title is on the sources page.`;
 }
 
 function pageDocument(input: {
@@ -166,6 +204,9 @@ function pageDocument(input: {
   description: string;
   crumbs: { name: string; path: string }[];
   body: string;
+  /** ISO date of the FSO register copy cited on this page. Defaults to the earlier chunk. */
+  registerRead?: "2026-10-19" | "2026-10-25";
+  sourceIds?: readonly string[];
 }): string {
   const copy = ui(input.lang);
   const trust = trustCopy(input.lang);
@@ -195,9 +236,11 @@ function pageDocument(input: {
     const label = code === "de" ? "Deutsch" : code === "fr" ? "Français" : code === "it" ? "Italiano" : "English";
     return `<a href="${esc(href)}">${label}</a>`;
   }).join(" · ");
-  const sources = sourcesById([...SOURCE_IDS])
+  const registerRead = input.registerRead ?? "2026-10-19";
+  const sourceIds = input.sourceIds ?? SOURCE_IDS;
+  const sources = sourcesById([...sourceIds])
     .map((source) => {
-      const read = READ_ON[source.id] ?? source.readOn;
+      const read = source.id === "agvch-hist" || source.id === "opendata-hgv" ? registerRead : (READ_ON[source.id] ?? source.readOn);
       return `<li><a href="${esc(source.url)}">${esc(shortSource(input.lang, source.id))}</a> — ${esc(copy.readOn)} ${esc(read)}</li>`;
     })
     .join("");
@@ -229,10 +272,10 @@ ${ADSENSE_HEAD_TAGS}
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">${crumbNav}</nav>
 ${input.body}
-<p><strong>${esc(trust.updated)}: ${esc(localDate(SITE.lastUpdated, input.lang))}.</strong> ${esc(copied(input.lang))} <a href="${esc(reportErrorHref(input.path))}">${esc(trust.report)}</a></p>
+<p><strong>${esc(trust.updated)}: ${esc(localDate(SITE.lastUpdated, input.lang))}.</strong> ${esc(copied(input.lang, registerRead))} <a href="${esc(reportErrorHref(input.path))}">${esc(trust.report)}</a></p>
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sources}</ul>
-<p>${esc(attribution(input.lang))}</p>
+<p>${esc(attribution(input.lang, registerRead))}</p>
 </main>
 ${withLegalFooter("")}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "eed148cc698d4ff8a35fe047439cc7ca"}'></script>
@@ -286,6 +329,8 @@ function communePage(lang: ChLang, commune: Commune): string {
     });
   }
   crumbs.push({ name: commune.name, path });
+  const directory = executiveDirectoryLink(commune.canton);
+  const directoryHtml = directory ? ` <a href="${esc(directory.href)}">${esc(directory.label)}</a>.` : "";
   const body = `<p class="eyebrow">${esc(eyebrow(lang))}</p>
 <h1>${esc(commune.name)}</h1>
 <p class="lede">${esc(canton.officialName)}${commune.districtSlug ? ` · ${esc(commune.districtName)}` : ""}</p>
@@ -296,8 +341,8 @@ ${short}
 <tr><th>${esc(constituencyLabel(lang))}</th><td>${esc(canton.officialName)}</td></tr>
 </table>
 <p>${esc(constituency(lang, canton.officialName))}</p>
-<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(executiveGap(lang))}</p>
-<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(electionGap(lang))}</p>
+<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(communeExecutiveNote(commune.canton, lang) ?? executiveGap(lang))}${directoryHtml}</p>
+<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(communeElectionNote(commune.canton, commune.bfs, lang) ?? electionGap(lang))}</p>
 <p class="tools">${esc(copy.parent)}: ${parentBits.join(" · ")}. ${esc(copy.alphaNearby)}: ${near}</p>
 ${nearbyPlacesParagraph(
   lang,
@@ -310,7 +355,9 @@ ${nearbyPlacesParagraph(
     })),
 )}
 `;
-  return pageDocument({ lang, path, title: commune.name, description, crumbs, body });
+  const registerRead = communeRegisterRead(commune.canton);
+  const sourceIds = [...SOURCE_IDS, ...extraCommuneSourceIds(commune.canton)];
+  return pageDocument({ lang, path, title: commune.name, description, crumbs, body, registerRead, sourceIds });
 }
 
 function indexPage(lang: ChLang, sample: Commune): string {
@@ -331,7 +378,7 @@ function indexPage(lang: ChLang, sample: Commune): string {
     crumbs.push({ name: sample.districtName, path: districtPath(lang, canton.slug, sample.districtSlug) });
   }
   crumbs.push({ name: communeHeading(lang), path });
-  const body = `<h1>${esc(title)}</h1><p>${esc(canton.officialName)}. ${list.length}.</p>${communeListMarkup(lang, canton.slug, sample.districtSlug, list)}`;
+  const body = `<h1>${esc(title)}</h1><p>${esc(canton.officialName)}. ${list.length}.</p>${communeListMarkup(lang, canton.slug, sample.districtSlug, list, communeRegisterRead(sample.canton))}`;
   return pageDocument({
     lang,
     path,
@@ -339,6 +386,7 @@ function indexPage(lang: ChLang, sample: Commune): string {
     description: `${title}. BFS ${sample.districtBfs}.`,
     crumbs,
     body,
+    registerRead: communeRegisterRead(sample.canton),
   });
 }
 
@@ -349,14 +397,36 @@ function patchDistricts(): number {
       const canton = cantonByAbbr(district.canton);
       const file = join(publicDir, districtPath(lang, canton.slug, district.slug), "index.html");
       const html = readFileSync(file, "utf8");
-      const needle = oldCommuneGapParagraph(lang);
       const block = publishedCommuneBlock(lang, canton.slug, district.canton, district.slug);
-      const replacement = block ?? laterCommuneGapParagraph(lang);
-      if (!html.includes(needle)) {
-        if (!html.includes(replacement)) throw new Error(`Gap paragraph missing in ${file}`);
+      const later = laterCommuneGapParagraph(lang);
+      const older = oldCommuneGapParagraph(lang);
+      if (block) {
+        if (html.includes(block)) continue;
+        if (communeRegisterRead(district.canton) === "2026-10-25") {
+          const stale = communeListMarkup(
+            lang,
+            canton.slug,
+            district.slug,
+            communesForParent(district.canton, district.slug),
+            "2026-10-19",
+          );
+          if (html.includes(stale)) {
+            writeFileSync(file, html.replace(stale, block));
+            patched += 1;
+            continue;
+          }
+        }
+        const needle = html.includes(later) ? later : html.includes(older) ? older : "";
+        if (!needle) throw new Error(`Gap paragraph missing in ${file}`);
+        const next = html.replace(needle, block);
+        if (next === html) throw new Error(`No change ${file}`);
+        writeFileSync(file, next);
+        patched += 1;
         continue;
       }
-      const next = html.replace(needle, replacement);
+      if (html.includes(later)) continue;
+      if (!html.includes(older)) throw new Error(`Gap paragraph missing in ${file}`);
+      const next = html.replace(older, later);
       if (next === html) throw new Error(`No change ${file}`);
       writeFileSync(file, next);
       patched += 1;

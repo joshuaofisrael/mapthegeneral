@@ -15,6 +15,7 @@ import {
   alphaCantons,
 } from "../../../../data/ch/cantons";
 import { COMMUNE_CANTONS } from "../../../../data/ch/communes";
+import { districtsForCanton } from "../../../../data/ch/districts";
 import { cantonPath, chHome, districtsIndexPath, electionPath } from "../../../../data/ch/search";
 import { sourceById, sourcesById } from "../../../../data/ch/sources";
 import { formatNumber, ui } from "../../../../data/ch/ui";
@@ -315,14 +316,16 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
       />
       <p className="text-sm text-ink-muted">
         {(() => {
-          const names = COMMUNE_CANTONS.map((abbr) => CANTONS.find((canton) => canton.abbr === abbr)?.officialName).join(", ");
+          const nameOf = (abbr: string) => CANTONS.find((canton) => canton.abbr === abbr)?.officialName ?? abbr;
+          const names = COMMUNE_CANTONS.map(nameOf).join(", ");
+          const onCanton = COMMUNE_CANTONS.filter((abbr) => districtsForCanton(abbr).length === 0).map(nameOf).join(", ");
           return lang === "de"
-            ? `${CANTONS.length} Kantone. Die Bezirksseiten dieser Ausgabe stehen im Verzeichnis. Gemeindeseiten in dieser Ausgabe: ${names}. Sie hängen am Bezirk. Die übrigen Kantone folgen später.`
+            ? `${CANTONS.length} Kantone. Die Bezirksseiten dieser Ausgabe stehen im Verzeichnis. Gemeindeseiten in dieser Ausgabe: ${names}. Wo der Kanton Bezirksseiten hat, hängen die Gemeinden am Bezirk. ${onCanton} stehen auf der Kantonsseite, weil das Verzeichnis dort nur einen Bezirkseintrag hat. Die übrigen Kantone folgen später.`
             : lang === "fr"
-              ? `${CANTONS.length} cantons. Les pages de districts de cette édition sont dans le répertoire. Pages de communes dans cette édition : ${names}. Elles sont reliées au district. Les autres cantons suivent plus tard.`
+              ? `${CANTONS.length} cantons. Les pages de districts de cette édition sont dans le répertoire. Pages de communes dans cette édition : ${names}. Là où le canton a des pages de district, les communes y sont reliées. ${onCanton} figurent sur la page du canton, parce que le répertoire n’y a qu’une entrée de district. Les autres cantons suivent plus tard.`
               : lang === "it"
-                ? `${CANTONS.length} cantoni. Le pagine dei distretti di questa edizione stanno nel repertorio. Pagine di comuni in questa edizione: ${names}. Sono collegate al distretto. Gli altri cantoni seguono più tardi.`
-                : `${CANTONS.length} cantons. This release’s district pages are in the register index. Municipality pages in this release: ${names}. They are linked from the district page. The other cantons follow later.`;
+                ? `${CANTONS.length} cantoni. Le pagine dei distretti di questa edizione stanno nel repertorio. Pagine di comuni in questa edizione: ${names}. Dove il cantone ha pagine di distretto, i comuni vi sono collegati. ${onCanton} stanno sulla pagina del cantone, perché il repertorio vi ha una sola voce di distretto. Gli altri cantoni seguono più tardi.`
+                : `${CANTONS.length} cantons. This release’s district pages are in the register index. Municipality pages in this release: ${names}. Where the canton has district pages, the municipalities are linked from the district. ${onCanton} are listed on the canton page, because the register has a single district entry there. The other cantons follow later.`;
         })()}
       </p>
     </ChFrame>

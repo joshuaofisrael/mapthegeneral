@@ -166,21 +166,21 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
         <GapNote label={copy.gap} text={copy.cantonalElectionGap} />
         {communeCantonPublished(canton.abbr) ? (
           <p>
-            {canton.abbr === "GE"
+            {districtsForCanton(canton.abbr).length === 0
               ? lang === "de"
-                ? "Die Seiten der politischen Gemeinden dieses Kantons stehen in dieser Ausgabe unter dem Kanton. Der Gemeindevorstand ist nicht zentral veröffentlicht."
+                ? "Die Seiten der politischen Gemeinden dieses Kantons stehen in dieser Ausgabe unter dem Kanton. Ein Name der Gemeindeexekutive wird nicht abgedruckt."
                 : lang === "fr"
-                  ? "Les pages des communes politiques de ce canton figurent dans cette édition sous le canton. L’exécutif communal n’est pas publié de manière centrale."
+                  ? "Les pages des communes politiques de ce canton figurent dans cette édition sous le canton. Aucun nom de l’exécutif communal n’est imprimé."
                   : lang === "it"
-                    ? "Le pagine dei comuni politici di questo cantone stanno in questa edizione sotto il cantone. L’esecutivo comunale non è pubblicato a livello centrale."
-                    : "Political-municipality pages for this canton are listed under the canton in this release. The executive head is not published centrally."
+                    ? "Le pagine dei comuni politici di questo cantone stanno in questa edizione sotto il cantone. Nessun nome dell’esecutivo comunale è stampato."
+                    : "Political-municipality pages for this canton are listed under the canton in this release. No communal-executive name is printed."
               : lang === "de"
-                ? "Die Seiten der politischen Gemeinden dieses Kantons hängen in dieser Ausgabe an der Bezirksseite. Der Gemeindevorstand ist nicht zentral veröffentlicht."
+                ? "Die Seiten der politischen Gemeinden dieses Kantons hängen in dieser Ausgabe an der Bezirksseite. Ein Name der Gemeindeexekutive wird nicht abgedruckt."
                 : lang === "fr"
-                  ? "Les pages des communes politiques de ce canton sont reliées, dans cette édition, à la page du district. L’exécutif communal n’est pas publié de manière centrale."
+                  ? "Les pages des communes politiques de ce canton sont reliées, dans cette édition, à la page du district. Aucun nom de l’exécutif communal n’est imprimé."
                   : lang === "it"
-                    ? "Le pagine dei comuni politici di questo cantone sono collegate, in questa edizione, alla pagina del distretto. L’esecutivo comunale non è pubblicato a livello centrale."
-                    : "Political-municipality pages for this canton are linked from each district page in this release. The executive head is not published centrally."}
+                    ? "Le pagine dei comuni politici di questo cantone sono collegate, in questa edizione, alla pagina del distretto. Nessun nome dell’esecutivo comunale è stampato."
+                    : "Political-municipality pages for this canton are linked from each district page in this release. No communal-executive name is printed."}
           </p>
         ) : (
           <GapNote
@@ -210,7 +210,9 @@ export default async function CantonPage({ params }: { params: Promise<{ lang: s
       </section>
 
       <DistrictLinks lang={lang} abbr={canton.abbr} />
-      {canton.abbr === "GE" && communeCantonPublished("GE") && <GenevaCommunes lang={lang} />}
+      {districtsForCanton(canton.abbr).length === 0 && communeCantonPublished(canton.abbr) && (
+        <SoleCommunes lang={lang} abbr={canton.abbr} cantonSlug={canton.slug} />
+      )}
 
       <section>
         <h2 className="font-serif text-2xl font-semibold">{copy.alphaNearby}</h2>
@@ -277,19 +279,19 @@ function MemberList({ lang, members }: { lang: ChLang; members: ReturnType<typeo
   );
 }
 
-function GenevaCommunes({ lang }: { lang: ChLang }) {
-  const list = communesForParent("GE", "");
+function SoleCommunes({ lang, abbr, cantonSlug }: { lang: ChLang; abbr: string; cantonSlug: string }) {
+  const list = communesForParent(abbr, "");
   return (
     <div>
       <p className="text-sm">
-        <Link className="text-navy underline" href={communesIndexPath(lang, "ge", "")}>
+        <Link className="text-navy underline" href={communesIndexPath(lang, cantonSlug, "")}>
           {lang === "de" ? "Politische Gemeinden" : lang === "fr" ? "Communes politiques" : lang === "it" ? "Comuni politici" : "Political municipalities"}
         </Link>
       </p>
       <ul className="mt-3 space-y-1 text-sm">
         {list.map((commune) => (
           <li key={commune.bfs}>
-            <Link className="text-navy underline" href={communePath(lang, "ge", "", commune.slug)}>
+            <Link className="text-navy underline" href={communePath(lang, cantonSlug, "", commune.slug)}>
               {commune.name}
             </Link>
             {` · ${commune.bfs}`}

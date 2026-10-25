@@ -79,7 +79,7 @@ export const SOURCES: SourceRef[] = [
     id: "agvch-hist",
     name: "Bundesamt für Statistik, historisiertes Gemeindeverzeichnis, TXT-Fassung eCH-0071 Version 1.2.0, Dateien 20260101_GDEHist_KT, _BEZ und _GDE",
     url: "https://www.agvchapp.bfs.admin.ch/file/txt/dz-b-00.04-hgv-01.zip",
-    readOn: "2026-10-19",
+    readOn: "2026-10-25",
   },
   {
     id: "bfs-agvch-page",
@@ -91,7 +91,43 @@ export const SOURCES: SourceRef[] = [
     id: "opendata-hgv",
     name: "opendata.swiss, Swiss official commune’s historicized list, Bundesamt für Statistik, Kennzeichen «Open use»",
     url: "https://opendata.swiss/en/dataset/historisiertes-gemeindeverzeichnis-der-schweiz",
-    readOn: "2026-10-19",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "ge-muni-2025",
+    name: "République et canton de Genève, Elections municipales 2025 - dates importantes",
+    url: "https://www.ge.ch/document/elections-municipales-2025-dates-importantes",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "ge-notice-20250323",
+    name: "République et canton de Genève, notice explicative, élection des conseils municipaux et premier tour des conseils administratifs du 23 mars 2025",
+    url: "https://www.ge.ch/elections/20250323/doc/notice-explicative.pdf",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "lu-kom-2024",
+    name: "Kanton Luzern, Kommunalwahlen 2024",
+    url: "https://wahlen.lu.ch/Kommunalwahlen_2024",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "ti-archivio",
+    name: "Repubblica e Cantone Ticino, Cancelleria dello Stato, Archivio delle elezioni",
+    url: "https://www4.ti.ch/generale/diritti-politici/elezioni/archivio-delle-elezioni/archivio",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "vs-ace-2024",
+    name: "Conseil d’État du canton du Valais, arrêté du 27 mars 2024 concernant l’élection des autorités communales pour la législature 2025-2028",
+    url: "https://www.vs.ch/documents/23115743/33074598/ACE+-+Elections+communales+2024.pdf/537eaa4f-250d-af36-b859-0e779fc914f1",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "vs-presidents",
+    name: "Canton du Valais, présidents et vice-présidents des communes",
+    url: "https://www.vs.ch/web/communes/president-vice-president",
+    readOn: "2026-10-25",
   },
   {
     id: "parlament-members",

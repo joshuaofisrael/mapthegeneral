@@ -4,7 +4,7 @@ import raw from "./communes.json";
 
 export type Commune = {
   canton: string;
-  /** Empty when the canton has no district page. This release has no such canton. */
+  /** Empty when the canton has no district page (a single register entry). */
   districtSlug: string;
   districtBfs: string;
   districtName: string;
@@ -18,13 +18,31 @@ export type Commune = {
 /**
  * Political municipalities (type 11) current on 1 January 2026, from
  * 20260101_GDEHist_GDE.txt joined to 20260101_GDEHist_BEZ.txt.
- * This release stops after St. Gallen. Genève and the cantons after it
- * stay under the export cap for a later chunk.
- * Order is the brief's population order: ZH, BE, VD, AG, SG.
+ * Order follows the brief: ZH, BE, VD, AG, SG, then GE, LU, TI, VS,
+ * then the next cantons by 2024 permanent resident population.
+ * Zug and the smaller cantons stay under the export cap.
  */
 export const COMMUNES = raw as Commune[];
 
-export const COMMUNE_CANTONS = ["ZH", "BE", "VD", "AG", "SG"] as const;
+export const COMMUNE_CANTONS = [
+  "ZH",
+  "BE",
+  "VD",
+  "AG",
+  "SG",
+  "GE",
+  "LU",
+  "TI",
+  "VS",
+  "FR",
+  "BL",
+  "TG",
+  "SO",
+  "GR",
+  "BS",
+  "NE",
+  "SZ",
+] as const;
 
 export function communeCantonPublished(abbr: string): boolean {
   return (COMMUNE_CANTONS as readonly string[]).includes(abbr);
@@ -49,7 +67,11 @@ function assertCommunes(): void {
     bfs.add(item.bfs);
     byCanton.set(item.canton, (byCanton.get(item.canton) ?? 0) + 1);
   }
-  if (COMMUNES.length !== 1065) throw new Error(`Expected 1065 communes, got ${COMMUNES.length}`);
+  const expected = COMMUNE_CANTONS.reduce((sum, abbr) => {
+    const canton = CANTONS.find((item) => item.abbr === abbr);
+    return sum + (canton?.municipalities ?? 0);
+  }, 0);
+  if (COMMUNES.length !== expected) throw new Error(`Expected ${expected} communes, got ${COMMUNES.length}`);
   for (const abbr of COMMUNE_CANTONS) {
     const canton = CANTONS.find((item) => item.abbr === abbr);
     if (!canton || byCanton.get(abbr) !== canton.municipalities) {
