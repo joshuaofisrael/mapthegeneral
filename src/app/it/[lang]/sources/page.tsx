@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "it" ? "Fonti, Italia" : "Italy sources",
     description:
       lang === "it"
-        ? "Fonti ufficiali lette per le pagine italiane il 17 ottobre 2026: Costituzione, Gazzetta Ufficiale, ISTAT, Camera, Quirinale, Ministero dell'interno."
-        : "Official sources read for the Italy pages on 17 October 2026: Constitution, Official Gazette, ISTAT, Chamber, Quirinale, Interior Ministry.",
+        ? "Fonti ufficiali delle pagine italiane: Costituzione, Gazzetta Ufficiale, ISTAT, Camera, Quirinale e Ministero dell'interno. Le schede dei comuni di questa consegna sono datate 25 ottobre 2026."
+        : "Official sources for the Italy pages: Constitution, Official Gazette, ISTAT, Chamber, Quirinale and the Interior Ministry. Municipality pages in this delivery are dated 25 October 2026.",
     path,
     lang,
     alternatePath: `${italyHome(otherLang(lang))}sources/`,
@@ -50,8 +50,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       title={it ? "Fonti delle pagine italiane" : "Sources for the Italy pages"}
       lede={
         it
-          ? "Le schede del livello nazionale portano la data 17 ottobre 2026. Le schede del livello province e collegi portano la data 18 ottobre 2026. Le schede dei comuni di questo blocco portano la data 19 ottobre 2026. Stampa e Wikipedia non sono usate come fonte di un fatto."
-          : "National-level items are dated 17 October 2026. Province and constituency items are dated 18 October 2026. Municipality pages in this chunk are dated 19 October 2026. News reports and Wikipedia are not used as the source of a fact."
+          ? "Le schede del livello nazionale portano la data 17 ottobre 2026. Le schede del livello province e collegi portano la data 18 ottobre 2026. Le schede dei comuni portano la data 25 ottobre 2026. Stampa e Wikipedia non sono usate come fonte di un fatto."
+          : "National-level items are dated 17 October 2026. Province and constituency items are dated 18 October 2026. Municipality pages are dated 25 October 2026. News reports and Wikipedia are not used as the source of a fact."
       }
       officeHref={dait.url}
       officeLabel="Dipartimento per gli Affari Interni e Territoriali"
@@ -60,8 +60,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
       <div className="prose-legal">
         <p>
           {it
-            ? "Ciò che non è in queste fonti non è inventato. Restano aperte, tra le altre, la presidenza del Consiglio in carica, i presidenti regionali, il senatore in carica per ciascun collegio, le liste dei candidati, i comuni fuori da questo blocco, la circoscrizione Estero, il giorno della prossima elezione politica e il CAP. Il 19 ottobre 2026 la pagina Speciale elezioni non pubblica un elenco dei comuni che votano nel 2027."
-            : "What is not in these sources is not invented. Still open, among other gaps, are the sitting President of the Council, the regional presidents, the sitting senator for each constituency, candidate lists, municipalities outside this chunk, the overseas constituency, the day of the next general election, and postcodes. On 19 October 2026 the Speciale elezioni page did not publish a list of municipalities voting in 2027."}
+            ? "Ciò che non è in queste fonti non è inventato. Restano aperte, tra le altre, la presidenza del Consiglio in carica, i presidenti regionali, il senatore in carica per ciascun collegio, le liste dei candidati, i comuni fuori da questa consegna, la circoscrizione Estero, il giorno della prossima elezione politica e il CAP. Il 25 ottobre 2026 la pagina Speciale elezioni non pubblica un elenco dei comuni che votano nel 2027. Nomina il turno straordinario del 15-16 novembre 2026 per Calvi Risorta (CE), Stefanaconi (VV) e, con comizi propri, Ayas. Lo stesso giorno è stato letto l'elenco del Dipartimento per le amministrative del primo semestre 2026: non è un elenco del 2027."
+            : "What is not in these sources is not invented. Still open, among other gaps, are the sitting President of the Council, the regional presidents, the sitting senator for each constituency, candidate lists, municipalities outside this delivery, the overseas constituency, the day of the next general election, and postcodes. On 25 October 2026 the Speciale elezioni page did not publish a list of municipalities voting in 2027. It names the extraordinary round of 15–16 November 2026 for Calvi Risorta (CE), Stefanaconi (VV) and, under its own calling notice, Ayas. The Department's first-semester 2026 administrative list, read the same day, is not a 2027 list."}
         </p>
         <h2>{it ? "Licenze e attribuzione" : "Licences and attribution"}</h2>
         <p>
@@ -71,8 +71,8 @@ export default async function SourcesPage({ params }: { params: Promise<{ lang: 
           </a>{" "}
           (<a href="https://www.istat.it/note-legali/">{it ? "note legali ISTAT" : "ISTAT legal notes"}</a>).{" "}
           {it
-            ? "I testi della Costituzione, delle leggi e dei decreti sono atti ufficiali esclusi dal diritto d'autore (art. 5 della legge 22 aprile 1941, n. 633). I fatti delle altre fonti ufficiali sono riassunti con parole nostre e con la citazione di ogni pagina. Non sono riprodotti immagini, loghi o emblemi. I nomi dei deputati vengono dall'endpoint SPARQL della Camera, con attribuzione. La pagina di catalogo del dataset il 18 ottobre 2026 ha restituito un errore, quindi da quella pagina non è stata copiata una licenza. La pagina open data degli amministratori, riletta il 19 ottobre 2026, non stampa una riga di licenza. Dai file comunali sono copiati solo nome, carica, incarico e date dell'ufficio pubblico, con attribuzione. Non sono copiati sesso, data e luogo di nascita, titolo di studio, professione, popolazione censita né la stringa della lista."
-            : "The texts of the Constitution, laws and decrees are official acts excluded from copyright (article 5 of Law no. 633 of 22 April 1941). Facts from the other official sources are summarised in our own words with a citation to each page. No images, logos or emblems are reproduced. Deputy names come from the Chamber SPARQL endpoint, with attribution. The dataset catalogue page returned an error on 18 October 2026, so no licence line was copied from that page. The administrator open-data page, read again on 19 October 2026, prints no licence line. From the municipal files only the public-office name, role, incarico and dates are copied, with attribution. Sex, birth date, birthplace, education, profession, census population and the electoral-list string are not copied."}
+            ? "I testi della Costituzione, delle leggi e dei decreti sono atti ufficiali esclusi dal diritto d'autore (art. 5 della legge 22 aprile 1941, n. 633). I fatti delle altre fonti ufficiali sono riassunti con parole nostre e con la citazione di ogni pagina. Non sono riprodotti immagini, loghi o emblemi. I nomi dei deputati vengono dall'endpoint SPARQL della Camera, con attribuzione. La pagina di catalogo del dataset il 18 ottobre 2026 ha restituito un errore, quindi da quella pagina non è stata copiata una licenza. La pagina open data degli amministratori, riletta il 25 ottobre 2026, non stampa una riga di licenza. I nomi di sindaci, commissari, consiglieri, assessori, presidenti di provincia e sindaci metropolitani non sono copiati nei file di dati, nelle pagine o nell'indice di ricerca. Le pagine dei comuni rimandano all'Anagrafe. Dal foglio ISTAT, licenza CC BY 4.0, sono ripresi denominazione, codici e flag capoluogo, riordinati in queste pagine."
+            : "The texts of the Constitution, laws and decrees are official acts excluded from copyright (article 5 of Law no. 633 of 22 April 1941). Facts from the other official sources are summarised in our own words with a citation to each page. No images, logos or emblems are reproduced. Deputy names come from the Chamber SPARQL endpoint, with attribution. The dataset catalogue page returned an error on 18 October 2026, so no licence line was copied from that page. The administrator open-data page, read again on 25 October 2026, prints no licence line. Names of mayors, commissioners, councillors, assessori, provincial presidents and metropolitan mayors are not copied into the data files, the pages or the search index. Municipality pages link to the Anagrafe. From the ISTAT sheet, under the CC BY 4.0 licence, the name, codes and capoluogo flag are carried across and rearranged into these pages."}
         </p>
       </div>
     </ItalyFrame>

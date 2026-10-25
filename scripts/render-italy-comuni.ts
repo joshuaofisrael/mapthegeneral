@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { UNITS, collegioByName } from "../src/data/italy/level2";
@@ -25,8 +25,12 @@ import { socialMetaTags } from "../src/lib/social";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const chunkPath = join(root, "src/data/italy/comuni-chunk1.json");
+const chunk2Path = join(root, "src/data/italy/comuni-chunk2.json");
+const publicPath = join(root, "src/data/italy/comuni-public.json");
 const OFFICE = "https://dait.interno.gov.it/elezioni";
 const HTML_BUDGET = 27_000_000;
+const NEXT_HTML_BUDGET = 26_000_000;
+const READ_ON = "2026-10-25";
 const SOURCE_IDS = ["istat-comuni-chunk", "anagrafe", "collegi-comune-codes", "dait-speciale-19"];
 const duplicateComuneNames = new Set<string>();
 
@@ -142,10 +146,10 @@ function sourceList(lang: ItLang): string {
       const licence =
         source.id === "istat-comuni-chunk"
           ? lang === "it"
-            ? ` — Fonte: ISTAT, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it">CC BY 4.0</a>`
-            : ` — Source: ISTAT, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`
+            ? ` — Fonte: ISTAT, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it">CC BY 4.0</a>. Il foglio è stato riordinato in queste pagine (denominazione, codici e flag capoluogo).`
+            : ` — Source: ISTAT, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The sheet was rearranged into these pages (name, codes and capoluogo flag).`
           : "";
-      return `<li><a href="${esc(source.url)}">${esc(source.name)}</a> — ${esc(copy.readOn)} ${esc(source.readOn)}${licence}</li>`;
+      return `<li><a href="${esc(source.url)}">${esc(source.name)}</a> — ${esc(copy.readOn)} ${esc(READ_ON)}${licence}</li>`;
     })
     .join("");
 }
@@ -162,18 +166,18 @@ function calledBlock(lang: ItLang, comune: ComuneRecord): string {
   if (comune.called === "calvi" || comune.called === "stefanaconi") {
     const place = comune.called === "calvi" ? "Calvi Risorta (CE)" : "Stefanaconi (VV)";
     return it
-      ? `<p>La pagina «Speciale elezioni» del Dipartimento, letta il 19 ottobre 2026, dice che un decreto del Ministro dell'interno del 10 settembre 2026 fissa il turno elettorale straordinario per domenica 15 e lunedì 16 novembre 2026 nei comuni sciolti ai sensi dell'art. 143, comma 10, del decreto legislativo n. 267/2000, con eventuale ballottaggio domenica 29 e lunedì 30 novembre 2026, e nomina ${place}. Questa pagina non pubblica cifre di quella votazione.</p>`
-      : `<p>The Department’s “Speciale elezioni” page, read on 19 October 2026, says a decree of the Minister of the Interior of 10 September 2026 sets an extraordinary election round for Sunday 15 and Monday 16 November 2026 in the municipalities dissolved under article 143, paragraph 10, of legislative decree no. 267/2000, with a possible ballot on Sunday 29 and Monday 30 November 2026, and it names ${place}. This page does not publish figures for that vote.</p>`;
+      ? `<p>La pagina «Speciale elezioni» del Dipartimento, letta il 25 ottobre 2026, dice che un decreto del Ministro dell'interno del 10 settembre 2026 fissa il turno elettorale straordinario per domenica 15 e lunedì 16 novembre 2026 nei comuni sciolti ai sensi dell'art. 143, comma 10, del decreto legislativo n. 267/2000, con eventuale ballottaggio domenica 29 e lunedì 30 novembre 2026, e nomina ${place}. Questa pagina non pubblica cifre di quella votazione.</p>`
+      : `<p>The Department’s “Speciale elezioni” page, read on 25 October 2026, says a decree of the Minister of the Interior of 10 September 2026 sets an extraordinary election round for Sunday 15 and Monday 16 November 2026 in the municipalities dissolved under article 143, paragraph 10, of legislative decree no. 267/2000, with a possible ballot on Sunday 29 and Monday 30 November 2026, and it names ${place}. This page does not publish figures for that vote.</p>`;
   }
   if (comune.called === "ayas") {
     return it
-      ? `<p>La stessa pagina, letta il 19 ottobre 2026, dice che i comizi per l'elezione diretta del sindaco e del vice sindaco, nonché di 13 consiglieri comunali del Comune di Ayas, sono convocati per domenica 15 novembre 2026, con eventuale ballottaggio domenica 29 novembre 2026. Questa pagina non pubblica cifre di quella votazione.</p>`
-      : `<p>The same page, read on 19 October 2026, says the meetings for the direct election of the mayor and the deputy mayor, and of 13 municipal councillors, of the Comune di Ayas are called for Sunday 15 November 2026, with a possible ballot on Sunday 29 November 2026. This page does not publish figures for that vote.</p>`;
+      ? `<p>La stessa pagina, letta il 25 ottobre 2026, dice che i comizi per l'elezione diretta del sindaco e del vice sindaco, nonché di 13 consiglieri comunali del Comune di Ayas, sono convocati per domenica 15 novembre 2026, con eventuale ballottaggio domenica 29 novembre 2026. Questa pagina non pubblica cifre di quella votazione.</p>`
+      : `<p>The same page, read on 25 October 2026, says the meetings for the direct election of the mayor and the deputy mayor, and of 13 municipal councillors, of the Comune di Ayas are called for Sunday 15 November 2026, with a possible ballot on Sunday 29 November 2026. This page does not publish figures for that vote.</p>`;
   }
   return `<p class="gap"><strong>${it ? "Lacuna" : "Gap"}.</strong> ${
     it
-      ? "Il 19 ottobre 2026 non è stato letto un giorno, pubblicato in modo centrale, per la prossima elezione comunale di questo comune. Questa pagina non ricava un giorno di votazione da una durata dell'incarico."
-      : "No centrally published day for the next municipal election of this municipality was read on 19 October 2026. This page does not turn a term of office into a polling day."
+      ? "Il 25 ottobre 2026 non è stato letto un giorno, pubblicato in modo centrale, per la prossima elezione comunale di questo comune. Questa pagina non ricava un giorno di votazione da una durata dell'incarico."
+      : "No centrally published day for the next municipal election of this municipality was read on 25 October 2026. This page does not turn a term of office into a polling day."
   }</p>`;
 }
 
@@ -210,8 +214,8 @@ function collegioBlock(lang: ItLang, comune: ComuneRecord): string {
         : `Numeric code ${esc(comune.numeric)} appears in ${houseLabel}.`;
     }
     return it
-      ? `Né il codice numerico del 21 febbraio 2026 né il codice della colonna 2017-2025 compaiono nella tabella ${houseLabel} letta il 19 ottobre 2026.`
-      : `Neither the 21 February 2026 numeric code nor the 2017-2025 column appears in the ${houseLabel} table read on 19 October 2026.`;
+      ? `Né il codice numerico del 21 febbraio 2026 né il codice della colonna 2017-2025 compaiono nella tabella ${houseLabel} letta il 25 ottobre 2026.`
+      : `Neither the 21 February 2026 numeric code nor the 2017-2025 column appears in the ${houseLabel} table read on 25 October 2026.`;
   };
   parts.push(`<p>${explain(comune.cameraVia, it ? "A.1 della Camera" : "Chamber table A.1")}</p>`);
   if (comune.camera.length > 1) {
@@ -227,8 +231,8 @@ function collegioBlock(lang: ItLang, comune: ComuneRecord): string {
   if (comune.camera.includes("Abruzzo - U01")) {
     parts.push(
       it
-        ? `<p>La pagina del Dipartimento letta il 19 ottobre 2026 dice che l'elezione suppletiva di quel collegio della Camera è fissata per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica cifre di quella elezione.</p>`
-        : `<p>The Department page read on 19 October 2026 says the Chamber by-election for that constituency is set for Sunday 15 and Monday 16 November 2026. This page does not publish figures for that election.</p>`,
+        ? `<p>La pagina del Dipartimento letta il 25 ottobre 2026 dice che l'elezione suppletiva di quel collegio della Camera è fissata per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica cifre di quella elezione.</p>`
+        : `<p>The Department page read on 25 October 2026 says the Chamber by-election for that constituency is set for Sunday 15 and Monday 16 November 2026. This page does not publish figures for that election.</p>`,
     );
   }
   parts.push(`<p>${explain(comune.senateVia, it ? "B.1 del Senato" : "Senate table B.1")}</p>`);
@@ -266,7 +270,7 @@ export function comuneHtml(lang: ItLang, comune: ComuneRecord, siblings: ComuneR
   const body = `<p class="eyebrow">Comune${comune.cap ? (it ? " · capoluogo" : " · capoluogo") : ""}</p>
 <h1>${esc(comune.name)}</h1>
 <p class="lede">${esc(region.istatName)} · ${esc(comune.unitName)} · ${esc(comune.code)}</p>
-<p><strong>${it ? "Fonti di questa pagina lette il 19 ottobre 2026." : "Sources on this page were read on 19 October 2026."}</strong> <a href="${esc(reportErrorHref(path))}">${it ? "Segnala un errore" : "Report an error"}</a></p>
+<p><strong>${it ? "Fonti di questa pagina lette il 25 ottobre 2026." : "Sources on this page were read on 25 October 2026."}</strong> <a href="${esc(reportErrorHref(path))}">${it ? "Segnala un errore" : "Report an error"}</a></p>
 <table>
 ${names}
 <tr><th>${it ? "Codice alfanumerico" : "Alphanumeric code"}</th><td>${esc(comune.code)}</td></tr>
@@ -460,6 +464,49 @@ function noteDuplicateComuneNames(list: ComuneRecord[]) {
   for (const [name, count] of counts) if (count > 1) duplicateComuneNames.add(name);
 }
 
+function assertNoOfficeholderFields(record: ComuneRecord) {
+  const extra = record as ComuneRecord & { mayor?: unknown; mayorFrom?: unknown; council?: unknown };
+  if ("mayor" in extra || "mayorFrom" in extra || "council" in extra) {
+    throw new Error(`Officeholder field on ${record.code}`);
+  }
+}
+
+function readChunk(path: string): ChunkFile | null {
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf8")) as ChunkFile;
+}
+
+function shippedComuni(): ComuneRecord[] {
+  const first = JSON.parse(readFileSync(chunkPath, "utf8")) as ChunkFile;
+  const second = readChunk(chunk2Path);
+  const seen = new Set<string>();
+  const all: ComuneRecord[] = [];
+  for (const comune of [...first.comuni, ...(second?.comuni ?? [])]) {
+    assertNoOfficeholderFields(comune);
+    if (seen.has(comune.code)) throw new Error(`Duplicate comune ${comune.code}`);
+    seen.add(comune.code);
+    all.push(comune);
+  }
+  return all;
+}
+
+function publicRecord(comune: ComuneRecord) {
+  return {
+    code: comune.code,
+    name: comune.name,
+    regionSlug: comune.regionSlug,
+    unitSlug: comune.unitSlug,
+    unitName: comune.unitName,
+    slug: comune.slug,
+    cap: comune.cap,
+  };
+}
+
+function stripOfficeholders(record: ComuneRecord & { pool?: boolean; mayor?: unknown; mayorFrom?: unknown; council?: unknown }): ComuneRecord {
+  const { pool: _pool, mayor: _mayor, mayorFrom: _mayorFrom, council: _council, ...rest } = record;
+  return rest;
+}
+
 function writePages(list: ComuneRecord[]) {
   noteDuplicateComuneNames(list);
   const grouped = group(list);
@@ -491,28 +538,72 @@ function coverage(list: ComuneRecord[]) {
   }
 }
 
+function selectNext(records: ComuneRecord[], multiCap: ChunkFile["multiCap"]): ComuneRecord[] {
+  const already = new Set((JSON.parse(readFileSync(chunkPath, "utf8")) as ChunkFile).comuni.map((comune) => comune.code));
+  const fresh = records.filter((comune) => !already.has(comune.code));
+  const regionCount = new Map(REGIONS.map((region) => [region.slug, region.comuni]));
+  const ordered = [...fresh].sort((a, b) => {
+    const ra = rankOf(a, regionCount);
+    const rb = rankOf(b, regionCount);
+    return ra[0] - rb[0] || ra[1] - rb[1] || ra[2].localeCompare(rb[2], "it");
+  });
+  const pairBytes = new Map(
+    ordered.map((comune) => [comune.code, utf8(comuneHtml("it", comune, [comune])) + utf8(comuneHtml("en", comune, [comune]))]),
+  );
+  const buckets = new Map<string, ComuneRecord[]>();
+  const indexBytes = new Map<string, number>();
+  const chosen: ComuneRecord[] = [];
+  let total = 0;
+  for (const comune of ordered) {
+    const key = `${comune.regionSlug}/${comune.unitSlug}`;
+    const bucket = buckets.get(key) ?? [];
+    const nextBucket = [...bucket, comune].sort((a, b) => a.name.localeCompare(b.name, "it"));
+    const nextIndex = utf8(indexHtml("it", nextBucket)) + utf8(indexHtml("en", nextBucket));
+    const delta = (pairBytes.get(comune.code) ?? 0) + nextIndex - (indexBytes.get(key) ?? 0);
+    if (total + delta > NEXT_HTML_BUDGET) break;
+    buckets.set(key, nextBucket);
+    indexBytes.set(key, nextIndex);
+    chosen.push(comune);
+    total += delta;
+  }
+  let exact = bytesFor(chosen);
+  while (chosen.length > 0 && exact > NEXT_HTML_BUDGET) {
+    chosen.pop();
+    exact = bytesFor(chosen);
+  }
+  const file: ChunkFile = {
+    readOn: READ_ON,
+    no2027List: true,
+    multiCap,
+    comuni: chosen,
+  };
+  writeFileSync(chunk2Path, JSON.stringify(file));
+  const prior = JSON.parse(readFileSync(chunkPath, "utf8")) as ChunkFile;
+  writeFileSync(publicPath, JSON.stringify({ comuni: [...prior.comuni, ...chosen].map(publicRecord) }));
+  console.log(`chunk2 ${chosen.length} comuni, estimate ${total}, exact new html bytes ${exact}`);
+  return chosen;
+}
+
 const selectMode = process.argv.includes("--select");
-if (selectMode) {
+const selectNextMode = process.argv.includes("--select-next");
+if (selectMode && selectNextMode) throw new Error("Use only one of --select or --select-next");
+if (selectMode || selectNextMode) {
   const raw = JSON.parse(readFileSync("/tmp/it3/candidates.json", "utf8")) as {
-    records: (ComuneRecord & { pool?: boolean })[];
+    records: (ComuneRecord & { pool?: boolean; mayor?: unknown; mayorFrom?: unknown; council?: unknown })[];
     multiCap: ChunkFile["multiCap"];
   };
-  const chosen = select(
-    raw.records.map((record) => {
-      // Never carry officeholder names into pages or data (legal-risk rule).
-      const { pool: _pool, mayor: _mayor, mayorFrom: _mayorFrom, council: _council, ...rest } = record as ComuneRecord & {
-        pool?: boolean;
-        mayor?: unknown;
-        mayorFrom?: unknown;
-        council?: unknown;
-      };
-      return rest;
-    }),
-    raw.multiCap,
-  );
-  writePages(chosen);
-  coverage(chosen);
+  const stripped = raw.records.map((record) => stripOfficeholders(record));
+  if (selectMode) {
+    // Never carry officeholder names into pages or data (legal-risk rule).
+    const chosen = select(stripped, raw.multiCap);
+    writePages(chosen);
+    coverage(chosen);
+  } else {
+    const chosen = selectNext(stripped, raw.multiCap);
+    writePages(shippedComuni());
+    coverage(shippedComuni());
+    console.log(`chunk2 only ${chosen.length}`);
+  }
 } else {
-  const chunk = JSON.parse(readFileSync(chunkPath, "utf8")) as ChunkFile;
-  writePages(chunk.comuni);
+  writePages(shippedComuni());
 }

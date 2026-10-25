@@ -48,3 +48,21 @@ export function chunkCoverage(): { slug: string; name: string; shipped: number; 
     total: region.comuni,
   }));
 }
+
+export function deliverySentence(lang: ItLang): string {
+  const rows = chunkCoverage();
+  const shipped = rows.reduce((sum, row) => sum + row.shipped, 0);
+  const total = rows.reduce((sum, row) => sum + row.total, 0);
+  const full = rows.filter((row) => row.shipped === row.total).map((row) => row.name);
+  const partial = rows.filter((row) => row.shipped > 0 && row.shipped < row.total);
+  const shippedLabel = formatNumber(shipped, lang);
+  const totalLabel = formatNumber(total, lang);
+  const fullLabel = full.join(", ");
+  const partialLabel = partial
+    .map((row) => `${row.name} (${formatNumber(row.shipped, lang)}/${formatNumber(row.total, lang)})`)
+    .join(", ");
+  if (lang === "it") {
+    return `Questa consegna pubblica ${shippedLabel} dei ${totalLabel} comuni del foglio. Ogni capoluogo segnato nel foglio ha una pagina. Regioni complete: ${fullLabel}. Regioni pubblicate in parte: ${partialLabel}. Il 25 ottobre 2026 la pagina Speciale elezioni non pubblica un elenco dei comuni che votano nel 2027: nomina il turno straordinario del 15-16 novembre 2026. Lo stesso giorno è stato letto l'elenco del Dipartimento per le amministrative del primo semestre 2026, che non è un elenco del 2027. L'ordine dopo i capoluogo resta quindi Lombardia, Lazio, Campania, Sicilia e poi le regioni con più comuni.`;
+  }
+  return `This delivery publishes ${shippedLabel} of the ${totalLabel} municipalities in the sheet. Every capoluogo flagged in the sheet has a page. Complete regions: ${fullLabel}. Partly published regions: ${partialLabel}. On 25 October 2026 the Speciale elezioni page did not publish a list of municipalities voting in 2027: it names the extraordinary round of 15–16 November 2026. The Department's first-semester 2026 administrative list, read the same day, is not a 2027 list. The order after the capoluoghi therefore remains Lombardia, Lazio, Campania, Sicilia, then the regions with the most municipalities.`;
+}

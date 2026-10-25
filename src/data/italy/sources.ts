@@ -159,7 +159,7 @@ export const SOURCES: SourceRef[] = [
     id: "istat-comuni-chunk",
     name: "ISTAT, Elenco-comuni-italiani.xlsx, foglio «CODICI al 21_02_2026», denominazione, codici e flag capoluogo di ciascun comune",
     url: "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.xlsx",
-    readOn: READ_LEVEL3,
+    readOn: "2026-10-25",
   },
   {
     id: "anagrafe-comuni",
@@ -171,13 +171,19 @@ export const SOURCES: SourceRef[] = [
     id: "collegi-comune-codes",
     name: "Dipartimento per le riforme istituzionali, tabelle A.1 e B.1 del decreto legislativo n. 177/2020, colonna del codice ISTAT del comune",
     url: "https://www.riformeistituzionali.gov.it/it/i-nuovi-collegi-elettorali/",
-    readOn: READ_LEVEL3,
+    readOn: "2026-10-25",
+  },
+  {
+    id: "dait-amministrative-2026",
+    name: "Dipartimento per gli affari interni e territoriali, elenco degli enti al voto alle amministrative del primo semestre 2026",
+    url: "https://dait.interno.gov.it/documenti/amministrative-2026-elenco-enti-al-voto-I-semestre.pdf",
+    readOn: "2026-10-25",
   },
   {
     id: "dait-speciale-19",
-    name: "Dipartimento per gli affari interni e territoriali, Speciale elezioni, riletta il 19 ottobre 2026",
+    name: "Dipartimento per gli affari interni e territoriali, Speciale elezioni, riletta il 25 ottobre 2026",
     url: "https://dait.interno.gov.it/elezioni/speciale-elezioni",
-    readOn: READ_LEVEL3,
+    readOn: "2026-10-25",
   },
 ];
 

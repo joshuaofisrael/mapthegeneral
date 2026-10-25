@@ -117,10 +117,15 @@ function places(): Place[] {
   }
 
   const italyAliases = new Map<string, string[]>();
-  const chunk = JSON.parse(readFileSync(path.join(root, "src/data/italy/comuni-chunk1.json"), "utf8")) as {
-    comuni: { code: string; name: string; italian: string; other: string }[];
-  };
-  for (const comune of chunk.comuni) {
+  const italyChunks = ["comuni-chunk1.json", "comuni-chunk2.json"].flatMap((name) => {
+    const file = path.join(root, "src/data/italy", name);
+    if (!existsSync(file)) return [];
+    const chunk = JSON.parse(readFileSync(file, "utf8")) as {
+      comuni: { code: string; name: string; italian: string; other: string }[];
+    };
+    return chunk.comuni;
+  });
+  for (const comune of italyChunks) {
     const aliases = [comune.italian, comune.other].filter((name) => name && name !== comune.name);
     if (aliases.length) italyAliases.set(comune.code, aliases);
   }
