@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { LinkGrid } from "@/components/LinkGrid";
 import { ItalyFrame } from "@/app/it/frame";
-import { COMUNI } from "@/data/italy/comuni";
+import { deliverySentence } from "@/data/italy/comuni";
 import { formatNumber } from "@/data/italy/format";
 import { COMUNE_COUNT, POPULATION_2025, REGIONS, UNIT_COUNT, alphaRegions } from "@/data/italy/places";
 import { collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitsIndexPath } from "@/data/italy/paths";
@@ -136,9 +136,10 @@ export default async function ItalyNationalPage({ params }: { params: Promise<{ 
             : `The ISTAT list of municipalities, sheet “CODICI al 21_02_2026”, has ${formatNumber(COMUNE_COUNT, lang)} municipalities and ${formatNumber(UNIT_COUNT, lang)} supra-municipal territorial units. The ISTAT page says that from 21 February 2026 there are 7,894 municipalities. That list is later than the population at 1 January 2025: the two dates are not one count.`}
         </p>
         <p>
+          {deliverySentence(lang)}{" "}
           {it
-            ? `Questa consegna pubblica ${formatNumber(COMUNI.length, lang)} di quei comuni: tutti i capoluogo segnati nel foglio, tutti i comuni della Lombardia, e una parte del Lazio. L'indice sta sulla pagina di ogni unità territoriale. Non è stato letto un elenco centrale dei comuni che votano alle amministrative del 2027, quindi l'ordine dopo i capoluogo è Lombardia, Lazio, Campania, Sicilia.`
-            : `This chunk publishes ${formatNumber(COMUNI.length, lang)} of those municipalities: every capoluogo flagged in the sheet, every municipality in Lombardia, and part of Lazio. The index is on each territorial-unit page. No central list of municipalities voting in the 2027 local elections was read, so the order after the capoluoghi is Lombardia, Lazio, Campania, Sicilia.`}
+            ? "L'indice sta sulla pagina di ogni unità territoriale."
+            : "The index is on each territorial-unit page."}
         </p>
       </section>
 
