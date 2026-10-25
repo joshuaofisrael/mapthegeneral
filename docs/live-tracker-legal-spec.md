@@ -29,6 +29,7 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 
 | Window id | Election | Law | Tracker may open | Official source |
 |---|---|---|---|---|
+| ca-bc-2026 | British Columbia provincial general election, 24 Oct 2026 | Election Act (BC) s. 233 (advertising) and s. 233.1 (new opinion surveys) on general voting day before the close | 24 Oct 2026 20:00 Pacific (UTC−7). No count is stored on this site; link to the official service | www.results.elections.bc.ca |
 | it-2026-chieti | Italy, Chamber by-election 01-Chieti, 15–16 Nov 2026 | L. 28/2000 art. 8 (15-day poll ban); L. 212/1956 art. 9 (silence) | 16 Nov 2026 15:00 CET | elezioni.interno.gov.it (Eligendo) |
 | pl-2026-senat-20 | Poland, Senate by-election, constituency 20, 22 Nov 2026 | Kodeks wyborczy art. 107 (cisza wyborcza) and art. 115 (no polls or exit polls) | 22 Nov 2026 21:00 CET, and only after PKW publishes | wybory.gov.pl (PKW) |
 | au-vic-2026 | Victoria state election, 28 Nov 2026 | No results embargo in law; broadcasters' ad blackout (BSA 1992 Sch. 2 cl. 3A) does not cover this site; authorisation (Electoral Act 2002 s. 83) applies to paid, printed or regulated-entity material, which this site does not publish | 28 Nov 2026 18:00 AEDT (07:00 UTC) | vec.vic.gov.au/results |
@@ -45,7 +46,8 @@ the registry to have a window or a standing rule.
 - **CA:** Canada Elections Act s. 328(2), no new election survey results on polling
   day before every polling station in the district closes. (s. 329, the old ban on
   early results, was repealed in 2014.) British Columbia’s 24 October 2026 window
-  is the dated row. A federal tracker still needs its own window.
+  is the dated row. Its results service, named by Elections BC on 25 October 2026,
+  is www.results.elections.bc.ca. A federal tracker still needs its own window.
 - **AU federal:** the dated row is the Victoria state election. A federal tracker
   still needs its own window.
 - **IE:** no next Dáil polling day was printed. No tracker. See the standing rule.

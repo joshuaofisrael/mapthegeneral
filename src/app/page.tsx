@@ -65,13 +65,18 @@ export default function HomePage() {
 
       {upcoming.length > 0 ? (
         <section id="upcoming-elections">
-          <h2 className="font-serif text-2xl font-semibold">Upcoming elections</h2>
+          <h2 className="font-serif text-2xl font-semibold">Upcoming and recent elections</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
-            Polling days in the next 60 days, from the election registry. Each card links to that election’s page.
+            Polling days in the next 60 days, and elections held in the last 14 days, from the election registry. A
+            recently held election stays on this list for 14 days after polling day, then drops off. Each card links to
+            that election’s page.
           </p>
           <ul className="mt-4 grid gap-4 md:grid-cols-2">
             {upcoming.map((item) => (
               <li key={item.href} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
+                {item.recent ? (
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy">Recently held</p>
+                ) : null}
                 <h3 className="font-serif text-xl font-semibold">
                   <Link className="hover:text-navy" href={item.href}>
                     {item.label}

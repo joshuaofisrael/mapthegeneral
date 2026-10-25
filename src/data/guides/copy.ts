@@ -216,7 +216,7 @@ const caEn: Guide = {
   electionsHeading: "Dates already printed by an official office",
   elections: [
     { name: "Federal fixed date", detail: "Monday 15 October 2029, unless Parliament is dissolved earlier.", href: "/ca/en/elections/federal-2029/" },
-    { name: "British Columbia", detail: "Final Voting Day 24 October 2026. Elections BC says 93 members are to be elected. This site prints no count.", href: "/ca/en/british-columbia/" },
+    { name: "British Columbia", detail: "Final Voting Day was 24 October 2026. Final count is planned for 6–10 November 2026. Elections BC says 93 members are to be elected. This site prints no count.", href: "/ca/en/elections/bc-2026/" },
     { name: "Alberta", detail: "Elections Alberta: 18 October 2027, without affecting the Lieutenant Governor’s power to dissolve.", href: "/ca/en/alberta/" },
     { name: "Manitoba", detail: "Next set-date election 5 October 2027. The law allows an earlier call.", href: "/ca/en/manitoba/" },
     { name: "Northwest Territories", detail: "Tuesday 5 October 2027.", href: "/ca/en/northwest-territories/" },
@@ -280,7 +280,7 @@ const caFr: Guide = {
   electionsHeading: "Dates déjà imprimées par un bureau officiel",
   elections: [
     { name: "Date fixe fédérale", detail: "Lundi 15 octobre 2029, sauf dissolution plus tôt.", href: "/ca/fr/elections/federal-2029/" },
-    { name: "Colombie-Britannique", detail: "Jour du scrutin final le 24 octobre 2026. Élections BC dit que 93 membres sont à élire. Ce site ne publie aucun décompte.", href: "/ca/fr/british-columbia/" },
+    { name: "Colombie-Britannique", detail: "Le jour du scrutin final était le 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026. Elections BC dit que 93 membres sont à élire. Ce site ne publie aucun décompte.", href: "/ca/fr/elections/bc-2026/" },
     { name: "Alberta", detail: "Élections Alberta : 18 octobre 2027, sans toucher au pouvoir du lieutenant-gouverneur.", href: "/ca/fr/alberta/" },
     { name: "Manitoba", detail: "Prochaine élection à date fixée le 5 octobre 2027. La loi permet une convocation plus tôt.", href: "/ca/fr/manitoba/" },
     { name: "Territoires du Nord-Ouest", detail: "Mardi 5 octobre 2027.", href: "/ca/fr/northwest-territories/" },

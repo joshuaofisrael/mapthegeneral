@@ -94,7 +94,7 @@ export const SOURCES: SourceRef[] = [
     id: "bc-2026",
     name: "Elections BC, 2026 Provincial Election",
     url: "https://elections.bc.ca/2026-provincial-election/",
-    readOn: READ,
+    readOn: "2026-10-25",
   },
   {
     id: "ab-next",

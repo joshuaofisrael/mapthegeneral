@@ -52,7 +52,10 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     },
     pollingDay: "2026-10-24",
     trackerOpensAt: "2026-10-24T20:00:00-07:00",
-    officialResults: { label: "Elections BC, 2026 Provincial Election", url: "https://elections.bc.ca/2026-provincial-election/" },
+    officialResults: {
+      label: "Elections BC, 2026 provincial election event night reporting",
+      url: "https://www.results.elections.bc.ca/",
+    },
     rules: [
       {
         kind: "poll-ban",

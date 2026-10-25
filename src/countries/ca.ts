@@ -7,6 +7,7 @@ import {
   districtPath,
   divisionIndexPath,
   divisionPath,
+  bcElectionPath,
   electionPath,
   legislatureIndexPath,
   legislaturePath,
@@ -25,6 +26,7 @@ export const CANADA_HOME_CARD = {
     { href: "/ca/en/", label: "English" },
     { href: "/ca/fr/", label: "Français" },
     { href: "/ca/en/elections/federal-2029/", label: "15 October 2029" },
+    { href: "/ca/en/elections/bc-2026/", label: "BC election, 24 October 2026" },
   ],
 };
 
@@ -52,7 +54,7 @@ function fixedEntries(lang: CaLang): Entry[] {
       lang,
       title: fr ? "Élections" : "Elections",
       kind: "elections",
-      text: "élections elections Canada Elections Act 56.1",
+      text: "élections elections Canada Elections Act 56.1 British Columbia 24 October 2026 Colombie-Britannique",
     },
     {
       path: electionPath(lang),
@@ -60,6 +62,17 @@ function fixedEntries(lang: CaLang): Entry[] {
       title: fr ? "Élection générale fédérale du 15 octobre 2029" : "Federal general election of 15 October 2029",
       kind: "election",
       text: "15 October 2029 Canada Elections Act section 56.1 fixed date April 28 2025",
+    },
+    {
+      path: bcElectionPath(lang),
+      lang,
+      title: fr
+        ? "Élection générale provinciale de la Colombie-Britannique, 24 octobre 2026"
+        : "British Columbia provincial general election, 24 October 2026",
+      kind: "election",
+      text: fr
+        ? "élection Colombie-Britannique 2026 résultats décompte final Return Day Elections BC"
+        : "BC election results 2026 final count Return Day Elections BC British Columbia",
     },
     {
       path: `${home}parties/`,

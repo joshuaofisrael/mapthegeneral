@@ -247,6 +247,7 @@ export function validateElectionHtml(
     if (event.endDate !== profile.endDate || !ISO_OFFSET.test(String(event.endDate))) errors.push("Event endDate invalid");
     if (Date.parse(String(event.endDate)) <= Date.parse(String(event.startDate))) errors.push("Event ends before it starts");
     if (event.eventAttendanceMode !== "https://schema.org/OfflineEventAttendanceMode") errors.push("Event attendance mode");
+    if (event.eventStatus !== "https://schema.org/EventScheduled") errors.push("Event status");
     if (event.url !== absoluteUrl(page.path)) errors.push("Event url is not the canonical URL");
     const location = event.location as JsonLdNode | undefined;
     if (!location || location["@type"] !== "Place" || location.name !== page.locationName) errors.push("Event location");

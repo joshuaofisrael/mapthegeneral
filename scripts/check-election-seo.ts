@@ -7,7 +7,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ELECTION_SEO_PROFILES, addDays, isWithinDays } from "../src/data/election-seo";
+import { ELECTION_SEO_PROFILES, addDays, isListedElection, isRecentlyHeld, isWithinDays } from "../src/data/election-seo";
 import { validateElectionHtml, existingImageUrl } from "../src/lib/election-seo-html";
 import { gitHistoryAvailable } from "../src/lib/sitemap-lastmod";
 
@@ -24,6 +24,15 @@ if (!isWithinDays("2026-11-22", "2026-10-24", 60) || !isWithinDays("2026-11-28",
 if (isWithinDays("2026-11-28", "2026-12-24", 60)) errors.push("a past polling day must leave the 60-day window");
 if (isWithinDays("2027-06-06", "2026-10-24", 60)) errors.push("June 2027 must stay outside the 60-day window");
 if (addDays("2026-10-24", 60) !== "2026-12-23") errors.push("60 days after 24 October 2026 should be 23 December 2026");
+if (isWithinDays("2026-10-24", "2026-10-25", 60)) errors.push("24 October must leave the upcoming window on 25 October");
+if (!isRecentlyHeld("2026-10-24", "2026-10-25")) errors.push("24 October is recently held on 25 October");
+if (!isRecentlyHeld("2026-10-24", "2026-11-07")) errors.push("24 October is still recently held on 7 November");
+if (isRecentlyHeld("2026-10-24", "2026-11-08")) errors.push("24 October drops off the recent window on 8 November");
+if (isRecentlyHeld("2026-10-24", "2026-10-24")) errors.push("polling day itself is not recently held");
+if (!isListedElection("2026-10-24", "2026-10-25")) errors.push("the BC election stays listed on 25 October");
+if (!isListedElection("2026-11-28", "2026-10-24")) errors.push("28 November stays listed on 24 October");
+if (isListedElection("2026-10-24", "2026-11-08")) errors.push("the BC election leaves the home list on 8 November");
+if (isListedElection("2027-06-06", "2026-10-24")) errors.push("June 2027 stays off the home list");
 
 for (const profile of ELECTION_SEO_PROFILES) {
   const image = existingImageUrl(profile, root);
@@ -77,6 +86,24 @@ if (!existsSync(indexPath)) {
     }
   }
   if (dates.size < 2) lastmodFindings.push(`expected real per-page lastmod values, found ${[...dates].join(", ") || "none"}`);
+
+  for (const [file, loc] of [
+    ["ca-en.xml", "https://mapthegeneral.com/ca/en/elections/bc-2026/"],
+    ["ca-fr.xml", "https://mapthegeneral.com/ca/fr/elections/bc-2026/"],
+  ] as const) {
+    const xmlPath = join(bucketDir, file);
+    if (!existsSync(xmlPath)) {
+      errors.push(`missing sitemap ${xmlPath}`);
+      continue;
+    }
+    const xml = readFileSync(xmlPath, "utf8");
+    const row = xml.match(new RegExp(`<loc>${loc}</loc><lastmod>([^<]+)</lastmod>`));
+    if (!row) {
+      errors.push(`${file} is missing ${loc}`);
+      continue;
+    }
+    if (row[1] < "2026-10-25") lastmodFindings.push(`${loc} lastmod ${row[1]} is still stale`);
+  }
 }
 
 if (warnings.length) {
