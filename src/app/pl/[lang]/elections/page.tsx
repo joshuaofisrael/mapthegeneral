@@ -57,7 +57,14 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
       }
       officeHref={pkw.url}
       officeLabel="Państwowa Komisja Wyborcza"
-      sources={[pkw, sourceById("constitution"), sourceById("kodeks"), sourceById("pkw-senat-20-2026")]}
+      sources={[
+        pkw,
+        sourceById("constitution"),
+        sourceById("kodeks"),
+        sourceById("pkw-senat-20-2026"),
+        sourceById("pkw-senat-20-kalendarz"),
+        sourceById("pkw-senat-20-obwieszczenia"),
+      ]}
     >
       <ul className="space-y-3">
         <li>
@@ -66,8 +73,8 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
           </Link>
           <p className="mt-1 text-sm text-ink-muted">
             {pl
-              ? "Postanowienie Prezydenta z 25 września 2026 r. i serwis PKW odczytany 23 października 2026 r. Ta strona nie podaje sondaży ani prognoz."
-              : "Presidential order of 25 September 2026 and the Commission service read on 23 October 2026. This page prints no polls or projections."}{" "}
+              ? "Postanowienie Prezydenta z 25 września 2026 r. i serwis PKW odczytany 25 października 2026 r. Kalendarz wyborczy każe ogłosić obwieszczenie o zarejestrowanych kandydatach do 12 listopada 2026 r. Ta strona nie podaje sondaży ani prognoz."
+              : "Presidential order of 25 September 2026 and the Commission service read on 25 October 2026. The election calendar requires the notice of registered candidates by 12 November 2026. This page prints no polls or projections."}{" "}
             <a className="text-navy underline" href={senatOkregPath(lang, 20)}>
               {pl ? "Strona okręgu" : "Constituency page"}
             </a>

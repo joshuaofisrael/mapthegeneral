@@ -56,7 +56,14 @@ export default async function SenatIndex({ params }: { params: Promise<{ lang: s
       }
       officeHref="https://pkw.gov.pl/"
       officeLabel="Państwowa Komisja Wyborcza"
-      sources={sourcesById(["senate-okregi", "kodeks", "pkw-senat-20-2026", "postanowienie-senat-20-2026"])}
+      sources={sourcesById([
+        "senate-okregi",
+        "kodeks",
+        "pkw-senat-20-2026",
+        "postanowienie-senat-20-2026",
+        "pkw-senat-20-kalendarz",
+        "pkw-senat-20-obwieszczenia",
+      ])}
     >
       <ul className="mt-6 space-y-2 text-sm">
         {allSenatOkregi().map((okreg) => {

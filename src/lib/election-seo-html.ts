@@ -4,6 +4,7 @@ import type { ElectionSeoPage, ElectionSeoProfile, SourcedText } from "../data/e
 import { ELECTION_SEO_PROFILES } from "../data/election-seo";
 import { SITE, absoluteUrl, reportErrorHref } from "../data/site";
 import { ADSENSE_HEAD_TAGS } from "./adsense";
+import { candidateItemListJsonLd, loadCandidateList, renderCandidateListHtml, type CandidateList } from "./candidate-list";
 import { withLegalFooter } from "./legal-footer";
 import { socialImageFor, socialMetaTags } from "./social";
 
@@ -43,7 +44,9 @@ export function linkText(item: SourcedText): string {
     const needle = esc(link.label);
     const at = html.indexOf(needle);
     if (at < 0) throw new Error(`escaped label missing: ${link.label}`);
-    html = `${html.slice(0, at)}<a href="${esc(link.href)}">${needle}</a>${html.slice(at + needle.length)}`;
+    const rel = link.rel ? ` rel="${esc(link.rel)}"` : "";
+    const target = link.rel?.includes("noopener") ? ` target="_blank"` : "";
+    html = `${html.slice(0, at)}<a href="${esc(link.href)}"${rel}${target}>${needle}</a>${html.slice(at + needle.length)}`;
   }
   return html;
 }
@@ -114,8 +117,29 @@ export function existingImageUrl(profile: ElectionSeoProfile, root = process.cwd
   return `${SITE.url}${profile.imagePath}`;
 }
 
+function pageCandidateList(profile: ElectionSeoProfile, root: string): CandidateList | null {
+  if (!profile.candidateListId) return null;
+  return loadCandidateList(profile.candidateListId, root);
+}
+
+function webPageJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: page.h1,
+    url: absoluteUrl(page.path),
+    dateModified: profile.lastmod,
+  };
+}
+
 export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSeoPage, root = process.cwd()): string {
   const imageUrl = existingImageUrl(profile, root);
+  const candidateList = pageCandidateList(profile, root);
+  const candidateHtml = candidateList ? renderCandidateListHtml(candidateList, page.lang) : "";
+  const itemList = candidateList ? candidateItemListJsonLd(candidateList, page.lang) : null;
+  const modifiedHead = profile.candidateListId
+    ? `<meta property="article:modified_time" content="${esc(profile.lastmod)}">\n${jsonScript(webPageJsonLd(profile, page))}\n`
+    : "";
   const canonical = absoluteUrl(page.path);
   const alternates = page.alternates
     .map((item) => `<link rel="alternate" hreflang="${esc(item.hreflang)}" href="${esc(absoluteUrl(item.path))}">`)
@@ -155,10 +179,10 @@ ${alternates}
 <meta property="og:locale" content="${esc(page.ogLocale)}">
 ${socialMetaTags(page.path)}
 <link rel="stylesheet" href="/place.css">
-${jsonScript(breadcrumbJsonLd(page))}
+${modifiedHead}${jsonScript(breadcrumbJsonLd(page))}
 ${jsonScript(eventJsonLd(profile, page, imageUrl))}
 ${jsonScript(faqJsonLd(page))}
-${ADSENSE_HEAD_TAGS}
+${itemList ? `${jsonScript(itemList)}\n` : ""}${ADSENSE_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${esc(page.bannerBefore)}<a href="${esc(page.officeHref)}">${esc(page.bannerAfter)}</a>.</p>
@@ -170,7 +194,7 @@ ${ADSENSE_HEAD_TAGS}
 <p class="lede">${esc(page.lede)}</p>
 <p><strong>${esc(page.updated)}</strong> <a href="${esc(reportErrorHref(page.path))}">${esc(page.reportLabel)}</a></p>
 ${page.bodyHtml}
-<section id="how-to-vote">
+${candidateHtml ? `${candidateHtml}\n` : ""}<section id="how-to-vote">
 <h2>${esc(page.keyDatesHeading)}</h2>
 <p>${esc(page.keyDatesIntro)}</p>
 <ul>
@@ -195,7 +219,7 @@ ${withLegalFooter("")}
 </body>
 </html>
 `;
-  const errors = validateElectionHtml(html, profile, page, imageUrl);
+  const errors = validateElectionHtml(html, profile, page, imageUrl, root);
   if (errors.length) {
     throw new Error(`${page.path}\n${errors.map((line) => `  - ${line}`).join("\n")}`);
   }
@@ -225,6 +249,7 @@ export function validateElectionHtml(
   profile: ElectionSeoProfile,
   page: ElectionSeoPage,
   imageUrl?: string,
+  root = process.cwd(),
 ): string[] {
   const errors: string[] = [];
   let nodes: JsonLdNode[] = [];
@@ -285,6 +310,41 @@ export function validateElectionHtml(
   if (!html.includes(`<link rel="canonical" href="${esc(absoluteUrl(page.path))}">`)) errors.push("canonical missing");
   const owner = /joshua israel ventures|joshua israel/i;
   if (owner.test(html)) errors.push("owner name on an election page");
+  const lists = nodes.filter((node) => node["@type"] === "ItemList");
+  const pages = nodes.filter((node) => node["@type"] === "WebPage");
+  if (!profile.candidateListId) {
+    if (lists.length) errors.push("ItemList without a candidate list");
+    if (pages.length) errors.push("WebPage dateModified without a candidate list");
+    if (html.includes("article:modified_time")) errors.push("dateModified meta without a candidate list");
+    if (html.includes('<section id="candidates">')) errors.push("candidate section without a candidate list");
+    return errors;
+  }
+  if (pages.length !== 1) errors.push(`expected one WebPage dateModified, found ${pages.length}`);
+  if (pages[0] && pages[0].dateModified !== profile.lastmod) errors.push("WebPage dateModified mismatch");
+  if (!html.includes(`<meta property="article:modified_time" content="${esc(profile.lastmod)}">`)) {
+    errors.push("dateModified meta missing");
+  }
+  let candidateList: CandidateList | null = null;
+  try {
+    candidateList = loadCandidateList(profile.candidateListId, root);
+  } catch (error) {
+    errors.push(error instanceof Error ? error.message : String(error));
+    return errors;
+  }
+  const published = candidateList.candidates.length > 0;
+  if (!published) {
+    if (lists.length) errors.push("ItemList on an empty candidate list");
+    if (html.includes('<section id="candidates">')) errors.push("candidate section on an empty list");
+    return errors;
+  }
+  if (lists.length !== 1) errors.push(`expected one ItemList, found ${lists.length}`);
+  if (!html.includes('<section id="candidates">')) errors.push("candidate section missing");
+  const itemList = lists[0];
+  const elements = (itemList?.itemListElement as JsonLdNode[] | undefined) ?? [];
+  if (itemList && elements.length !== candidateList.candidates.length) errors.push("ItemList length");
+  for (const row of candidateList.candidates) {
+    if (!html.includes(esc(row.name)) || !html.includes(esc(row.committee))) errors.push(`candidate not visible: ${row.name}`);
+  }
   return errors;
 }
 
