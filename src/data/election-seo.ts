@@ -1,7 +1,7 @@
 /**
  * SEO profiles for elections that should carry Event JSON-LD, a sourced
  * key-dates section, and an FAQ. Add a profile when an election enters the
- * 60-day window. Pages are rendered by scripts/render-upcoming-elections.ts.
+ * 60-day window, or in the 14 days after polling day. Pages are rendered by scripts/render-upcoming-elections.ts.
  * Dates below are copied from the official pages named on each fact.
  * No poll, projection, or result is stored here.
  */
@@ -20,7 +20,7 @@ export type FaqItem = SourcedText & { question: string };
 export type KeyDate = SourcedText & { label: string };
 
 export type ElectionSeoPage = {
-  lang: "en" | "pl";
+  lang: "en" | "pl" | "fr";
   htmlLang: string;
   path: string;
   title: string;
@@ -57,6 +57,11 @@ export type ElectionSeoPage = {
 
 export type HomeElectionLink = { href: string; label: string; detail: string };
 
+export type HomeElectionCard = HomeElectionLink & { recent: boolean };
+
+/** Days after polling day that a just-held election stays on the home list. */
+export const ELECTION_SEO_RECENT_DAYS = 14;
+
 export type ElectionSeoProfile = {
   /** Matches `ELECTION_WINDOWS[].id`. */
   id: string;
@@ -86,6 +91,14 @@ const DECREE = "https://api.sejm.gov.pl/eli/acts/DU/2026/1255/text.pdf";
 const CODE = "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf";
 const PKW_SERVICE = "https://wybory.gov.pl/senat20261122/pl";
 const PKW_HOME = "https://pkw.gov.pl";
+const EBC_HOME = "https://elections.bc.ca";
+const EBC_2026 = "https://elections.bc.ca/2026-provincial-election/";
+const EBC_WRITS = "https://elections.bc.ca/2026-provincial-election/writs-of-election/";
+const EBC_NEWS = "https://elections.bc.ca/news/final-voting-day-is-saturday-october-24/";
+const EBC_GUIDE = "https://elections.bc.ca/docs/8008790_Guide-to-Voting-and-Counting.pdf";
+const EBC_RESULTS = "https://www.results.elections.bc.ca/";
+const EBC_RESULTS_NAMED = "https://results.elections.bc.ca";
+const EBC_ARCHIVE = "https://elections.bc.ca/resources/results/provincial-election-results/";
 
 const VICTORIA_BODY = `<h2>What is elected</h2>
 <p>The Victorian Electoral Commission’s state-elections page, read on 24 October 2026, says state elections are held on the last Saturday in November every 4 years, and that the Electoral Act 2002 (Vic) sets that date. It says the next state election is Saturday 28 November 2026. It says the Legislative Assembly has 88 members, one for each district, and the Legislative Council has 40 members, five for each region.</p>
@@ -164,6 +177,28 @@ const POLAND_PL_BODY = `<h2>Co się wybiera</h2>
 <p>Kolejność jest kolejnością wierszy pliku, nie porządkiem alfabetycznym z art. 267. Ustawa o otwartych danych dopuszcza ponowne wykorzystywanie informacji sektora publicznego. Źródło: Państwowa Komisja Wyborcza, plik odczytany 23 października 2026 r.</p>
 <h2>Wynik</h2>
 <p>Kolumny głosów w tym pliku są puste. Ta strona nie pokazuje liczenia i nie wskazuje wybranego senatora. Art. 276: wynik ogłasza PKW obwieszczeniem w Dzienniku Ustaw. Liczenie nie pojawi się tutaj przed zakończeniem głosowania. Serwis PKW: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
+
+const BC_EN_BODY = `<h2>What was elected</h2>
+<p>The <a href="${EBC_WRITS}">writs of election page</a>, read on 25 October 2026, says writs of election have been issued for the 44th Provincial General Election, and that Final Voting Day is Saturday 24 October 2026. It says that in a general election a writ is issued for each of the province's 93 electoral districts, and that when the writs are returned the election period is officially over.</p>
+<p>The <a href="${EBC_2026}">2026 provincial election page</a>, read the same day, says voters will elect 93 Members of the Legislative Assembly. It says each member represents an electoral district. It does not publish a count of votes.</p>
+<p class="tools"><a href="/ca/en/british-columbia/">British Columbia</a> · <a href="/ca/en/british-columbia/legislature/">Legislative Assembly districts</a> · <a href="/ca/en/elections/">Elections in Canada</a></p>
+<h2>Who could vote</h2>
+<p>The 2026 provincial election page says a person can vote if they are a Canadian citizen, 18 or older on 24 October 2026, and a resident of British Columbia since 23 April 2026. This page does not copy any other eligibility rule.</p>
+<h2>When people voted</h2>
+<p>The <a href="${EBC_NEWS}">Final Voting Day news release</a> says voting places are open from 8 a.m. to 8 p.m. Pacific time on 24 October. The 2026 provincial election page says advance voting is 16–21 October 2026. The <a href="${EBC_GUIDE}">Guide to Voting and Counting</a> says there is no online voting option in British Columbia.</p>
+<h2>Result</h2>
+<p>This page shows no count and names no one ahead. The news release says that after voting closes at 8 p.m. Pacific time, preliminary results are reported at <a href="${EBC_RESULTS_NAMED}">results.elections.bc.ca</a>. On 25 October 2026 that address did not load a results page, and the <a href="${EBC_RESULTS}">event-night reporting page</a> did. That page is Elections BC's own service for the 2026 Provincial General Election. Official results follow final count. The 2026 provincial election page says final count is planned for 6–10 November 2026 and that Return Day is 18 November 2026. Earlier statements of votes are on the <a href="${EBC_ARCHIVE}">provincial election results archive</a>.</p>`;
+
+const BC_FR_BODY = `<h2>Ce qui était en élection</h2>
+<p>La <a href="${EBC_WRITS}">page des brefs d'élection</a>, lue le 25 octobre 2026, dit que des brefs ont été émis pour la 44e élection générale provinciale, et que le jour du scrutin final est le samedi 24 octobre 2026. Elle dit que, lors d'une élection générale, un bref est émis pour chacune des 93 circonscriptions de la province, et que la période électorale est officiellement terminée lorsque les brefs sont retournés.</p>
+<p>La <a href="${EBC_2026}">page de l'élection provinciale de 2026</a>, lue le même jour, dit que les électeurs éliront 93 membres de l'Assemblée législative. Elle dit que chaque membre représente une circonscription. Elle ne publie pas un décompte des voix.</p>
+<p class="tools"><a href="/ca/fr/british-columbia/">Colombie-Britannique</a> · <a href="/ca/fr/british-columbia/legislature/">Circonscriptions de l'Assemblée législative</a> · <a href="/ca/fr/elections/">Élections au Canada</a></p>
+<h2>Qui pouvait voter</h2>
+<p>La page de l'élection provinciale de 2026 dit qu'une personne peut voter si elle est citoyenne canadienne, âgée de 18 ans ou plus le 24 octobre 2026, et résidente de la Colombie-Britannique depuis le 23 avril 2026. Cette page ne copie aucune autre règle d'admissibilité.</p>
+<h2>Quand les gens ont voté</h2>
+<p>Le <a href="${EBC_NEWS}">communiqué sur le jour du scrutin final</a> dit que les bureaux de vote sont ouverts de 8 h à 20 h, heure du Pacifique, le 24 octobre. La page de l'élection provinciale de 2026 dit que le vote par anticipation a lieu du 16 au 21 octobre 2026. Le <a href="${EBC_GUIDE}">Guide to Voting and Counting</a> dit qu'il n'y a pas de vote en ligne en Colombie-Britannique.</p>
+<h2>Résultat</h2>
+<p>Cette page ne montre aucun décompte et ne nomme personne en tête. Le communiqué dit qu'après la fermeture du scrutin à 20 h, heure du Pacifique, les résultats préliminaires sont publiés sur <a href="${EBC_RESULTS_NAMED}">results.elections.bc.ca</a>. Le 25 octobre 2026, cette adresse n'a pas chargé une page de résultats, et la <a href="${EBC_RESULTS}">page de rapport du soir du scrutin</a> s'est chargée. Cette page est le service d'Elections BC pour la 2026 Provincial General Election. Les résultats officiels suivent le décompte final. La page de l'élection provinciale de 2026 dit que le décompte final est prévu du 6 au 10 novembre 2026 et que le Return Day est le 18 novembre 2026. Les relevés des votes des élections antérieures sont dans l'<a href="${EBC_ARCHIVE}">archive des résultats des élections provinciales</a>.</p>`;
 
 export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
@@ -654,6 +689,341 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
       },
     ],
   },
+  {
+    id: "ca-bc-2026",
+    pollingDay: "2026-10-24",
+    startDate: "2026-10-24T08:00:00-07:00",
+    endDate: "2026-10-24T20:00:00-07:00",
+    organizerName: "Elections BC",
+    organizerUrl: EBC_HOME,
+    imagePath: "/images/og/ca.webp",
+    lastmod: "2026-10-25",
+    homeLinks: [
+      {
+        href: "/ca/en/elections/bc-2026/",
+        label: "British Columbia provincial election, 24 October 2026",
+        detail:
+          "Final Voting Day was Saturday 24 October 2026, 8 a.m. to 8 p.m. Pacific time. Final count is planned for 6–10 November 2026. Dates from Elections BC.",
+      },
+      {
+        href: "/ca/fr/elections/bc-2026/",
+        label: "Élection provinciale de la Colombie-Britannique, 24 octobre 2026",
+        detail:
+          "Le jour du scrutin final était le samedi 24 octobre 2026, de 8 h à 20 h, heure du Pacifique. Le décompte final est prévu du 6 au 10 novembre 2026. Dates d'Elections BC.",
+      },
+    ],
+    pages: [
+      {
+        lang: "en",
+        htmlLang: "en",
+        path: "/ca/en/elections/bc-2026/",
+        title: "British Columbia election results, 24 October 2026",
+        description:
+          "British Columbia provincial general election results, Final Voting Day 24 October 2026. Final count is planned for 6–10 November 2026. This page copies no count. Unofficial information.",
+        ogDescription:
+          "British Columbia election, 24 October 2026. Final count is planned for 6–10 November 2026. This page copies no count. Unofficial information.",
+        ogLocale: "en_CA",
+        alternates: [
+          { hreflang: "en", path: "/ca/en/elections/bc-2026/" },
+          { hreflang: "fr", path: "/ca/fr/elections/bc-2026/" },
+          { hreflang: "x-default", path: "/ca/en/elections/bc-2026/" },
+        ],
+        crumbs: [
+          { name: "Home", path: "/" },
+          { name: "Canada", path: "/ca/" },
+          { name: "Canada", path: "/ca/en/" },
+          { name: "Elections", path: "/ca/en/elections/" },
+          { name: "British Columbia, 24 October 2026", path: "/ca/en/elections/bc-2026/" },
+        ],
+        eyebrow: "Final Voting Day was Saturday 24 October 2026",
+        h1: "British Columbia provincial general election",
+        lede: "The 44th provincial general election. Elections BC says voters elect 93 Members of the Legislative Assembly. Final count is still ahead. This page shows no count.",
+        updated: "Last updated: 25 October 2026.",
+        reportLabel: "Report an error",
+        officeHref: EBC_2026,
+        bannerBefore: "Unofficial information. Confirm with your ",
+        bannerAfter: "official election office",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/ca/en/", label: "Canada" },
+          { href: "/search/", label: "Search" },
+        ],
+        eventName: "British Columbia provincial general election, 24 October 2026",
+        locationName: "British Columbia, Canada",
+        addressRegion: "British Columbia",
+        addressCountry: "CA",
+        keyDatesHeading: "Key dates and official sources",
+        keyDatesIntro: "Each date below is printed by Elections BC. A date Elections BC did not print is not listed.",
+        keyDates: [
+          {
+            label: "Final Voting Day",
+            text: "The 2026 provincial election page says Final Voting Day is 24 October 2026. The Final Voting Day news release says voting places are open from 8 a.m. to 8 p.m. Pacific time that day.",
+            links: [
+              { label: "2026 provincial election page", href: EBC_2026 },
+              { label: "Final Voting Day news release", href: EBC_NEWS },
+            ],
+          },
+          {
+            label: "Advance voting",
+            text: "The 2026 provincial election page says advance voting is 16–21 October 2026.",
+            links: [{ label: "2026 provincial election page", href: EBC_2026 }],
+          },
+          {
+            label: "Final count",
+            text: "The 2026 provincial election page says final count is planned for 6–10 November 2026. The Guide to Voting and Counting says ballots that were not counted at the initial count are counted at final count, and that the Chief Electoral Officer declares the official results.",
+            links: [
+              { label: "2026 provincial election page", href: EBC_2026 },
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+            ],
+          },
+          {
+            label: "Return Day",
+            text: "The 2026 provincial election page says Return Day is 18 November 2026. The writs of election page says that when the writs are returned, the election period is officially over.",
+            links: [
+              { label: "2026 provincial election page", href: EBC_2026 },
+              { label: "writs of election page", href: EBC_WRITS },
+            ],
+          },
+          {
+            label: "Official results",
+            text: "The Final Voting Day news release says that after voting closes at 8 p.m. Pacific time, preliminary results are reported on the results site it names. The event-night reporting page loaded on 25 October 2026 and names the 2026 Provincial General Election. The provincial election results archive holds earlier statements of votes. This page copies no count and names no one ahead.",
+            links: [
+              { label: "Final Voting Day news release", href: EBC_NEWS },
+              { label: "results site it names", href: EBC_RESULTS_NAMED },
+              { label: "event-night reporting page", href: EBC_RESULTS },
+              { label: "provincial election results archive", href: EBC_ARCHIVE },
+            ],
+          },
+        ],
+        faqHeading: "Frequently asked questions",
+        faqs: [
+          {
+            question: "When are the final results of the BC election 2026?",
+            text: "The 2026 provincial election page says final count is planned for 6–10 November 2026, and that Return Day is 18 November 2026. The Guide to Voting and Counting says the Chief Electoral Officer declares the official results at the end of final count. This page does not print a count.",
+            links: [
+              { label: "2026 provincial election page", href: EBC_2026 },
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+            ],
+          },
+          {
+            question: "What is the final count in the British Columbia election?",
+            text: "The Guide to Voting and Counting says ballots that were not counted at the initial count are counted at final count. The 2026 provincial election page says that count is planned for 6–10 November 2026. This page does not describe a result.",
+            links: [
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+              { label: "2026 provincial election page", href: EBC_2026 },
+            ],
+          },
+          {
+            question: "When is Return Day for the 2026 British Columbia election?",
+            text: "The 2026 provincial election page says Return Day is 18 November 2026. The writs of election page says that when the writs are returned, the election period is officially over.",
+            links: [
+              { label: "2026 provincial election page", href: EBC_2026 },
+              { label: "writs of election page", href: EBC_WRITS },
+            ],
+          },
+          {
+            question: "Where are the official BC election 2026 results?",
+            text: "The Final Voting Day news release says preliminary results are reported after 8 p.m. Pacific time on the results site it names. The event-night reporting page is Elections BC's reporting service for this election. This page copies no count.",
+            links: [
+              { label: "Final Voting Day news release", href: EBC_NEWS },
+              { label: "results site it names", href: EBC_RESULTS_NAMED },
+              { label: "event-night reporting page", href: EBC_RESULTS },
+            ],
+          },
+          {
+            question: "How many electoral districts are in the 2026 British Columbia election?",
+            text: "The writs of election page says a writ is issued for each of the province's 93 electoral districts. The 2026 provincial election page says voters elect 93 Members of the Legislative Assembly, and that each member represents an electoral district. This page does not say how many districts have been decided.",
+            links: [
+              { label: "writs of election page", href: EBC_WRITS },
+              { label: "2026 provincial election page", href: EBC_2026 },
+            ],
+          },
+        ],
+        relatedHeading: "Related pages",
+        related: [
+          { href: "/", label: "Home" },
+          { href: "/ca/", label: "Canada" },
+          { href: "/ca/en/", label: "Canada, English" },
+          { href: "/ca/en/elections/", label: "Elections in Canada" },
+          { href: "/ca/en/british-columbia/", label: "British Columbia" },
+          { href: "/ca/fr/elections/bc-2026/", label: "Français" },
+          { href: "/ca/en/elections/federal-2029/", label: "Federal general election, 15 October 2029" },
+        ],
+        bodyHtml: BC_EN_BODY,
+        sourcesHeading: "Sources",
+        sources: [
+          { href: EBC_2026, label: "Elections BC, “2026 Provincial Election”", readOn: "2026-10-25" },
+          { href: EBC_WRITS, label: "Elections BC, “Writs of Election”", readOn: "2026-10-25" },
+          { href: EBC_NEWS, label: "Elections BC, “Final Voting Day is Saturday, October 24”", readOn: "2026-10-25" },
+          { href: EBC_GUIDE, label: "Elections BC, Guide to Voting and Counting (PDF)", readOn: "2026-10-25" },
+          { href: EBC_RESULTS, label: "Elections BC, event night reporting", readOn: "2026-10-25" },
+          {
+            href: EBC_RESULTS_NAMED,
+            label: "Elections BC, results.elections.bc.ca (named in the Final Voting Day news release)",
+            readOn: "2026-10-25",
+          },
+          { href: EBC_ARCHIVE, label: "Elections BC, provincial election results", readOn: "2026-10-25" },
+        ],
+      },
+      {
+        lang: "fr",
+        htmlLang: "fr",
+        path: "/ca/fr/elections/bc-2026/",
+        title: "Résultats de l'élection en Colombie-Britannique, 24 octobre 2026",
+        description:
+          "Résultats de l'élection générale provinciale de la Colombie-Britannique, jour du scrutin final le 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026. Cette page ne copie aucun décompte. Information non officielle.",
+        ogDescription:
+          "Élection en Colombie-Britannique, 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026. Aucun décompte n'est copié ici. Information non officielle.",
+        ogLocale: "fr_CA",
+        alternates: [
+          { hreflang: "en", path: "/ca/en/elections/bc-2026/" },
+          { hreflang: "fr", path: "/ca/fr/elections/bc-2026/" },
+          { hreflang: "x-default", path: "/ca/en/elections/bc-2026/" },
+        ],
+        crumbs: [
+          { name: "Accueil", path: "/" },
+          { name: "Canada", path: "/ca/" },
+          { name: "Canada", path: "/ca/fr/" },
+          { name: "Élections", path: "/ca/fr/elections/" },
+          { name: "Colombie-Britannique, 24 octobre 2026", path: "/ca/fr/elections/bc-2026/" },
+        ],
+        eyebrow: "Le jour du scrutin final était le samedi 24 octobre 2026",
+        h1: "Élection générale provinciale de la Colombie-Britannique",
+        lede: "La 44e élection générale provinciale. Elections BC dit que les électeurs élisent 93 membres de l'Assemblée législative. Le décompte final est encore à venir. Cette page ne montre aucun décompte.",
+        updated: "Dernière mise à jour : 25 octobre 2026.",
+        reportLabel: "Signaler une erreur",
+        officeHref: EBC_2026,
+        bannerBefore: "Information non officielle. Confirmez auprès du ",
+        bannerAfter: "bureau électoral officiel",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/ca/fr/", label: "Canada" },
+          { href: "/search/", label: "Recherche" },
+        ],
+        eventName: "Élection générale provinciale de la Colombie-Britannique, 24 octobre 2026",
+        locationName: "Colombie-Britannique, Canada",
+        addressRegion: "Colombie-Britannique",
+        addressCountry: "CA",
+        keyDatesHeading: "Dates importantes et sources officielles",
+        keyDatesIntro:
+          "Chaque date ci-dessous est imprimée par Elections BC. Une date qu'Elections BC n'a pas imprimée n'est pas inscrite.",
+        keyDates: [
+          {
+            label: "Jour du scrutin final",
+            text: "La page de l'élection provinciale de 2026 dit que le jour du scrutin final est le 24 octobre 2026. Le communiqué sur le jour du scrutin final dit que les bureaux de vote sont ouverts de 8 h à 20 h, heure du Pacifique, ce jour-là.",
+            links: [
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+              { label: "communiqué sur le jour du scrutin final", href: EBC_NEWS },
+            ],
+          },
+          {
+            label: "Vote par anticipation",
+            text: "La page de l'élection provinciale de 2026 dit que le vote par anticipation a lieu du 16 au 21 octobre 2026.",
+            links: [{ label: "page de l'élection provinciale de 2026", href: EBC_2026 }],
+          },
+          {
+            label: "Décompte final",
+            text: "La page de l'élection provinciale de 2026 dit que le décompte final est prévu du 6 au 10 novembre 2026. Le Guide to Voting and Counting dit que les bulletins non comptés au décompte initial le sont au décompte final, et que le directeur général des élections déclare les résultats officiels.",
+            links: [
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+            ],
+          },
+          {
+            label: "Return Day",
+            text: "La page de l'élection provinciale de 2026 dit que le Return Day est le 18 novembre 2026. La page des brefs d'élection dit que, lorsque les brefs sont retournés, la période électorale est officiellement terminée.",
+            links: [
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+              { label: "page des brefs d'élection", href: EBC_WRITS },
+            ],
+          },
+          {
+            label: "Résultats officiels",
+            text: "Le communiqué sur le jour du scrutin final dit qu'après la fermeture du scrutin à 20 h, heure du Pacifique, les résultats préliminaires sont publiés sur le site de résultats qu'il nomme. La page de rapport du soir du scrutin s'est chargée le 25 octobre 2026 et nomme la 2026 Provincial General Election. L'archive des résultats des élections provinciales conserve les relevés des votes des élections antérieures. Cette page ne copie aucun décompte et ne nomme personne en tête.",
+            links: [
+              { label: "communiqué sur le jour du scrutin final", href: EBC_NEWS },
+              { label: "site de résultats qu'il nomme", href: EBC_RESULTS_NAMED },
+              { label: "page de rapport du soir du scrutin", href: EBC_RESULTS },
+              { label: "archive des résultats des élections provinciales", href: EBC_ARCHIVE },
+            ],
+          },
+        ],
+        faqHeading: "Questions fréquentes",
+        faqs: [
+          {
+            question: "Quand paraissent les résultats définitifs de l'élection de 2026 en Colombie-Britannique ?",
+            text: "La page de l'élection provinciale de 2026 dit que le décompte final est prévu du 6 au 10 novembre 2026 et que le Return Day est le 18 novembre 2026. Le Guide to Voting and Counting dit que le directeur général des élections déclare les résultats officiels à la fin du décompte final. Cette page n'imprime aucun décompte.",
+            links: [
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+            ],
+          },
+          {
+            question: "Qu'est-ce que le décompte final de l'élection en Colombie-Britannique ?",
+            text: "Le Guide to Voting and Counting dit que les bulletins non comptés au décompte initial le sont au décompte final. La page de l'élection provinciale de 2026 dit que ce décompte est prévu du 6 au 10 novembre 2026. Cette page ne décrit pas un résultat.",
+            links: [
+              { label: "Guide to Voting and Counting", href: EBC_GUIDE },
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+            ],
+          },
+          {
+            question: "Quand a lieu le Return Day de l'élection de 2026 en Colombie-Britannique ?",
+            text: "La page de l'élection provinciale de 2026 dit que le Return Day est le 18 novembre 2026. La page des brefs d'élection dit que, lorsque les brefs sont retournés, la période électorale est officiellement terminée.",
+            links: [
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+              { label: "page des brefs d'élection", href: EBC_WRITS },
+            ],
+          },
+          {
+            question: "Où voir les résultats officiels de l'élection de 2026 en Colombie-Britannique ?",
+            text: "Le communiqué sur le jour du scrutin final dit que les résultats préliminaires sont publiés après 20 h, heure du Pacifique, sur le site de résultats qu'il nomme. La page de rapport du soir du scrutin est le service d'Elections BC pour cette élection. Cette page ne copie aucun décompte.",
+            links: [
+              { label: "communiqué sur le jour du scrutin final", href: EBC_NEWS },
+              { label: "site de résultats qu'il nomme", href: EBC_RESULTS_NAMED },
+              { label: "page de rapport du soir du scrutin", href: EBC_RESULTS },
+            ],
+          },
+          {
+            question: "Combien de circonscriptions compte l'élection de 2026 en Colombie-Britannique ?",
+            text: "La page des brefs d'élection dit qu'un bref est émis pour chacune des 93 circonscriptions de la province. La page de l'élection provinciale de 2026 dit que les électeurs élisent 93 membres de l'Assemblée législative, et que chaque membre représente une circonscription. Cette page ne dit pas combien de circonscriptions sont décidées.",
+            links: [
+              { label: "page des brefs d'élection", href: EBC_WRITS },
+              { label: "page de l'élection provinciale de 2026", href: EBC_2026 },
+            ],
+          },
+        ],
+        relatedHeading: "Pages liées",
+        related: [
+          { href: "/", label: "Accueil" },
+          { href: "/ca/", label: "Canada" },
+          { href: "/ca/fr/", label: "Canada, français" },
+          { href: "/ca/fr/elections/", label: "Élections au Canada" },
+          { href: "/ca/fr/british-columbia/", label: "Colombie-Britannique" },
+          { href: "/ca/en/elections/bc-2026/", label: "English" },
+          { href: "/ca/fr/elections/federal-2029/", label: "Élection fédérale, 15 octobre 2029" },
+        ],
+        bodyHtml: BC_FR_BODY,
+        sourcesHeading: "Sources",
+        sources: [
+          { href: EBC_2026, label: "Elections BC, « 2026 Provincial Election »", readOn: "2026-10-25" },
+          { href: EBC_WRITS, label: "Elections BC, « Writs of Election »", readOn: "2026-10-25" },
+          {
+            href: EBC_NEWS,
+            label: "Elections BC, communiqué « Final Voting Day is Saturday, October 24 »",
+            readOn: "2026-10-25",
+          },
+          { href: EBC_GUIDE, label: "Elections BC, Guide to Voting and Counting (PDF)", readOn: "2026-10-25" },
+          { href: EBC_RESULTS, label: "Elections BC, rapport du soir du scrutin", readOn: "2026-10-25" },
+          {
+            href: EBC_RESULTS_NAMED,
+            label: "Elections BC, results.elections.bc.ca (nommé dans le communiqué)",
+            readOn: "2026-10-25",
+          },
+          { href: EBC_ARCHIVE, label: "Elections BC, archive des résultats provinciaux", readOn: "2026-10-25" },
+        ],
+      },
+    ],
+  },
 ];
 
 export function utcToday(now = new Date()): string {
@@ -673,14 +1043,32 @@ export function isWithinDays(pollingDay: string, asOf: string, days = ELECTION_S
   return pollingDay >= asOf && pollingDay <= addDays(asOf, days);
 }
 
+/** Polling day is strictly before `asOf`, and no more than `recentDays` civil days before it. */
+export function isRecentlyHeld(pollingDay: string, asOf: string, recentDays = ELECTION_SEO_RECENT_DAYS): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(pollingDay) || !/^\d{4}-\d{2}-\d{2}$/.test(asOf)) return false;
+  return pollingDay < asOf && pollingDay >= addDays(asOf, -recentDays);
+}
+
+/** Upcoming window, or the short recently-held window. The 60-day check itself stays upcoming-only. */
+export function isListedElection(
+  pollingDay: string,
+  asOf: string,
+  days = ELECTION_SEO_WINDOW_DAYS,
+  recentDays = ELECTION_SEO_RECENT_DAYS,
+): boolean {
+  return isWithinDays(pollingDay, asOf, days) || isRecentlyHeld(pollingDay, asOf, recentDays);
+}
+
 export function profilesWithinDays(asOf = utcToday(), days = ELECTION_SEO_WINDOW_DAYS): ElectionSeoProfile[] {
   return ELECTION_SEO_PROFILES.filter((profile) => isWithinDays(profile.pollingDay, asOf, days)).sort((a, b) =>
     a.pollingDay.localeCompare(b.pollingDay),
   );
 }
 
-export function upcomingElectionCards(asOf = utcToday()): HomeElectionLink[] {
-  return profilesWithinDays(asOf).flatMap((profile) => profile.homeLinks);
+export function upcomingElectionCards(asOf = utcToday()): HomeElectionCard[] {
+  return ELECTION_SEO_PROFILES.filter((profile) => isListedElection(profile.pollingDay, asOf))
+    .sort((a, b) => a.pollingDay.localeCompare(b.pollingDay))
+    .flatMap((profile) => profile.homeLinks.map((link) => ({ ...link, recent: isRecentlyHeld(profile.pollingDay, asOf) })));
 }
 
 export function profileById(id: string): ElectionSeoProfile | undefined {

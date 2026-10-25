@@ -5,7 +5,7 @@ import { LinkGrid } from "@/components/LinkGrid";
 import { CanadaFrame } from "@/app/ca/_components/CanadaFrame";
 import { formatNumber } from "@/data/ca/format";
 import { asCaLang } from "@/data/ca/lang";
-import { canadaHome, districtIndexPath, divisionIndexPath, electionPath, regionPath } from "@/data/ca/paths";
+import { bcElectionPath, canadaHome, districtIndexPath, divisionIndexPath, electionPath, regionPath } from "@/data/ca/paths";
 import {
   CANADA_POPULATION,
   COMMONS_SEATS,
@@ -100,6 +100,20 @@ export default async function CanadaNationalPage({ params }: { params: Promise<{
         <p>
           <Link className="text-navy underline" href={electionPath(lang)}>
             {fr ? "Page de cette date" : "Page for this date"}
+          </Link>
+        </p>
+      </section>
+
+      <section className="prose-legal">
+        <h2>{fr ? "Élection provinciale de la Colombie-Britannique" : "British Columbia provincial election"}</h2>
+        <p>
+          {fr
+            ? "La page d'Elections BC sur l'élection provinciale de 2026, lue le 25 octobre 2026, dit que le jour du scrutin final est le 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026, et le Return Day est le 18 novembre 2026. Cette page ne publie aucun décompte."
+            : "Elections BC's 2026 provincial election page, read on 25 October 2026, says Final Voting Day is 24 October 2026. Final count is planned for 6–10 November 2026, and Return Day is 18 November 2026. This page prints no count."}
+        </p>
+        <p>
+          <Link className="text-navy underline" href={bcElectionPath(lang)}>
+            {fr ? "Page de cette élection" : "Page for this election"}
           </Link>
         </p>
       </section>

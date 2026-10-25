@@ -11,10 +11,10 @@ const NOTES: Record<string, { en: string[]; fr: string[] }> = {
   },
   "british-columbia": {
     en: [
-      "Elections BC says a provincial general election has been called and that Final Voting Day is October 24, 2026. The page says voters will elect 93 Members of the Legislative Assembly. Writ Day was September 22, 2026. Candidate nominations close at 1 p.m. Pacific time on October 3, 2026. Advance voting is October 16–21, 2026. Final count is planned for November 6–10, 2026, and Return Day is November 18, 2026. Final Voting Day is after the date this page was read. This page does not reprint candidates and does not report a count.",
+      "Elections BC's 2026 provincial election page, read on 25 October 2026, says Final Voting Day is 24 October 2026. It says voters will elect 93 Members of the Legislative Assembly, and that each member represents an electoral district. Writ Day was 22 September 2026. Advance voting is 16–21 October 2026. Final count is planned for 6–10 November 2026, and Return Day is 18 November 2026. The writs of election page says a writ is issued for each of the province's 93 electoral districts. This page does not reprint candidates and does not report a count.",
     ],
     fr: [
-      "Elections BC écrit qu’une élection générale provinciale est convoquée et que le jour du scrutin final est le 24 octobre 2026. La page dit que les électeurs éliront 93 membres de l’Assemblée législative. Le jour du bref est le 22 septembre 2026. Les mises en candidature prennent fin à 13 h, heure du Pacifique, le 3 octobre 2026. Le vote par anticipation a lieu du 16 au 21 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026, et le Return Day est le 18 novembre 2026. Le jour du scrutin final est postérieur à la date de lecture de cette page. Elle ne reproduit pas les candidatures et ne rapporte pas un décompte.",
+      "La page d'Elections BC sur l'élection provinciale de 2026, lue le 25 octobre 2026, dit que le jour du scrutin final est le 24 octobre 2026. Elle dit que les électeurs éliront 93 membres de l'Assemblée législative, et que chaque membre représente une circonscription. Le jour du bref est le 22 septembre 2026. Le vote par anticipation a lieu du 16 au 21 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026, et le Return Day est le 18 novembre 2026. La page des brefs dit qu'un bref est émis pour chacune des 93 circonscriptions de la province. Cette page ne reproduit pas les candidatures et ne rapporte pas un décompte.",
     ],
   },
   manitoba: {

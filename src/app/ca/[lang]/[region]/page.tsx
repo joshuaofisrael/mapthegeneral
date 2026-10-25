@@ -6,7 +6,7 @@ import { formatNumber } from "@/data/ca/format";
 import { asCaLang } from "@/data/ca/lang";
 import { districtName, districtsIn, divisionName, divisionsIn } from "@/data/ca/level2";
 import { seatsIn } from "@/data/ca/level3";
-import { canadaHome, districtPath, divisionPath, legislatureIndexPath, legislaturePath, regionPath } from "@/data/ca/paths";
+import { bcElectionPath, canadaHome, districtPath, divisionPath, legislatureIndexPath, legislaturePath, regionPath } from "@/data/ca/paths";
 import { REGIONS, regionBySlug, regionName, regionNeighbors } from "@/data/ca/places";
 import { regionNotes } from "@/data/ca/region-notes";
 import { caMetadata } from "@/data/ca/seo";
@@ -159,6 +159,15 @@ export default async function RegionPage({
         {notes.map((note) => (
           <p key={note}>{note}</p>
         ))}
+        {slug === "british-columbia" ? (
+          <p>
+            <Link className="text-navy underline" href={bcElectionPath(lang)}>
+              {fr
+                ? "Élection générale provinciale, 24 octobre 2026"
+                : "Provincial general election, 24 October 2026"}
+            </Link>
+          </p>
+        ) : null}
         {showsNextGap && <GapNote label={copy.gap} text={copy.nextGap} />}
         <GapNote label={copy.gap} text={copy.senateGap} />
         <GapNote label={copy.gap} text={copy.municipalityGap} />

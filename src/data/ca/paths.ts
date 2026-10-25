@@ -12,6 +12,10 @@ export function electionPath(lang: CaLang): string {
   return `/ca/${lang}/elections/federal-2029/`;
 }
 
+export function bcElectionPath(lang: CaLang): string {
+  return `/ca/${lang}/elections/bc-2026/`;
+}
+
 export function districtIndexPath(lang: CaLang): string {
   return `/ca/${lang}/districts/`;
 }

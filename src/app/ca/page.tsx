@@ -44,6 +44,11 @@ export default function CanadaCountryPage() {
           <p className="mt-2 text-sm leading-6 text-ink-muted">
             Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier.
           </p>
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href="/ca/en/elections/bc-2026/">
+              British Columbia provincial election, 24 October 2026
+            </Link>
+          </p>
         </li>
         <li className="rounded-xl border border-line bg-paper-card p-5">
           <h2 className="font-serif text-2xl font-semibold">
@@ -53,6 +58,11 @@ export default function CanadaCountryPage() {
           </h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">
             Élection générale fédérale fixée au lundi 15 octobre 2029, sauf dissolution antérieure du Parlement.
+          </p>
+          <p className="mt-3 text-sm">
+            <Link className="text-navy underline" href="/ca/fr/elections/bc-2026/">
+              Élection provinciale de la Colombie-Britannique, 24 octobre 2026
+            </Link>
           </p>
         </li>
       </ul>
