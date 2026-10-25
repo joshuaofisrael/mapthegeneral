@@ -234,6 +234,18 @@ export const SOURCES: SourceRef[] = [
     readOn: "2026-10-23",
   },
   {
+    id: "pkw-senat-20-kalendarz",
+    name: "Państwowa Komisja Wyborcza, kalendarz wyborczy wyborów uzupełniających do Senatu w okręgu nr 20",
+    url: "https://wybory.gov.pl/senat20261122/pl/kalendarz",
+    readOn: "2026-10-25",
+  },
+  {
+    id: "pkw-senat-20-obwieszczenia",
+    name: "Państwowa Komisja Wyborcza, obwieszczenia w wyborach uzupełniających do Senatu w okręgu nr 20",
+    url: "https://wybory.gov.pl/senat20261122/pl/pkw_obwieszczenia",
+    readOn: "2026-10-25",
+  },
+  {
     id: "ustawa-otwarte-dane",
     name: "Ustawa z dnia 11 sierpnia 2021 r. o otwartych danych i ponownym wykorzystywaniu informacji sektora publicznego (tekst na api.sejm.gov.pl)",
     url: "https://api.sejm.gov.pl/eli/acts/DU/2021/1641/text.html",

@@ -8,7 +8,7 @@
 
 export const ELECTION_SEO_WINDOW_DAYS = 60;
 
-export type LinkedPhrase = { label: string; href: string };
+export type LinkedPhrase = { label: string; href: string; rel?: string };
 
 export type SourcedText = {
   text: string;
@@ -78,6 +78,11 @@ export type ElectionSeoProfile = {
    * calendar day. This value is used in those cases when it is newer.
    */
   lastmod: string;
+  /**
+   * File id under src/data/pl/candidates/. The page renders that list only
+   * when it has rows. An empty file adds no candidate section.
+   */
+  candidateListId?: string;
   homeLinks: HomeElectionLink[];
   pages: ElectionSeoPage[];
 };
@@ -99,6 +104,8 @@ const EBC_GUIDE = "https://elections.bc.ca/docs/8008790_Guide-to-Voting-and-Coun
 const EBC_RESULTS = "https://www.results.elections.bc.ca/";
 const EBC_RESULTS_NAMED = "https://results.elections.bc.ca";
 const EBC_ARCHIVE = "https://elections.bc.ca/resources/results/provincial-election-results/";
+const PKW_CALENDAR = "https://wybory.gov.pl/senat20261122/pl/kalendarz";
+const PKW_NOTICES = "https://wybory.gov.pl/senat20261122/pl/pkw_obwieszczenia";
 
 const VICTORIA_BODY = `<h2>What is elected</h2>
 <p>The Victorian Electoral Commission’s state-elections page, read on 24 October 2026, says state elections are held on the last Saturday in November every 4 years, and that the Electoral Act 2002 (Vic) sets that date. It says the next state election is Saturday 28 November 2026. It says the Legislative Assembly has 88 members, one for each district, and the Legislative Council has 40 members, five for each region.</p>
@@ -120,7 +127,7 @@ const VICTORIA_BODY = `<h2>What is elected</h2>
 
 const POLAND_EN_BODY = `<h2>What is elected</h2>
 <p>The President’s order of 25 September 2026 (Dziennik Ustaw 2026 item 1255) calls a Senate by-election in Lubusz Voivodeship, constituency 20: the counties of Krosno Odrzańskie, Świebodzin and Zielona Góra, and the city with county status Zielona Góra. The seat of the district commission is Zielona Góra. The order cites article 283 § 1 point 1 of the electoral code, together with the Marshal of the Senate’s decision of 27 August 2026 stating that the mandate of senator Mirosław Różański had expired. Article 283 § 1 point 1 is the death of a senator. Polling day is Sunday 22 November 2026.</p>
-<p>Article 256: 100 senators are elected by majority. Article 260 § 1: Senate constituencies are single-member. The Commission’s constituency file, read on 23 October 2026, prints for number 20: 1 seat and 4 candidates.</p>
+<p>Article 256: 100 senators are elected by majority. Article 260 § 1: Senate constituencies are single-member. The Commission’s constituency file, read on 25 October 2026, prints for number 20: 1 seat and 4 candidates.</p>
 <p class="tools"><a href="/pl/en/senat/20/">Constituency 20</a> · <a href="/pl/en/lubuskie/">Lubusz</a> · <a href="/pl/en/lubuskie/krosnienski/">Krosno county</a> · <a href="/pl/en/lubuskie/swiebodzinski/">Świebodzin county</a> · <a href="/pl/en/lubuskie/zielonogorski/">Zielona Góra county</a> · <a href="/pl/en/lubuskie/zielona-gora/">Zielona Góra</a></p>
 <h2>How the seat is filled</h2>
 <p>Article 264: one candidate per committee in the constituency. Article 267: registered candidates go on the ballot in alphabetical order, with the committee name. Article 268 § 1: one “x” beside one surname. Article 273 § 1 counts as elected the candidate with the most valid votes. This page does not apply that rule to any name. Article 11 § 1 point 2: a Polish citizen with the right to vote who turns 30 by election day may stand.</p>
@@ -137,20 +144,20 @@ const POLAND_EN_BODY = `<h2>What is elected</h2>
 </ul>
 <p>Article 107 § 1 forbids campaigning on polling day and for the 24 hours before it. Article 115 § 1 forbids publishing pre-election research results, and research results from polling day, during that same period. This page carries no campaign and prints no such results.</p>
 <h2>Names in the Commission file</h2>
-<p>The file kandydaci_senat_utf8.csv, read on 23 October 2026, lists four people. The ballot-position column is empty. This is a reading of the file, not the district commission’s announcement. The calendar requires that announcement of registered candidates by 12 November 2026. That announcement was not read on 23 October 2026. Sex, occupation and place of residence from the file are not reprinted.</p>
+<p>The file kandydaci_senat_utf8.csv, read on 25 October 2026, lists four people. The ballot-position column is empty. This is a reading of the file, not the district commission’s announcement. The calendar requires that announcement of registered candidates by 12 November 2026. That announcement was not on the <a href="${PKW_NOTICES}" rel="nofollow noopener" target="_blank">Commission notice list</a> read on 25 October 2026. Sex, occupation and place of residence from the file are not reprinted.</p>
 <ul>
 <li>Janusz Krzysztof KUBICKI — KOMITET WYBORCZY WYBORCÓW PO PIERWSZE LUBUSKIE</li>
 <li>Tomasz Jacek NARUSZEWICZ — KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA</li>
 <li>Zdzisława Maria RÓŻAŃSKA — KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA</li>
 <li>Joanna SENYSZYN — KOMITET WYBORCZY NOWA FALA PROFESOR SENYSZYN</li>
 </ul>
-<p>The order is the order of rows in the file, not the alphabetical ballot order in article 267. The open-data act allows reuse of public-sector information. Source: the National Electoral Commission, file read on 23 October 2026.</p>
+<p>The order is the order of rows in the file, not the alphabetical ballot order in article 267. The open-data act allows reuse of public-sector information. Source: the National Electoral Commission, file read on 25 October 2026.</p>
 <h2>Result</h2>
 <p>The vote columns in that file are empty. This page shows no count and names no elected senator. Article 276: the Commission announces the result in the Dziennik Ustaw. No count will be shown here before voting ends. Commission service: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
 const POLAND_PL_BODY = `<h2>Co się wybiera</h2>
 <p>Postanowienie Prezydenta RP z 25 września 2026 r. (Dz.U. 2026 poz. 1255) zarządza wybory uzupełniające do Senatu w województwie lubuskim, w okręgu nr 20: powiaty krośnieński, świebodziński i zielonogórski oraz miasto na prawach powiatu Zielona Góra. Siedziba Okręgowej Komisji Wyborczej: Zielona Góra. Podstawą jest art. 283 § 1 pkt 1 Kodeksu wyborczego, w związku z postanowieniem Marszałka Senatu z 27 sierpnia 2026 r. o stwierdzeniu wygaśnięcia mandatu senatora Mirosława Różańskiego. Art. 283 § 1 pkt 1 mówi o śmierci senatora. Datą wyborów jest niedziela 22 listopada 2026 r.</p>
-<p>Art. 256: do Senatu wybiera się 100 senatorów według zasady większości. Art. 260 § 1: okręgi do Senatu są jednomandatowe. Plik okręgów PKW odczytany 23 października 2026 r. podaje dla numeru 20: 1 mandat i 4 kandydatów.</p>
+<p>Art. 256: do Senatu wybiera się 100 senatorów według zasady większości. Art. 260 § 1: okręgi do Senatu są jednomandatowe. Plik okręgów PKW odczytany 25 października 2026 r. podaje dla numeru 20: 1 mandat i 4 kandydatów.</p>
 <p class="tools"><a href="/pl/pl/senat/20/">Okręg nr 20</a> · <a href="/pl/pl/lubuskie/">lubuskie</a> · <a href="/pl/pl/lubuskie/krosnienski/">powiat krośnieński</a> · <a href="/pl/pl/lubuskie/swiebodzinski/">powiat świebodziński</a> · <a href="/pl/pl/lubuskie/zielonogorski/">powiat zielonogórski</a> · <a href="/pl/pl/lubuskie/zielona-gora/">Zielona Góra</a></p>
 <h2>Zasada wyboru</h2>
 <p>Art. 264: jeden kandydat komitetu w okręgu. Art. 267: zarejestrowani kandydaci na karcie alfabetycznie, z nazwą komitetu. Art. 268 § 1: znak „x” przy jednym nazwisku. Art. 273 § 1: mandat bierze najwięcej ważnych głosów. Ta strona nie stosuje tej reguły do żadnego nazwiska. Art. 11 § 1 pkt 2: bierne prawo wyborcze ma obywatel polski z prawem wybierania, który w dniu wyborów kończy co najmniej 30 lat.</p>
@@ -167,14 +174,14 @@ const POLAND_PL_BODY = `<h2>Co się wybiera</h2>
 </ul>
 <p>Art. 107 § 1: w dniu głosowania i na 24 godziny przed tym dniem agitacja wyborcza jest zabroniona. Art. 115 § 1: w tym samym czasie zabronione jest podawanie wyników przedwyborczych badań opinii publicznej i wyników badań z dnia głosowania. Ta strona nie prowadzi agitacji i nie podaje takich wyników.</p>
 <h2>Kandydaci w pliku PKW</h2>
-<p>Plik <span lang="en">kandydaci_senat_utf8.csv</span> odczytany 23 października 2026 r. wymienia cztery osoby. Kolumna „Pozycja na liście” jest pusta. To odczyt pliku, nie obwieszczenie Okręgowej Komisji Wyborczej. Kalendarz każe podać obwieszczenie o zarejestrowanych kandydatach do 12 listopada 2026 r. Tego obwieszczenia tego dnia nie odczytano. Z pliku nie przepisano płci, zawodu ani miejsca zamieszkania.</p>
+<p>Plik <span lang="en">kandydaci_senat_utf8.csv</span> odczytany 25 października 2026 r. wymienia cztery osoby. Kolumna „Pozycja na liście” jest pusta. To odczyt pliku, nie obwieszczenie Okręgowej Komisji Wyborczej. Kalendarz każe podać obwieszczenie o zarejestrowanych kandydatach do 12 listopada 2026 r. Tego obwieszczenia nie było na <a href="${PKW_NOTICES}" rel="nofollow noopener" target="_blank">liście obwieszczeń PKW</a> odczytanej 25 października 2026 r. Z pliku nie przepisano płci, zawodu ani miejsca zamieszkania.</p>
 <ul>
 <li>Janusz Krzysztof KUBICKI — KOMITET WYBORCZY WYBORCÓW PO PIERWSZE LUBUSKIE</li>
 <li>Tomasz Jacek NARUSZEWICZ — KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA</li>
 <li>Zdzisława Maria RÓŻAŃSKA — KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA</li>
 <li>Joanna SENYSZYN — KOMITET WYBORCZY NOWA FALA PROFESOR SENYSZYN</li>
 </ul>
-<p>Kolejność jest kolejnością wierszy pliku, nie porządkiem alfabetycznym z art. 267. Ustawa o otwartych danych dopuszcza ponowne wykorzystywanie informacji sektora publicznego. Źródło: Państwowa Komisja Wyborcza, plik odczytany 23 października 2026 r.</p>
+<p>Kolejność jest kolejnością wierszy pliku, nie porządkiem alfabetycznym z art. 267. Ustawa o otwartych danych dopuszcza ponowne wykorzystywanie informacji sektora publicznego. Źródło: Państwowa Komisja Wyborcza, plik odczytany 25 października 2026 r.</p>
 <h2>Wynik</h2>
 <p>Kolumny głosów w tym pliku są puste. Ta strona nie pokazuje liczenia i nie wskazuje wybranego senatora. Art. 276: wynik ogłasza PKW obwieszczeniem w Dzienniku Ustaw. Liczenie nie pojawi się tutaj przed zakończeniem głosowania. Serwis PKW: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
@@ -378,7 +385,8 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Państwowa Komisja Wyborcza",
     organizerUrl: PKW_HOME,
     imagePath: "/images/og/pl.webp",
-    lastmod: "2026-10-24",
+    lastmod: "2026-10-25",
+    candidateListId: "senat-20-2026",
     homeLinks: [
       {
         href: "/pl/en/elections/senat-20-2026/",
@@ -416,7 +424,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "Sunday 22 November 2026",
         h1: "Senate by-election in constituency 20",
         lede: "Lubusz Voivodeship. One Senate seat. Voting from 7:00 to 21:00.",
-        updated: "Last updated: 24 October 2026.",
+        updated: "Last updated: 25 October 2026.",
         reportLabel: "Report an error",
         officeHref: PKW_HOME,
         bannerBefore: "Unofficial information. Confirm with your ",
@@ -453,8 +461,11 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Notice of registered candidates",
-            text: "The election calendar says that by 12 November 2026 the district commission publishes a notice of registered candidates. That notice was not read for this page on 23 October 2026.",
-            links: [{ label: "election calendar", href: DECREE }],
+            text: "The election calendar says that by 12 November 2026 the district commission publishes a notice of registered candidates. That notice was not on the Commission notice list read on 25 October 2026.",
+            links: [
+              { label: "election calendar", href: DECREE },
+              { label: "Commission notice list", href: PKW_NOTICES, rel: "nofollow noopener" },
+            ],
           },
           {
             label: "End of the campaign",
@@ -520,16 +531,18 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         sources: [
           { href: DECREE, label: "President’s order of 25 September 2026 (Dz.U. 2026 item 1255), PDF", readOn: "2026-10-24" },
           { href: CODE, label: "Electoral code, consolidated text (Dz.U. 2026 item 1261)", readOn: "2026-10-23" },
-          { href: PKW_SERVICE, label: "National Electoral Commission, Senate by-election, constituency 20", readOn: "2026-10-23" },
+          { href: PKW_SERVICE, label: "National Electoral Commission, Senate by-election, constituency 20", readOn: "2026-10-25" },
+          { href: PKW_CALENDAR, label: "Commission election calendar", readOn: "2026-10-25" },
+          { href: PKW_NOTICES, label: "Commission notice list", readOn: "2026-10-25" },
           {
             href: "https://wybory.gov.pl/senat20261122/data/csv/kandydaci_senat_csv.1791978806.zip",
             label: "Commission, kandydaci_senat_csv.zip",
-            readOn: "2026-10-23",
+            readOn: "2026-10-25",
           },
           {
             href: "https://wybory.gov.pl/senat20261122/data/csv/okregi_senat_csv.1791978806.zip",
             label: "Commission, okregi_senat_csv.zip",
-            readOn: "2026-10-23",
+            readOn: "2026-10-25",
           },
           {
             href: "https://api.sejm.gov.pl/eli/acts/DU/2021/1641/text.html",
@@ -564,7 +577,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "Niedziela 22 listopada 2026 r.",
         h1: "Wybory uzupełniające do Senatu w okręgu nr 20",
         lede: "Województwo lubuskie. Jeden mandat senatora. Głosowanie w godz. 7:00–21:00.",
-        updated: "Ostatnia aktualizacja tej strony: 24 października 2026 r.",
+        updated: "Ostatnia aktualizacja tej strony: 25 października 2026 r.",
         reportLabel: "Zgłoś błąd",
         officeHref: PKW_HOME,
         bannerBefore: "Informacja nieoficjalna. Potwierdź ją w ",
@@ -601,8 +614,11 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Obwieszczenie o kandydatach",
-            text: "Kalendarz wyborczy podaje, że do 12 listopada 2026 r. Okręgowa Komisja Wyborcza ogłasza obwieszczenie o zarejestrowanych kandydatach. Tego obwieszczenia nie odczytano 23 października 2026 r.",
-            links: [{ label: "Kalendarz wyborczy", href: DECREE }],
+            text: "Kalendarz wyborczy podaje, że do 12 listopada 2026 r. Okręgowa Komisja Wyborcza ogłasza obwieszczenie o zarejestrowanych kandydatach. Tego obwieszczenia nie było na liście obwieszczeń PKW odczytanej 25 października 2026 r.",
+            links: [
+              { label: "Kalendarz wyborczy", href: DECREE },
+              { label: "liście obwieszczeń PKW", href: PKW_NOTICES, rel: "nofollow noopener" },
+            ],
           },
           {
             label: "Zakończenie kampanii",
@@ -668,16 +684,18 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         sources: [
           { href: DECREE, label: "Postanowienie Prezydenta RP z 25 września 2026 r. (Dz.U. 2026 poz. 1255), PDF", readOn: "2026-10-24" },
           { href: CODE, label: "Kodeks wyborczy, tekst jednolity (Dz.U. 2026 poz. 1261)", readOn: "2026-10-23" },
-          { href: PKW_SERVICE, label: "PKW, Wybory uzupełniające do Senatu w okręgu nr 20", readOn: "2026-10-23" },
+          { href: PKW_SERVICE, label: "PKW, Wybory uzupełniające do Senatu w okręgu nr 20", readOn: "2026-10-25" },
+          { href: PKW_CALENDAR, label: "PKW, kalendarz wyborczy", readOn: "2026-10-25" },
+          { href: PKW_NOTICES, label: "PKW, obwieszczenia", readOn: "2026-10-25" },
           {
             href: "https://wybory.gov.pl/senat20261122/data/csv/kandydaci_senat_csv.1791978806.zip",
             label: "PKW, kandydaci_senat_csv.zip",
-            readOn: "2026-10-23",
+            readOn: "2026-10-25",
           },
           {
             href: "https://wybory.gov.pl/senat20261122/data/csv/okregi_senat_csv.1791978806.zip",
             label: "PKW, okregi_senat_csv.zip",
-            readOn: "2026-10-23",
+            readOn: "2026-10-25",
           },
           {
             href: "https://api.sejm.gov.pl/eli/acts/DU/2021/1641/text.html",
