@@ -4,7 +4,7 @@ import type { ElectionSeoPage, ElectionSeoProfile, SourcedText } from "../data/e
 import { ELECTION_SEO_PROFILES } from "../data/election-seo";
 import { SITE, absoluteUrl, reportErrorHref } from "../data/site";
 import { ADSENSE_HEAD_TAGS } from "./adsense";
-import { candidateItemListJsonLd, loadCandidateList, renderCandidateListHtml, type CandidateList } from "./candidate-list";
+import { candidateItemListJsonLd, loadCandidateList, renderCandidateListHtml, type CandidateList, type CandidateLang } from "./candidate-list";
 import { withLegalFooter } from "./legal-footer";
 import { socialImageFor, socialMetaTags } from "./social";
 
@@ -134,9 +134,10 @@ function webPageJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage): Reco
 
 export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSeoPage, root = process.cwd()): string {
   const imageUrl = existingImageUrl(profile, root);
-  const candidateList = pageCandidateList(profile, root);
-  const candidateHtml = candidateList ? renderCandidateListHtml(candidateList, page.lang) : "";
-  const itemList = candidateList ? candidateItemListJsonLd(candidateList, page.lang) : null;
+  const candidateList = page.lang === "en" || page.lang === "pl" ? pageCandidateList(profile, root) : null;
+  const candidateLang = page.lang as CandidateLang;
+  const candidateHtml = candidateList ? renderCandidateListHtml(candidateList, candidateLang) : "";
+  const itemList = candidateList ? candidateItemListJsonLd(candidateList, candidateLang) : null;
   const modifiedHead = profile.candidateListId
     ? `<meta property="article:modified_time" content="${esc(profile.lastmod)}">\n${jsonScript(webPageJsonLd(profile, page))}\n`
     : "";
