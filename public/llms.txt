@@ -59715,6 +59715,8 @@
 - [Election to the 26th Knesset, 27 October 2026](https://mapthegeneral.com/il/en/elections/knesset-2026/)
 - [Israel questions](https://mapthegeneral.com/il/en/faq/)
 - [Israel sources](https://mapthegeneral.com/il/en/sources/)
+- [תוצאות הבחירות 2026](https://mapthegeneral.com/il/he/results/)
+- [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 

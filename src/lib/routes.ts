@@ -188,6 +188,8 @@ export function searchIndex(): IndexEntry[] {
     ...canadaIndexEntries(),
     ...switzerlandEntries(),
     ...hubIndexEntries(),
+    { path: "/il/he/results/", lang: "he", title: "תוצאות הבחירות 2026", kind: "election", text: "תוצאות הבחירות לכנסת 2026 ועדת הבחירות המרכזית" },
+    { path: "/il/en/results/", lang: "en", title: "Israel election results 2026", kind: "election", text: "Israel Knesset election results 2026 live" },
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;
