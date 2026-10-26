@@ -394,7 +394,7 @@ function areaBody(area: LocalArea): string {
   const code = `<p>ABS Local Government Area code <strong>${esc(area.absCode)}</strong>, name <strong>${esc(area.absName)}</strong>, in the ASGS2025 MapServer extract read on 19 October 2026. ${ABS_CAVEAT}</p>`;
   const official =
     area.group === "vic-council"
-      ? `<p>Official council name, as the Victorian Electoral Commission prints it: ${esc(area.name)}.</p>`
+      ? `<p>Official council name, as the Victorian Electoral Commission prints it: ${esc(area.name)}. Victorian Electoral Commission website material is licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">Creative Commons Attribution 4.0 International</a> (© Victorian Electoral Commission; <a href="https://www.vec.vic.gov.au/legal" rel="nofollow noopener">licence terms</a>). The Australian Bureau of Statistics ASGS data used for the code below is licensed Creative Commons Attribution 4.0 International (© Commonwealth of Australia, Australian Bureau of Statistics).</p>`
       : area.jurisdictionSlug === "queensland" && area.stateCode
         ? `<p>Official name in the Queensland Government local government area boundaries dataset, read on 24 October 2026: ${esc(area.name)}. State code <strong>${esc(area.stateCode)}</strong>. The dataset is licensed Creative Commons Attribution 4.0.</p>`
         : area.legalPid
