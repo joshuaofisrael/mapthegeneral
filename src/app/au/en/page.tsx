@@ -39,7 +39,7 @@ export default function AustraliaNationalPage() {
       eyebrow="Federal election · due between August 2027 and May 2028"
       title="Australia"
       lede="The Australian Electoral Commission says the next federal election is due to be held between August 2027 and May 2028. No writ read on 17 October 2026 names a polling day."
-      updated="24 October 2026"
+      updated="26 October 2026"
       officeHref={aec.url}
       officeLabel="Australian Electoral Commission"
       sources={sourcesById([
@@ -280,15 +280,19 @@ export default function AustraliaNationalPage() {
           including unincorporated areas, and 19 non-spatial special purpose codes. It says ABS approximations do not
           match official legal boundaries and should only be used for statistical purposes. This release keeps the 548
           spatial areas from the ASGS2025 MapServer extract. Victoria’s 79 councils use the Victorian Electoral
-          Commission’s names, with the matching ABS code. Queensland’s 78 areas use the names in the Queensland
-          Government local government area boundaries dataset, CC BY 4.0, read on 24 October 2026, with the matching
-          ABS code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are
-          kept. The other areas use the ABS name and code.
+          Commission’s names, with the matching ABS code. The Commission’s report to Parliament says the 2024 general
+          elections were held on 26 October 2024, except Moira Shire Council, and that the next local government
+          elections are in October 2028. It does not print a calendar day for 2028. Queensland’s 78 areas use the names
+          in the Queensland Government local government area boundaries dataset, CC BY 4.0, read on 24 October 2026,
+          with the matching ABS code. The Electoral Commission of Queensland says there are 77 local government areas.
+          Both figures are kept. New South Wales, Western Australia, South Australia, Tasmania, the Northern Territory
+          and the Other Territories use the legal names in the Geoscape Administrative Boundaries August 2026 local
+          government area tables, CC BY 4.0, where a name matched an ABS 2025 code.
         </p>
         <p>
-          The Tasmanian Electoral Commission page for the 2026 local government elections prints close of poll at 2 pm
-          on Tuesday 27 October. On 24 October 2026 that time has not arrived. This site does not publish a candidate
-          list, a return rate, or a count for that election.
+          The Tasmanian Electoral Commission page for the 2026 local government elections, read on 26 October 2026,
+          prints close of poll at 2 pm on Tuesday 27 October. That time has not arrived. This site does not publish a
+          candidate list, a return rate, or a count for that election.
         </p>
         <p>
           The Western Australian Electoral Commission page titled “2026 December Local Government Extraordinary

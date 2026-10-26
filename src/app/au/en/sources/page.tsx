@@ -22,7 +22,7 @@ export default function AustraliaSourcesPage() {
         { name: "Australia", path: auHome() },
         { name: "Sources", path },
       ]}
-      updated="24 October 2026"
+      updated="26 October 2026"
       title="Sources for the Australia pages"
       lede="The date after each item is the day that page was read. News reports and Wikipedia are not used as the source of a fact."
       officeHref={aec.url}
@@ -165,9 +165,35 @@ export default function AustraliaSourcesPage() {
           from “the last Saturday in October” or “the last Saturday in March”.
         </p>
         <p>
+          Legal names added on 26 October 2026 for New South Wales, Western Australia, South Australia, Tasmania, the
+          Northern Territory, Christmas Island and the Cocos (Keeling) Islands are the LGA_NAME values in the Geoscape
+          Administrative Boundaries August 2026 local government area tables, downloaded from{" "}
+          <a href="https://data.gov.au/data/dataset/geoscape-administrative-boundaries">data.gov.au</a>. Preferred
+          attribution: Administrative Boundaries © Geoscape Australia licensed by the Commonwealth of Australia under
+          the{" "}
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>
+          . Each name was matched to an ABS 2025 code. Southern Limestone Coast Council, and the unincorporated names
+          that are not separate ABS 2025 codes, are not given pages. The Victorian council names stay the Commission’s
+          names. The Commission’s report to Parliament on the 2024 local government elections, on vec.vic.gov.au, says
+          the general elections were held on 26 October 2024 and that the next local government elections are in October
+          2028. That report is the Commission’s own publication. The Commission’s legal page licenses website material
+          under Creative Commons Attribution 4.0, excluding images, video, branding and third-party content. No
+          councillor names were copied from the report.
+        </p>
+        <p>
+          The NSW Electoral Commission page on how a local government election works, read on 26 October 2026, says
+          elections are held on the second Saturday in September every four years. It does not print the next calendar
+          day, and none is calculated. The Office of Local Government copyright notice reserves all rights, so a month
+          stated on its “Become a councillor” page is not copied. The Government of Western Australia local-government
+          elections page prints a next ordinary election day. The wa.gov.au terms of use allow personal and
+          non-commercial reproduction only, so that day is not copied. Local Government Victoria’s copyright notice is
+          also limited to non-commercial use, so it was not used. Victorian legislation on legislation.vic.gov.au is
+          published for personal use only, so no section of the Local Government Act 2020 (Vic) was copied.
+        </p>
+        <p>
           No opinion poll, exit poll, projection, or result call is published. The Victorian state-election window in
           the blackout table is unchanged. Tasmania’s 2026 local government elections close at 2 pm on Tuesday 27
-          October 2026. On 24 October 2026 that time has not arrived. No count, return rate, or candidate list for that
+          October 2026. On 26 October 2026 that time has not arrived. No count, return rate, or candidate list for that
           election is published. The Western Australian extraordinary elections of Thursday 3 December 2026 are not
           given a candidate list or a count. The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A, the
           Commonwealth Electoral Act 1918, the Electoral Act 2002 (Vic), the Privacy Act 1988 (Cth), and the state Acts

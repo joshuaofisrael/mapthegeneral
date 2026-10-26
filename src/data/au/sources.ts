@@ -9,6 +9,7 @@ export type SourceRef = {
 const READ = "2026-10-17";
 const READ_L2 = "2026-10-18";
 const READ_L3 = "2026-10-19";
+const READ_26 = "2026-10-26";
 
 export const SOURCES: SourceRef[] = [
   {
@@ -357,7 +358,7 @@ export const SOURCES: SourceRef[] = [
     id: "tec-lg-2026",
     name: "Tasmanian Electoral Commission, 2026 local government elections",
     url: "https://www.tec.tas.gov.au/local-government/elections-2026/index.html",
-    readOn: READ_L3,
+    readOn: READ_26,
   },
   {
     id: "vec-2026",
@@ -430,6 +431,36 @@ export const SOURCES: SourceRef[] = [
     name: "Government of South Australia, “State Electorates” (2026), determined by the Electoral Districts Boundaries Commission, CC BY 4.0",
     url: "https://data.sa.gov.au/data/dataset/state-electorates",
     readOn: "2026-10-24",
+  },
+  {
+    id: "geoscape-lga-2026",
+    name: "Geoscape Australia, Administrative Boundaries, August 2026 local government area tables, CC BY 4.0",
+    url: "https://data.gov.au/data/dataset/geoscape-administrative-boundaries",
+    readOn: READ_26,
+  },
+  {
+    id: "vec-lg-report-2024",
+    name: "Victorian Electoral Commission, Report to Parliament on the 2024 local government elections",
+    url: "https://www.vec.vic.gov.au/-/media/c342406448234a319299d5ddbced429b.pdf",
+    readOn: READ_26,
+  },
+  {
+    id: "nswec-lg-how",
+    name: "NSW Electoral Commission, “How does a local government election work?”",
+    url: "https://elections.nsw.gov.au/elections/how-voting-works/voting-in-new-south-wales/how-does-a-local-government-election-work",
+    readOn: READ_26,
+  },
+  {
+    id: "olg-councillor",
+    name: "NSW Office of Local Government, “Become a councillor” (copyright notice does not permit reuse; the stated month is not copied)",
+    url: "https://www.olg.nsw.gov.au/public/become-a-councillor",
+    readOn: READ_26,
+  },
+  {
+    id: "wa-dlg-elections",
+    name: "Government of Western Australia, “Local government elections” (personal and non-commercial terms; the printed day is not copied)",
+    url: "https://www.wa.gov.au/organisation/local-government/local-government-elections",
+    readOn: READ_26,
   },
 ];
 

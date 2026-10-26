@@ -56,15 +56,7 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
       lede={`${item.federalDivisions} House of Representatives electorates in the Australian Electoral Commission’s determination of 23 July 2026.`}
       officeHref={item.officeHref}
       officeLabel={item.officeLabel}
-      updated={
-        slug === "queensland" ||
-        slug === "western-australia" ||
-        slug === "south-australia" ||
-        slug === "australian-capital-territory" ||
-        slug === "northern-territory"
-          ? "24 October 2026"
-          : "19 October 2026"
-      }
+      updated={slug === "queensland" ? "24 October 2026" : "26 October 2026"}
       sources={sourcesById(
         [
           ...item.sourceIds,
@@ -218,10 +210,12 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
         </h2>
         <p className="mt-2 text-sm leading-6 text-ink-muted">
           {slug === "victoria"
-            ? "79 names on the Victorian Electoral Commission local-councils page, read on 19 October 2026, plus Unincorporated Vic from the ABS 2025 extract. ABS codes are statistical approximations and do not match official legal boundaries."
+            ? "79 names on the Victorian Electoral Commission local-councils page, read on 19 October 2026, plus Unincorporated Vic from the ABS 2025 extract. The Commission’s report to Parliament says the 2024 general elections were held on 26 October 2024, except Moira Shire Council, and that the next local government elections are in October 2028. It does not print a calendar day for 2028. ABS codes are statistical approximations and do not match official legal boundaries."
             : slug === "queensland"
               ? "78 names in the Queensland Government local government area boundaries dataset, CC BY 4.0, read on 24 October 2026, with the matching ABS 2025 code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are kept. Mayors were not copied. ABS codes are statistical approximations and do not match official legal boundaries."
-              : `${areasIn(slug).length} names in the Australian Bureau of Statistics ASGS2025 Local Government Area extract, read on 19 October 2026, excluding non-spatial special purpose codes. These are statistical names. They do not match official legal boundaries.`}
+              : slug === "australian-capital-territory"
+                ? "One name in the Australian Bureau of Statistics ASGS2025 Local Government Area extract, read on 19 October 2026, excluding non-spatial special purpose codes. The Geoscape August 2026 state tables read on 26 October 2026 do not include an Australian Capital Territory local government area table. The ABS name is a statistical area, not an elected council."
+                : `${areasIn(slug).filter((area) => area.legalPid).length} legal names from the Geoscape Administrative Boundaries August 2026 local government area table, CC BY 4.0, read on 26 October 2026, matched to ABS 2025 codes. ${areasIn(slug).length - areasIn(slug).filter((area) => area.legalPid).length} records on this list keep the ABS name. A Geoscape name with no ABS 2025 code in this extract has no separate page. ABS codes are statistical approximations and do not match official legal boundaries.`}
         </p>
         <p className="mt-2 text-sm">
           <Link className="text-navy underline" href={localIndexPath(slug)}>
