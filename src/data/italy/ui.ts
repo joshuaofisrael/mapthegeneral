@@ -32,7 +32,7 @@ const EN = {
   councilGap:
     "The name of the President of the Council of Ministers was not printed in the government pages read on 17 October 2026. It is not supplied from another source.",
   candidateGap:
-    "Candidate profiles and proclaimed lists are not in this release.",
+    "Candidate profiles and proclaimed lists for the next general election are not in this release. The Chamber by-election page for constituency 01-Chieti copies only the names the Interior Ministry publishes for that vote.",
   subregionalGap:
     "Municipality pages in this chunk are linked from each territorial unit. Municipalities not listed there are not in this chunk.",
   resultsGap:
@@ -71,7 +71,7 @@ const IT = {
   councilGap:
     "Il nome del Presidente del Consiglio dei ministri non è stampato nelle pagine del Governo lette il 17 ottobre 2026. Non è ricavato da un'altra fonte.",
   candidateGap:
-    "Le schede dei candidati e le liste proclamate non sono in questa consegna.",
+    "Le schede dei candidati e le liste proclamate per le prossime elezioni politiche non sono in questa consegna. La pagina dell'elezione suppletiva nel collegio 01-Chieti copia solo i nomi che il Ministero dell'interno pubblica per quel voto.",
   subregionalGap:
     "Le pagine dei comuni di questa consegna sono collegate da ogni unità territoriale. I comuni non elencati lì non sono in questo blocco.",
   resultsGap:

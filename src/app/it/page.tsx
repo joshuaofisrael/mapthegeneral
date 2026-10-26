@@ -37,7 +37,11 @@ export default function ItalyCountryPage() {
             </Link>
           </h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">
-            Camera e Senato eletti il 25 settembre 2022. Nessun giorno di calendario per la prossima elezione politica.
+            Camera e Senato eletti il 25 settembre 2022. Nessun giorno di calendario per la prossima elezione politica.{" "}
+            <Link className="text-navy underline" href="/it/it/elections/camera-chieti-2026/">
+              Elezione suppletiva, collegio 01-Chieti, 15-16 novembre 2026
+            </Link>
+            .
           </p>
         </li>
         <li className="rounded-xl border border-line bg-paper-card p-5">
@@ -47,7 +51,11 @@ export default function ItalyCountryPage() {
             </Link>
           </h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">
-            Chamber and Senate elected on 25 September 2022. No calendar day for the next general election.
+            Chamber and Senate elected on 25 September 2022. No calendar day for the next general election.{" "}
+            <Link className="text-navy underline" href="/it/en/elections/camera-chieti-2026/">
+              Chamber by-election, constituency 01-Chieti, 15–16 November 2026
+            </Link>
+            .
           </p>
         </li>
       </ul>

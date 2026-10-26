@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { ItalyFrame } from "@/app/it/frame";
-import { italyChooser, italyHome, otherLang } from "@/data/italy/paths";
+import { chietiByElectionPath, italyChooser, italyHome, otherLang } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -122,6 +123,13 @@ export default async function FaqPage({ params }: { params: Promise<{ lang: stri
           </div>
         ))}
       </dl>
+      <p className="text-sm">
+        <Link className="text-navy underline" href={chietiByElectionPath(lang)}>
+          {it
+            ? "Elezione suppletiva della Camera, collegio 01-Chieti, 15-16 novembre 2026"
+            : "Chamber by-election, constituency 01-Chieti, 15–16 November 2026"}
+        </Link>
+      </p>
     </ItalyFrame>
   );
 }

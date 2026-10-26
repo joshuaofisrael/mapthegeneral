@@ -7,7 +7,7 @@ import { regionChunkSentence } from "@/data/italy/comuni";
 import { formatNumber } from "@/data/italy/format";
 import { collegiInRegion, unitsInRegion } from "@/data/italy/level2";
 import { regionBySlug, regionNeighbors, REGIONS } from "@/data/italy/places";
-import { collegioPath, collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitPath, unitsIndexPath } from "@/data/italy/paths";
+import { chietiByElectionPath, collegioPath, collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitPath, unitsIndexPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -184,6 +184,14 @@ export default async function RegionPage({ params }: { params: Promise<{ lang: s
         <Link className="text-navy underline" href={`${italyHome(lang)}elections/prossime-politiche/`}>
           {copy.nextElection}
         </Link>
+        {region.slug === "abruzzo" ? (
+          <>
+            {" · "}
+            <Link className="text-navy underline" href={chietiByElectionPath(lang)}>
+              {it ? "Suppletiva Camera, 01-Chieti, 15-16 novembre 2026" : "Chamber by-election, 01-Chieti, 15–16 November 2026"}
+            </Link>
+          </>
+        ) : null}
         {" · "}
         <Link className="text-navy underline" href={`${italyHome(lang)}results/`}>
           {copy.results}

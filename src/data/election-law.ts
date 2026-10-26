@@ -38,6 +38,11 @@ export type ElectionWindow = {
   trackerOpensAt: string;
   /** Official results service the tracker may read, and nothing else. */
   officialResults: Citation;
+  /**
+   * Calling instruments read for this window. Set once the date, place and
+   * office are confirmed from those pages. A window without it is not confirmed.
+   */
+  verified?: { readOn: string; sources: Citation[] };
   rules: LawRule[];
 };
 
@@ -94,6 +99,24 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     pollingDay: "2026-11-15",
     trackerOpensAt: "2026-11-16T15:00:00+01:00",
     officialResults: { label: "Ministero dell’Interno, Eligendo", url: "https://elezioni.interno.gov.it/" },
+    verified: {
+      readOn: "2026-10-26",
+      sources: [
+        {
+          label: "Decreto del Presidente della Repubblica 25 settembre 2026, Gazzetta Ufficiale Serie Generale n. 224 del 26 settembre 2026 (26A05139)",
+          url: "https://www.gazzettaufficiale.it/eli/id/2026/09/26/26A05139/sg",
+        },
+        {
+          label: "Ministero dell’Interno, Dipartimento per gli affari interni e territoriali, Speciale elezioni",
+          url: "https://dait.interno.gov.it/elezioni/speciale-elezioni",
+        },
+        {
+          label: "Prefettura di Chieti, elezione suppletiva della Camera dei deputati, 15-16 novembre 2026",
+          url: "https://prefettura.interno.gov.it/it/prefetture/chieti/comunicazioni/elezione-suppletiva-camera-deputati-15-16-novembre-2026",
+        },
+        { label: "Ministero dell’Interno, Eligendo", url: "https://elezioni.interno.gov.it/" },
+      ],
+    },
     rules: [
       {
         kind: "poll-ban",

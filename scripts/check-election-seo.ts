@@ -87,9 +87,11 @@ if (!existsSync(indexPath)) {
   }
   if (dates.size < 2) lastmodFindings.push(`expected real per-page lastmod values, found ${[...dates].join(", ") || "none"}`);
 
-  for (const [file, loc] of [
-    ["ca-en.xml", "https://mapthegeneral.com/ca/en/elections/bc-2026/"],
-    ["ca-fr.xml", "https://mapthegeneral.com/ca/fr/elections/bc-2026/"],
+  for (const [file, loc, fresh] of [
+    ["ca-en.xml", "https://mapthegeneral.com/ca/en/elections/bc-2026/", "2026-10-25"],
+    ["ca-fr.xml", "https://mapthegeneral.com/ca/fr/elections/bc-2026/", "2026-10-25"],
+    ["it-en.xml", "https://mapthegeneral.com/it/en/elections/camera-chieti-2026/", "2026-10-26"],
+    ["it-it.xml", "https://mapthegeneral.com/it/it/elections/camera-chieti-2026/", "2026-10-26"],
   ] as const) {
     const xmlPath = join(bucketDir, file);
     if (!existsSync(xmlPath)) {
@@ -102,7 +104,7 @@ if (!existsSync(indexPath)) {
       errors.push(`${file} is missing ${loc}`);
       continue;
     }
-    if (row[1] < "2026-10-25") lastmodFindings.push(`${loc} lastmod ${row[1]} is still stale`);
+    if (row[1] < fresh) lastmodFindings.push(`${loc} lastmod ${row[1]} is still stale`);
   }
 }
 

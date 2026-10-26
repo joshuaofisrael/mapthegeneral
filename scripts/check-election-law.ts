@@ -80,6 +80,31 @@ for (const rule of STANDING_RULES) {
   if (!rule.citation.url.startsWith("https://")) errors.push(`${rule.country}: standing-rule citation must be https`);
 }
 
+const ISO_DAY = /^\d{4}-\d\d-\d\d$/;
+const CHIETI_SOURCES = [
+  "https://www.gazzettaufficiale.it/eli/id/2026/09/26/26A05139/sg",
+  "https://dait.interno.gov.it/elezioni/speciale-elezioni",
+  "https://prefettura.interno.gov.it/it/prefetture/chieti/comunicazioni/elezione-suppletiva-camera-deputati-15-16-novembre-2026",
+  "https://elezioni.interno.gov.it/",
+];
+
+for (const item of ELECTION_WINDOWS) {
+  if (!item.verified) continue;
+  if (!ISO_DAY.test(item.verified.readOn)) errors.push(`${item.id}: verified.readOn is not a date`);
+  if (item.verified.sources.length === 0) errors.push(`${item.id}: verified sources are empty`);
+  for (const source of item.verified.sources) {
+    if (!source.label.trim()) errors.push(`${item.id}: verified source needs a label`);
+    if (!source.url.startsWith("https://")) errors.push(`${item.id}: verified source must be https`);
+  }
+}
+
+const chieti = ELECTION_WINDOWS.find((item) => item.id === "it-2026-chieti");
+const chietiUrls = new Set((chieti?.verified?.sources ?? []).map((source) => source.url.replace(/\/+$/, "")));
+if (!chieti?.verified) errors.push("it-2026-chieti: registry entry is not marked verified");
+for (const url of CHIETI_SOURCES) {
+  if (!chietiUrls.has(url.replace(/\/+$/, ""))) errors.push(`it-2026-chieti: verified sources missing ${url}`);
+}
+
 const covered = new Set<string>([...ELECTION_WINDOWS.map((item) => item.country), ...standingCountries]);
 for (const card of registryCountries()) {
   if (!covered.has(card.code)) {

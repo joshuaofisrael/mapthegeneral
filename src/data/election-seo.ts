@@ -20,7 +20,7 @@ export type FaqItem = SourcedText & { question: string };
 export type KeyDate = SourcedText & { label: string };
 
 export type ElectionSeoPage = {
-  lang: "en" | "pl" | "fr";
+  lang: "en" | "pl" | "fr" | "it";
   htmlLang: string;
   path: string;
   title: string;
@@ -106,6 +106,17 @@ const EBC_RESULTS_NAMED = "https://results.elections.bc.ca";
 const EBC_ARCHIVE = "https://elections.bc.ca/resources/results/provincial-election-results/";
 const PKW_CALENDAR = "https://wybory.gov.pl/senat20261122/pl/kalendarz";
 const PKW_NOTICES = "https://wybory.gov.pl/senat20261122/pl/pkw_obwieszczenia";
+const GU_CHIETI = "https://www.gazzettaufficiale.it/eli/id/2026/09/26/26A05139/sg";
+const DL_196 = "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2025-12-27;196";
+const DAIT_SPECIALE = "https://dait.interno.gov.it/elezioni/speciale-elezioni";
+const PREF_CHIETI = "https://prefettura.interno.gov.it/it/prefetture/chieti/comunicazioni/elezione-suppletiva-camera-deputati-15-16-novembre-2026";
+const PREF_CHIETI_DOCS = "https://prefettura.interno.gov.it/it/prefetture/chieti/elezione-suppletiva-camera-deputati-15-16-novembre-2026";
+const PUBB_3 = "https://prefettura.interno.gov.it/sites/default/files/82/2026-09/pubb-03-suppletive-ed.agosto-2026.pdf";
+const DAIT_CANDIDATES = "https://dait.interno.gov.it/elezioni/trasparenza/suppletive-20261116-15";
+const CAMERA_VARIAZIONI = "https://www.camera.it/deputati/variazioni-composizione";
+const ELIGENDO = "https://elezioni.interno.gov.it/";
+const L_28 = "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-02-22;28";
+const DLGS_177 = "https://www.gazzettaufficiale.it/eli/id/2020/12/29/20G00198/sg";
 
 const VICTORIA_BODY = `<h2>What is elected</h2>
 <p>The Victorian Electoral Commission’s state-elections page, read on 24 October 2026, says state elections are held on the last Saturday in November every 4 years, and that the Electoral Act 2002 (Vic) sets that date. It says the next state election is Saturday 28 November 2026. It says the Legislative Assembly has 88 members, one for each district, and the Legislative Council has 40 members, five for each region.</p>
@@ -206,6 +217,44 @@ const BC_FR_BODY = `<h2>Ce qui était en élection</h2>
 <p>Le <a href="${EBC_NEWS}">communiqué sur le jour du scrutin final</a> dit que les bureaux de vote sont ouverts de 8 h à 20 h, heure du Pacifique, le 24 octobre. La page de l'élection provinciale de 2026 dit que le vote par anticipation a lieu du 16 au 21 octobre 2026. Le <a href="${EBC_GUIDE}">Guide to Voting and Counting</a> dit qu'il n'y a pas de vote en ligne en Colombie-Britannique.</p>
 <h2>Résultat</h2>
 <p>Cette page ne montre aucun décompte et ne nomme personne en tête. Le communiqué dit qu'après la fermeture du scrutin à 20 h, heure du Pacifique, les résultats préliminaires sont publiés sur <a href="${EBC_RESULTS_NAMED}">results.elections.bc.ca</a>. Le 25 octobre 2026, cette adresse n'a pas chargé une page de résultats, et la <a href="${EBC_RESULTS}">page de rapport du soir du scrutin</a> s'est chargée. Cette page est le service d'Elections BC pour la 2026 Provincial General Election. Les résultats officiels suivent le décompte final. La page de l'élection provinciale de 2026 dit que le décompte final est prévu du 6 au 10 novembre 2026 et que le Return Day est le 18 novembre 2026. Les relevés des votes des élections antérieures sont dans l'<a href="${EBC_ARCHIVE}">archive des résultats des élections provinciales</a>.</p>`;
+
+const CHIETI_EN_BODY = `<h2>When people vote in Chieti</h2>
+<p>The <a href="${GU_CHIETI}">decree of the President of the Republic of 25 September 2026</a> (Gazzetta Ufficiale, general series, no. 224 of 26 September 2026, 26A05139) calls a by-election for the Chamber of Deputies in single-member constituency 01-Chieti of the XVII Abruzzo constituency. The polling days are Sunday 15 November and Monday 16 November 2026. It is signed Mattarella, on the proposal of Meloni, President of the Council of Ministers, and Piantedosi, Minister of the Interior. The <a href="${DAIT_SPECIALE}">Department’s special-elections page</a>, read on 26 October 2026, prints the same days and the same constituency. That page also describes other votes on those days. They are not this by-election, and this page does not describe them.</p>
+<p><a href="${DL_196}">Article 1(1) of decree-law no. 196 of 27 December 2025</a>, converted with amendments by law no. 18 of 13 February 2026, says that voting in 2026 runs on Sunday from 7:00 to 23:00 and on Monday from 7:00 to 15:00. The calling decree cites that article. In November those hours are Central European Time. The <a href="${PREF_CHIETI}">Prefecture of Chieti</a> repeats the two days and points to its circulars and publications.</p>
+<h2>The constituency</h2>
+<p>One seat is filled, by majority, in uninominal constituency 01-Chieti. The constituency page drawn from the tables of <a href="${DLGS_177}">legislative decree no. 177 of 23 December 2020</a> prints 104 detail rows and 104 distinct ISTAT codes for Abruzzo - U01. The municipality of greatest demographic size in that table is Chieti. The municipality list is not copied again here.</p>
+<p class="tools"><a href="/it/en/collegi/camera/abruzzo-u01/">Constituency Abruzzo - U01</a> · <a href="/it/en/abruzzo/">Abruzzo</a> · <a href="/it/en/elections/">Elections in Italy</a></p>
+<h2>Why the seat is vacant</h2>
+<p>The decree says the Giunta delle elezioni communicated the vacancy on 15 September 2026, and that the President of the Chamber notified it on 16 September 2026. The decree does not print a name. The <a href="${CAMERA_VARIAZIONI}">Chamber’s page on changes in membership</a>, read on 26 October 2026, says that on 15 September 2026 the mandate of deputy Alberto Bagnai ended. It says he resigned in order to take the post of member of the Competition and Market Authority, that the Chamber took note because the two offices are incompatible, and that he had been returned for Abruzzo, uninominal constituency 1. This page does not name a mayor, a provincial president, or any other local office-holder.</p>
+<h2>Candidates</h2>
+<p>The <a href="${DAIT_CANDIDATES}">Interior Ministry transparency page</a>, read on 26 October 2026, is headed as the candidates presented in uninominal constituency 01-Chieti for this by-election. It lists four people. It does not print a ballot number. The order below is the order of rows on that page. Place and date of birth, and the curriculum and criminal-record links, stay on that page and are not copied here. The Prefecture page read the same day does not itself print this list. This page does not rank anyone.</p>
+<ul>
+<li>Massimo Pasqualone — DIMENSIONE BANDECCHI</li>
+<li>Luciano D'Amico — PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE</li>
+<li>Mario Colantonio — FRATELLI D'ITALIA - LEGA - NOI MODERATI-PPE - UNIONE DI CENTRO - FORZA ITALIA-PPE</li>
+<li>Danilo Ranieri — ITALIA DOMANI MARCO RIZZO</li>
+</ul>
+<h2>Result</h2>
+<p>This page shows no count and names no one elected. The Department’s special-elections page says turnout and results are followed on <a href="${ELIGENDO}">Eligendo</a>. No count is shown here before 15:00 on 16 November 2026. <a href="${L_28}">Law no. 28 of 22 February 2000, article 8</a>, forbids publishing opinion-poll results in the fifteen days before the vote. This site prints no polls for this election.</p>`;
+
+const CHIETI_IT_BODY = `<h2>Quando si vota a Chieti</h2>
+<p>Il <a href="${GU_CHIETI}">decreto del Presidente della Repubblica del 25 settembre 2026</a> (Gazzetta Ufficiale, serie generale, n. 224 del 26 settembre 2026, 26A05139) indice l'elezione suppletiva della Camera dei deputati nel collegio uninominale 01-Chieti della XVII circoscrizione Abruzzo. I giorni sono domenica 15 novembre e lunedì 16 novembre 2026. È firmato Mattarella, su proposta di Meloni, Presidente del Consiglio dei ministri, e di Piantedosi, Ministro dell'interno. La <a href="${DAIT_SPECIALE}">pagina Speciale elezioni del Dipartimento</a>, letta il 26 ottobre 2026, stampa gli stessi giorni e lo stesso collegio. Quella pagina descrive anche altre votazioni in quei giorni. Non sono questa elezione suppletiva, e questa pagina non le descrive.</p>
+<p>L'<a href="${DL_196}">articolo 1, comma 1, del decreto-legge 27 dicembre 2025, n. 196</a>, convertito con modificazioni dalla legge 13 febbraio 2026, n. 18, dice che nel 2026 si vota la domenica dalle ore 7 alle ore 23 e il lunedì dalle ore 7 alle ore 15. Il decreto di convocazione cita quell'articolo. A novembre quegli orari sono l'ora dell'Europa centrale. La <a href="${PREF_CHIETI}">Prefettura di Chieti</a> ripete i due giorni e rinvia alle circolari e alle pubblicazioni.</p>
+<h2>Il collegio</h2>
+<p>Si assegna un seggio, con il sistema maggioritario, nel collegio uninominale 01-Chieti. La pagina del collegio ricavata dalle tabelle del <a href="${DLGS_177}">decreto legislativo 23 dicembre 2020, n. 177</a> stampa 104 righe di dettaglio e 104 codici ISTAT distinti per Abruzzo - U01. Il comune o l'area di maggiore ampiezza in quella tabella è Chieti. L'elenco dei comuni non è ricopiato qui.</p>
+<p class="tools"><a href="/it/it/collegi/camera/abruzzo-u01/">Collegio Abruzzo - U01</a> · <a href="/it/it/abruzzo/">Abruzzo</a> · <a href="/it/it/elections/">Elezioni in Italia</a></p>
+<h2>Perché il seggio è vacante</h2>
+<p>Il decreto dice che la Giunta delle elezioni ha comunicato la vacanza il 15 settembre 2026 e che il Presidente della Camera l'ha segnalata il 16 settembre 2026. Il decreto non stampa un nome. La <a href="${CAMERA_VARIAZIONI}">pagina della Camera sulle variazioni nella composizione</a>, letta il 26 ottobre 2026, dice che il 15 settembre 2026 è cessato dal mandato il deputato Alberto Bagnai. Dice che si è dimesso per la carica di componente dell'Autorità garante della concorrenza e del mercato, che la Camera ha preso atto delle dimissioni per incompatibilità, e che era stato eletto nella circoscrizione Abruzzo, collegio uninominale 1. Questa pagina non nomina un sindaco, un presidente di provincia o un altro amministratore locale.</p>
+<h2>Candidati</h2>
+<p>La <a href="${DAIT_CANDIDATES}">pagina di trasparenza del Ministero dell'interno</a>, letta il 26 ottobre 2026, presenta i candidati del collegio uninominale 01-Chieti per questa elezione suppletiva. Elenca quattro persone. Non stampa un numero sulla scheda. L'ordine sotto è l'ordine delle righe di quella pagina. Luogo e data di nascita, e i collegamenti al curriculum e al certificato penale, restano su quella pagina e non sono copiati qui. La pagina della Prefettura letta lo stesso giorno non stampa questo elenco. Questa pagina non mette nessuno in ordine di preferenza.</p>
+<ul>
+<li>Massimo Pasqualone — DIMENSIONE BANDECCHI</li>
+<li>Luciano D'Amico — PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE</li>
+<li>Mario Colantonio — FRATELLI D'ITALIA - LEGA - NOI MODERATI-PPE - UNIONE DI CENTRO - FORZA ITALIA-PPE</li>
+<li>Danilo Ranieri — ITALIA DOMANI MARCO RIZZO</li>
+</ul>
+<h2>Risultato</h2>
+<p>Questa pagina non mostra un conteggio e non indica un eletto. La pagina Speciale elezioni del Dipartimento dice che affluenza e risultati si seguono su <a href="${ELIGENDO}">Eligendo</a>. Nessun conteggio compare qui prima delle ore 15 del 16 novembre 2026. L'<a href="${L_28}">articolo 8 della legge 22 febbraio 2000, n. 28</a>, vieta di rendere pubblici i risultati dei sondaggi nei quindici giorni precedenti il voto. Questo sito non pubblica sondaggi su questa elezione.</p>`;
 
 export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
@@ -1038,6 +1087,308 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
             readOn: "2026-10-25",
           },
           { href: EBC_ARCHIVE, label: "Elections BC, archive des résultats provinciaux", readOn: "2026-10-25" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "it-2026-chieti",
+    pollingDay: "2026-11-15",
+    startDate: "2026-11-15T07:00:00+01:00",
+    endDate: "2026-11-16T15:00:00+01:00",
+    organizerName: "Ministero dell'Interno",
+    organizerUrl: "https://www.interno.gov.it/",
+    imagePath: "/images/og/it.webp",
+    lastmod: "2026-10-26",
+    homeLinks: [
+      {
+        href: "/it/en/elections/camera-chieti-2026/",
+        label: "Chamber by-election, 01-Chieti, 15–16 November 2026",
+        detail:
+          "Sunday 15 November 2026, 7:00–23:00, and Monday 16 November 2026, 7:00–15:00, Central European Time. Called by the decree in Gazzetta Ufficiale no. 224 of 26 September 2026. This site prints no polls and no count.",
+      },
+      {
+        href: "/it/it/elections/camera-chieti-2026/",
+        label: "Elezione suppletiva Camera, 01-Chieti, 15-16 novembre 2026",
+        detail:
+          "Domenica 15 novembre 2026, ore 7-23, e lunedì 16 novembre 2026, ore 7-15, ora dell'Europa centrale. Convocata dal decreto nella Gazzetta Ufficiale n. 224 del 26 settembre 2026. Questo sito non pubblica sondaggi né un conteggio.",
+      },
+    ],
+    pages: [
+      {
+        lang: "en",
+        htmlLang: "en",
+        path: "/it/en/elections/camera-chieti-2026/",
+        title: "Chamber by-election, 01-Chieti, Abruzzo, 15–16 November 2026",
+        description:
+          "Chamber of Deputies by-election in single-member constituency 01-Chieti, Abruzzo, Sunday 15 and Monday 16 November 2026. Polling hours, electoral card, and the candidates the Interior Ministry has published. Unofficial information.",
+        ogDescription:
+          "Chamber by-election in constituency 01-Chieti, Abruzzo, on 15–16 November 2026. Sunday 7:00–23:00 and Monday 7:00–15:00. Unofficial information.",
+        ogLocale: "en_US",
+        alternates: [
+          { hreflang: "it", path: "/it/it/elections/camera-chieti-2026/" },
+          { hreflang: "en", path: "/it/en/elections/camera-chieti-2026/" },
+          { hreflang: "x-default", path: "/it/en/elections/camera-chieti-2026/" },
+        ],
+        crumbs: [
+          { name: "Home", path: "/" },
+          { name: "Italy", path: "/it/" },
+          { name: "Italy", path: "/it/en/" },
+          { name: "Elections", path: "/it/en/elections/" },
+          { name: "01-Chieti, 15–16 November 2026", path: "/it/en/elections/camera-chieti-2026/" },
+        ],
+        eyebrow: "15–16 November 2026",
+        h1: "Chamber by-election in constituency 01-Chieti",
+        lede: "One seat in the Chamber of Deputies, XVII Abruzzo constituency. Voting on Sunday 15 November 2026 from 7:00 to 23:00 and on Monday 16 November 2026 from 7:00 to 15:00, Central European Time.",
+        updated: "Last updated: 26 October 2026.",
+        reportLabel: "Report an error",
+        officeHref: DAIT_SPECIALE,
+        bannerBefore: "Unofficial information. Confirm with your ",
+        bannerAfter: "official election office",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/it/en/", label: "Italy" },
+          { href: "/search/", label: "Search" },
+          { href: "/it/it/elections/camera-chieti-2026/", label: "Italiano" },
+        ],
+        eventName: "Chamber of Deputies by-election, constituency 01-Chieti, 15–16 November 2026",
+        locationName: "Single-member constituency 01-Chieti, XVII constituency Abruzzo",
+        addressRegion: "Abruzzo",
+        addressCountry: "IT",
+        keyDatesHeading: "How to vote, key dates and official sources",
+        keyDatesIntro:
+          "The days come from the calling decree. The hours come from the 2026 voting-hours decree-law. Who may vote, and what to bring, come from the Interior Ministry polling manual that the Prefecture of Chieti attaches to this election. This page carries no campaign material.",
+        keyDates: [
+          {
+            label: "Days of the vote",
+            text: "The decree of the President of the Republic of 25 September 2026, published in the Gazzetta Ufficiale, general series, no. 224 of 26 September 2026, calls the election for Sunday 15 November and Monday 16 November 2026.",
+            links: [{ label: "decree of the President of the Republic of 25 September 2026", href: GU_CHIETI }],
+          },
+          {
+            label: "Polling hours",
+            text: "Article 1(1) of decree-law no. 196 of 27 December 2025, converted by law no. 18 of 13 February 2026, says that in 2026 voting runs on Sunday from 7:00 to 23:00 and on Monday from 7:00 to 15:00.",
+            links: [{ label: "Article 1(1) of decree-law no. 196 of 27 December 2025", href: DL_196 }],
+          },
+          {
+            label: "Who can vote",
+            text: "The Interior Ministry publication no. 3, August 2026 edition, attached by the Prefecture of Chieti, reprints article 1 of the consolidated text on the active electorate: electors are Italian citizens who have reached the age of eighteen and who are not in any of the conditions in articles 2 and 3. Those two articles are not copied here.",
+            links: [{ label: "Interior Ministry publication no. 3, August 2026 edition", href: PUBB_3 }],
+          },
+          {
+            label: "Identity document and electoral card",
+            text: "The polling manual says that, in order to vote, an elector shows an identity document and the tessera elettorale showing enrolment in the polling section, or a mayor’s certificate that stands in for the card for that consultation.",
+            links: [{ label: "polling manual", href: PUBB_3 }],
+          },
+          {
+            label: "Official results",
+            text: "The Department’s special-elections page says turnout and results for this by-election are followed on Eligendo. This page shows no count before 15:00 on 16 November 2026.",
+            links: [
+              { label: "Department’s special-elections page", href: DAIT_SPECIALE },
+              { label: "Eligendo", href: ELIGENDO },
+            ],
+          },
+        ],
+        faqHeading: "Frequently asked questions",
+        faqs: [
+          {
+            question: "When do people vote in Chieti?",
+            text: "The decree of 25 September 2026 calls the by-election for Sunday 15 November and Monday 16 November 2026 in constituency 01-Chieti. Article 1(1) of decree-law no. 196 of 27 December 2025 sets the hours: Sunday from 7:00 to 23:00 and Monday from 7:00 to 15:00.",
+            links: [
+              { label: "decree of 25 September 2026", href: GU_CHIETI },
+              { label: "Article 1(1) of decree-law no. 196 of 27 December 2025", href: DL_196 },
+            ],
+          },
+          {
+            question: "What are the polling hours on 15 and 16 November?",
+            text: "Decree-law no. 196 of 27 December 2025, article 1(1), says that in 2026 polling stations are open on Sunday from 7:00 to 23:00 and on Monday from 7:00 to 15:00. The calling decree fixes those two days for constituency 01-Chieti.",
+            links: [
+              { label: "Decree-law no. 196 of 27 December 2025, article 1(1)", href: DL_196 },
+              { label: "calling decree", href: GU_CHIETI },
+            ],
+          },
+          {
+            question: "Who can vote in the Chieti by-election?",
+            text: "The August 2026 polling manual reprints the rule that electors are Italian citizens who have reached the age of eighteen, apart from the conditions in articles 2 and 3, which are not copied here. At the station it says an elector shows an identity document and the tessera elettorale, or a mayor’s certificate in place of the card.",
+            links: [{ label: "August 2026 polling manual", href: PUBB_3 }],
+          },
+          {
+            question: "Which candidates are published for the 2026 Chieti by-election?",
+            text: "The Interior Ministry transparency page, read on 26 October 2026, lists four people presented in constituency 01-Chieti. It does not print a ballot number. Birth details on that page are not copied here.",
+            links: [{ label: "Interior Ministry transparency page", href: DAIT_CANDIDATES }],
+          },
+          {
+            question: "Where are the Chieti by-election results published?",
+            text: "This page shows no count and names no one elected. The Department’s special-elections page says the count is published on Eligendo. No count is shown here before 15:00 on 16 November 2026.",
+            links: [
+              { label: "Department’s special-elections page", href: DAIT_SPECIALE },
+              { label: "Eligendo", href: ELIGENDO },
+            ],
+          },
+        ],
+        relatedHeading: "Related pages",
+        related: [
+          { href: "/", label: "Home" },
+          { href: "/it/", label: "Italy" },
+          { href: "/it/en/", label: "Italy, English" },
+          { href: "/it/en/elections/", label: "Elections in Italy" },
+          { href: "/it/en/abruzzo/", label: "Abruzzo" },
+          { href: "/it/en/collegi/camera/abruzzo-u01/", label: "Constituency 01-Chieti" },
+          { href: "/it/en/elections/prossime-politiche/", label: "Next general election" },
+          { href: "/it/en/results/", label: "Results" },
+          { href: "/it/it/elections/camera-chieti-2026/", label: "Italiano" },
+        ],
+        bodyHtml: CHIETI_EN_BODY,
+        sourcesHeading: "Sources",
+        sources: [
+          { href: GU_CHIETI, label: "Gazzetta Ufficiale, decree of 25 September 2026 (26A05139)", readOn: "2026-10-26" },
+          { href: DL_196, label: "Normattiva, decree-law no. 196 of 27 December 2025, article 1", readOn: "2026-10-26" },
+          { href: DAIT_SPECIALE, label: "DAIT, Speciale elezioni", readOn: "2026-10-26" },
+          { href: PREF_CHIETI, label: "Prefecture of Chieti, by-election notice", readOn: "2026-10-26" },
+          { href: PREF_CHIETI_DOCS, label: "Prefecture of Chieti, circulars and publications", readOn: "2026-10-26" },
+          { href: PUBB_3, label: "Interior Ministry, publication no. 3, August 2026, polling-station instructions", readOn: "2026-10-26" },
+          { href: DAIT_CANDIDATES, label: "DAIT, transparency, candidates presented for 15–16 November 2026", readOn: "2026-10-26" },
+          { href: CAMERA_VARIAZIONI, label: "Chamber of Deputies, changes in membership", readOn: "2026-10-26" },
+          { href: ELIGENDO, label: "Interior Ministry, Eligendo", readOn: "2026-10-26" },
+          { href: DLGS_177, label: "Legislative decree no. 177 of 23 December 2020", readOn: "2026-10-18" },
+          { href: L_28, label: "Law no. 28 of 22 February 2000", readOn: "2026-10-18" },
+        ],
+      },
+      {
+        lang: "it",
+        htmlLang: "it",
+        path: "/it/it/elections/camera-chieti-2026/",
+        title: "Elezione suppletiva Camera, 01-Chieti, Abruzzo, 15-16 novembre 2026",
+        description:
+          "Elezione suppletiva della Camera dei deputati nel collegio uninominale 01-Chieti, Abruzzo, domenica 15 e lunedì 16 novembre 2026. Orari dei seggi, tessera elettorale e candidati pubblicati dal Ministero dell'interno. Informazione non ufficiale.",
+        ogDescription:
+          "Elezione suppletiva nel collegio 01-Chieti, Abruzzo, il 15-16 novembre 2026. Domenica ore 7-23 e lunedì ore 7-15. Informazione non ufficiale.",
+        ogLocale: "it_IT",
+        alternates: [
+          { hreflang: "it", path: "/it/it/elections/camera-chieti-2026/" },
+          { hreflang: "en", path: "/it/en/elections/camera-chieti-2026/" },
+          { hreflang: "x-default", path: "/it/en/elections/camera-chieti-2026/" },
+        ],
+        crumbs: [
+          { name: "Inizio", path: "/" },
+          { name: "Italia", path: "/it/" },
+          { name: "Italia", path: "/it/it/" },
+          { name: "Elezioni", path: "/it/it/elections/" },
+          { name: "01-Chieti, 15-16 novembre 2026", path: "/it/it/elections/camera-chieti-2026/" },
+        ],
+        eyebrow: "15-16 novembre 2026",
+        h1: "Elezione suppletiva nel collegio 01-Chieti",
+        lede: "Un seggio alla Camera dei deputati, XVII circoscrizione Abruzzo. Si vota domenica 15 novembre 2026 dalle ore 7 alle ore 23 e lunedì 16 novembre 2026 dalle ore 7 alle ore 15, ora dell'Europa centrale.",
+        updated: "Ultimo aggiornamento: 26 ottobre 2026.",
+        reportLabel: "Segnala un errore",
+        officeHref: DAIT_SPECIALE,
+        bannerBefore: "Informazione non ufficiale. Confermare presso l'",
+        bannerAfter: "ufficio elettorale ufficiale",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/it/it/", label: "Italia" },
+          { href: "/search/", label: "Ricerca" },
+          { href: "/it/en/elections/camera-chieti-2026/", label: "English" },
+        ],
+        eventName: "Elezione suppletiva della Camera dei deputati, collegio 01-Chieti, 15-16 novembre 2026",
+        locationName: "Collegio uninominale 01-Chieti, XVII circoscrizione Abruzzo",
+        addressRegion: "Abruzzo",
+        addressCountry: "IT",
+        keyDatesHeading: "Come si vota, date e fonti ufficiali",
+        keyDatesIntro:
+          "I giorni vengono dal decreto di convocazione. Gli orari vengono dal decreto-legge sugli orari di voto del 2026. Chi può votare, e che cosa portare, viene dal manuale del Ministero dell'interno che la Prefettura di Chieti allega a questa elezione. Questa pagina non è materiale di propaganda.",
+        keyDates: [
+          {
+            label: "Giorni della votazione",
+            text: "Il decreto del Presidente della Repubblica del 25 settembre 2026, pubblicato nella Gazzetta Ufficiale, serie generale, n. 224 del 26 settembre 2026, convoca i comizi per domenica 15 novembre e lunedì 16 novembre 2026.",
+            links: [{ label: "decreto del Presidente della Repubblica del 25 settembre 2026", href: GU_CHIETI }],
+          },
+          {
+            label: "Orari dei seggi",
+            text: "L'articolo 1, comma 1, del decreto-legge 27 dicembre 2025, n. 196, convertito dalla legge 13 febbraio 2026, n. 18, dispone che nel 2026 si vota la domenica dalle ore 7 alle ore 23 e il lunedì dalle ore 7 alle ore 15.",
+            links: [{ label: "articolo 1, comma 1, del decreto-legge 27 dicembre 2025, n. 196", href: DL_196 }],
+          },
+          {
+            label: "Chi può votare",
+            text: "La pubblicazione n. 3 del Ministero dell'interno, edizione di agosto 2026, allegata dalla Prefettura di Chieti, riproduce l'articolo 1 del testo unico sull'elettorato attivo: sono elettori i cittadini italiani che hanno compiuto diciotto anni e che non si trovano nelle condizioni degli articoli 2 e 3. Quei due articoli non sono ricopiati qui.",
+            links: [{ label: "pubblicazione n. 3 del Ministero dell'interno, edizione di agosto 2026", href: PUBB_3 }],
+          },
+          {
+            label: "Documento e tessera elettorale",
+            text: "Il manuale di sezione dice che per votare si esibiscono un documento di riconoscimento e la tessera elettorale da cui risulta l'iscrizione alla sezione, oppure un attestato del sindaco che sostituisce la tessera per quella consultazione.",
+            links: [{ label: "manuale di sezione", href: PUBB_3 }],
+          },
+          {
+            label: "Risultati su Eligendo",
+            text: "La pagina Speciale elezioni del Dipartimento dice che affluenza e risultati si seguono su Eligendo. Questa pagina non mostra un conteggio prima delle ore 15 del 16 novembre 2026.",
+            links: [
+              { label: "pagina Speciale elezioni del Dipartimento", href: DAIT_SPECIALE },
+              { label: "Eligendo", href: ELIGENDO },
+            ],
+          },
+        ],
+        faqHeading: "Domande frequenti",
+        faqs: [
+          {
+            question: "Quando si vota a Chieti?",
+            text: "Il decreto del 25 settembre 2026 convoca l'elezione suppletiva per domenica 15 novembre e lunedì 16 novembre 2026, nel collegio uninominale 01-Chieti. L'articolo 1, comma 1, del decreto-legge n. 196 del 2025 fissa gli orari: domenica dalle ore 7 alle ore 23 e lunedì dalle ore 7 alle ore 15.",
+            links: [
+              { label: "decreto del 25 settembre 2026", href: GU_CHIETI },
+              { label: "articolo 1, comma 1, del decreto-legge n. 196 del 2025", href: DL_196 },
+            ],
+          },
+          {
+            question: "Quali sono gli orari dei seggi il 15 e il 16 novembre?",
+            text: "Il decreto-legge 27 dicembre 2025, n. 196, all'articolo 1, comma 1, dice che nel 2026 i seggi sono aperti la domenica dalle ore 7 alle ore 23 e il lunedì dalle ore 7 alle ore 15. Il decreto di convocazione fissa quei due giorni per il collegio 01-Chieti.",
+            links: [
+              { label: "decreto-legge 27 dicembre 2025, n. 196, all'articolo 1, comma 1", href: DL_196 },
+              { label: "decreto di convocazione", href: GU_CHIETI },
+            ],
+          },
+          {
+            question: "Chi può votare all'elezione suppletiva di Chieti?",
+            text: "La pubblicazione n. 3 di agosto 2026 riproduce la regola per cui sono elettori i cittadini italiani che hanno compiuto diciotto anni, salvo le condizioni degli articoli 2 e 3, che qui non sono ricopiate. Al seggio la stessa pubblicazione chiede un documento di riconoscimento e la tessera elettorale, oppure un attestato del sindaco al posto della tessera.",
+            links: [{ label: "pubblicazione n. 3 di agosto 2026", href: PUBB_3 }],
+          },
+          {
+            question: "Quali candidati sono pubblicati per le elezioni suppletive di Chieti del 2026?",
+            text: "La pagina di trasparenza del Ministero dell'interno, letta il 26 ottobre 2026, elenca quattro persone presentate nel collegio 01-Chieti. Non stampa un numero di scheda. Il luogo e la data di nascita restano su quella pagina e non sono copiati qui.",
+            links: [{ label: "pagina di trasparenza del Ministero dell'interno", href: DAIT_CANDIDATES }],
+          },
+          {
+            question: "Dove si pubblicano i risultati?",
+            text: "Questa pagina non mostra un conteggio e non indica un eletto. La pagina Speciale elezioni dice che il conteggio è su Eligendo. Nessun conteggio compare qui prima delle ore 15 del 16 novembre 2026.",
+            links: [
+              { label: "pagina Speciale elezioni", href: DAIT_SPECIALE },
+              { label: "Eligendo", href: ELIGENDO },
+            ],
+          },
+        ],
+        relatedHeading: "Pagine collegate",
+        related: [
+          { href: "/", label: "Inizio" },
+          { href: "/it/", label: "Italia" },
+          { href: "/it/it/", label: "Italia, italiano" },
+          { href: "/it/it/elections/", label: "Elezioni in Italia" },
+          { href: "/it/it/abruzzo/", label: "Abruzzo" },
+          { href: "/it/it/collegi/camera/abruzzo-u01/", label: "Collegio 01-Chieti" },
+          { href: "/it/it/elections/prossime-politiche/", label: "Prossime elezioni politiche" },
+          { href: "/it/it/results/", label: "Risultati" },
+          { href: "/it/en/elections/camera-chieti-2026/", label: "English" },
+        ],
+        bodyHtml: CHIETI_IT_BODY,
+        sourcesHeading: "Fonti",
+        sources: [
+          { href: GU_CHIETI, label: "Gazzetta Ufficiale, decreto del 25 settembre 2026 (26A05139)", readOn: "2026-10-26" },
+          { href: DL_196, label: "Normattiva, decreto-legge 27 dicembre 2025, n. 196, articolo 1", readOn: "2026-10-26" },
+          { href: DAIT_SPECIALE, label: "DAIT, Speciale elezioni", readOn: "2026-10-26" },
+          { href: PREF_CHIETI, label: "Prefettura di Chieti, comunicazione sull'elezione suppletiva", readOn: "2026-10-26" },
+          { href: PREF_CHIETI_DOCS, label: "Prefettura di Chieti, circolari e pubblicazioni", readOn: "2026-10-26" },
+          { href: PUBB_3, label: "Ministero dell'interno, pubblicazione n. 3, agosto 2026, istruzioni per i seggi", readOn: "2026-10-26" },
+          { href: DAIT_CANDIDATES, label: "DAIT, trasparenza, candidati presentati per il 15-16 novembre 2026", readOn: "2026-10-26" },
+          { href: CAMERA_VARIAZIONI, label: "Camera dei deputati, variazioni nella composizione", readOn: "2026-10-26" },
+          { href: ELIGENDO, label: "Ministero dell'interno, Eligendo", readOn: "2026-10-26" },
+          { href: DLGS_177, label: "Decreto legislativo 23 dicembre 2020, n. 177", readOn: "2026-10-18" },
+          { href: L_28, label: "Legge 22 febbraio 2000, n. 28", readOn: "2026-10-18" },
         ],
       },
     ],

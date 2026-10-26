@@ -4,7 +4,7 @@ import { GapNote } from "@/components/GapNote";
 import { ItalyFrame } from "@/app/it/frame";
 import { formatNumber } from "@/data/italy/format";
 import { REGIONS } from "@/data/italy/places";
-import { italyChooser, italyHome, otherLang, regionPath } from "@/data/italy/paths";
+import { chietiByElectionPath, italyChooser, italyHome, otherLang, regionPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -189,6 +189,14 @@ function NextElection({ lang }: { lang: ItLang }) {
           : "The chambers in Decree no. 97 of 2022 first met on 13 October 2022. On 17 October 2026 no later dissolution or calling decree had been read. This page does not calculate a polling day and does not print “autumn 2027” as a date."}
       </p>
       <GapNote label={copy.gap} text={copy.nextElectionGap} />
+      <p>
+        {it
+          ? "Un'elezione suppletiva della Camera, nel collegio uninominale 01-Chieti, è convocata per il 15 e 16 novembre 2026. Non è l'elezione politica dell'intera Camera."
+          : "A Chamber by-election, in single-member constituency 01-Chieti, is called for 15 and 16 November 2026. It is not a general election of the whole Chamber."}{" "}
+        <Link className="text-navy underline" href={chietiByElectionPath(lang)}>
+          {it ? "Pagina di quella suppletiva" : "Page for that by-election"}
+        </Link>
+      </p>
       <GapNote label={copy.gap} text={copy.candidateGap} />
     </section>
   );
