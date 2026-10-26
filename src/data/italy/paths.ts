@@ -41,3 +41,8 @@ export function collegioPath(lang: ItLang, house: "camera" | "senato", slug: str
 export function otherLang(lang: ItLang): ItLang {
   return lang === "it" ? "en" : "it";
 }
+
+/** Chamber by-election, uninominal constituency 01-Chieti, 15–16 November 2026. */
+export function chietiByElectionPath(lang: ItLang): string {
+  return `${italyHome(lang)}elections/camera-chieti-2026/`;
+}

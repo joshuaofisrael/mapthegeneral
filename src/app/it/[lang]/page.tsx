@@ -7,7 +7,7 @@ import { ItalyFrame } from "@/app/it/frame";
 import { deliverySentence } from "@/data/italy/comuni";
 import { formatNumber } from "@/data/italy/format";
 import { COMUNE_COUNT, POPULATION_2025, REGIONS, UNIT_COUNT, alphaRegions } from "@/data/italy/places";
-import { collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitsIndexPath } from "@/data/italy/paths";
+import { chietiByElectionPath, collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitsIndexPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -119,6 +119,17 @@ export default async function ItalyNationalPage({ params }: { params: Promise<{ 
         <p>
           <Link className="text-navy underline" href={`${path}elections/prossime-politiche/`}>
             {it ? "Pagina della prossima elezione politica" : "Page for the next general election"}
+          </Link>
+        </p>
+        <h2>{it ? "Elezione suppletiva, collegio 01-Chieti" : "By-election, constituency 01-Chieti"}</h2>
+        <p>
+          {it
+            ? "Il decreto del Presidente della Repubblica del 25 settembre 2026, nella Gazzetta Ufficiale n. 224 del 26 settembre 2026, indice l'elezione suppletiva della Camera nel collegio uninominale 01-Chieti per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica sondaggi né un conteggio."
+            : "The decree of the President of the Republic of 25 September 2026, in Gazzetta Ufficiale no. 224 of 26 September 2026, calls a Chamber by-election in single-member constituency 01-Chieti for Sunday 15 and Monday 16 November 2026. This page prints no polls and no count."}
+        </p>
+        <p>
+          <Link className="text-navy underline" href={chietiByElectionPath(lang)}>
+            {it ? "Pagina di quell'elezione suppletiva" : "Page for that by-election"}
           </Link>
         </p>
       </section>

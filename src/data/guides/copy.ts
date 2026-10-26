@@ -565,9 +565,10 @@ const itEn: Guide = {
       href: "/it/en/elections/prossime-politiche/",
     },
     {
-      name: "Chamber by-election, 01-Chieti, and the extraordinary round",
-      detail: "The Interior Ministry’s special-elections page names 15–16 November 2026. This site prints no polls for that vote.",
-      href: "/it/en/elections/",
+      name: "Chamber by-election, 01-Chieti",
+      detail:
+        "Sunday 15 and Monday 16 November 2026, in single-member constituency 01-Chieti. The calling decree is in Gazzetta Ufficiale no. 224 of 26 September 2026. This site prints no polls and no count.",
+      href: "/it/en/elections/camera-chieti-2026/",
     },
   ],
   glossaryHeading: "Glossary",
@@ -624,7 +625,12 @@ const itIt: Guide = {
   electionsHeading: "Che cosa c’è in calendario",
   elections: [
     { name: "Prossime elezioni politiche", detail: "Non risulta letto un decreto di convocazione successivo, quindi non si stampa un giorno.", href: "/it/it/elections/prossime-politiche/" },
-    { name: "Suppletiva della Camera, 01-Chieti, e turno straordinario", detail: "La pagina Speciale elezioni del Ministero indica il 15-16 novembre 2026. Questo sito non pubblica sondaggi su quel voto.", href: "/it/it/elections/" },
+    {
+      name: "Suppletiva della Camera, 01-Chieti",
+      detail:
+        "Domenica 15 e lunedì 16 novembre 2026, nel collegio uninominale 01-Chieti. Il decreto di convocazione è nella Gazzetta Ufficiale n. 224 del 26 settembre 2026. Questo sito non pubblica sondaggi né un conteggio.",
+      href: "/it/it/elections/camera-chieti-2026/",
+    },
   ],
   glossaryHeading: "Glossario",
   glossary: [

@@ -1,7 +1,7 @@
 import { COMUNI } from "./comuni";
 import { COLLEGI, UNITS } from "./level2";
 import { alphaRegions } from "./places";
-import { collegioPath, collegiIndexPath, comunePath, comuniIndexPath, italyChooser, italyHome, regionPath, unitPath, unitsIndexPath } from "./paths";
+import { chietiByElectionPath, collegioPath, collegiIndexPath, comunePath, comuniIndexPath, italyChooser, italyHome, regionPath, unitPath, unitsIndexPath } from "./paths";
 import type { ItLang } from "./types";
 
 export type ItalyIndexEntry = {
@@ -31,6 +31,17 @@ function fixed(lang: ItLang): ItalyIndexEntry[] {
       title: it ? "Prossime elezioni politiche" : "Next general election",
       kind: "election",
       text: "articolo 60 articolo 61 cinque anni data non fissata",
+    },
+    {
+      path: chietiByElectionPath(lang),
+      lang,
+      title: it
+        ? "Elezione suppletiva della Camera, collegio 01-Chieti, 15-16 novembre 2026"
+        : "Chamber by-election, constituency 01-Chieti, 15–16 November 2026",
+      kind: "election",
+      text: it
+        ? "elezione suppletiva Chieti 2026 Camera collegio uninominale 01 Abruzzo quando si vota orari seggi candidati"
+        : "Chieti by-election 2026 Chamber single-member constituency 01 Abruzzo polling hours candidates",
     },
     { path: `${home}results/`, lang, title: it ? "Risultati" : "Results", kind: "results", text: "Eligendo 25 settembre 2022" },
     { path: `${home}parties/`, lang, title: it ? "Partiti" : "Parties", kind: "parties", text: "partiti liste" },

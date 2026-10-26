@@ -231,8 +231,8 @@ function collegioBlock(lang: ItLang, comune: ComuneRecord): string {
   if (comune.camera.includes("Abruzzo - U01")) {
     parts.push(
       it
-        ? `<p>La pagina del Dipartimento letta il 25 ottobre 2026 dice che l'elezione suppletiva di quel collegio della Camera è fissata per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica cifre di quella elezione.</p>`
-        : `<p>The Department page read on 25 October 2026 says the Chamber by-election for that constituency is set for Sunday 15 and Monday 16 November 2026. This page does not publish figures for that election.</p>`,
+        ? `<p>La pagina del Dipartimento letta il 25 ottobre 2026 dice che l'elezione suppletiva di quel collegio della Camera è fissata per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica cifre di quella elezione. <a href="${esc(italyHome(lang))}elections/camera-chieti-2026/">Pagina di questa elezione</a>.</p>`
+        : `<p>The Department page read on 25 October 2026 says the Chamber by-election for that constituency is set for Sunday 15 and Monday 16 November 2026. This page does not publish figures for that election. <a href="${esc(italyHome(lang))}elections/camera-chieti-2026/">Page for this election</a>.</p>`,
     );
   }
   parts.push(`<p>${explain(comune.senateVia, it ? "B.1 del Senato" : "Senate table B.1")}</p>`);

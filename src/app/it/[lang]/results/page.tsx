@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { ItalyFrame } from "@/app/it/frame";
-import { italyChooser, italyHome, otherLang } from "@/data/italy/paths";
+import { chietiByElectionPath, italyChooser, italyHome, otherLang } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
@@ -107,6 +107,10 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
           {" · "}
           <Link className="text-navy underline" href={`${italyHome(lang)}elections/prossime-politiche/`}>
             {copy.nextElection}
+          </Link>
+          {" · "}
+          <Link className="text-navy underline" href={chietiByElectionPath(lang)}>
+            {it ? "Suppletiva 01-Chieti, 15-16 novembre 2026" : "By-election, 01-Chieti, 15–16 November 2026"}
           </Link>
         </p>
       </div>

@@ -287,7 +287,7 @@ function collegioPage(lang: ItLang, item: Level2Collegio): string {
         it
           ? "La pagina «Speciale elezioni» del Dipartimento, letta il 18 ottobre 2026, dice che un decreto del Presidente della Repubblica pubblicato nella Gazzetta Ufficiale, serie generale, n. 224 del 26 settembre 2026, indice l'elezione suppletiva nel collegio uninominale 01-Chieti della XVII circoscrizione Abruzzo per domenica 15 e lunedì 16 novembre 2026. Questa pagina non pubblica sondaggi, proiezioni o risultati di quella elezione. L'articolo 8 della legge 22 febbraio 2000, n. 28, vieta di rendere pubblici i risultati dei sondaggi demoscopici nei quindici giorni precedenti la votazione."
           : "The Department’s “Speciale elezioni” page, read on 18 October 2026, says a presidential decree published in the Gazzetta Ufficiale, general series, no. 224 of 26 September 2026, calls a by-election in single-member constituency 01-Chieti of the XVII Abruzzo constituency for Sunday 15 and Monday 16 November 2026. This page does not publish polls, projections, or results of that election. Article 8 of Law no. 28 of 22 February 2000 forbids publishing opinion-poll results in the fifteen days before voting."
-      }</p>`
+      } <a href="${esc(italyHome(lang))}elections/camera-chieti-2026/">${it ? "Pagina di questa elezione" : "Page for this election"}</a>.</p>`
     : "";
   const place =
     item.kind === "uninominale"
