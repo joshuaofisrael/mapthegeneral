@@ -19,8 +19,9 @@ export type Commune = {
  * Political municipalities (type 11) current on 1 January 2026, from
  * 20260101_GDEHist_GDE.txt joined to 20260101_GDEHist_BEZ.txt.
  * Order follows the brief: ZH, BE, VD, AG, SG, then GE, LU, TI, VS,
- * then the next cantons by 2024 permanent resident population.
- * Zug and the smaller cantons stay under the export cap.
+ * then the next cantons by 2024 permanent resident population,
+ * then Zug and the remaining cantons in that same population order.
+ * The file has one row for every political municipality current on 1 January 2026.
  */
 export const COMMUNES = raw as Commune[];
 
@@ -42,6 +43,15 @@ export const COMMUNE_CANTONS = [
   "BS",
   "NE",
   "SZ",
+  "ZG",
+  "SH",
+  "JU",
+  "AR",
+  "NW",
+  "GL",
+  "OW",
+  "UR",
+  "AI",
 ] as const;
 
 export function communeCantonPublished(abbr: string): boolean {

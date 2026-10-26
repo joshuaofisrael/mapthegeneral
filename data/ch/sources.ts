@@ -79,7 +79,7 @@ export const SOURCES: SourceRef[] = [
     id: "agvch-hist",
     name: "Bundesamt für Statistik, historisiertes Gemeindeverzeichnis, TXT-Fassung eCH-0071 Version 1.2.0, Dateien 20260101_GDEHist_KT, _BEZ und _GDE",
     url: "https://www.agvchapp.bfs.admin.ch/file/txt/dz-b-00.04-hgv-01.zip",
-    readOn: "2026-10-25",
+    readOn: "2026-10-26",
   },
   {
     id: "bfs-agvch-page",
@@ -91,7 +91,7 @@ export const SOURCES: SourceRef[] = [
     id: "opendata-hgv",
     name: "opendata.swiss, Swiss official commune’s historicized list, Bundesamt für Statistik, Kennzeichen «Open use»",
     url: "https://opendata.swiss/en/dataset/historisiertes-gemeindeverzeichnis-der-schweiz",
-    readOn: "2026-10-25",
+    readOn: "2026-10-26",
   },
   {
     id: "ge-muni-2025",
@@ -128,6 +128,24 @@ export const SOURCES: SourceRef[] = [
     name: "Canton du Valais, présidents et vice-présidents des communes",
     url: "https://www.vs.ch/web/communes/president-vice-president",
     readOn: "2026-10-25",
+  },
+  {
+    id: "zg-erneuerung",
+    name: "Kanton Zug, Termine Gesamterneuerungswahlen im Kanton Zug",
+    url: "https://zg.ch/de/staat-politik/wahlen-und-abstimmungen/allgemeines-wahlen-und-abstimmungen/termine-gesamterneuerungswahlen",
+    readOn: "2026-10-26",
+  },
+  {
+    id: "ju-elections",
+    name: "République et Canton du Jura, Elections communales",
+    url: "https://www.jura.ch/fr/Autorites/Administration/DFI/COM/Elections-communales/Elections-communales.html",
+    readOn: "2026-10-26",
+  },
+  {
+    id: "ar-wahlen",
+    name: "Kanton Appenzell Ausserrhoden, Wahlen / Abstimmungen",
+    url: "https://ar.ch/verwaltung/kantonskanzlei/rechtsdienst/politische-rechte/wahlen-abstimmungen/",
+    readOn: "2026-10-26",
   },
   {
     id: "parlament-members",
