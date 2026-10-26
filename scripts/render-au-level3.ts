@@ -27,6 +27,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const UPDATED = "19 October 2026";
 const UPDATED_24 = "24 October 2026";
+const UPDATED_26 = "26 October 2026";
 
 const ABS_CAVEAT =
   "The Australian Bureau of Statistics says a Local Government Area is a Mesh Block approximation of a gazetted local government boundary. It says those approximations do not match official legal boundaries and should only be used for statistical purposes.";
@@ -274,12 +275,13 @@ function areaOffice(area: LocalArea): string {
 
 function areaSources(area: LocalArea): string[] {
   const ids = ["abs-lga-2025", "abs-lga-map"];
-  if (area.group === "vic-council") ids.push("vec-councils", "vec-local", "vec-2024-councils", "vec-legal");
-  if (area.jurisdictionSlug === "new-south-wales") ids.push("nswec-lg-results", "nswec-copyright", "nswec-past");
+  if (area.group === "vic-council") ids.push("vec-councils", "vec-local", "vec-2024-councils", "vec-legal", "vec-lg-report-2024");
+  if (area.jurisdictionSlug === "new-south-wales") ids.push("nswec-lg-results", "nswec-copyright", "nswec-past", "nswec-lg-how", "olg-councillor");
   if (area.jurisdictionSlug === "south-australia") ids.push("ecsa-council-2027", "ecsa-copyright");
   if (area.jurisdictionSlug === "queensland") ids.push("qld-lga-boundaries", "qld-lgea-s23", "ecq-boundaries", "ecq-plan");
   if (area.jurisdictionSlug === "tasmania") ids.push("tec-lg-2026");
-  if (area.jurisdictionSlug === "western-australia") ids.push("waec-copyright");
+  if (area.jurisdictionSlug === "western-australia") ids.push("waec-copyright", "wa-dlg-elections");
+  if (area.legalPid || area.kind === "unincorporated" || area.flags.includes("sa-grant")) ids.push("geoscape-lga-2026");
   if (area.flags.includes("christmas") || area.flags.includes("cocos")) ids.push("abs-lga-2025");
   return [...new Set(ids)];
 }
@@ -297,11 +299,14 @@ function electionParagraph(area: LocalArea): string {
         "The Commission’s local-council elections page links a current Murrindindi Shire Council Kinglake Ward by-election. Ward pages and candidate lists are not built here, and no count is printed.",
     };
     const extra = area.flags.map((flag) => bye[flag]).filter(Boolean).join(" ");
-    return `<p>The Victorian Electoral Commission publishes a page titled “2024 council election results” and says results are available for the 2024 local council elections. That sentence does not print a calendar day. The next council election day was not on the local-council elections page read on 19 October 2026. ${extra}</p>`;
+    const moira = area.flags.includes("vic-moira")
+      ? " The same report says an election was not held for Moira Shire Council, and that the next general election for that council will be held in October 2028."
+      : "";
+    return `<p>The Victorian Electoral Commission’s report to Parliament on the 2024 local government elections says the general elections were held on 26 October 2024. The foreword says the next local government elections are in October 2028. It does not print a calendar day for 2028. This page does not calculate one. The results index read on 19 October 2026 does not print a calendar day.${moira} ${extra}</p>`;
   }
   if (area.jurisdictionSlug === "new-south-wales") {
     const bits = [
-      "<p>The NSW Electoral Commission local government results page prints “2024 NSW Local Government elections | 14 September 2024”. The next statewide local government polling day was not on the pages read.</p>",
+      "<p>The NSW Electoral Commission local government results page prints “2024 NSW Local Government elections | 14 September 2024”. The Commission’s page on how a local government election works, read on 26 October 2026, says local government elections are held on the second Saturday in September every four years. That page does not print the next calendar day. This page does not calculate one. The Office of Local Government’s “Become a councillor” page states a month for the next ordinary election. Its copyright notice reserves all rights and allows a single copy for personal use only, so that month is not copied here.</p>",
     ];
     if (area.flags.includes("nsw-cobar")) {
       bits.push(
@@ -329,16 +334,16 @@ function electionParagraph(area: LocalArea): string {
     const rename = area.flags.includes("lower-eyre")
       ? " The ABS page says Lower Eyre Peninsula was renamed Lower Eyre, with no code change."
       : "";
-    return `<p>The Electoral Commission of South Australia says the next periodic local government council elections will be held in April 2027, moved from November 2026. The timetable on that page prints close of voting (polling day) at 5pm on Wednesday 7 April 2027. Rolls close at 5pm on Monday 4 January 2027. Nominations open on Tuesday 26 January 2027 and close at 12 noon on Tuesday 9 February 2027. No candidate list is printed here.${rename}</p>`;
+    return `<p>The Electoral Commission of South Australia says the next periodic local government council elections will be held in April 2027, moved from November 2026. The timetable on that page prints close of voting (polling day) at 5pm on Wednesday 7 April 2027. Rolls close at 5pm on Monday 4 January 2027. Nominations open on Tuesday 26 January 2027 and close at 12 noon on Tuesday 9 February 2027. The calendar day of the last periodic council election was not on the Commission pages read on 26 October 2026. No candidate list is printed here.${rename}</p>`;
   }
   if (area.jurisdictionSlug === "queensland") {
     return `<p>The Local Government Electoral Act 2011 (Qld) section 23 says a quadrennial election must be held in, and every fourth year after, 2012, on the last Saturday in March. It also says a regulation may fix a different Saturday for a particular year. The Electoral Commission of Queensland Strategic Plan 2025–2029 places local government elections in March 2028 and does not print a calendar day. The calendar day of the last quadrennial election was not in those sources. This page does not calculate a Saturday. No candidate list is printed.</p>`;
   }
   if (area.jurisdictionSlug === "tasmania") {
-    return `<p>The Tasmanian Electoral Commission page titled “2026 local government elections” prints close of poll at 2 pm on Tuesday 27 October, and counting commencing from 9 am on Wednesday 28 October. The page is the 2026 election. On 19 October 2026 that close of poll has not arrived. The page says ballot packs are delivered by post from Monday 5 October, and that there are 29 councils. This page does not publish a candidate list, a return rate, or a count. A Commission copyright licence page was not found, so council legal names were not copied from the Commission.</p>`;
+    return `<p>The Tasmanian Electoral Commission page titled “2026 local government elections”, read on 26 October 2026, prints close of poll at 2 pm on Tuesday 27 October, and counting commencing from 9 am on Wednesday 28 October. On that read, the close of poll has not arrived. The page says it is now too late to return a vote by post, and that a completed ballot pack should be returned in person by that close of poll. The timetable still prints ballot packs delivered by post from Monday 5 October, and the page says there are 29 councils. This page does not publish a candidate list, a return rate, or a count. A Commission copyright licence page was not found, so council legal names were not copied from the Commission.</p>`;
   }
   if (area.jurisdictionSlug === "western-australia") {
-    return `<p>A current mayor was not published centrally under a reuse licence. The Western Australian Electoral Commission copyright notice does not allow this publisher to reproduce the Commission’s council list or district list. Whether this statistical area is in the December 2026 extraordinary elections is not stated here.</p>`;
+    return `<p>A current mayor was not published centrally under a reuse licence. The Western Australian Electoral Commission copyright notice does not allow this publisher to reproduce the Commission’s council list, district list, or election dates. Whether this area is in the December 2026 extraordinary elections is not stated here. The Government of Western Australia local-government elections page, read on 26 October 2026, prints a next ordinary election day. The wa.gov.au terms of use allow personal and non-commercial reproduction only, so that day is not copied here.</p>`;
   }
   if (area.jurisdictionSlug === "australian-capital-territory") {
     return `<p>The ABS explanatory page says the Local Government Area codes for the Australian Capital Territory are statistical areas, not a statement that the Territory has elected councils of that number. Elections ACT returned HTTP 403 on 19 October 2026, so a Legislative Assembly electorate list was not copied.</p>`;
@@ -347,7 +352,7 @@ function electionParagraph(area: LocalArea): string {
     const change = area.flags.includes("groote") || area.flags.includes("east-arnhem")
       ? " The ABS page says East Arnhem was split to create Groote Archipelago, with code changes, in the 2025 update."
       : "";
-    return `<p>No Northern Territory Electoral Commission page was retrieved on 19 October 2026 (the site returned HTTP 403). Last and next council election days are not printed here.${change}</p>`;
+    return `<p>No Northern Territory Electoral Commission page was read on 26 October 2026. A direct request returned HTTP 403, as it did on 19 October 2026. Last and next council election days are not printed here.${change}</p>`;
   }
   return "";
 }
@@ -368,6 +373,23 @@ function officeParagraph(area: LocalArea): string {
   return `<p>A current mayor or council membership was not published on a central page whose licence permits this publisher to copy it. Not published centrally.</p>`;
 }
 
+const GEOSCAPE_UNMATCHED: Record<string, string> = {
+  "unincorporated-nsw":
+    "The Geoscape Administrative Boundaries August 2026 local government area table names four unincorporated areas that are not separate codes in the ABS 2025 extract used here: Unincorporated - Botany Bay Area; Unincorporated - Far West Area; Unincorporated - Lord Howe Island; and Unincorporated - Sydney Harbour Area. The ABS extract has one area, Unincorporated NSW. This page does not split it.",
+  "unincorporated-vic":
+    "The Geoscape August 2026 Victoria table also names Falls Creek Alpine Resort (Unincorporated), French-Elizabeth-Sandstone Islands (Uninc), Lake Mountain Alpine Resort (Unincorporated), Mount Baw Baw Alpine Resort (Unincorporated), Mount Buller Alpine Resort (Unincorporated), Mount Hotham Alpine Resort (Unincorporated), Mount Stirling Alpine Resort (Unincorporated), and Gabo Island (Unincorporated). Those names are not among the 79 councils, and they are not separate codes in the ABS 2025 extract used here. This page does not add them.",
+  "unincorporated-sa":
+    "The Geoscape August 2026 South Australia table also names Pastoral Unincorporated Area, UIA Riverland, UIA Torrens Island, and UIA Whyalla. Those names are not separate codes in the ABS 2025 extract used here. This page does not split Unincorporated SA.",
+  "unincorporated-nt":
+    "The Geoscape August 2026 Northern Territory table also names Northern Territory Rates Act (Prescribed Area A) Area, Un-Incorporated (Alyangula) Area, Un-Incorporated (Cox-Daly) Area, Un-Incorporated (Marrakai-Douglas Daly) Area, Un-Incorporated (Nhulunbuy) Area, and Un-Incorporated (Yulara) Area. Those names are not separate codes in the ABS 2025 extract used here. This page does not split Unincorporated NT.",
+  "unincorporated-act":
+    "The Geoscape August 2026 state tables read for this release do not include an Australian Capital Territory local government area table. This record stays the ABS name.",
+  "unincorp-other-territories":
+    "The Geoscape August 2026 Other Territories table names Shire of Christmas Island and Shire of Cocos (Keeling) Islands, which have their own pages. It does not name this unincorporated record.",
+  grant:
+    "The Geoscape August 2026 South Australia table has no area named Grant. It does name Southern Limestone Coast Council, which is not an ABS 2025 code in this extract. This page does not treat those names as the same area.",
+};
+
 function areaBody(area: LocalArea): string {
   const code = `<p>ABS Local Government Area code <strong>${esc(area.absCode)}</strong>, name <strong>${esc(area.absName)}</strong>, in the ASGS2025 MapServer extract read on 19 October 2026. ${ABS_CAVEAT}</p>`;
   const official =
@@ -375,7 +397,12 @@ function areaBody(area: LocalArea): string {
       ? `<p>Official council name, as the Victorian Electoral Commission prints it: ${esc(area.name)}.</p>`
       : area.jurisdictionSlug === "queensland" && area.stateCode
         ? `<p>Official name in the Queensland Government local government area boundaries dataset, read on 24 October 2026: ${esc(area.name)}. State code <strong>${esc(area.stateCode)}</strong>. The dataset is licensed Creative Commons Attribution 4.0.</p>`
-        : "";
+        : area.legalPid
+          ? `<p>Official name in the Geoscape Administrative Boundaries August 2026 local government area table, read on 26 October 2026: ${esc(area.name)}. Geoscape identifier <strong>${esc(area.legalPid)}</strong>. The table is licensed Creative Commons Attribution 4.0.</p>`
+          : "";
+  const unmatched = GEOSCAPE_UNMATCHED[area.slug]
+    ? `<p>${GEOSCAPE_UNMATCHED[area.slug]}</p>`
+    : "";
   const islands =
     area.flags.includes("christmas") || area.flags.includes("cocos")
       ? `<p>The MapServer state name for this code is Other Territories. The ABS Local Government Areas page also says that in ASGS Edition 3, Cocos (Keeling) Islands and Christmas Island are included as Western Australian Local Government Areas, reflecting their administration at the local government level. This page does not resolve that difference. The 2025 page says Cocos Islands was renamed Cocos (Keeling) Islands.</p>`
@@ -384,7 +411,7 @@ function areaBody(area: LocalArea): string {
     area.jurisdictionSlug === "queensland" && area.stateCode
       ? "The local government area boundaries dataset read on 24 October 2026 does not name a House of Representatives division or a state electoral district for this area. It is not guessed from a boundary."
       : NO_MAP;
-  return `${official}${code}${islands}${officeParagraph(area)}${electionParagraph(area)}<p>${NO_CALL}</p><p>${mapped}</p>`;
+  return `${official}${code}${unmatched}${islands}${officeParagraph(area)}${electionParagraph(area)}<p>${NO_CALL}</p><p>${mapped}</p>`;
 }
 
 const DISTRICT_ORDER = [
@@ -519,12 +546,15 @@ function renderAreas() {
       ...(slug === "other-territories" ? [] : [{ name: parentName, path: parentPath }]),
       { name: title, path: indexHref },
     ];
+    const named = items.filter((item) => item.legalPid).length;
     const lede =
       slug === "victoria"
-        ? "79 local councils named by the Victorian Electoral Commission, then the ABS unincorporated area that is not one of those councils."
+        ? "79 local councils named by the Victorian Electoral Commission, then the ABS unincorporated area that is not one of those councils. The Commission’s report to Parliament says the 2024 general elections were held on 26 October 2024, except that no election was held for Moira Shire Council. It says the next local government elections are in October 2028 and does not print a calendar day for 2028."
         : slug === "queensland"
           ? "78 names from the Queensland Government local government area boundaries dataset (CC BY 4.0), with the matching ABS 2025 code. The Electoral Commission of Queensland says there are 77 local government areas. Both figures are kept. Mayors were not copied."
-          : `${items.length} Local Government Areas in the ABS ASGS2025 extract, excluding non-spatial special purpose codes. Names are the statistical names, not a copied legal roll.`;
+          : slug === "australian-capital-territory"
+            ? `${items.length} Local Government Area in the ABS ASGS2025 extract, excluding non-spatial special purpose codes. The Geoscape August 2026 state tables read for this release do not include an Australian Capital Territory local government area table.`
+            : `${items.length} Local Government Areas in the ABS ASGS2025 extract, excluding non-spatial special purpose codes. ${named} legal names are from the Geoscape Administrative Boundaries August 2026 table, CC BY 4.0, matched to those ABS codes. A Geoscape name with no ABS 2025 code in this extract has no separate page.`;
     const body =
       slug === "victoria"
         ? `<h2>79 local councils</h2>${list(councils.map((item) => ({ name: item.name, href: localPath(item) })))}<h2>Not one of the 79 councils</h2>${list(rest.map((item) => ({ name: item.name, href: localPath(item) })))}`
@@ -542,7 +572,7 @@ function renderAreas() {
         officeHref: areaOffice(items[0]),
         body,
         sourceIds: areaSources(items[0]),
-        updated: slug === "queensland" ? UPDATED_24 : UPDATED,
+        updated: slug === "queensland" ? UPDATED_24 : UPDATED_26,
       }),
     );
     const councilLinks = councils.map((item) => ({ name: item.name, href: localPath(item) }));
@@ -557,7 +587,9 @@ function renderAreas() {
           ? `${item.name}, a Victorian local council. ABS statistical code ${item.absCode} (${item.absName}).`
           : item.jurisdictionSlug === "queensland" && item.stateCode
             ? `${item.name}, a Queensland local government area. State code ${item.stateCode}. ABS statistical code ${item.absCode} (${item.absName}).`
-            : `${item.absName}, ABS Local Government Area code ${item.absCode}, ${parentName}.`;
+            : item.legalPid
+              ? `${item.name}, a local government area in ${parentName}. ABS statistical code ${item.absCode} (${item.absName}).`
+              : `${item.absName}, ABS Local Government Area code ${item.absCode}, ${parentName}.`;
       writePage(
         path,
         shell({
@@ -577,7 +609,7 @@ function renderAreas() {
               .map((other) => ({ href: localPath(other), name: other.name })),
           )}<p><a href="${esc(indexHref)}">${esc(title)}</a> · <a href="${esc(parentPath)}">${esc(parentName)}</a></p>`,
           sourceIds: areaSources(item),
-          updated: item.jurisdictionSlug === "queensland" ? UPDATED_24 : UPDATED,
+          updated: item.jurisdictionSlug === "queensland" ? UPDATED_24 : UPDATED_26,
         }),
       );
     });

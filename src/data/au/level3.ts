@@ -25,6 +25,8 @@ export type LocalArea = {
   vecPath: string | null;
   /** State boundaries dataset code, exactly as printed, when a reuse licence covers it. */
   stateCode?: string;
+  /** Geoscape Administrative Boundaries LGA_PID, when the legal name is that table’s LGA_NAME. */
+  legalPid?: string;
 };
 
 /** Index heading for a state or territory lower-house list. */

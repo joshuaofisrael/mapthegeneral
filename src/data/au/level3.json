@@ -4054,7 +4054,9 @@
       "absCode": "24900",
       "absName": "Moira",
       "kind": "council",
-      "flags": [],
+      "flags": [
+        "vic-moira"
+      ],
       "vecPath": "/electoral-boundaries/local-councils/moira-shire-council"
     },
     {
@@ -4383,293 +4385,319 @@
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Albury",
+      "name": "Albury City Council",
       "slug": "albury",
       "absCode": "10050",
       "absName": "Albury",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadf196edd3a41"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Armidale",
+      "name": "Armidale Regional Council",
       "slug": "armidale",
       "absCode": "10180",
       "absName": "Armidale",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga18e5bcb45b78"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Ballina",
+      "name": "Ballina Shire Council",
       "slug": "ballina",
       "absCode": "10250",
       "absName": "Ballina",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacd5e92fad2d8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Balranald",
+      "name": "Balranald Shire Council",
       "slug": "balranald",
       "absCode": "10300",
       "absName": "Balranald",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac11006b943bb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bathurst",
+      "name": "Bathurst Regional Council",
       "slug": "bathurst",
       "absCode": "10470",
       "absName": "Bathurst",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga098f9fe7f215"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bayside (NSW)",
+      "name": "Bayside Council",
       "slug": "bayside-nsw",
       "absCode": "10500",
       "absName": "Bayside (NSW)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga695a89c7b19b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bega Valley",
+      "name": "Bega Valley Shire Council",
       "slug": "bega-valley",
       "absCode": "10550",
       "absName": "Bega Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad764fa589d34"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bellingen",
+      "name": "Bellingen Shire Council",
       "slug": "bellingen",
       "absCode": "10600",
       "absName": "Bellingen",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab59cd333b8fb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Berrigan",
+      "name": "Berrigan Shire Council",
       "slug": "berrigan",
       "absCode": "10650",
       "absName": "Berrigan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga39ec9e1d0913"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Blacktown",
+      "name": "Blacktown City Council",
       "slug": "blacktown",
       "absCode": "10750",
       "absName": "Blacktown",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab64f14d6026f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bland",
+      "name": "Bland Shire Council",
       "slug": "bland",
       "absCode": "10800",
       "absName": "Bland",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacf26b7440ad6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Blayney",
+      "name": "Blayney Shire Council",
       "slug": "blayney",
       "absCode": "10850",
       "absName": "Blayney",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab3e830b62e1e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Blue Mountains",
+      "name": "Blue Mountains City Council",
       "slug": "blue-mountains",
       "absCode": "10900",
       "absName": "Blue Mountains",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa70ee11ecfe2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bogan",
+      "name": "Bogan Shire Council",
       "slug": "bogan",
       "absCode": "10950",
       "absName": "Bogan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga94484cf6e0e2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Bourke",
+      "name": "Bourke Shire Council",
       "slug": "bourke",
       "absCode": "11150",
       "absName": "Bourke",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae62d9de9e5f2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Brewarrina",
+      "name": "Brewarrina Shire Council",
       "slug": "brewarrina",
       "absCode": "11200",
       "absName": "Brewarrina",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga744f59098827"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Broken Hill",
+      "name": "Broken Hill City Council",
       "slug": "broken-hill",
       "absCode": "11250",
       "absName": "Broken Hill",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0225a5333667"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Burwood",
+      "name": "Burwood Council",
       "slug": "burwood",
       "absCode": "11300",
       "absName": "Burwood",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadd72d6dc964c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Byron",
+      "name": "Byron Shire Council",
       "slug": "byron",
       "absCode": "11350",
       "absName": "Byron",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga123b323d59f1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cabonne",
+      "name": "Cabonne Shire Council",
       "slug": "cabonne",
       "absCode": "11400",
       "absName": "Cabonne",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae1f1f44fdff5"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Camden",
+      "name": "Camden Council",
       "slug": "camden",
       "absCode": "11450",
       "absName": "Camden",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2a2057496fb7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Campbelltown (NSW)",
+      "name": "Campbelltown City Council",
       "slug": "campbelltown-nsw",
       "absCode": "11500",
       "absName": "Campbelltown (NSW)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae1e88444b382"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Canada Bay",
+      "name": "City of Canada Bay Council",
       "slug": "canada-bay",
       "absCode": "11520",
       "absName": "Canada Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf06f63452dec"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Canterbury-Bankstown",
+      "name": "Canterbury-Bankstown Council",
       "slug": "canterbury-bankstown",
       "absCode": "11570",
       "absName": "Canterbury-Bankstown",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacf41226610f4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Carrathool",
+      "name": "Carrathool Shire Council",
       "slug": "carrathool",
       "absCode": "11600",
       "absName": "Carrathool",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2da097abc8d4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Central Coast (NSW)",
+      "name": "Central Coast Council",
       "slug": "central-coast-nsw",
       "absCode": "11650",
       "absName": "Central Coast (NSW)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1bf4b9703dd4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Central Darling",
+      "name": "Central Darling Shire Council",
       "slug": "central-darling",
       "absCode": "11700",
       "absName": "Central Darling",
@@ -4677,34 +4705,37 @@
       "flags": [
         "central-darling"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf081be0c5dd7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cessnock",
+      "name": "Cessnock City Council",
       "slug": "cessnock",
       "absCode": "11720",
       "absName": "Cessnock",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga81c3e6b6c380"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Clarence Valley",
+      "name": "Clarence Valley Council",
       "slug": "clarence-valley",
       "absCode": "11730",
       "absName": "Clarence Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaee0b3901a073"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cobar",
+      "name": "Cobar Shire Council",
       "slug": "cobar",
       "absCode": "11750",
       "absName": "Cobar",
@@ -4712,12 +4743,13 @@
       "flags": [
         "nsw-cobar"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaaf23d74843f3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Coffs Harbour",
+      "name": "Coffs Harbour City Council",
       "slug": "coffs-harbour",
       "absCode": "11800",
       "absName": "Coffs Harbour",
@@ -4725,276 +4757,301 @@
       "flags": [
         "nsw-coffs"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga14af0b5e48b8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Coolamon",
+      "name": "Coolamon Shire Council",
       "slug": "coolamon",
       "absCode": "12000",
       "absName": "Coolamon",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga300d9d5a512d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Coonamble",
+      "name": "Coonamble Shire Council",
       "slug": "coonamble",
       "absCode": "12150",
       "absName": "Coonamble",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac8a09bf5509c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cootamundra-Gundagai",
+      "name": "Cootamundra-Gundagai Regional Council",
       "slug": "cootamundra-gundagai",
       "absCode": "12160",
       "absName": "Cootamundra-Gundagai",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaba86e982b581"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cowra",
+      "name": "Cowra Shire Council",
       "slug": "cowra",
       "absCode": "12350",
       "absName": "Cowra",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga358636703171"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Cumberland",
+      "name": "Cumberland Council",
       "slug": "cumberland",
       "absCode": "12380",
       "absName": "Cumberland",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5c7223f40d56"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Dubbo",
+      "name": "Dubbo Regional Council",
       "slug": "dubbo",
       "absCode": "12390",
       "absName": "Dubbo",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac20f675def30"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Dungog",
+      "name": "Dungog Shire Council",
       "slug": "dungog",
       "absCode": "12700",
       "absName": "Dungog",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad0c3084d5c41"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Edward River",
+      "name": "Edward River Council",
       "slug": "edward-river",
       "absCode": "12730",
       "absName": "Edward River",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga51b9dd5e4b10"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Eurobodalla",
+      "name": "Eurobodalla Shire Council",
       "slug": "eurobodalla",
       "absCode": "12750",
       "absName": "Eurobodalla",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3d4e330d3d14"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Fairfield",
+      "name": "Fairfield City Council",
       "slug": "fairfield",
       "absCode": "12850",
       "absName": "Fairfield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga06490af4f38a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Federation",
+      "name": "Federation Council",
       "slug": "federation",
       "absCode": "12870",
       "absName": "Federation",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf98b58f75ce9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Forbes",
+      "name": "Forbes Shire Council",
       "slug": "forbes",
       "absCode": "12900",
       "absName": "Forbes",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgafc572f6f5703"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Georges River",
+      "name": "Georges River Council",
       "slug": "georges-river",
       "absCode": "12930",
       "absName": "Georges River",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2e3aa047bd58"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Gilgandra",
+      "name": "Gilgandra Shire Council",
       "slug": "gilgandra",
       "absCode": "12950",
       "absName": "Gilgandra",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga439d331153ef"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Glen Innes Severn",
+      "name": "Glen Innes Severn Shire Council",
       "slug": "glen-innes-severn",
       "absCode": "13010",
       "absName": "Glen Innes Severn",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3b472eeffd4e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Goulburn Mulwaree",
+      "name": "Goulburn Mulwaree Council",
       "slug": "goulburn-mulwaree",
       "absCode": "13310",
       "absName": "Goulburn Mulwaree",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf2bf679736f0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Greater Hume",
+      "name": "Greater Hume Shire Council",
       "slug": "greater-hume",
       "absCode": "13340",
       "absName": "Greater Hume",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadaad9912738b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Griffith",
+      "name": "Griffith City Council",
       "slug": "griffith",
       "absCode": "13450",
       "absName": "Griffith",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf4a6cf558a8a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Gunnedah",
+      "name": "Gunnedah Shire Council",
       "slug": "gunnedah",
       "absCode": "13550",
       "absName": "Gunnedah",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1743293bd69b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Gwydir",
+      "name": "Gwydir Shire Council",
       "slug": "gwydir",
       "absCode": "13660",
       "absName": "Gwydir",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac6271e9e61d3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Hawkesbury",
+      "name": "Hawkesbury City Council",
       "slug": "hawkesbury",
       "absCode": "13800",
       "absName": "Hawkesbury",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga88366278284a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Hay",
+      "name": "Hay Shire Council",
       "slug": "hay",
       "absCode": "13850",
       "absName": "Hay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga83191133e290"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Hilltops",
+      "name": "Hilltops Council",
       "slug": "hilltops",
       "absCode": "13910",
       "absName": "Hilltops",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae13aad3a393a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Hornsby",
+      "name": "The Council of the Shire of Hornsby",
       "slug": "hornsby",
       "absCode": "14000",
       "absName": "Hornsby",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8f7ed7c51d73"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Hunters Hill",
+      "name": "The Council of the Municipality of Hunters Hill",
       "slug": "hunters-hill",
       "absCode": "14100",
       "absName": "Hunters Hill",
@@ -5002,799 +5059,872 @@
       "flags": [
         "nsw-hunters-hill"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf99ae76baba3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Inner West",
+      "name": "Inner West Council",
       "slug": "inner-west",
       "absCode": "14170",
       "absName": "Inner West",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa5101cb3dc0e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Inverell",
+      "name": "Inverell Shire Council",
       "slug": "inverell",
       "absCode": "14220",
       "absName": "Inverell",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaeff98a987ea8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Junee",
+      "name": "Junee Shire Council",
       "slug": "junee",
       "absCode": "14300",
       "absName": "Junee",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac0f7797e00fa"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Kempsey",
+      "name": "Kempsey Shire Council",
       "slug": "kempsey",
       "absCode": "14350",
       "absName": "Kempsey",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4774a2311524"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Kiama",
+      "name": "The Council of the Municipality of Kiama",
       "slug": "kiama",
       "absCode": "14400",
       "absName": "Kiama",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga85982bdf6538"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Ku-ring-gai",
+      "name": "Ku-ring-gai Council",
       "slug": "ku-ring-gai",
       "absCode": "14500",
       "absName": "Ku-ring-gai",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga539121ae6aa1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Kyogle",
+      "name": "Kyogle Council",
       "slug": "kyogle",
       "absCode": "14550",
       "absName": "Kyogle",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga142c33281bd2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lachlan",
+      "name": "Lachlan Shire Council",
       "slug": "lachlan",
       "absCode": "14600",
       "absName": "Lachlan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7fcb85bf145f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lake Macquarie",
+      "name": "Lake Macquarie City Council",
       "slug": "lake-macquarie",
       "absCode": "14650",
       "absName": "Lake Macquarie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac07fca595aa9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lane Cove",
+      "name": "Lane Cove Municipal Council",
       "slug": "lane-cove",
       "absCode": "14700",
       "absName": "Lane Cove",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga83ebf8381de8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Leeton",
+      "name": "Leeton Shire Council",
       "slug": "leeton",
       "absCode": "14750",
       "absName": "Leeton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga34d12d967e41"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lismore",
+      "name": "Lismore City Council",
       "slug": "lismore",
       "absCode": "14850",
       "absName": "Lismore",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga35f80aa51641"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lithgow",
+      "name": "Lithgow City Council",
       "slug": "lithgow",
       "absCode": "14870",
       "absName": "Lithgow",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf5ba98e26208"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Liverpool",
+      "name": "Liverpool City Council",
       "slug": "liverpool",
       "absCode": "14900",
       "absName": "Liverpool",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga11ee462056ba"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Liverpool Plains",
+      "name": "Liverpool Plains Shire Council",
       "slug": "liverpool-plains",
       "absCode": "14920",
       "absName": "Liverpool Plains",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga82e6422289a3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Lockhart",
+      "name": "Lockhart Shire Council",
       "slug": "lockhart",
       "absCode": "14950",
       "absName": "Lockhart",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad7e92686b3d6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Maitland",
+      "name": "Maitland City Council",
       "slug": "maitland",
       "absCode": "15050",
       "absName": "Maitland",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga376d180b8860"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Mid-Coast",
+      "name": "Mid-Coast Council",
       "slug": "mid-coast",
       "absCode": "15240",
       "absName": "Mid-Coast",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2e987509b39d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Mid-Western",
+      "name": "Mid-Western Regional Council",
       "slug": "mid-western",
       "absCode": "15270",
       "absName": "Mid-Western",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga521465c2ad4a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Moree Plains",
+      "name": "Moree Plains Shire Council",
       "slug": "moree-plains",
       "absCode": "15300",
       "absName": "Moree Plains",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3c104304a892"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Mosman",
+      "name": "Mosman Municipal Council",
       "slug": "mosman",
       "absCode": "15350",
       "absName": "Mosman",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9b7881f1ee35"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Murray River",
+      "name": "Murray River Council",
       "slug": "murray-river",
       "absCode": "15520",
       "absName": "Murray River",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac281ed8b03fe"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Murrumbidgee",
+      "name": "Murrumbidgee Council",
       "slug": "murrumbidgee",
       "absCode": "15560",
       "absName": "Murrumbidgee",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga65578b143ce4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Muswellbrook",
+      "name": "Muswellbrook Shire Council",
       "slug": "muswellbrook",
       "absCode": "15650",
       "absName": "Muswellbrook",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf0c8381b1cf5"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Nambucca Valley",
+      "name": "Nambucca Valley Council",
       "slug": "nambucca-valley",
       "absCode": "15700",
       "absName": "Nambucca Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab9f1c7ce8f4c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Narrabri",
+      "name": "Narrabri Shire Council",
       "slug": "narrabri",
       "absCode": "15750",
       "absName": "Narrabri",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga28f729e1ef22"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Narrandera",
+      "name": "Narrandera Shire Council",
       "slug": "narrandera",
       "absCode": "15800",
       "absName": "Narrandera",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf6fd06a65e40"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Narromine",
+      "name": "Narromine Shire Council",
       "slug": "narromine",
       "absCode": "15850",
       "absName": "Narromine",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac1eaec79c7a7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Newcastle",
+      "name": "Newcastle City Council",
       "slug": "newcastle",
       "absCode": "15900",
       "absName": "Newcastle",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga945cdd1aa041"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "North Sydney",
+      "name": "North Sydney Council",
       "slug": "north-sydney",
       "absCode": "15950",
       "absName": "North Sydney",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga570242050fb9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Northern Beaches",
+      "name": "Northern Beaches Council",
       "slug": "northern-beaches",
       "absCode": "15990",
       "absName": "Northern Beaches",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4ab258f19347"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Oberon",
+      "name": "Oberon Council",
       "slug": "oberon",
       "absCode": "16100",
       "absName": "Oberon",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6f94e50be65d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Orange",
+      "name": "Orange City Council",
       "slug": "orange",
       "absCode": "16150",
       "absName": "Orange",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7ebdb393dc63"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Parkes",
+      "name": "Parkes Shire Council",
       "slug": "parkes",
       "absCode": "16200",
       "absName": "Parkes",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga34a3bdace333"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Parramatta",
+      "name": "City of Parramatta Council",
       "slug": "parramatta",
       "absCode": "16260",
       "absName": "Parramatta",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5971dfaf3433"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Penrith",
+      "name": "Penrith City Council",
       "slug": "penrith",
       "absCode": "16350",
       "absName": "Penrith",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf1f1eef13783"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Port Macquarie-Hastings",
+      "name": "Port Macquarie-Hastings Council",
       "slug": "port-macquarie-hastings",
       "absCode": "16380",
       "absName": "Port Macquarie-Hastings",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga18e02c07dc3d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Port Stephens",
+      "name": "Port Stephens Council",
       "slug": "port-stephens",
       "absCode": "16400",
       "absName": "Port Stephens",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga54c309a48d69"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Queanbeyan-Palerang",
+      "name": "Queanbeyan-Palerang Regional Council",
       "slug": "queanbeyan-palerang",
       "absCode": "16490",
       "absName": "Queanbeyan-Palerang",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2f576c5dcf45"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Randwick",
+      "name": "Randwick City Council",
       "slug": "randwick",
       "absCode": "16550",
       "absName": "Randwick",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga09dd4fbbc477"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Richmond Valley",
+      "name": "Richmond Valley Council",
       "slug": "richmond-valley",
       "absCode": "16610",
       "absName": "Richmond Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf047d6867b53"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Ryde",
+      "name": "Ryde City Council",
       "slug": "ryde",
       "absCode": "16700",
       "absName": "Ryde",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga20e7710cab71"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Shellharbour",
+      "name": "Shellharbour City Council",
       "slug": "shellharbour",
       "absCode": "16900",
       "absName": "Shellharbour",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7d9d7fde79ba"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Shoalhaven",
+      "name": "Shoalhaven City Council",
       "slug": "shoalhaven",
       "absCode": "16950",
       "absName": "Shoalhaven",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga641dd61419d6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Singleton",
+      "name": "Singleton Council",
       "slug": "singleton",
       "absCode": "17000",
       "absName": "Singleton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaec6b5514c536"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Snowy Monaro",
+      "name": "Snowy Monaro Regional Council",
       "slug": "snowy-monaro",
       "absCode": "17040",
       "absName": "Snowy Monaro",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4ad25c8d4bff"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Snowy Valleys",
+      "name": "Snowy Valleys Council",
       "slug": "snowy-valleys",
       "absCode": "17080",
       "absName": "Snowy Valleys",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga84c5e8170895"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Strathfield",
+      "name": "Strathfield Municipal Council",
       "slug": "strathfield",
       "absCode": "17100",
       "absName": "Strathfield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5b48a02a6055"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Sutherland",
+      "name": "Sutherland Shire Council",
       "slug": "sutherland",
       "absCode": "17150",
       "absName": "Sutherland",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac6194db78942"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Sydney",
+      "name": "Council of the City of Sydney",
       "slug": "sydney",
       "absCode": "17200",
       "absName": "Sydney",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga605d8cdb0eb8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Tamworth",
+      "name": "Tamworth Regional Council",
       "slug": "tamworth",
       "absCode": "17310",
       "absName": "Tamworth",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaeea486bb6672"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Temora",
+      "name": "Temora Shire Council",
       "slug": "temora",
       "absCode": "17350",
       "absName": "Temora",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac1f0900055b8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Tenterfield",
+      "name": "Tenterfield Shire Council",
       "slug": "tenterfield",
       "absCode": "17400",
       "absName": "Tenterfield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7872e04f6637"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "The Hills",
+      "name": "The Hills Shire Council",
       "slug": "the-hills",
       "absCode": "17420",
       "absName": "The Hills",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae04a9b8beff3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Tweed",
+      "name": "Tweed Shire Council",
       "slug": "tweed",
       "absCode": "17550",
       "absName": "Tweed",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac030388b8cd2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Upper Hunter",
+      "name": "Upper Hunter Shire Council",
       "slug": "upper-hunter",
       "absCode": "17620",
       "absName": "Upper Hunter",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6878096e3730"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Upper Lachlan",
+      "name": "Upper Lachlan Shire Council",
       "slug": "upper-lachlan",
       "absCode": "17640",
       "absName": "Upper Lachlan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga323b4f634457"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Uralla",
+      "name": "Uralla Shire Council",
       "slug": "uralla",
       "absCode": "17650",
       "absName": "Uralla",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae8f4144e136c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Wagga Wagga",
+      "name": "Wagga Wagga City Council",
       "slug": "wagga-wagga",
       "absCode": "17750",
       "absName": "Wagga Wagga",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga03a912e8133a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Walcha",
+      "name": "Walcha Council",
       "slug": "walcha",
       "absCode": "17850",
       "absName": "Walcha",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6dc87a14cedf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Walgett",
+      "name": "Walgett Shire Council",
       "slug": "walgett",
       "absCode": "17900",
       "absName": "Walgett",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8a9daa01dafd"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Warren",
+      "name": "Warren Shire Council",
       "slug": "warren",
       "absCode": "17950",
       "absName": "Warren",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6bae9beb633e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Warrumbungle",
+      "name": "Warrumbungle Shire Council",
       "slug": "warrumbungle",
       "absCode": "18020",
       "absName": "Warrumbungle",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga810ab3c44f0d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Waverley",
+      "name": "Waverley Council",
       "slug": "waverley",
       "absCode": "18050",
       "absName": "Waverley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7aa37c79c7ff"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Weddin",
+      "name": "Weddin Shire Council",
       "slug": "weddin",
       "absCode": "18100",
       "absName": "Weddin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9a31571bf3db"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Wentworth",
+      "name": "Wentworth Shire Council",
       "slug": "wentworth",
       "absCode": "18200",
       "absName": "Wentworth",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga884d7f3e1aaf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Willoughby",
+      "name": "Willoughby City Council",
       "slug": "willoughby",
       "absCode": "18250",
       "absName": "Willoughby",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaef8006a5824e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Wingecarribee",
+      "name": "Wingecarribee Shire Council",
       "slug": "wingecarribee",
       "absCode": "18350",
       "absName": "Wingecarribee",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab418fd9e27ef"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Wollondilly",
+      "name": "Wollondilly Shire Council",
       "slug": "wollondilly",
       "absCode": "18400",
       "absName": "Wollondilly",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6ea491feb08f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Wollongong",
+      "name": "Wollongong City Council",
       "slug": "wollongong",
       "absCode": "18450",
       "absName": "Wollongong",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0cd900c07cca"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Woollahra",
+      "name": "Woollahra Municipal Council",
       "slug": "woollahra",
       "absCode": "18500",
       "absName": "Woollahra",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0f45891fa7ad"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "new-south-wales",
-      "name": "Yass Valley",
+      "name": "Yass Valley Council",
       "slug": "yass-valley",
       "absCode": "18710",
       "absName": "Yass Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga80114cd78624"
     },
     {
       "group": "abs",
@@ -6757,46 +6887,50 @@
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Adelaide",
+      "name": "City of Adelaide",
       "slug": "adelaide",
       "absCode": "40070",
       "absName": "Adelaide",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1FSamwQfor7X"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Adelaide Hills",
+      "name": "Adelaide Hills Council",
       "slug": "adelaide-hills",
       "absCode": "40120",
       "absName": "Adelaide Hills",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacbedc6edfda0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Adelaide Plains",
+      "name": "Adelaide Plains Council",
       "slug": "adelaide-plains",
       "absCode": "40150",
       "absName": "Adelaide Plains",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga599c2b7703f6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Alexandrina",
+      "name": "Alexandrina Council",
       "slug": "alexandrina",
       "absCode": "40220",
       "absName": "Alexandrina",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga99dcfd338775"
     },
     {
       "group": "abs",
@@ -6807,183 +6941,200 @@
       "absName": "Anangu Pitjantjatjara Yankunytjatjara",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga36e6a0d7b551"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Barossa",
+      "name": "The Barossa Council",
       "slug": "barossa",
       "absCode": "40310",
       "absName": "Barossa",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga38df96951853"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Barunga West",
+      "name": "Barunga West Council",
       "slug": "barunga-west",
       "absCode": "40430",
       "absName": "Barunga West",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga74dbd640905c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Berri Barmera",
+      "name": "The Berri Barmera Council",
       "slug": "berri-barmera",
       "absCode": "40520",
       "absName": "Berri Barmera",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga192eccf40a5e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Burnside",
+      "name": "City of Burnside",
       "slug": "burnside",
       "absCode": "40700",
       "absName": "Burnside",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2eb524438c47"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Campbelltown (SA)",
+      "name": "Campbelltown City Council",
       "slug": "campbelltown-sa",
       "absCode": "40910",
       "absName": "Campbelltown (SA)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae01a99dc2d13"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Ceduna",
+      "name": "The DC of Ceduna",
       "slug": "ceduna",
       "absCode": "41010",
       "absName": "Ceduna",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa8d127fa14e7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Charles Sturt",
+      "name": "City of Charles Sturt",
       "slug": "charles-sturt",
       "absCode": "41060",
       "absName": "Charles Sturt",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa5189b29870a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Clare and Gilbert Valleys",
+      "name": "Clare and Gilbert Valleys Council",
       "slug": "clare-and-gilbert-valleys",
       "absCode": "41140",
       "absName": "Clare and Gilbert Valleys",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab09f307c62c1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Cleve",
+      "name": "The DC of Cleve",
       "slug": "cleve",
       "absCode": "41190",
       "absName": "Cleve",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6a357c442a18"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Coober Pedy",
+      "name": "The DC of Coober Pedy",
       "slug": "coober-pedy",
       "absCode": "41330",
       "absName": "Coober Pedy",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab57364d45722"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Copper Coast",
+      "name": "Copper Coast Council",
       "slug": "copper-coast",
       "absCode": "41560",
       "absName": "Copper Coast",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga35875dc8cb05"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Elliston",
+      "name": "DC of Elliston",
       "slug": "elliston",
       "absCode": "41750",
       "absName": "Elliston",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7333736c25bf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Flinders Ranges",
+      "name": "The Flinders Ranges Council",
       "slug": "flinders-ranges",
       "absCode": "41830",
       "absName": "Flinders Ranges",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac7b472aadeba"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Franklin Harbour",
+      "name": "The DC of Franklin Harbour",
       "slug": "franklin-harbour",
       "absCode": "41960",
       "absName": "Franklin Harbour",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgafbe47746b70a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Gawler",
+      "name": "Town of Gawler",
       "slug": "gawler",
       "absCode": "42030",
       "absName": "Gawler",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgace51bb223ee3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Goyder",
+      "name": "The Regional Council of Goyder",
       "slug": "goyder",
       "absCode": "42110",
       "absName": "Goyder",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga608f6aae1412"
     },
     {
       "group": "abs",
@@ -6993,79 +7144,87 @@
       "absCode": "42250",
       "absName": "Grant",
       "kind": "abs",
-      "flags": [],
+      "flags": [
+        "sa-grant"
+      ],
       "vecPath": null
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Holdfast Bay",
+      "name": "City of Holdfast Bay",
       "slug": "holdfast-bay",
       "absCode": "42600",
       "absName": "Holdfast Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaed9e730476c1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Kangaroo Island",
+      "name": "Kangaroo Island Council",
       "slug": "kangaroo-island",
       "absCode": "42750",
       "absName": "Kangaroo Island",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga28e246b3a0dd"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Karoonda East Murray",
+      "name": "The DC of Karoonda East Murray",
       "slug": "karoonda-east-murray",
       "absCode": "43080",
       "absName": "Karoonda East Murray",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0f98f8cfc594"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Kimba",
+      "name": "The DC of Kimba",
       "slug": "kimba",
       "absCode": "43220",
       "absName": "Kimba",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad7c8302d7c99"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Kingston (SA)",
+      "name": "Kingston DC",
       "slug": "kingston-sa",
       "absCode": "43360",
       "absName": "Kingston (SA)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga58e5a61add88"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Light",
+      "name": "Light Regional Council",
       "slug": "light",
       "absCode": "43650",
       "absName": "Light",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga987936deba94"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Lower Eyre",
+      "name": "Lower Eyre Council",
       "slug": "lower-eyre",
       "absCode": "43710",
       "absName": "Lower Eyre",
@@ -7073,18 +7232,20 @@
       "flags": [
         "lower-eyre"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaGyBYDi99uya6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Loxton Waikerie",
+      "name": "The DC of Loxton Waikerie",
       "slug": "loxton-waikerie",
       "absCode": "43790",
       "absName": "Loxton Waikerie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf207b6af36f1"
     },
     {
       "group": "abs",
@@ -7095,436 +7256,476 @@
       "absName": "Maralinga Tjarutja",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgade4a9cc32421"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Marion",
+      "name": "City of Marion",
       "slug": "marion",
       "absCode": "44060",
       "absName": "Marion",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga99e9c6a53cea"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Mid Murray",
+      "name": "Mid Murray Council",
       "slug": "mid-murray",
       "absCode": "44210",
       "absName": "Mid Murray",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaeca0b96b0442"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Mitcham",
+      "name": "City of Mitcham",
       "slug": "mitcham",
       "absCode": "44340",
       "absName": "Mitcham",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac82127f201d7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Mount Barker",
+      "name": "Mount Barker District Council",
       "slug": "mount-barker",
       "absCode": "44550",
       "absName": "Mount Barker",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1cecb0a38f64"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Mount Gambier",
+      "name": "City of Mount Gambier",
       "slug": "mount-gambier",
       "absCode": "44620",
       "absName": "Mount Gambier",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab4b3f2fe7f57"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Mount Remarkable",
+      "name": "The DC of Mount Remarkable",
       "slug": "mount-remarkable",
       "absCode": "44830",
       "absName": "Mount Remarkable",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1f5afc0a8552"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Murray Bridge",
+      "name": "The Rural City of Murray Bridge",
       "slug": "murray-bridge",
       "absCode": "45040",
       "absName": "Murray Bridge",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadddff4f68724"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Naracoorte Lucindale",
+      "name": "Naracoorte Lucindale Council",
       "slug": "naracoorte-lucindale",
       "absCode": "45090",
       "absName": "Naracoorte Lucindale",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8bc46b850b25"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Northern Areas",
+      "name": "Northern Areas Council",
       "slug": "northern-areas",
       "absCode": "45120",
       "absName": "Northern Areas",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae7a122b2d3e4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Norwood Payneham and St Peters",
+      "name": "The City of Norwood Payneham and St Peters",
       "slug": "norwood-payneham-and-st-peters",
       "absCode": "45290",
       "absName": "Norwood Payneham and St Peters",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9b9a22037920"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Onkaparinga",
+      "name": "City of Onkaparinga",
       "slug": "onkaparinga",
       "absCode": "45340",
       "absName": "Onkaparinga",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga16d82bd5306a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Orroroo Carrieton",
+      "name": "The DC of Orroroo Carrieton",
       "slug": "orroroo-carrieton",
       "absCode": "45400",
       "absName": "Orroroo Carrieton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2d166f65332c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Peterborough",
+      "name": "The DC of Peterborough",
       "slug": "peterborough",
       "absCode": "45540",
       "absName": "Peterborough",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga69647734ec7d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Playford",
+      "name": "City of Playford",
       "slug": "playford",
       "absCode": "45680",
       "absName": "Playford",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga39b8f2c918bf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Port Adelaide Enfield",
+      "name": "City of Port Adelaide Enfield",
       "slug": "port-adelaide-enfield",
       "absCode": "45890",
       "absName": "Port Adelaide Enfield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3fe8017e2eff"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Port Augusta",
+      "name": "Port Augusta City Council",
       "slug": "port-augusta",
       "absCode": "46090",
       "absName": "Port Augusta",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9b1b1696edd4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Port Lincoln",
+      "name": "City of Port Lincoln",
       "slug": "port-lincoln",
       "absCode": "46300",
       "absName": "Port Lincoln",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga408360683989"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Port Pirie",
+      "name": "Port Pirie Regional Council",
       "slug": "port-pirie",
       "absCode": "46450",
       "absName": "Port Pirie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4b54ad6025be"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Prospect",
+      "name": "City of Prospect",
       "slug": "prospect",
       "absCode": "46510",
       "absName": "Prospect",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5c9fb4d86069"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Renmark Paringa",
+      "name": "Renmark Paringa Council",
       "slug": "renmark-paringa",
       "absCode": "46670",
       "absName": "Renmark Paringa",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf56cee514c44"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Robe",
+      "name": "DC of Robe",
       "slug": "robe",
       "absCode": "46860",
       "absName": "Robe",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5f7f458702ae"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Roxby Downs",
+      "name": "Municipal Council of Roxby Downs",
       "slug": "roxby-downs",
       "absCode": "46970",
       "absName": "Roxby Downs",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgafeac940b9d7e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Salisbury",
+      "name": "City of Salisbury",
       "slug": "salisbury",
       "absCode": "47140",
       "absName": "Salisbury",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga19ee0d725d8c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Southern Mallee",
+      "name": "Southern Mallee DC",
       "slug": "southern-mallee",
       "absCode": "47290",
       "absName": "Southern Mallee",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6b1a0c50359b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Streaky Bay",
+      "name": "The DC of Streaky Bay",
       "slug": "streaky-bay",
       "absCode": "47490",
       "absName": "Streaky Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga060548248172"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Tatiara",
+      "name": "Tatiara DC",
       "slug": "tatiara",
       "absCode": "47630",
       "absName": "Tatiara",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab452c57d42fb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Tea Tree Gully",
+      "name": "City of Tea Tree Gully",
       "slug": "tea-tree-gully",
       "absCode": "47700",
       "absName": "Tea Tree Gully",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacc6a33b87371"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Coorong",
+      "name": "Coorong District Council",
       "slug": "coorong",
       "absCode": "47800",
       "absName": "Coorong",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga33e2b743dc9e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Tumby Bay",
+      "name": "The DC of Tumby Bay",
       "slug": "tumby-bay",
       "absCode": "47910",
       "absName": "Tumby Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2996272c7e21"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Unley",
+      "name": "City of Unley",
       "slug": "unley",
       "absCode": "47980",
       "absName": "Unley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab9c7be05c331"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Victor Harbor",
+      "name": "City of Victor Harbor",
       "slug": "victor-harbor",
       "absCode": "48050",
       "absName": "Victor Harbor",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1d0fb33d086d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Wakefield",
+      "name": "Wakefield Regional Council",
       "slug": "wakefield",
       "absCode": "48130",
       "absName": "Wakefield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaafe2b0257283"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Walkerville",
+      "name": "The Corporation of the Town of Walkerville",
       "slug": "walkerville",
       "absCode": "48260",
       "absName": "Walkerville",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6119b80e9c90"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Wattle Range",
+      "name": "Wattle Range Council",
       "slug": "wattle-range",
       "absCode": "48340",
       "absName": "Wattle Range",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0bef6bb787be"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "West Torrens",
+      "name": "City of West Torrens",
       "slug": "west-torrens",
       "absCode": "48410",
       "absName": "West Torrens",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5fa4aba46d55"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Whyalla",
+      "name": "The Corporation of the City of Whyalla",
       "slug": "whyalla",
       "absCode": "48540",
       "absName": "Whyalla",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacddbacde759d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Wudinna",
+      "name": "Wudinna District Council",
       "slug": "wudinna",
       "absCode": "48640",
       "absName": "Wudinna",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga717995154949"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Yankalilla",
+      "name": "The DC of Yankalilla",
       "slug": "yankalilla",
       "absCode": "48750",
       "absName": "Yankalilla",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaaa3fe2d121d5"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "south-australia",
-      "name": "Yorke Peninsula",
+      "name": "Yorke Peninsula Council",
       "slug": "yorke-peninsula",
       "absCode": "48830",
       "absName": "Yorke Peninsula",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga11baf8370c20"
     },
     {
       "group": "abs",
@@ -7540,271 +7741,295 @@
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Albany",
+      "name": "City of Albany",
       "slug": "albany",
       "absCode": "50080",
       "absName": "Albany",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga379ed169b677"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Armadale",
+      "name": "City of Armadale",
       "slug": "armadale",
       "absCode": "50210",
       "absName": "Armadale",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga946039bb144d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Ashburton",
+      "name": "Shire of Ashburton",
       "slug": "ashburton",
       "absCode": "50250",
       "absName": "Ashburton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga229c15cd02b0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Augusta Margaret River",
+      "name": "Shire of Augusta Margaret River",
       "slug": "augusta-margaret-river",
       "absCode": "50280",
       "absName": "Augusta Margaret River",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga414bd8064616"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Bassendean",
+      "name": "Town of Bassendean",
       "slug": "bassendean",
       "absCode": "50350",
       "absName": "Bassendean",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga249121dcca41"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Bayswater",
+      "name": "City of Bayswater",
       "slug": "bayswater",
       "absCode": "50420",
       "absName": "Bayswater",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3eb9e8612da7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Belmont",
+      "name": "City of Belmont",
       "slug": "belmont",
       "absCode": "50490",
       "absName": "Belmont",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab3eac047a70e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Beverley",
+      "name": "Shire of Beverley",
       "slug": "beverley",
       "absCode": "50560",
       "absName": "Beverley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga61e1c98d8152"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Boddington",
+      "name": "Shire of Boddington",
       "slug": "boddington",
       "absCode": "50630",
       "absName": "Boddington",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7ef478296601"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Boyup Brook",
+      "name": "Shire of Boyup Brook",
       "slug": "boyup-brook",
       "absCode": "50770",
       "absName": "Boyup Brook",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6865b59a3293"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Bridgetown-Greenbushes",
+      "name": "Shire of Bridgetown-Greenbushes",
       "slug": "bridgetown-greenbushes",
       "absCode": "50840",
       "absName": "Bridgetown-Greenbushes",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae7e328edc533"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Brookton",
+      "name": "Shire of Brookton",
       "slug": "brookton",
       "absCode": "50910",
       "absName": "Brookton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabc34c259f2c1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Broome",
+      "name": "Shire of Broome",
       "slug": "broome",
       "absCode": "50980",
       "absName": "Broome",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3cd9f2694391"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Broomehill-Tambellup",
+      "name": "Shire of Broomehill-Tambellup",
       "slug": "broomehill-tambellup",
       "absCode": "51080",
       "absName": "Broomehill-Tambellup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae6d2505d0848"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Bruce Rock",
+      "name": "Shire of Bruce Rock",
       "slug": "bruce-rock",
       "absCode": "51120",
       "absName": "Bruce Rock",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf831d9214a70"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Bunbury",
+      "name": "City of Bunbury",
       "slug": "bunbury",
       "absCode": "51190",
       "absName": "Bunbury",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga66fa01403049"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Busselton",
+      "name": "City of Busselton",
       "slug": "busselton",
       "absCode": "51260",
       "absName": "Busselton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaef496d06ef50"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cambridge",
+      "name": "Town of Cambridge",
       "slug": "cambridge",
       "absCode": "51310",
       "absName": "Cambridge",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab9a0794b42cb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Canning",
+      "name": "City of Canning",
       "slug": "canning",
       "absCode": "51330",
       "absName": "Canning",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf74ff9036145"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Capel",
+      "name": "Shire of Capel",
       "slug": "capel",
       "absCode": "51400",
       "absName": "Capel",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacfca57f84e65"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Carnamah",
+      "name": "Shire of Carnamah",
       "slug": "carnamah",
       "absCode": "51470",
       "absName": "Carnamah",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga92518f75c64f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Carnarvon",
+      "name": "Shire of Carnarvon",
       "slug": "carnarvon",
       "absCode": "51540",
       "absName": "Carnarvon",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0dd57caaec14"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Chapman Valley",
+      "name": "Shire of Chapman Valley",
       "slug": "chapman-valley",
       "absCode": "51610",
       "absName": "Chapman Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7e5fbd01677a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Chittering",
+      "name": "Shire of Chittering",
       "slug": "chittering",
       "absCode": "51680",
       "absName": "Chittering",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4bbd09ca7a5d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "other-territories",
-      "name": "Christmas Island",
+      "name": "Shire of Christmas Island",
       "slug": "christmas-island",
       "absCode": "51710",
       "absName": "Christmas Island",
@@ -7812,34 +8037,37 @@
       "flags": [
         "christmas"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga68fdd0066f94"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Claremont",
+      "name": "Town of Claremont",
       "slug": "claremont",
       "absCode": "51750",
       "absName": "Claremont",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga19a8033e8309"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cockburn",
+      "name": "City of Cockburn",
       "slug": "cockburn",
       "absCode": "51820",
       "absName": "Cockburn",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1542e1fe6ca8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "other-territories",
-      "name": "Cocos (Keeling) Islands",
+      "name": "Shire of Cocos (Keeling) Islands",
       "slug": "cocos-keeling-islands",
       "absCode": "51860",
       "absName": "Cocos (Keeling) Islands",
@@ -7847,1629 +8075,1777 @@
       "flags": [
         "cocos"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaVgu0GvW1EC5u"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Collie",
+      "name": "Shire of Collie",
       "slug": "collie",
       "absCode": "51890",
       "absName": "Collie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0d85d3fddb5e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Coolgardie",
+      "name": "Shire of Coolgardie",
       "slug": "coolgardie",
       "absCode": "51960",
       "absName": "Coolgardie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf727f4e6c55a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Coorow",
+      "name": "Shire of Coorow",
       "slug": "coorow",
       "absCode": "52030",
       "absName": "Coorow",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8395a0fe7d78"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Corrigin",
+      "name": "Shire of Corrigin",
       "slug": "corrigin",
       "absCode": "52100",
       "absName": "Corrigin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8e67f5c3f7bd"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cottesloe",
+      "name": "Town of Cottesloe",
       "slug": "cottesloe",
       "absCode": "52170",
       "absName": "Cottesloe",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5eef542268b3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cranbrook",
+      "name": "Shire of Cranbrook",
       "slug": "cranbrook",
       "absCode": "52240",
       "absName": "Cranbrook",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgade6ace77b38e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cuballing",
+      "name": "Shire of Cuballing",
       "slug": "cuballing",
       "absCode": "52310",
       "absName": "Cuballing",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac6f1ea631630"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cue",
+      "name": "Shire of Cue",
       "slug": "cue",
       "absCode": "52380",
       "absName": "Cue",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf541e02329a3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Cunderdin",
+      "name": "Shire of Cunderdin",
       "slug": "cunderdin",
       "absCode": "52450",
       "absName": "Cunderdin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacd1b80b93aa1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dalwallinu",
+      "name": "Shire of Dalwallinu",
       "slug": "dalwallinu",
       "absCode": "52520",
       "absName": "Dalwallinu",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga20b55ec935eb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dandaragan",
+      "name": "Shire of Dandaragan",
       "slug": "dandaragan",
       "absCode": "52590",
       "absName": "Dandaragan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga29c58e930f89"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dardanup",
+      "name": "Shire of Dardanup",
       "slug": "dardanup",
       "absCode": "52660",
       "absName": "Dardanup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga38ed4e0442db"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Denmark",
+      "name": "Shire of Denmark",
       "slug": "denmark",
       "absCode": "52730",
       "absName": "Denmark",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadf64019486fb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Derby-West Kimberley",
+      "name": "Shire of Derby-West Kimberley",
       "slug": "derby-west-kimberley",
       "absCode": "52800",
       "absName": "Derby-West Kimberley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf98fbb5e40bf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Donnybrook-Balingup",
+      "name": "Shire of Donnybrook-Balingup",
       "slug": "donnybrook-balingup",
       "absCode": "52870",
       "absName": "Donnybrook-Balingup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5b94fd0071aa"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dowerin",
+      "name": "Shire of Dowerin",
       "slug": "dowerin",
       "absCode": "52940",
       "absName": "Dowerin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga785cef594375"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dumbleyung",
+      "name": "Shire of Dumbleyung",
       "slug": "dumbleyung",
       "absCode": "53010",
       "absName": "Dumbleyung",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa87e70f3e5ad"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Dundas",
+      "name": "Shire of Dundas",
       "slug": "dundas",
       "absCode": "53080",
       "absName": "Dundas",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga86b2ee730455"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "East Fremantle",
+      "name": "Town of East Fremantle",
       "slug": "east-fremantle",
       "absCode": "53150",
       "absName": "East Fremantle",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga308d7945e467"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "East Pilbara",
+      "name": "Shire of East Pilbara",
       "slug": "east-pilbara",
       "absCode": "53220",
       "absName": "East Pilbara",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa7208507e0f1"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Esperance",
+      "name": "Shire of Esperance",
       "slug": "esperance",
       "absCode": "53290",
       "absName": "Esperance",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad2283997d8bb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Exmouth",
+      "name": "Shire of Exmouth",
       "slug": "exmouth",
       "absCode": "53360",
       "absName": "Exmouth",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad2776e3c6795"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Fremantle",
+      "name": "City of Fremantle",
       "slug": "fremantle",
       "absCode": "53430",
       "absName": "Fremantle",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7d1ac9e6f9f2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Gingin",
+      "name": "Shire of Gingin",
       "slug": "gingin",
       "absCode": "53570",
       "absName": "Gingin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga11d20fddfb64"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Gnowangerup",
+      "name": "Shire of Gnowangerup",
       "slug": "gnowangerup",
       "absCode": "53640",
       "absName": "Gnowangerup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf72648a14c99"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Goomalling",
+      "name": "Shire of Goomalling",
       "slug": "goomalling",
       "absCode": "53710",
       "absName": "Goomalling",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga71e2fd0d5791"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Gosnells",
+      "name": "City of Gosnells",
       "slug": "gosnells",
       "absCode": "53780",
       "absName": "Gosnells",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5bf1a288038c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Greater Geraldton",
+      "name": "City of Greater Geraldton",
       "slug": "greater-geraldton",
       "absCode": "53800",
       "absName": "Greater Geraldton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1d9cab11a368"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Halls Creek",
+      "name": "Shire of Halls Creek",
       "slug": "halls-creek",
       "absCode": "53920",
       "absName": "Halls Creek",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabd9af5aa0252"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Harvey",
+      "name": "Shire of Harvey",
       "slug": "harvey",
       "absCode": "53990",
       "absName": "Harvey",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga511d862349e9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Irwin",
+      "name": "Shire of Irwin",
       "slug": "irwin",
       "absCode": "54060",
       "absName": "Irwin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad47340f34cec"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Jerramungup",
+      "name": "Shire of Jerramungup",
       "slug": "jerramungup",
       "absCode": "54130",
       "absName": "Jerramungup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga12769e4db461"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Joondalup",
+      "name": "City of Joondalup",
       "slug": "joondalup",
       "absCode": "54170",
       "absName": "Joondalup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabaf7923db3cd"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kalamunda",
+      "name": "City of Kalamunda",
       "slug": "kalamunda",
       "absCode": "54200",
       "absName": "Kalamunda",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0ccb0029de1f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kalgoorlie-Boulder",
+      "name": "City of Kalgoorlie-Boulder",
       "slug": "kalgoorlie-boulder",
       "absCode": "54280",
       "absName": "Kalgoorlie-Boulder",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4f3ca10078b8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Karratha",
+      "name": "City of Karratha",
       "slug": "karratha",
       "absCode": "54310",
       "absName": "Karratha",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga12712c7fbac0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Katanning",
+      "name": "Shire of Katanning",
       "slug": "katanning",
       "absCode": "54340",
       "absName": "Katanning",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga973150bcdd61"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kellerberrin",
+      "name": "Shire of Kellerberrin",
       "slug": "kellerberrin",
       "absCode": "54410",
       "absName": "Kellerberrin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaedf9a6d63236"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kent",
+      "name": "Shire of Kent",
       "slug": "kent",
       "absCode": "54480",
       "absName": "Kent",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7750939566b3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kojonup",
+      "name": "Shire of Kojonup",
       "slug": "kojonup",
       "absCode": "54550",
       "absName": "Kojonup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga39c4dd524dac"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kondinin",
+      "name": "Shire of Kondinin",
       "slug": "kondinin",
       "absCode": "54620",
       "absName": "Kondinin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga24d28a4c70da"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Koorda",
+      "name": "Shire of Koorda",
       "slug": "koorda",
       "absCode": "54690",
       "absName": "Koorda",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa32a5ebfe1fe"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kulin",
+      "name": "Shire of Kulin",
       "slug": "kulin",
       "absCode": "54760",
       "absName": "Kulin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab5f23977018c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Kwinana",
+      "name": "City of Kwinana",
       "slug": "kwinana",
       "absCode": "54830",
       "absName": "Kwinana",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga579e63cc4329"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Lake Grace",
+      "name": "Shire of Lake Grace",
       "slug": "lake-grace",
       "absCode": "54900",
       "absName": "Lake Grace",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7cebf871e252"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Laverton",
+      "name": "Shire of Laverton",
       "slug": "laverton",
       "absCode": "54970",
       "absName": "Laverton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0cc4ddc4db86"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Leonora",
+      "name": "Shire of Leonora",
       "slug": "leonora",
       "absCode": "55040",
       "absName": "Leonora",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga73b63f4a19bf"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mandurah",
+      "name": "City of Mandurah",
       "slug": "mandurah",
       "absCode": "55110",
       "absName": "Mandurah",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacb39af3c4099"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Manjimup",
+      "name": "Shire of Manjimup",
       "slug": "manjimup",
       "absCode": "55180",
       "absName": "Manjimup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga82fa96c43da5"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Meekatharra",
+      "name": "Shire of Meekatharra",
       "slug": "meekatharra",
       "absCode": "55250",
       "absName": "Meekatharra",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2f8a5155a29b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Melville",
+      "name": "City of Melville",
       "slug": "melville",
       "absCode": "55320",
       "absName": "Melville",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0ea91c482c93"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Menzies",
+      "name": "Shire of Menzies",
       "slug": "menzies",
       "absCode": "55390",
       "absName": "Menzies",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga316abd31014a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Merredin",
+      "name": "Shire of Merredin",
       "slug": "merredin",
       "absCode": "55460",
       "absName": "Merredin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga82cb34cd75f9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mingenew",
+      "name": "Shire of Mingenew",
       "slug": "mingenew",
       "absCode": "55530",
       "absName": "Mingenew",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab6cdd8758fd2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Moora",
+      "name": "Shire of Moora",
       "slug": "moora",
       "absCode": "55600",
       "absName": "Moora",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3720a59ebb88"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Morawa",
+      "name": "Shire of Morawa",
       "slug": "morawa",
       "absCode": "55670",
       "absName": "Morawa",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae6f7bd562b36"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mosman Park",
+      "name": "Town of Mosman Park",
       "slug": "mosman-park",
       "absCode": "55740",
       "absName": "Mosman Park",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga58f09d37a397"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mount Magnet",
+      "name": "Shire of Mount Magnet",
       "slug": "mount-magnet",
       "absCode": "55810",
       "absName": "Mount Magnet",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa12d016cf1b8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mount Marshall",
+      "name": "Shire of Mount Marshall",
       "slug": "mount-marshall",
       "absCode": "55880",
       "absName": "Mount Marshall",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaadaba7b8188b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mukinbudin",
+      "name": "Shire of Mukinbudin",
       "slug": "mukinbudin",
       "absCode": "55950",
       "absName": "Mukinbudin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga18c31571e0c9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Mundaring",
+      "name": "Shire of Mundaring",
       "slug": "mundaring",
       "absCode": "56090",
       "absName": "Mundaring",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0a82ff04fef4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Murchison",
+      "name": "Shire of Murchison",
       "slug": "murchison",
       "absCode": "56160",
       "absName": "Murchison",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga436a539def23"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Murray",
+      "name": "Shire of Murray",
       "slug": "murray",
       "absCode": "56230",
       "absName": "Murray",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf2d2ad956e56"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Nannup",
+      "name": "Shire of Nannup",
       "slug": "nannup",
       "absCode": "56300",
       "absName": "Nannup",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf1f600985d14"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Narembeen",
+      "name": "Shire of Narembeen",
       "slug": "narembeen",
       "absCode": "56370",
       "absName": "Narembeen",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab5874eb131f0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Narrogin",
+      "name": "Shire of Narrogin",
       "slug": "narrogin",
       "absCode": "56460",
       "absName": "Narrogin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8e9c9fb4128c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Nedlands",
+      "name": "City of Nedlands",
       "slug": "nedlands",
       "absCode": "56580",
       "absName": "Nedlands",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad293701a4487"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Ngaanyatjarraku",
+      "name": "Shire of Ngaanyatjarraku",
       "slug": "ngaanyatjarraku",
       "absCode": "56620",
       "absName": "Ngaanyatjarraku",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga11f7bab2f676"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Northam",
+      "name": "Shire of Northam",
       "slug": "northam",
       "absCode": "56730",
       "absName": "Northam",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabbf72d87e377"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Northampton",
+      "name": "Shire of Northampton",
       "slug": "northampton",
       "absCode": "56790",
       "absName": "Northampton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga04147236faf8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Nungarin",
+      "name": "Shire of Nungarin",
       "slug": "nungarin",
       "absCode": "56860",
       "absName": "Nungarin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3aa95fb2719e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Peppermint Grove",
+      "name": "Shire of Peppermint Grove",
       "slug": "peppermint-grove",
       "absCode": "56930",
       "absName": "Peppermint Grove",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad72a1f990ff7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Perenjori",
+      "name": "Shire of Perenjori",
       "slug": "perenjori",
       "absCode": "57000",
       "absName": "Perenjori",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9e25595be1a8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Perth",
+      "name": "City of Perth",
       "slug": "perth",
       "absCode": "57080",
       "absName": "Perth",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6cd8632bd9ac"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Pingelly",
+      "name": "Shire of Pingelly",
       "slug": "pingelly",
       "absCode": "57140",
       "absName": "Pingelly",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabfdb0e6e58eb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Plantagenet",
+      "name": "Shire of Plantagenet",
       "slug": "plantagenet",
       "absCode": "57210",
       "absName": "Plantagenet",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad0d34812905f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Port Hedland",
+      "name": "Town of Port Hedland",
       "slug": "port-hedland",
       "absCode": "57280",
       "absName": "Port Hedland",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga86d3c596961b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Quairading",
+      "name": "Shire of Quairading",
       "slug": "quairading",
       "absCode": "57350",
       "absName": "Quairading",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae116c39ea091"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Ravensthorpe",
+      "name": "Shire of Ravensthorpe",
       "slug": "ravensthorpe",
       "absCode": "57420",
       "absName": "Ravensthorpe",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa8d0362bfeb5"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Rockingham",
+      "name": "City of Rockingham",
       "slug": "rockingham",
       "absCode": "57490",
       "absName": "Rockingham",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga4559e6ef11e9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Sandstone",
+      "name": "Shire of Sandstone",
       "slug": "sandstone",
       "absCode": "57630",
       "absName": "Sandstone",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaae05f8365ed7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Serpentine-Jarrahdale",
+      "name": "Shire of Serpentine-Jarrahdale",
       "slug": "serpentine-jarrahdale",
       "absCode": "57700",
       "absName": "Serpentine-Jarrahdale",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga45bb210e889f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Shark Bay",
+      "name": "Shire of Shark Bay",
       "slug": "shark-bay",
       "absCode": "57770",
       "absName": "Shark Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac92c57e776fe"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "South Perth",
+      "name": "City of South Perth",
       "slug": "south-perth",
       "absCode": "57840",
       "absName": "South Perth",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga0d30a54abcf0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Stirling",
+      "name": "City of Stirling",
       "slug": "stirling",
       "absCode": "57910",
       "absName": "Stirling",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga86925da5ab9b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Subiaco",
+      "name": "City of Subiaco",
       "slug": "subiaco",
       "absCode": "57980",
       "absName": "Subiaco",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab855ea38a0b7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Swan",
+      "name": "City of Swan",
       "slug": "swan",
       "absCode": "58050",
       "absName": "Swan",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae7983979ea71"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Tammin",
+      "name": "Shire of Tammin",
       "slug": "tammin",
       "absCode": "58190",
       "absName": "Tammin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga64168a04fcd8"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Three Springs",
+      "name": "Shire of Three Springs",
       "slug": "three-springs",
       "absCode": "58260",
       "absName": "Three Springs",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga6e99a82a691c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Toodyay",
+      "name": "Shire of Toodyay",
       "slug": "toodyay",
       "absCode": "58330",
       "absName": "Toodyay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf1c1a3032608"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Trayning",
+      "name": "Shire of Trayning",
       "slug": "trayning",
       "absCode": "58400",
       "absName": "Trayning",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga08f63037e77f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Upper Gascoyne",
+      "name": "Shire of Upper Gascoyne",
       "slug": "upper-gascoyne",
       "absCode": "58470",
       "absName": "Upper Gascoyne",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga20701c94989d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Victoria Park",
+      "name": "Town of Victoria Park",
       "slug": "victoria-park",
       "absCode": "58510",
       "absName": "Victoria Park",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadfe21f7497cb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Victoria Plains",
+      "name": "Shire of Victoria Plains",
       "slug": "victoria-plains",
       "absCode": "58540",
       "absName": "Victoria Plains",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2e80b58b5711"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Vincent",
+      "name": "City of Vincent",
       "slug": "vincent",
       "absCode": "58570",
       "absName": "Vincent",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga11926c8a5e34"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wagin",
+      "name": "Shire of Wagin",
       "slug": "wagin",
       "absCode": "58610",
       "absName": "Wagin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3729a80b26bc"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wandering",
+      "name": "Shire of Wandering",
       "slug": "wandering",
       "absCode": "58680",
       "absName": "Wandering",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab538acf519fc"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wanneroo",
+      "name": "City of Wanneroo",
       "slug": "wanneroo",
       "absCode": "58760",
       "absName": "Wanneroo",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga68ed6b749934"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Waroona",
+      "name": "Shire of Waroona",
       "slug": "waroona",
       "absCode": "58820",
       "absName": "Waroona",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad09f758e295e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "West Arthur",
+      "name": "Shire of West Arthur",
       "slug": "west-arthur",
       "absCode": "58890",
       "absName": "West Arthur",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa3e251e1feba"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Westonia",
+      "name": "Shire of Westonia",
       "slug": "westonia",
       "absCode": "59030",
       "absName": "Westonia",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaffa4e0003bf4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wickepin",
+      "name": "Shire of Wickepin",
       "slug": "wickepin",
       "absCode": "59100",
       "absName": "Wickepin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9cccb412b663"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Williams",
+      "name": "Shire of Williams",
       "slug": "williams",
       "absCode": "59170",
       "absName": "Williams",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga661866266e0d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wiluna",
+      "name": "Shire of Wiluna",
       "slug": "wiluna",
       "absCode": "59250",
       "absName": "Wiluna",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaeaf55424353d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wongan-Ballidu",
+      "name": "Shire of Wongan-Ballidu",
       "slug": "wongan-ballidu",
       "absCode": "59310",
       "absName": "Wongan-Ballidu",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaaca4bfef4828"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Woodanilling",
+      "name": "Shire of Woodanilling",
       "slug": "woodanilling",
       "absCode": "59320",
       "absName": "Woodanilling",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga85e7a7e7f119"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wyalkatchem",
+      "name": "Shire of Wyalkatchem",
       "slug": "wyalkatchem",
       "absCode": "59330",
       "absName": "Wyalkatchem",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabe5c786d119f"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Wyndham-East Kimberley",
+      "name": "Shire of Wyndham-East Kimberley",
       "slug": "wyndham-east-kimberley",
       "absCode": "59340",
       "absName": "Wyndham-East Kimberley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae219685f904a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Yalgoo",
+      "name": "Shire of Yalgoo",
       "slug": "yalgoo",
       "absCode": "59350",
       "absName": "Yalgoo",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga37ea0bcfd2c0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "Yilgarn",
+      "name": "Shire of Yilgarn",
       "slug": "yilgarn",
       "absCode": "59360",
       "absName": "Yilgarn",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa7c2ec1d9c04"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "western-australia",
-      "name": "York",
+      "name": "Shire of York",
       "slug": "york",
       "absCode": "59370",
       "absName": "York",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf1c36d3484fb"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Break O'Day",
+      "name": "Break O'Day Council",
       "slug": "break-oday",
       "absCode": "60210",
       "absName": "Break O'Day",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5f9b3011df30"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Brighton",
+      "name": "Brighton Council",
       "slug": "brighton",
       "absCode": "60410",
       "absName": "Brighton",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga834b76840988"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Burnie",
+      "name": "Burnie City Council",
       "slug": "burnie",
       "absCode": "60610",
       "absName": "Burnie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa33bbd294e17"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Central Coast (Tas.)",
+      "name": "Central Coast Council",
       "slug": "central-coast-tas",
       "absCode": "60810",
       "absName": "Central Coast (Tas.)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab848eee26cd6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Central Highlands (Tas.)",
+      "name": "Central Highlands Council",
       "slug": "central-highlands-tas",
       "absCode": "61010",
       "absName": "Central Highlands (Tas.)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2e540f3e64d2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Circular Head",
+      "name": "Circular Head Council",
       "slug": "circular-head",
       "absCode": "61210",
       "absName": "Circular Head",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga501d6d4da5d2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Clarence",
+      "name": "Clarence City Council",
       "slug": "clarence",
       "absCode": "61410",
       "absName": "Clarence",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaae8336fce317"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Derwent Valley",
+      "name": "Derwent Valley Council",
       "slug": "derwent-valley",
       "absCode": "61510",
       "absName": "Derwent Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga5c99cd452105"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Devonport",
+      "name": "Devonport City Council",
       "slug": "devonport",
       "absCode": "61610",
       "absName": "Devonport",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga3ec5fd5ac40a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Dorset",
+      "name": "Dorset Council",
       "slug": "dorset",
       "absCode": "61810",
       "absName": "Dorset",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7acebfae7d77"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Flinders (Tas.)",
+      "name": "Flinders Council",
       "slug": "flinders-tas",
       "absCode": "62010",
       "absName": "Flinders (Tas.)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaabfc45eea6db"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "George Town",
+      "name": "George Town Council",
       "slug": "george-town",
       "absCode": "62210",
       "absName": "George Town",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga25332b122f1e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Glamorgan-Spring Bay",
+      "name": "Glamorgan-Spring Bay Council",
       "slug": "glamorgan-spring-bay",
       "absCode": "62410",
       "absName": "Glamorgan-Spring Bay",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac7699d4a3a85"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Glenorchy",
+      "name": "Glenorchy City Council",
       "slug": "glenorchy",
       "absCode": "62610",
       "absName": "Glenorchy",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaed3a2c35aa46"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Hobart",
+      "name": "Hobart City Council",
       "slug": "hobart",
       "absCode": "62810",
       "absName": "Hobart",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacbffb11990f2"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Huon Valley",
+      "name": "Huon Valley Council",
       "slug": "huon-valley",
       "absCode": "63010",
       "absName": "Huon Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgab1d61c9cb781"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Kentish",
+      "name": "Kentish Council",
       "slug": "kentish",
       "absCode": "63210",
       "absName": "Kentish",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad24c06095c0a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "King Island",
+      "name": "King Island Council",
       "slug": "king-island",
       "absCode": "63410",
       "absName": "King Island",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga63f3462bceb9"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Kingborough",
+      "name": "Kingborough Council",
       "slug": "kingborough",
       "absCode": "63610",
       "absName": "Kingborough",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgadc18daa4e36a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Latrobe (Tas.)",
+      "name": "Latrobe Council",
       "slug": "latrobe-tas",
       "absCode": "63810",
       "absName": "Latrobe (Tas.)",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgac20858fe9fc3"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Launceston",
+      "name": "Launceston City Council",
       "slug": "launceston",
       "absCode": "64010",
       "absName": "Launceston",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaf11c4f3e9ae0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Meander Valley",
+      "name": "Meander Valley Council",
       "slug": "meander-valley",
       "absCode": "64210",
       "absName": "Meander Valley",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacc8be94156f0"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Northern Midlands",
+      "name": "Northern Midlands Council",
       "slug": "northern-midlands",
       "absCode": "64610",
       "absName": "Northern Midlands",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgabc6e4e7e1d00"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Sorell",
+      "name": "Sorell Council",
       "slug": "sorell",
       "absCode": "64810",
       "absName": "Sorell",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga20efe678919a"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Southern Midlands",
+      "name": "Southern Midlands Council",
       "slug": "southern-midlands",
       "absCode": "65010",
       "absName": "Southern Midlands",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaaa6eb4f52653"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Tasman",
+      "name": "Tasman Council",
       "slug": "tasman",
       "absCode": "65210",
       "absName": "Tasman",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga958174371749"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "Waratah-Wynyard",
+      "name": "Waratah-Wynyard Council",
       "slug": "waratah-wynyard",
       "absCode": "65410",
       "absName": "Waratah-Wynyard",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga2319b5472a93"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "West Coast",
+      "name": "West Coast Council",
       "slug": "west-coast",
       "absCode": "65610",
       "absName": "West Coast",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa522f0db671c"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "tasmania",
-      "name": "West Tamar",
+      "name": "West Tamar Council",
       "slug": "west-tamar",
       "absCode": "65810",
       "absName": "West Tamar",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgafe5600ae3561"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Alice Springs",
+      "name": "Alice Springs Municipality",
       "slug": "alice-springs",
       "absCode": "70200",
       "absName": "Alice Springs",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga8fa0b5da0f3d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Barkly",
+      "name": "Barkly Region",
       "slug": "barkly",
       "absCode": "70420",
       "absName": "Barkly",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa51eac91a650"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Belyuen",
+      "name": "Belyuen Shire",
       "slug": "belyuen",
       "absCode": "70540",
       "absName": "Belyuen",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad422e43c509e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Central Desert",
+      "name": "Central Desert Region",
       "slug": "central-desert",
       "absCode": "70620",
       "absName": "Central Desert",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga7fa312217bdc"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Coomalie",
+      "name": "Coomalie Shire",
       "slug": "coomalie",
       "absCode": "70700",
       "absName": "Coomalie",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga343974349679"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Darwin",
+      "name": "Darwin Municipality",
       "slug": "darwin",
       "absCode": "71000",
       "absName": "Darwin",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga744170e79f38"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Darwin Waterfront Precinct",
+      "name": "Darwin Waterfront Precinct Municipality",
       "slug": "darwin-waterfront-precinct",
       "absCode": "71150",
       "absName": "Darwin Waterfront Precinct",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaac514315262d"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "East Arnhem",
+      "name": "East Arnhem Region",
       "slug": "east-arnhem",
       "absCode": "71500",
       "absName": "East Arnhem",
@@ -9477,12 +9853,13 @@
       "flags": [
         "east-arnhem"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga1bed9266d38b"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Groote Archipelago",
+      "name": "Groote Archipelago Region",
       "slug": "groote-archipelago",
       "absCode": "71700",
       "absName": "Groote Archipelago",
@@ -9490,117 +9867,128 @@
       "flags": [
         "groote"
       ],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaS9n9ukxb2J06"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Katherine",
+      "name": "Katherine Municipality",
       "slug": "katherine",
       "absCode": "72200",
       "absName": "Katherine",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga512c4490dfd7"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Litchfield",
+      "name": "Litchfield Municipality",
       "slug": "litchfield",
       "absCode": "72300",
       "absName": "Litchfield",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga10f7407af335"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "MacDonnell",
+      "name": "MacDonnell Region",
       "slug": "macdonnell",
       "absCode": "72330",
       "absName": "MacDonnell",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgacea61e3f056e"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Palmerston",
+      "name": "Palmerston Municipality",
       "slug": "palmerston",
       "absCode": "72800",
       "absName": "Palmerston",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaaf6116dc31d4"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Roper Gulf",
+      "name": "Roper Gulf Region",
       "slug": "roper-gulf",
       "absCode": "73600",
       "absName": "Roper Gulf",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga64eddfc50074"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Tiwi Islands",
+      "name": "Tiwi Islands Region",
       "slug": "tiwi-islands",
       "absCode": "74050",
       "absName": "Tiwi Islands",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgaa3498d6da0a6"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Victoria Daly",
+      "name": "Victoria Daly Region",
       "slug": "victoria-daly",
       "absCode": "74550",
       "absName": "Victoria Daly",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga9de0ceb5acee"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "Wagait",
+      "name": "Wagait Shire",
       "slug": "wagait",
       "absCode": "74560",
       "absName": "Wagait",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgad2c6ceceb023"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "West Arnhem",
+      "name": "West Arnhem Region",
       "slug": "west-arnhem",
       "absCode": "74660",
       "absName": "West Arnhem",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lgae334d98be608"
     },
     {
       "group": "abs",
       "jurisdictionSlug": "northern-territory",
-      "name": "West Daly",
+      "name": "West Daly Region",
       "slug": "west-daly",
       "absCode": "74680",
       "absName": "West Daly",
       "kind": "abs",
       "flags": [],
-      "vecPath": null
+      "vecPath": null,
+      "legalPid": "lga66d4787a28c4"
     },
     {
       "group": "abs",
