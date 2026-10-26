@@ -48,6 +48,32 @@ export type ElectionWindow = {
 
 export const ELECTION_WINDOWS: ElectionWindow[] = [
   {
+    id: "il-2026-knesset",
+    country: "il",
+    localLang: "he",
+    election: { en: "Election to the 26th Knesset, 27 October 2026", local: "הבחירות לכנסת ה-26, 27 באוקטובר 2026" },
+    pollingDay: "2026-10-27",
+    trackerOpensAt: "2026-10-27T22:00:00+02:00",
+    officialResults: { label: "Central Elections Committee for the 26th Knesset, results", url: "https://cdn-votes26.bechirot.gov.il/" },
+    verified: {
+      readOn: "2026-10-26",
+      sources: [
+        { label: "Central Elections Committee, candidate lists for the 26th Knesset", url: "https://www.gov.il/he/pages/candidates-lists-26" },
+        { label: "Elections (Modes of Propaganda) Law 5719-1959, s. 16E", url: "https://www.nevo.co.il/law_html/law00/90696.htm" },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-10-23T23:59:00+03:00",
+        end: "2026-10-27T22:00:00+02:00",
+        citation: { label: "Elections (Modes of Propaganda) Law 5719-1959, s. 16E(h)", url: "https://www.nevo.co.il/law_html/law00/90696.htm" },
+        en: "Israeli law bars publishing new election poll results from the end of the Friday before polling day until polls close (Elections (Modes of Propaganda) Law, s. 16E(h)). This site publishes no polls or exit polls at any time and shows only Central Elections Committee counts after polls close at 22:00 Israel time on 27 October 2026.",
+        local: "החוק אוסר לפרסם תוצאות סקרי בחירות חדשים מתום יום שישי שלפני הבחירות ועד סגירת הקלפיות (חוק הבחירות (דרכי תעמולה), סעיף 16ה(ח)). אתר זה אינו מפרסם סקרים או מדגמים בשום שלב, ויציג רק נתוני ועדת הבחירות המרכזית לאחר סגירת הקלפיות ב-22:00, 27 באוקטובר 2026.",
+      },
+    ],
+  },
+  {
     id: "ca-bc-2026",
     country: "ca",
     localLang: "fr",
@@ -315,11 +341,6 @@ export const STANDING_RULES: StandingRule[] = [
     country: "rs",
     note: "No dated window open. Voting ended at 20:00 on 25 October 2026. This site publishes only RIK figures, labelled preliminary until RIK publishes the total report, and no polls or seat projections.",
     citation: { label: "RIK, about National Assembly elections", url: "https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php" },
-  },
-  {
-    country: "il",
-    note: "No dated window entry. This site publishes no Israeli polls, forecasts or exit polls at any time, and will add results only from the Central Elections Committee after polls close on 27 October 2026.",
-    citation: { label: "Central Elections Committee", url: "https://www.bechirot.gov.il/home/" },
   },
 ];
 

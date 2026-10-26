@@ -1,0 +1,80 @@
+{
+  "source": {
+    "he": "רשימות המועמדים לכנסת ה-26, ועדת הבחירות המרכזית (אושרו 27.9.2026, עודכן 25.10.2026)",
+    "en": "Candidate lists for the 26th Knesset, Central Elections Committee (approved 27 Sep 2026, updated 25 Oct 2026)",
+    "url": "https://www.gov.il/he/pages/candidates-lists-26"
+  },
+  "agreements": [["מחל", "ט"], ["שס", "ג"], ["רק", "ל"], ["דרך", "אמת"], ["עם", "ודם"]],
+  "agreementsSource": {
+    "he": "דיווחי ynet וכיכר השבת על הסכמי העודפים שהוגשו לוועדת הבחירות עד 16.10.2026",
+    "en": "ynet and Kikar HaShabbat reports of the surplus-vote agreements filed with the CEC by 16 Oct 2026",
+    "url": "https://www.ynet.co.il/news/elections2026/article/hjextlj2gl"
+  },
+  "parties": {
+    "אמת": { "he": "הדמוקרטים", "en": "The Democrats" },
+    "ב": { "he": "עוצמה יהודית", "en": "Otzma Yehudit" },
+    "בד": { "he": "ביחד נצליח", "en": "Together We Will Succeed" },
+    "בי": { "he": "צומת בית ישראל", "en": "Tzomet Beit Yisrael" },
+    "בקר": { "he": "אורות השחר", "en": "Orot HaShahar" },
+    "ג": { "he": "יהדות התורה", "en": "United Torah Judaism" },
+    "ד": { "he": "השותפות לכולם", "en": "Partnership for All" },
+    "די": { "he": "המילואימניקים והכלכלית", "en": "The Reservists and the Economic Party" },
+    "דרך": { "he": "ישר!", "en": "Yashar!" },
+    "ה": { "he": "גן עדן", "en": "Gan Eden" },
+    "ודם": { "he": "הרשימה המשותפת", "en": "Joint List" },
+    "ז": { "he": "בטח – ביטחון חברתי", "en": "Betah – Social Security" },
+    "זך": { "he": "הציבור החרדי", "en": "The Haredi Public" },
+    "זץ": { "he": "ברית עולם לגאולת ישראל", "en": "Brit Olam" },
+    "ט": { "he": "הציונות הדתית וזהות", "en": "Religious Zionism and Zehut" },
+    "י": { "he": "ישראל תחילה", "en": "Israel First" },
+    "יק": { "he": "גה\"ת – גוש התנ\"כי", "en": "The Biblical Bloc" },
+    "ך": { "he": "עמך ישראל", "en": "Amcha Yisrael" },
+    "כן": { "he": "כחול לבן", "en": "Blue and White", "notRunning": true },
+    "ל": { "he": "ישראל ביתנו", "en": "Yisrael Beiteinu" },
+    "מחל": { "he": "הליכוד", "en": "Likud" },
+    "ני": { "he": "נעם לישראל", "en": "Noam for Israel" },
+    "נף": { "he": "שמע", "en": "Shema" },
+    "נץ": { "he": "ביטחון אישי", "en": "Personal Security" },
+    "נקי": { "he": "התיקון לשיטת הבחירות והממשל", "en": "Electoral and Governance Reform" },
+    "נר": { "he": "צבע שחור", "en": "Tzeva Shahor" },
+    "עם": { "he": "רע\"ם", "en": "United Arab List (Ra'am)" },
+    "פה": { "he": "אני ואתה", "en": "You and I – Israeli People's Party" },
+    "צבי": { "he": "תנועת אחי", "en": "Ahi Movement", "notRunning": true },
+    "צדק": { "he": "שרשר", "en": "Sharshar" },
+    "צף": { "he": "הפיראטים", "en": "The Pirates" },
+    "ק": { "he": "תקומה", "en": "Tkuma" },
+    "קה": { "he": "קול הנשים", "en": "Women's Voice" },
+    "קך": { "he": "סדר חדש", "en": "New Order" },
+    "קץ": { "he": "משפט צדק", "en": "Mishpat Tzedek" },
+    "רץ": { "he": "הקהל", "en": "HaKahal" },
+    "רק": { "he": "ביחד", "en": "Together (Bennett)" },
+    "שס": { "he": "ש\"ס", "en": "Shas" }
+  },
+  "past2022": {
+    "source": {
+      "he": "ועדת הבחירות המרכזית לכנסת ה-25, תוצאות האמת לפי יישובים (data.gov.il)",
+      "en": "Central Elections Committee for the 25th Knesset, final results by locality (data.gov.il)",
+      "url": "https://data.gov.il/dataset/votes-knesset"
+    },
+    "pageUrl": "https://votes25.bechirot.gov.il/nationalresults",
+    "registered": 6788804,
+    "voters": 4794593,
+    "invalid": 29851,
+    "valid": 4764742,
+    "turnout": 70.63,
+    "parties": [
+      { "letter": "מחל", "he": "הליכוד", "en": "Likud", "votes": 1115336, "seats": 32 },
+      { "letter": "פה", "he": "יש עתיד", "en": "Yesh Atid", "votes": 847435, "seats": 24 },
+      { "letter": "ט", "he": "הציונות הדתית", "en": "Religious Zionism", "votes": 516470, "seats": 14 },
+      { "letter": "כן", "he": "המחנה הממלכתי", "en": "National Unity", "votes": 432482, "seats": 12 },
+      { "letter": "שס", "he": "ש\"ס", "en": "Shas", "votes": 392964, "seats": 11 },
+      { "letter": "ג", "he": "יהדות התורה", "en": "United Torah Judaism", "votes": 280194, "seats": 7 },
+      { "letter": "ל", "he": "ישראל ביתנו", "en": "Yisrael Beiteinu", "votes": 213687, "seats": 6 },
+      { "letter": "עם", "he": "רע\"ם", "en": "United Arab List", "votes": 194047, "seats": 5 },
+      { "letter": "ום", "he": "חד\"ש-תע\"ל", "en": "Hadash–Ta'al", "votes": 178735, "seats": 5 },
+      { "letter": "אמת", "he": "העבודה", "en": "Labor", "votes": 175992, "seats": 4 },
+      { "letter": "מרצ", "he": "מרצ", "en": "Meretz", "votes": 150793, "seats": 0 },
+      { "letter": "ד", "he": "בל\"ד", "en": "Balad", "votes": 138617, "seats": 0 }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+name: Israel live results (CEC)
+
+# Reads ONLY the Central Elections Committee results CSV every 5 minutes
+# around the 27 October 2026 Knesset election, writes results.json to the
+# orphan branch il-live-data (the results page polls it), and at most every
+# 30 minutes rebuilds Pages (fresh HTML, dateModified, share image) and pings
+# IndexNow when the count changed. Nothing is fetched before polls close.
+
+on:
+  schedule:
+    - cron: "*/5 18-23 27 10 *"
+    - cron: "*/5 * 28-31 10 *"
+    - cron: "*/30 * 1-5 11 *"
+  workflow_dispatch:
+    inputs:
+      final:
+        description: "Label the count final (only after the CEC publishes final results)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: il-live-results
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: site
+      - name: Check out data branch
+        run: |
+          set -e
+          if git ls-remote --exit-code --heads "https://github.com/${GITHUB_REPOSITORY}.git" il-live-data >/dev/null; then
+            git clone --depth 1 --branch il-live-data "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" data
+          else
+            mkdir data && cd data && git init -q -b il-live-data
+            git remote add origin "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git"
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch CEC results
+        id: fetch
+        working-directory: site
+        env:
+          IL_RESULTS_CSV_URL: ${{ vars.IL_RESULTS_CSV_URL }}
+          IL_RESULTS_FINAL: ${{ (inputs.final || vars.IL_RESULTS_FINAL == '1') && '1' || '' }}
+        run: node scripts/il-live/fetch.mjs ../data/il-2026-knesset
+      - name: Commit data
+        if: steps.fetch.outputs.changed == 'true'
+        working-directory: data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "CEC count: stage=${{ steps.fetch.outputs.stage }} units=${{ steps.fetch.outputs.units }}"
+          git push -q origin il-live-data
+      - name: Throttled Pages rebuild (IndexNow after deploy)
+        if: steps.fetch.outputs.changed == 'true' && steps.fetch.outputs.stage != 'pre'
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          last=$(gh run list --workflow pages.yml --event workflow_dispatch --limit 1 --json createdAt --jq '.[0].createdAt // ""')
+          age=999999
+          if [ -n "$last" ]; then age=$(( $(date +%s) - $(date -d "$last" +%s) )); fi
+          if [ "$age" -lt 1800 ] && [ "${{ steps.fetch.outputs.stage }}" != "final" ]; then
+            echo "last rebuild ${age}s ago; skipping"; exit 0
+          fi
+          # pages.yml pings IndexNow for the two results URLs only, after deploy.
+          gh workflow run pages.yml --ref main -f indexnow_scope=il

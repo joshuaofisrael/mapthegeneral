@@ -1,3 +1,4 @@
+import { IlResultsCard, IL_PROMO_UNTIL } from "@/components/IlResultsLinks";
 import Link from "@/components/AnchorLink";
 import { CountryHero } from "@/components/CountryHero";
 import { HomeFaq } from "@/components/HomeFaq";
@@ -51,6 +52,7 @@ export default function HomePage() {
           to vote.
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
+        {Date.now() < IL_PROMO_UNTIL && <IlResultsCard />}
       </section>
 
       <section>

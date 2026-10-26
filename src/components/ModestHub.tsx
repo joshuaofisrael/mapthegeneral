@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
+import { IlResultsCard } from "@/components/IlResultsLinks";
 import { SourceList } from "@/components/SourceList";
 import { countryGuide } from "@/data/guides/copy";
 import { countryAccent } from "@/data/heroes";
@@ -44,6 +45,7 @@ function Frame({
       />
       <RouteHero country={code} path={path} />
       <PageHeader eyebrow={copy.eyebrow} title={copy.title} lede={copy.lede} />
+      {code === "il" && <IlResultsCard />}
       <ContentTrust
         updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"}
         pagePath={path}
@@ -70,6 +72,7 @@ export function HubChooser({ code }: { code: HubCode }) {
       />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: hub.name }]} />
       <PageHeader eyebrow={hub.name} title={hub.name} lede={copy.lede} />
+      {code === "il" && <IlResultsCard />}
       <ContentTrust updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         <li
@@ -83,6 +86,16 @@ export function HubChooser({ code }: { code: HubCode }) {
           </h2>
           <p className="mt-2 text-sm leading-6 text-ink-muted">{hub.blurb}</p>
         </li>
+        {code === "il" && (
+          <li className="country-card rounded-xl border border-line bg-paper-card p-5" style={{ borderTopColor: countryAccent(code) }} lang="he" dir="rtl">
+            <h2 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href="/il/he/results/">
+                עברית
+              </Link>
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">תוצאות הבחירות לכנסת ה-26 בזמן אמת, מנתוני ועדת הבחירות המרכזית.</p>
+          </li>
+        )}
       </ul>
     </div>
   );
