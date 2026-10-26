@@ -1,0 +1,20 @@
+{
+  "code": "rs",
+  "name": "Serbia",
+  "href": "/rs/",
+  "summary": "National hub in English. Preliminary RIK results of the National Assembly election of 25 October 2026. No municipality pages.",
+  "links": [
+    {
+      "href": "/rs/en/",
+      "label": "English"
+    },
+    {
+      "href": "/rs/en/elections/national-assembly-2026/",
+      "label": "National Assembly election 2026"
+    },
+    {
+      "href": "/rs/en/sources/",
+      "label": "Sources"
+    }
+  ]
+}

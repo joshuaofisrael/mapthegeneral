@@ -1,7 +1,7 @@
 import type { SourceRef } from "@/data/spain/types";
 import { pageMetadata } from "@/lib/metadata";
 
-export type HubCode = "ie" | "no" | "se";
+export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il";
 export type HubKind = "chooser" | "national" | "elections" | "election" | "faq" | "sources";
 
 type Hub = {
@@ -16,6 +16,7 @@ type Hub = {
 };
 
 const READ = "2026-10-23";
+const READ_NEW = "2026-10-26";
 
 export const HUBS: Record<HubCode, Hub> = {
   ie: {
@@ -106,6 +107,53 @@ export const HUBS: Record<HubCode, Hub> = {
         url: "https://www.val.se/download/18.7faaad3f1a0b0c300e4282/1789822515986/beslutsprotokoll-resultat-riksdagen-2026.pdf",
         readOn: READ,
       },
+    ],
+  },
+  br: {
+    code: "br",
+    name: "Brazil",
+    officeLabel: "Tribunal Superior Eleitoral (TSE)",
+    officeHref: "https://resultados.tse.jus.br/oficial/app/index.html",
+    electionSlug: "general-2026",
+    electionName: "General election, 4 and 25 October 2026",
+    blurb:
+      "National hub in English. The Tribunal Superior Eleitoral (TSE) results service records the first round of the 2026 general election on 4 October and the presidential runoff on 25 October 2026, with 100% of polling sections counted. Presidential figures only, from the TSE. No municipality pages.",
+    sources: [
+      { id: "br-tse", name: "TSE, official results service (Resultados)", url: "https://resultados.tse.jus.br/oficial/app/index.html", readOn: READ_NEW },
+      { id: "br-r2", name: "TSE, President, second round 25 October 2026, national totals (data file)", url: "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json", readOn: READ_NEW },
+      { id: "br-r1", name: "TSE, President, first round 4 October 2026, national totals (data file)", url: "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json", readOn: READ_NEW },
+      { id: "br-home", name: "Tribunal Superior Eleitoral", url: "https://www.tse.jus.br/", readOn: READ_NEW },
+    ],
+  },
+  rs: {
+    code: "rs",
+    name: "Serbia",
+    officeLabel: "Republic Electoral Commission (RIK)",
+    officeHref: "https://www.rik.parlament.gov.rs/542645/rezultati/",
+    electionSlug: "national-assembly-2026",
+    electionName: "National Assembly election, 25 October 2026",
+    blurb:
+      "National hub in English. The Republic Electoral Commission (RIK) is publishing preliminary results of the National Assembly election held on 25 October 2026. Figures here are RIK’s preliminary count, not the final result. No municipality pages.",
+    sources: [
+      { id: "rs-res", name: "RIK, election results (Rezultati izbora), Parlamentarni 2026", url: "https://www.rik.parlament.gov.rs/542645/rezultati/", readOn: READ_NEW },
+      { id: "rs-about", name: "RIK, about National Assembly elections", url: "https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php", readOn: READ_NEW },
+      { id: "rs-home", name: "Republička izborna komisija", url: "https://www.rik.parlament.gov.rs/", readOn: READ_NEW },
+    ],
+  },
+  il: {
+    code: "il",
+    name: "Israel",
+    officeLabel: "Central Elections Committee",
+    officeHref: "https://www.bechirot.gov.il/home/",
+    electionSlug: "knesset-2026",
+    electionName: "Election to the 26th Knesset, 27 October 2026",
+    blurb:
+      "National hub in English. The Central Elections Committee set the election to the 26th Knesset for Tuesday 27 October 2026. Neutral facts only: no polls, no forecasts and no results until the Committee publishes them. No municipality pages.",
+    sources: [
+      { id: "il-cec", name: "Central Elections Committee (bechirot.gov.il)", url: "https://www.bechirot.gov.il/home/", readOn: READ_NEW },
+      { id: "il-date", name: "Central Elections Committee, the date of the 26th Knesset election", url: "https://www.gov.il/en/pages/knesset26-date", readOn: READ_NEW },
+      { id: "il-dept", name: "Central Elections Committee on gov.il", url: "https://www.gov.il/en/departments/central-elections-committee", readOn: READ_NEW },
+      { id: "il-about", name: "Central Elections Committee, elections in Israel (threshold and seat distribution)", url: "https://www.gov.il/en/pages/election-about-info", readOn: READ_NEW },
     ],
   },
 };
@@ -225,6 +273,108 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
       title: "Sweden sources",
       description: "Official pages used for the Sweden hub: Valmyndigheten on the next elections, the franchise, seats, and the 2026 protocol.",
       lede: "A reuse licence was not read. The election act was not read section by section.",
+    },
+  },
+  br: {
+    chooser: {
+      title: "Brazil — language",
+      description: "Brazil on Map the General: an English guide to the 2026 general election and the official TSE presidential results. Unofficial information.",
+      lede: "This release is an English national hub. It has no municipality pages.",
+    },
+    national: {
+      title: "Brazil",
+      description: "Brazil 2026 general election: how it works and the official TSE presidential runoff result of 25 October 2026. Unofficial information.",
+      eyebrow: "General election · 4 and 25 October 2026",
+      lede: "The TSE results service records the first round on 4 October 2026 and the presidential runoff on 25 October 2026, both with 100% of polling sections counted.",
+    },
+    elections: {
+      title: "Elections in Brazil",
+      description: "The 2026 general election in Brazil: first round 4 October, presidential runoff 25 October 2026, from the TSE.",
+      lede: "This hub lists the 2026 general election only. It does not list municipal or supplementary polls.",
+    },
+    election: {
+      title: "Brazil general election 2026: results",
+      description: "Official TSE presidential results: first round 4 October and runoff 25 October 2026, with 100% of sections counted. Unofficial information.",
+      eyebrow: "TSE totals · 100% of sections counted",
+      lede: "Figures below are copied from the TSE results service national data files read on 26 October 2026.",
+    },
+    faq: {
+      title: "Brazil questions",
+      description: "Short answers on the Brazil hub: where the results come from, the runoff, and what this site does not publish.",
+      lede: "Answers below follow the TSE results service read on 26 October 2026.",
+    },
+    sources: {
+      title: "Brazil sources",
+      description: "Official pages used for the Brazil hub: the Tribunal Superior Eleitoral results service and data files.",
+      lede: "Each page in this hub cites this list. The pages were read on 26 October 2026.",
+    },
+  },
+  rs: {
+    chooser: {
+      title: "Serbia — language",
+      description: "Serbia on Map the General: an English guide to the National Assembly election of 25 October 2026, with RIK preliminary results. Unofficial information.",
+      lede: "This release is an English national hub. It has no municipality pages.",
+    },
+    national: {
+      title: "Serbia",
+      description: "Serbia National Assembly election of 25 October 2026: how it works and the preliminary results published by RIK. Unofficial information.",
+      eyebrow: "National Assembly · 25 October 2026 · preliminary",
+      lede: "The Republic Electoral Commission (RIK) is publishing a preliminary count of the National Assembly election held on 25 October 2026. RIK has not yet published the final result.",
+    },
+    elections: {
+      title: "Elections in Serbia",
+      description: "The National Assembly election of 25 October 2026, from the Republic Electoral Commission.",
+      lede: "This hub lists the 2026 National Assembly election only. It does not list local or provincial polls.",
+    },
+    election: {
+      title: "Serbia National Assembly election 2026: preliminary results",
+      description: "Preliminary RIK results of Serbia’s 25 October 2026 National Assembly election. Not the final result. Unofficial information.",
+      eyebrow: "Preliminary · RIK count in progress",
+      lede: "Figures below are RIK’s preliminary results, read on 26 October 2026. They are not the final result.",
+    },
+    faq: {
+      title: "Serbia questions",
+      description: "Short answers on the Serbia hub: preliminary versus final results, seats, and what this site does not publish.",
+      lede: "Answers below follow RIK pages read on 26 October 2026.",
+    },
+    sources: {
+      title: "Serbia sources",
+      description: "Official pages used for the Serbia hub: the Republic Electoral Commission (RIK) results service.",
+      lede: "Each page in this hub cites this list. RIK’s website is licensed CC BY-NC-ND 3.0 Serbia; this hub paraphrases and links.",
+    },
+  },
+  il: {
+    chooser: {
+      title: "Israel — language",
+      description: "Israel on Map the General: an English guide to the election to the 26th Knesset on 27 October 2026. Unofficial information.",
+      lede: "This release is an English national hub. It has no municipality pages.",
+    },
+    national: {
+      title: "Israel",
+      description: "Israel: the election to the 26th Knesset on Tuesday 27 October 2026, set by the Central Elections Committee. 120 seats, 3.25% threshold. Unofficial information.",
+      eyebrow: "26th Knesset · Tuesday 27 October 2026",
+      lede: "The Central Elections Committee set Tuesday 27 October 2026 (16 Heshvan 5787) as election day for the 26th Knesset.",
+    },
+    elections: {
+      title: "Elections in Israel",
+      description: "The election to the 26th Knesset on 27 October 2026, from the Central Elections Committee.",
+      lede: "This hub lists the 26th Knesset election only. It does not list local polls.",
+    },
+    election: {
+      title: "Israel Knesset election, 27 October 2026",
+      description: "Election to the 26th Knesset on 27 October 2026: 120 seats, 3.25% threshold. Results will come from the Central Elections Committee. Unofficial information.",
+      eyebrow: "Tuesday 27 October 2026 · no polls published",
+      lede: "This page carries neutral facts only. It publishes no polls, no forecasts and no results. Results will come from the Central Elections Committee.",
+    },
+    faq: {
+      title: "Israel questions",
+      description: "Short answers on the Israel hub: the date, seats, threshold, and where results will come from.",
+      lede: "Answers below follow Central Elections Committee and Knesset pages read on 26 October 2026.",
+    },
+    sources: {
+      title: "Israel sources",
+      description: "Official pages used for the Israel hub: the Central Elections Committee and the Knesset.",
+      lede: "Each page in this hub cites this list. The pages were read on 26 October 2026.",
     },
   },
 };

@@ -45,7 +45,7 @@ function Frame({
       <RouteHero country={code} path={path} />
       <PageHeader eyebrow={copy.eyebrow} title={copy.title} lede={copy.lede} />
       <ContentTrust
-        updated="23 October 2026"
+        updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"}
         pagePath={path}
         officeHref={hub.officeHref}
         officeLabel={hub.officeLabel}
@@ -70,7 +70,7 @@ export function HubChooser({ code }: { code: HubCode }) {
       />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: hub.name }]} />
       <PageHeader eyebrow={hub.name} title={hub.name} lede={copy.lede} />
-      <ContentTrust updated="23 October 2026" pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
+      <ContentTrust updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         <li
           className="country-card rounded-xl border border-line bg-paper-card p-5"
@@ -116,6 +116,150 @@ export function HubNational({ code }: { code: HubCode }) {
         </Link>
       </p>
     </Frame>
+  );
+}
+
+type Row = { name: string; votes: string; pct: string; note?: string };
+
+function ResultTable({ caption, rows, pctLabel }: { caption: string; rows: Row[]; pctLabel: string }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-left text-sm">
+        <caption className="mb-2 text-left font-semibold">{caption}</caption>
+        <thead>
+          <tr>
+            <th className="py-1 pr-4">Candidate or list</th>
+            <th className="py-1 pr-4 text-right">Votes</th>
+            <th className="py-1 pr-4 text-right">{pctLabel}</th>
+            <th className="py-1">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.name} className="border-t border-line">
+              <td className="py-1 pr-4">{r.name}</td>
+              <td className="py-1 pr-4 text-right tabular-nums">{r.votes}</td>
+              <td className="py-1 pr-4 text-right tabular-nums">{r.pct}</td>
+              <td className="py-1">{r.note ?? ""}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const BR_R2 = "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json";
+const BR_R1 = "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json";
+
+function BrazilBody() {
+  return (
+    <>
+      <p>
+        <strong>Official result.</strong> All figures below are from the{" "}
+        <a href="https://resultados.tse.jus.br/oficial/app/index.html" rel="noopener noreferrer">
+          Tribunal Superior Eleitoral (TSE) results service
+        </a>
+        , read on 26 October 2026. The{" "}
+        <a href={BR_R2} rel="noopener noreferrer">second-round national file</a> was generated at 23:26 Brasília time on
+        25 October 2026 with 100% of 499,248 polling sections counted. Percentages are of valid votes.
+      </p>
+      <ResultTable
+        caption="President, second round, 25 October 2026 (TSE, 100% of sections)"
+        pctLabel="% valid"
+        rows={[
+          { name: "Luiz Inácio Lula da Silva (PT)", votes: "64,256,232", pct: "51.79%", note: "Elected (TSE)" },
+          { name: "Flávio Bolsonaro (PL)", votes: "59,826,041", pct: "48.21%" },
+        ]}
+      />
+      <p>
+        Second round, per the TSE: electorate 158,745,502; votes cast 128,236,074 (80.78%); abstentions 30,509,005;
+        valid votes 124,082,273; blank votes 1,430,496.
+      </p>
+      <ResultTable
+        caption="President, first round, 4 October 2026 (TSE), candidates above 2% of valid votes"
+        pctLabel="% valid"
+        rows={[
+          { name: "Flávio Bolsonaro (PL)", votes: "56,104,503", pct: "47.03%", note: "To runoff" },
+          { name: "Luiz Inácio Lula da Silva (PT)", votes: "53,879,538", pct: "45.16%", note: "To runoff" },
+          { name: "Augusto Cury (AVANTE)", votes: "—", pct: "2.89%" },
+          { name: "Renan Santos (MISSÃO)", votes: "—", pct: "2.24%" },
+          { name: "Ronaldo Caiado (PSD)", votes: "—", pct: "2.18%" },
+        ]}
+      />
+      <p>
+        First round, per the{" "}
+        <a href={BR_R1} rel="noopener noreferrer">TSE first-round national file</a>: votes cast 125,275,835 (78.92%);
+        valid votes 119,300,788. Other candidates received under 2% each and are listed in the TSE file. State races are
+        not covered. This site publishes no polls.
+      </p>
+    </>
+  );
+}
+
+function SerbiaBody() {
+  return (
+    <>
+      <p>
+        <strong>Preliminary results, not final.</strong> Figures are from the{" "}
+        <a href="https://www.rik.parlament.gov.rs/542645/rezultati/" rel="noopener noreferrer">
+          Republic Electoral Commission (RIK) results page
+        </a>{" "}
+        as of 10:25 Belgrade time on 26 October 2026, when 8,135 of 8,392 polling stations had been processed. RIK labels
+        them preliminary. Final results are the total report RIK publishes in the Official Gazette. Percentages are of
+        voters who voted, as RIK shows them. Seats are not shown until RIK assigns them.
+      </p>
+      <ResultTable
+        caption="National Assembly, 25 October 2026 — RIK preliminary, lists above 0.6%"
+        pctLabel="% of voters"
+        rows={[
+          { name: "Studentska lista – Studenti pobeđuju (Student List – Students Win)", votes: "2,246,423", pct: "52.65%" },
+          { name: "Aleksandar Vučić – Ujedinjena Srbija (United Serbia)", votes: "1,673,241", pct: "39.22%" },
+          { name: "Ivica Dačić – Faktor stabilnosti (SPS coalition)", votes: "92,532", pct: "2.17%" },
+          { name: "Autentična desnica (Authentic Right)", votes: "—", pct: "0.90%" },
+          { name: "Alliance of Vojvodina Hungarians (VMSZ), minority list", votes: "—", pct: "0.81%" },
+          { name: "Albanian coalition, minority list", votes: "—", pct: "0.65%" },
+        ]}
+      />
+      <p>
+        RIK preliminary totals: 6,451,292 registered voters; 4,269,403 voted (68.81%); 4,211,697 valid ballots; 55,107
+        invalid ballots. Other lists are on the RIK page. Lists below 3% win seats only if RIK confirms national-minority
+        status, as described on the{" "}
+        <a href="https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php" rel="noopener noreferrer">
+          RIK page on National Assembly elections
+        </a>
+        . RIK content is licensed CC BY-NC-ND 3.0 RS.
+      </p>
+    </>
+  );
+}
+
+function IsraelBody() {
+  return (
+    <>
+      <p>
+        The{" "}
+        <a href="https://www.gov.il/en/pages/knesset26-date" rel="noopener noreferrer">
+          Central Elections Committee
+        </a>{" "}
+        set Tuesday 27 October 2026 (16 Heshvan 5787) as election day for the 26th Knesset.
+      </p>
+      <p>
+        The Knesset has 120 seats. According to the{" "}
+        <a href="https://www.gov.il/en/pages/election-about-info" rel="noopener noreferrer">
+          Committee’s page on elections in Israel
+        </a>
+        , a candidate list needs 3.25% of the votes cast to win seats, and lists that pass share the seats in proportion
+        to their votes.
+      </p>
+      <p>
+        This page contains no polls, forecasts or exit polls. Results will come from the{" "}
+        <a href="https://www.bechirot.gov.il/home/" rel="noopener noreferrer">
+          Central Elections Committee
+        </a>
+        , and none are shown here until the Committee publishes them.
+      </p>
+    </>
   );
 }
 
@@ -205,6 +349,9 @@ function ElectionBody({ code }: { code: HubCode }) {
       </>
     );
   }
+  if (code === "br") return <BrazilBody />;
+  if (code === "rs") return <SerbiaBody />;
+  if (code === "il") return <IsraelBody />;
   return (
     <>
       <p>

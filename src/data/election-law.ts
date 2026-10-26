@@ -306,6 +306,21 @@ export const STANDING_RULES: StandingRule[] = [
       url: "https://val.se/english/future-elections/2026-elections---the-riksdag-and-regional-and-municipal-councils",
     },
   },
+  {
+    country: "br",
+    note: "No dated window open. The 2026 general election ended with the runoff on 25 October 2026. This site publishes only TSE totals and no polls.",
+    citation: { label: "TSE, official results service", url: "https://resultados.tse.jus.br/oficial/app/index.html" },
+  },
+  {
+    country: "rs",
+    note: "No dated window open. Voting ended at 20:00 on 25 October 2026. This site publishes only RIK figures, labelled preliminary until RIK publishes the total report, and no polls or seat projections.",
+    citation: { label: "RIK, about National Assembly elections", url: "https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php" },
+  },
+  {
+    country: "il",
+    note: "No dated window entry. This site publishes no Israeli polls, forecasts or exit polls at any time, and will add results only from the Central Elections Committee after polls close on 27 October 2026.",
+    citation: { label: "Central Elections Committee", url: "https://www.bechirot.gov.il/home/" },
+  },
 ];
 
 /** Rules that are in force at `now` for a given country path segment. */
