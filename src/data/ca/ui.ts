@@ -23,7 +23,7 @@ const EN = {
   kindProvince: "Province",
   kindTerritory: "Territory",
   municipalityGap:
-    "Mayors, reeves, and councillors are not copied. Incorporated municipalities are linked from census divisions in Ontario, Quebec, British Columbia, Alberta, Manitoba, Saskatchewan, Nova Scotia, and New Brunswick. Newfoundland and Labrador, Prince Edward Island, Yukon, the Northwest Territories, and Nunavut are not in this release. Where a provincial directory of those officeholders was read, the municipality page links it and does not copy names. Candidate lists are not on this page.",
+    "Mayors, reeves, and councillors are not copied. Incorporated municipalities from the SGC 2021 list are linked from census divisions in every province and territory. Where an official directory of those officeholders was read, the municipality page links it and does not copy names. Candidate lists are not on this page.",
   postcodeGap:
     "A postal-code search is not wired up. This release did not add an official open postal-code dataset. A postal-code query is not matched to a municipality.",
   candidateGap:
@@ -58,7 +58,7 @@ const FR = {
   kindProvince: "Province",
   kindTerritory: "Territoire",
   municipalityGap:
-    "Les maires, préfets et conseillers ne sont pas copiés. Les municipalités constituées sont liées depuis les divisions de recensement de l’Ontario, du Québec, de la Colombie-Britannique, de l’Alberta, du Manitoba, de la Saskatchewan, de la Nouvelle-Écosse et du Nouveau-Brunswick. Terre-Neuve-et-Labrador, l’Île-du-Prince-Édouard, le Yukon, les Territoires du Nord-Ouest et le Nunavut ne font pas partie de cette livraison. Lorsqu’un répertoire provincial a été lu, la page de la municipalité le lie et n’en copie pas les noms. Les listes de candidatures ne figurent pas sur cette page.",
+    "Les maires, préfets et conseillers ne sont pas copiés. Les municipalités constituées de la liste de la CGT 2021 sont liées depuis les divisions de recensement de chaque province et territoire. Lorsqu’un répertoire officiel de ces titulaires a été lu, la page de la municipalité le lie et n’en copie pas les noms. Les listes de candidatures ne figurent pas sur cette page.",
   postcodeGap:
     "La recherche par code postal n’est pas branchée. Cette livraison n’ajoute pas un jeu de données ouvert et officiel de codes postaux. Une requête de code postal n’est pas appariée à une municipalité.",
   candidateGap:

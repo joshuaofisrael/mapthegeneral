@@ -64,11 +64,11 @@ const MUNI_SOURCES: Record<string, readonly string[]> = {
   saskatchewan: [...STATCAN_IDS, "sk-muni-dates", "sk-muni-directory"],
   "nova-scotia": [...STATCAN_IDS, "ns-mea", "ns-muni-elections"],
   "new-brunswick": [...STATCAN_IDS, "nb-local-process", "nb-mea"],
-  "newfoundland-and-labrador": [...STATCAN_IDS, "nl-2025-date"],
-  "prince-edward-island": [...STATCAN_IDS, "pei-mga", "pei-candidates"],
-  yukon: [...STATCAN_IDS],
-  "northwest-territories": [...STATCAN_IDS, "nwt-elections-home"],
-  nunavut: [...STATCAN_IDS, "nu-muni"],
+  "newfoundland-and-labrador": [...STATCAN_IDS, "nl-2025-date", "nl-directory"],
+  "prince-edward-island": [...STATCAN_IDS, "pei-mga", "pei-munis", "pei-topic", "pei-directory"],
+  yukon: [...STATCAN_IDS, "yt-act", "yt-elections", "yt-manual", "yt-directory"],
+  "northwest-territories": [...STATCAN_IDS, "nwt-election-dates"],
+  nunavut: [...STATCAN_IDS, "nu-muni", "nu-muni-list"],
 };
 
 function muniSourceIds(place: Municipality): readonly string[] {
@@ -142,10 +142,20 @@ const SHORT_SOURCE: Record<string, string> = {
   "nb-local-process": "New Brunswick, local government general election process",
   "nb-mea": "Municipal Elections Act (New Brunswick), s. 3",
   "nl-2025-date": "Newfoundland and Labrador, 2025 municipal election date",
+  "nl-directory": "Newfoundland and Labrador, municipal directory",
   "pei-mga": "Municipal Government Act (Prince Edward Island), ss. 32 and 37",
   "pei-candidates": "Prince Edward Island, candidate information for municipal elections",
+  "pei-munis": "Prince Edward Island, list of municipal governments",
+  "pei-topic": "Prince Edward Island, municipalities topic page",
+  "pei-directory": "Prince Edward Island, municipal directory",
   "nwt-elections-home": "Elections NWT, home page",
+  "nwt-election-dates": "Northwest Territories, municipal election dates",
   "nu-muni": "Elections Nunavut, municipal council elections",
+  "nu-muni-list": "Elections Nunavut, municipal council election map",
+  "yt-act": "Yukon Municipal Act, ss. 14, 15 and 52",
+  "yt-elections": "Yukon, municipal and local advisory council elections",
+  "yt-manual": "Yukon, 2024 municipal elections manual",
+  "yt-directory": "Yukon, local government directory",
 };
 
 function sourceList(lang: CaLang, ids: readonly string[]): string {
@@ -375,6 +385,70 @@ function seatIndex(lang: CaLang, regionSlug: string): string {
 
 const MB_JULY = new Set(["4601078", "4613049", "4618034"]);
 const PEI_RESORT = "1102045";
+const PEI_ABSENT_2025 = new Set(["1102035", "1103057"]);
+const NU_TITLE_GAP = new Set(["6204007", "6204011", "6204022"]);
+const YT_DAWSON = "6001029";
+const NWT_YELLOWKNIFE = "6106023";
+const NWT_ENTERPRISE = "6105003";
+const READ_26 = new Set([
+  "newfoundland-and-labrador",
+  "prince-edward-island",
+  "yukon",
+  "northwest-territories",
+  "nunavut",
+]);
+
+function readStamp(region: string, fr: boolean): string {
+  if (region === "ontario" || region === "quebec") return fr ? "Lecture du 19 octobre 2026." : "Read on 19 October 2026.";
+  if (READ_26.has(region)) return fr ? "Lecture du 26 octobre 2026." : "Read on 26 October 2026.";
+  return fr ? "Lecture du 24 octobre 2026." : "Read on 24 October 2026.";
+}
+
+function peiRoster(fr: boolean, code: string): string {
+  const base = fr
+    ? "La page « PEI Municipalities », publiée le 28 janvier 2025, énumère 2 cités, 10 villes et 45 municipalités rurales. Elle n’imprime pas les titres de classe Darlington ni St. Louis. L’extrait de la CGT 2021 utilisé ici compte 2 cités, 10 villes, 46 municipalités rurales et 1 municipalité de villégiature. Cette page n’énonce pas de date de dissolution."
+    : "The PEI Municipalities page, published 28 January 2025, lists 2 cities, 10 towns, and 45 rural municipalities. It does not print the class titles Darlington or St. Louis. The SGC 2021 extract used here has 2 cities, 10 towns, 46 rural municipalities, and 1 resort municipality. This page does not state a dissolution date.";
+  if (!PEI_ABSENT_2025.has(code)) return base;
+  return fr ? `${base} Ce titre de classe est l’un de ces deux titres.` : `${base} This class title is one of those two titles.`;
+}
+
+function nwtElection(place: Municipality, fr: boolean): string {
+  const intro = fr
+    ? "La page du gouvernement des Territoires du Nord-Ouest « NWT Municipal Elections Dates », lue le 26 octobre 2026, dit que les élections municipales se déroulent conformément à la Local Authorities Elections Act. Elle dit qu’une municipalité peut changer la durée de son mandat et suivre la Charter Communities Act, la Cities, Towns and Villages Act, la Hamlets Act ou la Tłı̨cho Community Government Act. Le texte de ces lois n’a pas été lu. Une note du calendrier dit que les conseils peuvent fixer, par règlement, un mandat différent, de deux à quatre ans. Ces règlements n’ont pas été lus, donc cette page ne transforme pas une règle du lundi en jour de scrutin pour cette subdivision."
+    : "The Government of the Northwest Territories page “NWT Municipal Elections Dates”, read on 26 October 2026, says municipal elections are conducted in accordance with the Local Authorities Elections Act. It says a municipality may change the length of its term and follow the Charter Communities Act, the Cities, Towns and Villages Act, the Hamlets Act, or the Tłı̨cho Community Government Act. The texts of those Acts were not read. A note on the schedule says councils may set a different term of office, by bylaw, from two years to four years. Those bylaws were not read, so this page does not turn a Monday rule into a polling day for this subdivision.";
+  let row: string;
+  if (place.code === NWT_YELLOWKNIFE) {
+    row = fr
+      ? "Cette subdivision est Yellowknife. La même page lie un document intitulé « List of Candidates for the October 19, 2026 City of Yellowknife Election ». Cette page ne copie ni cette liste ni un décompte. La ligne du calendrier pour les cités, villes et villages imprime « 3rd Monday in October » et « 3 year terms »."
+      : "This subdivision is Yellowknife. The same page links a document titled “List of Candidates for the October 19, 2026 City of Yellowknife Election”. This page does not copy that list or a count. The schedule row for cities, towns, and villages prints “3rd Monday in October” and “3 year terms”.";
+  } else if (place.code === NWT_ENTERPRISE) {
+    row = fr
+      ? "Cette subdivision est Enterprise. La même page lie un document intitulé « September 23, 2026 Enterprise Election Countdown Calendar » et le décrit comme un calendrier de compte à rebours pour une élection partielle du hameau d’Enterprise. Cette page ne copie ni des candidatures ni un décompte. La ligne du calendrier pour les hameaux imprime « 2nd Monday in December » et « 2 year terms »."
+      : "This subdivision is Enterprise. The same page links a document titled “September 23, 2026 Enterprise Election Countdown Calendar” and describes it as a by-election countdown calendar for the Hamlet of Enterprise. This page does not copy candidates or a count. The schedule row for hamlets prints “2nd Monday in December” and “2 year terms”.";
+  } else if (place.type === "CY" || place.type === "T" || place.type === "VL") {
+    row = fr
+      ? "La ligne du calendrier pour les cités, villes et villages imprime « 3rd Monday in October » et « 3 year terms »."
+      : "The schedule row for cities, towns, and villages prints “3rd Monday in October” and “3 year terms”.";
+  } else if (place.type === "HAM") {
+    row = fr
+      ? "La ligne du calendrier pour les hameaux imprime « 2nd Monday in December » et « 2 year terms »."
+      : "The schedule row for hamlets prints “2nd Monday in December” and “2 year terms”.";
+  } else if (place.type === "CC") {
+    row = fr
+      ? "La cellule des gouvernements communautaires pour les communautés à charte se lit « Charter communities Set out in Establishment Order under Regulations ». La cellule de la date imprime « 3rd Monday in July ». La cellule du mandat imprime « Fort Good Hope - every 2nd year ». Cet ordre d’établissement n’a pas été lu."
+      : "The community-governments cell for charter communities reads “Charter communities Set out in Establishment Order under Regulations”. The date cell prints “3rd Monday in July”. The term cell prints “Fort Good Hope - every 2nd year”. That establishment order was not read.";
+  } else if (place.type === "CG") {
+    row = fr
+      ? "La ligne du calendrier pour les Tłı̨chǫ Community Governments imprime « 2nd Monday in June » et « Every 4 years ». Le tableau lu n’imprime pas d’année civile, donc cette page n’en calcule pas."
+      : "The schedule row for Tłı̨chǫ community governments prints “2nd Monday in June” and “Every 4 years”. The table that was read does not print a calendar year, so this page does not calculate one.";
+  } else {
+    throw new Error(`No NWT election row for ${place.type}/${place.code}`);
+  }
+  const close = fr
+    ? "Cette page ne publie pas de décompte et ne nomme pas de maire."
+    : "This page does not publish a count and does not name a mayor.";
+  return `${intro} ${row} ${close}`;
+}
 
 function extLink(url: string, label: string): string {
   return `<a href="${esc(url)}">${esc(label)}</a>`;
@@ -467,33 +541,44 @@ function localElection(place: Municipality, lang: CaLang): string {
   }
   if (place.region === "newfoundland-and-labrador") {
     return fr
-      ? "Le communiqué du gouvernement de Terre-Neuve-et-Labrador du 1er novembre 2024, lu le 24 octobre 2026, dit que la Municipal Elections Act prévoit une élection générale municipale tous les quatre ans, le dernier mardi de septembre, et que la date de 2025 a été reportée du 30 septembre 2025 au 2 octobre 2025. L’année suivante de ce cycle de quatre ans est 2029. Le dernier mardi de septembre 2029 est le 25 septembre 2029. Aucun avis de report pour 2029 n’a été lu. Le texte de la loi lui-même n’a pas été lu. Cette page ne publie pas de décompte et ne nomme pas de maire."
-      : "The Government of Newfoundland and Labrador news release of 1 November 2024, read on 24 October 2026, says the Municipal Elections Act provides a municipal general election every four years on the last Tuesday in September, and that the 2025 date was moved from 30 September 2025 to 2 October 2025. The next year in that four-year cycle is 2029. The last Tuesday of September 2029 is 25 September 2029. No 2029 deferral notice was read. The Act text itself was not read. This page does not publish a count and does not name a mayor.";
+      ? "Le communiqué du gouvernement de Terre-Neuve-et-Labrador du 1er novembre 2024, lu le 26 octobre 2026, dit que l’élection générale municipale de 2025 pour toutes les cités, villes et local service districts, auparavant fixée au 30 septembre 2025, est reportée au 2 octobre 2025 afin d’observer la Journée nationale de la vérité et de la réconciliation en 2025. Il dit que, conformément à la Municipal Elections Act, les élections générales ont lieu tous les quatre ans, le dernier mardi de septembre. L’année suivante de ce cycle de quatre ans est 2029. Le dernier mardi de septembre 2029 est le 25 septembre 2029. Le communiqué n’imprime pas 2029, et aucun avis de report pour 2029 n’a été lu. Il dit aussi que la Towns and Local Service Districts Act entre en vigueur le 1er janvier 2025 et qu’une élection des local service districts a lieu tous les quatre ans, la première le 2 octobre 2025. Le texte de ces lois n’a pas été lu. Cette page est une cité ou une ville de la CGT 2021, pas une page de local service district. Elle ne publie pas de décompte et ne nomme pas de maire."
+      : "The Government of Newfoundland and Labrador news release of 1 November 2024, read on 26 October 2026, says the 2025 general municipal election for all cities, towns, and local service districts, previously set for 30 September 2025, is deferred to 2 October 2025 to observe the National Day for Truth and Reconciliation in 2025. It says that, in accordance with the Municipal Elections Act, general elections are held every four years on the last Tuesday in September. The next year in that four-year cycle is 2029. The last Tuesday of September 2029 is 25 September 2029. The release does not print 2029, and no 2029 deferral notice was read. It also says the Towns and Local Service Districts Act comes into force on 1 January 2025 and that an election for local service districts takes place every four years, the first on 2 October 2025. The texts of those Acts were not read. This page is an SGC 2021 city or town, not a local service district page. It does not publish a count and does not name a mayor.";
   }
   if (place.region === "prince-edward-island") {
+    const roster = peiRoster(fr, place.code);
     if (place.code === PEI_RESORT) {
       return fr
-        ? "L’article 32(c) de la Municipal Government Act dit que, pour la Resort Municipality of Stanley Bridge, Hope River, Bayview, Cavendish and North Rustico, le premier lundi de novembre de l’article 37 est réputé être le deuxième lundi d’août. Le deuxième lundi d’août 2022 est le 8 août 2022. Le deuxième lundi d’août 2026 est le 10 août 2026. Le deuxième lundi d’août 2030 est le 12 août 2030. La page d’information aux candidats, lue le 24 octobre 2026, imprime le 10 août 2026 pour cette municipalité de villégiature. Cette page ne publie pas de décompte et ne nomme pas de maire."
-        : "Section 32(c) of the Municipal Government Act says that, for the Resort Municipality of Stanley Bridge, Hope River, Bayview, Cavendish and North Rustico, the first Monday in November in section 37 is deemed to be the second Monday in August. The second Monday of August 2022 is 8 August 2022. The second Monday of August 2026 is 10 August 2026. The second Monday of August 2030 is 12 August 2030. The candidate-information page, read on 24 October 2026, prints 10 August 2026 for that resort municipality. This page does not publish a count and does not name a mayor.";
+        ? `L’article 32(c) de la Municipal Government Act, lu le 26 octobre 2026, dit que, pour la Resort Municipality of Stanley Bridge, Hope River, Bayview, Cavendish and North Rustico, le premier lundi de novembre de l’article 37 est réputé être le deuxième lundi d’août. Le deuxième lundi d’août 2022 est le 8 août 2022. Le deuxième lundi d’août 2026 est le 10 août 2026. Le deuxième lundi d’août 2030 est le 12 août 2030. La page thématique des municipalités, lue le 26 octobre 2026, dit que les élections générales municipales ont lieu tous les quatre ans et imprime la prochaine au lundi 2 novembre 2026. Le texte lu contient « The Resort Municipality's general municipal election on August 10, 2026 » et n’inclut pas la suite de cette phrase. ${roster} Cette page ne publie pas de décompte et ne nomme pas de maire.`
+        : `Section 32(c) of the Municipal Government Act, read on 26 October 2026, says that, for the Resort Municipality of Stanley Bridge, Hope River, Bayview, Cavendish and North Rustico, the first Monday in November in section 37 is deemed to be the second Monday in August. The second Monday of August 2022 is 8 August 2022. The second Monday of August 2026 is 10 August 2026. The second Monday of August 2030 is 12 August 2030. The municipalities topic page, read on 26 October 2026, says general municipal elections are held every four years and prints the next one as Monday, 2 November 2026. The text that was read includes “The Resort Municipality's general municipal election on August 10, 2026” and does not include the rest of that sentence. ${roster} This page does not publish a count and does not name a mayor.`;
     }
     return fr
-      ? "L’article 37 de la Municipal Government Act dit qu’une élection générale a lieu tous les quatre ans le premier lundi de novembre, à compter de 2018. Le premier lundi de novembre 2022 est le 7 novembre 2022. Le premier lundi de novembre 2026 est le 2 novembre 2026. La page d’information aux candidats, lue le 24 octobre 2026, imprime le 2 novembre 2026. Cette page ne publie pas de décompte et ne nomme pas de maire."
-      : "Section 37 of the Municipal Government Act says a general election is held every four years on the first Monday in November, starting in 2018. The first Monday of November 2022 is 7 November 2022. The first Monday of November 2026 is 2 November 2026. The candidate-information page, read on 24 October 2026, prints 2 November 2026. This page does not publish a count and does not name a mayor.";
+      ? `L’article 37 de la Municipal Government Act, lu le 26 octobre 2026, dit qu’une élection générale a lieu tous les quatre ans le premier lundi de novembre, à compter de 2018. Le premier lundi de novembre 2022 est le 7 novembre 2022. Le premier lundi de novembre 2026 est le 2 novembre 2026. La page thématique des municipalités, lue le 26 octobre 2026, imprime la prochaine élection générale municipale au lundi 2 novembre 2026. ${roster} Cette page ne publie pas de décompte et ne nomme pas de maire.`
+      : `Section 37 of the Municipal Government Act, read on 26 October 2026, says a general election is held every four years on the first Monday in November, starting in 2018. The first Monday of November 2022 is 7 November 2022. The first Monday of November 2026 is 2 November 2026. The municipalities topic page, read on 26 October 2026, prints the next general municipal election as Monday, 2 November 2026. ${roster} This page does not publish a count and does not name a mayor.`;
   }
-  if (place.region === "northwest-territories") {
-    return fr
-      ? "La page d’accueil d’Élections TNO, lue le 24 octobre 2026, dit de communiquer avec le ministère des Affaires municipales et communautaires pour les élections municipales. Elle imprime une élection générale territoriale le 5 octobre 2027. Elle n’imprime pas de jour de scrutin municipal. Cette page n’en énonce pas. Elle ne publie pas de décompte et ne nomme pas de maire."
-      : "The Elections NWT home page, read on 24 October 2026, says to contact the Department of Municipal and Community Affairs for municipal elections. It prints a territorial general election on 5 October 2027. It does not print a municipal voting day. This page does not state one. It does not publish a count and does not name a mayor.";
-  }
+  if (place.region === "northwest-territories") return nwtElection(place, fr);
   if (place.region === "nunavut") {
     return fr
-      ? "La page d’Élections Nunavut sur les élections des conseils municipaux, lue le 24 octobre 2026, dit que les conseils sont élus tous les quatre ans et imprime la prochaine élection générale municipale au 25 octobre 2027. Elle dit que les règles figurent dans la Loi électorale du Nunavut à partir de l’article 224.1. Le texte de cet article n’a pas été lu. La page n’imprime pas la date précédente. Cette page ne publie pas de décompte et ne nomme pas de maire."
-      : "The Elections Nunavut page on municipal council elections, read on 24 October 2026, says councils are elected every four years and prints the next municipal general election as 25 October 2027. It says the rules are in the Nunavut Elections Act starting at section 224.1. That section text was not read. The page does not print the previous date. This page does not publish a count and does not name a mayor.";
+      ? "La page d’Élections Nunavut sur les élections des conseils municipaux, lue le 26 octobre 2026, dit que les conseils sont élus tous les quatre ans et imprime la prochaine élection générale municipale au 25 octobre 2027. Elle dit que les règles figurent dans la Loi électorale du Nunavut à partir de l’article 224.1. Le texte de cet article n’a pas été lu. La page n’imprime pas la date précédente. Cette page ne publie pas de décompte et ne nomme pas de maire."
+      : "The Elections Nunavut page on municipal council elections, read on 26 October 2026, says councils are elected every four years and prints the next municipal general election as 25 October 2027. It says the rules are in the Nunavut Elections Act starting at section 224.1. That section text was not read. The page does not print the previous date. This page does not publish a count and does not name a mayor.";
   }
   if (place.region === "yukon") {
-    return fr
-      ? "La Municipal Act du Yukon et les pages municipales du gouvernement du Yukon n’ont pas été obtenues le 24 octobre 2026. Aucun jour de scrutin municipal n’est imprimé. Cette page n’en énonce pas. Elle ne nomme pas de maire."
-      : "The Yukon Municipal Act and the Government of Yukon municipal pages were not retrieved on 24 October 2026. No municipal voting day is printed. This page does not state one. It does not name a mayor.";
+    const cycle = fr
+      ? "L’article 52 de la Municipal Act, R.S.Y. 2002, c. 154, dit que chaque municipalité tient une élection générale tous les trois ans, le troisième jeudi d’octobre, à compter de 2000. En octobre 2024, les jeudis tombent les 3, 10, 17, 24 et 31, donc le troisième jeudi est le 17 octobre 2024. Le manuel des élections municipales de 2024 imprime le 17 octobre comme jour d’élection et cite l’article 52. En octobre 2027, les jeudis tombent les 7, 14, 21 et 28, donc le troisième jeudi est le 21 octobre 2027. Aucun avis de report pour 2027 n’a été lu. La page yukon.ca « Municipal and Local Advisory Council elections », lue le 26 octobre 2026, dit que ces élections ont lieu tous les quatre ans, que la dernière a eu lieu le 21 octobre 2021 et que les prochaines auront lieu en octobre 2024. Le 21 octobre 2021 est le troisième jeudi d’octobre 2021. Cette page suit l’article 52 et ne traite pas la phrase « tous les quatre ans » comme une modification de la loi. Elle ne publie pas de décompte et ne nomme pas de maire."
+      : "Section 52 of the Municipal Act, R.S.Y. 2002, c. 154, says each municipality shall hold a general election every three years on the third Thursday of October, starting in 2000. In October 2024 the Thursdays fall on the 3rd, 10th, 17th, 24th and 31st, so the third Thursday is 17 October 2024. The 2024 municipal elections manual prints 17 October as election day and cites section 52. In October 2027 the Thursdays fall on the 7th, 14th, 21st and 28th, so the third Thursday is 21 October 2027. No 2027 deferral notice was read. The yukon.ca page “Municipal and Local Advisory Council elections”, read on 26 October 2026, says these elections are held every 4 years, that the last was on 21 October 2021, and that the next will be in October 2024. 21 October 2021 is the third Thursday of October 2021. This page follows section 52 and does not treat the “every 4 years” sentence as an amendment of the Act. It does not publish a count and does not name a mayor.";
+    const classes = fr
+      ? "L’article 14(1) dit que les catégories qui peuvent être constituées sont la cité et la ville. L’article 14(2) dit que chaque municipalité déjà établie est prorogée dans la même catégorie, sauf que chaque village devient une ville."
+      : "Section 14(1) says the classes that may be formed are a city and a town. Section 14(2) says each municipality already established is continued as the same class, except that each village becomes a town.";
+    let name = "";
+    if (place.code === YT_DAWSON) {
+      name = fr
+        ? "L’article 15(2) dit que la corporation de la City of Dawson est prorogée comme ville et porte le nom « City of Dawson ». Le titre de classe de la CGT est Dawson, de type T. Le titre de cette page est ce titre de classe."
+        : "Section 15(2) says the corporation of the City of Dawson is continued as a town and shall have the name “City of Dawson”. The SGC class title is Dawson, type T. This page’s heading is that class title.";
+    } else if (place.type === "VL") {
+      name = fr
+        ? "L’article 15(3) dit qu’une municipalité qui est un village à l’entrée en vigueur de la loi peut continuer d’utiliser « Village of ». Cette page garde le titre de classe de la CGT et n’ajoute pas ce préfixe."
+        : "Section 15(3) says a municipality that is a village when the Act comes into force may continue to use “Village of”. This page keeps the SGC class title and does not add that prefix.";
+    }
+    return name ? `${cycle} ${classes} ${name}` : `${cycle} ${classes}`;
   }
   throw new Error(`No municipal election text for ${place.region}/${place.code}`);
 }
@@ -542,14 +627,48 @@ function councilInner(place: Municipality, lang: CaLang): string {
       : "No mayor is named. Elections Nunavut says a council normally has eight councillors plus a mayor, and that there are 25 municipal councils. The page does not name anyone. That sentence is the agency’s general description, not a list for this subdivision.";
   }
   if (place.region === "northwest-territories") {
+    const page = extLink(
+      "https://gnwt.ca/communities/municipal-elections/election-dates",
+      fr ? "page des dates d’élections municipales des Territoires du Nord-Ouest" : "Northwest Territories municipal election dates page",
+    );
     return fr
-      ? "Aucun maire ni conseil n’est copié. La page d’accueil d’Élections TNO dit de communiquer avec le ministère des Affaires municipales et communautaires. Aucune liste de maires n’a été lue."
-      : "No mayor or council is copied. The Elections NWT home page says to contact the Department of Municipal and Community Affairs. No list of mayors was read.";
+      ? `Aucun maire n’est copié. La ${page} ne dresse pas la liste des maires. Aucun règlement ni ordre d’établissement n’a été lu.`
+      : `No mayor is copied. The ${page} does not list mayors. No bylaw or establishment order was read.`;
   }
   if (place.region === "yukon") {
+    const elections = extLink(
+      "https://yukon.ca/en/municipal-and-local-advisory-council-elections",
+      fr ? "page des élections municipales du Yukon" : "Yukon municipal elections page",
+    );
+    const directory = extLink(
+      "https://yukon.ca/sites/default/files/cs-2026-09-18-local-government-directory.pdf",
+      fr ? "répertoire des gouvernements locaux" : "local government directory",
+    );
     return fr
-      ? "Aucun maire ni conseil n’est copié. Aucun répertoire municipal du Yukon n’a été obtenu le 24 octobre 2026."
-      : "No mayor or council is copied. No Yukon municipal directory was retrieved on 24 October 2026.";
+      ? `Aucun maire n’est copié. La ${elections} énumère huit municipalités et ne nomme pas de maires. Le ${directory} énumère des maires. Ces noms ne sont pas copiés.`
+      : `No mayor is copied. The ${elections} lists eight municipalities and does not name mayors. The ${directory} lists mayors. Those names are not copied.`;
+  }
+  if (place.region === "newfoundland-and-labrador") {
+    const directory = extLink(
+      "https://www.gov.nl.ca/mca/municipal-directory/",
+      fr ? "répertoire municipal de Terre-Neuve-et-Labrador" : "Newfoundland and Labrador municipal directory",
+    );
+    return fr
+      ? `Aucun maire n’est copié. Le ${directory} lie un fichier des villes, des gouvernements communautaires inuits et des cités en date du 13 octobre 2026. Ce fichier a une colonne de maire. Les noms, les numéros de téléphone et les adresses de rue ne sont pas copiés.`
+      : `No mayor is copied. The ${directory} links a file of towns, Inuit community governments, and cities as of 13 October 2026. That file has a mayor column. Names, telephone numbers, and street addresses are not copied.`;
+  }
+  if (place.region === "prince-edward-island") {
+    const directory = extLink(
+      "https://www.princeedwardisland.ca/en/feature/municipal-directory",
+      fr ? "répertoire municipal de l’Île-du-Prince-Édouard" : "Prince Edward Island municipal directory",
+    );
+    const list = extLink(
+      "https://www.princeedwardisland.ca/en/information/housing-and-communities/pei-municipalities",
+      fr ? "page PEI Municipalities du 28 janvier 2025" : "PEI Municipalities page of 28 January 2025",
+    );
+    return fr
+      ? `Aucun maire n’est copié. Le ${directory} est une page de recherche d’élus. Aucun nom n’a été copié. La ${list} énumère les gouvernements par catégorie et n’imprime pas de maires dans la liste qui a été lue.`
+      : `No mayor is copied. The ${directory} is a search page of elected officials. No name was copied. The ${list} lists governments by class and does not print mayors in the list that was read.`;
   }
   return fr
     ? "Aucun maire, préfet ou conseil n’est copié. Aucun répertoire provincial de ces titulaires n’a été obtenu le 24 octobre 2026. Ce n’est pas publié de façon centrale dans les sources de cette page."
@@ -586,13 +705,15 @@ function municipalityPage(lang: CaLang, place: Municipality): string {
       ? "Le titre de classe de la CGT et CSDNAME du fichier de limites impriment le même nom anglais."
       : "The SGC class title and the boundary file’s CSDNAME print the same English name.";
   const legacy = isLegacyMunicipality(place.region);
-  const readStamp = legacy
-    ? fr
-      ? "Lecture du 19 octobre 2026."
-      : "Read on 19 October 2026."
-    : fr
-      ? "Lecture du 24 octobre 2026."
-      : "Read on 24 October 2026.";
+  const stamp = readStamp(place.region, fr);
+  const titleGap =
+    place.region === "nunavut" && NU_TITLE_GAP.has(place.code)
+      ? `<p>${esc(
+          fr
+            ? "La liste d’Élections Nunavut de 25 conseils, lue le 26 octobre 2026, n’imprime pas ce titre de classe de la CGT. Elle imprime Kinngait, Sanirajak et Resolute Bay, qui ne sont pas des titres de classe de la CGT 2021 au Nunavut. Cette page ne décide pas quel nom de la liste correspond à ce code."
+            : "The Elections Nunavut list of 25 councils, read on 26 October 2026, does not print this SGC class title. It does print Kinngait, Sanirajak, and Resolute Bay, which are not SGC 2021 class titles in Nunavut. This page does not decide which list name matches this code.",
+        )}</p>\n`
+      : "";
   const reference = legacy
     ? ""
     : `<p>${esc(
@@ -621,7 +742,7 @@ function municipalityPage(lang: CaLang, place: Municipality): string {
   const body = `<p class="eyebrow">${esc(CSD_TYPE_LABEL[place.type])}</p>
 <h1>${esc(name)}</h1>
 <p class="lede">${fr ? "Autre titre de classe" : "Other class title"}: ${esc(other)}</p>
-<p><strong>${esc(readStamp)}</strong> <a href="${esc(reportErrorHref(path))}">${fr ? "Signaler une erreur" : "Report an error"}</a></p>
+<p><strong>${esc(stamp)}</strong> <a href="${esc(reportErrorHref(path))}">${fr ? "Signaler une erreur" : "Report an error"}</a></p>
 <table>
 <tr><th>${fr ? "Code CGT" : "SGC code"}</th><td>${esc(place.code)}</td></tr>
 <tr><th>${fr ? "Type" : "Type"}</th><td>${esc(CSD_TYPE_LABEL[place.type])}</td></tr>
@@ -629,7 +750,7 @@ function municipalityPage(lang: CaLang, place: Municipality): string {
 <tr><th>${region.kind === "territory" ? copy.kindTerritory : copy.kindProvince}</th><td><a href="${esc(regionHref)}">${esc(regionLabel)}</a></td></tr>
 </table>
 <p>${esc(boundary)}</p>
-${reference}<h2>${fr ? "Conseil" : "Council"}</h2>
+${titleGap}${reference}<h2>${fr ? "Conseil" : "Council"}</h2>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${councilInner(place, lang)}</p>
 <h2>${fr ? "Élection municipale" : "Municipal election"}</h2>
 <p>${esc(localElection(place, lang))}</p>
@@ -685,16 +806,10 @@ function municipalityIndex(lang: CaLang, divisionCode: string): string {
         `<li><a href="${esc(municipalityPath(lang, division.region, division.slug, place.slug))}">${esc(municipalityName(place, lang))}</a></li>`,
     )
     .join("");
-  const readStamp = isLegacyMunicipality(division.region)
-    ? fr
-      ? "Lecture du 19 octobre 2026."
-      : "Read on 19 October 2026."
-    : fr
-      ? "Lecture du 24 octobre 2026."
-      : "Read on 24 October 2026.";
+  const stamp = readStamp(division.region, fr);
   const body = `<p class="eyebrow">${esc(divisionLabel)}</p>
 <h1>${fr ? "Municipalités" : "Municipalities"}</h1>
-<p><strong>${esc(readStamp)}</strong> ${esc(fr ? `${places.length} municipalités constituées dans cette division de recensement.` : `${places.length} incorporated municipalities in this census division.`)}</p>
+<p><strong>${esc(stamp)}</strong> ${esc(fr ? `${places.length} municipalités constituées dans cette division de recensement.` : `${places.length} incorporated municipalities in this census division.`)}</p>
 <ul>${items}</ul>
 <p>${esc(fr ? STATCAN_FR : STATCAN)}</p>
 <p class="tools">${esc(copy.parent)}: <a href="${esc(divisionHref)}">${esc(divisionLabel)}</a> · <a href="${esc(regionHref)}">${esc(regionLabel)}</a></p>

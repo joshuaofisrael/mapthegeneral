@@ -89,6 +89,11 @@ const MUNI_COUNTS: Record<string, number> = {
   saskatchewan: 775,
   "nova-scotia": 40,
   "new-brunswick": 104,
+  "newfoundland-and-labrador": 277,
+  "prince-edward-island": 59,
+  yukon: 8,
+  "northwest-territories": 24,
+  nunavut: 25,
 };
 
 function assertLevel3(): void {
@@ -142,7 +147,7 @@ function assertLevel3(): void {
   for (const seat of byRegion.get("british-columbia") ?? []) {
     if (seat.gap !== "dissolved" || seat.member) throw new Error(`BC seat ${seat.name} should have no current member`);
   }
-  if (MUNICIPALITIES.length !== 3087) throw new Error(`Expected 3087 municipalities, found ${MUNICIPALITIES.length}`);
+  if (MUNICIPALITIES.length !== 3480) throw new Error(`Expected 3480 municipalities, found ${MUNICIPALITIES.length}`);
   const divisionByCode = new Map(DIVISIONS.map((division) => [division.code, division]));
   const muniSlugs = new Set<string>();
   const muniCounts: Record<string, number> = {};
