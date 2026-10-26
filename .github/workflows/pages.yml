@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      indexnow_scope:
+        description: "all = every URL; il = only the Israel results pages (live-results rebuilds)"
+        default: all
 
 permissions:
   contents: read
@@ -56,12 +60,17 @@ jobs:
 
       - name: Notify IndexNow
         continue-on-error: true
+        env:
+          INDEXNOW_SCOPE: ${{ inputs.indexnow_scope || 'all' }}
         run: |
           python3 - << 'PY'
           import json, urllib.request
           from pathlib import Path
           key = Path("public/a7c3e91b4d2f4086b5e0c1a9d8f74632.txt").read_text().strip()
+          import os
           urls = json.loads(Path("public/search/indexnow-urls.json").read_text())
+          if os.environ.get("INDEXNOW_SCOPE") == "il":
+            urls = ["https://mapthegeneral.com/il/he/results/", "https://mapthegeneral.com/il/en/results/"]
           for start in range(0, len(urls), 10000):
             body = json.dumps({
               "host": "mapthegeneral.com",
