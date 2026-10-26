@@ -59697,10 +59697,30 @@
 - [Elections of 8 September 2030](https://mapthegeneral.com/se/en/elections/riksdag-2030/)
 - [Sweden questions](https://mapthegeneral.com/se/en/faq/)
 - [Sweden sources](https://mapthegeneral.com/se/en/sources/)
+- [Brazil](https://mapthegeneral.com/br/)
+- [Brazil](https://mapthegeneral.com/br/en/)
+- [Elections in Brazil](https://mapthegeneral.com/br/en/elections/)
+- [General election, 4 and 25 October 2026](https://mapthegeneral.com/br/en/elections/general-2026/)
+- [Brazil questions](https://mapthegeneral.com/br/en/faq/)
+- [Brazil sources](https://mapthegeneral.com/br/en/sources/)
+- [Serbia](https://mapthegeneral.com/rs/)
+- [Serbia](https://mapthegeneral.com/rs/en/)
+- [Elections in Serbia](https://mapthegeneral.com/rs/en/elections/)
+- [National Assembly election, 25 October 2026](https://mapthegeneral.com/rs/en/elections/national-assembly-2026/)
+- [Serbia questions](https://mapthegeneral.com/rs/en/faq/)
+- [Serbia sources](https://mapthegeneral.com/rs/en/sources/)
+- [Israel](https://mapthegeneral.com/il/)
+- [Israel](https://mapthegeneral.com/il/en/)
+- [Elections in Israel](https://mapthegeneral.com/il/en/elections/)
+- [Election to the 26th Knesset, 27 October 2026](https://mapthegeneral.com/il/en/elections/knesset-2026/)
+- [Israel questions](https://mapthegeneral.com/il/en/faq/)
+- [Israel sources](https://mapthegeneral.com/il/en/sources/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 
 Australia (https://mapthegeneral.com/au/): The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No polling day was named in the sources read on 17 October 2026. This release has the national page, eight state and territory pages, 150 House of Representatives divisions, Victoria’s 88 Legislative Assembly districts and 8 Legislative Council regions, New South Wales’s 93 Legislative Assembly districts, Tasmania’s 5 House of Assembly divisions, Victoria’s 79 local councils, and Geoscape August 2026 legal names matched to the ABS 2025 Local Government Area codes for the other states and territories, in English. The Victorian Electoral Commission prints a state election on Saturday 28 November 2026, and its report to Parliament says the 2024 local government general elections were held on 26 October 2024, with the next in October 2028.
+
+Brazil (https://mapthegeneral.com/br/): National hub in English. Official TSE presidential results of the 2026 general election: first round 4 October, runoff 25 October 2026. No municipality pages.
 
 Canada (https://mapthegeneral.com/ca/): Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, 293 census divisions, legislative assembly districts for nine provinces and territories, and incorporated municipalities from the SGC 2021 list in every province and territory, in English and French. Legislative assembly districts for New Brunswick, Newfoundland and Labrador, the Northwest Territories, and Yukon are not in this release. Mayors are not named.
 
@@ -59710,6 +59730,8 @@ United Kingdom (https://mapthegeneral.com/gb/): UK Parliament general election, 
 
 Ireland (https://mapthegeneral.com/ie/): National hub in English. The Electoral Commission says the most recent Dáil election was Friday 29 November 2024, and that a general election has to take place at least every five years. No next polling day was printed on the pages read on 23 October 2026. No municipality pages and no candidate names.
 
+Israel (https://mapthegeneral.com/il/): National hub in English. Election to the 26th Knesset on Tuesday 27 October 2026: 120 seats, 3.25% threshold. No polls. No municipality pages.
+
 Italy (https://mapthegeneral.com/it/): Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree for the next general election was read, so this release does not print that polling day. National page, 20 regions, 110 ISTAT supra-municipal units, and the constituencies in legislative decree 177/2020, in Italian and English. This chunk adds 1,889 municipalities: every flagged capoluogo, all of Lombardia, and part of Lazio. No central 2027 local-election list was read.
 
 Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts, the five plurinominal constituencies, and the 2,478 INEGI catalog rows (municipios and the 16 alcaldías of Ciudad de México), in Spanish and English. Sitting municipal presidents are not named.
@@ -59717,6 +59739,8 @@ Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 
 Norway (https://mapthegeneral.com/no/): National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.
 
 Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 2,479 gminas, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Candidate lists and wards are not in this release.
+
+Serbia (https://mapthegeneral.com/rs/): National hub in English. Preliminary RIK results of the National Assembly election of 25 October 2026. No municipality pages.
 
 Sweden (https://mapthegeneral.com/se/): National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.
 

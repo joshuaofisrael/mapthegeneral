@@ -29,9 +29,12 @@ const COUNTRY_LINKS = [
   { label: "Ireland", href: "/ie/" },
   { label: "Norway", href: "/no/" },
   { label: "Sweden", href: "/se/" },
+  { label: "Brazil", href: "/br/" },
+  { label: "Serbia", href: "/rs/" },
+  { label: "Israel", href: "/il/" },
 ] as const;
 
-const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden"]);
+const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel"]);
 
 function englishList(labels: readonly string[]): string {
   const spoken = labels.map((label) => (label === "United Kingdom" ? "the United Kingdom" : label));
@@ -50,7 +53,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway and Sweden, with no municipality pages and no live tracker. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {
