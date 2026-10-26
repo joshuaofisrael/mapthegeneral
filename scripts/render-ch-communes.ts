@@ -47,6 +47,12 @@ function cantonByAbbr(abbr: string) {
 }
 
 function copied(lang: ChLang, iso = "2026-10-19"): string {
+  if (iso === "2026-10-26") {
+    if (lang === "de") return "Kopie vom 26. Oktober 2026.";
+    if (lang === "fr") return "Copie du 26 octobre 2026.";
+    if (lang === "it") return "Copia del 26 ottobre 2026.";
+    return "Copied on 26 October 2026.";
+  }
   if (iso === "2026-10-25") {
     if (lang === "de") return "Kopie vom 25. Oktober 2026.";
     if (lang === "fr") return "Copie du 25 octobre 2026.";
@@ -139,6 +145,9 @@ function shortSource(lang: ChLang, id: string): string {
     "ti-archivio": "Kanton Tessin, Staatskanzlei, Archivio delle elezioni",
     "vs-ace-2024": "Staatsrat Wallis, Beschluss vom 27. März 2024",
     "vs-presidents": "Kanton Wallis, Seite der Gemeindepräsidien",
+    "zg-erneuerung": "Kanton Zug, Termine Gesamterneuerungswahlen",
+    "ju-elections": "Kanton Jura, Elections communales",
+    "ar-wahlen": "Kanton Appenzell Ausserrhoden, Wahlen / Abstimmungen",
   };
   const fr: Record<string, string> = {
     "agvch-hist": "OFS, liste historisée des communes, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -152,6 +161,9 @@ function shortSource(lang: ChLang, id: string): string {
     "ti-archivio": "Canton du Tessin, Chancellerie d’État, Archivio delle elezioni",
     "vs-ace-2024": "Conseil d’État du Valais, arrêté du 27 mars 2024",
     "vs-presidents": "Canton du Valais, page des présidences communales",
+    "zg-erneuerung": "Canton de Zoug, dates des renouvellements intégraux",
+    "ju-elections": "République et Canton du Jura, Elections communales",
+    "ar-wahlen": "Canton d’Appenzell Rhodes-Extérieures, Wahlen / Abstimmungen",
   };
   const it: Record<string, string> = {
     "agvch-hist": "UST, repertorio storicizzato dei comuni, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -165,6 +177,9 @@ function shortSource(lang: ChLang, id: string): string {
     "ti-archivio": "Cantone Ticino, Cancelleria dello Stato, Archivio delle elezioni",
     "vs-ace-2024": "Consiglio di Stato del Vallese, decreto del 27 marzo 2024",
     "vs-presidents": "Cantone Vallese, pagina delle presidenze comunali",
+    "zg-erneuerung": "Cantone di Zugo, date dei rinnovi integrali",
+    "ju-elections": "Repubblica e Cantone del Giura, Elections communales",
+    "ar-wahlen": "Cantone Appenzello Esterno, Wahlen / Abstimmungen",
   };
   const en: Record<string, string> = {
     "agvch-hist": "FSO, historized commune register, eCH-0071 1.2.0, 20260101_GDEHist_GDE.txt",
@@ -178,6 +193,9 @@ function shortSource(lang: ChLang, id: string): string {
     "ti-archivio": "Canton of Ticino, Cantonal Chancellery, Archivio delle elezioni",
     "vs-ace-2024": "Council of State of Valais, decree of 27 March 2024",
     "vs-presidents": "Canton of Valais, page of communal presidencies",
+    "zg-erneuerung": "Canton of Zug, dates of full renewals",
+    "ju-elections": "Republic and Canton of Jura, Elections communales",
+    "ar-wahlen": "Canton of Appenzell Ausserrhoden, Wahlen / Abstimmungen",
   };
   const table = lang === "de" ? de : lang === "fr" ? fr : lang === "it" ? it : en;
   return table[id] ?? id;
@@ -205,7 +223,7 @@ function pageDocument(input: {
   crumbs: { name: string; path: string }[];
   body: string;
   /** ISO date of the FSO register copy cited on this page. Defaults to the earlier chunk. */
-  registerRead?: "2026-10-19" | "2026-10-25";
+  registerRead?: "2026-10-19" | "2026-10-25" | "2026-10-26";
   sourceIds?: readonly string[];
 }): string {
   const copy = ui(input.lang);
@@ -341,7 +359,7 @@ ${short}
 <tr><th>${esc(constituencyLabel(lang))}</th><td>${esc(canton.officialName)}</td></tr>
 </table>
 <p>${esc(constituency(lang, canton.officialName))}</p>
-<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(communeExecutiveNote(commune.canton, lang) ?? executiveGap(lang))}${directoryHtml}</p>
+<p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(communeExecutiveNote(commune.canton, lang, commune.bfs) ?? executiveGap(lang))}${directoryHtml}</p>
 <p class="gap"><strong>${esc(copy.gap)}.</strong> ${esc(communeElectionNote(commune.canton, commune.bfs, lang) ?? electionGap(lang))}</p>
 <p class="tools">${esc(copy.parent)}: ${parentBits.join(" · ")}. ${esc(copy.alphaNearby)}: ${near}</p>
 ${nearbyPlacesParagraph(

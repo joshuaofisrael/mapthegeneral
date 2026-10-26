@@ -4,9 +4,15 @@ import { communePath, communesIndexPath } from "../data/ch/search";
 import type { ChLang } from "../data/ch/types";
 import { ui } from "../data/ch/ui";
 
-type RegisterRead = "2026-10-19" | "2026-10-25";
+type RegisterRead = "2026-10-19" | "2026-10-25" | "2026-10-26";
 
 function listCopiedOn(lang: ChLang, copiedOn: RegisterRead): string {
+  if (copiedOn === "2026-10-26") {
+    if (lang === "de") return "Kopie vom 26. Oktober 2026.";
+    if (lang === "fr") return "Copie du 26 octobre 2026.";
+    if (lang === "it") return "Copia del 26 ottobre 2026.";
+    return "Copied on 26 October 2026.";
+  }
   if (copiedOn === "2026-10-25") {
     if (lang === "de") return "Kopie vom 25. Oktober 2026.";
     if (lang === "fr") return "Copie du 25 octobre 2026.";

@@ -2,7 +2,7 @@
   "code": "ch",
   "name": "Switzerland",
   "href": "/ch/",
-  "summary": "National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, 135 district names, and 1,957 political-municipality pages for Zürich, Bern / Berne, Vaud, Aargau, St. Gallen, Genève, Luzern, Ticino, Valais / Wallis, Fribourg / Freiburg, Basel-Landschaft, Thurgau, Solothurn, Graubünden / Grigioni / Grischun, Basel-Stadt, Neuchâtel and Schwyz, from the FSO historized commune register (1 January 2026), in German, French, Italian and English. Municipality pages for Zug, Schaffhausen, Jura, Appenzell Ausserrhoden, Nidwalden, Glarus, Obwalden, Uri and Appenzell Innerrhoden follow in a later release.",
+  "summary": "National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, 135 district names, and a page for each of the 2,110 political municipalities in the FSO historized commune register (1 January 2026), in German, French, Italian and English. Communal executive names are not stored. Communal polling dates are cited for Genève, Luzern, Ticino, Valais / Wallis, Zug, Jura except Moutier, and Appenzell Ausserrhoden. The other cantons are marked where the register does not give a communal polling day.",
   "links": [
     { "href": "/ch/de/", "label": "Deutsch" },
     { "href": "/ch/fr/", "label": "Français" },
