@@ -1,8 +1,10 @@
 import Link from "@/components/AnchorLink";
 import { CountryHero } from "@/components/CountryHero";
+import { HomeFaq } from "@/components/HomeFaq";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
 import { countryAccent } from "@/data/heroes";
+import { homeFaqJsonLd } from "@/data/home-faq";
 import { SITE } from "@/data/site";
 import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
@@ -34,6 +36,7 @@ export default function HomePage() {
           isPartOf: { "@type": "WebSite", name: SITE.name, url: `${SITE.url}/` },
         }}
       />
+      <JsonLd data={homeFaqJsonLd} />
       <section className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Global election guide</p>
         <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
@@ -170,6 +173,8 @@ export default function HomePage() {
           </a>
         </p>
       </section>
+
+      <HomeFaq />
     </div>
   );
 }
