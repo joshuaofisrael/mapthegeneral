@@ -21,7 +21,7 @@ import type { CaLang } from "../data/ca/types";
 export const CANADA_HOME_CARD = {
   href: "/ca/",
   title: "Canada",
-  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, 293 census divisions, legislative assembly districts for nine provinces and territories, and incorporated municipalities in Ontario, Quebec, British Columbia, Alberta, Manitoba, Saskatchewan, Nova Scotia, and New Brunswick, in English and French. Municipality pages for Newfoundland and Labrador, Prince Edward Island, and the territories, and legislative assembly districts for New Brunswick, Newfoundland and Labrador, the Northwest Territories, and Yukon, are not in this release.",
+  text: "Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, 293 census divisions, legislative assembly districts for nine provinces and territories, and incorporated municipalities from the SGC 2021 list in every province and territory, in English and French. Legislative assembly districts for New Brunswick, Newfoundland and Labrador, the Northwest Territories, and Yukon are not in this release. Mayors are not named.",
   links: [
     { href: "/ca/en/", label: "English" },
     { href: "/ca/fr/", label: "Français" },

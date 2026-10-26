@@ -15,7 +15,7 @@ import {
   type CensusDivision,
   type District,
 } from "../src/data/ca/level2";
-import { municipalitiesIn, municipalityName } from "../src/data/ca/level3";
+import { municipalitiesIn, municipalityName, regionsWithMunicipalities } from "../src/data/ca/level3";
 import {
   districtIndexPath,
   districtPath,
@@ -307,14 +307,7 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
     : `The Standard Geographical Classification (SGC) 2021 structure file lists this census division (level 3) in ${regionLabel}. The class title is the name above. The file does not say whether this division is a municipal government, and it does not name an officeholder. It does not give a population.`;
   const places = municipalitiesIn(division.code, lang);
   const legacy = division.region === "ontario" || division.region === "quebec";
-  const released =
-    legacy ||
-    division.region === "british-columbia" ||
-    division.region === "alberta" ||
-    division.region === "manitoba" ||
-    division.region === "saskatchewan" ||
-    division.region === "nova-scotia" ||
-    division.region === "new-brunswick";
+  const released = regionsWithMunicipalities().includes(division.region);
   const gap = !released
     ? fr
       ? "Les municipalités de cette division de recensement ne font pas partie de cette livraison."
