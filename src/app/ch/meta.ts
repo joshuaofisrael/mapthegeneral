@@ -15,7 +15,7 @@ export function chMetadata(input: { title: string; description: string; path: st
   for (const code of CH_LANGS) {
     languages[code] = absoluteUrl(input.path.replace(/^\/ch\/(de|fr|it|en)\//, `/ch/${code}/`));
   }
-  languages["x-default"] = absoluteUrl(input.path.replace(/^\/ch\/(de|fr|it|en)\//, "/ch/en/"));
+  languages["x-default"] = absoluteUrl(input.path.replace(/^\/ch\/(de|fr|it|en)\//, "/ch/de/"));
   const socialTitle = `${input.title} · ${SITE.name}`;
   return {
     title: input.title,
@@ -24,7 +24,7 @@ export function chMetadata(input: { title: string; description: string; path: st
       canonical: absoluteUrl(input.path),
       languages,
     },
-    robots: { index: true, follow: true },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
     openGraph: {
       title: socialTitle,
       description: input.description,

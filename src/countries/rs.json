@@ -2,8 +2,16 @@
   "code": "rs",
   "name": "Serbia",
   "href": "/rs/",
-  "summary": "National hub in English. Preliminary RIK results of the National Assembly election of 25 October 2026. No municipality pages.",
+  "summary": "National hub. Preliminary RIK results of the National Assembly election of 25 October 2026. The presidential election has no called polling day; the latest legal day stated by RTS is 27 December 2026. No municipality pages.",
   "links": [
+    {
+      "href": "/rs/sr/elections/narodna-skupstina-2026/",
+      "label": "Narodna skupština, 25. oktobar 2026"
+    },
+    {
+      "href": "/rs/sr/elections/predsednicki-2026/",
+      "label": "Predsednički izbori 2026, datum nije raspisan"
+    },
     {
       "href": "/rs/en/",
       "label": "English"
@@ -11,6 +19,10 @@
     {
       "href": "/rs/en/elections/national-assembly-2026/",
       "label": "National Assembly election 2026"
+    },
+    {
+      "href": "/rs/en/elections/president-2026/",
+      "label": "Presidential election 2026, no polling day called"
     },
     {
       "href": "/rs/en/sources/",

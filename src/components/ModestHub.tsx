@@ -89,11 +89,41 @@ export function HubChooser({ code }: { code: HubCode }) {
         {code === "il" && (
           <li className="country-card rounded-xl border border-line bg-paper-card p-5" style={{ borderTopColor: countryAccent(code) }} lang="he" dir="rtl">
             <h2 className="font-serif text-2xl font-semibold">
-              <Link className="hover:text-navy" href="/il/he/results/">
+              <Link className="hover:text-navy" href="/il/he/elections/knesset-2026/">
                 עברית
               </Link>
             </h2>
-            <p className="mt-2 text-sm leading-6 text-ink-muted">תוצאות הבחירות לכנסת ה-26 בזמן אמת, מנתוני ועדת הבחירות המרכזית.</p>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">
+              הבחירות לכנסת ה-26, 27 באוקטובר 2026.{" "}
+              <Link className="text-navy underline" href="/il/he/results/">
+                תוצאות
+              </Link>
+            </p>
+          </li>
+        )}
+        {code === "rs" && (
+          <li className="country-card rounded-xl border border-line bg-paper-card p-5" style={{ borderTopColor: countryAccent(code) }} lang="sr">
+            <h2 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href="/rs/sr/elections/narodna-skupstina-2026/">
+                Srpski
+              </Link>
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">
+              Narodna skupština, 25. oktobar 2026.{" "}
+              <Link className="text-navy underline" href="/rs/sr/elections/predsednicki-2026/">
+                Predsednički izbori, datum nije raspisan
+              </Link>
+            </p>
+          </li>
+        )}
+        {code === "br" && (
+          <li className="country-card rounded-xl border border-line bg-paper-card p-5" style={{ borderTopColor: countryAccent(code) }} lang="pt">
+            <h2 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href="/br/pt/elections/geral-2026/">
+                Português
+              </Link>
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">Eleição geral de 2026, 4 e 25 de outubro. Totais do TSE.</p>
           </li>
         )}
       </ul>

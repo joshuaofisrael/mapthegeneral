@@ -15,11 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${spainHome(lang)}elections/`;
   return pageMetadata({
-    title: lang === "es" ? "Elecciones en España" : "Elections in Spain",
+    title: lang === "es" ? "Elecciones en España: generales, 29 de noviembre de 2026" : "Elections in Spain: general election, 29 November 2026",
     description:
       lang === "es"
-        ? "Índice de elecciones en las páginas de España. La elección general convocada es la del 29 de noviembre de 2026."
-        : "Index of elections on the Spain pages. The general election that has been called is 29 November 2026.",
+        ? "Elecciones en España. La elección general a Cortes Generales está convocada para el domingo 29 de noviembre de 2026."
+        : "Elections in Spain. The general election for the Cortes Generales is called for Sunday 29 November 2026.",
     path,
     lang,
     alternatePath: `${spainHome(lang === "es" ? "en" : "es")}elections/`,

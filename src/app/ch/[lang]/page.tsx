@@ -275,6 +275,17 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
                 : "The Federal Council’s German page “Die Volksabstimmungen”, read on 18 October 2026, lists a popular vote on 29 November 2026 and the labels AHV-Zusatzfinanzierung, Feuerwerksinitiative, Ehepaarbesteuerung and Kriegsmaterialgesetz. This release publishes no poll, projection, or result for that vote."}
         </p>
         <p className="text-sm">
+          <Link className="text-navy underline" href={`${path}elections/volksabstimmung-2026-11-29/`}>
+            {lang === "de"
+              ? "Volksabstimmung vom 29. November 2026"
+              : lang === "fr"
+                ? "Votation du 29 novembre 2026"
+                : lang === "it"
+                  ? "Votazione del 29 novembre 2026"
+                  : "Popular vote of 29 November 2026"}
+          </Link>
+        </p>
+        <p className="text-sm">
           <Link className="text-navy underline" href={`${path}parties/`}>
             {copy.parties}
           </Link>

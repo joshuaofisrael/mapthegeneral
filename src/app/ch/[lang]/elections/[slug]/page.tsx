@@ -146,6 +146,16 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
           <Link className="text-navy underline" href={`${chHome(lang)}results/`}>
             {copy.results}
           </Link>
+          {" · "}
+          <Link className="text-navy underline" href={`${chHome(lang)}elections/volksabstimmung-2026-11-29/`}>
+            {lang === "de"
+              ? "Volksabstimmung, 29. November 2026"
+              : lang === "fr"
+                ? "Votation populaire, 29 novembre 2026"
+                : lang === "it"
+                  ? "Votazione popolare, 29 novembre 2026"
+                  : "Federal popular vote, 29 November 2026"}
+          </Link>
         </p>
       </section>
     </ChFrame>

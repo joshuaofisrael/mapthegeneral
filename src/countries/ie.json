@@ -2,9 +2,10 @@
   "code": "ie",
   "name": "Ireland",
   "href": "/ie/",
-  "summary": "National hub in English. The Electoral Commission says the most recent Dáil election was Friday 29 November 2024, and that a general election has to take place at least every five years. No next polling day was printed on the pages read on 23 October 2026. No municipality pages and no candidate names.",
+  "summary": "National hub in English. Seanad Éireann bye-election on Friday 6 November 2026, for the Cultural and Educational Panel. The electorate is members of the Oireachtas. No next Dáil polling day was printed. No municipality pages.",
   "links": [
     { "href": "/ie/en/", "label": "English" },
+    { "href": "/ie/en/elections/seanad-2026/", "label": "Seanad Éireann bye-election, 6 November 2026" },
     { "href": "/ie/en/elections/next-dail/", "label": "Next Dáil election" },
     { "href": "/ie/en/sources/", "label": "Sources" }
   ]

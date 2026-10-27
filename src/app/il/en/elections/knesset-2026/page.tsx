@@ -1,8 +1,7 @@
-import { HubElection } from "@/components/ModestHub";
-import { hubMetadata } from "@/data/new-hubs";
+import { IlKnessetGuide, ilKnessetMetadata } from "@/components/IlKnessetGuide";
 
-export const metadata = hubMetadata("il", "election");
+export const metadata = ilKnessetMetadata("en");
 
 export default function Page() {
-  return <HubElection code="il" />;
+  return <IlKnessetGuide lang="en" />;
 }

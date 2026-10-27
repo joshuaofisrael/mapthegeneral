@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   authors: [{ name: SITE.name }],
   creator: SITE.name,
   publisher: SITE.name,
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
 };
 
 const ORG_ID = `${SITE.url}/#organization`;

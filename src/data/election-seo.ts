@@ -6,6 +6,8 @@
  * No poll, projection, or result is stored here.
  */
 
+import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
+
 export const ELECTION_SEO_WINDOW_DAYS = 60;
 
 export type LinkedPhrase = { label: string; href: string; rel?: string };
@@ -20,7 +22,7 @@ export type FaqItem = SourcedText & { question: string };
 export type KeyDate = SourcedText & { label: string };
 
 export type ElectionSeoPage = {
-  lang: "en" | "pl" | "fr" | "it";
+  lang: "en" | "pl" | "fr" | "it" | "de";
   htmlLang: string;
   path: string;
   title: string;
@@ -72,6 +74,11 @@ export type ElectionSeoProfile = {
   organizerUrl: string;
   /** Existing country OG image. Omitted from JSON-LD when the file is missing. */
   imagePath?: string;
+  /**
+   * Show on the homepage list even when polling day is outside the 60-day
+   * window. Used for a dated election this release publishes early.
+   */
+  pinOnHome?: boolean;
   /**
    * ISO content date for sitemap lastmod. A shallow clone cannot date the
    * page from git, and a commit made west of UTC can fall on the previous
@@ -265,7 +272,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Victorian Electoral Commission",
     organizerUrl: VEC_HOME,
     imagePath: "/images/og/au.webp",
-    lastmod: "2026-10-24",
+    lastmod: "2026-10-27",
     homeLinks: [
       {
         href: "/au/en/elections/victoria-2026/",
@@ -405,6 +412,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: "/au/en/victoria/", label: "Victoria" },
           { href: "/au/en/elections/", label: "Elections in Australia" },
           { href: "/au/en/elections/federal-next/", label: "Next federal election" },
+          { href: "/au/en/elections/nsw-2027/", label: "New South Wales state election, 13 March 2027" },
         ],
         bodyHtml: VICTORIA_BODY,
         sourcesHeading: "Sources",
@@ -434,7 +442,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Państwowa Komisja Wyborcza",
     organizerUrl: PKW_HOME,
     imagePath: "/images/og/pl.webp",
-    lastmod: "2026-10-25",
+    lastmod: "2026-10-27",
     candidateListId: "senat-20-2026",
     homeLinks: [
       {
@@ -453,15 +461,15 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         lang: "en",
         htmlLang: "en",
         path: "/pl/en/elections/senat-20-2026/",
-        title: "Senate by-election, constituency 20",
+        title: "Poland Senate by-election, Lubusz constituency 20, 22 November 2026",
         description:
-          "Senate by-election in constituency 20, Sunday 22 November 2026, 7:00–21:00. Calendar from the presidential order and the Commission candidate file. Unofficial information.",
-        ogDescription: "Senate by-election in constituency 20, Sunday 22 November 2026, 7:00–21:00. Unofficial information.",
+          "Poland Senate by-election in Lubusz constituency 20, Zielona Góra, Sunday 22 November 2026, 7:00–21:00. Calendar from the presidential order and the Commission candidate file. Unofficial information.",
+        ogDescription: "Poland Senate by-election in Lubusz constituency 20, Sunday 22 November 2026, 7:00–21:00. Unofficial information.",
         ogLocale: "en_US",
         alternates: [
           { hreflang: "pl", path: "/pl/pl/elections/senat-20-2026/" },
           { hreflang: "en", path: "/pl/en/elections/senat-20-2026/" },
-          { hreflang: "x-default", path: "/pl/en/elections/senat-20-2026/" },
+          { hreflang: "x-default", path: "/pl/pl/elections/senat-20-2026/" },
         ],
         crumbs: [
           { name: "Home", path: "/" },
@@ -605,16 +613,16 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         lang: "pl",
         htmlLang: "pl",
         path: "/pl/pl/elections/senat-20-2026/",
-        title: "Wybory uzupełniające do Senatu, okręg nr 20",
+        title: "Polska: wybory uzupełniające do Senatu, okręg 20, 22 listopada 2026",
         description:
-          "Wybory uzupełniające do Senatu w okręgu nr 20, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Kalendarz z postanowienia Prezydenta i plik kandydatów PKW. Informacja nieoficjalna.",
+          "Polska, wybory uzupełniające do Senatu w województwie lubuskim, okręg nr 20, Zielona Góra, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Kalendarz z postanowienia Prezydenta i plik kandydatów PKW. Informacja nieoficjalna.",
         ogDescription:
-          "Wybory uzupełniające do Senatu w okręgu nr 20, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Informacja nieoficjalna.",
+          "Polska, wybory uzupełniające do Senatu, okręg 20, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Informacja nieoficjalna.",
         ogLocale: "pl_PL",
         alternates: [
           { hreflang: "pl", path: "/pl/pl/elections/senat-20-2026/" },
           { hreflang: "en", path: "/pl/en/elections/senat-20-2026/" },
-          { hreflang: "x-default", path: "/pl/en/elections/senat-20-2026/" },
+          { hreflang: "x-default", path: "/pl/pl/elections/senat-20-2026/" },
         ],
         crumbs: [
           { name: "Strona główna", path: "/" },
@@ -764,7 +772,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Elections BC",
     organizerUrl: EBC_HOME,
     imagePath: "/images/og/ca.webp",
-    lastmod: "2026-10-25",
+    lastmod: "2026-10-27",
     homeLinks: [
       {
         href: "/ca/en/elections/bc-2026/",
@@ -1099,7 +1107,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerName: "Ministero dell'Interno",
     organizerUrl: "https://www.interno.gov.it/",
     imagePath: "/images/og/it.webp",
-    lastmod: "2026-10-26",
+    lastmod: "2026-10-27",
     homeLinks: [
       {
         href: "/it/en/elections/camera-chieti-2026/",
@@ -1119,16 +1127,16 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         lang: "en",
         htmlLang: "en",
         path: "/it/en/elections/camera-chieti-2026/",
-        title: "Chamber by-election, 01-Chieti, Abruzzo, 15–16 November 2026",
+        title: "Italy Chamber by-election, 01-Chieti, Abruzzo, 15–16 November 2026",
         description:
-          "Chamber of Deputies by-election in single-member constituency 01-Chieti, Abruzzo, Sunday 15 and Monday 16 November 2026. Polling hours, electoral card, and the candidates the Interior Ministry has published. Unofficial information.",
+          "Italy, Chamber of Deputies by-election in single-member constituency 01-Chieti, Abruzzo, Sunday 15 and Monday 16 November 2026. Polling hours, electoral card, and the candidates the Interior Ministry has published. Unofficial information.",
         ogDescription:
           "Chamber by-election in constituency 01-Chieti, Abruzzo, on 15–16 November 2026. Sunday 7:00–23:00 and Monday 7:00–15:00. Unofficial information.",
         ogLocale: "en_US",
         alternates: [
           { hreflang: "it", path: "/it/it/elections/camera-chieti-2026/" },
           { hreflang: "en", path: "/it/en/elections/camera-chieti-2026/" },
-          { hreflang: "x-default", path: "/it/en/elections/camera-chieti-2026/" },
+          { hreflang: "x-default", path: "/it/it/elections/camera-chieti-2026/" },
         ],
         crumbs: [
           { name: "Home", path: "/" },
@@ -1257,16 +1265,16 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         lang: "it",
         htmlLang: "it",
         path: "/it/it/elections/camera-chieti-2026/",
-        title: "Elezione suppletiva Camera, 01-Chieti, Abruzzo, 15-16 novembre 2026",
+        title: "Italia: elezione suppletiva della Camera, 01-Chieti, 15-16 novembre 2026",
         description:
-          "Elezione suppletiva della Camera dei deputati nel collegio uninominale 01-Chieti, Abruzzo, domenica 15 e lunedì 16 novembre 2026. Orari dei seggi, tessera elettorale e candidati pubblicati dal Ministero dell'interno. Informazione non ufficiale.",
+          "Italia, elezione suppletiva della Camera dei deputati nel collegio uninominale 01-Chieti, Abruzzo, domenica 15 e lunedì 16 novembre 2026. Orari dei seggi, tessera elettorale e candidati pubblicati dal Ministero dell'interno. Informazione non ufficiale.",
         ogDescription:
           "Elezione suppletiva nel collegio 01-Chieti, Abruzzo, il 15-16 novembre 2026. Domenica ore 7-23 e lunedì ore 7-15. Informazione non ufficiale.",
         ogLocale: "it_IT",
         alternates: [
           { hreflang: "it", path: "/it/it/elections/camera-chieti-2026/" },
           { hreflang: "en", path: "/it/en/elections/camera-chieti-2026/" },
-          { hreflang: "x-default", path: "/it/en/elections/camera-chieti-2026/" },
+          { hreflang: "x-default", path: "/it/it/elections/camera-chieti-2026/" },
         ],
         crumbs: [
           { name: "Inizio", path: "/" },
@@ -1393,6 +1401,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
       },
     ],
   },
+  ...EXTRA_ELECTION_SEO_PROFILES,
 ];
 
 export function utcToday(now = new Date()): string {
@@ -1435,7 +1444,7 @@ export function profilesWithinDays(asOf = utcToday(), days = ELECTION_SEO_WINDOW
 }
 
 export function upcomingElectionCards(asOf = utcToday()): HomeElectionCard[] {
-  return ELECTION_SEO_PROFILES.filter((profile) => isListedElection(profile.pollingDay, asOf))
+  return ELECTION_SEO_PROFILES.filter((profile) => profile.pinOnHome || isListedElection(profile.pollingDay, asOf))
     .sort((a, b) => a.pollingDay.localeCompare(b.pollingDay))
     .flatMap((profile) => profile.homeLinks.map((link) => ({ ...link, recent: isRecentlyHeld(profile.pollingDay, asOf) })));
 }
