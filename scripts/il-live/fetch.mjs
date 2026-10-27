@@ -39,12 +39,18 @@ function setOutput(k, v) {
 }
 const fingerprint = (d) => (d ? JSON.stringify([d.stage, d.units, d.voters, d.valid, (d.results ?? []).map((p) => [p.letter, p.votes])]) : "");
 
-function write(doc) {
-  const changed = fingerprint(doc) !== fingerprint(prev);
-  if (changed || !prev) publishFile(outFile, JSON.stringify(doc, null, 1) + "\n");
-  setOutput("changed", changed ? "true" : "false");
-  setOutput("stage", doc.stage);
-  setOutput("units", doc.units ?? 0);
+function write(doc, haveData) {
+  const checkedAt = now.toISOString();
+  const countChanged = fingerprint(doc) !== fingerprint(prev);
+  // No new count: keep results, stage, and fetchedAt. fetchedAt stays the
+  // time the figures last changed. lastCheckedAt moves on every run.
+  const keep = Boolean(prev) && (!haveData || !countChanged);
+  const next = keep ? { ...prev, lastCheckedAt: checkedAt } : { ...doc, lastCheckedAt: checkedAt };
+  publishFile(outFile, JSON.stringify(next, null, 1) + "\n");
+  setOutput("changed", keep ? "false" : "true");
+  setOutput("published", "true");
+  setOutput("stage", next.stage);
+  setOutput("units", next.units ?? 0);
 }
 
 const base = {
@@ -67,7 +73,7 @@ function publicationBlocked() {
 
 const blocked = publicationBlocked();
 if (now < new Date(TRACKER_OPENS_AT) || blocked) {
-  write({ ...base, stage: "pre", fetchedAt: null, results: [] });
+  write({ ...base, stage: "pre", fetchedAt: null, results: [] }, false);
   console.log(blocked ? `closed: ${blocked}; no fetch, no counts` : "polls still open: no fetch, no counts");
   process.exit(0);
 }
@@ -101,7 +107,7 @@ for (const url of urls) {
       fetchedAt: now.toISOString(),
       stage: process.env.IL_RESULTS_FINAL === "1" ? "final" : "preliminary",
     });
-    write({ ...base, ...doc });
+    write({ ...base, ...doc }, true);
     console.log(`ok ${url}: ${total.units} rows, ${total.valid} valid votes`);
     process.exit(0);
   } catch (e) {
@@ -110,6 +116,6 @@ for (const url of urls) {
     console.warn(`skip ${lastErr}`);
   }
 }
-// A failed feed publishes no counts. Do not keep a previous estimate.
-write({ ...base, stage: "awaiting", fetchedAt: now.toISOString(), results: [] });
+// No CSV this run. Keep published results and stage; only lastCheckedAt moves.
+write({ ...base, stage: "awaiting", fetchedAt: now.toISOString(), results: [] }, false);
 console.warn(`no CEC CSV available (${lastErr}); no counts published`);

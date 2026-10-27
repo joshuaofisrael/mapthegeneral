@@ -12,6 +12,8 @@ export type IlRow = {
 export type IlDoc = {
   stage: "pre" | "awaiting" | "preliminary" | "final";
   fetchedAt: string | null;
+  /** When this file was last checked. Distinct from fetchedAt, which is when the count last changed. */
+  lastCheckedAt?: string | null;
   sourceUpdated?: string | null;
   units?: number;
   ballotBoxesTotal?: number;

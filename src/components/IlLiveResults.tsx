@@ -109,15 +109,13 @@ function parsedTime(value: string | null | undefined): number | null {
   return Number.isFinite(ms) ? ms : null;
 }
 
-/** HH:MM in Asia/Jerusalem. Feed sourceUpdated when present, otherwise the fetch time. */
+/** HH:MM in Asia/Jerusalem from lastCheckedAt (when the feed was last checked). */
 export function ilUpdatedStamp(
   lang: IlLang,
   doc: IlDoc | null,
   receivedAt?: number | null,
-): { text: string; kind: "updated" | "fetched" } | null {
-  const updatedMs = parsedTime(doc?.sourceUpdated);
-  const fetchedMs = parsedTime(doc?.fetchedAt) ?? (receivedAt != null && Number.isFinite(receivedAt) ? receivedAt : null);
-  const ms = updatedMs ?? fetchedMs;
+): { text: string; cadence: string; kind: "checked" } | null {
+  const ms = parsedTime(doc?.lastCheckedAt) ?? parsedTime(doc?.fetchedAt) ?? (receivedAt != null && Number.isFinite(receivedAt) ? receivedAt : null);
   if (ms == null) return null;
   const parts = new Intl.DateTimeFormat("en-GB", {
     timeZone: JERUSALEM,
@@ -129,16 +127,9 @@ export function ilUpdatedStamp(
   const hour = parts.find((p) => p.type === "hour")?.value ?? "";
   const minute = parts.find((p) => p.type === "minute")?.value ?? "";
   const hm = `${hour}:${minute}`;
-  const kind = updatedMs != null ? "updated" : "fetched";
-  const text =
-    lang === "he"
-      ? kind === "updated"
-        ? `עודכן לאחרונה ${hm} שעון ישראל`
-        : `נשלף לאחרונה ${hm} שעון ישראל`
-      : kind === "updated"
-        ? `Last updated ${hm} Israel time`
-        : `Last fetched ${hm} Israel time`;
-  return { text, kind };
+  const text = lang === "he" ? `נבדק לאחרונה ${hm} שעון ישראל` : `Last checked ${hm} Israel time`;
+  const cadence = lang === "he" ? "מתעדכן בכל דקה" : "Updates every minute";
+  return { text, cadence, kind: "checked" };
 }
 
 export function ilStaleNotice(lang: IlLang, _hasResults?: boolean): string {
@@ -151,7 +142,7 @@ export function IlUpdatedStamp({ lang, doc, receivedAt }: { lang: IlLang; doc: I
   if (!stamp) return null;
   return (
     <p className="rounded-lg border border-navy-soft bg-navy-wash px-3 py-2 text-base font-bold text-navy-deep" data-il-stamp={stamp.kind}>
-      {stamp.text}
+      {stamp.text} <span className="font-semibold">{stamp.cadence}</span>
     </p>
   );
 }
@@ -165,7 +156,7 @@ function preferDoc(prev: IlDoc | null, next: IlDoc): IlDoc {
 }
 
 /**
- * Poll the same-origin /il-live feed every 60s. The minute query param is
+ * Poll the same-origin /il-live feed every 30s. The query param is
  * cacheable at the edge. On 404/5xx, a network error, an empty file, or a
  * stale file, clear the document so no seat estimate stays on screen.
  */

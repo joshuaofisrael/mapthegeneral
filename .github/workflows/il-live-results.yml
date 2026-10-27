@@ -1,10 +1,10 @@
 name: Israel live results (CEC)
 
-# Reads ONLY the Central Elections Committee results CSV every 5 minutes
-# around the 27 October 2026 Knesset election, writes results.json to the
-# orphan branch il-live-data (the results page polls it), and at most every
-# 30 minutes rebuilds Pages (fresh HTML, dateModified, share image) and pings
-# IndexNow when the count changed. Nothing is fetched before polls close.
+# Reads ONLY the Central Elections Committee results CSV. A scheduler
+# dispatches this workflow every minute; the cron below is a backstop.
+# Every run writes lastCheckedAt to il-live-data, including when the count
+# did not change. Overlapping runs queue. At most every 30 minutes, a changed
+# count rebuilds Pages and pings IndexNow. Nothing is fetched before polls close.
 
 on:
   schedule:
@@ -56,7 +56,7 @@ jobs:
           IL_RESULTS_FINAL: ${{ (inputs.final || vars.IL_RESULTS_FINAL == '1') && '1' || '' }}
         run: node scripts/il-live/fetch.mjs ../data/il-2026-knesset
       - name: Commit data
-        if: steps.fetch.outputs.changed == 'true'
+        if: steps.fetch.outputs.published == 'true'
         working-directory: data
         run: |
           git config user.name "github-actions[bot]"
