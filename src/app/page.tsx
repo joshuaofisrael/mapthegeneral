@@ -109,7 +109,7 @@ export default function HomePage() {
         <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
           Each card opens that country’s guide. Where a card shows a photograph, it is an AI-generated image of a public
           place, and the country page captions it “AI-generated image”. Those images are not placed on municipality
-          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, Bulgaria and New Zealand have no photograph in this release.
+          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, Bulgaria, New Zealand and Taiwan have no photograph in this release.
         </p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           <li
