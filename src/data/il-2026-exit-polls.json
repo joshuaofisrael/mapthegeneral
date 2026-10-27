@@ -1,0 +1,208 @@
+{
+  "election": "il-2026-knesset",
+  "readOn": "2026-10-27",
+  "majority": 61,
+  "note": "Seat counts are copied from the cited pages. A party is listed only when that page states a number for it. Each sample sums to 120. Zeros are parties the same page says do not enter the Knesset.",
+  "parties": [
+    { "id": "מחל", "he": "הליכוד", "en": "Likud" },
+    { "id": "דרך", "he": "ישר!", "en": "Yashar!" },
+    { "id": "רק", "he": "ביחד", "en": "Together (Bennett)" },
+    { "id": "ודם", "he": "הרשימה המשותפת", "en": "Joint List" },
+    { "id": "אמת", "he": "הדמוקרטים", "en": "The Democrats" },
+    { "id": "ל", "he": "ישראל ביתנו", "en": "Yisrael Beiteinu" },
+    { "id": "ב", "he": "עוצמה יהודית", "en": "Otzma Yehudit" },
+    { "id": "עם", "he": "רע\"ם", "en": "United Arab List (Ra'am)" },
+    { "id": "ט", "he": "הציונות הדתית וזהות", "en": "Religious Zionism and Zehut" },
+    { "id": "שס", "he": "ש\"ס", "en": "Shas" },
+    { "id": "ג", "he": "יהדות התורה", "en": "United Torah Judaism" },
+    { "id": "ך", "he": "עמך ישראל", "en": "Amcha Yisrael" },
+    { "id": "די", "he": "המילואימניקים והכלכלית", "en": "The Reservists and the Economic Party" }
+  ],
+  "polls": [
+    {
+      "id": "kan-11-2201",
+      "broadcasterId": "kan11",
+      "broadcaster": { "he": "כאן 11", "en": "Kan 11" },
+      "pollster": { "he": "קנטאר", "en": "Kantar" },
+      "pollsterSource": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Israeli_legislative_election",
+      "publishedAt": "2026-10-27T22:01:00+02:00",
+      "timeLabel": { "he": "22:01", "en": "22:01" },
+      "showOnChart": false,
+      "seats": {
+        "מחל": 25,
+        "דרך": 21,
+        "רק": 14,
+        "ודם": 10,
+        "אמת": 10,
+        "ל": 8,
+        "ב": 7,
+        "עם": 7,
+        "ט": 6,
+        "שס": 6,
+        "ג": 6,
+        "ך": 0,
+        "די": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.timesofisrael.com/liveblog_entry/kan-exit-poll-shows-no-clear-victor-as-netanyahus-likud-is-largest-party-but-opponents-have-larger-bloc/",
+          "label": { "he": "הטיימס אוף ישראל", "en": "The Times of Israel" }
+        },
+        {
+          "url": "https://www.israelhayom.com/2026/10/27/israel-election-2026-exit-polls-full-results/",
+          "label": { "he": "ישראל היום", "en": "Israel Hayom" }
+        }
+      ]
+    },
+    {
+      "id": "kan-11-update",
+      "broadcasterId": "kan11",
+      "broadcaster": { "he": "כאן 11", "en": "Kan 11" },
+      "pollster": null,
+      "pollsterSource": null,
+      "publishedAt": null,
+      "timeLabel": { "he": "עדכון", "en": "update" },
+      "showOnChart": true,
+      "seats": {
+        "מחל": 25,
+        "דרך": 21,
+        "רק": 13,
+        "ודם": 11,
+        "אמת": 10,
+        "ל": 8,
+        "ב": 7,
+        "עם": 7,
+        "ט": 6,
+        "שס": 6,
+        "ג": 6,
+        "ך": 0,
+        "די": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.haaretz.com/israel-news/elections/2026-10-27/ty-article-live/israelis-ready-to-cast-their-vote-in-an-election-that-could-end-netanyahus-rule/000001a1-7afd-d5cb-a9ab-7ffd495d0000",
+          "label": { "he": "הארץ", "en": "Haaretz" }
+        },
+        {
+          "url": "https://www.ynet.co.il/news/elections2026/article/rks5sp03zx",
+          "label": { "he": "ynet", "en": "ynet" }
+        },
+        {
+          "url": "https://www.israelhayom.com/2026/10/27/israel-election-2026-exit-polls-full-results/",
+          "label": { "he": "ישראל היום (שני השינויים)", "en": "Israel Hayom (the two changes)" }
+        }
+      ]
+    },
+    {
+      "id": "ch12-2201",
+      "broadcasterId": "ch12",
+      "broadcaster": { "he": "ערוץ 12", "en": "Channel 12" },
+      "pollster": null,
+      "pollsterSource": null,
+      "publishedAt": "2026-10-27T22:01:00+02:00",
+      "timeLabel": { "he": "22:01", "en": "22:01" },
+      "showOnChart": true,
+      "seats": {
+        "מחל": 24,
+        "דרך": 22,
+        "רק": 12,
+        "ודם": 11,
+        "אמת": 9,
+        "ל": 9,
+        "ב": 6,
+        "עם": 7,
+        "ט": 6,
+        "שס": 8,
+        "ג": 6,
+        "ך": 0,
+        "די": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.israelhayom.com/2026/10/27/israel-election-2026-exit-polls-full-results/",
+          "label": { "he": "ישראל היום", "en": "Israel Hayom" }
+        },
+        {
+          "url": "https://www.independent.co.uk/news/world/middle-east/israel-election-2026-results-netanyahu-trump-iran-live-updates-b3074404.html",
+          "label": { "he": "האינדיפנדנט", "en": "The Independent" }
+        },
+        {
+          "url": "https://www.timesofisrael.com/liveblog_entry/channel-12-exit-poll-shows-no-clear-victor-netanyahus-likud-is-largest-party-but-his-opponents-have-bigger-bloc/",
+          "label": { "he": "הטיימס אוף ישראל (22:01)", "en": "The Times of Israel (22:01)" }
+        }
+      ]
+    },
+    {
+      "id": "ch13-2201",
+      "broadcasterId": "ch13",
+      "broadcaster": { "he": "ערוץ 13", "en": "Channel 13" },
+      "pollster": null,
+      "pollsterSource": null,
+      "publishedAt": "2026-10-27T22:01:00+02:00",
+      "timeLabel": { "he": "22:01", "en": "22:01" },
+      "showOnChart": false,
+      "seats": {
+        "מחל": 25,
+        "דרך": 23,
+        "רק": 14,
+        "ודם": 10,
+        "אמת": 9,
+        "ל": 7,
+        "ב": 6,
+        "עם": 7,
+        "ט": 6,
+        "שס": 6,
+        "ג": 7,
+        "ך": 0,
+        "די": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.israelhayom.com/2026/10/27/israel-election-2026-exit-polls-full-results/",
+          "label": { "he": "ישראל היום", "en": "Israel Hayom" }
+        },
+        {
+          "url": "https://www.timesofisrael.com/liveblog_entry/channel-13-exit-poll-eisenkot-led-bloc-in-lead-likud-as-largest-party-but-neither-camp-gets-majority-amid-record-arab-showing/",
+          "label": { "he": "הטיימס אוף ישראל (22:01)", "en": "The Times of Israel (22:01)" }
+        }
+      ]
+    },
+    {
+      "id": "ch13-update",
+      "broadcasterId": "ch13",
+      "broadcaster": { "he": "ערוץ 13", "en": "Channel 13" },
+      "pollster": null,
+      "pollsterSource": null,
+      "publishedAt": null,
+      "timeLabel": { "he": "עדכון", "en": "update" },
+      "showOnChart": true,
+      "seats": {
+        "מחל": 25,
+        "דרך": 23,
+        "רק": 13,
+        "ודם": 11,
+        "אמת": 9,
+        "ל": 7,
+        "ב": 6,
+        "עם": 7,
+        "ט": 6,
+        "שס": 6,
+        "ג": 7,
+        "ך": 0,
+        "די": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.haaretz.com/israel-news/elections/2026-10-27/ty-article-live/israelis-ready-to-cast-their-vote-in-an-election-that-could-end-netanyahus-rule/000001a1-7afd-d5cb-a9ab-7ffd495d0000",
+          "label": { "he": "הארץ", "en": "Haaretz" }
+        }
+      ]
+    }
+  ],
+  "omitted": [
+    {
+      "he": "טבלה מאוחרת יותר של ערוץ 12 בבלוג החי של הארץ הסתכמה ב-118 מנדטים, לא ב-120, ולכן היא לא מוצגת.",
+      "en": "A later Channel 12 table on the Haaretz live blog added up to 118 seats, not 120, so it is not shown."
+    }
+  ]
+}

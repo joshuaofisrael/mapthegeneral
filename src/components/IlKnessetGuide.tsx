@@ -105,7 +105,7 @@ function faq(lang: Lang) {
       },
       {
         q: "איפה התוצאות?",
-        a: "ספירת הקולות מגיעה מקובץ התוצאות של ועדת הבחירות המרכזית, בעמוד התוצאות של אתר זה אחרי 22:00. חלוקת מנדטים שהאתר מחשב מתוך ספירה חלקית היא בלתי רשמית, אינה סופית ואינה חלוקת מנדטים רשמית. אין כאן סקרים או מדגמים.",
+        a: "ספירת הקולות מגיעה מקובץ התוצאות של ועדת הבחירות המרכזית, בעמוד התוצאות של אתר זה אחרי 22:00. חלוקת מנדטים שהאתר מחשב מתוך ספירה חלקית היא בלתי רשמית, אינה סופית ואינה חלוקת מנדטים רשמית. עמוד התוצאות יכול להציג במדור נפרד מספרי מנדטים שפרסמו ערוצי הטלוויזיה. הם אינם תוצאות רשמיות. מדריך זה אינו מציג אותם.",
       },
       {
         q: "מתי מתפרסמות התוצאות הרשמיות?",
@@ -132,7 +132,7 @@ function faq(lang: Lang) {
     },
     {
       q: "Where are the results?",
-      a: "Vote totals come from the Central Elections Committee results file, on this site’s results page after 22:00. Any seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation. There are no polls and no exit samples here.",
+      a: "Vote totals come from the Central Elections Committee results file, on this site’s results page after 22:00. Any seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation. The results page may also show television seat samples in a separate section marked unofficial. This guide does not.",
     },
     {
       q: "When are the official results published?",

@@ -78,6 +78,59 @@ const POLL_FIGURE = new RegExp(`${KW}[^<]{0,120}?${PCT}|${PCT}[^<]{0,120}?${KW}`
 const ilLabel = "Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.";
 const ilLabelHe = "חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית.";
 
+const IL_EXIT_OPEN = Date.parse("2026-10-27T22:00:00+02:00");
+const IL_EXIT_SECTION = /<section\b[^>]*\bdata-il-exit-polls\b[^>]*>[\s\S]*?<\/section>/i;
+const IL_EXIT_DISCLAIMER_EN =
+  "These are unofficial exit-poll projections published by TV channels, not official results. Official results come only from the Central Elections Committee.";
+const IL_EXIT_DISCLAIMER_HE =
+  "אלה תחזיות לא רשמיות של מדגמי טלוויזיה שפרסמו ערוצי הטלוויזיה, לא תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית.";
+
+function exitPollSeats() {
+  const file = path.join(process.cwd(), "src/data/il-2026-exit-polls.json");
+  const doc = JSON.parse(readFileSync(file, "utf8")) as {
+    polls?: { id?: string; sources?: { url?: string }[]; seats?: Record<string, number> }[];
+  };
+  for (const poll of doc.polls ?? []) {
+    const seats = poll.seats ?? {};
+    const values = Object.values(seats);
+    const sum = values.reduce((total, value) => total + value, 0);
+    if (!values.length || values.some((value) => !Number.isInteger(value) || value < 0) || sum !== 120) {
+      errors.push(`${poll.id ?? "sample"}: seat counts must be whole numbers that add up to 120`);
+    }
+    if (!poll.sources?.length || poll.sources.some((source) => !source.url?.startsWith("https://"))) {
+      errors.push(`${poll.id ?? "sample"}: each sample needs an https source`);
+    }
+  }
+}
+
+if (Date.parse("2026-10-27T21:59:00+02:00") >= IL_EXIT_OPEN) errors.push("Israel television samples open before 22:00");
+if (Date.parse("2026-10-27T22:00:00+02:00") < IL_EXIT_OPEN) errors.push("Israel television samples stay closed at 22:00");
+if (Date.now() >= IL_EXIT_OPEN) exitPollSeats();
+
+function withoutIlExitSection(file: string, html: string): string {
+  const rel = file.split(path.sep).join("/");
+  const isIlResults = /il\/(?:en|he)\/results\/index\.html$/.test(rel);
+  if (!isIlResults) return html;
+  const has = html.includes("data-il-exit-polls");
+  const open = Date.now() >= IL_EXIT_OPEN;
+  const label = path.relative(OUT, file);
+  if (has && !open) {
+    errors.push(`${label}: television sample section is present before 22:00 Israel time`);
+    return html;
+  }
+  if (!has && open) {
+    errors.push(`${label}: television sample section is missing after 22:00 Israel time`);
+    return html;
+  }
+  if (has && open) {
+    if (!html.includes(IL_EXIT_DISCLAIMER_EN) || !html.includes(IL_EXIT_DISCLAIMER_HE)) {
+      errors.push(`${label}: television sample section is missing the disclaimer`);
+    }
+    return html.replace(IL_EXIT_SECTION, "");
+  }
+  return html;
+}
+
 let scanned = 0;
 function walk(dir: string) {
   for (const name of readdirSync(dir)) {
@@ -88,9 +141,12 @@ function walk(dir: string) {
     }
     if (!name.endsWith(".html")) continue;
     scanned++;
-    const text = readFileSync(full, "utf8")
-      .replace(/<script[\s\S]*?<\/script>/g, "")
-      .replace(/<style[\s\S]*?<\/style>/g, "");
+    const text = withoutIlExitSection(
+      full,
+      readFileSync(full, "utf8")
+        .replace(/<script[\s\S]*?<\/script>/g, "")
+        .replace(/<style[\s\S]*?<\/style>/g, ""),
+    );
     const match = text.match(POLL_FIGURE);
     if (match) errors.push(`${path.relative(OUT, full)}: poll-like figure "${match[0].slice(0, 160)}"`);
   }

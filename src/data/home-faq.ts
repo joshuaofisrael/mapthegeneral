@@ -112,7 +112,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   {
     question: "Does the site make predictions or endorsements?",
     answer:
-      "No. Map the General makes no predictions and no endorsements. It does not tell you how to vote. Nothing on this site is an endorsement of a candidate, party, coalition, or list. It prints no opinion polls or exit polls, and it does not call a race or invent vote totals. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation.",
+      "No. Map the General makes no predictions and no endorsements. It does not tell you how to vote. Nothing on this site is an endorsement of a candidate, party, coalition, or list. It does not call a race or invent vote totals. After 22:00 Israel time on 27 October 2026, the Israel results pages may show seat counts published by television channels, in a section marked unofficial. Official results come only from the election authority. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation.",
     links: [],
   },
 ];
