@@ -4,6 +4,7 @@ import { ContentTrust } from "@/components/ContentTrust";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { SourceList } from "@/components/SourceList";
+import { VerifiedCandidate } from "@/components/VerifiedCandidate";
 import { SITE, absoluteUrl } from "@/data/site";
 import type { SourceRef } from "@/data/spain/types";
 import { bilingualMetadata } from "@/lib/bilingual-meta";
@@ -215,13 +216,13 @@ export function BrGeneralPage({ lang }: { lang: Lang }) {
               </thead>
               <tbody>
                 <tr className="border-t border-line">
-                  <td className="py-1 pr-4">Luiz Inácio Lula da Silva (PT)</td>
+                  <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name="Luiz Inácio Lula da Silva" /></td>
                   <td className="py-1 pr-4 text-right tabular-nums">64,256,232</td>
                   <td className="py-1 pr-4 text-right tabular-nums">51.79%</td>
                   <td className="py-1">{pt ? "Eleito (TSE)" : "Elected (TSE)"}</td>
                 </tr>
                 <tr className="border-t border-line">
-                  <td className="py-1 pr-4">Flávio Bolsonaro (PL)</td>
+                  <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name="Flávio Bolsonaro" /></td>
                   <td className="py-1 pr-4 text-right tabular-nums">59,826,041</td>
                   <td className="py-1 pr-4 text-right tabular-nums">48.21%</td>
                   <td className="py-1" />
@@ -258,7 +259,7 @@ export function BrGeneralPage({ lang }: { lang: Lang }) {
                   ["Ronaldo Caiado (PSD)", "—", "2.18%", ""],
                 ].map((row) => (
                   <tr key={row[0]} className="border-t border-line">
-                    <td className="py-1 pr-4">{row[0]}</td>
+                    <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name={row[0].replace(/ \([^)]*\)$/, "")} /></td>
                     <td className="py-1 pr-4 text-right tabular-nums">{row[1]}</td>
                     <td className="py-1 pr-4 text-right tabular-nums">{row[2]}</td>
                     <td className="py-1">{row[3]}</td>
