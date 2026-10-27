@@ -1,0 +1,36 @@
+name: Narrow the il-live Worker route
+
+# Sets the mapthegeneral.com Worker route to mapthegeneral.com/il-live/* and
+# fail-open when the Free plan daily request limit is hit. The token is the
+# existing CI secret. A missing token fails this job only; Pages deploy is separate.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/il-live/configure-route.mjs
+      - .github/workflows/il-live-route.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  route:
+    runs-on: ubuntu-latest
+    # Repo-level token names were empty. The Pages environment is the other
+    # place CI credentials live, and only main may use it.
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Narrow route and fail open
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+          WRANGLER_API_TOKEN: ${{ secrets.WRANGLER_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/il-live/configure-route.mjs

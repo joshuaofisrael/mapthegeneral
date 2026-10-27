@@ -263,6 +263,10 @@
 
     paint();
     window.setInterval(paint, 1000);
+    // The feed is requested only from the two Israel results pages. Every other
+    // page keeps the local countdown and does not call /il-live.
+    var path = location.pathname.replace(/\/+$/, "") || "/";
+    if (path !== "/il/en/results" && path !== "/il/he/results") return;
     load();
     window.setInterval(load, POLL_MS);
   }
