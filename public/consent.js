@@ -89,6 +89,15 @@
       accept: "Prihvati",
       reject: "Odbij",
       choices: "Izbor kolačića"
+    },
+    bg: {
+      aria: "Избор за бисквитки",
+      body: "Използваме бисквитки на Google Analytics, за да броим посещенията, само ако приемете. Скриптът на Google се зарежда само след Приемам. Cloudflare Web Analytics (без бисквитки) работи и в двата случая. ",
+      privacy: "Политика за поверителност",
+      href: "/privacy/#google-analytics",
+      accept: "Приемам",
+      reject: "Отказвам",
+      choices: "Избор за бисквитки"
     }
   };
 

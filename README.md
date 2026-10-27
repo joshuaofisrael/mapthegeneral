@@ -1,6 +1,6 @@
 # Map the General
 
-Public, nonpartisan election guide for the countries covered so far: Australia, Canada, Ireland, Italy, Mexico, Norway, Poland, Spain, Sweden, Switzerland, and the United Kingdom. Ireland, Norway and Sweden are national hubs only: no municipality pages and no live tracker.
+Public, nonpartisan election guide for the countries covered so far: Australia, Bulgaria, Canada, Ireland, Italy, Mexico, Norway, Poland, Spain, Sweden, Switzerland, and the United Kingdom. Ireland, Norway and Sweden are national hubs only: no municipality pages and no live tracker. Bulgaria is a national hub for a possible presidential election on 1 November 2026, with no municipality pages and no count before 21:00 Bulgaria time that day.
 
 **Publisher:** Map the General.
 

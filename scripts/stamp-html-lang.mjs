@@ -4,7 +4,7 @@ import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const out = new URL("../out", import.meta.url).pathname;
-const LANGS = new Set(["sr", "pt", "he", "es", "fr", "de", "it", "pl", "en"]);
+const LANGS = new Set(["sr", "pt", "he", "es", "fr", "de", "it", "pl", "en", "bg"]);
 const RTL = new Set(["he"]);
 
 function walk(dir, files = []) {

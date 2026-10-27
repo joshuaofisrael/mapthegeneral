@@ -351,6 +351,44 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "bg-2026-11-01",
+    country: "bg",
+    localLang: "bg",
+    election: {
+      en: "Possible new election for president and vice president, 1 November 2026",
+      local: "евентуален нов избор за президент и вицепрезидент, 1 ноември 2026 г.",
+    },
+    pollingDay: "2026-11-01",
+    trackerOpensAt: "2026-11-01T21:00:00+02:00",
+    officialResults: { label: "Централна избирателна комисия, резултати", url: "https://results.cik.bg/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        { label: "ЦИК, избори за президент и вицепрезидент 2026", url: "https://www.cik.bg/bg/pvr2026" },
+        { label: "ЦИК, въпрос 3, часове за гласуване", url: "https://www.cik.bg/bg/pvr2026/faq/voters/q03" },
+        { label: "ЦИК, въпрос 21, допитвания", url: "https://www.cik.bg/bg/pvr2026/faq/voters/q21" },
+        {
+          label: "Правко, препечатване на чл. 205 от Изборния кодекс",
+          url: "https://www.pravko.bg/law/c4627863-f8dc-4def-bbc8-748a486cd4a9?article=205",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-10-31T00:00:00+02:00",
+        end: "2026-11-01T21:00:00+02:00",
+        citation: {
+          label: "Изборен кодекс, чл. 205, ал. 5, препечатан в Правко; ЦИК, въпрос 21",
+          url: "https://www.pravko.bg/law/c4627863-f8dc-4def-bbc8-748a486cd4a9?article=205",
+        },
+        en: "Election Code article 205, as reprinted on Pravko and applied by the Central Election Commission, bars announcing opinion-survey results from 24 hours before election day until the end of election day is declared. This site prints no such figures. No count is shown before 21:00 Bulgaria time on 1 November 2026, after the last hour article 220 allows for a queue.",
+        local:
+          "Чл. 205 от Изборния кодекс, в текста на Правко и както го прилага Комисията, забранява огласяване на резултати от допитвания от 24 часа преди изборния ден до обявяване на края му. Този сайт не печата такива числа. Брой няма преди 21:00 ч. българско време на 1 ноември 2026 г., след последния час по чл. 220 за опашка пред секцията.",
+      },
+    ],
+  },
 ];
 
 /**
