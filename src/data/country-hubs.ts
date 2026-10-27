@@ -499,6 +499,145 @@ export const EE_COUNTRY_HUB: CountryHub = {
 
 COUNTRY_HUBS.push(EE_COUNTRY_HUB);
 
+const NL_NL = "/nl/nl/elections/provinciale-staten-2027/";
+const NL_EN = "/nl/en/elections/provincial-2027/";
+
+const nlAlternates = [
+  { hreflang: "nl", path: "/nl/nl/" },
+  { hreflang: "en", path: "/nl/en/" },
+  { hreflang: "x-default", path: "/nl/nl/" },
+];
+
+export const NL_COUNTRY_HUB: CountryHub = {
+  index: [
+    {
+      path: "/nl/",
+      lang: "nl",
+      title: "Nederland",
+      kind: "country",
+      text: "Nederland Provinciale Staten waterschappen 17 maart 2027 Kiesraad",
+    },
+    {
+      path: "/nl/nl/",
+      lang: "nl",
+      title: "Nederland",
+      kind: "country",
+      text: "Nederland Provinciale Staten en waterschappen 17 maart 2027",
+    },
+    {
+      path: "/nl/en/",
+      lang: "en",
+      title: "Netherlands",
+      kind: "country",
+      text: "Netherlands Provincial States and water boards 17 March 2027 Kiesraad",
+    },
+    {
+      path: NL_NL,
+      lang: "nl",
+      title: "Provinciale Staten en waterschappen, 17 maart 2027",
+      kind: "election",
+      text: "Nederland Provinciale Staten waterschappen 17 maart 2027",
+    },
+    {
+      path: NL_EN,
+      lang: "en",
+      title: "Netherlands Provincial States and water boards, 17 March 2027",
+      kind: "election",
+      text: "Netherlands Provincial States water boards 17 March 2027",
+    },
+  ],
+  pages: [
+    {
+      path: "/nl/",
+      htmlLang: "nl",
+      title: "Nederland",
+      description:
+        "Nederland op Map the General. Provinciale Staten en waterschappen op woensdag 17 maart 2027. Onofficiële informatie.",
+      h1: "Nederland",
+      lede: "De Nederlandse pagina is de hoofdpagina. English staat ernaast.",
+      alternates: [
+        { hreflang: "nl", path: "/nl/" },
+        { hreflang: "en", path: "/nl/en/" },
+        { hreflang: "x-default", path: "/nl/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: "/nl/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Nederland", path: "/nl/" },
+      ],
+      bodyHtml: `<p><a href="/nl/nl/">Nederlands</a> · <a href="/nl/en/">English</a></p>
+<p>De verkiezingen van <a href="${NL_NL}">17 maart 2027</a> staan op de Nederlandse pagina.</p>`,
+    },
+    {
+      path: "/nl/nl/",
+      htmlLang: "nl",
+      title: "Nederland — verkiezingen van 2027",
+      description:
+        "Landelijke gids voor Nederland. Provinciale Staten en waterschappen op woensdag 17 maart 2027. Geen pagina’s per gemeente.",
+      h1: "Nederland",
+      lede: "Landelijke gids in het Nederlands. Geen pagina’s per gemeente. Geen stemmen voor 21:00 Midden-Europese tijd op 17 maart 2027.",
+      alternates: nlAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: NL_NL, label: "De verkiezing" },
+        { href: "/nl/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Nederland", path: "/nl/" },
+        { name: "Nederland", path: "/nl/nl/" },
+      ],
+      bodyHtml: `<h2>De verkiezing in deze uitgave</h2>
+<p>De Kiesraad noemt 17 maart 2027 voor de Provinciale Staten. De kalender zet de waterschappen op dezelfde dag. De stemming duurt tot 21:00.</p>
+<p><a href="${NL_NL}">Provinciale Staten en waterschappen, 17 maart 2027</a></p>
+<h2>Persoonsgegevens</h2>
+<p>De Nederlandse uitvoeringswet is niet artikel voor artikel gelezen. Deze gids publiceert geen kiezersregister en geen burgerservicenummer.</p>
+<h2>Bronnen</h2>
+<ul>
+<li><a href="https://www.kiesraad.nl/verkiezingen/provinciale-staten">Kiesraad, Provinciale Statenverkiezingen</a></li>
+<li><a href="https://www.kiesraad.nl/site/binaries/site-content/collections/documents/2026/08/24/verkiezingskalender-ps-ws27/verkiezingskalender-2027-psws27.pdf">Verkiezingskalender 2027</a></li>
+<li><a href="https://www.kiesraad.nl/">Kiesraad</a></li>
+</ul>`,
+    },
+    {
+      path: "/nl/en/",
+      htmlLang: "en",
+      title: "Netherlands — elections of 2027",
+      description:
+        "National hub for the Netherlands. Provincial States and water boards on Wednesday 17 March 2027. No municipality pages.",
+      h1: "Netherlands",
+      lede: "National hub in English. No municipality pages. No count before 21:00 Central European Time on 17 March 2027.",
+      alternates: nlAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: NL_EN, label: "The election" },
+        { href: "/nl/nl/", label: "Nederlands" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Nederland", path: "/nl/" },
+        { name: "Netherlands", path: "/nl/en/" },
+      ],
+      bodyHtml: `<h2>The election in this release</h2>
+<p>The Kiesraad names 17 March 2027 for the Provincial States. The calendar places the water boards on the same day. Voting lasts until 21:00.</p>
+<p><a href="${NL_EN}">Provincial States and water boards, 17 March 2027</a></p>
+<h2>Personal data</h2>
+<p>The Dutch implementation act was not section-read. This hub publishes no roll and no citizen-service number.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.kiesraad.nl/verkiezingen/provinciale-staten">Kiesraad, Provincial States elections</a></li>
+<li><a href="https://www.kiesraad.nl/site/binaries/site-content/collections/documents/2026/08/24/verkiezingskalender-ps-ws27/verkiezingskalender-2027-psws27.pdf">2027 election calendar</a></li>
+<li><a href="https://www.kiesraad.nl/">Kiesraad</a></li>
+</ul>`,
+    },
+  ],
+};
+
+COUNTRY_HUBS.push(NL_COUNTRY_HUB);
+
 export function countryHubIndex(): HubIndexEntry[] {
   return COUNTRY_HUBS.flatMap((hub) => hub.index);
 }

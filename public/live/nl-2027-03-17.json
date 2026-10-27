@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "election": "nl-2027-03-17",
+  "trackerOpensAt": "2027-03-17T21:00:00+01:00",
+  "stage": "pre",
+  "fetchedAt": null,
+  "sourceUpdated": null,
+  "source": "https://www.verkiezingsuitslagen.nl/",
+  "results": []
+}

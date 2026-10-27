@@ -116,6 +116,13 @@ const COPY: Record<HouseAdLang, SlotCopy> = {
     cta: "Broneerige see koht",
     sold: (name) => `Sponsoreerib ${name}`,
   },
+  nl: {
+    label: "Uw advertentie hier",
+    pitch:
+      "Uw advertentie hier: exclusieve sponsor tijdens de verkiezingsnacht in Israël en de 3 dagen erna, 27–30 okt 2026, $1,000.",
+    cta: "Reserveer deze plek",
+    sold: (name) => `Gesponsord door ${name}`,
+  },
 };
 
 /**

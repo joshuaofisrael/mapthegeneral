@@ -99,6 +99,15 @@
       reject: "Keeldun",
       choices: "Küpsiste valik"
     },
+    nl: {
+      aria: "Cookiekeuze",
+      body: "We gebruiken cookies van Google Analytics om bezoeken te tellen, alleen als u akkoord gaat. Het Google-script laadt pas na Akkoord. Cloudflare Web Analytics (zonder cookies) werkt hoe dan ook. ",
+      privacy: "Privacy",
+      href: "/privacy/#google-analytics",
+      accept: "Akkoord",
+      reject: "Weigeren",
+      choices: "Cookiekeuze"
+    },
     bg: {
       aria: "Избор за бисквитки",
       body: "Използваме бисквитки на Google Analytics, за да броим посещенията, само ако приемете. Скриптът на Google се зарежда само след Приемам. Cloudflare Web Analytics (без бисквитки) работи и в двата случая. ",

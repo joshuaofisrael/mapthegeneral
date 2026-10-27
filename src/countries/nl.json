@@ -1,0 +1,20 @@
+{
+  "code": "nl",
+  "name": "Netherlands",
+  "href": "/nl/",
+  "summary": "National hub. Provincial States and water-board elections on 17 March 2027, from the Kiesraad. No municipality pages and no count before 21:00 Central European Time.",
+  "links": [
+    {
+      "href": "/nl/nl/",
+      "label": "Nederlands"
+    },
+    {
+      "href": "/nl/nl/elections/provinciale-staten-2027/",
+      "label": "Provinciale Staten en waterschappen, 17 maart 2027"
+    },
+    {
+      "href": "/nl/en/",
+      "label": "English"
+    }
+  ]
+}

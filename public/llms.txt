@@ -59753,6 +59753,11 @@
 - [Estonia](https://mapthegeneral.com/ee/en/)
 - [Riigikogu valimised, 7. märts 2027](https://mapthegeneral.com/ee/et/elections/riigikogu-2027/)
 - [Estonia Riigikogu election, 7 March 2027](https://mapthegeneral.com/ee/en/elections/riigikogu-2027/)
+- [Nederland](https://mapthegeneral.com/nl/)
+- [Nederland](https://mapthegeneral.com/nl/nl/)
+- [Netherlands](https://mapthegeneral.com/nl/en/)
+- [Provinciale Staten en waterschappen, 17 maart 2027](https://mapthegeneral.com/nl/nl/elections/provinciale-staten-2027/)
+- [Netherlands Provincial States and water boards, 17 March 2027](https://mapthegeneral.com/nl/en/elections/provincial-2027/)
 - [תוצאות הבחירות 2026](https://mapthegeneral.com/il/he/results/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
@@ -59779,6 +59784,8 @@ Israel (https://mapthegeneral.com/il/): National hub. Election to the 26th Kness
 Italy (https://mapthegeneral.com/it/): Camera dei deputati and Senato della Repubblica. The chambers were elected on Sunday, 25 September 2022 (decreto del Presidente della Repubblica 21 luglio 2022, n. 97). No later calling decree for the next general election was read, so this release does not print that polling day. National page, 20 regions, 110 ISTAT supra-municipal units, and the constituencies in legislative decree 177/2020, in Italian and English. This chunk adds 1,889 municipalities: every flagged capoluogo, all of Lombardia, and part of Lazio. No central 2027 local-election list was read.
 
 Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts, the five plurinominal constituencies, and the 2,478 INEGI catalog rows (municipios and the 16 alcaldías of Ciudad de México), in Spanish and English. Sitting municipal presidents are not named.
+
+Netherlands (https://mapthegeneral.com/nl/): National hub. Provincial States and water-board elections on 17 March 2027, from the Kiesraad. No municipality pages and no count before 21:00 Central European Time.
 
 Norway (https://mapthegeneral.com/no/): National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.
 
