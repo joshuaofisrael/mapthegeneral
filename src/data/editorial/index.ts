@@ -8,6 +8,7 @@ import { BATCH3B } from "./batch3b";
 import { BATCH3C } from "./batch3c";
 import { BATCH3D } from "./batch3d";
 import { BATCH4 } from "./batch4";
+import { BATCH5 } from "./batch5";
 import type { EditorialPreview } from "./model";
 
 export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
@@ -21,6 +22,7 @@ export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
   ...BATCH3C,
   ...BATCH3D,
   ...BATCH4,
+  ...BATCH5,
 ];
 
 const byPath = new Map<string, EditorialPreview>();

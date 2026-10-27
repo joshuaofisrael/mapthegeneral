@@ -38,6 +38,8 @@ for (const file of walk(out)) {
   const body = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<head[\s\S]*?<\/head>/, "");
   const text = body.replace(/<[^>]+>/g, " ");
   for (const list of lists) {
+    const sourceUrl = list.source?.url;
+    if (!sourceUrl || !html.includes(sourceUrl)) continue;
     const named = list.candidates.filter((row) => text.includes(row.name));
     if (named.length < 2) continue;
     const rows = body.match(/<(li|tr)[\s>][\s\S]*?<\/\1>/g) ?? [];
