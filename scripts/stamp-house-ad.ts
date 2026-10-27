@@ -1,7 +1,8 @@
 /**
- * Inserts one house-ad card into each exported document, chosen from the
- * page path. Redirect stubs and the Israel results widget are left alone.
- * AdSense tags, GA tags, and the live-results files are not edited.
+ * Inserts one house-ad banner into each exported document, directly under
+ * the header. The offer comes from the page path. Redirect stubs and the
+ * Israel results widget are left alone. AdSense tags, GA tags, and the
+ * live-results files are not edited.
  */
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -17,11 +18,26 @@ import {
 } from "../src/lib/house-ad";
 
 const OUT = path.join(process.cwd(), "out");
-const counts: Record<HouseAdId, number> = { namedscan: 0, taxdeedpack: 0, rankfootprint: 0 };
+const counts: Record<HouseAdId, number> = { namedscan: 0, rankfootprint: 0 };
 const examples: Partial<Record<HouseAdId, string>> = {};
 const errors: string[] = [];
 let stamped = 0;
 let skipped = 0;
+
+/** Under the header and above the heading. Pages that already render it are left as they are. */
+function insertHouseAd(html: string, card: string): string | null {
+  const header = html.indexOf("</header>");
+  if (header !== -1) {
+    const at = header + "</header>".length;
+    return `${html.slice(0, at)}\n${card}\n${html.slice(at)}`;
+  }
+  const main = html.match(/<main\b[^>]*>/i);
+  if (main?.index !== undefined) {
+    const at = main.index + main[0].length;
+    return `${html.slice(0, at)}\n${card}\n${html.slice(at)}`;
+  }
+  return null;
+}
 
 function walk(dir: string) {
   for (const name of readdirSync(dir)) {
@@ -52,17 +68,11 @@ function walk(dir: string) {
       errors.push(`${rel}: no house-ad translation for lang "${lang ?? ""}"`);
       continue;
     }
-    const at = html.lastIndexOf("</main>");
-    const card = `\n${houseAdHtml(route, lang)}\n`;
-    let next: string;
-    if (at !== -1) next = html.slice(0, at) + card + html.slice(at);
-    else {
-      const body = html.lastIndexOf("</body>");
-      if (body === -1) {
-        errors.push(`${rel}: no </main> or </body>`);
-        continue;
-      }
-      next = html.slice(0, body) + card + html.slice(body);
+    const card = houseAdHtml(route, lang);
+    const next = insertHouseAd(html, card);
+    if (next === null) {
+      errors.push(`${rel}: no header or main to place the banner`);
+      continue;
     }
     writeFileSync(full, next);
     const id = HOUSE_AD_IDS.find((candidate) => next.includes(`data-house-ad="${candidate}"`));

@@ -1,6 +1,7 @@
 /**
  * Fails the build when a document is missing its one house ad, when the
- * offer does not match the path hash, or when the card is not a single link.
+ * offer does not match the path hash, when the banner sits below the
+ * heading, or when the card is not a single link.
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
@@ -29,6 +30,9 @@ for (const file of CSS_FILES) {
   }
 }
 
+const houseAdSource = readFileSync(path.join(process.cwd(), "src/lib/house-ad.ts"), "utf8");
+if (/taxdeed|tax deed/i.test(houseAdSource)) errors.push("Tax Deed Pack remains in src/lib/house-ad.ts");
+
 if (process.argv.includes("--self")) {
   if (errors.length) {
     console.error(`house-ad: ${errors.length} self-check problem(s)`);
@@ -41,7 +45,7 @@ if (process.argv.includes("--self")) {
 
 if (!existsSync(OUT)) errors.push("out/ is missing");
 
-const counts: Record<HouseAdId, number> = { namedscan: 0, taxdeedpack: 0, rankfootprint: 0 };
+const counts: Record<HouseAdId, number> = { namedscan: 0, rankfootprint: 0 };
 const examples: Partial<Record<HouseAdId, string>> = {};
 let pages = 0;
 
@@ -56,6 +60,7 @@ function walk(dir: string) {
     const rel = path.relative(OUT, full);
     const route = routeFromHtmlFile(rel);
     const html = readFileSync(full, "utf8");
+    if (html.toLowerCase().includes("taxdeedpack.com")) errors.push(`${rel}: links to taxdeedpack.com`);
     const cards = html.match(/class="house-ad"/g)?.length ?? 0;
     const skip = isRedirectStub(html) || htmlHead(html) === null || isEmbedRoute(route);
     if (skip) {
@@ -74,6 +79,8 @@ function walk(dir: string) {
       errors.push(`${rel}: expected one ${route} card, found markup ${found} and class ${cards}`);
       continue;
     }
+    const placement = bannerPlacementError(html);
+    if (placement) errors.push(`${rel}: ${placement}`);
     const id = expected.match(/data-house-ad="([^"]+)"/)?.[1] as HouseAdId | undefined;
     if (!id || !HOUSE_AD_IDS.includes(id)) {
       errors.push(`${rel}: missing offer id`);
@@ -94,13 +101,25 @@ if (pages > 0) {
   if (namedShare < 0.5 || namedShare > 0.7) {
     errors.push(`NamedScan share ${(namedShare * 100).toFixed(1)}% is outside 50–70%`);
   }
-  for (const id of ["taxdeedpack", "rankfootprint"] as const) {
-    const share = counts[id] / pages;
-    if (share < 0.1 || share > 0.3) errors.push(`${id} share ${(share * 100).toFixed(1)}% is outside 10–30%`);
+  const rankShare = counts.rankfootprint / pages;
+  if (rankShare < 0.3 || rankShare > 0.5) {
+    errors.push(`RankFootprint share ${(rankShare * 100).toFixed(1)}% is outside 30–50%`);
   }
   for (const id of HOUSE_AD_IDS) {
     if (!examples[id]) errors.push(`no page received ${id}`);
   }
+}
+
+function bannerPlacementError(html: string): string | null {
+  const bodyAt = html.search(/<body\b/i);
+  const body = bodyAt === -1 ? html : html.slice(bodyAt);
+  const adAt = body.indexOf('class="house-ad"');
+  if (adAt === -1) return "missing house ad";
+  const headerAt = body.indexOf("</header>");
+  if (headerAt !== -1 && adAt < headerAt) return "house ad is above the header";
+  const h1At = body.search(/<h1\b/i);
+  if (h1At !== -1 && adAt > h1At) return "house ad is below the main heading";
+  return null;
 }
 
 const cssHits = existsSync(OUT)
