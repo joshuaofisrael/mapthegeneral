@@ -7,7 +7,7 @@
 export const HOUSE_AD_IDS = ["namedscan", "taxdeedpack", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
@@ -167,6 +167,22 @@ const COPY: Record<HouseAdLang, AdCopy> = {
       rankfootprint: "Isprobajte besplatno skeniranje",
     },
   },
+  bg: {
+    sponsored: (name) => `Спонсорирано от ${name}`,
+    pitch: {
+      namedscan:
+        "Разберете дали ChatGPT посочва местния ви бизнес, когато клиентите питат. NamedScan задава тези въпроси с търсене в интернет на живо и показва кого препоръчва и какво да поправите първо.",
+      taxdeedpack:
+        "Прегледайте един имот от продажба tax deed в САЩ преди наддаване: пакет с проучване на публични регистри за $149, изпратен по имейл като PDF. Това не е оценка, проверка на титул или препоръка за оферта.",
+      rankfootprint:
+        "Вижте ранга си в Google Maps във всяка точка от мрежа около бизнеса, като започнете с безплатно сканиране 3×3. RankFootprint не е свързан с Google и не гарантира ранг.",
+    },
+    cta: {
+      namedscan: "Пробвайте NamedScan",
+      taxdeedpack: "Вземете пакета за $149",
+      rankfootprint: "Пробвайте безплатното сканиране",
+    },
+  },
 };
 
 /** Phrases that must survive in each language, taken from the published offers. */
@@ -215,6 +231,11 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
     namedscan: ["ChatGPT", "pretragu veba uživo"],
     taxdeedpack: ["$149", "nije procena vrednosti", "provera titule", "preporuka ponude"],
     rankfootprint: ["3×3", "nije povezan sa Google-om", "ne garantuje"],
+  },
+  bg: {
+    namedscan: ["ChatGPT", "търсене в интернет на живо"],
+    taxdeedpack: ["$149", "не е оценка", "проверка на титул", "препоръка за оферта"],
+    rankfootprint: ["3×3", "не е свързан с Google", "не гарантира"],
   },
 };
 
@@ -445,5 +466,8 @@ export function selfCheckHouseAds(): string[] {
     problems.push("path language");
   }
   if (languageFromRoute("/rs/sr/elections/predsednicki-2026/") !== "sr") problems.push("path language");
+  if (languageFromRoute("/bg/bg/") !== "bg" || languageFromRoute("/bg/bg/elections/prezident-2026/") !== "bg") {
+    problems.push("path language");
+  }
   return problems;
 }

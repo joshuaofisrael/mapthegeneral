@@ -14,6 +14,7 @@ import {
 } from "../data/spain/places";
 import { canadaIndexEntries } from "../countries/ca";
 import { polandEntries } from "../../data/pl/paths";
+import { countryHubIndex } from "../data/country-hubs";
 import { HUBS, hubEn, hubHome, type HubCode } from "../data/new-hubs";
 import type { Lang } from "../data/spain/types";
 
@@ -204,6 +205,7 @@ export function searchIndex(): IndexEntry[] {
     ...canadaIndexEntries(),
     ...switzerlandEntries(),
     ...hubIndexEntries(),
+    ...countryHubIndex(),
     { path: "/il/he/results/", lang: "he", title: "תוצאות הבחירות 2026", kind: "election", text: "תוצאות הבחירות לכנסת 2026 ועדת הבחירות המרכזית" },
     { path: "/il/en/results/", lang: "en", title: "Israel election results 2026", kind: "election", text: "Israel Knesset election results 2026 live" },
   ];

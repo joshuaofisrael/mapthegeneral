@@ -38,6 +38,7 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 | ie-2026-seanad | Ireland, Seanad Éireann bye-election, 6 Nov 2026 | No commenced poll-publication rule was applied. Part V of the Electoral Reform Act 2022 has not been commenced. Electorate is members of the Oireachtas. No tracker fetcher | 6 Nov 2026 11:00 GMT | oireachtas.ie/en/elections |
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
+| bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00 | 1 Nov 2026 21:00 EET | results.cik.bg |
 
 Countries with no election window yet get one added here before any tracker is
 built. `STANDING_RULES` in `src/data/election-law.ts` records the countries that

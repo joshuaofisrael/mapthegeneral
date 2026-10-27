@@ -173,7 +173,7 @@ export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSe
     .join("\n");
   const related = page.related.map((item) => `<a href="${esc(item.href)}">${esc(item.label)}</a>`).join(" · ");
   const sources = page.sources
-    .map((item) => `<li><a href="${esc(item.href)}">${esc(item.label)}</a> — read ${esc(item.readOn)}</li>`)
+    .map((item) => `<li><a href="${esc(item.href)}">${esc(item.label)}</a> — ${esc(page.readWord ?? "read")} ${esc(item.readOn)}</li>`)
     .join("\n");
   const pageTitle = `${page.title} · ${SITE.name}`;
   const html = `<!DOCTYPE html>
