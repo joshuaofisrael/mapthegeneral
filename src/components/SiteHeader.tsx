@@ -3,6 +3,8 @@
 import Link from "@/components/AnchorLink";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { CountriesMenu } from "@/components/CountriesMenu";
+import type { CountryHubLink } from "@/data/country-nav";
 import { PRIMARY_NAV, SITE } from "@/data/site";
 
 function navClass(pathname: string, href: string) {
@@ -10,7 +12,7 @@ function navClass(pathname: string, href: string) {
   return active ? "font-semibold text-navy" : "text-ink-muted hover:text-navy";
 }
 
-export function SiteHeader() {
+export function SiteHeader({ hubs }: { hubs: readonly CountryHubLink[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -24,8 +26,9 @@ export function SiteHeader() {
           <span className="block truncate text-xs text-ink-muted">Unofficial, independent guide</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex" aria-label="Primary">
+          <CountriesMenu hubs={hubs} menuId="countries-desktop" />
           {PRIMARY_NAV.map((item) => (
-            <Link key={item.href} href={item.href} className={navClass(pathname, item.href)}>
+            <Link key={item.href} href={item.href} className={`whitespace-nowrap ${navClass(pathname, item.href)}`}>
               {item.label}
             </Link>
           ))}
@@ -43,6 +46,9 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-nav" className="border-t border-line px-4 py-3 md:hidden" aria-label="Mobile">
           <ul className="space-y-2 text-sm">
+            <li>
+              <CountriesMenu hubs={hubs} menuId="countries-mobile" />
+            </li>
             {PRIMARY_NAV.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={navClass(pathname, item.href)} onClick={() => setOpen(false)}>

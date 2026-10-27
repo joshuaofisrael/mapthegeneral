@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SITE } from "@/data/site";
+import { countryHubs } from "@/lib/country-hubs";
 import { ElectionLawNotice } from "./ElectionLawNotice";
 import { IlResultsBanner } from "./IlResultsLinks";
 import { HouseAd } from "./HouseAd";
@@ -15,7 +16,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <p className="border-b border-notice-line bg-notice-wash px-4 py-2 text-center text-xs leading-5 text-navy-deep">
         {SITE.officialNotUs}
       </p>
-      <SiteHeader />
+      <SiteHeader hubs={countryHubs()} />
       <HouseAd />
       <IlResultsBanner />
       <ElectionLawNotice />
