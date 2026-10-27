@@ -1,4 +1,6 @@
 import Link from "@/components/AnchorLink";
+import { EditorialPreview } from "@/components/EditorialPreview";
+import { hubPreviewPath } from "@/data/editorial";
 import { countryGuide, type Part } from "@/data/guides/copy";
 
 function Rich({ parts }: { parts: Part[] }) {
@@ -26,8 +28,11 @@ function Rich({ parts }: { parts: Part[] }) {
 /** Practical guide on a national hub. Municipality pages do not render this. */
 export function CountryGuide({ code, lang }: { code: string; lang: string }) {
   const guide = countryGuide(code, lang);
-  if (!guide) return null;
+  const preview = <EditorialPreview path={hubPreviewPath(code, lang)} />;
+  if (!guide) return preview;
   return (
+    <>
+    {preview}
     <section className="guide-block prose-legal" id="how-elections-work" aria-labelledby="how-elections-work-title">
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy">{guide.kicker}</p>
       <h2 id="how-elections-work-title">{guide.title}</h2>
@@ -78,5 +83,6 @@ export function CountryGuide({ code, lang }: { code: string; lang: string }) {
         ))}
       </ul>
     </section>
+    </>
   );
 }
