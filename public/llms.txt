@@ -59728,6 +59728,13 @@
 - [הבחירות לכנסת ה-26, 27 באוקטובר 2026](https://mapthegeneral.com/il/he/elections/knesset-2026/)
 - [Israel questions](https://mapthegeneral.com/il/en/faq/)
 - [Israel sources](https://mapthegeneral.com/il/en/sources/)
+- [Taiwan](https://mapthegeneral.com/tw/)
+- [Taiwan](https://mapthegeneral.com/tw/en/)
+- [Elections in Taiwan](https://mapthegeneral.com/tw/en/elections/)
+- [Local public-office elections, 28 November 2026](https://mapthegeneral.com/tw/en/elections/local-2026/)
+- [地方公職人員選舉，2026年11月28日](https://mapthegeneral.com/tw/zh/elections/difang-gongzhi-2026/)
+- [Taiwan questions](https://mapthegeneral.com/tw/en/faq/)
+- [Taiwan sources](https://mapthegeneral.com/tw/en/sources/)
 - [България](https://mapthegeneral.com/bg/)
 - [България](https://mapthegeneral.com/bg/bg/)
 - [Bulgaria](https://mapthegeneral.com/bg/en/)
@@ -59770,5 +59777,7 @@ Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional wind
 Serbia (https://mapthegeneral.com/rs/): National hub. Preliminary RIK results of the National Assembly election of 25 October 2026. The presidential election has no called polling day; the latest legal day stated by RTS is 27 December 2026. No municipality pages.
 
 Sweden (https://mapthegeneral.com/se/): National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.
+
+Taiwan (https://mapthegeneral.com/tw/): National hub. Local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. No municipality pages.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml
