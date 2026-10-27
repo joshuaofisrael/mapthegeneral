@@ -139,6 +139,7 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
   const doc = snapshot();
   const other: IlLang = lang === "he" ? "en" : "he";
   const url = absoluteUrl(IL_PATHS[lang]);
+  const liveFeedHref = IL_LIVE_DATA_URL.startsWith("/") ? `${SITE.url}${IL_LIVE_DATA_URL}` : IL_LIVE_DATA_URL;
   const crumbs = [
     { name: c.breadcrumbs[0], path: "/" },
     { name: c.breadcrumbs[1], path: "/il/" },
@@ -199,7 +200,7 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
       dateModified: modified(doc),
       isBasedOn: "https://cdn-votes26.bechirot.gov.il/",
       creator: { "@type": "Organization", name: SITE.name, url: SITE.url },
-      distribution: [{ "@type": "DataDownload", encodingFormat: "application/json", contentUrl: IL_LIVE_DATA_URL }],
+      distribution: [{ "@type": "DataDownload", encodingFormat: "application/json", contentUrl: liveFeedHref }],
     },
     {
       "@context": "https://schema.org",
@@ -232,7 +233,7 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
         <IlLiveResults lang={lang} initial={doc} />
         <p className="mt-3 text-xs text-ink-soft">
           {l.method}{" "}
-          <a className="underline" href={IL_LIVE_DATA_URL} rel="noopener noreferrer">
+          <a className="underline" href={liveFeedHref} rel="noopener noreferrer">
             {l.feed}
           </a>
         </p>

@@ -11,9 +11,23 @@ export const IL_TRACKER_OPENS_AT = "2026-10-27T22:00:00+02:00";
 export const IL_ELIGIBLE = 7331981;
 export const IL_POLLING_STATIONS = 12018;
 export const IL_PATHS: Record<IlLang, string> = { he: "/il/he/results/", en: "/il/en/results/" };
-export const IL_LIVE_DATA_URL =
+/**
+ * Same-origin feed. A Cloudflare Worker on mapthegeneral.com/il-live/* proxies
+ * the il-live-data branch and caches it at the edge for 60 seconds.
+ */
+export const IL_LIVE_DATA_URL = "/il-live/il-2026-knesset/results.json";
+/** One attempt when the same-origin feed fails. Not the primary poll target. */
+export const IL_LIVE_RAW_URL =
   "https://raw.githubusercontent.com/joshuaofisrael/mapthegeneral/il-live-data/il-2026-knesset/results.json";
 export const IL_SNAPSHOT_URL = "/live/il-2026-knesset.json";
+/** Matches the worker's 60s edge cache. The ?t= key stays constant inside that minute. */
+export const IL_LIVE_POLL_MS = 60_000;
+
+/** Cache-friendly poll URL: ?t=floor(now/60000), shared by every visitor in that minute. */
+export function ilLivePollUrl(base: string, now = Date.now()): string {
+  const join = base.includes("?") ? "&" : "?";
+  return `${base}${join}t=${Math.floor(now / IL_LIVE_POLL_MS)}`;
+}
 export const IL_CEC_RESULTS = "https://cdn-votes26.bechirot.gov.il/";
 export const IL_META = meta;
 

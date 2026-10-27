@@ -7,10 +7,13 @@ import {
   IL_CEC_RESULTS,
   IL_ELIGIBLE,
   IL_LIVE_DATA_URL,
+  IL_LIVE_POLL_MS,
+  IL_LIVE_RAW_URL,
   IL_PATHS,
   IL_SNAPSHOT_URL,
   IL_TRACKER_OPENS_AT,
   IL_WINDOW_ID,
+  ilLivePollUrl,
   type IlLang,
 } from "@/data/il-results";
 
@@ -39,7 +42,6 @@ const T = {
     countedVoters: "בעלי זכות בחירה בקלפיות שנספרו",
     validVotes: "קולות כשרים",
     invalidVotes: "קולות פסולים",
-    updated: "עודכן",
     source: "מקור: ועדת הבחירות המרכזית",
     coalition: "מחשבון קואליציה",
     coalitionNote: "סמנו רשימות כדי לחבר את המנדטים שלהן. כלי חשבוני בלבד – אינו מנבא ואינו ממליץ.",
@@ -53,7 +55,6 @@ const T = {
     embed: "הטמעת התוצאות באתר שלכם",
     embedNote: "העתיקו את הקוד הזה כדי להציג את לוח התוצאות החי באתר או בבלוג:",
     hemicycle: "חלוקת 120 המושבים בכנסת לפי הספירה עד כה",
-    lastFetch: "בדיקה אחרונה",
   },
   en: {
     countdown: "Polls close in",
@@ -78,7 +79,6 @@ const T = {
     countedVoters: "Eligible voters in counted boxes",
     validVotes: "Valid votes",
     invalidVotes: "Invalid votes",
-    updated: "Updated",
     source: "Source: Central Elections Committee",
     coalition: "Coalition calculator",
     coalitionNote: "Tick lists to add up their seats. Arithmetic only: it predicts and recommends nothing.",
@@ -92,60 +92,145 @@ const T = {
     embed: "Embed these results",
     embedNote: "Copy this code to show the live results board on your site or blog:",
     hemicycle: "How the 120 Knesset seats divide on the count so far",
-    lastFetch: "Last checked",
   },
 } as const;
 
 const fmt = (lang: IlLang, n: number | undefined | null, digits = 0) =>
   n == null ? "–" : n.toLocaleString(lang === "he" ? "he-IL" : "en-GB", { maximumFractionDigits: digits, minimumFractionDigits: digits });
 
-const fmtTime = (lang: IlLang, iso: string | null | undefined) =>
-  iso
-    ? new Date(iso).toLocaleString(lang === "he" ? "he-IL" : "en-GB", {
-        timeZone: "Asia/Jerusalem",
-        dateStyle: "medium",
-        timeStyle: "short",
-      }) + (lang === "he" ? " (שעון ישראל)" : " Israel time")
-    : "–";
+const JERUSALEM = "Asia/Jerusalem";
 
+function parsedTime(value: string | null | undefined): number | null {
+  if (!value) return null;
+  const ms = Date.parse(value);
+  return Number.isFinite(ms) ? ms : null;
+}
 
-/** Poll the CEC-derived JSON: raw data branch first, the baked snapshot as fallback. */
+/** HH:MM in Asia/Jerusalem. Feed sourceUpdated when present, otherwise the fetch time. */
+export function ilUpdatedStamp(
+  lang: IlLang,
+  doc: IlDoc | null,
+  receivedAt?: number | null,
+): { text: string; kind: "updated" | "fetched" } | null {
+  const updatedMs = parsedTime(doc?.sourceUpdated);
+  const fetchedMs = parsedTime(doc?.fetchedAt) ?? (receivedAt != null && Number.isFinite(receivedAt) ? receivedAt : null);
+  const ms = updatedMs ?? fetchedMs;
+  if (ms == null) return null;
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: JERUSALEM,
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+    numberingSystem: "latn",
+  }).formatToParts(new Date(ms));
+  const hour = parts.find((p) => p.type === "hour")?.value ?? "";
+  const minute = parts.find((p) => p.type === "minute")?.value ?? "";
+  const hm = `${hour}:${minute}`;
+  const kind = updatedMs != null ? "updated" : "fetched";
+  const text =
+    lang === "he"
+      ? kind === "updated"
+        ? `עודכן לאחרונה ${hm} שעון ישראל`
+        : `נשלף לאחרונה ${hm} שעון ישראל`
+      : kind === "updated"
+        ? `Last updated ${hm} Israel time`
+        : `Last fetched ${hm} Israel time`;
+  return { text, kind };
+}
+
+export function ilStaleNotice(lang: IlLang, hasResults: boolean): string {
+  if (lang === "he") {
+    return hasResults
+      ? "העדכון האחרון לא נטען. מוצגות התוצאות האחרונות שהתקבלו."
+      : "העדכון האחרון לא נטען.";
+  }
+  return hasResults
+    ? "The latest update could not be loaded. Showing the last results received."
+    : "The latest update could not be loaded.";
+}
+
+export function IlUpdatedStamp({ lang, doc, receivedAt }: { lang: IlLang; doc: IlDoc | null; receivedAt?: number | null }) {
+  const stamp = ilUpdatedStamp(lang, doc, receivedAt);
+  if (!stamp) return null;
+  return (
+    <p className="rounded-lg border border-navy-soft bg-navy-wash px-3 py-2 text-base font-bold text-navy-deep" data-il-stamp={stamp.kind}>
+      {stamp.text}
+    </p>
+  );
+}
+
+function preferDoc(prev: IlDoc | null, next: IlDoc): IlDoc {
+  if (!prev || prev.results.length === 0) return next;
+  if (next.results.length === 0) return prev;
+  const a = prev.fetchedAt ? Date.parse(prev.fetchedAt) : 0;
+  const b = next.fetchedAt ? Date.parse(next.fetchedAt) : 0;
+  return b >= a ? next : prev;
+}
+
+/**
+ * Poll the same-origin /il-live feed every 60s. The minute query param is
+ * cacheable at the edge. On 404/5xx or a network error, try the raw URL once
+ * for that attempt. Keep the last good document and flag it stale if both fail.
+ */
 export function useIlResults(initial: IlDoc | null) {
   const [doc, setDoc] = useState<IlDoc | null>(initial);
   const [now, setNow] = useState<number | null>(null);
+  const [stale, setStale] = useState(false);
+  const [receivedAt, setReceivedAt] = useState<number | null>(null);
   useEffect(() => {
     let stop = false;
+    const accept = (next: unknown): boolean => {
+      if (stop || !next || typeof next !== "object" || !Array.isArray((next as IlDoc).results)) return false;
+      const incoming = next as IlDoc;
+      setDoc((prev) => preferDoc(prev, incoming));
+      setReceivedAt(Date.now());
+      return true;
+    };
+    const pull = async (url: string, nowMs: number): Promise<unknown> => {
+      // Default cache (not no-store) so the 60s edge cache on /il-live can answer.
+      const res = await fetch(ilLivePollUrl(url, nowMs), { signal: AbortSignal.timeout(20_000) });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    };
     const load = async () => {
       if (Date.now() < Date.parse(IL_TRACKER_OPENS_AT)) return;
-      for (const url of [IL_LIVE_DATA_URL, IL_SNAPSHOT_URL]) {
+      const nowMs = Date.now();
+      let fresh = false;
+      try {
+        fresh = accept(await pull(IL_LIVE_DATA_URL, nowMs));
+      } catch {
+        fresh = false;
+      }
+      if (!fresh) {
         try {
-          const res = await fetch(`${url}?t=${Math.floor(Date.now() / 30000)}`, { cache: "no-store" });
-          if (!res.ok) continue;
-          const next = (await res.json()) as IlDoc;
-          if (stop || !next || !Array.isArray(next.results)) continue;
-          setDoc((prev) => {
-            if (!prev || prev.results.length === 0) return next;
-            const a = prev.fetchedAt ? Date.parse(prev.fetchedAt) : 0;
-            const b = next.fetchedAt ? Date.parse(next.fetchedAt) : 0;
-            return b >= a ? next : prev;
-          });
-          return;
+          fresh = accept(await pull(IL_LIVE_RAW_URL, nowMs));
         } catch {
-          /* try next source */
+          fresh = false;
         }
       }
+      if (fresh) {
+        if (!stop) setStale(false);
+        return;
+      }
+      try {
+        const res = await fetch(IL_SNAPSHOT_URL);
+        if (res.ok) accept(await res.json());
+      } catch {
+        /* keep the last good data */
+      }
+      if (!stop) setStale(true);
     };
     setNow(Date.now());
     load();
     const tick = window.setInterval(() => setNow(Date.now()), 1000);
-    const poll = window.setInterval(load, 60_000);
+    const poll = window.setInterval(load, IL_LIVE_POLL_MS);
     return () => {
       stop = true;
       window.clearInterval(tick);
       window.clearInterval(poll);
     };
   }, []);
-  return { doc, now };
+  return { doc, now, stale, receivedAt };
 }
 
 function Countdown({ lang, now }: { lang: IlLang; now: number }) {
@@ -209,7 +294,7 @@ function ShareBar({ lang, text }: { lang: IlLang; text: string }) {
 
 export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc | null }) {
   const t = T[lang];
-  const { doc, now } = useIlResults(initial);
+  const { doc, now, stale, receivedAt } = useIlResults(initial);
   const [picked, setPicked] = useState<string[]>([]);
   const open = now !== null && now >= Date.parse(IL_TRACKER_OPENS_AT);
   const rows = useMemo(() => (open && doc ? doc.results : []), [open, doc]);
@@ -254,9 +339,15 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
   if (!rows.length) {
     return (
       <div className="space-y-4">
+        <IlUpdatedStamp lang={lang} doc={doc} receivedAt={receivedAt} />
         <div className="rounded-xl border border-notice-line bg-notice-wash p-5 text-navy-deep" role="status" aria-live="polite">
           {t.awaiting}
         </div>
+        {stale && (
+          <div className="rounded-xl border border-notice-line bg-notice-wash p-4 text-navy-deep" role="status">
+            {ilStaleNotice(lang, false)}
+          </div>
+        )}
         <ShareBar lang={lang} text={shareText} />
       </div>
     );
@@ -268,16 +359,21 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
 
   return (
     <div className="space-y-6" data-election-gate={IL_WINDOW_ID}>
-      <div className="flex flex-wrap items-center gap-3" aria-live="polite">
-        <span className={`rounded-full px-3 py-1 text-sm font-bold text-white ${final ? "bg-navy-deep" : "bg-[#b45309]"}`}>
-          {final ? t.final : t.preliminary}
-        </span>
-        <span className="text-sm text-ink-muted">
-          {t.updated}: {fmtTime(lang, doc?.sourceUpdated ? new Date(doc.sourceUpdated).toISOString() : doc?.fetchedAt)} ·{" "}
-          <a className="underline" href={IL_CEC_RESULTS} rel="noopener noreferrer">
+      <div className="space-y-3" aria-live="polite">
+        <IlUpdatedStamp lang={lang} doc={doc} receivedAt={receivedAt} />
+        {stale && (
+          <div className="rounded-xl border border-notice-line bg-notice-wash p-4 text-navy-deep" role="status">
+            {ilStaleNotice(lang, true)}
+          </div>
+        )}
+        <div className="flex flex-wrap items-center gap-3">
+          <span className={`rounded-full px-3 py-1 text-sm font-bold text-white ${final ? "bg-navy-deep" : "bg-[#b45309]"}`}>
+            {final ? t.final : t.preliminary}
+          </span>
+          <a className="text-sm text-ink-muted underline" href={IL_CEC_RESULTS} rel="noopener noreferrer">
             {t.source}
           </a>
-        </span>
+        </div>
       </div>
       {!final && <p className="text-sm text-ink-muted">{t.preliminaryNote}</p>}
 
@@ -408,11 +504,6 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
         <p className="mt-2 text-ink-muted">{t.embedNote}</p>
         <textarea readOnly dir="ltr" className="mt-2 h-24 w-full rounded border border-line p-2 font-mono text-xs" value={embedCode} onFocus={(e) => e.currentTarget.select()} />
       </details>
-      {doc?.fetchedAt && (
-        <p className="text-xs text-ink-soft">
-          {t.lastFetch}: {fmtTime(lang, doc.fetchedAt)}
-        </p>
-      )}
     </div>
   );
 }
