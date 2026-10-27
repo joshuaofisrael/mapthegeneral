@@ -12,7 +12,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-export type CandidateLang = "en" | "pl" | "it";
+export type CandidateLang = "en" | "pl" | "it" | "bg";
 export type CandidateLinkKind = "campaign" | "committee" | "profile";
 export type CandidateOrder = "ballot" | "alphabetical" | "source";
 export type LangText = Partial<Record<CandidateLang, string>>;
@@ -113,9 +113,25 @@ const LINK_LABEL: Record<CandidateLang, Record<CandidateLinkKind, string>> = {
   en: { campaign: "campaign site", committee: "committee site", profile: "profile" },
   pl: { campaign: "strona kampanii", committee: "strona komitetu", profile: "profil" },
   it: { campaign: "sito di campagna", committee: "sito della lista", profile: "profilo" },
+  bg: { campaign: "страница на кампанията", committee: "страница на комитета", profile: "регистър" },
 };
 
-const LANGS: CandidateLang[] = ["en", "pl", "it"];
+const LANGS: CandidateLang[] = ["en", "pl", "it", "bg"];
+
+const MONTHS_BG = [
+  "януари",
+  "февруари",
+  "март",
+  "април",
+  "май",
+  "юни",
+  "юли",
+  "август",
+  "септември",
+  "октомври",
+  "ноември",
+  "декември",
+];
 
 const MONTHS_IT = [
   "gennaio",
@@ -317,6 +333,7 @@ function formatReadOn(iso: string, lang: CandidateLang): string {
   const [year, month, day] = iso.split("-").map(Number);
   if (lang === "pl") return `${day} ${MONTHS_PL[month - 1]} ${year} r.`;
   if (lang === "it") return `${day} ${MONTHS_IT[month - 1]} ${year}`;
+  if (lang === "bg") return `${day} ${MONTHS_BG[month - 1]} ${year} г.`;
   return `${day} ${MONTHS_EN[month - 1]} ${year}`;
 }
 

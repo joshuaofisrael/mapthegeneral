@@ -53,6 +53,10 @@ const REQUIRED = [
   "/il/en/elections/knesset-2026/",
   "/rs/sr/elections/predsednicki-2026/",
   "/rs/en/elections/president-2026/",
+  "/bg/en/",
+  "/bg/bg/",
+  "/bg/en/elections/president-2026/",
+  "/bg/bg/elections/prezident-2026/",
 ] as const;
 
 const KW =

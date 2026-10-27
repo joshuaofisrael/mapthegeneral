@@ -5,6 +5,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { previewByPath } from "../src/data/editorial";
+import { editorialPreviewHtml } from "../src/data/editorial/html";
 import { COUNTRY_HUBS } from "../src/data/country-hubs";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
@@ -59,6 +61,7 @@ ${GA_HEAD_TAGS}
 <h1>${esc(page.h1)}</h1>
 <p class="lede">${esc(page.lede)}</p>
 <p><a href="${esc(reportErrorHref(page.path))}">${page.htmlLang === "bg" ? "Съобщете за грешка" : "Report an error"}</a></p>
+${editorialPreviewHtml(previewByPath(page.path))}
 ${page.bodyHtml}
 </main>
 ${withLegalFooter("")}

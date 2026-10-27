@@ -88,7 +88,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
           { name: "България", path: "/bg/bg/" },
         ],
         bodyHtml: `<h2>Изборът в това издание</h2>
-<p>Централната избирателна комисия е публикувала решения за хартиените бюлетини за евентуален нов избор за президент и вицепрезидент на 1 ноември 2026 г. Страницата на избора събира часа, начина на гласуване и източниците. Двете листи не са именувани, защото прочетените решения не ги определят.</p>
+<p>Централната избирателна комисия е публикувала таблицата за 25 октомври 2026 г. и решения за хартиените бюлетини за евентуален нов избор за президент и вицепрезидент на 1 ноември 2026 г. Страницата на избора дава реда от октомврийската таблица, часовете и източниците. Заглавията за 1 ноември още казват „евентуален“ и не се четат тук като решение коя двойка е избрана.</p>
 <p><a href="${LOCAL}">Избор за президент, 1 ноември 2026 г.</a></p>
 <h2>Лични данни</h2>
 <p>България е в Европейския съюз, затова Общият регламент относно защитата на данните важи за лични данни. Тази страница не публикува избирателни списъци, снимки или единен граждански номер. Имена на кандидати се добавят само когато Комисията ги публикува.</p>
@@ -118,7 +118,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
           { name: "Bulgaria", path: "/bg/en/" },
         ],
         bodyHtml: `<h2>The election in this release</h2>
-<p>The Central Election Commission has published decisions on the paper ballots for a possible new election for president and vice president on 1 November 2026. The election page collects the hours, the voting method and the sources. The two lists are not named, because the decisions that were read do not determine them.</p>
+<p>The Central Election Commission has published the 25 October 2026 table and decisions on the paper ballots for a possible new election for president and vice president on 1 November 2026. The election page gives the October table’s order, the hours and the sources. The November titles still say the new election is possible and are not read here as a decision that a pair was elected.</p>
 <p><a href="${EN}">Presidential election, 1 November 2026</a></p>
 <h2>Personal data</h2>
 <p>Bulgaria is in the European Union, so the General Data Protection Regulation applies to personal data. This hub publishes no electoral roll, no photographs and no national identity number. Candidate names are added only when the Commission publishes them.</p>

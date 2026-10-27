@@ -3,6 +3,7 @@
  * Facts are limited to pages read on 27 October 2026. No survey figures.
  */
 import type { ElectionSeoProfile } from "./election-seo";
+import { BG_ARCHIVE, BG_REGISTER, BG_RESULTS_URL, bgResultsTableHtml } from "./bg-president-2026";
 
 const CIK = "https://www.cik.bg/bg/pvr2026";
 const Q03 = "https://www.cik.bg/bg/pvr2026/faq/voters/q03";
@@ -87,28 +88,34 @@ const NIGHT_EN = night({
 
 const BODY_BG = `<h2>Какво се избира</h2>
 <p>Списъкът с решения на Централната избирателна комисия за избора на президент и вицепрезидент, прочетен на 27 октомври 2026 г., включва Решение № 405-ПВР от 23 октомври 2026 г. и Решение № 415-ПВР от 26 октомври 2026 г. И двете са за техническите характеристики на хартиените бюлетини за евентуален нов избор на 1 ноември 2026 г. Брошурата на Комисията за 25 октомври 2026 г. казва, че кандидат за президент е избран, ако получи повече от половината от действителните гласове и ако в избора са участвали повече от половината избиратели. Ако никой не постигне това мнозинство, се произвежда нов избор с двете кандидатски листи с най-много гласове, а начинът на гласуване остава същият.</p>
-<p>Тази страница не твърди, че Комисията вече е определила двете листи. Заглавията на решенията, прочетени на 27 октомври 2026 г., още казват „евентуален“. Ред на бюлетината не е преписан, защото в тези заглавия няма такъв ред.</p>
+<p>Тази страница не твърди, че Комисията вече е определила двете листи за 1 ноември. Заглавията на решенията, прочетени на 27 октомври 2026 г., още казват „евентуален“. Октомврийската таблица е отделна публикация и не се превръща тук в решение за ноемврийската бюлетина.</p>
 <h2>Как се гласува</h2>
 <p>Въпрос 3 към избирателите на страницата за този избор казва, че гласуването започва в 7:00 ч. и приключва в 20:00 ч. Член 220 от Изборния кодекс, в текста на страницата „Магистрат“, прочетена на 27 октомври 2026 г., казва същото и добавя, че избиратели, които в 20:00 ч. са пред помещението и предадат документите си, могат да гласуват след 20:00 ч., но не по-късно от 21:00 ч. Извън страната изборният ден в същия текст е от 7:00 до 20:00 ч. местно време.</p>
 <p>Брошурата казва, че в секции с 300 и повече избиратели по списък се гласува с устройство за машинно гласуване. Хартиена бюлетина е за по-малките секции, подвижна кутия, лечебни заведения, домове и специализирани институции, кораби под българско знаме, част от секциите в чужбина и при спряно машинно гласуване. Свидетелство за управление на моторно превозно средство не се приема. Сроковете в брошурата са за 25 октомври 2026 г. и не се пренасят тук като срокове за 1 ноември.</p>
-<h2>Кандидати</h2>
-<p>Прочетените на 27 октомври 2026 г. страници не съдържат решение, което определя двете листи за 1 ноември 2026 г., нито ред в бюлетината. Имената ще се добавят, когато Комисията публикува това определяне. Списъкът с решения е на <a href="${CIK}">страницата на Комисията за този избор</a>.</p>
+{{candidates}}
+<h2>Официално разпределение от 25 октомври</h2>
+<p>Всички числа са от таблицата на Комисията, прочетена на 27 октомври 2026 г.: данни към 15:00 на 26 октомври, при обработени 100,00% протоколи на секционните комисии в районните комисии. Страницата за активност не е преписана като крайна активност, затова условието „повече от половината избиратели“ не е отсъдено тук. <a href="${BG_RESULTS_URL}">Таблицата на Комисията</a>.</p>
+${bgResultsTableHtml()}
+<p>Двете най-големи разпределения са № 25 и № 4. Нито една двойка няма повече от половината от отпечатаното разпределение. Тази страница не обявява избрана двойка.</p>
 <h2>Предишни официални резултати</h2>
-<p>Услугата за резултати на Комисията показва избора за президент и вицепрезидент от 25 октомври 2026 г. и по-ранни президентски избори, включително 14 ноември 2021 г. Тази страница не преписва числа от страница за един район и не преписва числа от новинарски материал. Националните числа са тези на <a href="${RESULTS}">results.cik.bg</a>.</p>
+<p>Указателят на резултатите показва президентски избори на 14 ноември 2021 г., 6 ноември 2016 г. и 23 октомври 2011 г. Техните сборове не са преписани тук. <a href="${BG_ARCHIVE}">Указател на Комисията</a>.</p>
 <h2>Изборна нощ</h2>
 <p>Тук няма брой преди 21:00 ч. българско време на 1 ноември 2026 г. След това страницата чете само файл от същия сайт. Ако файлът липсва, връзката е към услугата на Комисията. На страницата няма прогноза.</p>
 ${NIGHT_BG}`;
 
 const BODY_EN = `<h2>What is being elected</h2>
 <p>The Central Election Commission’s decision list for the presidential election, read on 27 October 2026, includes Decision No. 405-PVR of 23 October 2026 and Decision No. 415-PVR of 26 October 2026. Both concern the technical specifications of the paper ballots for a possible new election for president and vice president on 1 November 2026. The Commission’s brochure for 25 October 2026 says a candidate for president is elected with more than half of the valid votes if more than half of the voters took part. If nobody reaches that majority, a new election is held with the two candidate lists that received the most votes, and the method of voting stays the same.</p>
-<p>This page does not say the Commission has already named those two lists. The decision titles read on 27 October 2026 still say the new election is possible. No ballot order was copied, because those titles do not print one.</p>
+<p>This page does not say the Commission has already named the two lists for 1 November. The decision titles read on 27 October 2026 still say the new election is possible. The October table is a separate publication and is not treated here as a decision on the November ballot.</p>
 <h2>How to vote</h2>
 <p>Voter question 3 on the Commission’s page for this election says voting starts at 7:00 and ends at 20:00. Article 220 of the Election Code, in the text on the Magistrat page read on 27 October 2026, says the same and adds that voters who are outside the polling room at 20:00 and hand over their identity papers may vote after 20:00, but not later than 21:00. Abroad, that text sets the election day from 7:00 to 20:00 local time.</p>
 <p>The brochure says sections with 300 or more voters on the list use a machine. A paper ballot is for smaller sections, a mobile box, hospitals, homes and specialised institutions, ships under the Bulgarian flag, some sections abroad, and a stopped machine. A driving licence is not accepted. Deadlines in the brochure are for 25 October 2026 and are not repeated here as deadlines for 1 November.</p>
-<h2>Candidates</h2>
-<p>The pages read on 27 October 2026 did not include a decision naming the two lists for 1 November 2026 or a ballot order. Names will be added when the Commission publishes that determination. The decision list is on the <a href="${CIK}">Commission’s page for this election</a>.</p>
+{{candidates}}
+<h2>Official distribution of 25 October</h2>
+<p>Every figure below is from the Commission’s table, read on 27 October 2026: data as of 15:00 on 26 October, with 100.00% of section-commission protocols processed in the district commissions. A final turnout was not copied, so this page does not decide whether more than half of the voters took part. <a href="${BG_RESULTS_URL}">Commission table</a>. The pairs, in that table’s ballot order, are listed below and each one links to the <a href="${BG_REGISTER}">public register</a>. The line „Не подкрепям никого“ is not a pair.</p>
+${bgResultsTableHtml()}
+<p>The two largest shares are no. 25 and no. 4. No pair has more than half of the printed distribution. This page does not declare a pair elected. Decisions No. 405-PVR and No. 415-PVR do not print a separate two-name order for 1 November.</p>
 <h2>Earlier official results</h2>
-<p>The Commission’s results service lists the presidential election of 25 October 2026 and earlier presidential elections, including 14 November 2021. This page does not copy figures from a single-district page or from a news report. The national figures are the ones on <a href="${RESULTS}">results.cik.bg</a>.</p>
+<p>The results index lists presidential elections on 14 November 2021, 6 November 2016 and 23 October 2011. Those totals are not copied here. <a href="${BG_ARCHIVE}">Commission results index</a>.</p>
 <h2>Election night</h2>
 <p>No count is shown here before 21:00 Bulgaria time on 1 November 2026. After that hour the page reads only a same-origin file. If the file is missing, the link is the Commission’s results service. This page has no forecast.</p>
 ${NIGHT_EN}`;
@@ -134,7 +141,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         href: LOCAL,
         label: "Bulgaria presidential election, 1 November 2026",
         detail:
-          "Possible new election on Sunday 1 November 2026, 7:00 to 20:00 Bulgaria time, with voting in a queue until 21:00. The two lists were not named on the decisions read on 27 October 2026.",
+          "Possible new election on Sunday 1 November 2026, 7:00 to 20:00 Bulgaria time, with voting in a queue until 21:00. The 25 October distribution is the Commission’s published table. No November count before 21:00.",
       },
     ],
     pages: [
@@ -219,9 +226,12 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
             ],
           },
           {
-            question: "Кои са двете кандидатски двойки?",
-            text: "Прочетените на 27 октомври 2026 г. заглавия на решения не определят двете листи и не дават ред в бюлетината. Имената не са добавени тук.",
-            links: [{ label: "заглавия на решения", href: CIK }],
+            question: "Кои са кандидатските двойки?",
+            text: "Таблицата на Комисията за 25 октомври 2026 г. дава двойките по ред в бюлетината и връзката е публичният регистър. Най-големите разпределения са № 25 и № 4. Заглавията на решенията за 1 ноември още казват „евентуален“ и не печатат отделен ред за две имена. Страницата не обявява избрана двойка.",
+            links: [
+              { label: "Таблицата на Комисията за 25 октомври 2026 г.", href: BG_RESULTS_URL },
+              { label: "публичният регистър", href: BG_REGISTER },
+            ],
           },
           {
             question: "От колко до колко часа се гласува?",
@@ -345,9 +355,12 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
             ],
           },
           {
-            question: "Who are the two candidate pairs?",
-            text: "The decision titles read on 27 October 2026 do not name the two lists and do not give a ballot order. The names are not on this page.",
-            links: [{ label: "decision titles", href: CIK }],
+            question: "Who are the candidate pairs?",
+            text: "The Commission’s table for 25 October 2026 gives the pairs in ballot order, and each pair links to the public register. The largest shares are no. 25 and no. 4. The decision titles for 1 November still say the new election is possible and do not print a separate two-name order. This page does not declare a pair elected.",
+            links: [
+              { label: "The Commission’s table for 25 October 2026", href: BG_RESULTS_URL },
+              { label: "the public register", href: BG_REGISTER },
+            ],
           },
           {
             question: "What are the voting hours?",
