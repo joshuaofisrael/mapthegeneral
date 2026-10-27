@@ -83,16 +83,20 @@
   function showRows(doc) {
     board.replaceChildren();
     var when = stamp(doc);
-    var heading = doc.status === "final" ? cfg.finalLabel : cfg.preliminary;
-    board.appendChild(el("h3", heading));
-    if (when) board.appendChild(el("p", when));
-    board.appendChild(el("p", cfg.source));
+    var finalStage = doc.status === "final" || doc.stage === "final";
+    var heading = finalStage ? cfg.finalLabel : cfg.preliminary;
+    var gate = el("div", "");
+    gate.setAttribute("data-election-gate", cfg.id || "");
+    gate.appendChild(el("h3", heading));
+    if (when) gate.appendChild(el("p", when));
+    gate.appendChild(el("p", cfg.source));
     var rows = Array.isArray(doc.results) ? doc.results : [];
     if (!rows.length) {
-      board.appendChild(el("p", cfg.awaiting));
+      gate.appendChild(el("p", cfg.awaiting));
       var wait = el("p", "");
       wait.appendChild(officialLink());
-      board.appendChild(wait);
+      gate.appendChild(wait);
+      board.appendChild(gate);
       return;
     }
     var table = document.createElement("table");
@@ -108,10 +112,26 @@
       tr.appendChild(el("td", row && row.share != null ? String(row.share) : ""));
       table.appendChild(tr);
     });
-    board.appendChild(table);
+    gate.appendChild(table);
     var p = el("p", "");
     p.appendChild(officialLink());
-    board.appendChild(p);
+    gate.appendChild(p);
+    board.appendChild(gate);
+  }
+
+  function acceptable(doc) {
+    if (!doc || !Array.isArray(doc.results)) return false;
+    if (doc.election && doc.election !== cfg.id) return false;
+    if (doc.id && doc.id !== cfg.id) return false;
+    return true;
+  }
+
+  function pull(url) {
+    var join = url.indexOf("?") >= 0 ? "&" : "?";
+    return fetch(url + join + "t=" + Math.floor(Date.now() / 60000), { cache: "no-store" }).then(function (res) {
+      if (!res.ok) throw new Error("status");
+      return res.json();
+    });
   }
 
   function load() {
@@ -119,22 +139,29 @@
       countdown(Date.now());
       return;
     }
-    fetch(cfg.feed, { cache: "no-store" })
-      .then(function (res) {
-        if (!res.ok) throw new Error("status");
-        return res.json();
-      })
-      .then(function (doc) {
-        if (Date.now() < opens) {
-          countdown(Date.now());
-          return;
-        }
-        showRows(doc || {});
-      })
-      .catch(function () {
-        if (Date.now() < opens) countdown(Date.now());
-        else showFallback(cfg.fallback);
-      });
+    var urls = [cfg.feed, cfg.snapshot].filter(Boolean);
+    function tryNext(index) {
+      if (Date.now() < opens) {
+        countdown(Date.now());
+        return;
+      }
+      if (index >= urls.length) {
+        showFallback(cfg.fallback);
+        return;
+      }
+      pull(urls[index])
+        .then(function (doc) {
+          if (!acceptable(doc)) {
+            tryNext(index + 1);
+            return;
+          }
+          showRows(doc);
+        })
+        .catch(function () {
+          tryNext(index + 1);
+        });
+    }
+    tryNext(0);
   }
 
   load();

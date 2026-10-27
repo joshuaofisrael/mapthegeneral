@@ -15,6 +15,7 @@ import {
 } from "./candidate-list";
 import { previewByPath } from "../data/editorial";
 import { editorialPreviewHtml } from "../data/editorial/html";
+import { nightSectionHtml } from "./election-night-html";
 import { withLegalFooter } from "./legal-footer";
 import { socialImageFor, socialMetaTags } from "./social";
 
@@ -209,7 +210,7 @@ ${GA_HEAD_TAGS}
 <h1>${esc(page.h1)}</h1>
 <p class="lede">${esc(page.lede)}</p>
 <p><strong>${esc(page.updated)}</strong> <a href="${esc(reportErrorHref(page.path))}">${esc(page.reportLabel)}</a></p>
-${editorialPreviewHtml(previewByPath(page.path))}${page.bodyHtml.includes("{{candidates}}") ? page.bodyHtml.replaceAll("{{candidates}}", candidateHtml) : `${page.bodyHtml}\n${candidateHtml ? `${candidateHtml}\n` : ""}`}<section id="how-to-vote">
+${editorialPreviewHtml(previewByPath(page.path))}${page.bodyHtml.includes("{{candidates}}") ? page.bodyHtml.replaceAll("{{candidates}}", candidateHtml) : `${page.bodyHtml}\n${candidateHtml ? `${candidateHtml}\n` : ""}`}${nightSectionHtml(profile.id, page.lang)}<section id="how-to-vote">
 <h2>${esc(page.keyDatesHeading)}</h2>
 <p>${esc(page.keyDatesIntro)}</p>
 <ul>

@@ -1,0 +1,64 @@
+name: Election night counts
+
+# Reads only the official results URL for each contest in the next window,
+# writes results.json onto the il-live-data branch, and never fetches before
+# trackerOpensAt. The same-origin paths are /il-live/<id>/results.json.
+# Israel stays on il-live-results.yml.
+
+on:
+  schedule:
+    - cron: "*/10 19-23 1 11 *"
+    - cron: "*/10 0-18 2 11 *"
+    - cron: "*/10 11-23 6 11 *"
+    - cron: "*/10 0-12 7 11 *"
+    - cron: "*/10 14-23 16 11 *"
+    - cron: "*/10 0-18 17 11 *"
+    - cron: "*/10 20-23 22 11 *"
+    - cron: "*/10 0-18 23 11 *"
+    - cron: "*/10 7-23 28 11 *"
+    - cron: "*/10 11-23 29 11 *"
+    - cron: "*/10 0-18 30 11 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: election-night
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: site
+      - name: Check out data branch
+        run: |
+          set -e
+          if git ls-remote --exit-code --heads "https://github.com/${GITHUB_REPOSITORY}.git" il-live-data >/dev/null; then
+            git clone --depth 1 --branch il-live-data "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" data
+          else
+            mkdir data && cd data && git init -q -b il-live-data
+            git remote add origin "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git"
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch official counts
+        id: fetch
+        working-directory: site
+        env:
+          NIGHT_RESULTS_URL: ${{ vars.NIGHT_RESULTS_URL }}
+        run: node scripts/election-night/fetch.mjs all ../data
+      - name: Commit data
+        if: steps.fetch.outputs.changed == 'true'
+        working-directory: data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Election-night counts"
+          git push -q origin il-live-data
