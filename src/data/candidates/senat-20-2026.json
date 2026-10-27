@@ -1,0 +1,61 @@
+{
+  "id": "senat-20-2026",
+  "langs": ["en", "pl"],
+  "submissionDeadline": "2026-10-14",
+  "noticeDue": "2026-11-12",
+  "source": {
+    "url": "https://wybory.gov.pl/senat20261122/data/csv/kandydaci_senat_csv.1791978806.zip",
+    "readOn": "2026-10-27",
+    "order": "source",
+    "label": {
+      "en": "National Electoral Commission, kandydaci_senat_utf8.csv",
+      "pl": "Państwowa Komisja Wyborcza, plik kandydaci_senat_utf8.csv"
+    },
+    "heading": {
+      "en": "Names in the Commission file",
+      "pl": "Kandydaci w pliku PKW"
+    },
+    "intro": {
+      "en": "The file kandydaci_senat_utf8.csv, read on {date}, lists the people below. The ballot-position column is empty. This is a reading of the file, not the district commission's announcement. The calendar requires the announcement of registered candidates by 12 November 2026. That announcement was not on the Commission notice list read on 25 October 2026. Sex, occupation and place of residence from the file are not reprinted. The open-data act allows reuse of public-sector information. Source: {source}.",
+      "pl": "Plik kandydaci_senat_utf8.csv odczytany {date} wymienia osoby poniżej. Kolumna „Pozycja na liście” jest pusta. To odczyt pliku, nie obwieszczenie Okręgowej Komisji Wyborczej. Kalendarz każe podać obwieszczenie o zarejestrowanych kandydatach do 12 listopada 2026 r. Tego obwieszczenia nie było na liście obwieszczeń PKW odczytanej 25 października 2026 r. Z pliku nie przepisano płci, zawodu ani miejsca zamieszkania. Ustawa o otwartych danych dopuszcza ponowne wykorzystywanie informacji sektora publicznego. Źródło: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the order of rows in the file, not the alphabetical ballot order in article 267.",
+      "pl": "Kolejność jest kolejnością wierszy pliku, nie porządkiem alfabetycznym z art. 267."
+    }
+  },
+  "candidates": [
+    {
+      "name": "Janusz Krzysztof KUBICKI",
+      "surname": "Kubicki",
+      "committee": "KOMITET WYBORCZY WYBORCÓW PO PIERWSZE LUBUSKIE",
+      "links": [
+        {
+          "href": "https://pl.wikipedia.org/wiki/Janusz_Kubicki_(samorz%C4%85dowiec)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Tomasz Jacek NARUSZEWICZ",
+      "surname": "Naruszewicz",
+      "committee": "KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA"
+    },
+    {
+      "name": "Zdzisława Maria RÓŻAŃSKA",
+      "surname": "Różańska",
+      "committee": "KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA"
+    },
+    {
+      "name": "Joanna SENYSZYN",
+      "surname": "Senyszyn",
+      "committee": "KOMITET WYBORCZY NOWA FALA PROFESOR SENYSZYN",
+      "links": [
+        {
+          "href": "https://pl.wikipedia.org/wiki/Joanna_Senyszyn",
+          "kind": "profile"
+        }
+      ]
+    }
+  ]
+}

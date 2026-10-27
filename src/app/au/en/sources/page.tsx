@@ -132,8 +132,8 @@ export default function AustraliaSourcesPage() {
           not copied. The 59 Western Australian district pages use the ABS State Electoral Division names instead. A
           Tasmanian Electoral Commission copyright licence page was not found on 19 October 2026. The five division
           names already printed by the Commission are repeated. Member names and the 2026 candidate list were not
-          copied. On 24 October 2026 a direct request to the Electoral Commission of Queensland copyright page, Elections
-          ACT, and the Northern Territory Electoral Commission returned HTTP 403, so their rolls and member names were
+          copied. On 24 October 2026 the Electoral Commission of Queensland copyright page and the Elections ACT and
+          Northern Territory Electoral Commission websites could not be opened, so their rolls and member names were
           not copied. Facts those Queensland pages do state, including 93 state electorates, 77 local government areas,
           and the election on Saturday 26 October 2024, are reported in our own words.
         </p>
@@ -161,7 +161,7 @@ export default function AustraliaSourcesPage() {
           cited for the statutory election rules. Queensland legislation on legislation.qld.gov.au is © State of
           Queensland, Creative Commons Attribution 4.0 (
           <a href="https://www.legislation.qld.gov.au/copyright">legislation copyright</a>
-          ). Mayors were not copied: a licence for the department directory was not retrieved. No Saturday was calculated
+          ). Mayors were not copied. The department directory’s copyright licence could not be opened. No Saturday was calculated
           from “the last Saturday in October” or “the last Saturday in March”.
         </p>
         <p>

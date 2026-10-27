@@ -184,8 +184,8 @@ export default async function JurisdictionPage({ params }: { params: Promise<{ j
                     : slug === "south-australia"
                       ? `${districtsIn(slug).length} names. The Government of South Australia State Electorates 2026 dataset, CC BY 4.0, stores the same names in capitals. The House of Assembly elections were held on Saturday 21 March 2026. The Gazette table of members was not copied.`
                       : slug === "australian-capital-territory"
-                        ? `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. Elections ACT returned HTTP 403 that day, so its roll was not copied. The page read on 17 October 2026 says the next election is in October 2028 and does not print a calendar day.`
-                        : `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. The Northern Territory Electoral Commission site returned HTTP 403 that day, so its roll was not copied.`}
+                        ? `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. The Elections ACT website could not be opened that day, so its roll was not copied. The page read on 17 October 2026 says the next election is in October 2028 and does not print a calendar day.`
+                        : `${districtsIn(slug).length} names from the ABS ASGS 2025 State Electoral Division list, read on 24 October 2026. The Northern Territory Electoral Commission website could not be opened that day, so its roll was not copied.`}
           </p>
           <p className="mt-2 text-sm">
             <Link className="text-navy underline" href={stateAssemblyIndexPath(slug)}>

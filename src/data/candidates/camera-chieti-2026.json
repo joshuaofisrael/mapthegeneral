@@ -1,0 +1,59 @@
+{
+  "id": "camera-chieti-2026",
+  "langs": ["en", "it"],
+  "source": {
+    "url": "https://dait.interno.gov.it/elezioni/trasparenza/suppletive-20261116-15",
+    "readOn": "2026-10-27",
+    "order": "source",
+    "label": {
+      "en": "Interior Ministry, transparency page for the Chieti by-election",
+      "it": "Ministero dell'interno, pagina di trasparenza per l'elezione suppletiva di Chieti"
+    },
+    "heading": {
+      "en": "Candidates",
+      "it": "Candidati"
+    },
+    "intro": {
+      "en": "The Interior Ministry transparency page, read on {date}, is the list below. It lists the candidates presented in uninominal constituency 01-Chieti for this by-election. It does not print a ballot number. Where a name is linked, the link is the curriculum vitae that page publishes for that candidate. Place and date of birth, and the criminal-record certificates, are not copied here. The curriculum links for Luciano D'Amico and Danilo Ranieri on that page did not open on {date}. The Prefecture page read on 26 October 2026 does not itself print this list. This page does not rank anyone. Source: {source}.",
+      "it": "La pagina di trasparenza del Ministero dell'interno, letta il {date}, è l'elenco sotto. Presenta i candidati del collegio uninominale 01-Chieti per questa elezione suppletiva. Non stampa un numero sulla scheda. Dove un nome ha un collegamento, è il curriculum vitae che quella pagina pubblica per quel candidato. Luogo e data di nascita, e i certificati penali, non sono copiati qui. I collegamenti al curriculum di Luciano D'Amico e di Danilo Ranieri su quella pagina non si aprivano il {date}. La pagina della Prefettura letta il 26 ottobre 2026 non stampa questo elenco. Questa pagina non mette nessuno in ordine di preferenza. Fonte: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the order of rows on that page.",
+      "it": "L'ordine è l'ordine delle righe di quella pagina."
+    }
+  },
+  "candidates": [
+    {
+      "name": "Massimo Pasqualone",
+      "surname": "Pasqualone",
+      "committee": "DIMENSIONE BANDECCHI",
+      "links": [
+        {
+          "href": "https://dait.interno.gov.it/documenti/trasparenza/suppletive_camera_20261116-15/doc/MassimoPasqualone_CV.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Luciano D'Amico",
+      "surname": "D'Amico",
+      "committee": "PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE"
+    },
+    {
+      "name": "Mario Colantonio",
+      "surname": "Colantonio",
+      "committee": "FRATELLI D'ITALIA - LEGA - NOI MODERATI-PPE - UNIONE DI CENTRO - FORZA ITALIA-PPE",
+      "links": [
+        {
+          "href": "https://dait.interno.gov.it/documenti/trasparenza/suppletive_camera_20261116-15/doc/MarioColantonio_CV.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Danilo Ranieri",
+      "surname": "Ranieri",
+      "committee": "ITALIA DOMANI MARCO RIZZO"
+    }
+  ]
+}
