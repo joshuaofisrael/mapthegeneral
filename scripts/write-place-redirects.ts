@@ -20,6 +20,7 @@ import { municipioPath } from "../src/data/mx/paths";
 import { allGminy, gminaPath } from "../data/pl/gminy";
 import { pageMunicipalities } from "../src/data/spain/municipalities";
 import { absoluteUrl } from "../src/data/site";
+import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { variantSlugs } from "../src/lib/place-variants";
 import { LANGS, allPublicPaths, municipalityPath as spainMunicipalityPath } from "../src/lib/routes";
 
@@ -86,6 +87,7 @@ function redirectHtml(targetPath: string, label: string, canonicalUrl: string, l
 <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
 <meta name="robots" content="noindex, follow">
 <meta http-equiv="refresh" content="0; url=${href}">
+${GA_HEAD_TAGS}
 </head>
 <body>
 <p><a href="${href}">${escapeHtml(label)}</a></p>
