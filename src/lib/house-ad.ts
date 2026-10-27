@@ -1,21 +1,192 @@
 /**
  * One static house ad per exported page, placed under the header.
  * The offer is chosen at build time from an FNV-1a hash of the page path:
- * 3/5 NamedScan, 2/5 RankFootprint. Copy is only what those sites published
- * on 27 October 2026. The banner is in the first HTML, with a reserved height,
- * and it does not load an image or script.
+ * 3/5 NamedScan, 2/5 RankFootprint. NamedScan copy is what that site published
+ * on 27 October 2026. RankFootprint's static copy is the $1 sample scan.
+ * A deferred script may swap that card to the free-scan wording only when
+ * the sample-status API reports mode "free". The card itself loads no image
+ * or script, and it keeps a reserved height.
  */
 
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
   namedscan: { name: "NamedScan", origin: "https://namedscan.com/" },
   rankfootprint: { name: "RankFootprint", origin: "https://rankfootprint.com/" },
 };
+
+/** Page languages plus Swiss locales and the other site languages. */
+export const RANKFOOTPRINT_LANGS = [
+  "en",
+  "es",
+  "fr",
+  "de",
+  "it",
+  "pl",
+  "pt",
+  "he",
+  "sr",
+  "bg",
+  "de-CH",
+  "fr-CH",
+  "it-CH",
+  "sv",
+  "no",
+  "zh",
+  "et",
+  "nl",
+  "fi",
+] as const;
+export type RankfootprintLang = (typeof RANKFOOTPRINT_LANGS)[number];
+
+type RankLine = { pitch: string; cta: string };
+
+/** Static HTML. Free-scan wording must not appear here. */
+const RANK_PAID: Record<RankfootprintLang, RankLine> = {
+  en: { pitch: "$1 Google Maps rank sample scan", cta: "Get the $1 sample scan" },
+  es: {
+    pitch: "Escaneo de muestra de $1 del ranking en Google Maps",
+    cta: "Consigue el escaneo de muestra de $1",
+  },
+  fr: {
+    pitch: "Scan d’échantillon à $1 du rang Google Maps",
+    cta: "Obtenir le scan d’échantillon à $1",
+  },
+  de: {
+    pitch: "Beispielscan für $1 zu Ihrem Google-Maps-Rang",
+    cta: "Beispielscan für $1 holen",
+  },
+  it: {
+    pitch: "Scansione campione da $1 della posizione su Google Maps",
+    cta: "Ottieni la scansione campione da $1",
+  },
+  pl: { pitch: "Próbny skan pozycji w Google Maps za $1", cta: "Weź próbny skan za $1" },
+  pt: {
+    pitch: "Varredura de amostra de $1 do ranking no Google Maps",
+    cta: "Obtenha a varredura de amostra de $1",
+  },
+  he: { pitch: "סריקת דגימה ב-$1 לדירוג ב-Google Maps", cta: "קבלו את סריקת הדגימה ב-$1" },
+  sr: { pitch: "Uzorak skeniranja ranga na Google Maps za $1", cta: "Uzmite uzorak skeniranja za $1" },
+  bg: {
+    pitch: "Примерно сканиране за $1 на ранга в Google Maps",
+    cta: "Вземете примерното сканиране за $1",
+  },
+  "de-CH": {
+    pitch: "Beispielscan für $1 zu Ihrem Google-Maps-Rang",
+    cta: "Beispielscan für $1 holen",
+  },
+  "fr-CH": {
+    pitch: "Échantillon à $1 du classement Google Maps",
+    cta: "Obtenir l’échantillon à $1",
+  },
+  "it-CH": {
+    pitch: "Scansione campione da $1 della posizione su Google Maps",
+    cta: "Ottieni la scansione campione da $1",
+  },
+  sv: { pitch: "$1-provskanning av Google Maps-rankning", cta: "Hämta provskanningen för $1" },
+  no: { pitch: "$1-prøveskanning av Google Maps-rangering", cta: "Få prøveskanningen for $1" },
+  zh: { pitch: "$1 Google 地圖排名樣本掃描", cta: "取得 $1 樣本掃描" },
+  et: { pitch: "$1 Google Mapsi asetuse näidisskaneering", cta: "Hangi $1 näidisskaneering" },
+  nl: { pitch: "$1-proefscan van je Google Maps-positie", cta: "Haal de proefscan van $1" },
+  fi: { pitch: "$1:n Google Maps -sijoituksen näyteskannaus", cta: "Hanki $1:n näyteskannaus" },
+};
+
+/** Used only by the deferred script. Never written into the ad HTML. */
+const RANK_FREE: Record<RankfootprintLang, RankLine> = {
+  en: { pitch: "Free Google Maps rank sample scan", cta: "Get the free sample scan" },
+  es: {
+    pitch: "Escaneo de muestra gratis del ranking en Google Maps",
+    cta: "Consigue el escaneo de muestra gratis",
+  },
+  fr: {
+    pitch: "Scan d’échantillon gratuit du rang Google Maps",
+    cta: "Obtenir le scan d’échantillon gratuit",
+  },
+  de: {
+    pitch: "Kostenloser Beispielscan zu Ihrem Google-Maps-Rang",
+    cta: "Kostenlosen Beispielscan holen",
+  },
+  it: {
+    pitch: "Scansione campione gratuita della posizione su Google Maps",
+    cta: "Ottieni la scansione campione gratuita",
+  },
+  pl: { pitch: "Bezpłatny próbny skan pozycji w Google Maps", cta: "Weź bezpłatny próbny skan" },
+  pt: {
+    pitch: "Varredura de amostra grátis do ranking no Google Maps",
+    cta: "Obtenha a varredura de amostra grátis",
+  },
+  he: { pitch: "סריקת דגימה חינמית לדירוג ב-Google Maps", cta: "קבלו את הסריקה החינמית" },
+  sr: { pitch: "Besplatan uzorak skeniranja ranga na Google Maps", cta: "Uzmite besplatno skeniranje" },
+  bg: {
+    pitch: "Безплатно примерно сканиране на ранга в Google Maps",
+    cta: "Вземете безплатното сканиране",
+  },
+  "de-CH": {
+    pitch: "Kostenloser Beispielscan zu Ihrem Google-Maps-Rang",
+    cta: "Kostenlosen Beispielscan holen",
+  },
+  "fr-CH": {
+    pitch: "Échantillon gratuit du classement Google Maps",
+    cta: "Obtenir l’échantillon gratuit",
+  },
+  "it-CH": {
+    pitch: "Scansione campione gratuita della posizione su Google Maps",
+    cta: "Ottieni la scansione campione gratuita",
+  },
+  sv: { pitch: "Gratis provskanning av Google Maps-rankning", cta: "Hämta den gratis provskanningen" },
+  no: { pitch: "Gratis prøveskanning av Google Maps-rangering", cta: "Få den gratis prøveskanningen" },
+  zh: { pitch: "免費 Google 地圖排名樣本掃描", cta: "取得免費樣本掃描" },
+  et: { pitch: "Tasuta Google Mapsi asetuse näidisskaneering", cta: "Hangi tasuta näidisskaneering" },
+  nl: { pitch: "Gratis proefscan van je Google Maps-positie", cta: "Haal de gratis proefscan" },
+  fi: { pitch: "Maksuton Google Maps -sijoituksen näyteskannaus", cta: "Hanki maksuton näyteskannaus" },
+};
+
+const RANK_SPONSOR_EXTRA: Record<"sv" | "no" | "zh" | "et" | "nl" | "fi", string> = {
+  sv: "Sponsrad av RankFootprint",
+  no: "Sponset av RankFootprint",
+  zh: "由 RankFootprint 贊助",
+  et: "Sponsoreeritud: RankFootprint",
+  nl: "Gesponsord door RankFootprint",
+  fi: "RankFootprintin sponsoroima",
+};
+
+export const RANKFOOTPRINT_SAMPLE_API = "https://rankfootprint-api.joshofisrael.workers.dev/api/sample-status";
+export const RANKFOOTPRINT_SAMPLE_SCRIPT_PATH = "/rankfootprint-sample.js";
+export const RANKFOOTPRINT_SAMPLE_SCRIPT_TAG = `<script defer src="${RANKFOOTPRINT_SAMPLE_SCRIPT_PATH}"></script>`;
+
+const FREE_SCAN_MARKERS = [
+  "free scan",
+  "free sample",
+  "free 3",
+  "try the free",
+  "gratis",
+  "gratuit",
+  "kostenlos",
+  "darmow",
+  "bezpłat",
+  "bezplat",
+  "grátis",
+  "חינם",
+  "חינמ",
+  "besplat",
+  "безплат",
+  "免費",
+  "tasuta",
+  "maksuton",
+];
+
+/** First free-scan phrase in `text`, or null. Case-insensitive. */
+export function freeScanMarker(text: string): string | null {
+  const hay = text.toLowerCase();
+  for (const marker of FREE_SCAN_MARKERS) {
+    if (hay.includes(marker.toLowerCase())) return marker;
+  }
+  return null;
+}
 
 type AdCopy = {
   sponsored: (name: string) => string;
@@ -29,12 +200,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Find out whether ChatGPT names your local business when customers ask. NamedScan runs those questions with live web search and shows who gets recommended, plus what to fix first.",
-      rankfootprint:
-        "See your Google Maps rank at each point on a grid around your business, starting with a free 3×3 scan. RankFootprint is not affiliated with Google and does not guarantee a ranking.",
+      rankfootprint: RANK_PAID.en.pitch,
     },
     cta: {
       namedscan: "Try NamedScan",
-      rankfootprint: "Try the free scan",
+      rankfootprint: RANK_PAID.en.cta,
     },
   },
   es: {
@@ -42,12 +212,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Comprueba si ChatGPT nombra tu negocio local cuando los clientes preguntan. NamedScan hace esas preguntas con búsqueda web en vivo y muestra a quién recomienda y qué corregir primero.",
-      rankfootprint:
-        "Mira tu posición en Google Maps en cada punto de una cuadrícula alrededor de tu negocio, empezando por un escaneo gratis de 3×3. RankFootprint no está afiliado a Google y no garantiza ninguna posición.",
+      rankfootprint: RANK_PAID.es.pitch,
     },
     cta: {
       namedscan: "Prueba NamedScan",
-      rankfootprint: "Prueba el escaneo gratis",
+      rankfootprint: RANK_PAID.es.cta,
     },
   },
   fr: {
@@ -55,12 +224,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Voyez si ChatGPT cite votre commerce local lorsque des clients posent une question. NamedScan pose ces questions avec la recherche web en direct et montre qui est recommandé, ainsi que ce qu’il faut corriger en premier.",
-      rankfootprint:
-        "Voyez votre rang Google Maps à chaque point d’une grille autour de votre établissement, en commençant par un scan gratuit de 3×3. RankFootprint n’est pas affilié à Google et ne garantit aucun classement.",
+      rankfootprint: RANK_PAID.fr.pitch,
     },
     cta: {
       namedscan: "Essayer NamedScan",
-      rankfootprint: "Essayer le scan gratuit",
+      rankfootprint: RANK_PAID.fr.cta,
     },
   },
   de: {
@@ -68,12 +236,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Prüfen Sie, ob ChatGPT Ihr lokales Unternehmen nennt, wenn Kunden fragen. NamedScan stellt diese Fragen mit Live-Websuche und zeigt, wer empfohlen wird und was zuerst zu korrigieren ist.",
-      rankfootprint:
-        "Sehen Sie Ihren Google-Maps-Rang an jedem Punkt eines Rasters um Ihren Betrieb, beginnend mit einem kostenlosen 3×3-Scan. RankFootprint ist nicht mit Google verbunden und garantiert kein Ranking.",
+      rankfootprint: RANK_PAID.de.pitch,
     },
     cta: {
       namedscan: "NamedScan testen",
-      rankfootprint: "Kostenlosen Scan testen",
+      rankfootprint: RANK_PAID.de.cta,
     },
   },
   it: {
@@ -81,12 +248,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Scopri se ChatGPT cita la tua attività locale quando i clienti fanno una domanda. NamedScan pone quelle domande con la ricerca web dal vivo e mostra chi viene consigliato e cosa correggere per primo.",
-      rankfootprint:
-        "Vedi la tua posizione su Google Maps in ogni punto di una griglia intorno alla tua attività, a partire da una scansione gratuita 3×3. RankFootprint non è affiliato a Google e non garantisce una posizione.",
+      rankfootprint: RANK_PAID.it.pitch,
     },
     cta: {
       namedscan: "Prova NamedScan",
-      rankfootprint: "Prova la scansione gratuita",
+      rankfootprint: RANK_PAID.it.cta,
     },
   },
   pl: {
@@ -94,12 +260,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Sprawdź, czy ChatGPT wymienia Twoją lokalną firmę, gdy klienci zadają pytanie. NamedScan zadaje te pytania z wyszukiwaniem w internecie na żywo i pokazuje, kogo poleca oraz co poprawić w pierwszej kolejności.",
-      rankfootprint:
-        "Zobacz swoją pozycję w Google Maps w każdym punkcie siatki wokół firmy, zaczynając od bezpłatnego skanu 3×3. RankFootprint nie jest powiązany z Google i nie gwarantuje pozycji.",
+      rankfootprint: RANK_PAID.pl.pitch,
     },
     cta: {
       namedscan: "Wypróbuj NamedScan",
-      rankfootprint: "Wypróbuj darmowy skan",
+      rankfootprint: RANK_PAID.pl.cta,
     },
   },
   pt: {
@@ -107,12 +272,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Veja se o ChatGPT cita o seu negócio local quando clientes perguntam. A NamedScan faz essas perguntas com busca ao vivo na web e mostra quem é recomendado e o que corrigir primeiro.",
-      rankfootprint:
-        "Veja sua posição no Google Maps em cada ponto de uma grade ao redor do negócio, começando por uma varredura 3×3 gratuita. O RankFootprint não é afiliado ao Google e não garante posição.",
+      rankfootprint: RANK_PAID.pt.pitch,
     },
     cta: {
       namedscan: "Experimente a NamedScan",
-      rankfootprint: "Experimente a varredura grátis",
+      rankfootprint: RANK_PAID.pt.cta,
     },
   },
   he: {
@@ -120,12 +284,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "בדקו אם ChatGPT מזכיר את העסק המקומי שלכם כשלקוחות שואלים. NamedScan שולח את השאלות האלה עם חיפוש חי באינטרנט ומראה את מי ממליצים ומה כדאי לתקן קודם.",
-      rankfootprint:
-        "ראו את הדירוג שלכם ב-Google Maps בכל נקודה ברשת סביב העסק, החל מסריקת 3×3 חינמית. RankFootprint אינו קשור ל-Google ואינו מבטיח דירוג.",
+      rankfootprint: RANK_PAID.he.pitch,
     },
     cta: {
       namedscan: "נסו את NamedScan",
-      rankfootprint: "נסו את הסריקה החינמית",
+      rankfootprint: RANK_PAID.he.cta,
     },
   },
   sr: {
@@ -133,12 +296,11 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Proverite da li ChatGPT imenuje vaš lokalni biznis kada kupci pitaju. NamedScan postavlja ta pitanja uz pretragu veba uživo i pokazuje koga preporučuje i šta prvo da ispravite.",
-      rankfootprint:
-        "Vidite svoj rang na Google Maps u svakoj tački mreže oko biznisa, počev od besplatnog skeniranja 3×3. RankFootprint nije povezan sa Google-om i ne garantuje rang.",
+      rankfootprint: RANK_PAID.sr.pitch,
     },
     cta: {
       namedscan: "Isprobajte NamedScan",
-      rankfootprint: "Isprobajte besplatno skeniranje",
+      rankfootprint: RANK_PAID.sr.cta,
     },
   },
   bg: {
@@ -146,12 +308,23 @@ const COPY: Record<HouseAdLang, AdCopy> = {
     pitch: {
       namedscan:
         "Разберете дали ChatGPT посочва местния ви бизнес, когато клиентите питат. NamedScan задава тези въпроси с търсене в интернет на живо и показва кого препоръчва и какво да поправите първо.",
-      rankfootprint:
-        "Вижте ранга си в Google Maps във всяка точка от мрежа около бизнеса, като започнете с безплатно сканиране 3×3. RankFootprint не е свързан с Google и не гарантира ранг.",
+      rankfootprint: RANK_PAID.bg.pitch,
     },
     cta: {
       namedscan: "Пробвайте NamedScan",
-      rankfootprint: "Пробвайте безплатното сканиране",
+      rankfootprint: RANK_PAID.bg.cta,
+    },
+  },
+  et: {
+    sponsored: (name) => `Sponsoreerib ${name}`,
+    pitch: {
+      namedscan:
+        "Vaadake, kas ChatGPT nimetab teie kohalikku ettevõtet, kui kliendid küsivad. NamedScan esitab need küsimused reaalajas veebiotsinguga ja näitab, keda soovitab ning mida esimesena parandada.",
+      rankfootprint: RANK_PAID.et.pitch,
+    },
+    cta: {
+      namedscan: "Proovige NamedScan",
+      rankfootprint: RANK_PAID.et.cta,
     },
   },
 };
@@ -160,43 +333,47 @@ const COPY: Record<HouseAdLang, AdCopy> = {
 const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   en: {
     namedscan: ["ChatGPT", "live web search", "what to fix first"],
-    rankfootprint: ["3×3", "not affiliated with Google", "does not guarantee"],
+    rankfootprint: ["$1"],
   },
   es: {
     namedscan: ["ChatGPT", "búsqueda web en vivo"],
-    rankfootprint: ["3×3", "no está afiliado a Google", "no garantiza"],
+    rankfootprint: ["$1"],
   },
   fr: {
     namedscan: ["ChatGPT", "recherche web en direct"],
-    rankfootprint: ["3×3", "n’est pas affilié à Google", "ne garantit"],
+    rankfootprint: ["$1"],
   },
   de: {
     namedscan: ["ChatGPT", "Live-Websuche"],
-    rankfootprint: ["3×3", "nicht mit Google verbunden", "garantiert kein"],
+    rankfootprint: ["$1"],
   },
   it: {
     namedscan: ["ChatGPT", "ricerca web dal vivo"],
-    rankfootprint: ["3×3", "non è affiliato a Google", "non garantisce"],
+    rankfootprint: ["$1"],
   },
   pl: {
     namedscan: ["ChatGPT", "wyszukiwaniem w internecie na żywo"],
-    rankfootprint: ["3×3", "nie jest powiązany z Google", "nie gwarantuje"],
+    rankfootprint: ["$1"],
   },
   pt: {
     namedscan: ["ChatGPT", "busca ao vivo na web"],
-    rankfootprint: ["3×3", "não é afiliado ao Google", "não garante"],
+    rankfootprint: ["$1"],
   },
   he: {
     namedscan: ["ChatGPT", "חיפוש חי באינטרנט"],
-    rankfootprint: ["3×3", "אינו קשור ל-Google", "אינו מבטיח"],
+    rankfootprint: ["$1"],
   },
   sr: {
     namedscan: ["ChatGPT", "pretragu veba uživo"],
-    rankfootprint: ["3×3", "nije povezan sa Google-om", "ne garantuje"],
+    rankfootprint: ["$1"],
   },
   bg: {
     namedscan: ["ChatGPT", "търсене в интернет на живо"],
-    rankfootprint: ["3×3", "не е свързан с Google", "не гарантира"],
+    rankfootprint: ["$1"],
+  },
+  et: {
+    namedscan: ["ChatGPT", "reaalajas veebiotsinguga"],
+    rankfootprint: ["$1"],
   },
 };
 
@@ -357,15 +534,119 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
+function rankSponsor(lang: RankfootprintLang): string {
+  switch (lang) {
+    case "de-CH":
+      return COPY.de.sponsored("RankFootprint");
+    case "fr-CH":
+      return COPY.fr.sponsored("RankFootprint");
+    case "it-CH":
+      return COPY.it.sponsored("RankFootprint");
+    case "sv":
+    case "no":
+    case "zh":
+    case "et":
+    case "nl":
+    case "fi":
+      return RANK_SPONSOR_EXTRA[lang];
+    default:
+      return COPY[lang].sponsored("RankFootprint");
+  }
+}
+
+/** Swiss pages use the regional wording. Other pages use the language segment. */
+export function rankfootprintLangForRoute(route: string): RankfootprintLang {
+  const parts = route.split("/").filter(Boolean);
+  const country = parts[0] ?? "";
+  const segment = parts[1] ?? "";
+  if (country === "ch" && segment === "de") return "de-CH";
+  if (country === "ch" && segment === "fr") return "fr-CH";
+  if (country === "ch" && segment === "it") return "it-CH";
+  if (segment === "zh") return "zh";
+  if (segment === "sv") return "sv";
+  if (segment === "no" || segment === "nb" || segment === "nn") return "no";
+  if (segment === "et") return "et";
+  if (segment === "nl") return "nl";
+  if (segment === "fi") return "fi";
+  if ((RANKFOOTPRINT_LANGS as readonly string[]).includes(segment)) return segment as RankfootprintLang;
+  return "en";
+}
+
+function rankButtonCh(lang: RankfootprintLang): number {
+  return Math.ceil(Math.max(RANK_PAID[lang].cta.length, RANK_FREE[lang].cta.length) * 1.2);
+}
+
+function renderRankfootprint(lang: RankfootprintLang): string {
+  const paid = RANK_PAID[lang];
+  const ch = rankButtonCh(lang);
+  return `<a class="house-ad" data-house-ad="rankfootprint" data-ad-lang="${lang}" href="${escapeHtml(houseAdHref("rankfootprint"))}" rel="sponsored noopener" target="_blank"><span class="house-ad-kicker">${escapeHtml(rankSponsor(lang))}</span><span class="house-ad-copy">${escapeHtml(paid.pitch)}</span><span class="house-ad-btn" style="min-width:${ch}ch">${escapeHtml(paid.cta)}</span></a>`;
+}
+
 /** The whole card is one anchor. The button is a span, so there is no nested link. */
 export function renderHouseAd(id: HouseAdId, lang: HouseAdLang): string {
+  if (id === "rankfootprint") return renderRankfootprint(lang);
   const ad = HOUSE_ADS[id];
   const copy = COPY[lang];
   return `<a class="house-ad" data-house-ad="${id}" href="${escapeHtml(houseAdHref(id))}" rel="sponsored noopener" target="_blank"><span class="house-ad-kicker">${escapeHtml(copy.sponsored(ad.name))}</span><span class="house-ad-copy">${escapeHtml(copy.pitch[id])}</span><span class="house-ad-btn">${escapeHtml(copy.cta[id])}</span></a>`;
 }
 
 export function houseAdHtml(route: string, lang: HouseAdLang): string {
-  return renderHouseAd(houseAdIdForRoute(route), lang);
+  const id = houseAdIdForRoute(route);
+  if (id === "rankfootprint") return renderRankfootprint(rankfootprintLangForRoute(route));
+  return renderHouseAd(id, lang);
+}
+
+/** Deferred, non-blocking. On error, timeout, or any mode other than "free", the $1 copy stays. */
+export function rankfootprintSampleScript(): string {
+  const free: Record<string, RankLine> = {};
+  for (const lang of RANKFOOTPRINT_LANGS) free[lang.toLowerCase()] = RANK_FREE[lang];
+  free.nb = RANK_FREE.no;
+  free.nn = RANK_FREE.no;
+  const payload = JSON.stringify(free);
+  const api = JSON.stringify(RANKFOOTPRINT_SAMPLE_API);
+  return `(function () {
+  if (window.__rfSampleBoot) return;
+  window.__rfSampleBoot = true;
+  var FREE = ${payload};
+  var API = ${api};
+  function apply() {
+    var ads = document.querySelectorAll('a.house-ad[data-house-ad="rankfootprint"]');
+    if (!ads.length) return;
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, 4000);
+    fetch(API, { signal: ctrl.signal, credentials: "omit" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("bad status");
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data || data.mode !== "free") return;
+        for (var i = 0; i < ads.length; i++) {
+          var key = (ads[i].getAttribute("data-ad-lang") || document.documentElement.lang || "en").trim().toLowerCase();
+          var copy = FREE[key] || FREE[key.split("-")[0]] || FREE.en;
+          if (!copy) continue;
+          var pitch = ads[i].querySelector(".house-ad-copy");
+          var btn = ads[i].querySelector(".house-ad-btn");
+          if (pitch) pitch.textContent = copy.pitch;
+          if (btn) btn.textContent = copy.cta;
+        }
+      })
+      .catch(function () {})
+      .then(function () { clearTimeout(timer); });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply);
+  else apply();
+})();
+`;
+}
+
+/** Adds the sample-status script once, before </body>, only on RankFootprint pages. */
+export function withRankfootprintSampleScript(html: string): string {
+  if (!html.includes('data-house-ad="rankfootprint"')) return html;
+  if (html.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_PATH)) return html;
+  const at = html.lastIndexOf("</body>");
+  if (at === -1) return `${html}${RANKFOOTPRINT_SAMPLE_SCRIPT_TAG}`;
+  return `${html.slice(0, at)}${RANKFOOTPRINT_SAMPLE_SCRIPT_TAG}${html.slice(at)}`;
 }
 
 function sentenceCount(text: string): number {
@@ -380,8 +661,10 @@ export function selfCheckHouseAds(): string[] {
       const pitch = copy.pitch[id];
       const cta = copy.cta[id];
       const label = copy.sponsored(HOUSE_ADS[id].name);
-      const sentences = sentenceCount(pitch);
-      if (sentences !== 2) problems.push(`${lang} ${id}: pitch has ${sentences} sentence marks, expected 2`);
+      if (id !== "rankfootprint") {
+        const sentences = sentenceCount(pitch);
+        if (sentences !== 2) problems.push(`${lang} ${id}: pitch has ${sentences} sentence marks, expected 2`);
+      }
       if (!label.includes(HOUSE_ADS[id].name)) problems.push(`${lang} ${id}: label dropped the site name`);
       if (label !== copy.sponsored(HOUSE_ADS[id].name)) problems.push(`${lang} ${id}: label drifted`);
       if (!cta.trim() || pitch.includes(cta)) problems.push(`${lang} ${id}: CTA missing or copied into the pitch`);
@@ -400,8 +683,18 @@ export function selfCheckHouseAds(): string[] {
       if (!html.includes('rel="sponsored noopener"') || !html.includes('target="_blank"')) {
         problems.push(`${lang} ${id}: link attributes drifted`);
       }
-      if ((html.match(/<span class="house-ad-btn">/g) ?? []).length !== 1) {
+      if ((html.match(/<span class="house-ad-btn"/g) ?? []).length !== 1) {
         problems.push(`${lang} ${id}: button span missing`);
+      }
+      if (id === "namedscan" && (html.includes("data-ad-lang") || html.includes("min-width") || html.includes("rankfootprint-sample"))) {
+        problems.push(`${lang} namedscan: markup drifted`);
+      }
+      if (id === "rankfootprint") {
+        const marker = freeScanMarker(html);
+        if (marker) problems.push(`${lang} rankfootprint: static ad has free-scan wording “${marker}”`);
+        if (!html.includes('style="min-width:') || !html.includes(`data-ad-lang="${lang}"`)) {
+          problems.push(`${lang} rankfootprint: reserved button width or language hook missing`);
+        }
       }
       if (html.includes("<img") || html.includes("<script") || html.includes("url(")) {
         problems.push(`${lang} ${id}: card requests an image or script`);
@@ -418,7 +711,59 @@ export function selfCheckHouseAds(): string[] {
     }
   }
   if (COPY.en.cta.namedscan !== "Try NamedScan") problems.push("English NamedScan CTA drifted");
-  if (COPY.en.cta.rankfootprint !== "Try the free scan") problems.push("English RankFootprint CTA drifted");
+  if (RANK_PAID.en.pitch !== "$1 Google Maps rank sample scan") problems.push("English RankFootprint pitch drifted");
+  if (RANK_PAID.en.cta !== "Get the $1 sample scan") problems.push("English RankFootprint CTA drifted");
+  if (COPY.en.cta.rankfootprint !== RANK_PAID.en.cta || COPY.en.pitch.rankfootprint !== RANK_PAID.en.pitch) {
+    problems.push("English RankFootprint card is not the $1 copy");
+  }
+  if (RANK_FREE.en.pitch !== "Free Google Maps rank sample scan" || RANK_FREE.en.cta !== "Get the free sample scan") {
+    problems.push("English free-scan wording drifted");
+  }
+  const sampleScript = rankfootprintSampleScript();
+  if (!sampleScript.includes(RANKFOOTPRINT_SAMPLE_API)) problems.push("sample script missing the status API");
+  if (!sampleScript.includes('data.mode !== "free"')) problems.push("sample script must swap only for mode free");
+  if (!sampleScript.includes("AbortController") || !sampleScript.includes("4000")) problems.push("sample script missing timeout");
+  if (!sampleScript.includes('credentials: "omit"')) problems.push("sample script must not send credentials");
+  if (!RANKFOOTPRINT_SAMPLE_SCRIPT_TAG.startsWith("<script defer ")) problems.push("sample script must be deferred");
+  for (const lang of RANKFOOTPRINT_LANGS) {
+    const card = renderRankfootprint(lang);
+    const marker = freeScanMarker(card);
+    if (marker) problems.push(`${lang} rank card has free-scan wording “${marker}”`);
+    if (!card.includes("$1")) problems.push(`${lang} rank card missing $1`);
+    if (!rankSponsor(lang).includes("RankFootprint")) problems.push(`${lang} rank label dropped the name`);
+    if (!sampleScript.includes(RANK_FREE[lang].pitch) || !sampleScript.includes(RANK_FREE[lang].cta)) {
+      problems.push(`${lang} free wording missing from the sample script`);
+    }
+    if (card.includes(RANK_FREE[lang].pitch) || card.includes(RANK_FREE[lang].cta)) {
+      problems.push(`${lang} free wording leaked into static ad HTML`);
+    }
+    if (RANK_FREE[lang].pitch === RANK_PAID[lang].pitch || RANK_FREE[lang].cta === RANK_PAID[lang].cta) {
+      problems.push(`${lang} free wording is identical to the $1 copy`);
+    }
+    if (!freeScanMarker(`${RANK_FREE[lang].pitch} ${RANK_FREE[lang].cta}`)) {
+      problems.push(`${lang} free wording has no free-scan phrase`);
+    }
+  }
+  const namedOnly = `<html><body>${renderHouseAd("namedscan", "en")}</body></html>`;
+  if (withRankfootprintSampleScript(namedOnly) !== namedOnly) problems.push("sample script attached to NamedScan");
+  const rankPage = `<html><body>${renderRankfootprint("en")}</body></html>`;
+  const withScript = withRankfootprintSampleScript(rankPage);
+  if (!withScript.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_TAG) || withScript.indexOf(RANKFOOTPRINT_SAMPLE_SCRIPT_TAG) > withScript.lastIndexOf("</body>")) {
+    problems.push("sample script was not deferred before </body>");
+  }
+  if (withRankfootprintSampleScript(withScript) !== withScript) problems.push("sample script inserted twice");
+  if (rankfootprintLangForRoute("/") !== "en") problems.push("homepage rank language");
+  if (rankfootprintLangForRoute("/ch/de/lu/") !== "de-CH" || rankfootprintLangForRoute("/ch/fr/") !== "fr-CH") {
+    problems.push("Swiss rank language");
+  }
+  if (rankfootprintLangForRoute("/ch/it/") !== "it-CH" || rankfootprintLangForRoute("/it/it/") !== "it") {
+    problems.push("Italian rank language");
+  }
+  if (rankfootprintLangForRoute("/ca/fr/") !== "fr") problems.push("Canadian French rank language");
+  if (rankfootprintLangForRoute("/tw/zh/elections/difang-gongzhi-2026/") !== "zh") problems.push("Chinese rank language");
+  if (rankfootprintLangForRoute("/se/sv/") !== "sv" || rankfootprintLangForRoute("/no/nb/") !== "no") {
+    problems.push("Nordic rank language");
+  }
   if (COPY.en.sponsored("NamedScan") !== "Sponsored by NamedScan") problems.push("English label drifted");
   if (COPY.en.sponsored("RankFootprint") !== "Sponsored by RankFootprint") problems.push("English label drifted");
   if (!HOUSE_AD_CSS.includes("min-height: 3rem") || !HOUSE_AD_CSS.includes("display: flex")) {
@@ -455,6 +800,7 @@ export function selfCheckHouseAds(): string[] {
   if (languageFromRoute("/bg/bg/") !== "bg" || languageFromRoute("/bg/bg/elections/prezident-2026/") !== "bg") {
     problems.push("path language");
   }
+  if (languageFromRoute("/ee/et/") !== "et") problems.push("path language");
   if (houseAdLangForDocument("zh") !== "en") problems.push("zh document should use the English house ad");
   if (houseAdLangForDocument("es") !== "es") problems.push("Spanish house ad must stay Spanish");
   if (houseAdLangForDocument("bg") !== "bg") problems.push("Bulgarian house ad must stay Bulgarian");

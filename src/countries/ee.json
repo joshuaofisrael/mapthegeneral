@@ -1,0 +1,20 @@
+{
+  "code": "ee",
+  "name": "Estonia",
+  "href": "/ee/",
+  "summary": "National hub. Riigikogu election on 7 March 2027, from the National Electoral Service. No municipality pages and no count before 20:15 Eastern European Time.",
+  "links": [
+    {
+      "href": "/ee/et/",
+      "label": "Eesti"
+    },
+    {
+      "href": "/ee/et/elections/riigikogu-2027/",
+      "label": "Riigikogu valimised, 7. märts 2027"
+    },
+    {
+      "href": "/ee/en/",
+      "label": "English"
+    }
+  ]
+}

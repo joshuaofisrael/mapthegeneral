@@ -59748,6 +59748,11 @@
 - [El Salvador](https://mapthegeneral.com/sv/en/)
 - [Elecciones del 28 de febrero de 2027](https://mapthegeneral.com/sv/es/elections/generales-2027/)
 - [El Salvador elections, 28 February 2027](https://mapthegeneral.com/sv/en/elections/general-2027/)
+- [Eesti](https://mapthegeneral.com/ee/)
+- [Eesti](https://mapthegeneral.com/ee/et/)
+- [Estonia](https://mapthegeneral.com/ee/en/)
+- [Riigikogu valimised, 7. märts 2027](https://mapthegeneral.com/ee/et/elections/riigikogu-2027/)
+- [Estonia Riigikogu election, 7 March 2027](https://mapthegeneral.com/ee/en/elections/riigikogu-2027/)
 - [תוצאות הבחירות 2026](https://mapthegeneral.com/il/he/results/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
@@ -59762,6 +59767,8 @@ Brazil (https://mapthegeneral.com/br/): National hub. Official TSE presidential 
 Canada (https://mapthegeneral.com/ca/): Federal general election fixed for Monday, 15 October 2029, unless Parliament is dissolved earlier. The last general election was 28 April 2025. This release has the national page, 13 provinces and territories, 343 federal electoral districts, 293 census divisions, legislative assembly districts for nine provinces and territories, and incorporated municipalities from the SGC 2021 list in every province and territory, in English and French. Legislative assembly districts for New Brunswick, Newfoundland and Labrador, the Northwest Territories, and Yukon are not in this release. Mayors are not named.
 
 Switzerland (https://mapthegeneral.com/ch/): National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, 135 district names, and a page for each of the 2,110 political municipalities in the FSO historized commune register (1 January 2026), in German, French, Italian and English. Communal executive names are not stored. Communal polling dates are cited for Genève, Luzern, Ticino, Valais / Wallis, Zug, Jura except Moutier, and Appenzell Ausserrhoden. The other cantons are marked where the register does not give a communal polling day.
+
+Estonia (https://mapthegeneral.com/ee/): National hub. Riigikogu election on 7 March 2027, from the National Electoral Service. No municipality pages and no count before 20:15 Eastern European Time.
 
 United Kingdom (https://mapthegeneral.com/gb/): UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page, England, Scotland, Wales and Northern Ireland, the 650 Westminster constituencies, Scottish Parliament constituencies and regions, Senedd constituencies, Northern Ireland Assembly constituencies, 361 local authority districts, 21 English county councils, and directly elected mayoral bodies, in English. Ward, parish and candidate pages are not in this release.
 

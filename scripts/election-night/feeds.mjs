@@ -59,6 +59,12 @@ export const FEEDS = [
     hosts: ["tse.gob.sv"],
     preserveSnapshot: true,
   },
+  {
+    id: "ee-2027-03-07",
+    officialUrl: "https://www.valimised.ee/",
+    hosts: ["valimised.ee"],
+    preserveSnapshot: true,
+  },
 ];
 
 export function feedById(id) {

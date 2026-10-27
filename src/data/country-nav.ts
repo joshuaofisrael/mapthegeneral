@@ -16,7 +16,7 @@ export type CountryHubLink = {
 };
 
 /** Page languages that appear as the second URL segment. Same set as the html-lang stamp. */
-export const PAGE_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg"] as const;
+export const PAGE_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et"] as const;
 export type PageLang = (typeof PAGE_LANGS)[number];
 
 const PAGE_LANG_SET = new Set<string>(PAGE_LANGS);
@@ -39,6 +39,7 @@ const COUNTRIES_LABEL: Record<PageLang, string> = {
   he: "מדינות",
   sr: "Zemlje",
   bg: "Държави",
+  et: "Riigid",
 };
 
 export function countriesLabel(lang: PageLang): string {
@@ -70,6 +71,7 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   pl: { name: "Polska", lang: "pl" },
   rs: { name: "Srbija", lang: "sr" },
   se: { name: "Sverige", lang: "sv" },
+  ee: { name: "Eesti", lang: "et" },
   sv: { name: "El Salvador", lang: "es" },
   tw: { name: "臺灣", lang: "zh-Hant" },
 };

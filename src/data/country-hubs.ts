@@ -360,6 +360,145 @@ export const SV_COUNTRY_HUB: CountryHub = {
 
 COUNTRY_HUBS.push(SV_COUNTRY_HUB);
 
+const EE_ET = "/ee/et/elections/riigikogu-2027/";
+const EE_EN = "/ee/en/elections/riigikogu-2027/";
+
+const eeAlternates = [
+  { hreflang: "et", path: "/ee/et/" },
+  { hreflang: "en", path: "/ee/en/" },
+  { hreflang: "x-default", path: "/ee/et/" },
+];
+
+export const EE_COUNTRY_HUB: CountryHub = {
+  index: [
+    {
+      path: "/ee/",
+      lang: "et",
+      title: "Eesti",
+      kind: "country",
+      text: "Eesti Riigikogu valimised 7. märts 2027 valimised.ee",
+    },
+    {
+      path: "/ee/et/",
+      lang: "et",
+      title: "Eesti",
+      kind: "country",
+      text: "Eesti Riigikogu valimised 7. märts 2027 Riigi valimisteenistus",
+    },
+    {
+      path: "/ee/en/",
+      lang: "en",
+      title: "Estonia",
+      kind: "country",
+      text: "Estonia Riigikogu election 7 March 2027 National Electoral Service",
+    },
+    {
+      path: EE_ET,
+      lang: "et",
+      title: "Riigikogu valimised, 7. märts 2027",
+      kind: "election",
+      text: "Eesti Riigikogu valimised 7. märts 2027 eelhääletamine",
+    },
+    {
+      path: EE_EN,
+      lang: "en",
+      title: "Estonia Riigikogu election, 7 March 2027",
+      kind: "election",
+      text: "Estonia Riigikogu election 7 March 2027 advance voting",
+    },
+  ],
+  pages: [
+    {
+      path: "/ee/",
+      htmlLang: "et",
+      title: "Eesti",
+      description:
+        "Eesti Map the General lehel. Riigikogu valimised pühapäeval, 7. märtsil 2027. Mitteametlik teave.",
+      h1: "Eesti",
+      lede: "Eestikeelne leht on peamine. English on kõrval.",
+      alternates: [
+        { hreflang: "et", path: "/ee/" },
+        { hreflang: "en", path: "/ee/en/" },
+        { hreflang: "x-default", path: "/ee/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: "/ee/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Eesti", path: "/ee/" },
+      ],
+      bodyHtml: `<p><a href="/ee/et/">Eesti</a> · <a href="/ee/en/">English</a></p>
+<p><a href="${EE_ET}">Riigikogu valimised 7. märtsil 2027</a> on eestikeelsel lehel.</p>`,
+    },
+    {
+      path: "/ee/et/",
+      htmlLang: "et",
+      title: "Eesti — Riigikogu valimised 2027",
+      description:
+        "Eesti üleriigiline juhend. Riigikogu valimised pühapäeval, 7. märtsil 2027. Omavalitsuste lehti ei ole.",
+      h1: "Eesti",
+      lede: "Üleriigiline juhend eesti keeles. Omavalitsuste lehti ei ole. Hääli ei näidata enne kella 20.15 Ida-Euroopa aja järgi 7. märtsil 2027.",
+      alternates: eeAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: EE_ET, label: "Valimised" },
+        { href: "/ee/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Eesti", path: "/ee/" },
+        { name: "Eesti", path: "/ee/et/" },
+      ],
+      bodyHtml: `<h2>Selle väljaande valimised</h2>
+<p>Riigi valimisteenistus nimetab Riigikogu valimiste päevaks 7. märtsi 2027. Valimispäeval lõpeb hääletamine kell 20.00 ja valija võib lõpetada 15 minuti jooksul.</p>
+<p><a href="${EE_ET}">Riigikogu valimised, 7. märts 2027</a></p>
+<h2>Isikuandmed</h2>
+<p>Isikuandmete kaitse seadust ei loetud paragrahvide kaupa. See juhend ei avalda valijate nimekirja ega isikukoodi.</p>
+<h2>Allikad</h2>
+<ul>
+<li><a href="https://www.valimised.ee/et/riigikogu-valimised-2027">Riigi valimisteenistus, Riigikogu valimised 2027</a></li>
+<li><a href="https://www.riigiteataja.ee/et/akt/RKVS">Riigikogu valimise seadus</a></li>
+<li><a href="https://www.valimised.ee/">valimised.ee</a></li>
+</ul>`,
+    },
+    {
+      path: "/ee/en/",
+      htmlLang: "en",
+      title: "Estonia — Riigikogu election 2027",
+      description:
+        "National hub for Estonia. Riigikogu election on Sunday 7 March 2027. No municipality pages.",
+      h1: "Estonia",
+      lede: "National hub in English. No municipality pages. No count before 20:15 Eastern European Time on 7 March 2027.",
+      alternates: eeAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: EE_EN, label: "The election" },
+        { href: "/ee/et/", label: "Eesti" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Eesti", path: "/ee/" },
+        { name: "Estonia", path: "/ee/en/" },
+      ],
+      bodyHtml: `<h2>The election in this release</h2>
+<p>The National Electoral Service names 7 March 2027 as Riigikogu election day. Voting on election day ends at 20.00, and a voter may finish within 15 minutes.</p>
+<p><a href="${EE_EN}">Riigikogu election, 7 March 2027</a></p>
+<h2>Personal data</h2>
+<p>The Personal Data Protection Act was not section-read. This hub publishes no roll and no personal identity code.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.valimised.ee/et/riigikogu-valimised-2027">National Electoral Service, Riigikogu elections 2027</a></li>
+<li><a href="https://www.riigiteataja.ee/et/akt/RKVS">Riigikogu Election Act</a></li>
+<li><a href="https://www.valimised.ee/">valimised.ee</a></li>
+</ul>`,
+    },
+  ],
+};
+
+COUNTRY_HUBS.push(EE_COUNTRY_HUB);
+
 export function countryHubIndex(): HubIndexEntry[] {
   return COUNTRY_HUBS.flatMap((hub) => hub.index);
 }

@@ -48,6 +48,9 @@
 # El Salvador hub and election HTML is generated at build time
 /public/sv/
 
+# Estonia hub and election HTML is generated at build time
+/public/ee/
+
 # production
 /build
 
