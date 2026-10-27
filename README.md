@@ -1,6 +1,6 @@
 # Map the General
 
-Public, nonpartisan election guide for the countries covered so far: Australia, Bulgaria, Canada, Ireland, Italy, Mexico, New Zealand, Norway, Poland, Spain, Sweden, Switzerland, and the United Kingdom. Ireland, Norway and Sweden are national hubs only: no municipality pages and no live tracker. Bulgaria is a national hub for a possible presidential election on 1 November 2026, with no municipality pages and no count before 21:00 Bulgaria time that day. New Zealand is a national hub for the general election on 7 November 2026, with no municipality pages, no party names, and no count before 7:00 pm New Zealand daylight time that day.
+Public, nonpartisan election guide for the countries covered so far: Australia, Bulgaria, Canada, Ireland, Italy, Mexico, New Zealand, Norway, Poland, Spain, Sweden, Switzerland, and the United Kingdom. Ireland, Norway and Sweden are national hubs only: no municipality pages and no live tracker. Bulgaria is a national hub for a possible presidential election on 1 November 2026, with no municipality pages and no count before 21:00 Bulgaria time that day. New Zealand is a national hub for the general election on 7 November 2026, with no municipality pages, no party names, and no count before 7:00 pm New Zealand daylight time that day. Taiwan is a national hub for the local elections on 28 November 2026, with no municipality pages and no count before 23:59 Taiwan time that day, because the pages read did not print a closing clock time.
 
 **Publisher:** Map the General.
 

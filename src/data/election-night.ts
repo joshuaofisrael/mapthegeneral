@@ -76,6 +76,18 @@ export const NIGHT_ELECTIONS: NightDef[] = [
     pages: {},
   },
   {
+    id: "tw-2026-11-28",
+    timeZone: "Asia/Taipei",
+    title: "Taiwan · local elections · 28 November 2026",
+    detail: "No count before 23:59 Taiwan time. The pages read on 27 October 2026 did not print the clock time when voting ends.",
+    sourceHref: "https://web.cec.gov.tw/",
+    links: [
+      { href: "/tw/zh/elections/difang-2026/", label: "地方公職人員選舉", lang: "zh" },
+      { href: "/tw/en/elections/local-2026/", label: "Local elections", lang: "en" },
+    ],
+    pages: {},
+  },
+  {
     id: "ie-2026-seanad",
     timeZone: "Europe/Dublin",
     title: "Ireland · Seanad bye-election · 6 November 2026",

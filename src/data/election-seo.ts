@@ -8,6 +8,7 @@
 
 import { BG_ELECTION_SEO_PROFILES } from "./election-seo-bg";
 import { NZ_ELECTION_SEO_PROFILES } from "./election-seo-nz";
+import { TW_ELECTION_SEO_PROFILES } from "./election-seo-tw";
 import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
 
 export const ELECTION_SEO_WINDOW_DAYS = 60;
@@ -1380,6 +1381,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   ...EXTRA_ELECTION_SEO_PROFILES,
   ...BG_ELECTION_SEO_PROFILES,
   ...NZ_ELECTION_SEO_PROFILES,
+  ...TW_ELECTION_SEO_PROFILES,
 ];
 
 export function utcToday(now = new Date()): string {

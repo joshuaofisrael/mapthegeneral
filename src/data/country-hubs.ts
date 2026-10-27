@@ -221,6 +221,110 @@ export const NZ_COUNTRY_HUB: CountryHub = {
 
 COUNTRY_HUBS.push(NZ_COUNTRY_HUB);
 
+const TW_ZH = "/tw/zh/elections/difang-2026/";
+const TW_EN = "/tw/en/elections/local-2026/";
+
+COUNTRY_HUBS.push({
+  index: [
+    { path: "/tw/", lang: "zh", title: "臺灣", kind: "country", text: "臺灣 115年地方公職人員選舉 11月28日 中央選舉委員會" },
+    { path: "/tw/zh/", lang: "zh", title: "臺灣", kind: "country", text: "臺灣地方公職人員選舉 11月28日 中選會" },
+    { path: "/tw/en/", lang: "en", title: "Taiwan", kind: "country", text: "Taiwan local elections 28 November 2026 Central Election Commission" },
+    { path: TW_ZH, lang: "zh", title: "115年地方公職人員選舉，11月28日", kind: "election", text: "地方公職人員選舉 11月28日 中選會" },
+    { path: TW_EN, lang: "en", title: "Taiwan local elections, 28 November 2026", kind: "election", text: "Taiwan local elections 28 November 2026" },
+  ],
+  pages: [
+    {
+      path: "/tw/",
+      htmlLang: "zh",
+      title: "臺灣",
+      description: "臺灣在 Map the General。115年地方公職人員選舉，11月28日。非官方頁面。",
+      h1: "臺灣",
+      lede: "預設是繁體中文。英文是另一頁。",
+      alternates: [
+        { hreflang: "zh-Hant", path: "/tw/" },
+        { hreflang: "en", path: "/tw/en/" },
+        { hreflang: "x-default", path: "/tw/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: "/tw/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "首頁", path: "/" },
+        { name: "臺灣", path: "/tw/" },
+      ],
+      bodyHtml: `<p><a href="/tw/zh/">繁體中文</a> · <a href="/tw/en/">English</a></p>
+<p>選舉頁是<a href="${TW_ZH}">11月28日的地方公職人員選舉</a>。</p>`,
+    },
+    {
+      path: "/tw/zh/",
+      htmlLang: "zh",
+      title: "臺灣 — 地方選舉",
+      description: "臺灣全國頁。115年地方公職人員選舉，11月28日。沒有鄉鎮頁，也沒有民調。",
+      h1: "臺灣",
+      lede: "繁體中文的全國頁。沒有鄉鎮市區頁。11月28日臺灣時間23:59之前沒有得票。",
+      alternates: [
+        { hreflang: "zh-Hant", path: "/tw/zh/" },
+        { hreflang: "en", path: "/tw/en/" },
+        { hreflang: "x-default", path: "/tw/zh/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: TW_ZH, label: "這次選舉" },
+        { href: "/tw/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "首頁", path: "/" },
+        { name: "臺灣", path: "/tw/" },
+        { name: "臺灣", path: "/tw/zh/" },
+      ],
+      bodyHtml: `<h2>這次選舉</h2>
+<p>立法院公開的委員會報告寫明，115年地方公職人員選舉在11月28日投票。報告沒有投票截止的鐘點。這頁在23:59之前不顯示得票，而23:59不是公布的截止時間。</p>
+<p><a href="${TW_ZH}">地方公職人員選舉，11月28日</a></p>
+<h2>個人資料</h2>
+<p>個人資料保護法沒有逐條讀過。這裡不公布選舉人名冊。</p>
+<h2>來源</h2>
+<ul>
+<li><a href="https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026052199/0256000260722042002.pdf">立法院，中央選舉委員會業務報告</a></li>
+<li><a href="https://web.cec.gov.tw/">中央選舉委員會</a></li>
+</ul>`,
+    },
+    {
+      path: "/tw/en/",
+      htmlLang: "en",
+      title: "Taiwan",
+      description: "National hub for Taiwan. Local elections on Saturday 28 November 2026. No municipality pages and no surveys.",
+      h1: "Taiwan",
+      lede: "National hub in English. No municipality pages. No vote count before 23:59 Taiwan time on 28 November 2026.",
+      alternates: [
+        { hreflang: "zh-Hant", path: "/tw/zh/" },
+        { hreflang: "en", path: "/tw/en/" },
+        { hreflang: "x-default", path: "/tw/zh/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: TW_EN, label: "The election" },
+        { href: "/tw/zh/", label: "繁體中文" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Taiwan", path: "/tw/" },
+        { name: "Taiwan", path: "/tw/en/" },
+      ],
+      bodyHtml: `<h2>The election in this release</h2>
+<p>The Commission report published by the Legislative Yuan says the 2026 local elections are on 28 November. The report does not print a closing clock time. This hub shows no count before 23:59 Taiwan time, and 23:59 is not a published closing time.</p>
+<p><a href="${TW_EN}">Local elections, 28 November 2026</a></p>
+<h2>Personal data</h2>
+<p>The Personal Data Protection Act was not section-checked. This hub publishes no electoral roll.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026052199/0256000260722042002.pdf">Legislative Yuan, Central Election Commission business report</a></li>
+<li><a href="https://web.cec.gov.tw/">Central Election Commission</a></li>
+</ul>`,
+    },
+  ],
+});
+
 export function countryHubIndex(): HubIndexEntry[] {
   return COUNTRY_HUBS.flatMap((hub) => hub.index);
 }

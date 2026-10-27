@@ -98,6 +98,15 @@
       accept: "Приемам",
       reject: "Отказвам",
       choices: "Избор за бисквитки"
+    },
+    zh: {
+      aria: "Cookie 選擇",
+      body: "我們只用 Google Analytics Cookie 計算到訪次數，而且只有在您接受之後。Google 指令碼只在您按下接受後才載入。Cloudflare Web Analytics（不使用 Cookie）無論如何都會執行。",
+      privacy: "隱私權政策",
+      href: "/privacy/#google-analytics",
+      accept: "接受",
+      reject: "拒絕",
+      choices: "Cookie 選擇"
     }
   };
 

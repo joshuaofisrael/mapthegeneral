@@ -423,6 +423,45 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "tw-2026-11-28",
+    country: "tw",
+    localLang: "zh",
+    election: {
+      en: "Taiwan local elections, 28 November 2026",
+      local: "115年地方公職人員選舉，11月28日",
+    },
+    pollingDay: "2026-11-28",
+    trackerOpensAt: "2026-11-28T23:59:00+08:00",
+    officialResults: { label: "中央選舉委員會", url: "https://web.cec.gov.tw/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "立法院，中央選舉委員會業務報告，115年5月27日",
+          url: "https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026052199/0256000260722042002.pdf",
+        },
+        {
+          label: "公職人員選舉罷免法第53條",
+          url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-11-18T00:00:00+08:00",
+        end: "2026-11-28T23:59:00+08:00",
+        citation: {
+          label: "公職人員選舉罷免法第53條第3項",
+          url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010",
+        },
+        en: "Public Officials Election and Recall Act article 53 says that from ten days before voting day until voting ends, nobody may publish, report, distribute, comment on, or quote election survey material. The Central Election Commission has applied that rule to internet publication. This site prints no survey figures. The clock time when voting ends was not on the pages read on 27 October 2026, so no count is shown before 23:59 Taiwan time on 28 November 2026.",
+        local:
+          "公職人員選舉罷免法第53條規定，自投票日前十日起至投票時間截止前，不得發布、報導、散布、評論或引述選舉民調資料。中選會函釋說明，網路發布亦適用。本站不刊登這類數字。2026年10月27日讀到的頁面沒有投票截止的鐘點，因此11月28日臺灣時間23:59之前不顯示得票。",
+      },
+    ],
+  },
 ];
 
 /**

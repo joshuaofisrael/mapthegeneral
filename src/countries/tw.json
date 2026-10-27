@@ -1,0 +1,24 @@
+{
+  "code": "tw",
+  "name": "Taiwan",
+  "href": "/tw/",
+  "summary": "National hub. Local elections on Saturday 28 November 2026. The Commission report does not print the closing clock time, so this site shows no count before 23:59 Taiwan time that day. No municipality pages.",
+  "links": [
+    {
+      "href": "/tw/zh/",
+      "label": "繁體中文"
+    },
+    {
+      "href": "/tw/zh/elections/difang-2026/",
+      "label": "地方公職人員選舉"
+    },
+    {
+      "href": "/tw/en/",
+      "label": "English"
+    },
+    {
+      "href": "/tw/en/elections/local-2026/",
+      "label": "Local elections, 28 November 2026"
+    }
+  ]
+}

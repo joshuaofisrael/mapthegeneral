@@ -9,7 +9,7 @@
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "zh"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
@@ -154,6 +154,19 @@ const COPY: Record<HouseAdLang, AdCopy> = {
       rankfootprint: "Пробвайте безплатното сканиране",
     },
   },
+  zh: {
+    sponsored: (name) => `由 ${name} 贊助`,
+    pitch: {
+      namedscan:
+        "查查看顧客提問時，ChatGPT 會不會提到您的本地商家. NamedScan 會用即時網路搜尋提出這些問題，並顯示它推薦誰，以及先改什麼.",
+      rankfootprint:
+        "查看您的商家周圍每一個格點上的 Google 地圖排名，先從免費的 3×3 掃描開始. RankFootprint 與 Google 沒有關係，也不保證排名.",
+    },
+    cta: {
+      namedscan: "試用 NamedScan",
+      rankfootprint: "試用免費掃描",
+    },
+  },
 };
 
 /** Phrases that must survive in each language, taken from the published offers. */
@@ -197,6 +210,10 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   bg: {
     namedscan: ["ChatGPT", "търсене в интернет на живо"],
     rankfootprint: ["3×3", "не е свързан с Google", "не гарантира"],
+  },
+  zh: {
+    namedscan: ["ChatGPT", "即時網路搜尋"],
+    rankfootprint: ["3×3", "與 Google 沒有關係", "也不保證"],
   },
 };
 
@@ -446,5 +463,6 @@ export function selfCheckHouseAds(): string[] {
   if (languageFromRoute("/bg/bg/") !== "bg" || languageFromRoute("/bg/bg/elections/prezident-2026/") !== "bg") {
     problems.push("path language");
   }
+  if (languageFromRoute("/tw/zh/elections/difang-2026/") !== "zh") problems.push("path language");
   return problems;
 }
