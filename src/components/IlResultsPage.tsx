@@ -14,6 +14,7 @@ import {
   IL_LIVE_DATA_URL,
   IL_META,
   IL_PATHS,
+  IL_SEAT_LABEL,
   IL_SOURCES,
   IL_TIMELINE,
   IL_TRACKER_OPENS_AT,
@@ -45,7 +46,7 @@ export function ilResultsMetadata(lang: IlLang): Metadata {
     url: `${SITE.url}${IL_OG.path}`,
     width: IL_OG.width,
     height: IL_OG.height,
-    alt: lang === "he" ? "תרשים 120 המושבים בכנסת – תוצאות הבחירות 2026" : "Chart of the 120 Knesset seats – Israel election results 2026",
+    alt: IL_SEAT_LABEL[lang],
   };
   return {
     title: { absolute: `${c.title} | ${SITE.name}` },
@@ -94,7 +95,7 @@ const L = {
     sources: "מקורות",
     feed: "קובץ הנתונים (JSON)",
     related: "עוד באתר",
-    method: "שיטה: הנתונים נמשכים מקובץ התוצאות של ועדת הבחירות המרכזית כל כמה דקות. המנדטים מחושבים באתר. אין כאן סקרים, מדגמים או תחזיות.",
+    method: `שיטה: הנתונים נמשכים מקובץ התוצאות של ועדת הבחירות המרכזית כל כמה דקות. ${IL_SEAT_LABEL.he} אין כאן סקרים, מדגמים או תחזיות.`,
     other: "English version",
     seats: "מנדטים",
     votes: "קולות",
@@ -113,7 +114,7 @@ const L = {
     sources: "Sources",
     feed: "Data file (JSON)",
     related: "More on Map the General",
-    method: "Method: the data is read from the Central Elections Committee results file every few minutes. Seats are calculated by this site. No polls or forecasts.",
+    method: `Method: the data is read from the Central Elections Committee results file every few minutes. ${IL_SEAT_LABEL.en} No polls or forecasts.`,
     other: "גרסה בעברית",
     seats: "Seats",
     votes: "Votes",
@@ -230,6 +231,7 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
 
       <section aria-labelledby="live" className="mb-10">
         <h2 id="live" className="mb-3 text-2xl font-bold text-ink">{l.live}</h2>
+        <p className="mb-3 text-sm font-semibold text-ink" data-il-seat-label>{IL_SEAT_LABEL[lang]}</p>
         <IlLiveResults lang={lang} initial={doc} />
         <p className="mt-3 text-xs text-ink-soft">
           {l.method}{" "}

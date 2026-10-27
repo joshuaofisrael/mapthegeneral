@@ -50,13 +50,14 @@ function seatLayout(rows = 8, total = 120) {
 }
 const SEATS = seatLayout();
 
-export function Hemicycle({ lang, rows, colors }: { lang: IlLang; rows: IlRow[]; colors: Record<string, string> }) {
+export function Hemicycle({ lang, rows, colors, seatLabel }: { lang: IlLang; rows: IlRow[]; colors: Record<string, string>; seatLabel?: string }) {
   const seq: string[] = [];
   for (const p of rows) for (let i = 0; i < p.seats; i++) seq.push(p.letter);
   const t = { hemicycle: lang === "he" ? "חלוקת 120 המושבים בכנסת לפי הספירה עד כה" : "How the 120 Knesset seats divide on the count so far", majority: lang === "he" ? "61 לרוב" : "61 for a majority" };
+  const label = seatLabel ? `${t.hemicycle}. ${seatLabel}` : t.hemicycle;
   return (
     <figure className="m-0">
-      <svg viewBox="0 0 400 215" role="img" aria-label={t.hemicycle} className="h-auto w-full">
+      <svg viewBox="0 0 400 215" role="img" aria-label={label} className="h-auto w-full">
         {SEATS.map((s, i) => {
           // In Hebrew the chart reads right to left, like the page.
           const letter = seq[lang === "he" ? i : i] ?? null;
@@ -68,7 +69,10 @@ export function Hemicycle({ lang, rows, colors }: { lang: IlLang; rows: IlRow[];
           {seq.length ? `${seq.length}/120` : "120"}
         </text>
       </svg>
-      <figcaption className="mt-1 text-center text-xs text-ink-soft">{t.hemicycle} · {t.majority}</figcaption>
+      <figcaption className="mt-1 text-center text-xs text-ink-soft">
+        {t.hemicycle} · {t.majority}
+        {seatLabel ? <span className="mt-1 block font-semibold text-ink" data-il-seat-label>{seatLabel}</span> : null}
+      </figcaption>
     </figure>
   );
 }

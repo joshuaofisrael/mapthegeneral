@@ -101,6 +101,21 @@ async function readOfficial(feed, now) {
   return acceptOfficial(feed.id, await res.json());
 }
 
+const CONFIRM = new Set(["bg-2026-11-01"]);
+
+function publicationBlocked(id) {
+  let all;
+  try {
+    all = JSON.parse(readFileSync(new URL("../../data/release-status.json", import.meta.url), "utf8"));
+  } catch {
+    return "release-status missing";
+  }
+  const row = all[id] ?? {};
+  if (row.pollingExtended === true) return "polling extended";
+  if (CONFIRM.has(id) && row.votingEnded !== true) return "no end-of-voting confirmation";
+  return null;
+}
+
 export async function writeFeed(id, outRoot, now = new Date()) {
   const feed = feedById(id);
   const opens = OPENS[id];
@@ -110,9 +125,10 @@ export async function writeFeed(id, outRoot, now = new Date()) {
   const outFile = path.join(outDir, "results.json");
   const prev = existsSync(outFile) ? JSON.parse(readFileSync(outFile, "utf8")) : null;
   let doc;
-  if (now < new Date(opens)) {
+  const blocked = publicationBlocked(id);
+  if (now < new Date(opens) || blocked) {
     doc = emptyDoc(id, "pre", null);
-    console.log(`${id}: polls still open, no fetch`);
+    console.log(blocked ? `${id}: closed (${blocked}), no fetch` : `${id}: polls still open, no fetch`);
   } else {
     try {
       doc = await readOfficial(feed, now);
@@ -121,13 +137,8 @@ export async function writeFeed(id, outRoot, now = new Date()) {
       doc = null;
     }
     if (!doc) {
-      if (prev && Array.isArray(prev.results) && prev.results.length > 0) {
-        setOutput("changed", "false");
-        setOutput("stage", prev.stage ?? "awaiting");
-        console.log(`${id}: keeping the last count`);
-        return false;
-      }
       doc = emptyDoc(id, "awaiting", now.toISOString());
+      console.log(`${id}: feed failed; no count published`);
       if (prev && fingerprint(prev) === fingerprint(doc)) {
         setOutput("changed", "false");
         setOutput("stage", "awaiting");

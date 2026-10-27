@@ -5,6 +5,7 @@
  * Feeds are /il-live/<id>/results.json, the same prefix as the Israel worker.
  */
 import { ELECTION_WINDOWS, trackerOpen } from "./election-law";
+import { nzFreezeActive, NZ_WINDOW_ID } from "./nz-freeze";
 
 export const NIGHT_WINDOW_MS = 18 * 60 * 60 * 1000;
 export const NIGHT_POLL_MS = 60_000;
@@ -687,20 +688,25 @@ export function snapshotPath(id: string): string {
   return `/live/${id}.json`;
 }
 
+function promoted(id: string, now: number): boolean {
+  return !(id === NZ_WINDOW_ID && nzFreezeActive(now));
+}
+
 /** Latest contest still inside its night window, otherwise the next one to open. */
 export function activeNight(now: number): NightDef | null {
   const sorted = [...NIGHT_ELECTIONS].sort((a, b) => Date.parse(nightOpensAt(a.id)) - Date.parse(nightOpensAt(b.id)));
   const inNight = sorted.filter((item) => {
+    if (!promoted(item.id, now)) return false;
     const open = Date.parse(nightOpensAt(item.id));
     return now >= open && now < open + NIGHT_WINDOW_MS;
   });
   if (inNight.length) return inNight[inNight.length - 1];
-  return sorted.find((item) => Date.parse(nightOpensAt(item.id)) > now) ?? null;
+  return sorted.find((item) => promoted(item.id, now) && Date.parse(nightOpensAt(item.id)) > now) ?? null;
 }
 
 export function otherNights(now: number, currentId: string): NightDef[] {
   return NIGHT_ELECTIONS.filter((item) => {
-    if (item.id === currentId) return false;
+    if (item.id === currentId || !promoted(item.id, now)) return false;
     const open = Date.parse(nightOpensAt(item.id));
     return now >= open && now < open + NIGHT_WINDOW_MS;
   });

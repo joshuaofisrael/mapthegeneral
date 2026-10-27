@@ -97,8 +97,9 @@ export default function AustraliaSourcesPage() {
           listings. It says a broadcaster cannot air election ads from the end of the Wednesday before polling day until
           the close of the poll, and that online services are not in that blackout. These pages publish no election
           advertisement, poll, projection, or result call.
-          The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A is the citation already used for the Victorian
-          state-election window. On 19 October 2026 that window has not opened. Tasmania’s 2026 local government
+          The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A is a broadcaster advertising blackout. It is
+          not the source of this site’s hold on Victorian results. That hold is this site’s own conservative editorial
+          policy: no count until polls close. On 19 October 2026 that hold had not opened. Tasmania’s 2026 local government
           elections are open, with close of poll printed as 2 pm on Tuesday 27 October. No count, return rate, or
           candidate list for that election is published.
         </p>
@@ -191,13 +192,14 @@ export default function AustraliaSourcesPage() {
           published for personal use only, so no section of the Local Government Act 2020 (Vic) was copied.
         </p>
         <p>
-          No opinion poll, exit poll, projection, or result call is published. The Victorian state-election window in
-          the blackout table is unchanged. Tasmania’s 2026 local government elections close at 2 pm on Tuesday 27
+          No opinion poll, exit poll, or result call is published. The Victorian and New South Wales results holds are
+          this site’s own conservative editorial policy, not the Broadcasting Services Act blackout. Tasmania’s 2026 local government elections close at 2 pm on Tuesday 27
           October 2026. On 26 October 2026 that time has not arrived. No count, return rate, or candidate list for that
           election is published. The Western Australian extraordinary elections of Thursday 3 December 2026 are not
-          given a candidate list or a count. The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A, the
+          given a candidate list or a count. The Broadcasting Services Act 1992 (Cth) Schedule 2 clause 3A was checked
+          and applies to broadcasters only. The
           Commonwealth Electoral Act 1918, the Electoral Act 2002 (Vic), the Privacy Act 1988 (Cth), and the state Acts
-          cited above were the election and privacy laws checked for this release. Only officeholder names already
+          cited above were the other election and privacy laws checked for this release. Only officeholder names already
           printed by a source under a licence that allows reuse are shown, and only in their public role. No personal
           address is published.
         </p>

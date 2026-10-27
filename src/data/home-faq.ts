@@ -59,7 +59,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands and Finland are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil and Serbia, with no municipality pages and no live tracker. Israel is a national hub with no municipality pages. Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands and Finland are national hubs with no municipality pages. Each election-night section stays closed until its opening time, any required confirmation, and a usable official feed. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {
@@ -71,7 +71,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   {
     question: "Where do dates and results come from?",
     answer:
-      "Each page names the official body its dates and results were read from. This site does not keep its own count. The bodies already used include the Australian Electoral Commission, Elections Canada, the Electoral Commission for Ireland, the Dipartimento per gli Affari Interni e Territoriali, the Instituto Nacional Electoral, Valgdirektoratet, the Państwowa Komisja Wyborcza, the Junta Electoral Central, Infoelectoral (Ministerio del Interior), Valmyndigheten, the Bundeskanzlei, the Electoral Commission for the United Kingdom, and the Central Election Commission of Taiwan. If this site and an official source differ, the official source controls.",
+      "Each page names the official body its dates and results were read from. This site does not invent a count. Seats on the Israel results pages are calculated from partial official vote totals and are labelled as not final and not an official seat allocation. The bodies already used include the Australian Electoral Commission, Elections Canada, the Electoral Commission for Ireland, the Dipartimento per gli Affari Interni e Territoriali, the Instituto Nacional Electoral, Valgdirektoratet, the Państwowa Komisja Wyborcza, the Junta Electoral Central, Infoelectoral (Ministerio del Interior), Valmyndigheten, the Bundeskanzlei, the Electoral Commission for the United Kingdom, and the Central Election Commission of Taiwan. If this site and an official source differ, the official source controls.",
     links: [
       { label: "Australian Electoral Commission", href: "https://www.aec.gov.au/learn/election-timetable.htm" },
       { label: "Elections Canada", href: "https://www.elections.ca/" },
@@ -112,7 +112,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   {
     question: "Does the site make predictions or endorsements?",
     answer:
-      "No. Map the General makes no predictions and no endorsements. It does not tell you how to vote. Nothing on this site is an endorsement of a candidate, party, coalition, or list. It prints no opinion polls, exit polls, or projections, and it does not call a race or invent vote totals.",
+      "No. Map the General makes no predictions and no endorsements. It does not tell you how to vote. Nothing on this site is an endorsement of a candidate, party, coalition, or list. It prints no opinion polls or exit polls, and it does not call a race or invent vote totals. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation.",
     links: [],
   },
 ];

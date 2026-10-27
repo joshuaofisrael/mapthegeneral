@@ -1,4 +1,6 @@
 import { feedPath, nightById, nightOpensAt, rawFeedUrl, snapshotPath, type NightCopy } from "../data/election-night";
+import { RELEASE_POLICIES } from "../data/election-policy";
+import { pollingExtended, votingEndedConfirmed } from "../data/release-status";
 
 function esc(value: string): string {
   return value
@@ -15,6 +17,9 @@ function attrs(id: string, lang: string, copy: NightCopy): string {
     ["data-night-id", id],
     ["data-opens", nightOpensAt(id)],
     ["data-tz", night.timeZone],
+    ["data-requires-confirmation", RELEASE_POLICIES[id]?.requiresEndOfVotingConfirmation ? "true" : "false"],
+    ["data-voting-ended", votingEndedConfirmed(id) ? "true" : "false"],
+    ["data-polling-extended", pollingExtended(id) ? "true" : "false"],
     ["data-feed", feedPath(id)],
     ["data-raw", rawFeedUrl(id)],
     ["data-snapshot", snapshotPath(id)],

@@ -10,8 +10,12 @@
  * tracker returns.
  *
  * Times carry their own UTC offset. Citations are official legal texts.
+ * Statutory rules, the official release time, and this site's editorial hold
+ * are separate. The hold and the release live in src/data/election-policy.ts.
  * Matrix with the full audit: docs/election-law.md.
  */
+import { RELEASE_POLICIES } from "./election-policy";
+import { pollingExtended, votingEndedConfirmed } from "./release-status";
 
 export type GateKind = "poll-ban" | "silence" | "results-embargo";
 
@@ -68,8 +72,8 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
         start: "2026-10-23T23:59:00+03:00",
         end: "2026-10-27T22:00:00+02:00",
         citation: { label: "Elections (Modes of Propaganda) Law 5719-1959, s. 16E(h)", url: "https://www.nevo.co.il/law_html/law00/90696.htm" },
-        en: "Israeli law bars publishing new election poll results from the end of the Friday before polling day until polls close (Elections (Modes of Propaganda) Law, s. 16E(h)). This site publishes no polls or exit polls at any time and shows only Central Elections Committee counts after polls close at 22:00 Israel time on 27 October 2026.",
-        local: "החוק אוסר לפרסם תוצאות סקרי בחירות חדשים מתום יום שישי שלפני הבחירות ועד סגירת הקלפיות (חוק הבחירות (דרכי תעמולה), סעיף 16ה(ח)). אתר זה אינו מפרסם סקרים או מדגמים בשום שלב, ויציג רק נתוני ועדת הבחירות המרכזית לאחר סגירת הקלפיות ב-22:00, 27 באוקטובר 2026.",
+        en: "Israeli law bars publishing new election poll results from the end of the Friday before polling day until polls close (Elections (Modes of Propaganda) Law, s. 16E(h)). This site publishes no polls or exit polls at any time. After polls close at 22:00 Israel time on 27 October 2026 it may show Central Elections Committee vote totals. A seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation.",
+        local: "החוק אוסר לפרסם תוצאות סקרי בחירות חדשים מתום יום שישי שלפני הבחירות ועד סגירת הקלפיות (חוק הבחירות (דרכי תעמולה), סעיף 16ה(ח)). אתר זה אינו מפרסם סקרים או מדגמים בשום שלב. לאחר סגירת הקלפיות ב-22:00, 27 באוקטובר 2026, הוא רשאי להציג את ספירת הקולות של ועדת הבחירות המרכזית. חלוקת מנדטים שהאתר מחשב מתוך ספירה חלקית היא בלתי רשמית, אינה סופית ואינה חלוקת מנדטים רשמית.",
       },
     ],
   },
@@ -203,18 +207,7 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     pollingDay: "2026-11-28",
     trackerOpensAt: "2026-11-28T18:00:00+11:00",
     officialResults: { label: "Victorian Electoral Commission results", url: "https://www.vec.vic.gov.au/results" },
-    rules: [
-      {
-        kind: "results-embargo",
-        start: "2026-11-25T00:00:00+11:00",
-        end: "2026-11-28T18:00:00+11:00",
-        citation: {
-          label: "Broadcasting Services Act 1992, Schedule 2, clause 3A (electoral advertising blackout for broadcasters)",
-          url: "https://www.legislation.gov.au/C2004A04401/latest/text",
-        },
-        en: "Broadcasters may not carry electoral advertisements from midnight on the Wednesday before polling day until polls close (Broadcasting Services Act 1992, Schedule 2, clause 3A). This site carries no electoral advertising at any time and shows no counts until polls close at 18:00 on 28 November 2026.",
-      },
-    ],
+    rules: [],
   },
   {
     id: "au-nsw-2027",
@@ -239,18 +232,7 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
         },
       ],
     },
-    rules: [
-      {
-        kind: "results-embargo",
-        start: "2027-03-10T00:00:00+11:00",
-        end: "2027-03-13T18:00:00+11:00",
-        citation: {
-          label: "Broadcasting Services Act 1992, Schedule 2, clause 3A (electoral advertising blackout for broadcasters)",
-          url: "https://www.legislation.gov.au/C2004A04401/latest/text",
-        },
-        en: "Broadcasters may not carry electoral advertisements from midnight on the Wednesday before polling day until polls close (Broadcasting Services Act 1992, Schedule 2, clause 3A). This site carries no electoral advertising at any time and shows no counts until polls close at 18:00 on 13 March 2027.",
-      },
-    ],
+    rules: [],
   },
   {
     id: "es-2026-generales",
@@ -339,15 +321,15 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     rules: [
       {
         kind: "poll-ban",
-        start: "2027-06-03T00:00:00-06:00",
+        start: "2027-06-03T00:00:00-07:00",
         end: "2027-06-06T18:00:00-07:00",
         citation: {
           label: "Ley General de Instituciones y Procedimientos Electorales, artículo 251, párrafo 6",
           url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGIPE.pdf",
         },
-        en: "LGIPE article 251(6) forbids publishing poll results from three days before the election until the official close of polls in the westernmost time zone. This site prints no polls for this election in that window.",
+        en: "LGIPE article 251(6) forbids publishing poll results from three days before the election until the official close of polls in the westernmost time zone. This site’s poll, quick-count, and exit-poll gate uses America/Tijuana (Baja California), not Mexico City time, and prints no such figures until 18:00 there on 6 June 2027.",
         local:
-          "El artículo 251, párrafo 6, de la LGIPE prohíbe publicar resultados de encuestas desde tres días antes de la elección y hasta el cierre oficial de las casillas en el huso horario más occidental. Este sitio no publica encuestas de esta elección en ese periodo.",
+          "El artículo 251, párrafo 6, de la LGIPE prohíbe publicar resultados de encuestas desde tres días antes de la elección y hasta el cierre oficial de las casillas en el huso horario más occidental. El cierre de encuestas, conteo rápido y encuestas de salida en este sitio usa America/Tijuana (Baja California), no la hora de la Ciudad de México, y no publica esas cifras antes de las 18:00 de allí el 6 de junio de 2027.",
       },
     ],
   },
@@ -665,10 +647,25 @@ export function activeRules(country: string, now: number): { window: ElectionWin
   return out;
 }
 
-/** True once a live tracker for `id` may show vote counts. Unknown ids stay closed. */
+/**
+ * True once a live tracker for `id` may show vote counts.
+ * Unknown ids, a missing end-of-voting confirmation, and an announced
+ * polling extension stay closed. The clock is not enough on its own when
+ * the policy requires confirmation. A failed feed is refused by the fetcher
+ * and the page, not treated as permission to publish.
+ */
 export function trackerOpen(id: string, now: number): boolean {
   const window = ELECTION_WINDOWS.find((item) => item.id === id);
-  if (!window) return false;
+  const policy = RELEASE_POLICIES[id];
+  if (!window || !policy) return false;
+  if (pollingExtended(id)) return false;
+  if (policy.requiresEndOfVotingConfirmation && !votingEndedConfirmed(id)) return false;
   const latestRuleEnd = Math.max(...window.rules.map((rule) => Date.parse(rule.end)), 0);
-  return now >= Math.max(Date.parse(window.trackerOpensAt), latestRuleEnd);
+  const gate = Math.max(
+    Date.parse(window.trackerOpensAt),
+    Date.parse(policy.officialRelease.at),
+    Date.parse(policy.editorial.holdUntil),
+    latestRuleEnd,
+  );
+  return now >= gate;
 }

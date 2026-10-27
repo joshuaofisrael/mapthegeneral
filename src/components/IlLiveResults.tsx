@@ -10,9 +10,10 @@ import {
   IL_LIVE_POLL_MS,
   IL_LIVE_RAW_URL,
   IL_PATHS,
-  IL_SNAPSHOT_URL,
+  IL_SEAT_LABEL,
   IL_TRACKER_OPENS_AT,
   IL_WINDOW_ID,
+  ilEstimatesAllowed,
   ilLivePollUrl,
   type IlLang,
 } from "@/data/il-results";
@@ -25,8 +26,8 @@ const T = {
     units: ["ימים", "שעות", "דקות", "שניות"],
     awaiting: "הקלפיות נסגרו. ממתינים לנתוני הספירה הראשונים של ועדת הבחירות המרכזית. העמוד מתעדכן אוטומטית.",
     preliminary: "ספירה רשמית ראשונית",
-    final: "תוצאות סופיות",
-    preliminaryNote: "המנדטים מחושבים באתר מתוך הקולות שנספרו עד כה (שיטת בדר-עופר והסכמי עודפים) וישתנו עם התקדמות הספירה. אינם תחזית.",
+    final: "ספירת קולות סופית של הוועדה",
+    preliminaryNote: IL_SEAT_LABEL.he,
     seats: "מנדטים",
     votes: "קולות",
     pct: "אחוז",
@@ -55,6 +56,7 @@ const T = {
     embed: "הטמעת התוצאות באתר שלכם",
     embedNote: "העתיקו את הקוד הזה כדי להציג את לוח התוצאות החי באתר או בבלוג:",
     hemicycle: "חלוקת 120 המושבים בכנסת לפי הספירה עד כה",
+    seatLabel: IL_SEAT_LABEL.he,
   },
   en: {
     countdown: "Polls close in",
@@ -62,8 +64,8 @@ const T = {
     units: ["days", "hours", "min", "sec"],
     awaiting: "Polls have closed. Waiting for the first Central Elections Committee count. This page updates automatically.",
     preliminary: "Preliminary official count",
-    final: "Final results",
-    preliminaryNote: "Seats are calculated by this site from the votes counted so far (Bader-Ofer method with surplus agreements) and will change as counting goes on. They are not a forecast.",
+    final: "Final Committee count",
+    preliminaryNote: IL_SEAT_LABEL.en,
     seats: "Seats",
     votes: "Votes",
     pct: "Share",
@@ -92,6 +94,7 @@ const T = {
     embed: "Embed these results",
     embedNote: "Copy this code to show the live results board on your site or blog:",
     hemicycle: "How the 120 Knesset seats divide on the count so far",
+    seatLabel: IL_SEAT_LABEL.en,
   },
 } as const;
 
@@ -138,15 +141,9 @@ export function ilUpdatedStamp(
   return { text, kind };
 }
 
-export function ilStaleNotice(lang: IlLang, hasResults: boolean): string {
-  if (lang === "he") {
-    return hasResults
-      ? "העדכון האחרון לא נטען. מוצגות התוצאות האחרונות שהתקבלו."
-      : "העדכון האחרון לא נטען.";
-  }
-  return hasResults
-    ? "The latest update could not be loaded. Showing the last results received."
-    : "The latest update could not be loaded.";
+export function ilStaleNotice(lang: IlLang, _hasResults?: boolean): string {
+  if (lang === "he") return "העדכון האחרון לא נטען. לא מוצגת חלוקת מנדטים.";
+  return "The latest update could not be loaded. No seat allocation is shown.";
 }
 
 export function IlUpdatedStamp({ lang, doc, receivedAt }: { lang: IlLang; doc: IlDoc | null; receivedAt?: number | null }) {
@@ -160,8 +157,8 @@ export function IlUpdatedStamp({ lang, doc, receivedAt }: { lang: IlLang; doc: I
 }
 
 function preferDoc(prev: IlDoc | null, next: IlDoc): IlDoc {
+  if (next.results.length === 0) return next;
   if (!prev || prev.results.length === 0) return next;
-  if (next.results.length === 0) return prev;
   const a = prev.fetchedAt ? Date.parse(prev.fetchedAt) : 0;
   const b = next.fetchedAt ? Date.parse(next.fetchedAt) : 0;
   return b >= a ? next : prev;
@@ -169,21 +166,23 @@ function preferDoc(prev: IlDoc | null, next: IlDoc): IlDoc {
 
 /**
  * Poll the same-origin /il-live feed every 60s. The minute query param is
- * cacheable at the edge. On 404/5xx or a network error, try the raw URL once
- * for that attempt. Keep the last good document and flag it stale if both fail.
+ * cacheable at the edge. On 404/5xx, a network error, an empty file, or a
+ * stale file, clear the document so no seat estimate stays on screen.
  */
 export function useIlResults(initial: IlDoc | null) {
-  const [doc, setDoc] = useState<IlDoc | null>(initial);
+  const seeded = ilEstimatesAllowed(initial, Date.now(), false) ? initial : initial && initial.results.length === 0 ? initial : null;
+  const [doc, setDoc] = useState<IlDoc | null>(seeded);
   const [now, setNow] = useState<number | null>(null);
   const [stale, setStale] = useState(false);
   const [receivedAt, setReceivedAt] = useState<number | null>(null);
   useEffect(() => {
     let stop = false;
-    const accept = (next: unknown): boolean => {
+    const accept = (next: unknown, nowMs: number): boolean => {
       if (stop || !next || typeof next !== "object" || !Array.isArray((next as IlDoc).results)) return false;
       const incoming = next as IlDoc;
+      if (incoming.results.length > 0 && !ilEstimatesAllowed(incoming, nowMs, false)) return false;
       setDoc((prev) => preferDoc(prev, incoming));
-      setReceivedAt(Date.now());
+      setReceivedAt(nowMs);
       return true;
     };
     const pull = async (url: string, nowMs: number): Promise<unknown> => {
@@ -197,13 +196,13 @@ export function useIlResults(initial: IlDoc | null) {
       const nowMs = Date.now();
       let fresh = false;
       try {
-        fresh = accept(await pull(IL_LIVE_DATA_URL, nowMs));
+        fresh = accept(await pull(IL_LIVE_DATA_URL, nowMs), nowMs);
       } catch {
         fresh = false;
       }
       if (!fresh) {
         try {
-          fresh = accept(await pull(IL_LIVE_RAW_URL, nowMs));
+          fresh = accept(await pull(IL_LIVE_RAW_URL, nowMs), nowMs);
         } catch {
           fresh = false;
         }
@@ -212,13 +211,10 @@ export function useIlResults(initial: IlDoc | null) {
         if (!stop) setStale(false);
         return;
       }
-      try {
-        const res = await fetch(IL_SNAPSHOT_URL);
-        if (res.ok) accept(await res.json());
-      } catch {
-        /* keep the last good data */
+      if (!stop) {
+        setDoc(null);
+        setStale(true);
       }
-      if (!stop) setStale(true);
     };
     setNow(Date.now());
     load();
@@ -297,7 +293,8 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
   const { doc, now, stale, receivedAt } = useIlResults(initial);
   const [picked, setPicked] = useState<string[]>([]);
   const open = now !== null && now >= Date.parse(IL_TRACKER_OPENS_AT);
-  const rows = useMemo(() => (open && doc ? doc.results : []), [open, doc]);
+  const estimates = open && ilEstimatesAllowed(doc, now, stale);
+  const rows = useMemo(() => (estimates && doc ? doc.results : []), [estimates, doc]);
   const colors = useMemo(() => colorMap(rows), [rows]);
   const above = rows.filter((p) => p.aboveThreshold);
   const below = rows.filter((p) => !p.aboveThreshold && p.votes > 0);
@@ -323,8 +320,7 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
     return <div className="min-h-[22rem] rounded-xl border border-line bg-paper-card" aria-busy="true" />;
   }
 
-  const shareText =
-    lang === "he" ? "תוצאות הבחירות 2026 בזמן אמת – נתוני ועדת הבחירות המרכזית" : "Israel election results 2026, live from the Central Elections Committee";
+  const shareText = `${lang === "he" ? "תוצאות הבחירות 2026" : "Israel election results 2026"}. ${IL_SEAT_LABEL[lang]}`;
   const embedCode = `<iframe src="https://mapthegeneral.com/il/embed/?lang=${lang}" title="${lang === "he" ? "תוצאות הבחירות 2026" : "Israel election results 2026"}" width="100%" height="520" style="border:0;max-width:640px" loading="lazy"></iframe>`;
 
   if (!open) {
@@ -375,11 +371,11 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
           </a>
         </div>
       </div>
-      {!final && <p className="text-sm text-ink-muted">{t.preliminaryNote}</p>}
+      <p className="text-sm font-semibold text-ink" data-il-seat-label>{t.seatLabel}</p>
 
       <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
         <div className="rounded-xl border border-line bg-paper-card p-4 shadow-sm">
-          <Hemicycle lang={lang} rows={above} colors={colors} />
+          <Hemicycle lang={lang} rows={above} colors={colors} seatLabel={t.seatLabel} />
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
             {above.map((p) => (
               <li key={p.letter} className="flex items-center gap-1.5">
@@ -410,6 +406,9 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
         <h3 className="mb-2 text-lg font-bold text-ink">{t.above}</h3>
         <div className="overflow-x-auto rounded-xl border border-line bg-paper-card">
           <table className="w-full text-sm">
+            <caption className="p-3 text-start text-sm font-semibold text-ink" data-il-seat-label>
+              {t.seatLabel}
+            </caption>
             <thead className="bg-paper-tint text-ink-muted">
               <tr>
                 <th className="p-2 text-start">{t.party}</th>

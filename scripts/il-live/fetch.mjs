@@ -54,9 +54,20 @@ const base = {
   ballotBoxesTotal: BALLOT_BOXES,
 };
 
-if (now < new Date(TRACKER_OPENS_AT)) {
+function publicationBlocked() {
+  try {
+    const all = JSON.parse(readFileSync(new URL("../../data/release-status.json", import.meta.url), "utf8"));
+    if (all["il-2026-knesset"]?.pollingExtended === true) return "polling extended";
+    return null;
+  } catch {
+    return "release-status missing";
+  }
+}
+
+const blocked = publicationBlocked();
+if (now < new Date(TRACKER_OPENS_AT) || blocked) {
   write({ ...base, stage: "pre", fetchedAt: null, results: [] });
-  console.log("polls still open: no fetch, no counts");
+  console.log(blocked ? `closed: ${blocked}; no fetch, no counts` : "polls still open: no fetch, no counts");
   process.exit(0);
 }
 
@@ -97,7 +108,6 @@ for (const url of urls) {
     console.warn(`skip ${lastErr}`);
   }
 }
-// Keep the last good file; never invent counts.
-if (!prev) write({ ...base, stage: "awaiting", fetchedAt: now.toISOString(), results: [] });
-else setOutput("changed", "false");
-console.warn(`no CEC CSV available (${lastErr})`);
+// A failed feed publishes no counts. Do not keep a previous estimate.
+write({ ...base, stage: "awaiting", fetchedAt: now.toISOString(), results: [] });
+console.warn(`no CEC CSV available (${lastErr}); no counts published`);
