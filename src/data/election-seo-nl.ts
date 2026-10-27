@@ -32,7 +32,7 @@ const NL_BODY = `<h2>Wat wordt gekozen</h2>
 <h2>Hoe stemmen</h2>
 <p><a href="${ACT}">Artikel J 1 van de Kieswet</a>, tweede lid, zegt dat de stemming begint om 07:30 en duurt tot 21:00. Artikel J 1a laat een gemeente een stembureau eerder of later dan 07:30 openen en eerder dan 21:00 sluiten. De stemopneming op die bureaus is niet voor 21:00. Deze pagina toont geen stemmen voor 21:00 Midden-Europese tijd. De gelezen tekst noemt geen tijdzone. Deze pagina gebruikt +01:00, omdat de zomertijd van 2027 ingaat op de laatste zondag van maart, na deze dag.</p>
 <h2>Kandidaten</h2>
-<p>De kalender noemt maandag 1 februari 2027 als dag van kandidaatstelling. Op 27 oktober 2026 is geen lijst geopend. Hier staan geen namen. De Kiesraad-pagina drukt een zeteloverzicht van 2023 af. Dat overzicht is niet de verdeling voor 2027 en is hier niet overgenomen.</p>
+<p>De kalender noemt maandag 1 februari 2027 als dag van kandidaatstelling. De nummering staat op de openbare zitting van vrijdag 5 februari 2027 om 17:00. De onherroepelijke lijsten worden daarna gepubliceerd in de Staatscourant, het provinciaal blad of het waterschapsblad. Op 27 oktober 2026 was die publicatie er nog niet. Hier staan geen namen. De Kiesraad-pagina drukt een zeteloverzicht van 2023 af. Dat overzicht is niet de verdeling voor 2027 en is hier niet overgenomen.</p>
 <h2>Vorige verkiezingen</h2>
 <p>Er is geen oude uitslag overgenomen. De link is <a href="${ARCHIVE}">verkiezingsuitslagen.nl</a>.</p>
 <h2>Peilingen</h2>
@@ -45,7 +45,7 @@ const EN_BODY = `<h2>What is being elected</h2>
 <h2>How to vote</h2>
 <p>Article J 1(2) of the <a href="${ACT}">Elections Act</a> says voting starts at 07:30 and lasts until 21:00. Article J 1a lets a municipality open a station earlier or later than 07:30 and close it earlier than 21:00. The count at those stations is not before 21:00. This page shows no votes before 21:00 Central European Time. The text that was read does not name a time zone. This page uses the offset +01:00 because daylight-saving time in 2027 starts on the last Sunday of March, after this day.</p>
 <h2>Candidates</h2>
-<p>The calendar names Monday 1 February 2027 as nomination day. No list was opened on 27 October 2026. No names are printed here. The Kiesraad page prints a 2023 seat overview. That overview is not the 2027 allocation and was not copied.</p>
+<p>The calendar names Monday 1 February 2027 as nomination day. Numbering is at the public sitting on Friday 5 February 2027 at 17:00. The irrevocable lists are then published in the Staatscourant, the provincial blad or the water-board blad. That publication was not open on 27 October 2026. No names are printed here. The Kiesraad page prints a 2023 seat overview. That overview is not the 2027 allocation and was not copied.</p>
 <h2>The previous election</h2>
 <p>No previous total was copied. The link is <a href="${ARCHIVE}">verkiezingsuitslagen.nl</a>.</p>
 <h2>Polls</h2>
@@ -129,7 +129,7 @@ export const NL_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Kandidaatstelling",
-            text: "De verkiezingskalender 2027 noemt maandag 1 februari 2027 als dag van kandidaatstelling.",
+            text: "De verkiezingskalender 2027 noemt maandag 1 februari 2027 als dag van kandidaatstelling, de nummering op vrijdag 5 februari 2027 om 17:00, en daarna de publicatie van de onherroepelijke lijsten in de Staatscourant, het provinciaal blad of het waterschapsblad.",
             links: [calNl],
           },
           {
@@ -234,7 +234,7 @@ export const NL_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Nominations",
-            text: "The 2027 election calendar names Monday 1 February 2027 as nomination day.",
+            text: "The 2027 election calendar names Monday 1 February 2027 as nomination day, numbering at 17:00 on Friday 5 February 2027, and publication of the irrevocable lists in the Staatscourant, the provincial blad or the water-board blad.",
             links: [calEn],
           },
           {
