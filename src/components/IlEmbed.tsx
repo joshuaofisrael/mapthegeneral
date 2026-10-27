@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useIlResults } from "@/components/IlLiveResults";
+import { IlUpdatedStamp, ilStaleNotice, useIlResults } from "@/components/IlLiveResults";
 import { Hemicycle, colorMap, partyName } from "@/components/IlShared";
 import { IL_PATHS, IL_TRACKER_OPENS_AT, IL_WINDOW_ID, type IlLang } from "@/data/il-results";
 
@@ -11,7 +11,7 @@ export function IlEmbed() {
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get("lang") === "en") setLang("en");
   }, []);
-  const { doc, now } = useIlResults(null);
+  const { doc, now, stale, receivedAt } = useIlResults(null);
   const open = now !== null && now >= Date.parse(IL_TRACKER_OPENS_AT);
   const rows = open && doc ? doc.results.filter((p) => p.aboveThreshold) : [];
   const colors = colorMap(rows);
@@ -31,10 +31,24 @@ export function IlEmbed() {
           . {he ? "התוצאות הרשמיות יוצגו כאן לאחר סגירת הקלפיות." : "Official results appear here after polls close."}
         </p>
       ) : rows.length === 0 ? (
-        <p className="mt-2 text-sm">{he ? "ממתינים לנתוני ועדת הבחירות המרכזית." : "Waiting for the Central Elections Committee count."}</p>
+        <div className="mt-2 space-y-2">
+          <IlUpdatedStamp lang={lang} doc={doc} receivedAt={receivedAt} />
+          <p className="text-sm">{he ? "ממתינים לנתוני ועדת הבחירות המרכזית." : "Waiting for the Central Elections Committee count."}</p>
+          {stale && (
+            <p className="rounded-lg border border-notice-line bg-notice-wash p-2 text-sm text-navy-deep" role="status">
+              {ilStaleNotice(lang, false)}
+            </p>
+          )}
+        </div>
       ) : (
-        <div data-election-gate={IL_WINDOW_ID}>
-          <p className="mt-1 text-xs font-bold text-[#b45309]">
+        <div data-election-gate={IL_WINDOW_ID} className="mt-2 space-y-2">
+          <IlUpdatedStamp lang={lang} doc={doc} receivedAt={receivedAt} />
+          {stale && (
+            <p className="rounded-lg border border-notice-line bg-notice-wash p-2 text-sm text-navy-deep" role="status">
+              {ilStaleNotice(lang, true)}
+            </p>
+          )}
+          <p className="text-xs font-bold text-[#b45309]">
             {doc?.stage === "final" ? (he ? "תוצאות סופיות" : "Final results") : he ? "ספירה רשמית ראשונית · המנדטים מחושבים מהקולות שנספרו עד כה" : "Preliminary official count · seats calculated from votes counted so far"}
           </p>
           <Hemicycle lang={lang} rows={rows} colors={colors} />
