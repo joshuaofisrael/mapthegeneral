@@ -14,7 +14,9 @@ import {
   isEmbedRoute,
   houseAdLangForDocument,
   pageLanguage,
+  rankfootprintSampleScript,
   routeFromHtmlFile,
+  withRankfootprintSampleScript,
 } from "../src/lib/house-ad";
 
 const OUT = path.join(process.cwd(), "out");
@@ -55,8 +57,10 @@ function walk(dir: string) {
       continue;
     }
     if (html.includes('class="house-ad"')) {
+      const next = withRankfootprintSampleScript(html);
+      if (next !== html) writeFileSync(full, next);
       stamped++;
-      const id = HOUSE_AD_IDS.find((candidate) => html.includes(`data-house-ad="${candidate}"`));
+      const id = HOUSE_AD_IDS.find((candidate) => next.includes(`data-house-ad="${candidate}"`));
       if (id) {
         counts[id]++;
         examples[id] ??= route;
@@ -69,11 +73,12 @@ function walk(dir: string) {
       continue;
     }
     const card = houseAdHtml(route, lang);
-    const next = insertHouseAd(html, card);
-    if (next === null) {
+    const inserted = insertHouseAd(html, card);
+    if (inserted === null) {
       errors.push(`${rel}: no header or main to place the banner`);
       continue;
     }
+    const next = withRankfootprintSampleScript(inserted);
     writeFileSync(full, next);
     const id = HOUSE_AD_IDS.find((candidate) => next.includes(`data-house-ad="${candidate}"`));
     if (!id) {
@@ -90,6 +95,8 @@ if (!existsSync(OUT)) {
   console.error("house-ad: out/ is missing. Run next build first.");
   process.exit(1);
 }
+
+writeFileSync(path.join(OUT, "rankfootprint-sample.js"), rankfootprintSampleScript());
 
 walk(OUT);
 
