@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { sponsorSlotHtml } from "@/data/sponsorship";
+import { sponsorOfferExpired, sponsorSlotHtml } from "@/data/sponsorship";
 import {
   RANKFOOTPRINT_SAMPLE_SCRIPT_PATH,
   houseAdHtml,
@@ -20,6 +21,12 @@ import {
 export function HouseAd() {
   const pathname = usePathname() || "/";
   const route = pathname.endsWith("/") ? pathname : `${pathname}/`;
+  useEffect(() => {
+    if (!sponsorOfferExpired()) return;
+    document.querySelectorAll("[data-sponsor-slot]").forEach((node) => {
+      node.setAttribute("hidden", "");
+    });
+  }, [route]);
   if (isEmbedRoute(route)) return null;
   const lang = languageFromRoute(route);
   const rankfootprint = houseAdIdForRoute(route) === "rankfootprint";

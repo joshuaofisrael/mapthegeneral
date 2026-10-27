@@ -23,24 +23,6 @@ const alternates = [
   { hreflang: "x-default", path: ZH },
 ];
 
-function resultsSection(heading: string, body: string, linkLabel: string): string {
-  return `<section id="official-results" data-election-gate="tw-2026-local" data-results-open="${OPEN}" hidden>
-<h2>${heading}</h2>
-<p>${body}</p>
-<p><a href="${CEC}">${linkLabel}</a></p>
-</section>
-<script>
-(function () {
-  var nodes = document.querySelectorAll("[data-results-open]");
-  var now = Date.now();
-  for (var i = 0; i < nodes.length; i++) {
-    var open = Date.parse(nodes[i].getAttribute("data-results-open") || "");
-    if (!isNaN(open) && now >= open) nodes[i].hidden = false;
-  }
-})();
-</script>`;
-}
-
 const ZH_BODY = `<h2>這次選什麼</h2>
 <p>中央選舉委員會2026年7月16日送立法院的<a href="${REPORT}">專題報告</a>寫明，本會2025年10月31日第622次委員會議決議，115年地方公職人員選舉於2026年11月28日星期六投票。本頁只用報告印出的日期。</p>
 <p class="tools"><a href="${EN}">English</a> · <a href="/tw/">臺灣</a> · <a href="/tw/en/elections/">Elections</a></p>
@@ -54,11 +36,7 @@ const ZH_BODY = `<h2>這次選什麼</h2>
 <p>委員會<a href="${PREV}">111年地方公職人員選舉公告</a>的標題印有111年11月26日星期六，即2022年11月26日，為該次地方選舉及憲法修正案公民複決的投票日。本頁不抄那次的得票。</p>
 <h2>調查資料</h2>
 <p><a href="${ART53}">公職人員選舉罷免法第53條</a>規定，自投票日前十日起至投票時間截止前，不得發布、報導、散布、評論或引述調查資料。同法第5條把投票日前的日數從前一日起算，所以這十天自2026年11月18日開始。本站不刊登調查數字，也不做預測。</p>
-${resultsSection(
-  "正式開票",
-  "本節在台灣時間2026年11月29日0時之後才顯示。得票只從中央選舉委員會抄錄。現在這一節沒有任何得票。",
-  "中央選舉委員會",
-)}`;
+<p>下一節在台灣時間2026年11月29日0時之前只顯示倒數，不列得票。得票只讀同一網域上的檔案。那個時刻之前檔案沒有列。讀不到檔案時，頁面留著中央選舉委員會的連結。</p>`;
 
 const EN_BODY = `<h2>What is being elected</h2>
 <p>The Central Election Commission’s <a href="${REPORT}">report to the Legislative Yuan</a>, dated 16 July 2026, says the Commission’s 622nd meeting on 31 October 2025 set polling for the local public-office elections on Saturday 28 November 2026. The report calls that election the ROC year 115 local elections. This page uses the date the report prints.</p>
@@ -73,11 +51,7 @@ const EN_BODY = `<h2>What is being elected</h2>
 <p>The title of the Commission’s <a href="${PREV}">notice of the ROC year 111 local elections</a> prints Saturday 26 November 2022 as the polling day of those elections and the constitutional-amendment referendum. This page does not copy a vote count from that election.</p>
 <h2>Survey material</h2>
 <p><a href="${ART53}">Article 53 of the Civil Servants Election and Recall Act</a> says that from ten days before election day until the polls close, no party or person may report, disseminate, comment on, or quote the survey material in the two paragraphs before that sentence. Article 5 of the Act counts a date before election day by starting on the day before election day and counting backwards, so the ten days begin on 18 November 2026. This site publishes no survey figure and no projection.</p>
-${resultsSection(
-  "Official results",
-  "This section is shown only after 00:00 on 29 November 2026, Taiwan time. Counts are copied only from the Central Election Commission. This section lists no count.",
-  "Central Election Commission",
-)}`;
+<p>The next section shows a countdown, and no count, until 00:00 on 29 November 2026, Taiwan time. A count is read only from a file on this site. That file lists nothing before that instant. If the file cannot be read, the section keeps the link to the Central Election Commission.</p>`;
 
 const reportLink = { label: "Legislative Yuan report", href: REPORT };
 const zhReport = { label: "立法院專題報告", href: REPORT };

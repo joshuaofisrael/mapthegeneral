@@ -156,7 +156,7 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Polling day",
-            text: "Electoral Act 1993, section 197 bars a public opinion poll on polling day before the close of the poll, and bars publishing a party name then. This page prints neither.",
+            text: "Electoral Act 1993, section 197 bars a public opinion poll on polling day before the close of the poll, and section 197(1)(g) bars publishing a party name then. The party names on this page were placed on 27 October 2026, which is the fact section 197(2A) addresses. This page prints no poll.",
             links: [{ label: "Electoral Act 1993, section 197", href: ACT }],
           },
           {

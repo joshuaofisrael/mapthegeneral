@@ -317,3 +317,7 @@ a.sponsor-slot:visited .sponsor-slot-copy {
   background: #064e3b;
   color: #fff;
 }
+
+.sponsor-slot[hidden] {
+  display: none !important;
+}

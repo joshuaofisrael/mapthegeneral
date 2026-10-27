@@ -8,10 +8,17 @@
  * Sold state: set `SOLD_SPONSOR` and rebuild. That one value replaces the
  * "Your ad here" offer with a localized "Sponsored by <name>" banner.
  * Leave it `null` while the slot is for sale.
+ *
+ * The offer stays in the static HTML. A page script hides the slot after
+ * 30 Oct 2026 at 23:59 Asia/Jerusalem. Do not set `hidden` at build time.
  */
 import { HOUSE_AD_LANGS, type HouseAdLang, isEmbedRoute, languageFromRoute } from "@/lib/house-ad";
 
-export const SPONSOR_CHECKOUT_URL = "https://buy.stripe.com/6oU9AUc2AfMJfcbeaAb3r1V";
+export const SPONSOR_CHECKOUT_URL = "https://buy.stripe.com/6oU14o3w45856FF7Mcb3r1W";
+
+/** Last minute the offer stays up, as an Israel-time wall clock. */
+export const SPONSOR_OFFER_UNTIL = "2026-10-30T23:59";
+export const SPONSOR_OFFER_TZ = "Asia/Jerusalem";
 
 export type SoldSponsor = {
   name: string;
@@ -21,7 +28,7 @@ export type SoldSponsor = {
 export const SOLD_SPONSOR: SoldSponsor | null = null;
 
 export const SPONSOR_EN_PITCH =
-  "Your ad here during US election week: one exclusive sponsor, 3–6 Nov 2026, $1,000.";
+  "Your ad here: exclusive sponsor during Israel election night results + 3 days, 27–30 Oct 2026, $1,000.";
 export const SPONSOR_EN_CTA = "Book this slot";
 export const SPONSOR_EN_LABEL = "Your ad here";
 
@@ -42,61 +49,63 @@ const COPY: Record<HouseAdLang, SlotCopy> = {
   es: {
     label: "Su anuncio aquí",
     pitch:
-      "Su anuncio aquí durante la semana electoral de EE. UU.: un patrocinador exclusivo, 3–6 nov 2026, $1,000.",
+      "Su anuncio aquí: patrocinador exclusivo durante los resultados de la noche electoral de Israel y los 3 días siguientes, 27–30 oct 2026, $1,000.",
     cta: "Reservar este espacio",
     sold: (name) => `Patrocinado por ${name}`,
   },
   fr: {
     label: "Votre pub ici",
     pitch:
-      "Votre pub ici pendant la semaine électorale aux États-Unis : un sponsor exclusif, du 3 au 6 nov. 2026, 1 000 $.",
+      "Votre pub ici : sponsor exclusif pendant les résultats de la nuit électorale en Israël et les 3 jours suivants, 27–30 oct. 2026, 1 000 $.",
     cta: "Réserver cet espace",
     sold: (name) => `Sponsorisé par ${name}`,
   },
   de: {
     label: "Ihre Anzeige hier",
-    pitch: "Ihre Anzeige hier in der US-Wahlwoche: ein exklusiver Sponsor, 3.–6. Nov. 2026, 1.000 $.",
+    pitch:
+      "Ihre Anzeige hier: exklusiver Sponsor während der Ergebnisse der Wahlnacht in Israel und der folgenden 3 Tage, 27.–30. Okt. 2026, 1.000 $.",
     cta: "Diesen Platz buchen",
     sold: (name) => `Gesponsert von ${name}`,
   },
   it: {
     label: "Il tuo annuncio qui",
     pitch:
-      "Il tuo annuncio qui durante la settimana elettorale USA: uno sponsor esclusivo, 3–6 nov 2026, $1.000.",
+      "Il tuo annuncio qui: sponsor esclusivo durante i risultati della notte elettorale in Israele e i 3 giorni successivi, 27–30 ott 2026, $1.000.",
     cta: "Prenota questo spazio",
     sold: (name) => `Sponsorizzato da ${name}`,
   },
   pl: {
     label: "Twoja reklama tutaj",
     pitch:
-      "Twoja reklama tutaj w tygodniu wyborów w USA: jeden wyłączny sponsor, 3–6 lis 2026, 1000 USD.",
+      "Twoja reklama tutaj: wyłączny sponsor podczas wyników nocy wyborczej w Izraelu i kolejnych 3 dni, 27–30 paź 2026, 1000 USD.",
     cta: "Zarezerwuj to miejsce",
     sold: (name) => `Sponsorowane przez ${name}`,
   },
   pt: {
     label: "O seu anúncio aqui",
     pitch:
-      "O seu anúncio aqui durante a semana eleitoral dos EUA: um patrocinador exclusivo, 3–6 nov 2026, $1.000.",
+      "O seu anúncio aqui: patrocinador exclusivo durante os resultados da noite eleitoral em Israel e nos 3 dias seguintes, 27–30 out 2026, $1.000.",
     cta: "Reservar este espaço",
     sold: (name) => `Patrocinado por ${name}`,
   },
   he: {
     label: "המודעה שלכם כאן",
-    pitch: "המודעה שלכם כאן בשבוע הבחירות בארה״ב: נותן חסות בלעדי אחד, 3–6 בנוב׳ 2026, $1,000.",
+    pitch:
+      "המודעה שלכם כאן: חסות בלעדית לתוצאות ליל הבחירות בישראל ולשלושת הימים שאחריהן, 27–30 באוק׳ 2026, $1,000.",
     cta: "הזמינו את המקום",
     sold: (name) => `ממומן על ידי ${name}`,
   },
   sr: {
     label: "Vaš oglas ovde",
     pitch:
-      "Vaš oglas ovde tokom izborne nedelje u SAD: jedan ekskluzivni sponzor, 3–6. nov 2026, $1.000.",
+      "Vaš oglas ovde: ekskluzivni sponzor tokom rezultata izborne noći u Izraelu i naredna 3 dana, 27–30. okt 2026, $1.000.",
     cta: "Rezervišite ovo mesto",
     sold: (name) => `Sponzorisano od strane ${name}`,
   },
   bg: {
     label: "Вашата реклама тук",
     pitch:
-      "Вашата реклама тук през изборната седмица в САЩ: един ексклузивен спонсор, 3–6 ное 2026, $1,000.",
+      "Вашата реклама тук: ексклузивен спонсор по време на резултатите от изборната нощ в Израел и следващите 3 дни, 27–30 окт 2026, $1,000.",
     cta: "Запазете това място",
     sold: (name) => `Спонсорирано от ${name}`,
   },
@@ -198,6 +207,10 @@ a.sponsor-slot:visited .sponsor-slot-copy {
 .sponsor-pay:focus-visible {
   background: #064e3b;
   color: #fff;
+}
+
+.sponsor-slot[hidden] {
+  display: none !important;
 }`;
 
 const BANNED = [/joshua/i, /\bllc\b/i];
@@ -224,6 +237,42 @@ export function advertisePath(lang: HouseAdLang): string {
   return lang === "es" ? "/advertise/es/" : "/advertise/";
 }
 
+/** Israel wall clock as YYYY-MM-DDTHH:mm. Null when the zone cannot be read. */
+export function jerusalemStamp(date: Date): string | null {
+  try {
+    const fmt = new Intl.DateTimeFormat("en-US", {
+      timeZone: SPONSOR_OFFER_TZ,
+      hourCycle: "h23",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const map: Record<string, string> = {};
+    for (const part of fmt.formatToParts(date)) {
+      if (part.type !== "literal") map[part.type] = part.value;
+    }
+    const hour = map.hour === "24" ? "00" : map.hour;
+    if (!map.year || !map.month || !map.day || !hour || !map.minute) return null;
+    return `${map.year}-${map.month}-${map.day}T${hour}:${map.minute}`;
+  } catch {
+    return null;
+  }
+}
+
+/** True after 30 Oct 2026 23:59 in Asia/Jerusalem. A failed clock leaves the offer up. */
+export function sponsorOfferExpired(date = new Date()): boolean {
+  const stamp = jerusalemStamp(date);
+  return stamp !== null && stamp > SPONSOR_OFFER_UNTIL;
+}
+
+const SPONSOR_DEADLINE_JS = `(function(){try{var fmt=new Intl.DateTimeFormat("en-US",{timeZone:"${SPONSOR_OFFER_TZ}",hourCycle:"h23",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});var map={};fmt.formatToParts(new Date()).forEach(function(p){if(p.type!=="literal")map[p.type]=p.value;});var hour=map.hour==="24"?"00":map.hour;var stamp=map.year+"-"+map.month+"-"+map.day+"T"+hour+":"+map.minute;if(stamp>"${SPONSOR_OFFER_UNTIL}"){var nodes=document.querySelectorAll("[data-sponsor-slot]");for(var i=0;i<nodes.length;i++)nodes[i].setAttribute("hidden","");}}catch(e){}})();`;
+
+export function sponsorDeadlineScript(): string {
+  return `<script data-sponsor-deadline="">${SPONSOR_DEADLINE_JS}</script>`;
+}
+
 export function renderSponsorSlot(lang: HouseAdLang, sold: SoldSponsor | null): string {
   const copy = COPY[lang];
   if (sold) {
@@ -236,7 +285,7 @@ export function renderSponsorSlot(lang: HouseAdLang, sold: SoldSponsor | null): 
 
 export function sponsorSlotHtml(route: string, lang: HouseAdLang = languageFromRoute(route)): string {
   if (!isSponsorSurface(route)) return "";
-  return renderSponsorSlot(lang, SOLD_SPONSOR);
+  return `${renderSponsorSlot(lang, SOLD_SPONSOR)}${sponsorDeadlineScript()}`;
 }
 
 function validSold(sold: SoldSponsor | null): string | null {
@@ -254,9 +303,10 @@ function validSold(sold: SoldSponsor | null): string | null {
 
 export function selfCheckSponsorship(): string[] {
   const problems: string[] = [];
-  if (SPONSOR_CHECKOUT_URL !== "https://buy.stripe.com/6oU9AUc2AfMJfcbeaAb3r1V") {
+  if (SPONSOR_CHECKOUT_URL !== "https://buy.stripe.com/6oU14o3w45856FF7Mcb3r1W") {
     problems.push("checkout URL drifted");
   }
+  if (SPONSOR_CHECKOUT_URL.includes("6oU9AUc2AfMJfcbeaAb3r1V")) problems.push("old checkout remains");
   if (COPY.en.pitch !== SPONSOR_EN_PITCH) problems.push("English pitch drifted");
   if (COPY.en.cta !== SPONSOR_EN_CTA) problems.push("English button drifted");
   if (COPY.en.label !== SPONSOR_EN_LABEL) problems.push("English label drifted");
@@ -269,6 +319,16 @@ export function selfCheckSponsorship(): string[] {
   if (!SPONSOR_SLOT_CSS.includes("background: #065f46") || !SPONSOR_SLOT_CSS.includes("color: #fff")) {
     problems.push("button is missing the emerald fill or white text");
   }
+  if (!SPONSOR_SLOT_CSS.includes(".sponsor-slot[hidden]") || !SPONSOR_SLOT_CSS.includes("display: none !important")) {
+    problems.push("expired slot cannot hide the flex box");
+  }
+  if (sponsorOfferExpired(new Date("2026-10-30T21:59:00Z"))) problems.push("offer hides during 23:59 Israel time");
+  if (!sponsorOfferExpired(new Date("2026-10-30T22:00:00Z"))) problems.push("offer stays up after 30 Oct 23:59 Israel time");
+  if (sponsorOfferExpired(new Date("2026-10-27T19:00:00Z"))) problems.push("offer hides before Israel results night");
+  if (!sponsorDeadlineScript().includes('data-sponsor-deadline=""') || !sponsorDeadlineScript().includes(SPONSOR_OFFER_UNTIL)) {
+    problems.push("deadline script drifted");
+  }
+  if (sponsorDeadlineScript().includes("hidden=")) problems.push("static markup must not ship hidden");
   if (/position:\s*(sticky|fixed)/.test(SPONSOR_SLOT_CSS)) problems.push("slot must not stick or cover the page");
 
   const soldError = validSold(SOLD_SPONSOR);
@@ -278,7 +338,12 @@ export function selfCheckSponsorship(): string[] {
     const copy = COPY[lang];
     if (!copy.label.trim() || !copy.pitch.trim() || !copy.cta.trim()) problems.push(`${lang}: empty copy`);
     if (copy.pitch.includes(copy.cta)) problems.push(`${lang}: button text copied into the pitch`);
-    if (!copy.pitch.toLowerCase().includes("2026") && !copy.pitch.includes("2026")) problems.push(`${lang}: year missing`);
+    if (!copy.pitch.includes("27") || !copy.pitch.includes("30") || !copy.pitch.includes("2026")) {
+      problems.push(`${lang}: Israel window missing`);
+    }
+    if (/US election|EE\. UU\.|États-Unis|Wahlwoche|USA|ноември|בארה|SAD|lis 2026|Nov\. 2026|nov 2026/i.test(copy.pitch)) {
+      problems.push(`${lang}: old US-week copy remains`);
+    }
     for (const pattern of BANNED) {
       if (pattern.test(copy.label) || pattern.test(copy.pitch) || pattern.test(copy.cta) || pattern.test(copy.sold("Example"))) {
         problems.push(`${lang}: banned phrase ${pattern}`);
@@ -322,7 +387,12 @@ export function selfCheckSponsorship(): string[] {
     if (isSponsorSurface(route)) problems.push(`${route} should not show the slot`);
     if (sponsorSlotHtml(route) !== "") problems.push(`${route} rendered a slot`);
   }
-  if (sponsorSlotHtml("/", "en") !== renderSponsorSlot("en", SOLD_SPONSOR)) problems.push("homepage renderer");
+  const homeSlot = sponsorSlotHtml("/", "en");
+  if (!homeSlot.startsWith(renderSponsorSlot("en", SOLD_SPONSOR)) || !homeSlot.includes("data-sponsor-deadline")) {
+    problems.push("homepage renderer");
+  }
+  if (homeSlot.includes("6oU9AUc2AfMJfcbeaAb3r1V")) problems.push("old checkout remains in the slot");
+  if (/data-sponsor-slot="open"[^>]*hidden/.test(homeSlot)) problems.push("static offer is hidden");
   if (languageFromRoute("/es/en/") !== "en" || sponsorSlotHtml("/es/en/").includes("Su anuncio")) {
     problems.push("English switch lost its English copy");
   }
