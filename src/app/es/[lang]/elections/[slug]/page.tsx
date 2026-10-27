@@ -88,7 +88,7 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
       }
       officeHref={jec.url}
       officeLabel="Junta Electoral Central"
-      sources={sourcesById(["rd-806-2026", "loreg-boe", "loreg-jec", "jec-generales-2026", "jec-calendario", "jec-candidaturas", "congreso", "senado"])}
+      sources={sourcesById(["rd-806-2026", "loreg-boe", "loreg-jec", "jec-generales-2026", "jec-calendario", "jec-candidaturas", "congreso", "senado", "infoelectoral-procesos"])}
     >
       <EditorialPreview path={path} />
       <NightMount id="es-2026-generales" lang={lang} />
@@ -127,6 +127,17 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
         <p>
           <a href="https://www.boe.es/eli/es/rd/2026/10/05/806" rel="noopener noreferrer">
             {es ? "Texto en el BOE" : "Text in the BOE"}
+          </a>
+        </p>
+      </section>
+      <section className="prose-legal">
+        <h2>{es ? "Cortes disueltas" : "The dissolved Cortes"}</h2>
+        <p>
+          {es
+            ? "El artículo 1 disuelve el Congreso y el Senado elegidos el 23 de julio de 2023. El archivo de ese proceso está en Infoelectoral. Esta página no copia un total de votos."
+            : "Article 1 dissolves the Congress and the Senate elected on 23 July 2023. The archive of that election is Infoelectoral. This page does not copy a vote total."}{" "}
+          <a href="https://infoelectoral.interior.gob.es/es/elecciones-celebradas/procesos-electorales/" rel="noopener noreferrer">
+            Infoelectoral
           </a>
         </p>
       </section>

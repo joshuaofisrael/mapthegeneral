@@ -1,10 +1,1 @@
-{
-  "schema": 1,
-  "election": "tw-2026-local",
-  "trackerOpensAt": "2026-11-29T00:00:00+08:00",
-  "stage": "pre",
-  "fetchedAt": null,
-  "sourceUpdated": null,
-  "source": "https://www.cec.gov.tw/",
-  "results": []
-}
+{"schema":1,"election":"tw-2026-local","trackerOpensAt":"2026-11-29T00:00:00+08:00","stage":"pre","fetchedAt":null,"sourceUpdated":null,"source":"https://www.cec.gov.tw/","results":[]}

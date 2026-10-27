@@ -13,6 +13,8 @@ const NSW_HOME = "https://elections.nsw.gov.au/";
 const GOV_SEANAD =
   "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/polling-day-order-for-seanad-bye-election-made-by-minister-browne/";
 const OIR = "https://www.oireachtas.ie/en/elections/";
+const SEANAD_LIST =
+  "https://data.oireachtas.ie/ie/oireachtas/electoralProcess/electionResults/seanad/2026/2026-10-16_seanad-bye-elections-2026-list-of-candidates_en.pdf";
 const ADMIN_VOTE = "https://www.admin.ch/de/volksabstimmung-vom-29-november-2026";
 const BBL = "https://www.fedlex.admin.ch/eli/fga/2026/2406/de";
 const PRESS = "https://www.admin.ch/de/newnsb/KpnrPOW9cpZAvB6IXOekf";
@@ -37,8 +39,9 @@ const SEANAD_BODY = `<h2>What is being filled</h2>
 <h2>Who votes, and how</h2>
 <p>The Department’s release says the electorate is the members of Dáil Éireann and Seanad Éireann. It says the last day for receiving nominations was Tuesday 6 October 2026 at 12 noon. The Seanad Returning Officer sat for the ruling on nominations on Friday 16 October 2026. Ballot papers are issued on Friday 23 October 2026. The polls close at 11 a.m. on Friday 6 November 2026.</p>
 <p>This is not a polling-station election for the public. A person who is not a member of the Dáil or the Seanad does not receive a ballot for this bye-election.</p>
-<h2>Candidates</h2>
-<p>The Oireachtas elections page, read on 27 October 2026, lists a file dated 16 October 2026 titled “Seanad bye-elections 2026 | List of candidates”, for the Cultural and Educational panel. The names in that file were not copied onto this page. The list stays on the <a href="${OIR}">Oireachtas elections page</a>.</p>
+{{candidates}}
+<h2>Past result</h2>
+<p>The Department’s release says Senator Seán Kyne was elected from the Nominating Bodies Sub-Panel of the Cultural and Educational Panel at the Seanad general election in 2025. This page does not copy the 2025 count. The record stays on the <a href="${OIR}">Oireachtas elections page</a>.</p>
 <h2>Result</h2>
 <p>The poll has not closed. This page shows no count and names no senator elected. A result will be added only from a count the Clerk of the Seanad or the Houses of the Oireachtas publish after 11 a.m. on 6 November 2026.</p>`;
 
@@ -55,6 +58,8 @@ ${CH_PROPOSALS}
 <p class="tools"><a href="/ch/de/">Schweiz</a> · <a href="/ch/de/elections/nationalrat-2027/">Nationalrat, 24. Oktober 2027</a> · <a href="/ch/fr/elections/volksabstimmung-2026-11-29/">Français</a> · <a href="/ch/it/elections/volksabstimmung-2026-11-29/">Italiano</a> · <a href="/ch/en/elections/volksabstimmung-2026-11-29/">English</a></p>
 <h2>Wie abgestimmt wird</h2>
 <p>Das Kreisschreiben bittet die Kantone, die Stimmunterlagen frühestens vier und spätestens drei Wochen vor dem Abstimmungstag zuzustellen. Für Auslandschweizerinnen und Auslandschweizer nennt es den frühesten Versand in der Kalenderwoche 43. Eine einzige nationale Uhrzeit für die Öffnung der Urnen steht in den gelesenen Texten nicht. Diese Seite erfindet keine solche Uhrzeit. Ein Ergebnis wird hier nicht vor 12:00 mitteleuropäischer Zeit am 29. November 2026 gezeigt. Der Ergebnisdienst ist die Seite des Bundesamts für Statistik zu Abstimmungen.</p>
+<h2>Frühere Abstimmungen</h2>
+<p>Frühere eidgenössische Volksabstimmungen stehen auf der <a href="${BFS}">Seite des Bundesamts für Statistik</a>. Diese Seite übernimmt daraus keinen Anteil.</p>
 <h2>Ergebnis</h2>
 <p>Diese Seite zeigt keine Zahlen und spricht keine Empfehlung aus.</p>`;
 
@@ -64,6 +69,8 @@ ${CH_PROPOSALS}
 <p class="tools"><a href="/ch/fr/">Suisse</a> · <a href="/ch/fr/elections/nationalrat-2027/">Conseil national, 24 octobre 2027</a> · <a href="/ch/de/elections/volksabstimmung-2026-11-29/">Deutsch</a></p>
 <h2>Comment on vote</h2>
 <p>La circulaire demande aux cantons de remettre le matériel de vote au plus tôt quatre semaines et au plus tard trois semaines avant le jour du scrutin. Elle cite la semaine civile 43 comme premier envoi pour les Suisses de l’étranger. Les textes lus ne donnent pas une seule heure nationale d’ouverture des urnes. Cette page n’en invente pas. Aucun résultat n’est montré ici avant 12 h, heure de l’Europe centrale, le 29 novembre 2026. Le service des résultats est la page de l’Office fédéral de la statistique sur les votations.</p>
+<h2>Votes précédents</h2>
+<p>Les votations fédérales antérieures sont sur la <a href="${BFS}">page de l’Office fédéral de la statistique</a>. Cette page n’en reprend aucune part.</p>
 <h2>Résultat</h2>
 <p>Cette page ne montre aucun chiffre et ne formule aucune recommandation.</p>`;
 
@@ -73,6 +80,8 @@ ${CH_PROPOSALS}
 <p class="tools"><a href="/ch/it/">Svizzera</a> · <a href="/ch/it/elections/nationalrat-2027/">Consiglio nazionale, 24 ottobre 2027</a> · <a href="/ch/de/elections/volksabstimmung-2026-11-29/">Deutsch</a></p>
 <h2>Come si vota</h2>
 <p>La circolare chiede ai Cantoni di consegnare il materiale di voto al più presto quattro settimane e al più tardi tre settimane prima del giorno della votazione. Per gli Svizzeri all’estero indica come primo invio la settimana civile 43. I testi letti non fissano un’unica ora nazionale di apertura delle urne. Questa pagina non ne inventa una. Nessun risultato è mostrato qui prima delle ore 12:00, ora dell’Europa centrale, del 29 novembre 2026. Il servizio dei risultati è la pagina dell’Ufficio federale di statistica sulle votazioni.</p>
+<h2>Votazioni precedenti</h2>
+<p>Le votazioni federali precedenti sono sulla <a href="${BFS}">pagina dell’Ufficio federale di statistica</a>. Questa pagina non ne copia una quota.</p>
 <h2>Risultato</h2>
 <p>Questa pagina non mostra cifre e non formula una raccomandazione.</p>`;
 
@@ -82,6 +91,8 @@ ${CH_PROPOSALS}
 <p class="tools"><a href="/ch/en/">Switzerland</a> · <a href="/ch/en/elections/nationalrat-2027/">National Council, 24 October 2027</a> · <a href="/ch/de/elections/volksabstimmung-2026-11-29/">Deutsch</a></p>
 <h2>How people vote</h2>
 <p>The circular asks the cantons to deliver the voting papers at the earliest four weeks and at the latest three weeks before polling day. For Swiss abroad it names calendar week 43 as the earliest dispatch. The texts that were read do not print one national hour for opening the ballot boxes. This page does not invent one. No count is shown here before 12:00 Central European Time on 29 November 2026. The results service is the Federal Statistical Office page on popular votes.</p>
+<h2>Earlier votes</h2>
+<p>Earlier federal popular votes are on the <a href="${BFS}">Federal Statistical Office page</a>. This page does not copy a share from an earlier vote.</p>
 <h2>Result</h2>
 <p>This page shows no figures and makes no recommendation.</p>`;
 
@@ -238,6 +249,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   },
   {
     id: "ie-2026-seanad",
+    candidateListId: "seanad-2026",
     pollingDay: "2026-11-06",
     startDate: "2026-10-23T00:00:00+01:00",
     endDate: "2026-11-06T11:00:00+00:00",
@@ -351,8 +363,8 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             question: "Who are the candidates in the Seanad bye-election?",
-            text: "The Oireachtas elections page publishes a candidate file dated 16 October 2026 for the Cultural and Educational panel. This page does not copy those names.",
-            links: [{ label: "Oireachtas elections page", href: OIR }],
+            text: "The Seanad Returning Officer’s list of 16 October 2026 names Ray McAdam, Caitlín Ní Bhroin, Maeve Maria O’Rourke and Patrick Paul Walsh, in that order. It does not print a ballot number or a personal page.",
+            links: [{ label: "Returning Officer’s list", href: SEANAD_LIST }],
           },
           {
             question: "Where will the Seanad bye-election result be published?",
@@ -372,6 +384,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         sources: [
           { href: GOV_SEANAD, label: "Department of Housing, Local Government and Heritage, Polling Day Order, 24 September 2026", readOn: "2026-10-27" },
           { href: OIR, label: "Houses of the Oireachtas, elections", readOn: "2026-10-27" },
+          { href: SEANAD_LIST, label: "Seanad Returning Officer, list of candidates, 16 October 2026", readOn: "2026-10-27" },
         ],
       },
     ],

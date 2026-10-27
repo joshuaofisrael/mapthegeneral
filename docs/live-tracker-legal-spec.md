@@ -9,6 +9,11 @@ No new route is required if the worker already proxies `/il-live/*`. If it is pi
 to `/il-live/il-2026-knesset/*` only, the route has to be widened to `/il-live/*`.
 This repository cannot edit that Cloudflare route. Bulgaria’s page also reads
 `/il-live/bg-2026-11-01/results.json` and falls back to `/live/bg-2026-11-01.json`.
+New Zealand’s page reads `/il-live/nz-2026-11-07/results.json` and falls back to
+`/live/nz-2026-11-07.json`. Taiwan’s pages read `/il-live/tw-2026-local/results.json`
+and fall back to `/live/tw-2026-local.json`. The Commission’s 16 July 2026 report
+does not print a closing hour, so that feed stays empty until 00:00 on 29 November,
+Taiwan time.
 
 ## Rules for every tracker
 
@@ -46,7 +51,8 @@ This repository cannot edit that Cloudflare route. Bulgaria’s page also reads
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
 | bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00 | 1 Nov 2026 21:00 EET | results.cik.bg |
-| nz-2026-11-07 | New Zealand general election, 7 Nov 2026 | Electoral Act 1993 s. 197(1)(d), (e) and (g). No party names on the page. The results host returned 403 when checked | 7 Nov 2026 19:00 NZDT | electionresults.govt.nz |
+| nz-2026-11-07 | New Zealand general election, 7 Nov 2026 | Electoral Act 1993 s. 197(1)(d), (e) and (g), and s. 197(2A). The page lists the Commission’s 9 October 2026 party names, placed before polling day. The results host returned 403 when checked | 7 Nov 2026 19:00 NZDT | electionresults.govt.nz |
+| tw-2026-local | Taiwan local public-office elections, 28 Nov 2026 | Civil Servants Election and Recall Act art. 53 (no survey material from ten days before election day). The Commission’s 16 July 2026 report prints no closing hour, so no count is shown before the next calendar day | 29 Nov 2026 00:00 Taiwan time (16:00 UTC on 28 Nov) | www.cec.gov.tw |
 
 Countries with no election window yet get one added here before any tracker is
 built. `STANDING_RULES` in `src/data/election-law.ts` records the countries that
@@ -69,9 +75,8 @@ the registry to have a window or a standing rule.
   ban was found on the English authority pages read on 23 October 2026, and the
   election act was not read section by section. No tracker.
 
-New Zealand was not onboarded. Its general election is Saturday 7 November 2026
-and the regulated period was already open on 23 October 2026. Japan and South
-Korea stay removed. Germany stays excluded. The editorial note is
+New Zealand’s general election of 7 November 2026 and Taiwan’s local elections
+of 28 November 2026 are dated rows above. Japan and South Korea stay removed. Germany stays excluded. The editorial note is
 `docs/country-onboarding-assessment-2026-10.md`. That note is not legal advice.
 
 ## Removed countries (18 October 2026)

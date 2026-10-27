@@ -104,11 +104,18 @@ const VEC_2026 = "https://www.vec.vic.gov.au/voting/2026-state-election";
 const VEC_STATE = "https://www.vec.vic.gov.au/voting/types-of-elections/state-elections";
 const VEC_POSTAL = "https://www.vec.vic.gov.au/voting/2026-state-election/postal-voting";
 const VEC_RESULTS = "https://www.vec.vic.gov.au/results";
+const VEC_2022_REPORT =
+  "https://www.parliament.vic.gov.au/4918e0/globalassets/tabled-paper-documents/tabled-paper-7587/vec-report-to-parliament-on-the-2022-victorian-state-election-and-2023-narracan-district-supplementary-election.pdf";
+const VEC_2022_DISTRICTS =
+  "https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results/results-by-district";
+const VEC_2022_REGIONS =
+  "https://www.vec.vic.gov.au/results/state-election-results/2022-state-election-results/results-by-region";
 const VEC_HOME = "https://www.vec.vic.gov.au";
 const DECREE = "https://api.sejm.gov.pl/eli/acts/DU/2026/1255/text.pdf";
 const CODE = "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf";
 const PKW_SERVICE = "https://wybory.gov.pl/senat20261122/pl";
 const PKW_HOME = "https://pkw.gov.pl";
+const PKW_SENATE_2023 = "https://www.pkw.gov.pl/uploaded_files/1697634760_obwieszczenie-senat.pdf";
 const EBC_HOME = "https://elections.bc.ca";
 const EBC_2026 = "https://elections.bc.ca/2026-provincial-election/";
 const EBC_WRITS = "https://elections.bc.ca/2026-provincial-election/writs-of-election/";
@@ -128,6 +135,8 @@ const PUBB_3 = "https://prefettura.interno.gov.it/sites/default/files/82/2026-09
 const DAIT_CANDIDATES = "https://dait.interno.gov.it/elezioni/trasparenza/suppletive-20261116-15";
 const CAMERA_VARIAZIONI = "https://www.camera.it/deputati/variazioni-composizione";
 const ELIGENDO = "https://elezioni.interno.gov.it/";
+const ELIGENDO_2022 =
+  "https://elezionistorico.interno.gov.it/index.php?dtel=25%2F09%2F2022&es0=S&lev0=0&levsut0=0&ms=S&tpa=I&tpe=E&tpel=C";
 const L_28 = "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-02-22;28";
 const DLGS_177 = "https://www.gazzettaufficiale.it/eli/id/2020/12/29/20G00198/sg";
 
@@ -145,6 +154,8 @@ const VICTORIA_BODY = `<h2>What is elected</h2>
 <p class="gap"><strong>Not published yet.</strong> On 23 October 2026 the pages read did not list candidates for 28 November 2026. Nominations open on 4 November 2026. Names will be added here when the Commission publishes them. The official page is <a href="${VEC_2026}">2026 state election</a>.</p>
 <h2>Districts and regions</h2>
 <p>Each Legislative Assembly district and each Legislative Council region already has a page. Those pages link back here. They name the member the Commission’s earlier count declared, where that count was copied, and they do not list 2026 candidates.</p>
+<h2>Past results</h2>
+<p>The Commission’s report to Parliament on the 2022 Victorian state election and the 2023 Narracan District supplementary election records a general election on 26 November 2022 and a supplementary election for Narracan District on 28 January 2023. This page does not copy a seat table from that report. Elected members are on the Commission’s <a href="${VEC_2022_DISTRICTS}">results by district</a> and <a href="${VEC_2022_REGIONS}">results by region</a>.</p>
 <h2>Result</h2>
 <p>This page shows no count and names no winner. The Commission’s results service is <a href="${VEC_RESULTS}">vec.vic.gov.au/results</a>. No count is shown here before 6 pm on 28 November 2026.</p>
 <p>© Victorian Electoral Commission. The Commission’s legal page, read on 23 October 2026, says website text other than images, video, branding and third-party content is available under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>. No image is copied.</p>`;
@@ -168,6 +179,8 @@ const POLAND_EN_BODY = `<h2>What is elected</h2>
 </ul>
 <p>Article 107 § 1 forbids campaigning on polling day and for the 24 hours before it. Article 115 § 1 forbids publishing pre-election research results, and research results from polling day, during that same period. This page carries no campaign and prints no such results.</p>
 {{candidates}}
+<h2>Past result</h2>
+<p>The mandate being filled is the one the Marshal of the Senate recorded as expired for senator Mirosław Różański. The Commission’s <a href="${PKW_SENATE_2023}">announcement of 17 October 2023</a> is the official result of the Senate election of 15 October 2023. This page does not reprint the constituency 20 line from that announcement. The national reprint is on the <a href="/pl/en/results/">Poland results page</a>.</p>
 <h2>Result</h2>
 <p>The vote columns in that file are empty. This page shows no count and names no elected senator. Article 276: the Commission announces the result in the Dziennik Ustaw. No count will be shown here before voting ends. Commission service: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
@@ -190,6 +203,8 @@ const POLAND_PL_BODY = `<h2>Co się wybiera</h2>
 </ul>
 <p>Art. 107 § 1: w dniu głosowania i na 24 godziny przed tym dniem agitacja wyborcza jest zabroniona. Art. 115 § 1: w tym samym czasie zabronione jest podawanie wyników przedwyborczych badań opinii publicznej i wyników badań z dnia głosowania. Ta strona nie prowadzi agitacji i nie podaje takich wyników.</p>
 {{candidates}}
+<h2>Wcześniejszy wynik</h2>
+<p>Uzupełniany mandat to ten, którego wygaśnięcie Marszałek Senatu stwierdził wobec senatora Mirosława Różańskiego. <a href="${PKW_SENATE_2023}">Obwieszczenie PKW z 17 października 2023 r.</a> jest urzędowym wynikiem wyborów do Senatu z 15 października 2023 r. Ta strona nie przepisuje z niego wiersza okręgu nr 20. Przedruk krajowy jest na <a href="/pl/pl/results/">stronie wyników</a>.</p>
 <h2>Wynik</h2>
 <p>Kolumny głosów w tym pliku są puste. Ta strona nie pokazuje liczenia i nie wskazuje wybranego senatora. Art. 276: wynik ogłasza PKW obwieszczeniem w Dzienniku Ustaw. Liczenie nie pojawi się tutaj przed zakończeniem głosowania. Serwis PKW: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
@@ -224,6 +239,8 @@ const CHIETI_EN_BODY = `<h2>When people vote in Chieti</h2>
 <h2>Why the seat is vacant</h2>
 <p>The decree says the Giunta delle elezioni communicated the vacancy on 15 September 2026, and that the President of the Chamber notified it on 16 September 2026. The decree does not print a name. The <a href="${CAMERA_VARIAZIONI}">Chamber’s page on changes in membership</a>, read on 26 October 2026, says that on 15 September 2026 the mandate of deputy Alberto Bagnai ended. It says he resigned in order to take the post of member of the Competition and Market Authority, that the Chamber took note because the two offices are incompatible, and that he had been returned for Abruzzo, uninominal constituency 1. This page does not name a mayor, a provincial president, or any other local office-holder.</p>
 {{candidates}}
+<h2>Past result</h2>
+<p>The Chamber’s page says Alberto Bagnai had been returned for Abruzzo, uninominal constituency 1. The Interior Ministry archive of the Chamber election of 25 September 2022 is <a href="${ELIGENDO_2022}">Eligendo</a>. This page does not copy a vote total from that archive.</p>
 <h2>Result</h2>
 <p>This page shows no count and names no one elected. The Department’s special-elections page says turnout and results are followed on <a href="${ELIGENDO}">Eligendo</a>. No count is shown here before 15:00 on 16 November 2026. <a href="${L_28}">Law no. 28 of 22 February 2000, article 8</a>, forbids publishing opinion-poll results in the fifteen days before the vote. This site prints no polls for this election.</p>`;
 
@@ -236,6 +253,8 @@ const CHIETI_IT_BODY = `<h2>Quando si vota a Chieti</h2>
 <h2>Perché il seggio è vacante</h2>
 <p>Il decreto dice che la Giunta delle elezioni ha comunicato la vacanza il 15 settembre 2026 e che il Presidente della Camera l'ha segnalata il 16 settembre 2026. Il decreto non stampa un nome. La <a href="${CAMERA_VARIAZIONI}">pagina della Camera sulle variazioni nella composizione</a>, letta il 26 ottobre 2026, dice che il 15 settembre 2026 è cessato dal mandato il deputato Alberto Bagnai. Dice che si è dimesso per la carica di componente dell'Autorità garante della concorrenza e del mercato, che la Camera ha preso atto delle dimissioni per incompatibilità, e che era stato eletto nella circoscrizione Abruzzo, collegio uninominale 1. Questa pagina non nomina un sindaco, un presidente di provincia o un altro amministratore locale.</p>
 {{candidates}}
+<h2>Risultato precedente</h2>
+<p>La pagina della Camera dice che Alberto Bagnai era stato eletto nella circoscrizione Abruzzo, collegio uninominale 1. L’archivio del Ministero dell’interno per la Camera del 25 settembre 2022 è <a href="${ELIGENDO_2022}">Eligendo</a>. Questa pagina non copia da quell’archivio un totale di voti.</p>
 <h2>Risultato</h2>
 <p>Questa pagina non mostra un conteggio e non indica un eletto. La pagina Speciale elezioni del Dipartimento dice che affluenza e risultati si seguono su <a href="${ELIGENDO}">Eligendo</a>. Nessun conteggio compare qui prima delle ore 15 del 16 novembre 2026. L'<a href="${L_28}">articolo 8 della legge 22 febbraio 2000, n. 28</a>, vieta di rendere pubblici i risultati dei sondaggi nei quindici giorni precedenti il voto. Questo sito non pubblica sondaggi su questa elezione.</p>`;
 
@@ -403,6 +422,13 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: VEC_POSTAL, label: "Victorian Electoral Commission, “Vote by post”", readOn: "2026-10-24" },
           { href: "https://www.parliament.vic.gov.au/election", label: "Parliament of Victoria, “2026 Victorian state election”", readOn: "2026-10-23" },
           { href: VEC_RESULTS, label: "Victorian Electoral Commission, results", readOn: "2026-10-23" },
+          {
+            href: VEC_2022_REPORT,
+            label: "Victorian Electoral Commission, report to Parliament on the 2022 state election and 2023 Narracan supplementary election",
+            readOn: "2026-10-27",
+          },
+          { href: VEC_2022_DISTRICTS, label: "Victorian Electoral Commission, 2022 results by district", readOn: "2026-10-27" },
+          { href: VEC_2022_REGIONS, label: "Victorian Electoral Commission, 2022 results by region", readOn: "2026-10-27" },
           { href: "https://www.vec.vic.gov.au/legal", label: "Victorian Electoral Commission, “Legal”", readOn: "2026-10-23" },
           { href: "https://www.vec.vic.gov.au/electoral-boundaries/state-districts", label: "Victorian Electoral Commission, state districts", readOn: "2026-10-18" },
           { href: "https://www.vec.vic.gov.au/electoral-boundaries/state-regions", label: "Victorian Electoral Commission, state regions", readOn: "2026-10-18" },
@@ -563,6 +589,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         sourcesHeading: "Sources",
         sources: [
           { href: DECREE, label: "President’s order of 25 September 2026 (Dz.U. 2026 item 1255), PDF", readOn: "2026-10-24" },
+          { href: PKW_SENATE_2023, label: "National Electoral Commission, Senate results announcement, 17 October 2023", readOn: "2026-10-27" },
           { href: CODE, label: "Electoral code, consolidated text (Dz.U. 2026 item 1261)", readOn: "2026-10-23" },
           { href: PKW_SERVICE, label: "National Electoral Commission, Senate by-election, constituency 20", readOn: "2026-10-25" },
           { href: PKW_CALENDAR, label: "Commission election calendar", readOn: "2026-10-25" },
@@ -716,6 +743,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         sourcesHeading: "Źródła",
         sources: [
           { href: DECREE, label: "Postanowienie Prezydenta RP z 25 września 2026 r. (Dz.U. 2026 poz. 1255), PDF", readOn: "2026-10-24" },
+          { href: PKW_SENATE_2023, label: "PKW, obwieszczenie o wynikach wyborów do Senatu, 17 października 2023 r.", readOn: "2026-10-27" },
           { href: CODE, label: "Kodeks wyborczy, tekst jednolity (Dz.U. 2026 poz. 1261)", readOn: "2026-10-23" },
           { href: PKW_SERVICE, label: "PKW, Wybory uzupełniające do Senatu w okręgu nr 20", readOn: "2026-10-25" },
           { href: PKW_CALENDAR, label: "PKW, kalendarz wyborczy", readOn: "2026-10-25" },
@@ -1234,6 +1262,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: DAIT_CANDIDATES, label: "DAIT, transparency, candidates presented for 15–16 November 2026", readOn: "2026-10-26" },
           { href: CAMERA_VARIAZIONI, label: "Chamber of Deputies, changes in membership", readOn: "2026-10-26" },
           { href: ELIGENDO, label: "Interior Ministry, Eligendo", readOn: "2026-10-26" },
+          { href: ELIGENDO_2022, label: "Interior Ministry, Eligendo archive, Chamber, 25 September 2022", readOn: "2026-10-27" },
           { href: DLGS_177, label: "Legislative decree no. 177 of 23 December 2020", readOn: "2026-10-18" },
           { href: L_28, label: "Law no. 28 of 22 February 2000", readOn: "2026-10-18" },
         ],
@@ -1372,6 +1401,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: DAIT_CANDIDATES, label: "DAIT, trasparenza, candidati presentati per il 15-16 novembre 2026", readOn: "2026-10-26" },
           { href: CAMERA_VARIAZIONI, label: "Camera dei deputati, variazioni nella composizione", readOn: "2026-10-26" },
           { href: ELIGENDO, label: "Ministero dell'interno, Eligendo", readOn: "2026-10-26" },
+          { href: ELIGENDO_2022, label: "Ministero dell'interno, archivio Eligendo, Camera, 25 settembre 2022", readOn: "2026-10-27" },
           { href: DLGS_177, label: "Decreto legislativo 23 dicembre 2020, n. 177", readOn: "2026-10-18" },
           { href: L_28, label: "Legge 22 febbraio 2000, n. 28", readOn: "2026-10-18" },
         ],
