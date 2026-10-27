@@ -53,6 +53,12 @@ export const FEEDS = [
     officialUrl: "https://www.cec.gov.tw/",
     hosts: ["cec.gov.tw"],
   },
+  {
+    id: "sv-2027-02-28",
+    officialUrl: "https://tse.gob.sv/",
+    hosts: ["tse.gob.sv"],
+    preserveSnapshot: true,
+  },
 ];
 
 export function feedById(id) {
