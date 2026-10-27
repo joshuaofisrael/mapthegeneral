@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
+import { EditorialPreview } from "@/components/EditorialPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { SourceList } from "@/components/SourceList";
@@ -203,6 +204,7 @@ export function RsPresidentPage({ lang }: { lang: Lang }) {
         officeLabel="Republička izborna komisija"
         copy={copy.trust}
       />
+      <EditorialPreview path={path} />
       <div className="mt-8 space-y-8 prose-legal">
         <section className="space-y-3">
           <h2>{sr ? "Šta je poznato" : "What is on the record"}</h2>

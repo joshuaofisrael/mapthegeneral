@@ -3,9 +3,23 @@ import { BATCH1B } from "./batch1b";
 import { BATCH2 } from "./batch2";
 import { BATCH2B } from "./batch2b";
 import { BATCH2C } from "./batch2c";
+import { BATCH3A } from "./batch3a";
+import { BATCH3B } from "./batch3b";
+import { BATCH3C } from "./batch3c";
+import { BATCH3D } from "./batch3d";
 import type { EditorialPreview } from "./model";
 
-export const EDITORIAL_PREVIEWS: EditorialPreview[] = [...BATCH1, ...BATCH1B, ...BATCH2, ...BATCH2B, ...BATCH2C];
+export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
+  ...BATCH1,
+  ...BATCH1B,
+  ...BATCH2,
+  ...BATCH2B,
+  ...BATCH2C,
+  ...BATCH3A,
+  ...BATCH3B,
+  ...BATCH3C,
+  ...BATCH3D,
+];
 
 const byPath = new Map<string, EditorialPreview>();
 for (const item of EDITORIAL_PREVIEWS) {

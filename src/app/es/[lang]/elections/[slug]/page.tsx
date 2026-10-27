@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { EditorialPreview } from "@/components/EditorialPreview";
 import { notFound } from "next/navigation";
 import { GapNote } from "@/components/GapNote";
 import { SeatTable } from "@/components/SeatTable";
@@ -88,6 +89,7 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
       officeLabel="Junta Electoral Central"
       sources={sourcesById(["rd-806-2026", "loreg-boe", "loreg-jec", "jec-generales-2026", "jec-calendario", "jec-candidaturas", "congreso", "senado"])}
     >
+      <EditorialPreview path={path} />
       <JsonLd
         data={{
           "@context": "https://schema.org",
