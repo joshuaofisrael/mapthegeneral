@@ -47,7 +47,6 @@ export const LEGAL_NAV = [
 ] as const;
 
 export const PRIMARY_NAV = [
-  { href: "/es/", label: "Spain" },
   { href: "/search/", label: "Search" },
   { href: "/about/", label: "About" },
 ] as const;

@@ -151,3 +151,78 @@ body {
 .house-ad-slot {
   display: contents;
 }
+
+/* Countries disclosure. The panel overlays the page, so opening it does not grow the header. */
+.countries-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.countries-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.countries-summary::-webkit-details-marker {
+  display: none;
+}
+
+.countries-summary::marker {
+  content: "";
+}
+
+.countries-chevron {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1;
+}
+
+.countries-menu[open] > .countries-summary .countries-chevron {
+  transform: rotate(180deg);
+}
+
+/* Author CSS beats the user-agent details rule, so closed panels must be hidden here. */
+.countries-menu:not([open]) > .countries-panel {
+  display: none;
+}
+
+.countries-panel {
+  position: absolute;
+  z-index: 50;
+  top: 100%;
+  inset-inline-start: 0;
+  width: 14rem;
+  max-width: calc(100vw - 2rem);
+  max-height: min(70vh, 24rem);
+  margin-top: 0.35rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #d5dde6;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.25rem 0;
+  text-align: start;
+  box-shadow: 0 1px 2px rgba(20, 36, 56, 0.06), 0 8px 24px rgba(20, 36, 56, 0.05);
+}
+
+@media (min-width: 768px) {
+  .countries-panel {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+  }
+}
+
+.countries-link {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+}

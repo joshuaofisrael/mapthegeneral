@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { PageHeader } from "@/components/PageHeader";
 import { SITE } from "@/data/site";
+import { countryHubs } from "@/lib/country-hubs";
 
 export default function NotFound() {
   return (
@@ -16,11 +17,13 @@ export default function NotFound() {
             Home
           </Link>
         </li>
-        <li>
-          <Link className="hover:underline" href="/es/">
-            Spain
-          </Link>
-        </li>
+        {countryHubs().map((hub) => (
+          <li key={hub.code}>
+            <Link className="hover:underline" href={hub.href} lang={hub.lang} dir={hub.dir}>
+              {hub.name}
+            </Link>
+          </li>
+        ))}
         <li>
           <Link className="hover:underline" href="/search/">
             Search

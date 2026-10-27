@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { LEGAL_NAV, SITE } from "@/data/site";
 import { alphaCommunities } from "@/data/spain/places";
+import { countryHubs } from "@/lib/country-hubs";
 
 export function SiteFooter() {
   return (
@@ -13,21 +14,13 @@ export function SiteFooter() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-white/60">Explore</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <Link className="hover:underline" href="/es/">
-                Spain
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/es/en/">
-                Spain in English
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/es/es/">
-                España en español
-              </Link>
-            </li>
+            {countryHubs().map((hub) => (
+              <li key={hub.code}>
+                <Link className="hover:underline" href={hub.href} lang={hub.lang} dir={hub.dir}>
+                  {hub.name}
+                </Link>
+              </li>
+            ))}
             <li>
               <Link className="hover:underline" href="/search/">
                 Search
