@@ -5,6 +5,8 @@
    Copy follows the page language: the second path segment (/es/en/, /il/he/)
    or, failing that, <html lang>. */
 (function () {
+  if (window.__mtgConsentBoot) return;
+  window.__mtgConsentBoot = true;
   var KEY = "mtg-analytics-consent";
   var COPY = {
     en: {
@@ -231,6 +233,12 @@
     ensureFooterControl();
     if (v !== "granted" && v !== "denied") show(false);
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
-  else init();
+  // Next.js hydrates the server HTML on DOMContentLoaded. Inserting the banner
+  // or a footer control before that makes React throw away the extra nodes.
+  // The load event is after hydration. Static pages use the same path.
+  function boot() {
+    setTimeout(init, 0);
+  }
+  if (document.readyState === "complete") boot();
+  else window.addEventListener("load", boot);
 })();
