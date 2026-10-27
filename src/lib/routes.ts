@@ -61,6 +61,8 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/imprint/", lang: "en-only", title: "Legal notice", kind: "legal", text: "legal notice publisher election law" },
   { path: "/copyright/", lang: "en-only", title: "Copyright and corrections", kind: "legal", text: "copyright DMCA corrections content use" },
   { path: "/advertising/", lang: "en-only", title: "Advertising", kind: "legal", text: "advertising adsense affiliate disclosure no endorsement" },
+  { path: "/advertise/", lang: "en", title: "Advertise", kind: "page", text: "sponsor banner US election week exclusive non-political 1000" },
+  { path: "/advertise/es/", lang: "es", title: "Anunciar", kind: "page", text: "patrocinio banner semana electoral exclusivo no político" },
   { path: "/es/", lang: "en-only", title: "Spain", kind: "country", text: "España Spain elecciones generales" },
 ];
 

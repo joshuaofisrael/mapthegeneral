@@ -41,6 +41,23 @@ Pushes to `main` run `.github/workflows/pages.yml`. In the repo, set **Settings 
 
 IndexNow key file: `public/a7c3e91b4d2f4086b5e0c1a9d8f74632.txt`. After a deploy, the workflow submits the URL list to IndexNow and continues if that call fails.
 
+## Sponsorship slot
+
+The homepage and each country hub show one slot directly under the top house-ad banner. It is labelled “Your ad here” in the page language. English pages, including a country hub’s English switch, use the English lines. The button links to `/advertise/` (Spanish hubs link to `/advertise/es/`). The Israel results embed does not show the slot. The box has a reserved `min-height`, so the banner does not move the page when the type loads or the line wraps.
+
+To mark the slot sold, change the single value `SOLD_SPONSOR` in `src/data/sponsorship.ts` and rebuild:
+
+```ts
+export const SOLD_SPONSOR: { name: string; href: string } | null = {
+  name: "Example Maps",
+  href: "https://example.com/",
+};
+```
+
+Leave it `null` while the slot is for sale. A name and `href` replace the offer with a localized “Sponsored by <name>” banner. That link uses `rel="sponsored noopener"`. No other file needs an edit.
+
+Terms and the $1,000 checkout are on `/advertise/` and `/advertise/es/`.
+
 ## Spain in this release
 
 General election **Sunday, 29 November 2026**, called by **Real Decreto 806/2026**.
