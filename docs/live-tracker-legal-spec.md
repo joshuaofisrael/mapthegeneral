@@ -9,6 +9,8 @@ No new route is required if the worker already proxies `/il-live/*`. If it is pi
 to `/il-live/il-2026-knesset/*` only, the route has to be widened to `/il-live/*`.
 This repository cannot edit that Cloudflare route. Bulgaria’s page also reads
 `/il-live/bg-2026-11-01/results.json` and falls back to `/live/bg-2026-11-01.json`.
+New Zealand’s page reads `/il-live/nz-2026-11-07/results.json` and falls back to
+`/live/nz-2026-11-07.json`.
 
 ## Rules for every tracker
 

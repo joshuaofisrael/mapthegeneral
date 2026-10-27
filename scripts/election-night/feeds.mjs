@@ -13,6 +13,12 @@ export const FEEDS = [
     preserveSnapshot: true,
   },
   {
+    id: "nz-2026-11-07",
+    officialUrl: "https://electionresults.govt.nz/",
+    hosts: ["electionresults.govt.nz"],
+    preserveSnapshot: true,
+  },
+  {
     id: "ie-2026-seanad",
     officialUrl: "https://www.oireachtas.ie/en/elections/",
     hosts: ["oireachtas.ie", "data.oireachtas.ie"],

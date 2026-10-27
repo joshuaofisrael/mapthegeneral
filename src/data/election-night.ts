@@ -76,6 +76,15 @@ export const NIGHT_ELECTIONS: NightDef[] = [
     pages: {},
   },
   {
+    id: "nz-2026-11-07",
+    timeZone: "Pacific/Auckland",
+    title: "New Zealand · general election · 7 November 2026",
+    detail: "No count before 19:00 New Zealand daylight time. No party names on this card.",
+    sourceHref: "https://electionresults.govt.nz/",
+    links: [{ href: "/nz/en/elections/general-2026/", label: "General election", lang: "en" }],
+    pages: {},
+  },
+  {
     id: "ie-2026-seanad",
     timeZone: "Europe/Dublin",
     title: "Ireland · Seanad bye-election · 6 November 2026",
