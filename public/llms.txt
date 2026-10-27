@@ -59731,6 +59731,9 @@
 - [Bulgaria](https://mapthegeneral.com/bg/en/)
 - [Избор за президент, 1 ноември 2026 г.](https://mapthegeneral.com/bg/bg/elections/prezident-2026/)
 - [Bulgaria presidential election, 1 November 2026](https://mapthegeneral.com/bg/en/elections/president-2026/)
+- [New Zealand](https://mapthegeneral.com/nz/)
+- [New Zealand](https://mapthegeneral.com/nz/en/)
+- [New Zealand general election, 7 November 2026](https://mapthegeneral.com/nz/en/elections/general-2026/)
 - [תוצאות הבחירות 2026](https://mapthegeneral.com/il/he/results/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
@@ -59757,6 +59760,8 @@ Italy (https://mapthegeneral.com/it/): Camera dei deputati and Senato della Repu
 Mexico (https://mapthegeneral.com/mx/): Federal midterm on Sunday, 6 June 2027: 500 seats in the Cámara de Diputados, and local elections in the 32 entidades federativas, including 17 gubernaturas on the INE page. This release has the national page, the 32 entidades, the 300 federal single-member districts, the five plurinominal constituencies, and the 2,478 INEGI catalog rows (municipios and the 16 alcaldías of Ciudad de México), in Spanish and English. Sitting municipal presidents are not named.
 
 Norway (https://mapthegeneral.com/no/): National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.
+
+New Zealand (https://mapthegeneral.com/nz/): National hub. General election on Saturday 7 November 2026, with voting places open from 9am to 7pm. No municipality pages, no party names, and no count before 7:00 pm New Zealand daylight time that day.
 
 Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 2,479 gminas, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Candidate lists and wards are not in this release.
 

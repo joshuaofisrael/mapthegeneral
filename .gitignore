@@ -42,6 +42,9 @@
 # Bulgaria hub and election HTML is generated at build time
 /public/bg/
 
+# New Zealand hub and election HTML is generated at build time
+/public/nz/
+
 # production
 /build
 
