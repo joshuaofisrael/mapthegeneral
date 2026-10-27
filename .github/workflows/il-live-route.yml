@@ -6,6 +6,7 @@ name: Narrow the il-live Worker route
 
 on:
   push:
+    branches: [main]
     paths:
       - scripts/il-live/configure-route.mjs
       - .github/workflows/il-live-route.yml
@@ -17,6 +18,9 @@ permissions:
 jobs:
   route:
     runs-on: ubuntu-latest
+    # Repo-level token names were empty. The Pages environment is the other
+    # place CI credentials live, and only main may use it.
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
