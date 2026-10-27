@@ -27,6 +27,38 @@
       "reason": "The Interior Ministry transparency page lists him for this constituency, born in Torricella Peligna (CH) on 3 January 1960. The curriculum link on that page (LucianoDAmico_CV.pdf) is marked disabled and returned HTTP 404 on 27 October 2026. Italian Wikipedia has no article at Luciano D'Amico (HTTP 404 the same day). The Abruzzo regional council list names a councillor D'AMICO LUCIANO, without a birth date or a personal profile URL, so that list was not used as his profile."
     },
     {
+      "name": "Ray McAdam",
+      "listId": "seanad-2026",
+      "pages": ["/ie/en/elections/seanad-2026/"],
+      "contest": "Ireland Seanad bye-election, Cultural and Educational Panel, 6 November 2026",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel",
+      "reason": "The Seanad Returning Officer’s list of 16 October 2026 prints this name and no ballot number, no separate nominating body, and no personal URL. The Oireachtas elections page links that PDF and not a profile. No official profile was on the list read on 27 October 2026."
+    },
+    {
+      "name": "Caitlín Ní Bhroin",
+      "listId": "seanad-2026",
+      "pages": ["/ie/en/elections/seanad-2026/"],
+      "contest": "Ireland Seanad bye-election, Cultural and Educational Panel, 6 November 2026",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel",
+      "reason": "The Seanad Returning Officer’s list of 16 October 2026 prints this name and no ballot number, no separate nominating body, and no personal URL. The Oireachtas elections page links that PDF and not a profile. No official profile was on the list read on 27 October 2026."
+    },
+    {
+      "name": "Maeve Maria O’Rourke",
+      "listId": "seanad-2026",
+      "pages": ["/ie/en/elections/seanad-2026/"],
+      "contest": "Ireland Seanad bye-election, Cultural and Educational Panel, 6 November 2026",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel",
+      "reason": "The Seanad Returning Officer’s list of 16 October 2026 prints this name and no ballot number, no separate nominating body, and no personal URL. The Oireachtas elections page links that PDF and not a profile. No official profile was on the list read on 27 October 2026."
+    },
+    {
+      "name": "Patrick Paul Walsh",
+      "listId": "seanad-2026",
+      "pages": ["/ie/en/elections/seanad-2026/"],
+      "contest": "Ireland Seanad bye-election, Cultural and Educational Panel, 6 November 2026",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel",
+      "reason": "The Seanad Returning Officer’s list of 16 October 2026 prints this name and no ballot number, no separate nominating body, and no personal URL. The Oireachtas elections page links that PDF and not a profile. No official profile was on the list read on 27 October 2026."
+    },
+    {
       "name": "Danilo Ranieri",
       "listId": "camera-chieti-2026",
       "pages": ["/it/it/elections/camera-chieti-2026/", "/it/en/elections/camera-chieti-2026/"],

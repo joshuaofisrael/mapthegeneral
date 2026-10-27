@@ -59,6 +59,22 @@ function expectPlain(list: CandidateList, name: string): void {
   if (row.links?.length) errors.push(`${list.id}: ${name} has a link but is unverified`);
 }
 
+const seanad = loadCandidateList("seanad-2026", root);
+const seanadOrder = orderedCandidates(seanad).map((row) => row.surname).join("|");
+if (seanadOrder !== "McAdam|Ní Bhroin|O’Rourke|Walsh") {
+  errors.push(`seanad-2026: source order was ${seanadOrder}`);
+}
+for (const name of ["Ray McAdam", "Caitlín Ní Bhroin", "Maeve Maria O’Rourke", "Patrick Paul Walsh"]) {
+  expectPlain(seanad, name);
+}
+const seanadHtml = renderCandidateListHtml(seanad, "en");
+if (/Registered candidates|Polish alphabetical/.test(seanadHtml)) {
+  errors.push("seanad-2026: copy uses the default registered-candidate wording");
+}
+if (!seanadHtml.includes("Ray McAdam") || !seanadHtml.includes("Patrick Paul Walsh")) {
+  errors.push("seanad-2026: rendered list dropped a name");
+}
+
 const senat = loadCandidateList("senat-20-2026", root);
 const senatOrder = orderedCandidates(senat).map((row) => row.surname).join("|");
 if (senatOrder !== "Kubicki|Naruszewicz|Różańska|Senyszyn") {
