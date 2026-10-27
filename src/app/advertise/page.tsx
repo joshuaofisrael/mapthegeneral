@@ -4,7 +4,7 @@ import { SITE, absoluteUrl } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 
 const description =
-  "One exclusive banner on the homepage and country hubs, 3–6 November 2026, $1,000. Non-political businesses only. Ads are reviewed. No traffic guarantee.";
+  "One exclusive banner on the homepage and country hubs during Israel election night results + 3 days, 27–30 Oct 2026, $1,000. Non-political businesses only. Ads are reviewed. No traffic guarantee.";
 
 const base = pageMetadata({
   title: "Advertise",

@@ -45,6 +45,8 @@ IndexNow key file: `public/a7c3e91b4d2f4086b5e0c1a9d8f74632.txt`. After a deploy
 
 The homepage and each country hub show one slot directly under the top house-ad banner. It is labelled “Your ad here” in the page language. English pages, including a country hub’s English switch, use the English lines. The button links to `/advertise/` (Spanish hubs link to `/advertise/es/`). The Israel results embed does not show the slot. The box has a reserved `min-height`, so the banner does not move the page when the type loads or the line wraps.
 
+The current offer is the Israel election-night window, 27–30 Oct 2026, through 23:59 Israel time. The offer is in the static HTML and stays visible by default. A page script hides the slot after 30 Oct 2026 at 23:59 Asia/Jerusalem, so it comes down without a rebuild. A sold banner uses the same cutoff.
+
 To mark the slot sold, change the single value `SOLD_SPONSOR` in `src/data/sponsorship.ts` and rebuild:
 
 ```ts
