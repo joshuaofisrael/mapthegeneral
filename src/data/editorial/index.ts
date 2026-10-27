@@ -10,6 +10,7 @@ import { BATCH3D } from "./batch3d";
 import { BATCH4 } from "./batch4";
 import { BATCH5 } from "./batch5";
 import { BATCH_EE } from "./batch-ee";
+import { BATCH_FI } from "./batch-fi";
 import { BATCH_NL } from "./batch-nl";
 import { BATCH_SV } from "./batch-sv";
 import { BATCH_TW } from "./batch-tw";
@@ -31,6 +32,7 @@ export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
   ...BATCH_SV,
   ...BATCH_EE,
   ...BATCH_NL,
+  ...BATCH_FI,
 ];
 
 const byPath = new Map<string, EditorialPreview>();

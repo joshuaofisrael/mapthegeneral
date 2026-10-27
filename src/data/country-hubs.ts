@@ -639,10 +639,12 @@ export const NL_COUNTRY_HUB: CountryHub = {
 COUNTRY_HUBS.push(NL_COUNTRY_HUB);
 
 const FI_FI = "/fi/fi/elections/eduskunta-2027/";
+const FI_SV = "/fi/sv/elections/riksdagsval-2027/";
 const FI_EN = "/fi/en/elections/parliamentary-2027/";
 
 const fiAlternates = [
   { hreflang: "fi", path: "/fi/fi/" },
+  { hreflang: "sv", path: "/fi/sv/" },
   { hreflang: "en", path: "/fi/en/" },
   { hreflang: "x-default", path: "/fi/fi/" },
 ];
@@ -664,6 +666,13 @@ export const FI_COUNTRY_HUB: CountryHub = {
       text: "Suomi eduskuntavaalit 18. huhtikuuta 2027",
     },
     {
+      path: "/fi/sv/",
+      lang: "sv",
+      title: "Finland",
+      kind: "country",
+      text: "Finland riksdagsval 18 april 2027 justitieministeriet",
+    },
+    {
       path: "/fi/en/",
       lang: "en",
       title: "Finland",
@@ -676,6 +685,13 @@ export const FI_COUNTRY_HUB: CountryHub = {
       title: "Eduskuntavaalit, 18. huhtikuuta 2027",
       kind: "election",
       text: "Suomi eduskuntavaalit 18. huhtikuuta 2027",
+    },
+    {
+      path: FI_SV,
+      lang: "sv",
+      title: "Riksdagsval, 18 april 2027",
+      kind: "election",
+      text: "Finland riksdagsval 18 april 2027",
     },
     {
       path: FI_EN,
@@ -693,21 +709,23 @@ export const FI_COUNTRY_HUB: CountryHub = {
       description:
         "Suomi Map the Generalissa. Eduskuntavaalit sunnuntaina 18. huhtikuuta 2027. Epävirallinen tieto.",
       h1: "Suomi",
-      lede: "Suomenkielinen sivu on pääsivu. English on sen rinnalla.",
+      lede: "Suomenkielinen sivu on pääsivu. Svenska ja English ovat sen rinnalla.",
       alternates: [
         { hreflang: "fi", path: "/fi/" },
+        { hreflang: "sv", path: "/fi/sv/" },
         { hreflang: "en", path: "/fi/en/" },
         { hreflang: "x-default", path: "/fi/" },
       ],
       nav: [
         { href: "/", label: "Map the General" },
+        { href: "/fi/sv/", label: "Svenska" },
         { href: "/fi/en/", label: "English" },
       ],
       crumbs: [
         { name: "Home", path: "/" },
         { name: "Suomi", path: "/fi/" },
       ],
-      bodyHtml: `<p><a href="/fi/fi/">Suomi</a> · <a href="/fi/en/">English</a></p>
+      bodyHtml: `<p><a href="/fi/fi/">Suomi</a> · <a href="/fi/sv/">Svenska</a> · <a href="/fi/en/">English</a></p>
 <p><a href="${FI_FI}">18. huhtikuuta 2027</a> eduskuntavaalit ovat suomenkielisellä sivulla.</p>`,
     },
     {
@@ -722,6 +740,7 @@ export const FI_COUNTRY_HUB: CountryHub = {
       nav: [
         { href: "/", label: "Map the General" },
         { href: FI_FI, label: "Vaalit" },
+        { href: "/fi/sv/", label: "Svenska" },
         { href: "/fi/en/", label: "English" },
       ],
       crumbs: [
@@ -754,6 +773,7 @@ export const FI_COUNTRY_HUB: CountryHub = {
         { href: "/", label: "Map the General" },
         { href: FI_EN, label: "The election" },
         { href: "/fi/fi/", label: "Suomi" },
+        { href: "/fi/sv/", label: "Svenska" },
       ],
       crumbs: [
         { name: "Home", path: "/" },
@@ -769,6 +789,38 @@ export const FI_COUNTRY_HUB: CountryHub = {
 <ul>
 <li><a href="https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF">Ministry of Justice, letter of 16 September 2026</a></li>
 <li><a href="https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit">Kuntaliitto circular</a></li>
+<li><a href="https://tulospalvelu.vaalit.fi/">tulospalvelu.vaalit.fi</a></li>
+</ul>`,
+    },
+    {
+      path: "/fi/sv/",
+      htmlLang: "sv",
+      title: "Finland — valen 2027",
+      description:
+        "Nationell guide för Finland. Riksdagsval söndagen den 18 april 2027. Inga kommunsidor.",
+      h1: "Finland",
+      lede: "Nationell guide på svenska. Inga kommunsidor. Inga röster före klockan 20 östeuropeisk sommartid den 18 april 2027.",
+      alternates: fiAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: FI_SV, label: "Valet" },
+        { href: "/fi/fi/", label: "Suomi" },
+        { href: "/fi/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Suomi", path: "/fi/" },
+        { name: "Svenska", path: "/fi/sv/" },
+      ],
+      bodyHtml: `<h2>Valet i denna utgåva</h2>
+<p>Justitieministeriets brev den 16 september 2026 anger den 18 april 2027 som valdag för riksdagsvalet. Tidsplanen anger röstningen som klockan 9–20.</p>
+<p><a href="${FI_SV}">Riksdagsval, 18 april 2027</a></p>
+<h2>Personuppgifter</h2>
+<p>Finland är i Europeiska unionen, så den allmänna dataskyddsförordningen gäller. Dataskyddslagen lästes inte paragraf för paragraf. Denna guide publicerar ingen röstlängd och ingen personbeteckning.</p>
+<h2>Källor</h2>
+<ul>
+<li><a href="https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF">Justitieministeriet, brev den 16 september 2026</a></li>
+<li><a href="https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit">Kuntaliitto, cirkulär</a></li>
 <li><a href="https://tulospalvelu.vaalit.fi/">tulospalvelu.vaalit.fi</a></li>
 </ul>`,
     },
