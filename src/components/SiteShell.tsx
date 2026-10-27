@@ -16,11 +16,11 @@ export function SiteShell({ children }: { children: ReactNode }) {
         {SITE.officialNotUs}
       </p>
       <SiteHeader />
+      <HouseAd />
       <IlResultsBanner />
       <ElectionLawNotice />
       <main id="main" className="mx-auto w-full max-w-site flex-1 px-4 py-8 sm:py-10">
         {children}
-        <HouseAd />
       </main>
       <SiteFooter />
     </div>
