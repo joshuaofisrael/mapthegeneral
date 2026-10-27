@@ -146,7 +146,7 @@ function webPageJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage): Reco
 export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSeoPage, root = process.cwd()): string {
   const imageUrl = existingImageUrl(profile, root);
   const candidateLang = page.lang as CandidateLang;
-  const candidateReady = page.lang === "en" || page.lang === "pl" || page.lang === "it";
+  const candidateReady = page.lang === "en" || page.lang === "pl" || page.lang === "it" || page.lang === "bg";
   const candidateList = candidateReady ? pageCandidateList(profile, root) : null;
   if (candidateList && !listLanguages(candidateList).includes(candidateLang)) {
     throw new Error(`${page.path}: candidate list ${profile.candidateListId} has no ${page.lang} copy`);
