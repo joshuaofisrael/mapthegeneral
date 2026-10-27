@@ -5,23 +5,25 @@
  * data/review/approvals.jsonl contains the sha256 of that exact file and a
  * human approver. This script never writes approvals.jsonl.
  *
- * Automated:
+ * HIGH (owner approval of the exact sha256 only; a moderate clearance cannot release these):
  *   1 allegation keywords next to a person or organisation
  *   2 emails, phone numbers, and street addresses of private persons
+ *   6 election dates and deadlines with no election-authority URL
+ *   8 legal complaints or restrictions on the manual hold list
+ * MODERATE (data/review/moderate-clearances.jsonl, verdict "safe", matching sha256;
+ * or the same owner approval). The gate never writes that file:
  *   3 image / asset provenance in data/review/asset-rights.json
  *   4 source URL and retrieval time on candidate and result data
- *   6 final/certified status, distinct count labels, election-authority dates
+ *   5 general advice on the manual hold list
+ *   6 projection labels, final/certified status, distinct count labels
  *   7 wording that presents this site as official or affiliated
- * Manual hold list (data/review/holds.jsonl, status HOLD_REVIEW):
- *   5 high-impact guidance
- *   8 legal complaints or restrictions
- *   any other item a reviewer puts on hold
  *
  * Judgement only (no detector): health, sexuality, children, or victim
  * details beyond contact data; whether two sources disagree; whether a
  * headline overclaims; synthetic media that could be mistaken for evidence;
  * whether ordinary reporting on medicine, law, tax, or markets is personalised
- * advice. Those stay on the manual hold list.
+ * advice; polling places, eligibility, and procedures outside the structured
+ * date fields. Those stay on the manual hold list.
  *
  *   node --experimental-strip-types scripts/check-legal-hold.ts
  *   node --experimental-strip-types scripts/check-legal-hold.ts --self-test
@@ -48,6 +50,8 @@ const ORG_WORD =
   /^(?:Commission|Committee|Ministry|Ministries|Parliament|Knesset|Senate|Congress|Council|Government|Court|Office|Authority|Bureau|Agency|Service|Department|Party|Electoral)$/;
 const ORG_SUFFIX =
   /\b(?:Committee|Commission|Party|Ministry|Parliament|Knesset|Senate|Congress|Council|Government|Court|Electoral)\b/;
+const NOT_A_PERSON =
+  /^(?:United States|United Kingdom|New Zealand|New South|South Wales|Hong Kong|Costa Rica|Puerto Rico|El Salvador|Czech Republic|Saudi Arabia|South Africa|Sri Lanka|North Macedonia|Burkina Faso|Sierra Leone)$/i;
 
 const EMAIL = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
 const PERSONAL_MAIL = /@(?:gmail|googlemail|hotmail|outlook|live|yahoo|icloud|proton|protonmail|aol|gmx)\./i;
@@ -72,9 +76,11 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/;
 
 type Rule = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+type Severity = "HIGH" | "MODERATE";
 
 type Flag = {
   rule: Rule;
+  severity: Severity;
   title: string;
   flagged: string;
   sources: string[];
@@ -83,6 +89,15 @@ type Flag = {
 };
 
 type Approval = { path: string; sha256: string; approver: string };
+type Clearance = {
+  ts: string;
+  item: string;
+  rule: number;
+  fix: string;
+  independent_reviewer: string;
+  verdict: string;
+  sha256: string;
+};
 type Hold = { path: string; status: string; rule?: number; title?: string; note?: string };
 type RightsEntry = { path: string; origin?: string; by?: string; note?: string };
 
@@ -94,6 +109,7 @@ type Options = {
   queuePath: string;
   holdsPath: string;
   approvalsPath: string;
+  clearancesPath: string;
   rightsPath: string;
   writeQueue: boolean;
   quiet: boolean;
@@ -144,6 +160,7 @@ function titleFrom(text: string, draft: string): string {
 function personalNames(slice: string): string[] {
   const names = slice.match(NAME) ?? [];
   return names.filter((name) => {
+    if (NOT_A_PERSON.test(name)) return false;
     if (ORG_WORD.test(name.split(/\s+/).pop() ?? "")) return false;
     const at = slice.indexOf(name);
     const next = slice.slice(at + name.length).match(/^\s+([\p{Lu}][\p{L}'’-]+)/u);
@@ -161,6 +178,7 @@ function benignAllegation(text: string, index: number, word: string): boolean {
   const after = text.slice(index + word.length, index + word.length + 20);
   if (/crime/i.test(word) && /police and\s*$/i.test(before)) return true;
   if (/criminal/i.test(word) && /^[-\s]?records?\b/i.test(after)) return true;
+  if (/misconduct/i.test(word) && /our own willful\s+$/i.test(before)) return true;
   return false;
 }
 
@@ -184,10 +202,25 @@ function negated(sentence: string): boolean {
   return /\b(not|never|no|non|without|unofficial)\b|n't|non-/i.test(sentence);
 }
 
-function pushFlag(flags: Flag[], flag: Flag) {
-  const key = `${flag.draft_path}\n${flag.rule}\n${flag.flagged}`;
+function severityFor(rule: Rule, logistics: boolean): Severity {
+  if (rule === 1 || rule === 2 || rule === 8) return "HIGH";
+  if (rule === 6 && logistics) return "HIGH";
+  return "MODERATE";
+}
+
+function pushFlag(flags: Flag[], flag: Omit<Flag, "severity"> & { logistics?: boolean }) {
+  const stored: Flag = {
+    rule: flag.rule,
+    severity: severityFor(flag.rule, flag.logistics === true),
+    title: flag.title,
+    flagged: flag.flagged,
+    sources: flag.sources,
+    suggestion: flag.suggestion,
+    draft_path: flag.draft_path,
+  };
+  const key = `${stored.draft_path}\n${stored.rule}\n${stored.flagged}`;
   if (flags.some((item) => `${item.draft_path}\n${item.rule}\n${item.flagged}` === key)) return;
-  flags.push(flag);
+  flags.push(stored);
 }
 
 function checkAllegations(text: string, draft: string, flags: Flag[]) {
@@ -274,12 +307,22 @@ function checkAffiliation(text: string, draft: string, flags: Flag[]) {
   }
 }
 
+function projectionDenied(text: string, index: number, length: number): boolean {
+  const end = index + length;
+  const around = text.slice(Math.max(0, index - 180), Math.min(text.length, end + 120));
+  if (PROJECTION_NEGATION.test(around)) return true;
+  const soon = text.slice(end, Math.min(text.length, end + 80));
+  if (!soon.includes("?")) return false;
+  const answer = text.slice(end, Math.min(text.length, end + 800));
+  return PROJECTION_NEGATION.test(answer);
+}
+
 function checkProjectionLanguage(text: string, draft: string, flags: Flag[]) {
   PROJECTION.lastIndex = 0;
   let match: RegExpExecArray | null;
   while ((match = PROJECTION.exec(text))) {
+    if (projectionDenied(text, match.index, match[0].length)) continue;
     const around = text.slice(Math.max(0, match.index - 180), Math.min(text.length, match.index + match[0].length + 120));
-    if (PROJECTION_NEGATION.test(around)) continue;
     pushFlag(flags, {
       rule: 6,
       title: titleFrom(text, draft),
@@ -387,6 +430,7 @@ function checkCandidateDocument(doc: Record<string, unknown>, text: string, draf
       sources: [],
       suggestion: SUGGESTION[6],
       draft_path: draft,
+      logistics: true,
     });
   }
 }
@@ -456,8 +500,27 @@ function botApprover(name: string): boolean {
   return /^(politics bot|assistant|auto|automatic|self|ci|bot|github-actions(\[bot\])?)$/i.test(name.trim());
 }
 
-function approvalsFor(file: string, hash: string, approvals: Approval[]): boolean {
-  return approvals.some((row) => row.path === file && row.sha256 === hash && row.approver.trim().length > 1 && !botApprover(row.approver));
+function ownerApprover(name: string): boolean {
+  return /^(joshua|joshua israel|joshuaofisrael)$/i.test(name.trim());
+}
+
+function ownerRelease(file: string, hash: string, approvals: Approval[]): boolean {
+  return approvals.some((row) => row.path === file && row.sha256 === hash && ownerApprover(row.approver));
+}
+
+function moderateRelease(flag: Flag, hash: string, clearances: Clearance[]): boolean {
+  if (flag.severity !== "MODERATE") return false;
+  return clearances.some(
+    (row) =>
+      row.item === flag.draft_path &&
+      row.rule === flag.rule &&
+      row.sha256 === hash &&
+      row.verdict === "safe" &&
+      row.ts.trim().length > 0 &&
+      row.fix.trim().length > 0 &&
+      row.independent_reviewer.trim().length > 1 &&
+      !botApprover(row.independent_reviewer),
+  );
 }
 
 function rightsEntries(file: string): RightsEntry[] {
@@ -526,6 +589,7 @@ function checkElectionDates(root: string, flags: Flag[]) {
           sources: [],
           suggestion: SUGGESTION[6],
           draft_path: relFrom(root, lawPath),
+          logistics: true,
         });
       }
     }
@@ -551,6 +615,7 @@ function checkElectionDates(root: string, flags: Flag[]) {
           sources: [],
           suggestion: SUGGESTION[6],
           draft_path: relFrom(root, file),
+          logistics: true,
         });
       }
     }
@@ -594,11 +659,21 @@ function checkIsraelLabels(root: string, flags: Flag[]) {
     const file = path.join(root, rel);
     if (!existsSync(file)) continue;
     const text = readFileSync(file, "utf8");
-    const distinct =
+    const oldEmbed =
       text.includes('stage === "final"') &&
       text.includes("Final results") &&
       text.includes("Preliminary official count") &&
-      (rel.endsWith(".mjs") || (text.includes("תוצאות סופיות") && text.includes("ספירה רשמית ראשונית")));
+      text.includes("תוצאות סופיות") &&
+      text.includes("ספירה רשמית ראשונית");
+    const newEmbed =
+      text.includes('stage === "final"') &&
+      text.includes("Final Committee count") &&
+      text.includes("Preliminary official count") &&
+      text.includes("ספירת קולות סופית של הוועדה") &&
+      text.includes("ספירה רשמית ראשונית");
+    const oldSnapshot = text.includes('stage === "final"') && text.includes("Final results") && text.includes("Preliminary official count");
+    const newSnapshot = /not final/i.test(text) && /not an official seat allocation/i.test(text);
+    const distinct = rel.endsWith(".mjs") ? oldSnapshot || newSnapshot : oldEmbed || newEmbed;
     if (!distinct) {
       pushFlag(flags, {
         rule: 6,
@@ -612,7 +687,7 @@ function checkIsraelLabels(root: string, flags: Flag[]) {
   }
 }
 
-function applyHolds(root: string, holds: Hold[], approvals: Approval[], flags: Flag[], hashOf: Map<string, string>) {
+function applyHolds(root: string, holds: Hold[], flags: Flag[], hashOf: Map<string, string>) {
   for (const hold of holds) {
     if (hold.status !== "HOLD_REVIEW" || !hold.path) continue;
     const draft = hold.path.replace(/\\/g, "/");
@@ -620,7 +695,6 @@ function applyHolds(root: string, holds: Hold[], approvals: Approval[], flags: F
     if (!existsSync(absolute) || !statSync(absolute).isFile()) continue;
     const hash = hashOf.get(draft) ?? sha256(readFileSync(absolute));
     hashOf.set(draft, hash);
-    if (approvalsFor(draft, hash, approvals)) continue;
     const rule = (hold.rule === 5 || hold.rule === 8 ? hold.rule : 8) as Rule;
     pushFlag(flags, {
       rule,
@@ -690,6 +764,18 @@ function scanFile(file: string, options: Options, entries: RightsEntry[], flags:
   else checkVoteTable(text, draft, flags);
 }
 
+function readClearances(file: string): Clearance[] {
+  return loadJsonl(file).map((row) => ({
+    ts: String(row.ts ?? ""),
+    item: String(row.item ?? ""),
+    rule: typeof row.rule === "number" ? row.rule : Number(row.rule),
+    fix: String(row.fix ?? ""),
+    independent_reviewer: String(row.independent_reviewer ?? ""),
+    verdict: String(row.verdict ?? ""),
+    sha256: String(row.sha256 ?? ""),
+  }));
+}
+
 function readApprovals(file: string): Approval[] {
   return loadJsonl(file).map((row) => ({
     path: String(row.path ?? ""),
@@ -716,6 +802,7 @@ function queueLine(flag: Flag): string {
     title: flag.title,
     flagged: flag.flagged,
     rule: flag.rule,
+    severity: flag.severity,
     sources: flag.sources,
     suggestion: flag.suggestion,
     draft_path: flag.draft_path,
@@ -744,17 +831,21 @@ function appendQueue(queuePath: string, flags: Flag[]) {
   if (fresh.length) appendFileSync(queuePath, `${fresh.join("\n")}\n`);
 }
 
-function unapproved(flags: Flag[], approvals: Approval[], hashOf: Map<string, string>): Flag[] {
+function blockedFlags(flags: Flag[], approvals: Approval[], clearances: Clearance[], hashOf: Map<string, string>): Flag[] {
   return flags.filter((flag) => {
     const hash = hashOf.get(flag.draft_path);
     if (!hash) return true;
-    return !approvalsFor(flag.draft_path, hash, approvals);
+    if (ownerRelease(flag.draft_path, hash, approvals)) return false;
+    if (flag.severity === "HIGH") return true;
+    return !moderateRelease(flag, hash, clearances);
   });
 }
 
 export function runGate(options: Options): Flag[] {
   const approvalsBefore = existsSync(options.approvalsPath) ? readFileSync(options.approvalsPath) : Buffer.alloc(0);
+  const clearancesBefore = existsSync(options.clearancesPath) ? readFileSync(options.clearancesPath) : Buffer.alloc(0);
   const approvals = readApprovals(options.approvalsPath);
+  const clearances = readClearances(options.clearancesPath);
   const holds = readHolds(options.holdsPath);
   const entries = rightsEntries(options.rightsPath);
   const flags: Flag[] = [];
@@ -769,20 +860,21 @@ export function runGate(options: Options): Flag[] {
     checkElectionDates(options.root, flags);
     checkNightLabels(options.root, flags);
     checkIsraelLabels(options.root, flags);
-    applyHolds(options.root, holds, approvals, flags, hashOf);
+    applyHolds(options.root, holds, flags, hashOf);
   }
-  const blocked = unapproved(flags, approvals, hashOf);
+  const blocked = blockedFlags(flags, approvals, clearances, hashOf);
   if (options.writeQueue) appendQueue(options.queuePath, blocked);
   const approvalsAfter = existsSync(options.approvalsPath) ? readFileSync(options.approvalsPath) : Buffer.alloc(0);
-  if (!approvalsBefore.equals(approvalsAfter)) {
-    console.error("legal-hold: the gate modified approvals.jsonl. It must never self-approve.");
+  const clearancesAfter = existsSync(options.clearancesPath) ? readFileSync(options.clearancesPath) : Buffer.alloc(0);
+  if (!approvalsBefore.equals(approvalsAfter) || !clearancesBefore.equals(clearancesAfter)) {
+    console.error("legal-hold: the gate modified approvals or clearances. It must never self-approve.");
     process.exit(2);
   }
   if (options.quiet) return blocked;
   if (blocked.length) {
     console.error(`legal-hold: ${blocked.length} flagged item(s) would publish`);
     for (const flag of blocked.slice(0, 40)) {
-      console.error(`  - rule ${flag.rule} ${flag.draft_path}: ${flag.flagged.slice(0, 180)}`);
+      console.error(`  - ${flag.severity} rule ${flag.rule} ${flag.draft_path}: ${flag.flagged.slice(0, 180)}`);
     }
     if (blocked.length > 40) console.error(`  - … ${blocked.length - 40} more`);
   } else {
@@ -801,6 +893,7 @@ function parseArgs(argv: string[]): Options & { selfTest: boolean } {
     queuePath: path.join(root, "data/review/hold-queue.jsonl"),
     holdsPath: path.join(root, "data/review/holds.jsonl"),
     approvalsPath: path.join(root, "data/review/approvals.jsonl"),
+    clearancesPath: path.join(root, "data/review/moderate-clearances.jsonl"),
     rightsPath: path.join(root, "data/review/asset-rights.json"),
     writeQueue: true,
     quiet: false,
@@ -841,12 +934,14 @@ function selfTest(): number {
   const rights = path.join(root, "rights.json");
   const holds = path.join(root, "holds.jsonl");
   const approvals = path.join(root, "approvals.jsonl");
+  const clearances = path.join(root, "moderate-clearances.jsonl");
   const queue = path.join(root, "queue.jsonl");
   writeJson(rights, {
     entries: [{ path: "public/images/heroes/", origin: "generated", by: "us", note: "test hero" }],
   });
   writeFileSync(holds, "");
   writeFileSync(approvals, "");
+  writeFileSync(clearances, "");
   const content = path.join(root, "src");
   mkdirSync(content, { recursive: true });
   const bad = path.join(content, "allegation.txt");
@@ -865,6 +960,17 @@ function selfTest(): number {
   writeFileSync(path.join(content, "office-title.txt"), "The key-dates page lists Police and Crime Commissioners in England and Wales for May 2028.\n");
   writeFileSync(path.join(content, "record.txt"), "The curriculum links for Luciano D'Amico include criminal-record certificates, which are not copied here.\n");
   writeFileSync(path.join(content, "no-projection.txt"), "This page does not publish a poll, a projection, or a result call. It publishes no exit poll.\n");
+  writeFileSync(
+    path.join(content, "faq-projection.txt"),
+    `Does this site publish seat projections or polls? ${"x".repeat(240)} No. Seats are shown only once the commission assigns them.\n`,
+  );
+  writeFileSync(path.join(content, "calls-projection.txt"), "The exit poll gives the list 40 percent and calls the race.\n");
+  writeFileSync(
+    path.join(content, "indemnity.txt"),
+    "This indemnity does not apply to the extent a claim is caused by our own willful misconduct. These terms are governed by the laws of the State of Florida, United States of America.\n",
+  );
+  writeFileSync(path.join(content, "named-misconduct.txt"), "Jordan Lee committed willful misconduct, according to the complaint.\n");
+  writeFileSync(path.join(content, "deadline.json"), JSON.stringify({ candidates: [], submissionDeadline: "2026-11-01" }));
   writeFileSync(path.join(content, "waiting.txt"), "This page is waiting for the official count. It does not assign seats.\n");
   writeFileSync(path.join(content, "saint.txt"), "St. Gallen 3203 SG Wahlkreis St. Gallen is a commune, not a private address.\n");
   mkdirSync(path.join(root, "public/images/heroes"), { recursive: true });
@@ -911,6 +1017,7 @@ function selfTest(): number {
     queuePath: queue,
     holdsPath: holds,
     approvalsPath: approvals,
+    clearancesPath: clearances,
     rightsPath: rights,
     writeQueue: true,
     quiet: true,
@@ -926,6 +1033,14 @@ function selfTest(): number {
   assert(!paths.has("1:office-title.txt"), "Police and Crime Commissioners was held", errors);
   assert(!paths.has("1:record.txt"), "criminal-record certificate was held", errors);
   assert(!paths.has("6:no-projection.txt"), "a denial of projections was held", errors);
+  assert(!paths.has("6:faq-projection.txt"), "a projection question answered No was held", errors);
+  assert(paths.has("6:calls-projection.txt"), "an unlabeled exit poll was not held", errors);
+  assert(blocked.find((flag) => flag.draft_path.endsWith("calls-projection.txt"))?.severity === "MODERATE", "exit poll was not moderate", errors);
+  assert(!paths.has("1:indemnity.txt"), "terms indemnity was held as an allegation", errors);
+  assert(paths.has("1:named-misconduct.txt"), "named misconduct was not held", errors);
+  assert(blocked.find((flag) => flag.draft_path.endsWith("allegation.txt"))?.severity === "HIGH", "allegation was not high", errors);
+  assert(paths.has("6:deadline.json") && blocked.find((flag) => flag.draft_path.endsWith("deadline.json") && flag.rule === 6)?.severity === "HIGH", "unsourced deadline was not high", errors);
+  assert(blocked.find((flag) => flag.draft_path.endsWith("candidates.json"))?.severity === "MODERATE", "missing source was not moderate", errors);
   assert(!paths.has("7:waiting.txt"), "waiting for the official count was held", errors);
   assert(!paths.has("2:saint.txt"), "St. Gallen was held as an address", errors);
   assert(paths.has("3:photo.png"), "unprovenanced image was not held", errors);
@@ -940,10 +1055,12 @@ function selfTest(): number {
   for (const field of ["ts", "site", "bot", "title", "flagged", "rule", "sources", "suggestion", "draft_path", "status"]) {
     assert(sample && field in sample, `queue line missing ${field}`, errors);
   }
-  assert(sample?.site === SITE && sample?.bot === BOT && sample?.status === "HOLD_REVIEW" && sample?.rule === 1, "queue line identity", errors);
+  assert(sample?.site === SITE && sample?.bot === BOT && sample?.status === "HOLD_REVIEW" && sample?.rule === 1 && sample?.severity === "HIGH", "queue line identity", errors);
   const before = readFileSync(approvals);
+  const clearancesBefore = readFileSync(clearances);
   runGate(base);
   assert(readFileSync(approvals).equals(before), "gate wrote approvals", errors);
+  assert(readFileSync(clearances).equals(clearancesBefore), "gate wrote clearances", errors);
   const again = readFileSync(queue, "utf8").trim().split("\n").length;
   assert(again === queued.length, "queue duplicated a flagged item", errors);
 
@@ -951,9 +1068,70 @@ function selfTest(): number {
   writeFileSync(approvals, `${JSON.stringify({ path: relFrom(root, bad), sha256: hash, approver: BOT })}\n`);
   const still = runGate({ ...base, writeQueue: false });
   assert(still.some((flag) => flag.draft_path.endsWith("allegation.txt")), "bot approval released a file", errors);
+  writeFileSync(approvals, `${JSON.stringify({ path: relFrom(root, bad), sha256: hash, approver: "Alex" })}\n`);
+  const stranger = runGate({ ...base, writeQueue: false });
+  assert(stranger.some((flag) => flag.draft_path.endsWith("allegation.txt")), "non-owner approval released a high item", errors);
   writeFileSync(approvals, `${JSON.stringify({ path: relFrom(root, bad), sha256: hash, approver: "Joshua" })}\n`);
   const released = runGate({ ...base, writeQueue: false });
-  assert(!released.some((flag) => flag.draft_path.endsWith("allegation.txt")), "human approval of the exact hash did not release", errors);
+  assert(!released.some((flag) => flag.draft_path.endsWith("allegation.txt")), "owner approval of the exact hash did not release", errors);
+  writeFileSync(approvals, "");
+  writeFileSync(bad, "Jordan Lee was indicted for fraud, according to a rumour published on 1 January 2026.\n");
+  const allegationHash = sha256(readFileSync(bad));
+  const candidateFile = path.join(content, "candidates.json");
+  const candidateHash = sha256(readFileSync(candidateFile));
+  const candidatePath = relFrom(root, candidateFile);
+  writeFileSync(
+    clearances,
+    `${JSON.stringify({
+      ts: "2026-10-27T18:30:00.000Z",
+      item: candidatePath,
+      rule: 4,
+      fix: "Added the commission URL and the retrieval time that were actually read.",
+      independent_reviewer: "ChatGPT",
+      verdict: "safe",
+      sha256: candidateHash,
+    })}\n${JSON.stringify({
+      ts: "2026-10-27T18:30:00.000Z",
+      item: relFrom(root, bad),
+      rule: 1,
+      fix: "Left the allegation as written.",
+      independent_reviewer: "ChatGPT",
+      verdict: "safe",
+      sha256: allegationHash,
+    })}\n`,
+  );
+  const cleared = runGate({ ...base, writeQueue: false });
+  assert(!cleared.some((flag) => flag.draft_path.endsWith("candidates.json")), "safe moderate clearance did not release", errors);
+  assert(cleared.some((flag) => flag.draft_path.endsWith("allegation.txt")), "moderate clearance released a high allegation", errors);
+  writeFileSync(
+    clearances,
+    `${JSON.stringify({
+      ts: "2026-10-27T18:30:00.000Z",
+      item: candidatePath,
+      rule: 4,
+      fix: "Added the commission URL and the retrieval time that were actually read.",
+      independent_reviewer: "ChatGPT",
+      verdict: "unsure",
+      sha256: candidateHash,
+    })}\n`,
+  );
+  const unsure = runGate({ ...base, writeQueue: false });
+  assert(unsure.some((flag) => flag.draft_path.endsWith("candidates.json")), "unsure verdict released a moderate item", errors);
+  writeFileSync(
+    clearances,
+    `${JSON.stringify({
+      ts: "2026-10-27T18:30:00.000Z",
+      item: candidatePath,
+      rule: 4,
+      fix: "Added the commission URL and the retrieval time that were actually read.",
+      independent_reviewer: BOT,
+      verdict: "safe",
+      sha256: candidateHash,
+    })}\n`,
+  );
+  const selfCleared = runGate({ ...base, writeQueue: false });
+  assert(selfCleared.some((flag) => flag.draft_path.endsWith("candidates.json")), "bot clearance released a moderate item", errors);
+  writeFileSync(clearances, "");
   writeFileSync(bad, `${readFileSync(bad, "utf8")} \n`);
   const changed = runGate({ ...base, writeQueue: false });
   assert(changed.some((flag) => flag.draft_path.endsWith("allegation.txt")), "changed bytes stayed released", errors);
