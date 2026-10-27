@@ -9,6 +9,7 @@ import { FEEDS, feedById, hostAllowed } from "./feeds.mjs";
 
 export const OPENS = {
   "bg-2026-11-01": "2026-11-01T21:00:00+02:00",
+  "tw-2026-local": "2026-11-29T00:00:00+08:00",
   "ie-2026-seanad": "2026-11-06T11:00:00+00:00",
   "it-2026-chieti": "2026-11-16T15:00:00+01:00",
   "pl-2026-senat-20": "2026-11-22T21:00:00+01:00",

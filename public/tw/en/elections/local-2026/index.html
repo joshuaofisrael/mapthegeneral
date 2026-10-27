@@ -70,21 +70,13 @@
 <p>The title of the Commission’s <a href="https://web.cec.gov.tw/central/article/36817">notice of the ROC year 111 local elections</a> prints Saturday 26 November 2022 as the polling day of those elections and the constitutional-amendment referendum. This page does not copy a vote count from that election.</p>
 <h2>Survey material</h2>
 <p><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010">Article 53 of the Civil Servants Election and Recall Act</a> says that from ten days before election day until the polls close, no party or person may report, disseminate, comment on, or quote the survey material in the two paragraphs before that sentence. Article 5 of the Act counts a date before election day by starting on the day before election day and counting backwards, so the ten days begin on 18 November 2026. This site publishes no survey figure and no projection.</p>
-<section id="official-results" data-election-gate="tw-2026-local" data-results-open="2026-11-29T00:00:00+08:00" hidden>
+<p>The next section shows a countdown, and no count, until 00:00 on 29 November 2026, Taiwan time. A count is read only from a file on this site. That file lists nothing before that instant. If the file cannot be read, the section keeps the link to the Central Election Commission.</p>
+<section id="results" data-night-id="tw-2026-local" data-opens="2026-11-29T00:00:00+08:00" data-tz="Asia/Taipei" data-feed="/il-live/tw-2026-local/results.json" data-raw="https://raw.githubusercontent.com/joshuaofisrael/mapthegeneral/il-live-data/tw-2026-local/results.json" data-snapshot="/live/tw-2026-local.json" data-source-href="https://www.cec.gov.tw/" data-source-label="Central Election Commission" data-countdown="A count no sooner than" data-countdown-note="No count is shown here before 00:00 on 29 November 2026, Taiwan time. That instant is the start of the next calendar day. It is not a closing time the Commission printed." data-awaiting="The opening time has passed. Waiting for the first count published by the Central Election Commission. This page updates automatically." data-preliminary="Provisional, from the Central Election Commission" data-final="Final results, from the Central Election Commission" data-note="Figures are copied only after the Commission publishes them. This page does not call a winner and does not make a forecast." data-updated="Last updated {time}" data-fetched="Last fetched {time}" data-tz-label="Taiwan time" data-stale="The latest update could not be loaded. Showing the last count received." data-stale-empty="The latest update could not be loaded." data-col-name="Name" data-col-votes="Votes" data-col-share="Share" data-units="days|hours|min|sec" data-locale="en-GB">
 <h2>Official results</h2>
-<p>This section is shown only after 00:00 on 29 November 2026, Taiwan time. Counts are copied only from the Central Election Commission. This section lists no count.</p>
-<p><a href="https://www.cec.gov.tw/">Central Election Commission</a></p>
+<div data-night-root></div>
+<noscript><p>No count is shown before 00:00 on 29 November 2026, Taiwan time. <a href="https://www.cec.gov.tw/">Central Election Commission</a>.</p></noscript>
 </section>
-<script>
-(function () {
-  var nodes = document.querySelectorAll("[data-results-open]");
-  var now = Date.now();
-  for (var i = 0; i < nodes.length; i++) {
-    var open = Date.parse(nodes[i].getAttribute("data-results-open") || "");
-    if (!isNaN(open) && now >= open) nodes[i].hidden = false;
-  }
-})();
-</script>
+<script src="/election-night.js" defer></script>
 <section id="how-to-vote">
 <h2>How to vote, key dates and official sources</h2>
 <p>Each date below is printed in the Commission’s report to the Legislative Yuan. A clock time that report did not print is not listed.</p>

@@ -13,6 +13,12 @@ export const FEEDS = [
     preserveSnapshot: true,
   },
   {
+    id: "tw-2026-local",
+    officialUrl: "https://www.cec.gov.tw/",
+    hosts: ["cec.gov.tw", "web.cec.gov.tw"],
+    preserveSnapshot: true,
+  },
+  {
     id: "ie-2026-seanad",
     officialUrl: "https://www.oireachtas.ie/en/elections/",
     hosts: ["oireachtas.ie", "data.oireachtas.ie"],

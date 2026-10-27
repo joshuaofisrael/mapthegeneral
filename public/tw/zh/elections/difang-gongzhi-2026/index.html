@@ -70,21 +70,13 @@
 <p>委員會<a href="https://web.cec.gov.tw/central/article/36817">111年地方公職人員選舉公告</a>的標題印有111年11月26日星期六，即2022年11月26日，為該次地方選舉及憲法修正案公民複決的投票日。本頁不抄那次的得票。</p>
 <h2>調查資料</h2>
 <p><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010">公職人員選舉罷免法第53條</a>規定，自投票日前十日起至投票時間截止前，不得發布、報導、散布、評論或引述調查資料。同法第5條把投票日前的日數從前一日起算，所以這十天自2026年11月18日開始。本站不刊登調查數字，也不做預測。</p>
-<section id="official-results" data-election-gate="tw-2026-local" data-results-open="2026-11-29T00:00:00+08:00" hidden>
+<p>下一節在台灣時間2026年11月29日0時之前只顯示倒數，不列得票。得票只讀同一網域上的檔案。那個時刻之前檔案沒有列。讀不到檔案時，頁面留著中央選舉委員會的連結。</p>
+<section id="results" data-night-id="tw-2026-local" data-opens="2026-11-29T00:00:00+08:00" data-tz="Asia/Taipei" data-feed="/il-live/tw-2026-local/results.json" data-raw="https://raw.githubusercontent.com/joshuaofisrael/mapthegeneral/il-live-data/tw-2026-local/results.json" data-snapshot="/live/tw-2026-local.json" data-source-href="https://www.cec.gov.tw/" data-source-label="中央選舉委員會" data-countdown="得票顯示倒數" data-countdown-note="台灣時間2026年11月29日0時之前，這一節不列得票。那個時刻是投票日的次日開始，不是委員會印出的閉所時間。" data-awaiting="已過顯示時間。正在等待中央選舉委員會公布的第一筆得票。這一節會自動更新。" data-preliminary="初步數字，抄自中央選舉委員會" data-final="最終數字，抄自中央選舉委員會" data-note="數字只在委員會已公布時列入。本頁不宣布當選人，也不做預測。" data-updated="資料更新 {time}" data-fetched="擷取時間 {time}" data-tz-label="台灣時間" data-stale="最新更新讀取失敗。顯示上次收到的得票。" data-stale-empty="最新更新讀取失敗。" data-col-name="名稱" data-col-votes="得票" data-col-share="得票率" data-units="日|小時|分|秒" data-locale="zh">
 <h2>正式開票</h2>
-<p>本節在台灣時間2026年11月29日0時之後才顯示。得票只從中央選舉委員會抄錄。現在這一節沒有任何得票。</p>
-<p><a href="https://www.cec.gov.tw/">中央選舉委員會</a></p>
+<div data-night-root></div>
+<noscript><p>台灣時間2026年11月29日0時之前不列得票。 <a href="https://www.cec.gov.tw/">中央選舉委員會</a>.</p></noscript>
 </section>
-<script>
-(function () {
-  var nodes = document.querySelectorAll("[data-results-open]");
-  var now = Date.now();
-  for (var i = 0; i < nodes.length; i++) {
-    var open = Date.parse(nodes[i].getAttribute("data-results-open") || "");
-    if (!isNaN(open) && now >= open) nodes[i].hidden = false;
-  }
-})();
-</script>
+<script src="/election-night.js" defer></script>
 <section id="how-to-vote">
 <h2>投票方式、重要日期與官方來源</h2>
 <p>下列日期都印在立法院專題報告。報告沒有印出的鐘點，這裡不補。</p>
