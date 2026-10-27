@@ -68,3 +68,73 @@ body {
 .fact-table th {
   @apply font-semibold text-ink;
 }
+
+/* House ad. Keep identical to HOUSE_AD_CSS in src/lib/house-ad.ts */
+.house-ad {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  min-height: 11.5rem;
+  margin: 2rem 0 0;
+  padding: 0.95rem 1.05rem 1.05rem;
+  border: 1px solid #d5dde6;
+  border-inline-start: 3px solid #1e4a73;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #1a2332;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: start;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(20, 36, 56, 0.06), 0 8px 24px rgba(20, 36, 56, 0.05);
+}
+
+.house-ad:visited {
+  color: #1a2332;
+}
+
+.house-ad:hover,
+.house-ad:focus-visible {
+  border-color: #1e4a73;
+  text-decoration: none;
+}
+
+.house-ad-kicker,
+.house-ad:visited .house-ad-kicker {
+  display: block;
+  margin: 0;
+  color: #1e4a73;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.house-ad-copy,
+.house-ad:visited .house-ad-copy {
+  display: block;
+  margin: 0.45rem 0 0;
+  color: #1a2332;
+}
+
+.house-ad-btn,
+.house-ad:visited .house-ad-btn {
+  display: inline-block;
+  margin: 0.8rem 0 0;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.45rem;
+  background: #1e4a73;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.house-ad:hover .house-ad-btn,
+.house-ad:focus-visible .house-ad-btn {
+  background: #143251;
+}
+
+.house-ad-slot {
+  display: contents;
+}
