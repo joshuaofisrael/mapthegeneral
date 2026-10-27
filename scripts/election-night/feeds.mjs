@@ -54,12 +54,6 @@ export const FEEDS = [
     hosts: ["cec.gov.tw"],
   },
   {
-    id: "sv-2027-02-28",
-    officialUrl: "https://tse.gob.sv/",
-    hosts: ["tse.gob.sv"],
-    preserveSnapshot: true,
-  },
-  {
     id: "ee-2027-03-07",
     officialUrl: "https://www.valimised.ee/",
     hosts: ["valimised.ee"],

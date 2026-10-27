@@ -3,6 +3,8 @@
 Every foreign live tracker on this site follows these rules. The machine-readable
 table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it at build.
 
+**Country scope.** Only first-world, high-income countries may be added. Do not open an election-radar row, a country card, or a tracker for a country outside that set. `scripts/check-no-el-salvador.ts` fails the build if an El Salvador country entry returns.
+
 Feeds for the November 2026 contests are `https://mapthegeneral.com/il-live/<window id>/results.json`.
 That prefix is the existing Cloudflare Worker route for the `il-live-data` branch.
 No new route is required if the worker already proxies `/il-live/*`. If it is pinned

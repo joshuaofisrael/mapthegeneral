@@ -12,7 +12,6 @@ import { BATCH5 } from "./batch5";
 import { BATCH_EE } from "./batch-ee";
 import { BATCH_FI } from "./batch-fi";
 import { BATCH_NL } from "./batch-nl";
-import { BATCH_SV } from "./batch-sv";
 import { BATCH_TW } from "./batch-tw";
 import type { EditorialPreview } from "./model";
 
@@ -29,7 +28,6 @@ export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
   ...BATCH4,
   ...BATCH5,
   ...BATCH_TW,
-  ...BATCH_SV,
   ...BATCH_EE,
   ...BATCH_NL,
   ...BATCH_FI,

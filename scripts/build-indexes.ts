@@ -1,5 +1,5 @@
 import { execSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { electionSitemapLastmod } from "../src/data/election-seo";
@@ -124,6 +124,14 @@ ${bucketNames
 </sitemapindex>
 `;
 write("public/sitemap.xml", index);
+
+const sitemapDir = join(root, "public", "sitemaps");
+const keepSitemaps = new Set(bucketNames.map((name) => `${name}.xml`));
+for (const name of readdirSync(sitemapDir)) {
+  if (!name.endsWith(".xml") || keepSitemaps.has(name)) continue;
+  unlinkSync(join(sitemapDir, name));
+  console.log(`indexes: removed stale sitemap ${name}`);
+}
 
 write("public/search/index.json", JSON.stringify(searchIndex()));
 write("public/search/indexnow-urls.json", JSON.stringify(paths.map((path) => absoluteUrl(path))));

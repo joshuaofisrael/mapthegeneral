@@ -6,6 +6,8 @@ Primary statutes were not read article by article except where a section is name
 
 Germany stays off the site. It was removed on 18 October 2026 for an open legal question and this note does not reopen it.
 
+**Country scope.** Only first-world, high-income countries may be added. Do not onboard a country outside that set, even when a guide would otherwise pass the checks below.
+
 ## How a verdict was chosen
 
 **Onboard now.** An official election authority page was read on 23 October 2026, the guide can stick to that page, there is no open blackout or regulated advertising period that a new election site would sit inside, and the hub will publish no polls, no tracker, no candidate names and no candidate photographs.
