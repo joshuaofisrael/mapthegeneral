@@ -466,6 +466,49 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "sv-2027-02-28",
+    country: "sv",
+    localLang: "es",
+    election: {
+      en: "El Salvador elections, 28 February 2027",
+      local: "Elecciones del 28 de febrero de 2027",
+    },
+    pollingDay: "2027-02-28",
+    trackerOpensAt: "2027-02-28T17:00:00-06:00",
+    officialResults: { label: "Tribunal Supremo Electoral", url: "https://tse.gob.sv/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Tribunal Supremo Electoral, press note of 10 December 2025",
+          url: "https://tse.gob.sv/publico/prensa/373",
+        },
+        {
+          label: "Tribunal Supremo Electoral, national electoral calendar",
+          url: "https://tse.gob.sv/docs/calendarios/CALENDARIO-TSE-NACIONAL.pdf",
+        },
+        {
+          label: "Electoral Code, text on the Tribunal site",
+          url: "https://tse.gob.sv/storage/documentos/20250512115356-c9f0f895fb98ab9159f51fd0297e236d-XhNHWzttAO.pdf",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2027-02-13T00:00:00-06:00",
+        end: "2027-02-28T17:00:00-06:00",
+        citation: {
+          label: "Electoral Code, article 176",
+          url: "https://tse.gob.sv/storage/documentos/20250512115356-c9f0f895fb98ab9159f51fd0297e236d-XhNHWzttAO.pdf",
+        },
+        en: "Electoral Code article 176 forbids publishing survey results or projections that indicate a trend, from fifteen days before election day until the results are declared firm. The Tribunal’s calendar applies that rule from 13 February 2027 through 1 April 2027. This site publishes no survey and no projection on any day, including after the close. Voting ends at 17:00 under article 198. An official Tribunal figure may appear here only after 17:00 El Salvador time on 28 February 2027. That figure is not a projection.",
+        local:
+          "El artículo 176 del Código Electoral prohíbe publicar encuestas o proyecciones que indiquen una tendencia, desde quince días antes hasta que los resultados queden firmes. El calendario del Tribunal aplica esa regla del 13 de febrero de 2027 al 1 de abril de 2027. Este sitio no publica encuesta ni proyección ningún día, tampoco después del cierre. El artículo 198 cierra la votación a las 17:00. Una cifra del Tribunal puede mostrarse aquí solo después de las 17:00, hora de El Salvador, del 28 de febrero de 2027. Esa cifra no es una proyección.",
+      },
+    ],
+  },
 ];
 
 /**

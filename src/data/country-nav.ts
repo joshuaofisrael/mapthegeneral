@@ -70,6 +70,7 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   pl: { name: "Polska", lang: "pl" },
   rs: { name: "Srbija", lang: "sr" },
   se: { name: "Sverige", lang: "sv" },
+  sv: { name: "El Salvador", lang: "es" },
   tw: { name: "臺灣", lang: "zh-Hant" },
 };
 

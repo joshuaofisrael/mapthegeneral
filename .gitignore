@@ -45,6 +45,9 @@
 # New Zealand hub and election HTML is generated at build time
 /public/nz/
 
+# El Salvador hub and election HTML is generated at build time
+/public/sv/
+
 # production
 /build
 
