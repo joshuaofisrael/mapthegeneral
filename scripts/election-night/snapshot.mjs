@@ -1,6 +1,7 @@
 // Prebuild snapshots for election-night feeds. Before trackerOpensAt the file
 // has no counts and nothing is fetched. Israel is written by scripts/il-live.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { LegalHoldError, publishFile } from "../publish-gate.mjs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { FEEDS } from "./feeds.mjs";
@@ -21,18 +22,19 @@ for (const feed of FEEDS) {
   const file = path.join(liveDir, `${feed.id}.json`);
   const opens = new Date(emptyDoc(feed.id, "pre", null).trackerOpensAt);
   if (now < opens) {
-    writeFileSync(file, JSON.stringify(emptyDoc(feed.id, "pre", null)) + "\n");
+    publishFile(file, JSON.stringify(emptyDoc(feed.id, "pre", null)) + "\n");
     console.log(`election-night snapshot: ${feed.id} pre`);
     continue;
   }
   try {
     await writeFeed(feed.id, scratch, now);
   } catch (error) {
+    if (error instanceof LegalHoldError || error?.legalHold) throw error;
     console.warn(`election-night snapshot: ${feed.id} ${error instanceof Error ? error.message : error}`);
   }
   const written = path.join(scratch, feed.id, "results.json");
   if (existsSync(written)) writeFileSync(file, readFileSync(written));
-  else writeFileSync(file, JSON.stringify(emptyDoc(feed.id, "awaiting", now.toISOString())) + "\n");
+  else publishFile(file, JSON.stringify(emptyDoc(feed.id, "awaiting", now.toISOString())) + "\n");
   const baked = JSON.parse(readFileSync(file, "utf8"));
   console.log(`election-night snapshot: ${feed.id} ${baked.stage} rows=${baked.results.length}`);
 }

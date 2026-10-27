@@ -1,0 +1,35 @@
+{
+  "note": "Provenance for images and other binary assets that can be published. origin original or generated, with by us, means Map the General made the asset. Any other asset needs a permission entry. Attribution, an API subscription, or another site using the file is not permission. Fair use and fair dealing are not permission.",
+  "entries": [
+    {
+      "path": "public/images/heroes/",
+      "origin": "generated",
+      "by": "us",
+      "note": "AI-generated country heroes declared in src/data/heroes.ts. Shared files, not copied per page. No third-party photograph."
+    },
+    {
+      "path": "public/images/og/",
+      "origin": "generated",
+      "by": "us",
+      "note": "Social crops of the AI-generated country heroes declared in src/data/heroes.ts."
+    },
+    {
+      "path": "public/og.png",
+      "origin": "original",
+      "by": "us",
+      "note": "Site wordmark drawn for Map the General. Flat type on a plain field, no third-party photograph or logo."
+    },
+    {
+      "path": "public/og/il-results-2026.png",
+      "origin": "generated",
+      "by": "us",
+      "note": "Drawn by scripts/il-live/snapshot.mjs from this site's own results graphic. Not a third-party image."
+    },
+    {
+      "path": "src/app/icon.svg",
+      "origin": "original",
+      "by": "us",
+      "note": "Original site icon, hand-authored SVG."
+    }
+  ]
+}

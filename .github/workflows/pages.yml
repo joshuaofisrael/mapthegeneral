@@ -39,6 +39,11 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://mapthegeneral.com
 
+      - name: Legal-hold gate
+        run: |
+          node --experimental-strip-types scripts/check-legal-hold.ts --self-test
+          node --experimental-strip-types scripts/check-legal-hold.ts --export
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

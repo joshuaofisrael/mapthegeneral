@@ -47,6 +47,8 @@ jobs:
         with:
           node-version: 22
       - name: Fetch CEC results
+        # fetch.mjs runs the legal-hold gate before replacing results.json.
+        # A refusal leaves the last published file in place and does not retry past the gate.
         id: fetch
         working-directory: site
         env:

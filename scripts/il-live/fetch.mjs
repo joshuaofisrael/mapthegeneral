@@ -9,9 +9,10 @@
 //                          publishes the final results)
 // Legal: before polls close (trackerOpensAt) nothing is fetched and the file
 // carries no counts. Polls and exit polls are never read.
-import { existsSync, readFileSync, writeFileSync, mkdirSync, appendFileSync } from "node:fs";
+import { existsSync, readFileSync, mkdirSync, appendFileSync } from "node:fs";
 import path from "node:path";
 import { decode, totalCsv, buildDoc } from "./lib.mjs";
+import { LegalHoldError, publishFile } from "../publish-gate.mjs";
 
 const meta = JSON.parse(readFileSync(new URL("../../src/data/il-knesset-2026.json", import.meta.url), "utf8"));
 export const TRACKER_OPENS_AT = "2026-10-27T22:00:00+02:00";
@@ -40,7 +41,7 @@ const fingerprint = (d) => (d ? JSON.stringify([d.stage, d.units, d.voters, d.va
 
 function write(doc) {
   const changed = fingerprint(doc) !== fingerprint(prev);
-  if (changed || !prev) writeFileSync(outFile, JSON.stringify(doc, null, 1) + "\n");
+  if (changed || !prev) publishFile(outFile, JSON.stringify(doc, null, 1) + "\n");
   setOutput("changed", changed ? "true" : "false");
   setOutput("stage", doc.stage);
   setOutput("units", doc.units ?? 0);
@@ -104,6 +105,7 @@ for (const url of urls) {
     console.log(`ok ${url}: ${total.units} rows, ${total.valid} valid votes`);
     process.exit(0);
   } catch (e) {
+    if (e instanceof LegalHoldError || e.legalHold) throw e;
     lastErr = `${url}: ${e.message}`;
     console.warn(`skip ${lastErr}`);
   }
