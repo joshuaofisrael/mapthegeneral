@@ -1,4 +1,10 @@
 /** Mandate table as printed on the BFS page “Ergebnisse Parteien im Überblick: Schweiz, Nationalrat 2023”. */
+export const NATIONAL_COUNCIL_2023_SOURCE = {
+  url: "https://www.wahlen.admin.ch/de/2023/ch/23-table-results-national-council-election/",
+  readOn: "2026-10-17",
+  label: "Bundesamt für Statistik, Ergebnisse Parteien im Überblick: Schweiz, Nationalrat 2023",
+} as const;
+
 export const NATIONAL_COUNCIL_2023 = [
   { party: "FDP", mandates: 28, mandateChange: "-1", voteShare: "14,25" },
   { party: "Mitte", mandates: 29, mandateChange: "+29", voteShare: "14,06" },

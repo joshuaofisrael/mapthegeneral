@@ -1,8 +1,9 @@
 // Prebuild: bake the latest CEC-derived results into the static export and
 // draw the 1200x630 share image. Before polls close nothing is fetched and the
 // snapshot carries no counts (docs/live-tracker-legal-spec.md).
-import { mkdirSync, writeFileSync, readFileSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { publishFile } from "../publish-gate.mjs";
 
 const OPENS = Date.parse("2026-10-27T22:00:00+02:00");
 const RAW = "https://raw.githubusercontent.com/joshuaofisrael/mapthegeneral/il-live-data/il-2026-knesset/results.json";
@@ -26,7 +27,7 @@ if (now >= OPENS) {
     doc.stage = "awaiting";
   }
 }
-writeFileSync(liveFile, JSON.stringify(doc));
+publishFile(liveFile, JSON.stringify(doc));
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const PALETTE = ["#1e4a73", "#c2410c", "#0f766e", "#7c3aed", "#b45309", "#be185d", "#4d7c0f", "#0369a1", "#9f1239", "#475569", "#a16207", "#0e7490", "#6d28d9", "#15803d"];

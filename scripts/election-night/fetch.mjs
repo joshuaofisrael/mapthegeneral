@@ -3,9 +3,10 @@
 // After that, only an allowlisted official URL is read. A file is accepted
 // only when it is already in this site's results schema. Native HTML is not
 // turned into numbers. Polls are never read.
-import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { FEEDS, feedById, hostAllowed } from "./feeds.mjs";
+import { publishFile } from "../publish-gate.mjs";
 
 export const OPENS = {
   "bg-2026-11-01": "2026-11-01T21:00:00+02:00",
@@ -44,6 +45,7 @@ export function emptyDoc(id, stage, fetchedAt) {
     fetchedAt,
     sourceUpdated: null,
     source: feedById(id)?.officialUrl ?? null,
+    officialStatus: "none",
     results: [],
   };
 }
@@ -71,6 +73,7 @@ export function acceptOfficial(id, data) {
     fetchedAt: new Date().toISOString(),
     sourceUpdated: typeof data.sourceUpdated === "string" ? data.sourceUpdated : null,
     source: feedById(id)?.officialUrl ?? null,
+    officialStatus: data.stage === "final" ? "official" : "partial",
     results,
   };
 }
@@ -148,7 +151,7 @@ export async function writeFeed(id, outRoot, now = new Date()) {
     }
   }
   const changed = fingerprint(doc) !== fingerprint(prev);
-  if (changed || !prev) writeFileSync(outFile, JSON.stringify(doc, null, 1) + "\n");
+  if (changed || !prev) publishFile(outFile, JSON.stringify(doc, null, 1) + "\n");
   setOutput("changed", changed ? "true" : "false");
   setOutput("stage", doc.stage);
   return changed;

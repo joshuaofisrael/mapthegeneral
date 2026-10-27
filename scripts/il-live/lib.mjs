@@ -148,6 +148,9 @@ export function buildDoc(total, { parties, agreements, eligibleTotal, ballotBoxe
     schema: 1,
     election: "il-2026-knesset",
     stage, // "pre" | "preliminary" | "final"
+    // partial = a count still coming in; official = the authority's final result.
+    // stage remains what the results page branches on.
+    officialStatus: stage === "final" ? "official" : stage === "preliminary" ? "partial" : "none",
     source,
     sourceUpdated,
     fetchedAt,
