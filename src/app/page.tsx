@@ -1,5 +1,5 @@
 import { EditorialPreview } from "@/components/EditorialPreview";
-import { IlResultsCard, IL_PROMO_UNTIL } from "@/components/IlResultsLinks";
+import { HomeElectionNight } from "@/components/HomeElectionNight";
 import Link from "@/components/AnchorLink";
 import { CountryHero } from "@/components/CountryHero";
 import { HomeFaq } from "@/components/HomeFaq";
@@ -12,6 +12,7 @@ import { MUNICIPALITY_PAGE_COUNT } from "@/data/spain/municipalities";
 import { COMMUNITIES } from "@/data/spain/places";
 import { ui } from "@/data/spain/ui";
 import { upcomingElectionCards } from "@/data/election-seo";
+import { NIGHT_ELECTIONS } from "@/data/election-night";
 import { registryCountries } from "@/lib/country-registry";
 import { pageMetadata } from "@/lib/metadata";
 import type { CSSProperties } from "react";
@@ -26,6 +27,13 @@ export default function HomePage() {
   const copy = ui("en");
   const extraCountries = registryCountries().filter((country) => country.code !== "es");
   const upcoming = upcomingElectionCards();
+  const listed = new Set(upcoming.map((item) => item.href));
+  const nightCards = NIGHT_ELECTIONS.flatMap((item) => {
+    const href = item.links.find((link) => link.lang === "en")?.href ?? item.links[0]?.href;
+    if (!href || listed.has(href)) return [];
+    return [{ href, label: item.title, detail: item.detail, recent: false }];
+  });
+  const homeElections = [...nightCards, ...upcoming].sort((a, b) => a.label.localeCompare(b.label));
   return (
     <div className="space-y-12">
       <JsonLd
@@ -53,7 +61,7 @@ export default function HomePage() {
           to vote.
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
-        {Date.now() < IL_PROMO_UNTIL && <IlResultsCard />}
+        <HomeElectionNight />
         <EditorialPreview path="/" />
       </section>
 
@@ -70,7 +78,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {upcoming.length > 0 ? (
+      {homeElections.length > 0 ? (
         <section id="upcoming-elections">
           <h2 className="font-serif text-2xl font-semibold">Upcoming and recent elections</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
@@ -79,7 +87,7 @@ export default function HomePage() {
             days after polling day, then drops off. Each card links to that election’s page.
           </p>
           <ul className="mt-4 grid gap-4 md:grid-cols-2">
-            {upcoming.map((item) => (
+            {homeElections.map((item) => (
               <li key={item.href} className="rounded-xl border border-line bg-paper-card p-5 shadow-card">
                 {item.recent ? (
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy">Recently held</p>

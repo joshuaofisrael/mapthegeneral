@@ -447,7 +447,7 @@ export const STANDING_RULES: StandingRule[] = [
   },
   {
     country: "ie",
-    note: "The Seanad Éireann bye-election of 6 November 2026 has its own dated window. No polling day was printed for the next Dáil election. Broadcaster guidelines are not a rule for this website. The Electoral Commission says Part V of the Electoral Reform Act 2022 has not been commenced. This site publishes no polls and no candidate photographs. The Seanad window has no tracker fetcher.",
+    note: "The Seanad Éireann bye-election of 6 November 2026 has its own dated window. No polling day was printed for the next Dáil election. Broadcaster guidelines are not a rule for this website. The Electoral Commission says Part V of the Electoral Reform Act 2022 has not been commenced. This site publishes no polls and no candidate photographs. The Seanad fetcher writes no count until the Oireachtas publishes one after 11:00 on 6 November 2026.",
     citation: {
       label: "Electoral Commission, regulation of political advertising",
       url: "https://www.electoralcommission.ie/regulation-of-political-advertising/",

@@ -3,6 +3,13 @@
 Every foreign live tracker on this site follows these rules. The machine-readable
 table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it at build.
 
+Feeds for the November 2026 contests are `https://mapthegeneral.com/il-live/<window id>/results.json`.
+That prefix is the existing Cloudflare Worker route for the `il-live-data` branch.
+No new route is required if the worker already proxies `/il-live/*`. If it is pinned
+to `/il-live/il-2026-knesset/*` only, the route has to be widened to `/il-live/*`.
+This repository cannot edit that Cloudflare route. Bulgaria’s page also reads
+`/il-live/bg-2026-11-01/results.json` and falls back to `/live/bg-2026-11-01.json`.
+
 ## Rules for every tracker
 
 1. **Source.** Read only the official results service named in `officialResults`
@@ -35,7 +42,7 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 | au-vic-2026 | Victoria state election, 28 Nov 2026 | No results embargo in law; broadcasters' ad blackout (BSA 1992 Sch. 2 cl. 3A) does not cover this site; authorisation (Electoral Act 2002 s. 83) applies to paid, printed or regulated-entity material, which this site does not publish | 28 Nov 2026 18:00 AEDT (07:00 UTC) | vec.vic.gov.au/results |
 | au-nsw-2027 | New South Wales state election, 13 Mar 2027 | Same broadcaster blackout (BSA 1992 Sch. 2 cl. 3A). The Commission’s page and Constitution Act 1902 (NSW) s. 24A were read on 27 Oct 2026. No 2027 results URL was printed, so the official source is the Commission’s election page | 13 Mar 2027 18:00 AEDT | elections.nsw.gov.au (2027 state election page) |
 | es-2026-generales | Spain, general election, 29 Nov 2026 | LOREG art. 69.7 (5-day poll ban); arts. 51 and 53 (reflection day). Confirmed on 27 Oct 2026 in Real Decreto 806/2026 (BOE-A-2026-20742): https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742 | 29 Nov 2026 21:00 CET (Canary Islands close) | infoelectoral.interior.gob.es |
-| ie-2026-seanad | Ireland, Seanad Éireann bye-election, 6 Nov 2026 | No commenced poll-publication rule was applied. Part V of the Electoral Reform Act 2022 has not been commenced. Electorate is members of the Oireachtas. No tracker fetcher | 6 Nov 2026 11:00 GMT | oireachtas.ie/en/elections |
+| ie-2026-seanad | Ireland, Seanad Éireann bye-election, 6 Nov 2026 | No commenced poll-publication rule was applied. Part V of the Electoral Reform Act 2022 has not been commenced. Electorate is members of the Oireachtas. The fetcher writes no count until the Oireachtas publishes a count file this site can read | 6 Nov 2026 11:00 GMT | oireachtas.ie/en/elections |
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
 | bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00 | 1 Nov 2026 21:00 EET | results.cik.bg |
@@ -55,7 +62,7 @@ the registry to have a window or a standing rule.
 - **AU federal:** the dated rows are the Victoria state election and the New South Wales
   state election of 13 March 2027. A federal tracker still needs its own window.
 - **IE:** the Seanad bye-election of 6 November 2026 is the dated row. No next Dáil
-  polling day was printed. No tracker fetcher. See the standing rule.
+  polling day was printed. The fetcher writes no count until the Oireachtas publishes one. See the standing rule.
 - **NO:** next Storting election stated as September 2029, with no day. The
   Directorate’s summary of § 21-8 is the citation. Lovdata was not opened. No tracker.
 - **SE:** next ordinary elections stated as 8 September 2030. No poll-publication

@@ -37,7 +37,8 @@ function night(copy: {
   const config = {
     id: "bg-2026-11-01",
     opens: OPENS,
-    feed: "/live/bg-2026-11-01.json",
+    feed: "/il-live/bg-2026-11-01/results.json",
+    snapshot: "/live/bg-2026-11-01.json",
     official: RESULTS,
     timeZone: "Europe/Sofia",
     ...copy,
