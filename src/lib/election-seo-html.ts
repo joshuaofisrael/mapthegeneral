@@ -4,7 +4,14 @@ import type { ElectionSeoPage, ElectionSeoProfile, SourcedText } from "../data/e
 import { ELECTION_SEO_PROFILES } from "../data/election-seo";
 import { SITE, absoluteUrl, reportErrorHref } from "../data/site";
 import { ADSENSE_HEAD_TAGS } from "./adsense";
-import { candidateItemListJsonLd, loadCandidateList, renderCandidateListHtml, type CandidateList, type CandidateLang } from "./candidate-list";
+import {
+  candidateItemListJsonLd,
+  listLanguages,
+  loadCandidateList,
+  renderCandidateListHtml,
+  type CandidateLang,
+  type CandidateList,
+} from "./candidate-list";
 import { withLegalFooter } from "./legal-footer";
 import { socialImageFor, socialMetaTags } from "./social";
 
@@ -134,8 +141,12 @@ function webPageJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage): Reco
 
 export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSeoPage, root = process.cwd()): string {
   const imageUrl = existingImageUrl(profile, root);
-  const candidateList = page.lang === "en" || page.lang === "pl" ? pageCandidateList(profile, root) : null;
   const candidateLang = page.lang as CandidateLang;
+  const candidateReady = page.lang === "en" || page.lang === "pl" || page.lang === "it";
+  const candidateList = candidateReady ? pageCandidateList(profile, root) : null;
+  if (candidateList && !listLanguages(candidateList).includes(candidateLang)) {
+    throw new Error(`${page.path}: candidate list ${profile.candidateListId} has no ${page.lang} copy`);
+  }
   const candidateHtml = candidateList ? renderCandidateListHtml(candidateList, candidateLang) : "";
   const itemList = candidateList ? candidateItemListJsonLd(candidateList, candidateLang) : null;
   const modifiedHead = profile.candidateListId
@@ -194,8 +205,7 @@ ${itemList ? `${jsonScript(itemList)}\n` : ""}${ADSENSE_HEAD_TAGS}
 <h1>${esc(page.h1)}</h1>
 <p class="lede">${esc(page.lede)}</p>
 <p><strong>${esc(page.updated)}</strong> <a href="${esc(reportErrorHref(page.path))}">${esc(page.reportLabel)}</a></p>
-${page.bodyHtml}
-${candidateHtml ? `${candidateHtml}\n` : ""}<section id="how-to-vote">
+${page.bodyHtml.includes("{{candidates}}") ? page.bodyHtml.replaceAll("{{candidates}}", candidateHtml) : `${page.bodyHtml}\n${candidateHtml ? `${candidateHtml}\n` : ""}`}<section id="how-to-vote">
 <h2>${esc(page.keyDatesHeading)}</h2>
 <p>${esc(page.keyDatesIntro)}</p>
 <ul>
@@ -253,6 +263,7 @@ export function validateElectionHtml(
   root = process.cwd(),
 ): string[] {
   const errors: string[] = [];
+  if (html.includes("{{candidates}}")) errors.push("candidate marker was not filled");
   let nodes: JsonLdNode[] = [];
   try {
     nodes = jsonLdNodes(html);

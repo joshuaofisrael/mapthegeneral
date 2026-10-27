@@ -13,8 +13,10 @@ import {
   loadCandidateList,
   orderedCandidates,
   placeholderHit,
+  profileHref,
   renderCandidateListHtml,
   type CandidateList,
+  type CandidateRecord,
   validateCandidateData,
 } from "../src/lib/candidate-list";
 import { renderElectionHtml } from "../src/lib/election-seo-html";
@@ -34,14 +36,142 @@ for (const file of listCandidateFiles(root)) {
   errors.push(...validateCandidateData(data, id));
 }
 
-const senat = loadCandidateList("senat-20-2026", root);
-if (senat.candidates.length !== 0) errors.push("senat-20-2026: this check expects an empty list until the notice is copied in");
-if (renderCandidateListHtml(senat, "en") !== "" || renderCandidateListHtml(senat, "pl") !== "") {
-  errors.push("senat-20-2026: an empty list rendered text");
+function sectionHtml(html: string, id: string): string {
+  const match = html.match(new RegExp(`<section id="${id}">([\\s\\S]*?)</section>`));
+  return match?.[1] ?? "";
 }
-if (candidateItemListJsonLd(senat, "en") !== null) errors.push("senat-20-2026: an empty list produced ItemList");
+
+function expectProfile(list: CandidateList, name: string, href: string): void {
+  const row = list.candidates.find((candidate) => candidate.name === name);
+  if (!row) {
+    errors.push(`${list.id}: missing ${name}`);
+    return;
+  }
+  if (profileHref(row) !== href) errors.push(`${list.id}: ${name} profile is not the verified URL`);
+}
+
+function expectPlain(list: CandidateList, name: string): void {
+  const row = list.candidates.find((candidate) => candidate.name === name);
+  if (!row) {
+    errors.push(`${list.id}: missing ${name}`);
+    return;
+  }
+  if (row.links?.length) errors.push(`${list.id}: ${name} has a link but is unverified`);
+}
+
+const senat = loadCandidateList("senat-20-2026", root);
+const senatOrder = orderedCandidates(senat).map((row) => row.surname).join("|");
+if (senatOrder !== "Kubicki|Naruszewicz|Różańska|Senyszyn") {
+  errors.push(`senat-20-2026: source order was ${senatOrder}`);
+}
+expectProfile(senat, "Janusz Krzysztof KUBICKI", "https://pl.wikipedia.org/wiki/Janusz_Kubicki_(samorz%C4%85dowiec)");
+expectProfile(senat, "Joanna SENYSZYN", "https://pl.wikipedia.org/wiki/Joanna_Senyszyn");
+expectPlain(senat, "Tomasz Jacek NARUSZEWICZ");
+expectPlain(senat, "Zdzisława Maria RÓŻAŃSKA");
 if (senat.noticeDue !== "2026-11-12") errors.push("senat-20-2026: noticeDue is not 12 November 2026");
 if (senat.submissionDeadline !== "2026-10-14") errors.push("senat-20-2026: submissionDeadline is not 14 October 2026");
+for (const lang of ["en", "pl"] as const) {
+  const html = renderCandidateListHtml(senat, lang);
+  if (
+    /The notice of registered candidates, read on|Obwieszczenie o zarejestrowanych kandydatach, odczytane|<h2>Registered candidates<\/h2>|<h2>Zarejestrowani kandydaci<\/h2>/.test(
+      html,
+    )
+  ) {
+    errors.push(`senat-20-2026: ${lang} copy calls the Commission file a registered-candidate notice`);
+  }
+  if (!html.includes("kandydaci_senat_utf8.csv")) errors.push(`senat-20-2026: ${lang} copy does not name the file`);
+}
+
+const chieti = loadCandidateList("camera-chieti-2026", root);
+const chietiOrder = orderedCandidates(chieti).map((row) => row.surname).join("|");
+if (chietiOrder !== "Pasqualone|D'Amico|Colantonio|Ranieri") {
+  errors.push(`camera-chieti-2026: source order was ${chietiOrder}`);
+}
+expectProfile(
+  chieti,
+  "Massimo Pasqualone",
+  "https://dait.interno.gov.it/documenti/trasparenza/suppletive_camera_20261116-15/doc/MassimoPasqualone_CV.pdf",
+);
+expectProfile(
+  chieti,
+  "Mario Colantonio",
+  "https://dait.interno.gov.it/documenti/trasparenza/suppletive_camera_20261116-15/doc/MarioColantonio_CV.pdf",
+);
+expectPlain(chieti, "Luciano D'Amico");
+expectPlain(chieti, "Danilo Ranieri");
+for (const lang of ["en", "it"] as const) {
+  const html = renderCandidateListHtml(chieti, lang);
+  if (!html.includes("MassimoPasqualone_CV.pdf") || !html.includes("MarioColantonio_CV.pdf")) {
+    errors.push(`camera-chieti-2026: ${lang} list is missing a verified curriculum link`);
+  }
+  if (/D&#39;Amico[\s\S]{0,120}href=|D'Amico[\s\S]{0,80}href=/.test(html)) {
+    errors.push(`camera-chieti-2026: ${lang} linked Luciano D'Amico`);
+  }
+  if (/Ranieri[\s\S]{0,80}href=/.test(html)) errors.push(`camera-chieti-2026: ${lang} linked Danilo Ranieri`);
+}
+
+const brazil = loadCandidateList("br-president-2026", root);
+const brazilNames = [
+  ["Flávio Bolsonaro", "https://pt.wikipedia.org/wiki/Fl%C3%A1vio_Bolsonaro"],
+  ["Luiz Inácio Lula da Silva", "https://pt.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva"],
+  ["Augusto Cury", "https://pt.wikipedia.org/wiki/Augusto_Cury"],
+  ["Renan Santos", "https://pt.wikipedia.org/wiki/Renan_Santos"],
+  ["Ronaldo Caiado", "https://pt.wikipedia.org/wiki/Ronaldo_Caiado"],
+] as const;
+if (orderedCandidates(brazil).map((row) => row.name).join("|") !== brazilNames.map(([name]) => name).join("|")) {
+  errors.push("br-president-2026: source order changed");
+}
+for (const [name, href] of brazilNames) expectProfile(brazil, name, href);
+const hub = readFileSync(join(root, "src/components/ModestHub.tsx"), "utf8");
+if (!hub.includes('from "@/components/VerifiedCandidate"')) errors.push("Brazil results do not use VerifiedCandidate");
+for (const [name] of brazilNames) {
+  if (!hub.includes(`listId="br-president-2026" name="${name}"`)) {
+    errors.push(`Brazil results do not read ${name} from the candidate list`);
+  }
+}
+if (!hub.includes('votes: "64,256,232"') || !hub.includes('pct: "2.18%"')) {
+  errors.push("Brazil vote figures were removed from the results table");
+}
+
+type ReviewRow = {
+  name: string;
+  listId: string;
+  pages: string[];
+  contest: string;
+  committee: string;
+  reason: string;
+};
+const reviewPath = join(root, "data/review/unlinked-candidates.json");
+let reviewRows: ReviewRow[] = [];
+try {
+  const review = JSON.parse(readFileSync(reviewPath, "utf8")) as { readOn?: string; candidates?: ReviewRow[] };
+  if (review.readOn !== "2026-10-27") errors.push("unlinked-candidates.json: readOn is not 2026-10-27");
+  reviewRows = review.candidates ?? [];
+} catch (error) {
+  errors.push(`unlinked-candidates.json: ${error instanceof Error ? error.message : String(error)}`);
+}
+const unlinked = new Map<string, CandidateRecord>();
+for (const file of listCandidateFiles(root)) {
+  const id = file.split("/").pop()?.replace(/\.json$/, "") ?? file;
+  const list = loadCandidateList(id, root);
+  for (const row of list.candidates) {
+    if (!profileHref(row)) unlinked.set(`${id}\t${row.name}`, row);
+  }
+}
+for (const row of reviewRows) {
+  const key = `${row.listId}\t${row.name}`;
+  const found = unlinked.get(key);
+  if (!found) {
+    errors.push(`review list names ${row.name} but that candidate has a profile or is not on a list`);
+    continue;
+  }
+  if (found.committee !== row.committee) errors.push(`review committee does not match the list for ${row.name}`);
+  if (!row.pages?.length || !row.contest?.trim() || row.reason.trim().length < 40) {
+    errors.push(`review row for ${row.name} is missing pages, contest, or a reason`);
+  }
+  unlinked.delete(key);
+}
+for (const key of unlinked.keys()) errors.push(`unlinked candidate missing from data/review/unlinked-candidates.json: ${key}`);
 
 const sample: CandidateList = {
   id: "sample",
@@ -134,11 +264,28 @@ for (const profile of ELECTION_SEO_PROFILES) {
     if (!pageHtml.includes(`<meta property="article:modified_time" content="${profile.lastmod}">`)) {
       errors.push(`${page.path}: dateModified meta is not ${profile.lastmod}`);
     }
+    if (pageHtml.includes("{{candidates}}")) errors.push(`${page.path}: candidate marker was left in the page`);
+    if (profile.candidateListId === "senat-20-2026") {
+      const block = sectionHtml(pageHtml, "candidates");
+      if (
+        /The notice of registered candidates, read on|Obwieszczenie o zarejestrowanych kandydatach, odczytane|<h2>Registered candidates<\/h2>|<h2>Zarejestrowani kandydaci<\/h2>/.test(
+          block,
+        )
+      ) {
+        errors.push(`${page.path}: candidate section calls the Commission file a registered-candidate notice`);
+      }
+    }
+    if (profile.candidateListId === "camera-chieti-2026" && /sondagg/i.test(sectionHtml(pageHtml, "candidates"))) {
+      errors.push(`${page.path}: candidate section mentions a poll`);
+    }
     const outFile = join(root, "out", page.path, "index.html");
     try {
       const exported = readFileSync(outFile, "utf8");
       if (list.candidates.length === 0 && exported.includes('<section id="candidates">')) {
         errors.push(`${page.path}: export rendered an empty candidate list`);
+      }
+      if (list.candidates.length > 0 && !exported.includes('<section id="candidates">')) {
+        errors.push(`${page.path}: export is missing the candidate section`);
       }
     } catch {
       // postbuild sees out/; a direct run before export only checks the renderer.
@@ -151,4 +298,4 @@ if (errors.length) {
   for (const line of errors) console.error(`  - ${line}`);
   process.exit(1);
 }
-console.log("candidate-lists: empty registered list renders nothing; placeholder and link checks passed.");
+console.log("candidate-lists: verified profile links, review list, and placeholder checks passed.");

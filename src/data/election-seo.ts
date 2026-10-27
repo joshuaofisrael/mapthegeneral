@@ -86,8 +86,9 @@ export type ElectionSeoProfile = {
    */
   lastmod: string;
   /**
-   * File id under src/data/pl/candidates/. The page renders that list only
-   * when it has rows. An empty file adds no candidate section.
+   * File id under src/data/candidates/. The page renders that list only
+   * when it has rows. An empty file adds no candidate section. Put
+   * `{{candidates}}` in bodyHtml where the list should sit.
    */
   candidateListId?: string;
   homeLinks: HomeElectionLink[];
@@ -161,15 +162,7 @@ const POLAND_EN_BODY = `<h2>What is elected</h2>
 <li>22 November 2026, 7:00–21:00 — voting.</li>
 </ul>
 <p>Article 107 § 1 forbids campaigning on polling day and for the 24 hours before it. Article 115 § 1 forbids publishing pre-election research results, and research results from polling day, during that same period. This page carries no campaign and prints no such results.</p>
-<h2>Names in the Commission file</h2>
-<p>The file kandydaci_senat_utf8.csv, read on 25 October 2026, lists four people. The ballot-position column is empty. This is a reading of the file, not the district commission’s announcement. The calendar requires that announcement of registered candidates by 12 November 2026. That announcement was not on the <a href="${PKW_NOTICES}" rel="nofollow noopener" target="_blank">Commission notice list</a> read on 25 October 2026. Sex, occupation and place of residence from the file are not reprinted.</p>
-<ul>
-<li>Janusz Krzysztof KUBICKI — KOMITET WYBORCZY WYBORCÓW PO PIERWSZE LUBUSKIE</li>
-<li>Tomasz Jacek NARUSZEWICZ — KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA</li>
-<li>Zdzisława Maria RÓŻAŃSKA — KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA</li>
-<li>Joanna SENYSZYN — KOMITET WYBORCZY NOWA FALA PROFESOR SENYSZYN</li>
-</ul>
-<p>The order is the order of rows in the file, not the alphabetical ballot order in article 267. The open-data act allows reuse of public-sector information. Source: the National Electoral Commission, file read on 25 October 2026.</p>
+{{candidates}}
 <h2>Result</h2>
 <p>The vote columns in that file are empty. This page shows no count and names no elected senator. Article 276: the Commission announces the result in the Dziennik Ustaw. No count will be shown here before voting ends. Commission service: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
@@ -191,15 +184,7 @@ const POLAND_PL_BODY = `<h2>Co się wybiera</h2>
 <li>22 listopada 2026 r., godz. 7:00–21:00 — głosowanie.</li>
 </ul>
 <p>Art. 107 § 1: w dniu głosowania i na 24 godziny przed tym dniem agitacja wyborcza jest zabroniona. Art. 115 § 1: w tym samym czasie zabronione jest podawanie wyników przedwyborczych badań opinii publicznej i wyników badań z dnia głosowania. Ta strona nie prowadzi agitacji i nie podaje takich wyników.</p>
-<h2>Kandydaci w pliku PKW</h2>
-<p>Plik <span lang="en">kandydaci_senat_utf8.csv</span> odczytany 25 października 2026 r. wymienia cztery osoby. Kolumna „Pozycja na liście” jest pusta. To odczyt pliku, nie obwieszczenie Okręgowej Komisji Wyborczej. Kalendarz każe podać obwieszczenie o zarejestrowanych kandydatach do 12 listopada 2026 r. Tego obwieszczenia nie było na <a href="${PKW_NOTICES}" rel="nofollow noopener" target="_blank">liście obwieszczeń PKW</a> odczytanej 25 października 2026 r. Z pliku nie przepisano płci, zawodu ani miejsca zamieszkania.</p>
-<ul>
-<li>Janusz Krzysztof KUBICKI — KOMITET WYBORCZY WYBORCÓW PO PIERWSZE LUBUSKIE</li>
-<li>Tomasz Jacek NARUSZEWICZ — KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA</li>
-<li>Zdzisława Maria RÓŻAŃSKA — KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA</li>
-<li>Joanna SENYSZYN — KOMITET WYBORCZY NOWA FALA PROFESOR SENYSZYN</li>
-</ul>
-<p>Kolejność jest kolejnością wierszy pliku, nie porządkiem alfabetycznym z art. 267. Ustawa o otwartych danych dopuszcza ponowne wykorzystywanie informacji sektora publicznego. Źródło: Państwowa Komisja Wyborcza, plik odczytany 25 października 2026 r.</p>
+{{candidates}}
 <h2>Wynik</h2>
 <p>Kolumny głosów w tym pliku są puste. Ta strona nie pokazuje liczenia i nie wskazuje wybranego senatora. Art. 276: wynik ogłasza PKW obwieszczeniem w Dzienniku Ustaw. Liczenie nie pojawi się tutaj przed zakończeniem głosowania. Serwis PKW: <a href="${PKW_SERVICE}">wybory.gov.pl/senat20261122</a>.</p>`;
 
@@ -233,14 +218,7 @@ const CHIETI_EN_BODY = `<h2>When people vote in Chieti</h2>
 <p class="tools"><a href="/it/en/collegi/camera/abruzzo-u01/">Constituency Abruzzo - U01</a> · <a href="/it/en/abruzzo/">Abruzzo</a> · <a href="/it/en/elections/">Elections in Italy</a></p>
 <h2>Why the seat is vacant</h2>
 <p>The decree says the Giunta delle elezioni communicated the vacancy on 15 September 2026, and that the President of the Chamber notified it on 16 September 2026. The decree does not print a name. The <a href="${CAMERA_VARIAZIONI}">Chamber’s page on changes in membership</a>, read on 26 October 2026, says that on 15 September 2026 the mandate of deputy Alberto Bagnai ended. It says he resigned in order to take the post of member of the Competition and Market Authority, that the Chamber took note because the two offices are incompatible, and that he had been returned for Abruzzo, uninominal constituency 1. This page does not name a mayor, a provincial president, or any other local office-holder.</p>
-<h2>Candidates</h2>
-<p>The <a href="${DAIT_CANDIDATES}">Interior Ministry transparency page</a>, read on 26 October 2026, is headed as the candidates presented in uninominal constituency 01-Chieti for this by-election. It lists four people. It does not print a ballot number. The order below is the order of rows on that page. Place and date of birth, and the curriculum and criminal-record links, stay on that page and are not copied here. The Prefecture page read the same day does not itself print this list. This page does not rank anyone.</p>
-<ul>
-<li>Massimo Pasqualone — DIMENSIONE BANDECCHI</li>
-<li>Luciano D'Amico — PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE</li>
-<li>Mario Colantonio — FRATELLI D'ITALIA - LEGA - NOI MODERATI-PPE - UNIONE DI CENTRO - FORZA ITALIA-PPE</li>
-<li>Danilo Ranieri — ITALIA DOMANI MARCO RIZZO</li>
-</ul>
+{{candidates}}
 <h2>Result</h2>
 <p>This page shows no count and names no one elected. The Department’s special-elections page says turnout and results are followed on <a href="${ELIGENDO}">Eligendo</a>. No count is shown here before 15:00 on 16 November 2026. <a href="${L_28}">Law no. 28 of 22 February 2000, article 8</a>, forbids publishing opinion-poll results in the fifteen days before the vote. This site prints no polls for this election.</p>`;
 
@@ -252,14 +230,7 @@ const CHIETI_IT_BODY = `<h2>Quando si vota a Chieti</h2>
 <p class="tools"><a href="/it/it/collegi/camera/abruzzo-u01/">Collegio Abruzzo - U01</a> · <a href="/it/it/abruzzo/">Abruzzo</a> · <a href="/it/it/elections/">Elezioni in Italia</a></p>
 <h2>Perché il seggio è vacante</h2>
 <p>Il decreto dice che la Giunta delle elezioni ha comunicato la vacanza il 15 settembre 2026 e che il Presidente della Camera l'ha segnalata il 16 settembre 2026. Il decreto non stampa un nome. La <a href="${CAMERA_VARIAZIONI}">pagina della Camera sulle variazioni nella composizione</a>, letta il 26 ottobre 2026, dice che il 15 settembre 2026 è cessato dal mandato il deputato Alberto Bagnai. Dice che si è dimesso per la carica di componente dell'Autorità garante della concorrenza e del mercato, che la Camera ha preso atto delle dimissioni per incompatibilità, e che era stato eletto nella circoscrizione Abruzzo, collegio uninominale 1. Questa pagina non nomina un sindaco, un presidente di provincia o un altro amministratore locale.</p>
-<h2>Candidati</h2>
-<p>La <a href="${DAIT_CANDIDATES}">pagina di trasparenza del Ministero dell'interno</a>, letta il 26 ottobre 2026, presenta i candidati del collegio uninominale 01-Chieti per questa elezione suppletiva. Elenca quattro persone. Non stampa un numero sulla scheda. L'ordine sotto è l'ordine delle righe di quella pagina. Luogo e data di nascita, e i collegamenti al curriculum e al certificato penale, restano su quella pagina e non sono copiati qui. La pagina della Prefettura letta lo stesso giorno non stampa questo elenco. Questa pagina non mette nessuno in ordine di preferenza.</p>
-<ul>
-<li>Massimo Pasqualone — DIMENSIONE BANDECCHI</li>
-<li>Luciano D'Amico — PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE</li>
-<li>Mario Colantonio — FRATELLI D'ITALIA - LEGA - NOI MODERATI-PPE - UNIONE DI CENTRO - FORZA ITALIA-PPE</li>
-<li>Danilo Ranieri — ITALIA DOMANI MARCO RIZZO</li>
-</ul>
+{{candidates}}
 <h2>Risultato</h2>
 <p>Questa pagina non mostra un conteggio e non indica un eletto. La pagina Speciale elezioni del Dipartimento dice che affluenza e risultati si seguono su <a href="${ELIGENDO}">Eligendo</a>. Nessun conteggio compare qui prima delle ore 15 del 16 novembre 2026. L'<a href="${L_28}">articolo 8 della legge 22 febbraio 2000, n. 28</a>, vieta di rendere pubblici i risultati dei sondaggi nei quindici giorni precedenti il voto. Questo sito non pubblica sondaggi su questa elezione.</p>`;
 
@@ -481,7 +452,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "Sunday 22 November 2026",
         h1: "Senate by-election in constituency 20",
         lede: "Lubusz Voivodeship. One Senate seat. Voting from 7:00 to 21:00.",
-        updated: "Last updated: 25 October 2026.",
+        updated: "Last updated: 27 October 2026.",
         reportLabel: "Report an error",
         officeHref: PKW_HOME,
         bannerBefore: "Unofficial information. Confirm with your ",
@@ -634,7 +605,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "Niedziela 22 listopada 2026 r.",
         h1: "Wybory uzupełniające do Senatu w okręgu nr 20",
         lede: "Województwo lubuskie. Jeden mandat senatora. Głosowanie w godz. 7:00–21:00.",
-        updated: "Ostatnia aktualizacja tej strony: 25 października 2026 r.",
+        updated: "Ostatnia aktualizacja tej strony: 27 października 2026 r.",
         reportLabel: "Zgłoś błąd",
         officeHref: PKW_HOME,
         bannerBefore: "Informacja nieoficjalna. Potwierdź ją w ",
@@ -1108,6 +1079,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     organizerUrl: "https://www.interno.gov.it/",
     imagePath: "/images/og/it.webp",
     lastmod: "2026-10-27",
+    candidateListId: "camera-chieti-2026",
     homeLinks: [
       {
         href: "/it/en/elections/camera-chieti-2026/",
@@ -1148,7 +1120,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "15–16 November 2026",
         h1: "Chamber by-election in constituency 01-Chieti",
         lede: "One seat in the Chamber of Deputies, XVII Abruzzo constituency. Voting on Sunday 15 November 2026 from 7:00 to 23:00 and on Monday 16 November 2026 from 7:00 to 15:00, Central European Time.",
-        updated: "Last updated: 26 October 2026.",
+        updated: "Last updated: 27 October 2026.",
         reportLabel: "Report an error",
         officeHref: DAIT_SPECIALE,
         bannerBefore: "Unofficial information. Confirm with your ",
@@ -1286,7 +1258,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "15-16 novembre 2026",
         h1: "Elezione suppletiva nel collegio 01-Chieti",
         lede: "Un seggio alla Camera dei deputati, XVII circoscrizione Abruzzo. Si vota domenica 15 novembre 2026 dalle ore 7 alle ore 23 e lunedì 16 novembre 2026 dalle ore 7 alle ore 15, ora dell'Europa centrale.",
-        updated: "Ultimo aggiornamento: 26 ottobre 2026.",
+        updated: "Ultimo aggiornamento: 27 ottobre 2026.",
         reportLabel: "Segnala un errore",
         officeHref: DAIT_SPECIALE,
         bannerBefore: "Informazione non ufficiale. Confermare presso l'",
