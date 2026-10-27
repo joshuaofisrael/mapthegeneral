@@ -11,7 +11,7 @@
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et", "nl"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
@@ -327,6 +327,18 @@ const COPY: Record<HouseAdLang, AdCopy> = {
       rankfootprint: RANK_PAID.et.cta,
     },
   },
+  nl: {
+    sponsored: (name) => `Gesponsord door ${name}`,
+    pitch: {
+      namedscan:
+        "Kijk of ChatGPT uw lokale bedrijf noemt wanneer klanten een vraag stellen. NamedScan stelt die vragen met live zoeken op het web en laat zien wie wordt aanbevolen en wat eerst beter kan.",
+      rankfootprint: RANK_PAID.nl.pitch,
+    },
+    cta: {
+      namedscan: "Probeer NamedScan",
+      rankfootprint: RANK_PAID.nl.cta,
+    },
+  },
 };
 
 /** Phrases that must survive in each language, taken from the published offers. */
@@ -373,6 +385,10 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   },
   et: {
     namedscan: ["ChatGPT", "reaalajas veebiotsinguga"],
+    rankfootprint: ["$1"],
+  },
+  nl: {
+    namedscan: ["ChatGPT", "live zoeken op het web"],
     rankfootprint: ["$1"],
   },
 };
@@ -801,6 +817,7 @@ export function selfCheckHouseAds(): string[] {
     problems.push("path language");
   }
   if (languageFromRoute("/ee/et/") !== "et") problems.push("path language");
+  if (languageFromRoute("/nl/nl/") !== "nl") problems.push("path language");
   if (houseAdLangForDocument("zh") !== "en") problems.push("zh document should use the English house ad");
   if (houseAdLangForDocument("es") !== "es") problems.push("Spanish house ad must stay Spanish");
   if (houseAdLangForDocument("bg") !== "bg") problems.push("Bulgarian house ad must stay Bulgarian");

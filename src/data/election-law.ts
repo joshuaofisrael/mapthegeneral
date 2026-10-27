@@ -552,6 +552,49 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "nl-2027-03-17",
+    country: "nl",
+    localLang: "nl",
+    election: {
+      en: "Netherlands Provincial States and water boards, 17 March 2027",
+      local: "Provinciale Staten en waterschappen, 17 maart 2027",
+    },
+    pollingDay: "2027-03-17",
+    trackerOpensAt: "2027-03-17T21:00:00+01:00",
+    officialResults: { label: "Kiesraad, verkiezingsuitslagen", url: "https://www.verkiezingsuitslagen.nl/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Kiesraad, Provincial States elections",
+          url: "https://www.kiesraad.nl/verkiezingen/provinciale-staten",
+        },
+        {
+          label: "Kiesraad, 2027 election calendar",
+          url: "https://www.kiesraad.nl/site/binaries/site-content/collections/documents/2026/08/24/verkiezingskalender-ps-ws27/verkiezingskalender-2027-psws27.pdf",
+        },
+        {
+          label: "Elections Act, article J 1, in force from 1 October 2026",
+          url: "https://wetten.overheid.nl/BWBR0004627/2026-10-01/0/AfdelingII/HoofdstukJ/Paragraaf1/ArtikelJ1",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "results-embargo",
+        start: "2027-03-17T00:00:00+01:00",
+        end: "2027-03-17T21:00:00+01:00",
+        citation: {
+          label: "Elections Act, article J 1",
+          url: "https://wetten.overheid.nl/BWBR0004627/2026-10-01/0/AfdelingII/HoofdstukJ/Paragraaf1/ArtikelJ1",
+        },
+        en: "Article J 1(2) of the Elections Act starts voting at 07:30 and keeps it open until 21:00. Article J 1a lets a station close earlier, and says the count at that station is not before 21:00. The Kiesraad calendar says the count starts immediately after voting and not before 21:00. This site shows no count before 21:00 Central European Time on 17 March 2027. No ban on publishing polls was found in the Act text in force from 1 October 2026. This site still publishes no poll and no projection.",
+        local:
+          "Artikel J 1, tweede lid, van de Kieswet laat de stemming om 07:30 beginnen en tot 21:00 duren. Artikel J 1a laat een bureau eerder sluiten en zegt dat de stemopneming daar niet voor 21:00 is. De kalender van de Kiesraad zegt dat de stemopneming direct na het stemmen begint en niet eerder dan 21:00. Deze site toont geen stemmen voor 21:00 Midden-Europese tijd op 17 maart 2027. In de wetstekst die geldt vanaf 1 oktober 2026 is geen publicatieverbod voor peilingen gevonden. Deze site publiceert geen peiling en geen projectie.",
+      },
+    ],
+  },
 ];
 
 /**

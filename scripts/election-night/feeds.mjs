@@ -65,6 +65,12 @@ export const FEEDS = [
     hosts: ["valimised.ee"],
     preserveSnapshot: true,
   },
+  {
+    id: "nl-2027-03-17",
+    officialUrl: "https://www.verkiezingsuitslagen.nl/",
+    hosts: ["verkiezingsuitslagen.nl"],
+    preserveSnapshot: true,
+  },
 ];
 
 export function feedById(id) {
