@@ -8,6 +8,7 @@ import { htmlHead, isRedirectStub } from "../src/lib/adsense";
 import { isEmbedRoute, languageFromRoute, routeFromHtmlFile } from "../src/lib/house-ad";
 import {
   SPONSOR_CHECKOUT_URL,
+  SPONSOR_OFFER_UNTIL,
   SPONSOR_SLOT_CSS,
   SOLD_SPONSOR,
   isSponsorSurface,
@@ -93,7 +94,7 @@ if (existsSync(OUT)) {
   const en = page("advertise/index.html");
   const es = page("advertise/es/index.html");
   const enTerms = [
-    "One exclusive banner across the site from 3 Nov 00:00 ET to 6 Nov 23:59 ET.",
+    "One exclusive banner across the site during Israel election night results + 3 days, 27–30 Oct 2026, through 30 Oct 23:59 Israel time.",
     "Non-political businesses only: no candidates, parties, campaigns or issue advocacy in any country.",
     "Ads are reviewed and labelled 'Sponsored'.",
     "A full refund if not approved.",
@@ -105,7 +106,7 @@ if (existsSync(OUT)) {
     if (!en.includes(phrase)) errors.push(`advertise: missing “${phrase}”`);
   }
   const esTerms = [
-    "Un banner exclusivo en el conjunto del sitio, del 3 de noviembre a las 00:00 ET al 6 de noviembre a las 23:59 ET.",
+    "Un banner exclusivo en el conjunto del sitio durante los resultados de la noche electoral de Israel y los 3 días siguientes, del 27 al 30 de octubre de 2026, hasta las 23:59 hora de Israel.",
     "Solo negocios no políticos: ni candidaturas, ni partidos, ni campañas, ni defensa de causas, en ningún país.",
     "Los anuncios se revisan y se etiquetan como «Patrocinado».",
     "Reembolso completo si no se aprueba.",
@@ -123,6 +124,19 @@ if (existsSync(OUT)) {
   const home = page("index.html");
   if (!home.includes('data-sponsor-slot="open"') && !home.includes('data-sponsor-slot="sold"')) {
     errors.push("homepage is missing the sponsorship slot");
+  }
+  if (!home.includes('data-sponsor-deadline=""') || !home.includes(SPONSOR_OFFER_UNTIL)) {
+    errors.push("homepage is missing the Israel-time deadline script");
+  }
+  if (/data-sponsor-slot="open"[^>]*\bhidden\b/.test(home)) errors.push("homepage ships the offer hidden");
+  const oldCheckout = "6oU9AUc2AfMJfcbeaAb3r1V";
+  for (const [name, html] of [
+    ["homepage", home],
+    ["advertise", en],
+    ["advertise/es", es],
+  ] as const) {
+    if (html.includes(oldCheckout)) errors.push(`${name} still has the old checkout`);
+    if (!html.includes(SPONSOR_CHECKOUT_URL) && name !== "homepage") errors.push(`${name} lost the checkout URL`);
   }
   const embed = page("il/embed/index.html");
   if (embed.includes("data-sponsor-slot")) errors.push("Israel embed has the sponsorship slot");

@@ -10,12 +10,12 @@ const COPY = {
   en: {
     eyebrow: "Sponsorship",
     title: "Book the banner",
-    lede: "One exclusive sponsor on the homepage and every country hub, from 3 November 2026 at 00:00 Eastern Time to 6 November 2026 at 23:59 Eastern Time. The price is $1,000.",
+    lede: "One exclusive sponsor on the homepage and every country hub during Israel election night results + 3 days, 27–30 Oct 2026. The price is $1,000.",
     termsTitle: "Terms",
     where:
-      "shows the banner on the homepage and on each country hub. It does not appear in the Israel results embed. One sponsor occupies the slot for the whole window.",
+      "shows the banner on the homepage and on each country hub during Israel election night results and the next 3 days. It does not appear in the Israel results embed. One sponsor occupies the slot through 30 Oct 2026 at 23:59 Israel time.",
     terms: [
-      "One exclusive banner across the site from 3 Nov 00:00 ET to 6 Nov 23:59 ET.",
+      "One exclusive banner across the site during Israel election night results + 3 days, 27–30 Oct 2026, through 30 Oct 23:59 Israel time.",
       "Non-political businesses only: no candidates, parties, campaigns or issue advocacy in any country.",
       "Ads are reviewed and labelled 'Sponsored'.",
       "A full refund if not approved.",
@@ -30,12 +30,12 @@ const COPY = {
   es: {
     eyebrow: "Patrocinio",
     title: "Reserve el banner",
-    lede: "Un patrocinador exclusivo en la portada y en cada portal de país, del 3 de noviembre de 2026 a las 00:00 (hora del Este) al 6 de noviembre de 2026 a las 23:59 (hora del Este). El precio es $1,000.",
+    lede: "Un patrocinador exclusivo en la portada y en cada portal de país durante los resultados de la noche electoral de Israel y los 3 días siguientes, 27–30 oct 2026. El precio es $1,000.",
     termsTitle: "Condiciones",
     where:
-      "muestra el banner en la portada y en cada portal de país. No aparece en el widget de resultados de Israel. Un solo patrocinador ocupa el espacio durante el periodo completo.",
+      "muestra el banner en la portada y en cada portal de país durante los resultados de la noche electoral de Israel y los 3 días siguientes. No aparece en el widget de resultados de Israel. Un solo patrocinador ocupa el espacio hasta el 30 de octubre de 2026 a las 23:59, hora de Israel.",
     terms: [
-      "Un banner exclusivo en el conjunto del sitio, del 3 de noviembre a las 00:00 ET al 6 de noviembre a las 23:59 ET.",
+      "Un banner exclusivo en el conjunto del sitio durante los resultados de la noche electoral de Israel y los 3 días siguientes, del 27 al 30 de octubre de 2026, hasta las 23:59 hora de Israel.",
       "Solo negocios no políticos: ni candidaturas, ni partidos, ni campañas, ni defensa de causas, en ningún país.",
       "Los anuncios se revisan y se etiquetan como «Patrocinado».",
       "Reembolso completo si no se aprueba.",
