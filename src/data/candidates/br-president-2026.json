@@ -1,0 +1,78 @@
+{
+  "id": "br-president-2026",
+  "langs": ["en"],
+  "source": {
+    "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json",
+    "readOn": "2026-10-26",
+    "order": "source",
+    "label": {
+      "en": "TSE, President, first round 4 October 2026, national file"
+    },
+    "heading": {
+      "en": "Presidential candidates"
+    },
+    "intro": {
+      "en": "The names below are the presidential candidates above 2% of valid votes in the Tribunal Superior Eleitoral first-round national file, read on {date}. The party is the sigla in that file. Source: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the order of those candidates in that file."
+    }
+  },
+  "candidates": [
+    {
+      "name": "Flávio Bolsonaro",
+      "surname": "Bolsonaro",
+      "committee": "PL",
+      "links": [
+        {
+          "href": "https://pt.wikipedia.org/wiki/Fl%C3%A1vio_Bolsonaro",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Luiz Inácio Lula da Silva",
+      "surname": "Silva",
+      "committee": "PT",
+      "links": [
+        {
+          "href": "https://pt.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Augusto Cury",
+      "surname": "Cury",
+      "committee": "AVANTE",
+      "links": [
+        {
+          "href": "https://pt.wikipedia.org/wiki/Augusto_Cury",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Renan Santos",
+      "surname": "Santos",
+      "committee": "MISSÃO",
+      "links": [
+        {
+          "href": "https://pt.wikipedia.org/wiki/Renan_Santos",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Ronaldo Caiado",
+      "surname": "Caiado",
+      "committee": "PSD",
+      "links": [
+        {
+          "href": "https://pt.wikipedia.org/wiki/Ronaldo_Caiado",
+          "kind": "profile"
+        }
+      ]
+    }
+  ]
+}

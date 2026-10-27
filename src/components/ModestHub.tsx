@@ -1,4 +1,5 @@
 import Link from "@/components/AnchorLink";
+import { VerifiedCandidate } from "@/components/VerifiedCandidate";
 import { CountryGuide } from "@/components/CountryGuide";
 import { RouteHero } from "@/components/CountryHero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -132,7 +133,7 @@ export function HubNational({ code }: { code: HubCode }) {
   );
 }
 
-type Row = { name: string; votes: string; pct: string; note?: string };
+type Row = { name: ReactNode; votes: string; pct: string; note?: string; key?: string };
 
 function ResultTable({ caption, rows, pctLabel }: { caption: string; rows: Row[]; pctLabel: string }) {
   return (
@@ -148,8 +149,8 @@ function ResultTable({ caption, rows, pctLabel }: { caption: string; rows: Row[]
           </tr>
         </thead>
         <tbody>
-          {rows.map((r) => (
-            <tr key={r.name} className="border-t border-line">
+          {rows.map((r, index) => (
+            <tr key={r.key ?? (typeof r.name === "string" ? r.name : index)} className="border-t border-line">
               <td className="py-1 pr-4">{r.name}</td>
               <td className="py-1 pr-4 text-right tabular-nums">{r.votes}</td>
               <td className="py-1 pr-4 text-right tabular-nums">{r.pct}</td>
@@ -181,8 +182,19 @@ function BrazilBody() {
         caption="President, second round, 25 October 2026 (TSE, 100% of sections)"
         pctLabel="% valid"
         rows={[
-          { name: "Luiz Inácio Lula da Silva (PT)", votes: "64,256,232", pct: "51.79%", note: "Elected (TSE)" },
-          { name: "Flávio Bolsonaro (PL)", votes: "59,826,041", pct: "48.21%" },
+          {
+            key: "lula-r2",
+            name: <VerifiedCandidate listId="br-president-2026" name="Luiz Inácio Lula da Silva" />,
+            votes: "64,256,232",
+            pct: "51.79%",
+            note: "Elected (TSE)",
+          },
+          {
+            key: "flavio-r2",
+            name: <VerifiedCandidate listId="br-president-2026" name="Flávio Bolsonaro" />,
+            votes: "59,826,041",
+            pct: "48.21%",
+          },
         ]}
       />
       <p>
@@ -193,11 +205,38 @@ function BrazilBody() {
         caption="President, first round, 4 October 2026 (TSE), candidates above 2% of valid votes"
         pctLabel="% valid"
         rows={[
-          { name: "Flávio Bolsonaro (PL)", votes: "56,104,503", pct: "47.03%", note: "To runoff" },
-          { name: "Luiz Inácio Lula da Silva (PT)", votes: "53,879,538", pct: "45.16%", note: "To runoff" },
-          { name: "Augusto Cury (AVANTE)", votes: "—", pct: "2.89%" },
-          { name: "Renan Santos (MISSÃO)", votes: "—", pct: "2.24%" },
-          { name: "Ronaldo Caiado (PSD)", votes: "—", pct: "2.18%" },
+          {
+            key: "flavio-r1",
+            name: <VerifiedCandidate listId="br-president-2026" name="Flávio Bolsonaro" />,
+            votes: "56,104,503",
+            pct: "47.03%",
+            note: "To runoff",
+          },
+          {
+            key: "lula-r1",
+            name: <VerifiedCandidate listId="br-president-2026" name="Luiz Inácio Lula da Silva" />,
+            votes: "53,879,538",
+            pct: "45.16%",
+            note: "To runoff",
+          },
+          {
+            key: "cury",
+            name: <VerifiedCandidate listId="br-president-2026" name="Augusto Cury" />,
+            votes: "—",
+            pct: "2.89%",
+          },
+          {
+            key: "renan",
+            name: <VerifiedCandidate listId="br-president-2026" name="Renan Santos" />,
+            votes: "—",
+            pct: "2.24%",
+          },
+          {
+            key: "caiado",
+            name: <VerifiedCandidate listId="br-president-2026" name="Ronaldo Caiado" />,
+            votes: "—",
+            pct: "2.18%",
+          },
         ]}
       />
       <p>

@@ -32,7 +32,7 @@ const EN = {
   postcodeGap:
     "A postcode search is not connected. Poczta Polska says the Oficjalny Spis PNA is supplied as a paid electronic file and that the file may not be redistributed. No official open postcode-to-gmina file was added. A query is not matched to a gmina.",
   populationGap:
-    "This page does not print a population figure. A Statistics Poland table of population by voivodeship was not retrieved on 17 October 2026, so article 16(3) of the voivodeship act is not applied to a headcount.",
+    "This page does not print a population figure. No Statistics Poland table of population by voivodeship was among the pages read on 17 October 2026, so article 16(3) of the voivodeship act is not applied to a headcount.",
   unofficial: "Unofficial information. Confirm with your official election office.",
 };
 

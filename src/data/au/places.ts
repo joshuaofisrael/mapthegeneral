@@ -129,7 +129,7 @@ export const JURISDICTIONS: Jurisdiction[] = [
     sourceIds: ["ecq-plan", "ecq-boundaries", "ecq-2024", "qld-const-19b", "qld-lgea-s23", "qld-lga-boundaries", "abs-sed-2025", "abs-lga-2025", "abs-lga-map", "aec-entitlement-2026", "aec-tally-house-2025", "abs-erp-2026-03"],
     paragraphs: [
       "The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates, and that there are 77 local government areas.",
-      "The Commission’s 2024 state general election page says the election was held on Saturday 26 October 2024, and that all results have been declared. It says polling places were open from 8am to 6pm. Elected candidates were not copied. A copyright page for the Commission was not retrieved that day, because a direct request returned HTTP 403.",
+      "The Commission’s 2024 state general election page says the election was held on Saturday 26 October 2024, and that all results have been declared. It says polling places were open from 8am to 6pm. Elected candidates were not copied. A direct request for the Commission’s copyright page returned HTTP 403 that day.",
       "The Constitution of Queensland 2001, section 19B, says the normal polling day for an ordinary general election is the last Saturday in October in the fourth calendar year after the calendar year of the last ordinary general election, unless polling is postponed under that section. The Strategic Plan 2025–2029 places a state general election in October 2028 and local government elections in March 2028. The plan does not print a calendar day. This page does not calculate those Saturdays.",
       "The Local Government Electoral Act 2011 (Qld) section 23 says a quadrennial election must be held in, and every fourth year after, 2012, on the last Saturday in March, unless a regulation fixes a different Saturday for a particular year. The calendar day of the last quadrennial election was not in the sources read.",
       "The Queensland Government local government area boundaries dataset, licensed CC BY 4.0 and read on 24 October 2026, names 78 areas. Those names are used on the local pages, with the matching ABS code. The count is not reduced to the Commission’s figure of 77.",
@@ -139,7 +139,7 @@ export const JURISDICTIONS: Jurisdiction[] = [
       "The name of the Premier was not on the pages read.",
       "The elected member for each Legislative Assembly district was not copied. The Gazette notice is linked from the Commission’s 2024 election page. A reuse licence for that notice was not confirmed.",
       "No candidate list for the next state election or the next council election was read.",
-      "Current mayors and councillors were not copied. The department’s local government directory lists council officers, and a copyright licence for that directory was not retrieved on 24 October 2026.",
+      "Current mayors and councillors were not copied. The department’s local government directory lists council officers, and a direct request for that directory’s copyright licence returned HTTP 403 on 24 October 2026.",
       "Which House division or state district a local area falls in was not in the boundaries dataset. It is not guessed from a boundary.",
     ],
   },

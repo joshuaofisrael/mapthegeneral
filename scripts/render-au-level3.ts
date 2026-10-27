@@ -174,7 +174,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
       lede: `${item.name}, a Queensland Legislative Assembly electoral district. ABS State Electoral Division code ${item.absCode}.`,
       sources: ["abs-sed-2025", "ecq-boundaries", "ecq-2024", "qld-const-19b", "ecq-plan"],
       body: `${absDistrictLine(item)}
-<p>The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates. A copyright page for the Commission was not retrieved that day, because a direct request returned HTTP 403, so the Commission’s district roll and the Gazette notice of elected candidates were not copied. The member for ${esc(item.name)} is not printed. Not published under a confirmed reuse licence.</p>
+<p>The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates. A direct request for the Commission’s copyright page returned HTTP 403 that day, so the Commission’s district roll and the Gazette notice of elected candidates were not copied. The member for ${esc(item.name)} is not printed. Not published under a confirmed reuse licence.</p>
 <p>The Commission’s 2024 state general election page says the election was held on Saturday 26 October 2024, and that all results have been declared. It says polling places were open from 8am to 6pm. This page does not reprint a count.</p>
 <p>The Constitution of Queensland 2001, section 19B, says the normal polling day for an ordinary general election is the last Saturday in October in the fourth calendar year after the calendar year of the last ordinary general election, unless polling is postponed under that section. The Commission’s Strategic Plan 2025–2029 places a state general election in October 2028 and does not print a calendar day. This page does not calculate that Saturday. No candidate list is printed.</p>
 <p>${NO_CALL}</p>
@@ -368,7 +368,7 @@ function officeParagraph(area: LocalArea): string {
     return `<p>The Victorian Electoral Commission says that in a local council election people vote for councillors, and that after the councillors are elected they decide who will act as mayor. The current mayor was not on the council index read on 19 October 2026. Not published centrally.</p>`;
   }
   if (area.jurisdictionSlug === "queensland" && area.stateCode) {
-    return `<p>A current mayor and the current councillors were not copied. The Queensland local government directory lists council officers. A copyright licence for that directory was not retrieved on 24 October 2026, because a direct request returned HTTP 403. Not published under a confirmed reuse licence.</p>`;
+    return `<p>A current mayor and the current councillors were not copied. The Queensland local government directory lists council officers. A direct request for that directory’s copyright licence returned HTTP 403 on 24 October 2026. Not published under a confirmed reuse licence.</p>`;
   }
   return `<p>A current mayor or council membership was not published on a central page whose licence permits this publisher to copy it. Not published centrally.</p>`;
 }

@@ -161,7 +161,7 @@ export default function AustraliaSourcesPage() {
           cited for the statutory election rules. Queensland legislation on legislation.qld.gov.au is © State of
           Queensland, Creative Commons Attribution 4.0 (
           <a href="https://www.legislation.qld.gov.au/copyright">legislation copyright</a>
-          ). Mayors were not copied: a licence for the department directory was not retrieved. No Saturday was calculated
+          ). Mayors were not copied. A direct request for the department directory’s copyright licence returned HTTP 403. No Saturday was calculated
           from “the last Saturday in October” or “the last Saturday in March”.
         </p>
         <p>

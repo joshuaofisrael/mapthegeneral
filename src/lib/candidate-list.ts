@@ -1,18 +1,21 @@
 /**
- * Registered-candidate lists for election pages.
+ * Named-candidate lists for election pages.
  *
- * A list is rendered only from a data file of people on the official
- * registered-candidate notice. An empty `candidates` array renders nothing:
- * no heading, no “to be announced” line, and no ItemList. Ballot order is
- * used when every row has one. Otherwise the list is Polish alphabetical
- * order by surname.
+ * Rows come from a data file: an official notice, a commission candidate
+ * file, or a ministry or results list. An empty `candidates` array renders
+ * nothing: no heading, no “to be announced” line, and no ItemList. Ballot
+ * order is used when the source says so. Alphabetical order is by surname
+ * in the list’s language. Source order keeps the rows as published.
+ *
+ * A profile link is stored on the row. The page does not hard-code it.
  */
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-export type CandidateLang = "en" | "pl";
+export type CandidateLang = "en" | "pl" | "it";
 export type CandidateLinkKind = "campaign" | "committee" | "profile";
-export type CandidateOrder = "ballot" | "alphabetical";
+export type CandidateOrder = "ballot" | "alphabetical" | "source";
+export type LangText = Partial<Record<CandidateLang, string>>;
 
 export type CandidateLink = {
   href: string;
@@ -20,13 +23,13 @@ export type CandidateLink = {
 };
 
 export type CandidateRecord = {
-  /** Name exactly as officially registered. */
+  /** Name exactly as officially published. */
   name: string;
-  /** Registering electoral committee, official name. */
+  /** Registering committee, list, or party, in the official name. */
   committee: string;
-  /** Surname used when the notice does not publish a ballot order. */
+  /** Surname used when the source does not publish a ballot order. */
   surname: string;
-  /** Official ballot position. Omit when the notice does not publish one. */
+  /** Official ballot position. Omit when the source does not publish one. */
   ballotOrder?: number;
   links?: CandidateLink[];
 };
@@ -35,11 +38,21 @@ export type CandidateSource = {
   url: string;
   readOn: string;
   order: CandidateOrder;
-  label: { en: string; pl: string };
+  label: LangText;
+  /**
+   * Custom section copy. `{date}` and `{source}` are filled at render.
+   * When heading is omitted, the list uses the registered-notice wording
+   * in English and Polish.
+   */
+  heading?: LangText;
+  intro?: LangText;
+  orderNote?: LangText;
 };
 
 export type CandidateList = {
   id: string;
+  /** Languages this list can be rendered in. Defaults to English and Polish. */
+  langs?: CandidateLang[];
   /** Calendar day by which the registered-candidate notice is due, if known. Not rendered. */
   noticeDue?: string;
   /** Calendar day on which candidate submission closed, if known. Not rendered. */
@@ -99,10 +112,32 @@ const MONTHS_PL = [
 const LINK_LABEL: Record<CandidateLang, Record<CandidateLinkKind, string>> = {
   en: { campaign: "campaign site", committee: "committee site", profile: "profile" },
   pl: { campaign: "strona kampanii", committee: "strona komitetu", profile: "profil" },
+  it: { campaign: "sito di campagna", committee: "sito della lista", profile: "profilo" },
 };
 
+const LANGS: CandidateLang[] = ["en", "pl", "it"];
+
+const MONTHS_IT = [
+  "gennaio",
+  "febbraio",
+  "marzo",
+  "aprile",
+  "maggio",
+  "giugno",
+  "luglio",
+  "agosto",
+  "settembre",
+  "ottobre",
+  "novembre",
+  "dicembre",
+];
+
 export function candidateListDir(root = process.cwd()): string {
-  return join(root, "src/data/pl/candidates");
+  return join(root, "src/data/candidates");
+}
+
+export function listLanguages(list: Pick<CandidateList, "langs">): CandidateLang[] {
+  return list.langs ?? ["en", "pl"];
 }
 
 export function candidateListFile(id: string, root = process.cwd()): string {
@@ -168,10 +203,30 @@ export function linkProblem(href: string): string | null {
   return null;
 }
 
+function requireCopy(block: LangText | undefined, langs: CandidateLang[], where: string, errors: string[], token?: string): void {
+  if (!block) {
+    errors.push(`${where}: missing`);
+    return;
+  }
+  exactKeys(block, langs, where, errors);
+  for (const lang of langs) {
+    const text = block[lang];
+    if (!text?.trim()) errors.push(`${where}.${lang} is empty`);
+    else if (token && !text.includes(token)) errors.push(`${where}.${lang} is missing ${token}`);
+  }
+}
+
 export function validateCandidateData(data: CandidateList, fileId: string): string[] {
   const errors: string[] = [];
-  exactKeys(data, ["id", "noticeDue", "submissionDeadline", "source", "candidates"], fileId, errors);
+  exactKeys(data, ["id", "noticeDue", "submissionDeadline", "source", "candidates", "langs"], fileId, errors);
   if (data.id !== fileId) errors.push(`${fileId}: id is ${data.id}`);
+  const langs = listLanguages(data);
+  if (data.langs) {
+    if (data.langs.length === 0) errors.push(`${fileId}: langs is empty`);
+    for (const lang of data.langs) {
+      if (!LANGS.includes(lang)) errors.push(`${fileId}: language ${lang}`);
+    }
+  }
   if (data.noticeDue !== undefined && !ISO_DATE.test(data.noticeDue)) errors.push(`${fileId}: noticeDue is not a date`);
   if (data.submissionDeadline !== undefined && !ISO_DATE.test(data.submissionDeadline)) {
     errors.push(`${fileId}: submissionDeadline is not a date`);
@@ -189,15 +244,22 @@ export function validateCandidateData(data: CandidateList, fileId: string): stri
     errors.push(`${fileId}: a published list needs a source`);
     return errors;
   }
-  exactKeys(data.source, ["url", "readOn", "order", "label"], `${fileId}.source`, errors);
+  exactKeys(data.source, ["url", "readOn", "order", "label", "heading", "intro", "orderNote"], `${fileId}.source`, errors);
   if (!ISO_DATE.test(data.source.readOn)) errors.push(`${fileId}: source.readOn is not a date`);
-  if (data.source.order !== "ballot" && data.source.order !== "alphabetical") {
-    errors.push(`${fileId}: source.order must be ballot or alphabetical`);
+  if (data.source.order !== "ballot" && data.source.order !== "alphabetical" && data.source.order !== "source") {
+    errors.push(`${fileId}: source.order must be ballot, alphabetical, or source`);
   }
-  exactKeys(data.source.label, ["en", "pl"], `${fileId}.source.label`, errors);
+  requireCopy(data.source.label, langs, `${fileId}.source.label`, errors);
+  const custom = data.source.heading || data.source.intro || data.source.orderNote;
+  if (custom) {
+    requireCopy(data.source.heading, langs, `${fileId}.source.heading`, errors);
+    requireCopy(data.source.intro, langs, `${fileId}.source.intro`, errors, "{source}");
+    requireCopy(data.source.orderNote, langs, `${fileId}.source.orderNote`, errors);
+  } else if (langs.some((lang) => lang !== "en" && lang !== "pl")) {
+    errors.push(`${fileId}: a list outside English and Polish needs heading, intro, and orderNote`);
+  }
   const sourceLink = linkProblem(data.source.url);
   if (sourceLink) errors.push(`${fileId}: source URL ${sourceLink}`);
-  if (!data.source.label.en?.trim() || !data.source.label.pl?.trim()) errors.push(`${fileId}: source label is empty`);
 
   const orders: number[] = [];
   data.candidates.forEach((row, index) => {
@@ -206,8 +268,9 @@ export function validateCandidateData(data: CandidateList, fileId: string): stri
     if (!row.name?.trim()) errors.push(`${where}: name is empty`);
     if (!row.committee?.trim()) errors.push(`${where}: committee is empty`);
     if (!row.surname?.trim()) errors.push(`${where}: surname is empty`);
-    if (!row.name.includes(row.surname.toLocaleUpperCase("pl")) && !row.name.includes(row.surname)) {
-      errors.push(`${where}: surname is not part of the registered name`);
+    const upper = row.surname.toLocaleUpperCase(sortLocale(data));
+    if (!row.name.includes(upper) && !row.name.includes(row.surname)) {
+      errors.push(`${where}: surname is not part of the published name`);
     }
     if (row.ballotOrder !== undefined) {
       if (!Number.isInteger(row.ballotOrder) || row.ballotOrder < 1) errors.push(`${where}: ballotOrder must be a positive integer`);
@@ -225,7 +288,7 @@ export function validateCandidateData(data: CandidateList, fileId: string): stri
     if (withOrder !== data.candidates.length) errors.push(`${fileId}: ballot order is missing on a row`);
     if (new Set(orders).size !== orders.length) errors.push(`${fileId}: ballot positions repeat`);
   } else if (withOrder !== 0) {
-    errors.push(`${fileId}: alphabetical list must not mix in ballot positions`);
+    errors.push(`${fileId}: this list must not mix in ballot positions`);
   }
   return errors;
 }
@@ -245,40 +308,75 @@ export function orderedCandidates(list: CandidateList): CandidateRecord[] {
   if (list.source.order === "ballot") {
     return rows.sort((a, b) => (a.ballotOrder ?? 0) - (b.ballotOrder ?? 0));
   }
-  return rows.sort((a, b) => a.surname.localeCompare(b.surname, "pl") || a.name.localeCompare(b.name, "pl"));
+  if (list.source.order === "source") return rows;
+  const locale = sortLocale(list);
+  return rows.sort((a, b) => a.surname.localeCompare(b.surname, locale) || a.name.localeCompare(b.name, locale));
 }
 
 function formatReadOn(iso: string, lang: CandidateLang): string {
   const [year, month, day] = iso.split("-").map(Number);
   if (lang === "pl") return `${day} ${MONTHS_PL[month - 1]} ${year} r.`;
+  if (lang === "it") return `${day} ${MONTHS_IT[month - 1]} ${year}`;
   return `${day} ${MONTHS_EN[month - 1]} ${year}`;
+}
+
+function fillTemplate(template: string, date: string, sourceHtml: string): string {
+  return esc(template).replaceAll("{date}", esc(date)).replaceAll("{source}", sourceHtml);
+}
+
+function sortLocale(list: CandidateList): string {
+  const langs = listLanguages(list);
+  if (langs.includes("pl")) return "pl";
+  if (langs.includes("it")) return "it";
+  return "en";
+}
+
+export function profileHref(row: CandidateRecord): string | undefined {
+  return row.links?.find((link) => link.kind === "profile")?.href;
 }
 
 function outbound(href: string, label: string): string {
   return `<a href="${esc(href)}" rel="nofollow noopener" target="_blank">${esc(label)}</a>`;
 }
 
-export function candidateHeading(lang: CandidateLang): string {
+export function candidateHeading(list: CandidateList, lang: CandidateLang): string {
+  const custom = list.source?.heading?.[lang];
+  if (custom) return custom;
   return lang === "pl" ? "Zarejestrowani kandydaci" : "Registered candidates";
+}
+
+function noticeIntro(lang: CandidateLang, date: string, source: string): string {
+  if (lang === "pl") {
+    return `Obwieszczenie o zarejestrowanych kandydatach, odczytane ${date}, jest listą poniżej. Komitet jest nazwą z tego obwieszczenia. Źródło: ${source}.`;
+  }
+  return `The notice of registered candidates, read on ${date}, is the list below. The committee is the name in that notice. Source: ${source}.`;
+}
+
+function noticeOrder(list: CandidateList, lang: CandidateLang): string {
+  if (list.source?.order === "ballot") {
+    return lang === "pl"
+      ? "Kolejność jest kolejnością na karcie z tego obwieszczenia."
+      : "The order is the ballot order in that notice.";
+  }
+  return lang === "pl"
+    ? "To obwieszczenie nie podaje pozycji na karcie. Nazwiska są w polskim porządku alfabetycznym."
+    : "That notice does not give a ballot order. Names are in Polish alphabetical order by surname.";
 }
 
 export function renderCandidateListHtml(list: CandidateList, lang: CandidateLang): string {
   if (list.candidates.length === 0 || !list.source) return "";
+  if (!listLanguages(list).includes(lang)) {
+    throw new Error(`${list.id}: no ${lang} copy`);
+  }
   const rows = orderedCandidates(list);
   const date = formatReadOn(list.source.readOn, lang);
-  const source = outbound(list.source.url, list.source.label[lang]);
-  const intro =
-    lang === "pl"
-      ? `Obwieszczenie o zarejestrowanych kandydatach, odczytane ${date}, jest listą poniżej. Komitet jest nazwą z tego obwieszczenia. Źródło: ${source}.`
-      : `The notice of registered candidates, read on ${date}, is the list below. The committee is the name in that notice. Source: ${source}.`;
-  const order =
-    list.source.order === "ballot"
-      ? lang === "pl"
-        ? "Kolejność jest kolejnością na karcie z tego obwieszczenia."
-        : "The order is the ballot order in that notice."
-      : lang === "pl"
-        ? "To obwieszczenie nie podaje pozycji na karcie. Nazwiska są w polskim porządku alfabetycznym."
-        : "That notice does not give a ballot order. Names are in Polish alphabetical order by surname.";
+  const label = list.source.label[lang];
+  if (!label) throw new Error(`${list.id}: source label missing for ${lang}`);
+  const source = outbound(list.source.url, label);
+  const intro = list.source.intro?.[lang]
+    ? fillTemplate(list.source.intro[lang], date, source)
+    : noticeIntro(lang, date, source);
+  const order = list.source.orderNote?.[lang] ? esc(list.source.orderNote[lang]) : noticeOrder(list, lang);
   const items = rows
     .map((row) => {
       const links = (row.links ?? []).map((link) => outbound(link.href, LINK_LABEL[lang][link.kind]));
@@ -287,7 +385,7 @@ export function renderCandidateListHtml(list: CandidateList, lang: CandidateLang
     })
     .join("\n");
   return `<section id="candidates">
-<h2>${esc(candidateHeading(lang))}</h2>
+<h2>${esc(candidateHeading(list, lang))}</h2>
 <p>${intro}</p>
 <p>${order}</p>
 <ul>
@@ -308,7 +406,7 @@ export function candidateItemListJsonLd(list: CandidateList, lang: CandidateLang
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: candidateHeading(lang),
+    name: candidateHeading(list, lang),
     numberOfItems: rows.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: rows.map((row, index) => {

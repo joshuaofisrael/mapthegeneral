@@ -1,0 +1,38 @@
+{
+  "readOn": "2026-10-27",
+  "note": "Named candidates shown on the site with no profile link. A link is added only when an official election, parliament, or party page, or a native-language Wikipedia article, matches the published name, the list or party, and the contest. These rows were checked on the date above and did not meet that test.",
+  "candidates": [
+    {
+      "name": "Tomasz Jacek NARUSZEWICZ",
+      "listId": "senat-20-2026",
+      "pages": ["/pl/pl/elections/senat-20-2026/", "/pl/en/elections/senat-20-2026/"],
+      "contest": "Poland Senate by-election, constituency 20, 22 November 2026",
+      "committee": "KOMITET WYBORCZY WYBORCÓW TOMASZA NARUSZEWICZA",
+      "reason": "The Commission file kandydaci_senat_utf8.csv, read on 27 October 2026, gives this name, the committee, the occupation przedsiębiorca, and residence in Zielona Góra. No Sejm or Senate profile was found. Polish Wikipedia has no article at the name, including Tomasz Naruszewicz and Tomasz Jacek Naruszewicz (both returned HTTP 404 on 27 October 2026). A party page that identifies this person, rather than someone else with a similar name, was not found."
+    },
+    {
+      "name": "Zdzisława Maria RÓŻAŃSKA",
+      "listId": "senat-20-2026",
+      "pages": ["/pl/pl/elections/senat-20-2026/", "/pl/en/elections/senat-20-2026/"],
+      "contest": "Poland Senate by-election, constituency 20, 22 November 2026",
+      "committee": "KOMITET WYBORCZY WYBORCÓW KOALICJI 15 PAŹDZIERNIKA",
+      "reason": "The same Commission file gives this name, the committee, the occupation nauczyciel, and residence in Kęszyca Kolonia. No Sejm or Senate profile was found. The Polish Wikipedia article Zdzisława Różańska returned HTTP 404 on 27 October 2026. Press descriptions were not used as a profile."
+    },
+    {
+      "name": "Luciano D'Amico",
+      "listId": "camera-chieti-2026",
+      "pages": ["/it/it/elections/camera-chieti-2026/", "/it/en/elections/camera-chieti-2026/"],
+      "contest": "Italy Chamber by-election, constituency 01-Chieti, 15–16 November 2026",
+      "committee": "PARTITO DEMOCRATICO - ALLEANZA VERDI E SINISTRA - CASA RIFORMISTA - AVANTI PSI - RIFONDAZIONE COMUNISTA - MOVIMENTO 5 STELLE",
+      "reason": "The Interior Ministry transparency page lists him for this constituency, born in Torricella Peligna (CH) on 3 January 1960. The curriculum link on that page (LucianoDAmico_CV.pdf) is marked disabled and returned HTTP 404 on 27 October 2026. Italian Wikipedia has no article at Luciano D'Amico (HTTP 404 the same day). The Abruzzo regional council list names a councillor D'AMICO LUCIANO, without a birth date or a personal profile URL, so that list was not used as his profile."
+    },
+    {
+      "name": "Danilo Ranieri",
+      "listId": "camera-chieti-2026",
+      "pages": ["/it/it/elections/camera-chieti-2026/", "/it/en/elections/camera-chieti-2026/"],
+      "contest": "Italy Chamber by-election, constituency 01-Chieti, 15–16 November 2026",
+      "committee": "ITALIA DOMANI MARCO RIZZO",
+      "reason": "The Interior Ministry transparency page lists him for this constituency, born in Sora (FR) on 17 November 1971. The curriculum link on that page (DaniloRanieri_CV.pdf) is marked disabled and returned HTTP 404 on 27 October 2026. Italian Wikipedia has no article at Danilo Ranieri (HTTP 404 the same day). The Comune di Lanciano page for assessor Danilo Ranieri does not print a birth date, and the curriculum file on that page is a scanned PDF with no extractable birth date, so it was not treated as proof that he is the person born in Sora."
+    }
+  ]
+}
