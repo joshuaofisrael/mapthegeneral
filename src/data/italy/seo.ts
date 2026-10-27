@@ -19,9 +19,9 @@ export function italyMetadata(input: {
     description: input.description,
     alternates: {
       canonical: url,
-      languages: { it: itUrl, en: enUrl, "x-default": enUrl },
+      languages: { it: itUrl, en: enUrl, "x-default": itUrl },
     },
-    robots: { index: true, follow: true },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
     openGraph: {
       title: socialTitle,
       description: input.description,

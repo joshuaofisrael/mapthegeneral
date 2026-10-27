@@ -1,0 +1,323 @@
+import Link from "@/components/AnchorLink";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentTrust } from "@/components/ContentTrust";
+import { JsonLd } from "@/components/JsonLd";
+import { PageHeader } from "@/components/PageHeader";
+import { SourceList } from "@/components/SourceList";
+import { VerifiedCandidate } from "@/components/VerifiedCandidate";
+import { SITE, absoluteUrl } from "@/data/site";
+import type { SourceRef } from "@/data/spain/types";
+import { bilingualMetadata } from "@/lib/bilingual-meta";
+import { breadcrumbJsonLd } from "@/lib/metadata";
+
+const PT = "/br/pt/elections/geral-2026/";
+const EN = "/br/en/elections/general-2026/";
+const TSE = "https://resultados.tse.jus.br/oficial/app/index.html";
+const TSE_HOME = "https://www.tse.jus.br/";
+const R2 = "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json";
+const R1 = "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json";
+
+type Lang = "pt" | "en";
+
+const COPY = {
+  pt: {
+    title: "Brasil: eleição geral de 2026, 4 e 25 de outubro",
+    description:
+      "Eleição geral no Brasil: primeiro turno em 4 de outubro de 2026 e segundo turno presidencial em 25 de outubro de 2026. Totais oficiais do TSE. Informação não oficial.",
+    h1: "Eleição geral de 2026 no Brasil",
+    lede: "Totais presidenciais do Tribunal Superior Eleitoral. As eleições estaduais não estão nesta página.",
+    eyebrow: "4 de outubro e 25 de outubro de 2026",
+    home: "Início",
+    country: "Brasil",
+    elections: "Eleições",
+    crumb: "Eleição geral de 2026",
+    other: "English",
+    otherHref: EN,
+    sources: "Páginas oficiais",
+    trust: {
+      updated: "Atualizado",
+      before: "Informação não oficial. Confirme com o ",
+      link: "Tribunal Superior Eleitoral",
+      after: ".",
+      report: "Informar um erro nesta página",
+    },
+  },
+  en: {
+    title: "Brazil general election, 4 and 25 October 2026",
+    description:
+      "General election in Brazil: first round on 4 October 2026 and the presidential runoff on 25 October 2026. Official totals from the Superior Electoral Court. Unofficial information.",
+    h1: "General election of 2026 in Brazil",
+    lede: "Presidential totals from the Superior Electoral Court. State races are not on this page.",
+    eyebrow: "4 October and 25 October 2026",
+    home: "Home",
+    country: "Brazil",
+    elections: "Elections",
+    crumb: "General election of 2026",
+    other: "Português",
+    otherHref: PT,
+    sources: "Official pages",
+    trust: undefined,
+  },
+} as const;
+
+const SOURCES: SourceRef[] = [
+  { id: "br-tse", name: "TSE, official results service", url: TSE, readOn: "2026-10-26" },
+  { id: "br-r2", name: "TSE, President, second round, national file", url: R2, readOn: "2026-10-26" },
+  { id: "br-r1", name: "TSE, President, first round, national file", url: R1, readOn: "2026-10-26" },
+  { id: "br-home", name: "Tribunal Superior Eleitoral", url: TSE_HOME, readOn: "2026-10-26" },
+];
+
+export function brGeneralMetadata(lang: Lang) {
+  const copy = COPY[lang];
+  return bilingualMetadata({
+    title: copy.title,
+    description: copy.description,
+    path: lang === "pt" ? PT : EN,
+    locale: lang === "pt" ? "pt_BR" : "en_US",
+    languages: { pt: PT, en: EN, "x-default": PT },
+  });
+}
+
+function faq(lang: Lang) {
+  if (lang === "pt") {
+    return [
+      {
+        q: "Quando foi a eleição geral de 2026 no Brasil?",
+        a: "O serviço de resultados do TSE registra o primeiro turno em 4 de outubro de 2026 e o segundo turno presidencial em 25 de outubro de 2026.",
+      },
+      {
+        q: "Quem foi eleito presidente?",
+        a: "O arquivo do segundo turno, gerado pelo TSE às 23:26 de Brasília em 25 de outubro de 2026, com 100% das 499.248 seções, registra Luiz Inácio Lula da Silva (PT) eleito, com 64.256.232 votos, 51,79% dos votos válidos.",
+      },
+      {
+        q: "De onde vêm os números?",
+        a: "Somente dos arquivos nacionais do TSE. Esta página não usa apuração de imprensa.",
+      },
+      {
+        q: "Como foi o voto para presidente?",
+        a: "O TSE registra dois turnos para presidente. No primeiro, nenhum candidato passou da metade dos votos válidos. O segundo turno foi entre os dois mais votados.",
+      },
+      {
+        q: "As eleições estaduais estão aqui?",
+        a: "Não. Esta página cobre somente a eleição presidencial nacional.",
+      },
+      {
+        q: "O site publica pesquisas?",
+        a: "Não. Este site não publica pesquisas eleitorais nem projeções.",
+      },
+    ];
+  }
+  return [
+    {
+      q: "When was Brazil’s 2026 general election?",
+      a: "The TSE results service records the first round on 4 October 2026 and the presidential runoff on 25 October 2026.",
+    },
+    {
+      q: "Who was elected president?",
+      a: "The second-round file, generated by the TSE at 23:26 Brasília time on 25 October 2026, with 100 percent of 499,248 sections, records Luiz Inácio Lula da Silva (PT) elected, with 64,256,232 votes, 51.79 percent of valid votes.",
+    },
+    {
+      q: "Where do the figures come from?",
+      a: "Only from the TSE national files. This page does not use a press tally.",
+    },
+    {
+      q: "How was the presidential vote held?",
+      a: "The TSE records two rounds for president. In the first, no candidate passed half of the valid votes. The second round was between the two leading candidates.",
+    },
+    {
+      q: "Are state elections on this page?",
+      a: "No. This page covers the national presidential election only.",
+    },
+    {
+      q: "Does this site publish election surveys?",
+      a: "No. This site does not publish election surveys or projections.",
+    },
+  ];
+}
+
+export function BrGeneralPage({ lang }: { lang: Lang }) {
+  const copy = COPY[lang];
+  const path = lang === "pt" ? PT : EN;
+  const pt = lang === "pt";
+  const items = faq(lang);
+  const crumbs = [
+    { name: copy.home, path: "/" },
+    { name: copy.country, path: "/br/" },
+    { name: copy.elections, path: "/br/en/elections/" },
+    { name: copy.crumb, path },
+  ];
+  return (
+    <article lang={pt ? "pt" : "en"} className="country-article" data-country="br">
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: pt ? "Eleição geral de 2026 no Brasil" : "Brazil general election of 2026",
+          startDate: "2026-10-04",
+          endDate: "2026-10-25",
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          image: [`${SITE.url}/og.png`],
+          location: {
+            "@type": "Country",
+            name: pt ? "Brasil" : "Brazil",
+            address: { "@type": "PostalAddress", addressCountry: "BR" },
+          },
+          organizer: { "@type": "Organization", name: "Tribunal Superior Eleitoral", url: TSE_HOME },
+          url: absoluteUrl(path),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          inLanguage: pt ? "pt" : "en",
+          mainEntity: items.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }}
+      />
+      <Breadcrumbs
+        items={crumbs.map((item, index) => ({ href: index === crumbs.length - 1 ? undefined : item.path, label: item.name }))}
+      />
+      <p className="text-sm">
+        <Link className="text-navy underline" href={copy.otherHref} hrefLang={pt ? "en" : "pt"}>
+          {copy.other}
+        </Link>
+      </p>
+      <PageHeader eyebrow={copy.eyebrow} title={copy.h1} lede={copy.lede} />
+      <ContentTrust updated="27 October 2026" pagePath={path} officeHref={TSE} officeLabel="Tribunal Superior Eleitoral" copy={copy.trust} />
+      <div className="mt-8 space-y-8">
+        <section className="space-y-3">
+          <h2 className="font-serif text-2xl font-semibold">{pt ? "Resultado oficial" : "Official result"}</h2>
+          <p>
+            {pt
+              ? "Todos os números abaixo são do serviço de resultados do Tribunal Superior Eleitoral, lido em 26 de outubro de 2026. O arquivo nacional do segundo turno foi gerado às 23:26 de Brasília em 25 de outubro de 2026, com 100% das 499.248 seções. Os percentuais são de votos válidos."
+              : "Every figure below is from the Superior Electoral Court results service, read on 26 October 2026. The national second-round file was generated at 23:26 Brasília time on 25 October 2026, with 100 percent of 499,248 polling sections. Percentages are of valid votes."}{" "}
+            <a className="text-navy underline" href={TSE} rel="noopener noreferrer">
+              TSE
+            </a>
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <caption className="mb-2 text-left font-semibold">
+                {pt ? "Presidente, segundo turno, 25 de outubro de 2026 (TSE, 100% das seções)" : "President, second round, 25 October 2026 (TSE, 100 percent of sections)"}
+              </caption>
+              <thead>
+                <tr>
+                  <th className="py-1 pr-4">{pt ? "Candidato" : "Candidate"}</th>
+                  <th className="py-1 pr-4 text-right">{pt ? "Votos" : "Votes"}</th>
+                  <th className="py-1 pr-4 text-right">{pt ? "% válidos" : "Percent of valid votes"}</th>
+                  <th className="py-1">{pt ? "Situação" : "Status"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t border-line">
+                  <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name="Luiz Inácio Lula da Silva" /></td>
+                  <td className="py-1 pr-4 text-right tabular-nums">64,256,232</td>
+                  <td className="py-1 pr-4 text-right tabular-nums">51.79%</td>
+                  <td className="py-1">{pt ? "Eleito (TSE)" : "Elected (TSE)"}</td>
+                </tr>
+                <tr className="border-t border-line">
+                  <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name="Flávio Bolsonaro" /></td>
+                  <td className="py-1 pr-4 text-right tabular-nums">59,826,041</td>
+                  <td className="py-1 pr-4 text-right tabular-nums">48.21%</td>
+                  <td className="py-1" />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            {pt
+              ? "Segundo turno, segundo o TSE: eleitorado 158.745.502; comparecimento 128.236.074 (80,78%); abstenções 30.509.005; votos válidos 124.082.273; votos em branco 1.430.496."
+              : "Second round, per the TSE: electorate 158,745,502; votes cast 128,236,074 (80.78 percent); abstentions 30,509,005; valid votes 124,082,273; blank votes 1,430,496."}
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <caption className="mb-2 text-left font-semibold">
+                {pt
+                  ? "Presidente, primeiro turno, 4 de outubro de 2026 (TSE), candidatos acima de 2% dos votos válidos"
+                  : "President, first round, 4 October 2026 (TSE), candidates above 2 percent of valid votes"}
+              </caption>
+              <thead>
+                <tr>
+                  <th className="py-1 pr-4">{pt ? "Candidato" : "Candidate"}</th>
+                  <th className="py-1 pr-4 text-right">{pt ? "Votos" : "Votes"}</th>
+                  <th className="py-1 pr-4 text-right">{pt ? "% válidos" : "Percent of valid votes"}</th>
+                  <th className="py-1">{pt ? "Situação" : "Status"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Flávio Bolsonaro (PL)", "56,104,503", "47.03%", pt ? "Segundo turno" : "To runoff"],
+                  ["Luiz Inácio Lula da Silva (PT)", "53,879,538", "45.16%", pt ? "Segundo turno" : "To runoff"],
+                  ["Augusto Cury (AVANTE)", "—", "2.89%", ""],
+                  ["Renan Santos (MISSÃO)", "—", "2.24%", ""],
+                  ["Ronaldo Caiado (PSD)", "—", "2.18%", ""],
+                ].map((row) => (
+                  <tr key={row[0]} className="border-t border-line">
+                    <td className="py-1 pr-4"><VerifiedCandidate listId="br-president-2026" name={row[0].replace(/ \([^)]*\)$/, "")} /></td>
+                    <td className="py-1 pr-4 text-right tabular-nums">{row[1]}</td>
+                    <td className="py-1 pr-4 text-right tabular-nums">{row[2]}</td>
+                    <td className="py-1">{row[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>
+            {pt
+              ? "Primeiro turno, no arquivo nacional do TSE: comparecimento 125.275.835 (78,92%); votos válidos 119.300.788. Os demais candidatos ficaram abaixo de 2% e estão no arquivo. Esta página não cobre eleições estaduais."
+              : "First round, in the TSE national file: votes cast 125,275,835 (78.92 percent); valid votes 119,300,788. Other candidates were under 2 percent each and are in the file. This page does not cover state races."}{" "}
+            <a className="text-navy underline" href={R1} rel="noopener noreferrer">
+              {pt ? "Arquivo do primeiro turno" : "First-round file"}
+            </a>
+          </p>
+        </section>
+        <section className="space-y-3">
+          <h2 className="font-serif text-2xl font-semibold">{pt ? "Como foi o voto" : "How to vote"}</h2>
+          <p>
+            {pt
+              ? "O TSE registra a eleição geral de 2026 em dois turnos. O primeiro, em 4 de outubro, incluiu presidente, governador, senador e deputados federais e estaduais. O segundo turno nacional, em 25 de outubro, foi para presidente, entre os dois candidatos mais votados no primeiro turno. O modo de identificação do eleitor não é reescrito aqui; o serviço oficial é o do TSE."
+              : "The TSE records the 2026 general election in two rounds. The first, on 4 October, included president, governor, senator, and federal and state deputies. The national second round, on 25 October, was for president, between the two leading candidates from the first round. Voter identification is not restated here; the official service is the TSE."}{" "}
+            <a className="text-navy underline" href={TSE_HOME} rel="noopener noreferrer">
+              tse.jus.br
+            </a>
+          </p>
+        </section>
+        <section className="space-y-3">
+          <h2 className="font-serif text-2xl font-semibold">{pt ? "Datas" : "Key dates"}</h2>
+          <ul className="list-disc space-y-2 pl-5 text-sm leading-6">
+            <li>{pt ? "4 de outubro de 2026: primeiro turno." : "4 October 2026: first round."}</li>
+            <li>{pt ? "25 de outubro de 2026: segundo turno presidencial." : "25 October 2026: presidential runoff."}</li>
+            <li>
+              {pt
+                ? "25 de outubro de 2026, 23:26 de Brasília: arquivo do segundo turno com 100% das seções."
+                : "25 October 2026, 23:26 Brasília time: second-round file with 100 percent of sections."}
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 className="font-serif text-2xl font-semibold">{pt ? "Perguntas" : "Questions"}</h2>
+          <dl className="mt-4 space-y-4">
+            {items.map((item) => (
+              <div key={item.q}>
+                <dt className="font-semibold">{item.q}</dt>
+                <dd className="mt-1 text-sm leading-6 text-ink-muted">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+        <p className="text-sm">
+          <Link className="text-navy underline" href="/br/">
+            {copy.country}
+          </Link>
+        </p>
+      </div>
+      <SourceList sources={SOURCES} heading={copy.sources} />
+    </article>
+  );
+}

@@ -126,9 +126,9 @@ const auEn: Guide = {
       href: "/au/en/elections/victoria-2026/",
     },
     {
-      name: "Other dates a commission has printed",
-      detail: "Including New South Wales on Saturday 13 March 2027. The index does not invent a day a commission has not printed.",
-      href: "/au/en/elections/",
+      name: "New South Wales state election, Saturday 13 March 2027",
+      detail: "The NSW Electoral Commission page for the 59th Parliament. Nominations were not open on the page read on 27 October 2026.",
+      href: "/au/en/elections/nsw-2027/",
     },
   ],
   glossaryHeading: "Glossary",

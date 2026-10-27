@@ -217,6 +217,42 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     ],
   },
   {
+    id: "au-nsw-2027",
+    country: "au",
+    election: { en: "New South Wales state election, 13 March 2027" },
+    pollingDay: "2027-03-13",
+    trackerOpensAt: "2027-03-13T18:00:00+11:00",
+    officialResults: {
+      label: "NSW Electoral Commission, 2027 NSW State election",
+      url: "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election",
+    },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "NSW Electoral Commission, 2027 NSW State election",
+          url: "https://elections.nsw.gov.au/elections/state-elections/2027-nsw-state-election",
+        },
+        {
+          label: "Constitution Act 1902 (NSW), section 24A",
+          url: "https://legislation.nsw.gov.au/view/html/inforce/current/act-1902-032#sec.24A",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "results-embargo",
+        start: "2027-03-10T00:00:00+11:00",
+        end: "2027-03-13T18:00:00+11:00",
+        citation: {
+          label: "Broadcasting Services Act 1992, Schedule 2, clause 3A (electoral advertising blackout for broadcasters)",
+          url: "https://www.legislation.gov.au/C2004A04401/latest/text",
+        },
+        en: "Broadcasters may not carry electoral advertisements from midnight on the Wednesday before polling day until polls close (Broadcasting Services Act 1992, Schedule 2, clause 3A). This site carries no electoral advertising at any time and shows no counts until polls close at 18:00 on 13 March 2027.",
+      },
+    ],
+  },
+  {
     id: "es-2026-generales",
     country: "es",
     localLang: "es",
@@ -227,6 +263,16 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     pollingDay: "2026-11-29",
     trackerOpensAt: "2026-11-29T21:00:00+01:00",
     officialResults: { label: "Ministerio del Interior, resultados electorales", url: "https://www.infoelectoral.interior.gob.es/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Real Decreto 806/2026 (BOE-A-2026-20742), texto",
+          url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742",
+        },
+        { label: "Real Decreto 806/2026, ELI", url: "https://www.boe.es/eli/es/rd/2026/10/05/806" },
+      ],
+    },
     rules: [
       {
         kind: "poll-ban",
@@ -261,6 +307,25 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     pollingDay: "2026-11-29",
     trackerOpensAt: "2026-11-29T12:00:00+01:00",
     officialResults: { label: "Bundesamt für Statistik, Abstimmungen", url: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html" },
+    rules: [],
+  },
+  {
+    id: "ie-2026-seanad",
+    country: "ie",
+    election: { en: "Seanad Éireann bye-election, Cultural and Educational Panel, 6 November 2026" },
+    pollingDay: "2026-11-06",
+    trackerOpensAt: "2026-11-06T11:00:00+00:00",
+    officialResults: { label: "Houses of the Oireachtas, elections", url: "https://www.oireachtas.ie/en/elections/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Department of Housing, Local Government and Heritage, Polling Day Order for the Seanad bye-election",
+          url: "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/polling-day-order-for-seanad-bye-election-made-by-minister-browne/",
+        },
+        { label: "Houses of the Oireachtas, elections", url: "https://www.oireachtas.ie/en/elections/" },
+      ],
+    },
     rules: [],
   },
   {
@@ -310,7 +375,7 @@ export const STANDING_RULES: StandingRule[] = [
   },
   {
     country: "ie",
-    note: "No dated window and no polling day was printed for the next Dáil election. Broadcaster guidelines are not a rule for this website. The Electoral Commission says Part V of the Electoral Reform Act 2022 has not been commenced. This site publishes no polls, no candidate photographs and no Ireland tracker.",
+    note: "The Seanad Éireann bye-election of 6 November 2026 has its own dated window. No polling day was printed for the next Dáil election. Broadcaster guidelines are not a rule for this website. The Electoral Commission says Part V of the Electoral Reform Act 2022 has not been commenced. This site publishes no polls and no candidate photographs. The Seanad window has no tracker fetcher.",
     citation: {
       label: "Electoral Commission, regulation of political advertising",
       url: "https://www.electoralcommission.ie/regulation-of-political-advertising/",
@@ -339,7 +404,7 @@ export const STANDING_RULES: StandingRule[] = [
   },
   {
     country: "rs",
-    note: "No dated window open. Voting ended at 20:00 on 25 October 2026. This site publishes only RIK figures, labelled preliminary until RIK publishes the total report, and no polls or seat projections.",
+    note: "No dated window is open for a count. Voting for the National Assembly ended at 20:00 on 25 October 2026. A presidential election has not been called; this site does not print a presidential polling day until one is published. This site publishes only RIK figures for the Assembly, labelled preliminary until RIK publishes the total report, and no polls or seat projections.",
     citation: { label: "RIK, about National Assembly elections", url: "https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php" },
   },
 ];

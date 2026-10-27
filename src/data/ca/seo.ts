@@ -25,7 +25,7 @@ export function caMetadata(input: {
         "x-default": absoluteUrl(enPath),
       },
     },
-    robots: { index: true, follow: true },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
     openGraph: {
       title: socialTitle,
       description: input.description,

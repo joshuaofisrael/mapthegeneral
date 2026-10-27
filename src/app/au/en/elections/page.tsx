@@ -7,7 +7,7 @@ import { auHome, jurisdictionPath } from "@/countries/au";
 export const metadata = auPageMetadata({
   title: "Elections in Australia",
   description:
-    "Index of elections on the Australia pages. The next federal election is due between August 2027 and May 2028. No polling day has been named. Unofficial information.",
+    "Elections in Australia. Victoria votes on Saturday 28 November 2026. The New South Wales state election is Saturday 13 March 2027. No federal polling day has been named. Unofficial information.",
   path: "/au/en/elections",
 });
 
@@ -50,10 +50,15 @@ export default function AustraliaElectionsPage() {
           </p>
         </li>
         <li>
-          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={jurisdictionPath("new-south-wales")}>
-            New South Wales, Saturday, 13 March 2027
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={`${path}nsw-2027/`}>
+            New South Wales state election, Saturday 13 March 2027
           </Link>
-          <p className="mt-1 text-sm text-ink-muted">NSW Electoral Commission, election of the 59th Parliament.</p>
+          <p className="mt-1 text-sm text-ink-muted">
+            NSW Electoral Commission, election of the 59th Parliament.{" "}
+            <Link className="text-navy underline" href={jurisdictionPath("new-south-wales")}>
+              New South Wales
+            </Link>
+          </p>
         </li>
       </ul>
       <p className="text-sm">

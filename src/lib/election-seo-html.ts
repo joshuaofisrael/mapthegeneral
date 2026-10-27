@@ -182,7 +182,7 @@ export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSe
 <meta name="description" content="${esc(page.description)}">
 <link rel="canonical" href="${esc(canonical)}">
 ${alternates}
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta property="og:title" content="${esc(page.title)}">
 <meta property="og:description" content="${esc(page.ogDescription)}">
 <meta property="og:url" content="${esc(canonical)}">

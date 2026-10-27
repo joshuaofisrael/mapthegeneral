@@ -89,6 +89,12 @@ export const ieEn: Guide = {
   electionsHeading: "Elections",
   elections: [
     {
+      name: "Seanad Éireann bye-election, Friday 6 November 2026",
+      detail:
+        "Cultural and Educational Panel, Nominating Bodies Sub-Panel. The electorate is members of Dáil Éireann and Seanad Éireann. The public does not vote.",
+      href: "/ie/en/elections/seanad-2026/",
+    },
+    {
       name: "Next Dáil general election",
       detail:
         "No polling day was printed on the pages read. The general-elections page says a general election has to take place at least every five years, and that after the Dáil is dissolved an election has to be held within 30 days.",
@@ -358,8 +364,13 @@ export const brEn: Guide = {
   electionsHeading: "Elections",
   elections: [
     {
+      name: "Eleição geral de 2026",
+      detail: "Página em português. Primeiro turno em 4 de outubro e segundo turno em 25 de outubro de 2026, totais do TSE.",
+      href: "/br/pt/elections/geral-2026/",
+    },
+    {
       name: "General election, 4 October 2026 (first round) and 25 October 2026 (presidential runoff)",
-      detail: "TSE: runoff won by Luiz Inácio Lula da Silva (PT) with 51.79% of valid votes, 100% of sections counted.",
+      detail: "TSE: runoff won by Luiz Inácio Lula da Silva (PT) with 51.79 percent of valid votes, 100 percent of sections counted.",
       href: "/br/en/elections/general-2026/",
     },
   ],
@@ -422,9 +433,24 @@ export const rsEn: Guide = {
   electionsHeading: "Elections",
   elections: [
     {
+      name: "Izbori za Narodnu skupštinu, 25. oktobar 2026",
+      detail: "Stranica na srpskom. Preliminarni zbir RIK.",
+      href: "/rs/sr/elections/narodna-skupstina-2026/",
+    },
+    {
       name: "National Assembly election, 25 October 2026",
       detail: "RIK preliminary count (8,135 of 8,392 polling stations processed at 10:25 Belgrade time, 26 October 2026). Not final.",
       href: "/rs/en/elections/national-assembly-2026/",
+    },
+    {
+      name: "Predsednički izbori 2026",
+      detail: "Dan glasanja nije raspisan. Najkasniji datum koji navode RTS i predsednik RIK je 27. decembar 2026.",
+      href: "/rs/sr/elections/predsednicki-2026/",
+    },
+    {
+      name: "Presidential election, 2026",
+      detail: "No polling day has been called. RTS and the RIK chair state 27 December 2026 as the latest day, not as a called date.",
+      href: "/rs/en/elections/president-2026/",
     },
   ],
   glossaryHeading: "Glossary",
@@ -495,9 +521,19 @@ export const ilEn: Guide = {
   electionsHeading: "Elections",
   elections: [
     {
+      name: "הבחירות לכנסת ה-26, 27 באוקטובר 2026",
+      detail: "עמוד בעברית. 120 מושבים. התוצאות בעמוד הנפרד של ועדת הבחירות המרכזית.",
+      href: "/il/he/elections/knesset-2026/",
+    },
+    {
       name: "Election to the 26th Knesset, Tuesday 27 October 2026",
-      detail: "Set by the Central Elections Committee. 120 seats, 3.25% threshold. Results will come from the Committee.",
+      detail: "Set by the Central Elections Committee. 120 seats, 3.25 percent threshold. Counts are on the results page.",
       href: "/il/en/elections/knesset-2026/",
+    },
+    {
+      name: "תוצאות הבחירות לכנסת ה-26",
+      detail: "עמוד התוצאות בעברית, מנתוני ועדת הבחירות המרכזית.",
+      href: "/il/he/results/",
     },
   ],
   glossaryHeading: "Glossary",

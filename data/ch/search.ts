@@ -113,6 +113,20 @@ function entriesFor(lang: ChLang): ChIndexEntry[] {
       kind: "election",
       text: "24 October 2027 24. Oktober 2027 Nationalrat Conseil national Consiglio nazionale SR 161.12",
     },
+    {
+      path: `${home}elections/volksabstimmung-2026-11-29/`,
+      lang,
+      title:
+        lang === "de"
+          ? "Volksabstimmung, 29. November 2026"
+          : lang === "fr"
+            ? "Votation populaire, 29 novembre 2026"
+            : lang === "it"
+              ? "Votazione popolare, 29 novembre 2026"
+              : "Federal popular vote, 29 November 2026",
+      kind: "election",
+      text: "29 November 2026 Volksabstimmung votation votazione Switzerland Schweiz",
+    },
     { path: `${home}parties/`, lang, title: labels.parties, kind: "parties", text: "Parteien partis partiti parties" },
     { path: `${home}candidates/`, lang, title: labels.candidates, kind: "candidates", text: "Kandidaturen candidatures candidature" },
     { path: `${home}results/`, lang, title: labels.results, kind: "results", text: "Ergebnisse résultats risultati Nationalrat 2023" },

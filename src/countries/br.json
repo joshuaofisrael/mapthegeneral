@@ -2,8 +2,12 @@
   "code": "br",
   "name": "Brazil",
   "href": "/br/",
-  "summary": "National hub in English. Official TSE presidential results of the 2026 general election: first round 4 October, runoff 25 October 2026. No municipality pages.",
+  "summary": "National hub. Official TSE presidential results of the 2026 general election in Brazil: first round 4 October, runoff 25 October 2026. No municipality pages.",
   "links": [
+    {
+      "href": "/br/pt/elections/geral-2026/",
+      "label": "Eleição geral de 2026"
+    },
     {
       "href": "/br/en/",
       "label": "English"

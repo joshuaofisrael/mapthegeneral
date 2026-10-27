@@ -183,8 +183,8 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     elections: {
       title: "Elections in Ireland",
-      description: "Elections named for the Ireland hub. No next Dáil polling day was printed on the pages read on 23 October 2026.",
-      lede: "This list is only what the Commission pages read on 23 October 2026 actually dated. It is not a calendar of every local poll.",
+      description: "Elections in Ireland. Seanad Éireann bye-election on Friday 6 November 2026. No next Dáil polling day was printed.",
+      lede: "The Seanad bye-election is on Friday 6 November 2026. No next Dáil polling day was printed on the pages read.",
     },
     election: {
       title: "Next Dáil election",
@@ -278,8 +278,8 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
   br: {
     chooser: {
       title: "Brazil — language",
-      description: "Brazil on Map the General: an English guide to the 2026 general election and the official TSE presidential results. Unofficial information.",
-      lede: "This release is an English national hub. It has no municipality pages.",
+      description: "Brazil general election of 4 and 25 October 2026, with official TSE presidential totals. Portuguese and English. Unofficial information.",
+      lede: "The Portuguese results page is listed with the English guide. There are no municipality pages.",
     },
     national: {
       title: "Brazil",
@@ -312,8 +312,8 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
   rs: {
     chooser: {
       title: "Serbia — language",
-      description: "Serbia on Map the General: an English guide to the National Assembly election of 25 October 2026, with RIK preliminary results. Unofficial information.",
-      lede: "This release is an English national hub. It has no municipality pages.",
+      description: "Serbia: National Assembly election of 25 October 2026, and a presidential election with no called day. Serbian and English. Unofficial information.",
+      lede: "Serbian pages are listed first. The presidential polling day has not been called.",
     },
     national: {
       title: "Serbia",
@@ -323,8 +323,8 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     elections: {
       title: "Elections in Serbia",
-      description: "The National Assembly election of 25 October 2026, from the Republic Electoral Commission.",
-      lede: "This hub lists the 2026 National Assembly election only. It does not list local or provincial polls.",
+      description: "Elections in Serbia: the National Assembly on 25 October 2026, and the presidential election with no called polling day.",
+      lede: "The Assembly election has a preliminary RIK count. The presidential polling day has not been called.",
     },
     election: {
       title: "Serbia National Assembly election 2026: preliminary results",
@@ -346,8 +346,8 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
   il: {
     chooser: {
       title: "Israel — language",
-      description: "Israel on Map the General: an English guide to the election to the 26th Knesset on 27 October 2026. Unofficial information.",
-      lede: "This release is an English national hub. It has no municipality pages.",
+      description: "Israel: election to the 26th Knesset on Tuesday 27 October 2026. Hebrew and English. Unofficial information.",
+      lede: "The Hebrew guide and the Hebrew results page are listed with the English guide.",
     },
     national: {
       title: "Israel",

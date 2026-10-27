@@ -2,8 +2,16 @@
   "code": "il",
   "name": "Israel",
   "href": "/il/",
-  "summary": "National hub in English. Election to the 26th Knesset on Tuesday 27 October 2026: 120 seats, 3.25% threshold. No polls. No municipality pages.",
+  "summary": "National hub. Election to the 26th Knesset in Israel on Tuesday 27 October 2026: 120 seats, 3.25 percent threshold. Results come from the Central Elections Committee. No municipality pages.",
   "links": [
+    {
+      "href": "/il/he/results/",
+      "label": "תוצאות הבחירות לכנסת ה-26"
+    },
+    {
+      "href": "/il/he/elections/knesset-2026/",
+      "label": "הבחירות לכנסת ה-26, 27 באוקטובר 2026"
+    },
     {
       "href": "/il/en/",
       "label": "English"
@@ -11,6 +19,10 @@
     {
       "href": "/il/en/elections/knesset-2026/",
       "label": "Knesset election, 27 October 2026"
+    },
+    {
+      "href": "/il/en/results/",
+      "label": "26th Knesset results"
     },
     {
       "href": "/il/en/sources/",

@@ -167,6 +167,22 @@ function hubIndexEntries(): IndexEntry[] {
       { path: en, lang: "en", title: hub.name, kind: "country", text: hub.blurb },
       { path: elections, lang: "en", title: `Elections in ${hub.name}`, kind: "elections", text: hub.electionName },
       { path: election, lang: "en", title: hub.electionName, kind: "election", text: `${hub.name} ${hub.electionName}` },
+      ...(code === "ie"
+        ? [{ path: "/ie/en/elections/seanad-2026/", lang: "en", title: "Seanad Éireann bye-election, 6 November 2026", kind: "election", text: "Seanad Éireann bye-election 6 November 2026 Cultural and Educational Panel Oireachtas" }]
+        : []),
+      ...(code === "br"
+        ? [{ path: "/br/pt/elections/geral-2026/", lang: "pt", title: "Eleição geral de 2026 no Brasil", kind: "election", text: "Brasil eleição geral 4 de outubro 25 de outubro 2026 TSE" }]
+        : []),
+      ...(code === "rs"
+        ? [
+            { path: "/rs/sr/elections/narodna-skupstina-2026/", lang: "sr", title: "Izbori za Narodnu skupštinu, 25. oktobar 2026", kind: "election", text: "Srbija Narodna skupština 25. oktobar 2026 RIK" },
+            { path: "/rs/sr/elections/predsednicki-2026/", lang: "sr", title: "Izbori za predsednika Republike 2026", kind: "election", text: "Srbija predsednički izbori 2026 datum nije raspisan 27. decembar" },
+            { path: "/rs/en/elections/president-2026/", lang: "en", title: "Serbia presidential election 2026", kind: "election", text: "Serbia presidential election 2026 no polling day 27 December" },
+          ]
+        : []),
+      ...(code === "il"
+        ? [{ path: "/il/he/elections/knesset-2026/", lang: "he", title: "הבחירות לכנסת ה-26, 27 באוקטובר 2026", kind: "election", text: "ישראל בחירות כנסת 27 באוקטובר 2026" }]
+        : []),
       { path: hubEn(code, "faq"), lang: "en", title: `${hub.name} questions`, kind: "faq", text: `${hub.name} faq` },
       { path: hubEn(code, "sources"), lang: "en", title: `${hub.name} sources`, kind: "sources", text: `${hub.name} official sources` },
     ];

@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: copy.elections,
     description:
       lang === "de"
-        ? "Index der eidgenössischen Wahlen auf den Seiten der Schweiz. Die nächste Nationalratswahl ist die vom 24. Oktober 2027."
+        ? "Wahlen in der Schweiz. Volksabstimmung vom 29. November 2026 und Nationalratswahl vom 24. Oktober 2027."
         : lang === "fr"
-          ? "Index des élections fédérales sur les pages de la Suisse. La prochaine élection du Conseil national est celle du 24 octobre 2027."
+          ? "Élections en Suisse. Votation populaire du 29 novembre 2026 et élection du Conseil national du 24 octobre 2027."
           : lang === "it"
-            ? "Indice delle elezioni federali nelle pagine della Svizzera. La prossima elezione del Consiglio nazionale è quella del 24 ottobre 2027."
-            : "Index of federal elections on the Switzerland pages. The next National Council election is 24 October 2027.",
+            ? "Elezioni in Svizzera. Votazione popolare del 29 novembre 2026 ed elezione del Consiglio nazionale del 24 ottobre 2027."
+            : "Elections in Switzerland. Federal popular vote of 29 November 2026 and National Council election of 24 October 2027.",
     path: `${chHome(lang)}elections/`,
     lang,
   });
@@ -70,6 +70,26 @@ export default async function ElectionsIndex({ params }: { params: Promise<{ lan
           </Link>
           <p className="mt-1 text-sm text-ink-muted">
             {ELECTION_SLUG}. {lang === "de" ? "Verordnung vom 27. August 2025, SR 161.12." : "SR 161.12."}
+          </p>
+        </li>
+        <li>
+          <Link className="font-serif text-xl font-semibold text-navy hover:underline" href={`${path}volksabstimmung-2026-11-29/`}>
+            {lang === "de"
+              ? "Volksabstimmung, 29. November 2026"
+              : lang === "fr"
+                ? "Votation populaire, 29 novembre 2026"
+                : lang === "it"
+                  ? "Votazione popolare, 29 novembre 2026"
+                  : "Federal popular vote, 29 November 2026"}
+          </Link>
+          <p className="mt-1 text-sm text-ink-muted">
+            {lang === "de"
+              ? "Vier Vorlagen. Kreisschreiben des Bundesrates vom 3. September 2026."
+              : lang === "fr"
+                ? "Quatre objets. Circulaire du Conseil fédéral du 3 septembre 2026."
+                : lang === "it"
+                  ? "Quattro oggetti. Circolare del Consiglio federale del 3 settembre 2026."
+                  : "Four proposals. Federal Council circular of 3 September 2026."}
           </p>
         </li>
       </ul>

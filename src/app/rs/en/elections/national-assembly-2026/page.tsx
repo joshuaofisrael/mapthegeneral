@@ -1,8 +1,7 @@
-import { HubElection } from "@/components/ModestHub";
-import { hubMetadata } from "@/data/new-hubs";
+import { RsParliamentPage, rsParliamentMetadata } from "@/components/RsParliamentPage";
 
-export const metadata = hubMetadata("rs", "election");
+export const metadata = rsParliamentMetadata("en");
 
 export default function Page() {
-  return <HubElection code="rs" />;
+  return <RsParliamentPage lang="en" />;
 }

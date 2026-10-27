@@ -122,6 +122,7 @@ const L = {
 } as const;
 
 const RELATED: { href: string; he: string; en: string }[] = [
+  { href: "/il/he/elections/knesset-2026/", he: "מדריך הבחירות לכנסת ה-26", en: "Knesset 2026 guide (Hebrew)" },
   { href: "/il/en/elections/knesset-2026/", he: "מדריך הבחירות לכנסת 2026 (אנגלית)", en: "Knesset 2026 election guide" },
   { href: "/il/en/faq/", he: "שאלות נפוצות על הבחירות בישראל", en: "Israel elections FAQ" },
   { href: "/il/en/sources/", he: "מקורות רשמיים", en: "Official sources for Israel" },
@@ -177,7 +178,13 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
         endDate: "2026-10-27T22:00:00+02:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        image: [`${SITE.url}${IL_OG.path}`],
         location: { "@type": "Country", name: lang === "he" ? "ישראל" : "Israel" },
+        organizer: {
+          "@type": "Organization",
+          name: lang === "he" ? "ועדת הבחירות המרכזית" : "Central Elections Committee",
+          url: "https://www.bechirot.gov.il/",
+        },
       },
       author: { "@type": "Organization", name: SITE.name, url: SITE.url },
       publisher: { "@type": "Organization", name: SITE.name, url: SITE.url, logo: { "@type": "ImageObject", url: `${SITE.url}/og.png` } },

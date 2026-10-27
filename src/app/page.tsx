@@ -72,9 +72,9 @@ export default function HomePage() {
         <section id="upcoming-elections">
           <h2 className="font-serif text-2xl font-semibold">Upcoming and recent elections</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
-            Polling days in the next 60 days, and elections held in the last 14 days, from the election registry. A
-            recently held election stays on this list for 14 days after polling day, then drops off. Each card links to
-            that election’s page.
+            Polling days in the next 60 days, elections held in the last 14 days, and the New South Wales state
+            election of 13 March 2027, from the election registry. A recently held election stays on this list for 14
+            days after polling day, then drops off. Each card links to that election’s page.
           </p>
           <ul className="mt-4 grid gap-4 md:grid-cols-2">
             {upcoming.map((item) => (

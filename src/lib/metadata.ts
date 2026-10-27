@@ -17,7 +17,7 @@ export function pageMetadata(input: {
       ? {
           es: absoluteUrl(input.lang === "es" ? input.path : input.alternatePath),
           en: absoluteUrl(input.lang === "en" ? input.path : input.alternatePath),
-          "x-default": absoluteUrl(input.lang === "en" ? input.path : input.alternatePath),
+          "x-default": absoluteUrl(input.lang === "es" ? input.path : input.alternatePath!),
         }
       : undefined;
 
@@ -40,7 +40,7 @@ export function pageMetadata(input: {
       canonical: url,
       languages,
     },
-    robots: { index: true, follow: true },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
     openGraph: {
       title: socialTitle,
       description: input.description,
