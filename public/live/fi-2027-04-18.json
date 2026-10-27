@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "election": "fi-2027-04-18",
+  "trackerOpensAt": "2027-04-18T20:00:00+03:00",
+  "stage": "pre",
+  "fetchedAt": null,
+  "sourceUpdated": null,
+  "source": "https://tulospalvelu.vaalit.fi/",
+  "results": []
+}

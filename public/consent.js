@@ -108,6 +108,15 @@
       reject: "Weigeren",
       choices: "Cookiekeuze"
     },
+    fi: {
+      aria: "Evästevalinta",
+      body: "Käytämme Google Analytics -evästeitä käyntien laskemiseen vain, jos hyväksytte. Googlen skripti latautuu vasta Hyväksy-painikkeen jälkeen. Cloudflare Web Analytics (ilman evästeitä) toimii joka tapauksessa. ",
+      privacy: "Tietosuoja",
+      href: "/privacy/#google-analytics",
+      accept: "Hyväksy",
+      reject: "Hylkää",
+      choices: "Evästevalinta"
+    },
     bg: {
       aria: "Избор за бисквитки",
       body: "Използваме бисквитки на Google Analytics, за да броим посещенията, само ако приемете. Скриптът на Google се зарежда само след Приемам. Cloudflare Web Analytics (без бисквитки) работи и в двата случая. ",

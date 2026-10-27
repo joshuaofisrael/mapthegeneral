@@ -59758,6 +59758,11 @@
 - [Netherlands](https://mapthegeneral.com/nl/en/)
 - [Provinciale Staten en waterschappen, 17 maart 2027](https://mapthegeneral.com/nl/nl/elections/provinciale-staten-2027/)
 - [Netherlands Provincial States and water boards, 17 March 2027](https://mapthegeneral.com/nl/en/elections/provincial-2027/)
+- [Suomi](https://mapthegeneral.com/fi/)
+- [Suomi](https://mapthegeneral.com/fi/fi/)
+- [Finland](https://mapthegeneral.com/fi/en/)
+- [Eduskuntavaalit, 18. huhtikuuta 2027](https://mapthegeneral.com/fi/fi/elections/eduskunta-2027/)
+- [Finland parliamentary election, 18 April 2027](https://mapthegeneral.com/fi/en/elections/parliamentary-2027/)
 - [תוצאות הבחירות 2026](https://mapthegeneral.com/il/he/results/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
@@ -59774,6 +59779,8 @@ Canada (https://mapthegeneral.com/ca/): Federal general election fixed for Monda
 Switzerland (https://mapthegeneral.com/ch/): National Council election on 24 October 2027, from the Federal Council release of 27 August 2025. This release has the national pages, the 26 cantons, 135 district names, and a page for each of the 2,110 political municipalities in the FSO historized commune register (1 January 2026), in German, French, Italian and English. Communal executive names are not stored. Communal polling dates are cited for Genève, Luzern, Ticino, Valais / Wallis, Zug, Jura except Moutier, and Appenzell Ausserrhoden. The other cantons are marked where the register does not give a communal polling day.
 
 Estonia (https://mapthegeneral.com/ee/): National hub. Riigikogu election on 7 March 2027, from the National Electoral Service. No municipality pages and no count before 20:15 Eastern European Time.
+
+Finland (https://mapthegeneral.com/fi/): National hub. Parliamentary election on 18 April 2027, from the Ministry of Justice letter of 16 September 2026. No municipality pages and no count before 20:00 Eastern European Summer Time.
 
 United Kingdom (https://mapthegeneral.com/gb/): UK Parliament general election, no later than 15 August 2029, in the Electoral Commission schedule. This release has the national page, England, Scotland, Wales and Northern Ireland, the 650 Westminster constituencies, Scottish Parliament constituencies and regions, Senedd constituencies, Northern Ireland Assembly constituencies, 361 local authority districts, 21 English county councils, and directly elected mayoral bodies, in English. Ward, parish and candidate pages are not in this release.
 

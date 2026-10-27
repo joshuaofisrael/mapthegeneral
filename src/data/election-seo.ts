@@ -10,6 +10,7 @@ import { BG_ELECTION_SEO_PROFILES } from "./election-seo-bg";
 import { NZ_ELECTION_SEO_PROFILES } from "./election-seo-nz";
 import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
 import { EE_ELECTION_SEO_PROFILES } from "./election-seo-ee";
+import { FI_ELECTION_SEO_PROFILES } from "./election-seo-fi";
 import { NL_ELECTION_SEO_PROFILES } from "./election-seo-nl";
 import { SV_ELECTION_SEO_PROFILES } from "./election-seo-sv";
 import { TW_ELECTION_SEO_PROFILES } from "./election-seo-tw";
@@ -1418,6 +1419,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   ...SV_ELECTION_SEO_PROFILES,
   ...EE_ELECTION_SEO_PROFILES,
   ...NL_ELECTION_SEO_PROFILES,
+  ...FI_ELECTION_SEO_PROFILES,
 ];
 
 export function utcToday(now = new Date()): string {

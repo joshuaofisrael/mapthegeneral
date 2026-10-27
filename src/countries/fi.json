@@ -1,0 +1,20 @@
+{
+  "code": "fi",
+  "name": "Finland",
+  "href": "/fi/",
+  "summary": "National hub. Parliamentary election on 18 April 2027, from the Ministry of Justice letter of 16 September 2026. No municipality pages and no count before 20:00 Eastern European Summer Time.",
+  "links": [
+    {
+      "href": "/fi/fi/",
+      "label": "Suomi"
+    },
+    {
+      "href": "/fi/fi/elections/eduskunta-2027/",
+      "label": "Eduskuntavaalit, 18. huhtikuuta 2027"
+    },
+    {
+      "href": "/fi/en/",
+      "label": "English"
+    }
+  ]
+}
