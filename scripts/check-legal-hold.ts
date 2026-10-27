@@ -284,7 +284,7 @@ function checkProjectionLanguage(text: string, draft: string, flags: Flag[]) {
       rule: 6,
       title: titleFrom(text, draft),
       flagged: snippet(text, match.index, match[0].length),
-      sources: urlsIn(sentence),
+      sources: urlsIn(around),
       suggestion: SUGGESTION[6],
       draft_path: draft,
     });
