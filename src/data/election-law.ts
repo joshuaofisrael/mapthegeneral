@@ -509,6 +509,49 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "ee-2027-03-07",
+    country: "ee",
+    localLang: "et",
+    election: {
+      en: "Estonia Riigikogu election, 7 March 2027",
+      local: "Riigikogu valimised, 7. märts 2027",
+    },
+    pollingDay: "2027-03-07",
+    trackerOpensAt: "2027-03-07T20:15:00+02:00",
+    officialResults: { label: "Riigi valimisteenistus", url: "https://www.valimised.ee/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "National Electoral Service, Riigikogu elections 2027",
+          url: "https://www.valimised.ee/et/riigikogu-valimised-2027",
+        },
+        {
+          label: "Riigikogu Election Act",
+          url: "https://www.riigiteataja.ee/et/akt/RKVS",
+        },
+        {
+          label: "National Electoral Service, campaigning and polls",
+          url: "https://www.valimised.ee/et/valimiste-meelespea/valimisagitatsioon-ja-kusitlused",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "results-embargo",
+        start: "2027-03-07T00:00:00+02:00",
+        end: "2027-03-07T20:15:00+02:00",
+        citation: {
+          label: "Riigikogu Election Act, § 38",
+          url: "https://www.riigiteataja.ee/et/akt/RKVS",
+        },
+        en: "Section 38(1) of the Riigikogu Election Act ends election-day voting at 20.00. Subsection 4 lets a voter finish within 15 minutes after that time. This site shows no count before 20:15 Eastern European Time on 7 March 2027. The National Electoral Service page on campaigning says conducting public-opinion polls during the election period and on election day is not forbidden. This site still publishes no poll and no projection.",
+        local:
+          "Riigikogu valimise seaduse § 38 lõige 1 lõpetab valimispäeva hääletamise kell 20.00. Lõige 4 lubab valijal lõpetada 15 minuti jooksul. See sait ei näita hääli enne kella 20.15 Ida-Euroopa aja järgi 7. märtsil 2027. Valimisagitatsiooni leht ütleb, et avaliku arvamuse küsitluste korraldamine valimiste ajal ja valimispäeval ei ole keelatud. See sait ei avalda küsitlust ega prognoosi.",
+      },
+    ],
+  },
 ];
 
 /**

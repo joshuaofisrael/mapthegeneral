@@ -90,6 +90,15 @@
       reject: "Odbij",
       choices: "Izbor kolačića"
     },
+    et: {
+      aria: "Küpsiste valik",
+      body: "Kasutame Google Analyticsi küpsiseid külastuste loendamiseks ainult siis, kui nõustute. Google'i skript laaditakse pärast nuppu Nõustun. Cloudflare Web Analytics (küpsisteta) töötab igal juhul. ",
+      privacy: "Privaatsus",
+      href: "/privacy/#google-analytics",
+      accept: "Nõustun",
+      reject: "Keeldun",
+      choices: "Küpsiste valik"
+    },
     bg: {
       aria: "Избор за бисквитки",
       body: "Използваме бисквитки на Google Analytics, за да броим посещенията, само ако приемете. Скриптът на Google се зарежда само след Приемам. Cloudflare Web Analytics (без бисквитки) работи и в двата случая. ",

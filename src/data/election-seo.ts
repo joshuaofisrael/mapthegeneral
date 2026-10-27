@@ -9,6 +9,7 @@
 import { BG_ELECTION_SEO_PROFILES } from "./election-seo-bg";
 import { NZ_ELECTION_SEO_PROFILES } from "./election-seo-nz";
 import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
+import { EE_ELECTION_SEO_PROFILES } from "./election-seo-ee";
 import { SV_ELECTION_SEO_PROFILES } from "./election-seo-sv";
 import { TW_ELECTION_SEO_PROFILES } from "./election-seo-tw";
 
@@ -1414,6 +1415,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   ...NZ_ELECTION_SEO_PROFILES,
   ...TW_ELECTION_SEO_PROFILES,
   ...SV_ELECTION_SEO_PROFILES,
+  ...EE_ELECTION_SEO_PROFILES,
 ];
 
 export function utcToday(now = new Date()): string {

@@ -109,6 +109,13 @@ const COPY: Record<HouseAdLang, SlotCopy> = {
     cta: "Запазете това място",
     sold: (name) => `Спонсорирано от ${name}`,
   },
+  et: {
+    label: "Teie reklaam siin",
+    pitch:
+      "Teie reklaam siin: eksklusiivne sponsor Iisraeli valimisöö tulemuste ajal ja järgmise 3 päeva jooksul, 27–30 okt 2026, $1,000.",
+    cta: "Broneerige see koht",
+    sold: (name) => `Sponsoreerib ${name}`,
+  },
 };
 
 /**

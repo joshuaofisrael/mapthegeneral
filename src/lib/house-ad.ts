@@ -11,7 +11,7 @@
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
@@ -315,6 +315,18 @@ const COPY: Record<HouseAdLang, AdCopy> = {
       rankfootprint: RANK_PAID.bg.cta,
     },
   },
+  et: {
+    sponsored: (name) => `Sponsoreerib ${name}`,
+    pitch: {
+      namedscan:
+        "Vaadake, kas ChatGPT nimetab teie kohalikku ettevõtet, kui kliendid küsivad. NamedScan esitab need küsimused reaalajas veebiotsinguga ja näitab, keda soovitab ning mida esimesena parandada.",
+      rankfootprint: RANK_PAID.et.pitch,
+    },
+    cta: {
+      namedscan: "Proovige NamedScan",
+      rankfootprint: RANK_PAID.et.cta,
+    },
+  },
 };
 
 /** Phrases that must survive in each language, taken from the published offers. */
@@ -357,6 +369,10 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   },
   bg: {
     namedscan: ["ChatGPT", "търсене в интернет на живо"],
+    rankfootprint: ["$1"],
+  },
+  et: {
+    namedscan: ["ChatGPT", "reaalajas veebiotsinguga"],
     rankfootprint: ["$1"],
   },
 };
@@ -784,6 +800,7 @@ export function selfCheckHouseAds(): string[] {
   if (languageFromRoute("/bg/bg/") !== "bg" || languageFromRoute("/bg/bg/elections/prezident-2026/") !== "bg") {
     problems.push("path language");
   }
+  if (languageFromRoute("/ee/et/") !== "et") problems.push("path language");
   if (houseAdLangForDocument("zh") !== "en") problems.push("zh document should use the English house ad");
   if (houseAdLangForDocument("es") !== "es") problems.push("Spanish house ad must stay Spanish");
   if (houseAdLangForDocument("bg") !== "bg") problems.push("Bulgarian house ad must stay Bulgarian");
