@@ -53,16 +53,19 @@ const counted = doc.results.length > 0;
 const stamp = doc.fetchedAt
   ? new Date(doc.fetchedAt).toLocaleString("en-GB", { timeZone: "Asia/Jerusalem", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + " Israel time"
   : "";
+const seatLabel = "Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.";
 const legend = counted
-  ? above.slice(0, 10).map((p, i) => `<g transform="translate(700 ${150 + i * 40})"><circle cx="10" cy="-8" r="10" fill="${PALETTE[i % PALETTE.length]}"/><text x="32" y="0" font-size="26" fill="#1a2332">${esc(((n) => (n.length > 24 ? n.slice(0, 23) + "…" : n))(p.en ?? p.letter))}</text><text x="440" y="0" font-size="28" font-weight="700" text-anchor="end" fill="#1a2332">${p.seats}</text></g>`).join("")
-  : `<text x="700" y="210" font-size="34" font-weight="700" fill="#143251">Official count from</text><text x="700" y="255" font-size="34" font-weight="700" fill="#143251">22:00 Israel time, 27 Oct</text><text x="700" y="320" font-size="24" fill="#4a5568">Central Elections Committee data only.</text><text x="700" y="355" font-size="24" fill="#4a5568">No polls. 61 seats for a majority.</text>`;
+  ? above.slice(0, 8).map((p, i) => `<g transform="translate(700 ${140 + i * 36})"><circle cx="10" cy="-8" r="10" fill="${PALETTE[i % PALETTE.length]}"/><text x="32" y="0" font-size="24" fill="#1a2332">${esc(((n) => (n.length > 22 ? n.slice(0, 21) + "…" : n))(p.en ?? p.letter))}</text><text x="440" y="0" font-size="26" font-weight="700" text-anchor="end" fill="#1a2332">${p.seats}</text></g>`).join("")
+    + `<text x="700" y="450" font-size="16" fill="#1a2332">Unofficial seat allocation calculated from</text><text x="700" y="472" font-size="16" fill="#1a2332">partial official vote totals; not final and</text><text x="700" y="494" font-size="16" fill="#1a2332">not an official seat allocation.</text>`
+  : `<text x="700" y="180" font-size="28" font-weight="700" fill="#143251">Vote totals from 22:00 Israel time</text><text x="700" y="230" font-size="20" fill="#1a2332">Unofficial seat allocation calculated from</text><text x="700" y="258" font-size="20" fill="#1a2332">partial official vote totals; not final and</text><text x="700" y="286" font-size="20" fill="#1a2332">not an official seat allocation.</text><text x="700" y="330" font-size="18" fill="#4a5568">No polls. 61 seats for a majority.</text>`;
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
 <rect width="1200" height="630" fill="#f6f7f9"/><rect width="1200" height="96" fill="#143251"/>
 <text x="40" y="62" font-size="40" font-weight="700" fill="#fff">Israel election results 2026 · 26th Knesset</text>
 ${dots}<line x1="330" y1="200" x2="330" y2="525" stroke="#143251" stroke-dasharray="6 6" stroke-width="2"/>
 <text x="330" y="580" font-size="26" font-weight="700" text-anchor="middle" fill="#143251">${counted ? `${seq.length}/120 seats · 61 for a majority` : "120 seats · 61 for a majority"}</text>
 ${legend}
-<text x="40" y="618" font-size="20" fill="#4a5568">${counted ? esc(`${doc.stage === "final" ? "Final results" : "Preliminary official count"} · seats calculated from CEC votes counted · ${stamp}`) : "mapthegeneral.com/il/he/results"}</text>
+<text x="40" y="600" font-size="15" fill="#1a2332">${esc(seatLabel)}</text>
+<text x="40" y="622" font-size="16" fill="#4a5568">${counted ? esc(`${stamp}`) : "mapthegeneral.com/il/en/results/"}</text>
 </svg>`;
 try {
   const sharp = (await import("sharp")).default;

@@ -149,7 +149,7 @@ export const HUBS: Record<HubCode, Hub> = {
     electionSlug: "knesset-2026",
     electionName: "Election to the 26th Knesset, 27 October 2026",
     blurb:
-      "National hub in English. The Central Elections Committee set the election to the 26th Knesset for Tuesday 27 October 2026. Neutral facts only: no polls, no forecasts and no results until the Committee publishes them. No municipality pages.",
+      "National hub in English. The Central Elections Committee set the election to the 26th Knesset for Tuesday 27 October 2026. Neutral facts only: no polls and no forecasts. The results pages, after polls close, show Committee vote totals and label the seat allocation this site calculates as unofficial, not final, and not an official seat allocation. No municipality pages.",
     sources: [
       { id: "il-cec", name: "Central Elections Committee (bechirot.gov.il)", url: "https://www.bechirot.gov.il/home/", readOn: READ_NEW },
       { id: "il-date", name: "Central Elections Committee, the date of the 26th Knesset election", url: "https://www.gov.il/en/pages/knesset26-date", readOn: READ_NEW },
@@ -402,7 +402,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
       title: "Israel Knesset election, 27 October 2026",
       description: "Election to the 26th Knesset on 27 October 2026: 120 seats, 3.25% threshold. Results will come from the Central Elections Committee. Unofficial information.",
       eyebrow: "Tuesday 27 October 2026 · no polls published",
-      lede: "This page carries neutral facts only. It publishes no polls, no forecasts and no results. Results will come from the Central Elections Committee.",
+      lede: "This page carries neutral facts only. It publishes no polls and no forecasts. Results pages, after polls close, show Committee vote totals and label any seat allocation this site calculates as unofficial, not final, and not an official seat allocation.",
     },
     faq: {
       title: "Israel questions",

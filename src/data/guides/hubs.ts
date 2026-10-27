@@ -554,7 +554,7 @@ export const ilEn: Guide = {
     },
     {
       q: "Does this site publish polls?",
-      a: "No. This site publishes no Israeli polls, forecasts or exit polls. Results will be added only from the Central Elections Committee.",
+      a: "No. This site publishes no Israeli polls, forecasts or exit polls. Vote totals on the results page come from the Central Elections Committee after 22:00. Any seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation.",
     },
   ],
   sourcesHeading: "Official pages",

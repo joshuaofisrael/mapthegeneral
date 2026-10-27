@@ -73,7 +73,9 @@ export default function DisclaimerPage() {
         <h2>Results</h2>
         <p>
           Result pages stay unofficial until the authority that scrutinises the election publishes the
-          count. This site does not call a race and does not invent vote totals.
+          count. This site does not call a race and does not invent vote totals. Where a results page calculates
+          seats from partial official vote totals, that allocation is labelled unofficial, not final, and not an
+          official seat allocation.
         </p>
         <h2>No warranty</h2>
         <p>

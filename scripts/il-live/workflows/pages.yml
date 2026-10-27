@@ -71,6 +71,12 @@ jobs:
           urls = json.loads(Path("public/search/indexnow-urls.json").read_text())
           if os.environ.get("INDEXNOW_SCOPE") == "il":
             urls = ["https://mapthegeneral.com/il/he/results/", "https://mapthegeneral.com/il/en/results/"]
+          # New Zealand freeze: 00:00–19:00 NZDT on 7 Nov 2026 (11:00Z 6 Nov–06:00Z 7 Nov).
+          from datetime import datetime, timezone
+          freeze_start = datetime.fromisoformat("2026-11-06T11:00:00+00:00")
+          freeze_end = datetime.fromisoformat("2026-11-07T06:00:00+00:00")
+          if freeze_start <= datetime.now(timezone.utc) < freeze_end:
+            urls = [url for url in urls if "/nz/" not in url]
           for start in range(0, len(urls), 10000):
             body = json.dumps({
               "host": "mapthegeneral.com",

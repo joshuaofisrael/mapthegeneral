@@ -11,7 +11,10 @@
 
   function visible(section, now) {
     var open = opensMs(section);
-    return Number.isFinite(open) && now >= open;
+    if (!(Number.isFinite(open) && now >= open)) return false;
+    if (section.getAttribute("data-polling-extended") === "true") return false;
+    if (section.getAttribute("data-requires-confirmation") === "true" && section.getAttribute("data-voting-ended") !== "true") return false;
+    return true;
   }
 
   function pollUrl(base, now) {
@@ -46,9 +49,18 @@
     return Boolean(data && data.election === id && Array.isArray(data.results));
   }
 
+  function freshEnough(doc) {
+    if (!doc || !Array.isArray(doc.results) || doc.results.length === 0) return true;
+    var ms = Date.parse(doc.fetchedAt || "");
+    if (!Number.isFinite(ms)) return false;
+    return Date.now() - ms <= 15 * 60 * 1000;
+  }
+
   function prefer(prev, next) {
+    if (!next || !Array.isArray(next.results)) return prev;
+    if (next.results.length === 0) return next;
+    if (!freshEnough(next)) return prev;
     if (!prev || !Array.isArray(prev.results) || prev.results.length === 0) return next;
-    if (!Array.isArray(next.results) || next.results.length === 0) return prev;
     var a = prev.fetchedAt ? Date.parse(prev.fetchedAt) : 0;
     var b = next.fetchedAt ? Date.parse(next.fetchedAt) : 0;
     return b >= a ? next : prev;
@@ -136,8 +148,11 @@
     }
     var rows = (doc && Array.isArray(doc.results) ? doc.results : []).filter(usableRow);
     if (stale) {
-      var staleText = rows.length ? section.getAttribute("data-stale") : section.getAttribute("data-stale-empty");
-      if (staleText) gate.appendChild(node("p", staleText, "margin:0 0 8px;padding:8px 12px;background:#e8eef5;border-radius:8px"));
+      var failed = section.getAttribute("data-stale-empty") || section.getAttribute("data-stale") || "";
+      if (failed) gate.appendChild(node("p", failed, "margin:0 0 8px;padding:8px 12px;background:#e8eef5;border-radius:8px"));
+      gate.appendChild(node("p", section.getAttribute("data-awaiting") || "", "margin:0;padding:12px;background:#e8eef5;border-radius:8px"));
+      root.appendChild(gate);
+      return;
     }
     if (!rows.length) {
       gate.appendChild(node("p", section.getAttribute("data-awaiting") || "", "margin:0;padding:12px;background:#e8eef5;border-radius:8px"));
@@ -210,7 +225,7 @@
       var fresh = false;
       try {
         var primary = await pull(section.getAttribute("data-feed") || "", now);
-        if (validDoc(primary, id)) {
+        if (validDoc(primary, id) && freshEnough(primary)) {
           state.doc = prefer(state.doc, primary);
           fresh = true;
         }
@@ -220,7 +235,7 @@
       if (!fresh) {
         try {
           var raw = await pull(section.getAttribute("data-raw") || "", now);
-          if (validDoc(raw, id)) {
+          if (validDoc(raw, id) && freshEnough(raw)) {
             state.doc = prefer(state.doc, raw);
             fresh = true;
           }

@@ -39,6 +39,9 @@ function night(copy: {
     snapshot: "/live/nz-2026-11-07.json",
     official: RESULTS,
     timeZone: "Pacific/Auckland",
+    requiresConfirmation: false,
+    votingEnded: false,
+    pollingExtended: false,
     ...copy,
   };
   const json = JSON.stringify(config).replace(/</g, "\\u003c");

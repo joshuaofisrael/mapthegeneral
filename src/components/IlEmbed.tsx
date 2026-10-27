@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { IlUpdatedStamp, ilStaleNotice, useIlResults } from "@/components/IlLiveResults";
 import { Hemicycle, colorMap, partyName } from "@/components/IlShared";
-import { IL_PATHS, IL_TRACKER_OPENS_AT, IL_WINDOW_ID, type IlLang } from "@/data/il-results";
+import { IL_PATHS, IL_SEAT_LABEL, IL_TRACKER_OPENS_AT, IL_WINDOW_ID, ilEstimatesAllowed, type IlLang } from "@/data/il-results";
 
 /** Compact live board for /il/embed/?lang=he|en, meant for iframes on other sites. */
 export function IlEmbed() {
@@ -13,7 +13,8 @@ export function IlEmbed() {
   }, []);
   const { doc, now, stale, receivedAt } = useIlResults(null);
   const open = now !== null && now >= Date.parse(IL_TRACKER_OPENS_AT);
-  const rows = open && doc ? doc.results.filter((p) => p.aboveThreshold) : [];
+  const estimates = open && ilEstimatesAllowed(doc, now, stale);
+  const rows = estimates && doc ? doc.results.filter((p) => p.aboveThreshold) : [];
   const colors = colorMap(rows);
   const he = lang === "he";
   const left = now === null ? 0 : Math.max(0, Date.parse(IL_TRACKER_OPENS_AT) - now);
@@ -28,7 +29,7 @@ export function IlEmbed() {
           <strong dir="ltr">
             {Math.floor(left / 36e5)}:{String(Math.floor(left / 6e4) % 60).padStart(2, "0")}:{String(Math.floor(left / 1e3) % 60).padStart(2, "0")}
           </strong>
-          . {he ? "התוצאות הרשמיות יוצגו כאן לאחר סגירת הקלפיות." : "Official results appear here after polls close."}
+          . {he ? "ספירת הוועדה תוצג כאן לאחר סגירת הקלפיות. חלוקת מנדטים שתחושב ממנה אינה רשמית." : "The Committee count appears here after polls close. Seats calculated from it are unofficial."}
         </p>
       ) : rows.length === 0 ? (
         <div className="mt-2 space-y-2">
@@ -49,9 +50,10 @@ export function IlEmbed() {
             </p>
           )}
           <p className="text-xs font-bold text-[#b45309]">
-            {doc?.stage === "final" ? (he ? "תוצאות סופיות" : "Final results") : he ? "ספירה רשמית ראשונית · המנדטים מחושבים מהקולות שנספרו עד כה" : "Preliminary official count · seats calculated from votes counted so far"}
+            {doc?.stage === "final" ? (he ? "ספירת קולות סופית של הוועדה" : "Final Committee count") : he ? "ספירה רשמית ראשונית" : "Preliminary official count"}
           </p>
-          <Hemicycle lang={lang} rows={rows} colors={colors} />
+          <p className="text-xs font-semibold text-ink" data-il-seat-label>{IL_SEAT_LABEL[lang]}</p>
+          <Hemicycle lang={lang} rows={rows} colors={colors} seatLabel={IL_SEAT_LABEL[lang]} />
           <ul className="mt-2 grid grid-cols-2 gap-x-4 text-sm">
             {rows.map((p) => (
               <li key={p.letter} className="flex justify-between border-b border-line py-0.5">
@@ -65,6 +67,7 @@ export function IlEmbed() {
           </ul>
         </div>
       )}
+      <p className="mt-2 text-xs font-semibold text-ink" data-il-seat-label>{IL_SEAT_LABEL[lang]}</p>
       <p className="mt-2 text-xs text-ink-soft">
         {he ? "מקור: ועדת הבחירות המרכזית · " : "Source: Central Elections Committee · "}
         <a href={`https://mapthegeneral.com${IL_PATHS[lang]}`} target="_blank" rel="noopener" className="underline">

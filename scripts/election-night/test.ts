@@ -61,12 +61,19 @@ if (activeNight(afterIsrael)?.id !== "bg-2026-11-01") errors.push("after Israel 
 const afterBulgaria = Date.parse("2026-11-03T12:00:00Z");
 if (activeNight(afterBulgaria)?.id !== "ie-2026-seanad") errors.push("after the Bulgaria night the next card should be the Seanad");
 const afterSeanad = Date.parse("2026-11-07T05:30:00Z");
-if (activeNight(afterSeanad)?.id !== "nz-2026-11-07") errors.push("after the Seanad night the next card should be New Zealand");
+if (activeNight(afterSeanad)?.id === "nz-2026-11-07") errors.push("New Zealand must not be promoted during its freeze");
+if (activeNight(afterSeanad)?.id !== "it-2026-chieti") errors.push("during the New Zealand freeze the next card should not be New Zealand");
+if (activeNight(Date.parse("2026-11-07T06:00:00Z"))?.id !== "nz-2026-11-07") {
+  errors.push("New Zealand night should surface once the freeze ends at 19:00 NZDT");
+}
 if (countsVisible("nz-2026-11-07", Date.parse("2026-11-07T18:59:00+13:00"))) {
   errors.push("New Zealand count visible before 19:00");
 }
 if (countsVisible("bg-2026-11-01", Date.parse("2026-11-01T20:59:00+02:00"))) {
   errors.push("Bulgaria count visible before 21:00");
+}
+if (countsVisible("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
+  errors.push("Bulgaria count visible on the clock without CEC confirmation");
 }
 if (countsVisible("tw-2026-local", Date.parse("2026-11-28T23:59:00+08:00"))) {
   errors.push("Taiwan count visible before 00:00 on 29 November");

@@ -4,6 +4,8 @@
  */
 import type { ElectionSeoProfile } from "./election-seo";
 import { BG_ARCHIVE, BG_REGISTER, BG_RESULTS_URL, bgResultsTableHtml } from "./bg-president-2026";
+import { RELEASE_POLICIES } from "./election-policy";
+import { pollingExtended, votingEndedConfirmed } from "./release-status";
 
 const CIK = "https://www.cik.bg/bg/pvr2026";
 const Q03 = "https://www.cik.bg/bg/pvr2026/faq/voters/q03";
@@ -42,6 +44,11 @@ function night(copy: {
     snapshot: "/live/bg-2026-11-01.json",
     official: RESULTS,
     timeZone: "Europe/Sofia",
+    requiresConfirmation: RELEASE_POLICIES["bg-2026-11-01"]?.requiresEndOfVotingConfirmation === true,
+    votingEnded: votingEndedConfirmed("bg-2026-11-01"),
+    pollingExtended: pollingExtended("bg-2026-11-01"),
+    closedNote:
+      "The clock is not enough. This page stays closed until the Central Election Commission confirms that voting has ended. A missing confirmation publishes nothing.",
     ...copy,
   };
   const json = JSON.stringify(config).replace(/</g, "\\u003c");

@@ -13,6 +13,9 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { ELECTION_WINDOWS, STANDING_RULES, trackerOpen } from "../src/data/election-law";
+import { RELEASE_POLICIES } from "../src/data/election-policy";
+import { releaseRow } from "../src/data/release-status";
+import { ianaOffset, offsetMatchesZone } from "../src/data/zone-offset";
 import { registryCountries } from "../src/lib/country-registry";
 
 const OUT = path.join(process.cwd(), "out");
@@ -21,10 +24,41 @@ const errors: string[] = [];
 const ISO = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d$/;
 
 for (const item of ELECTION_WINDOWS) {
+  const policy = RELEASE_POLICIES[item.id];
+  if (!policy) errors.push(`${item.id}: missing statutory/official/editorial policy fields`);
   if (!ISO.test(item.trackerOpensAt)) errors.push(`${item.id}: trackerOpensAt needs an explicit UTC offset`);
+  if (policy && !offsetMatchesZone(item.trackerOpensAt, policy.timeZone)) {
+    errors.push(`${item.id}: trackerOpensAt offset does not match ${policy.timeZone}`);
+  }
   if (!item.officialResults.url.startsWith("https://")) errors.push(`${item.id}: official results URL must be https`);
+  if (policy) {
+    for (const stamp of [policy.officialRelease.at, policy.editorial.holdUntil, policy.editorial.startsAt]) {
+      if (!ISO.test(stamp)) errors.push(`${item.id}: policy time needs an explicit UTC offset (${stamp})`);
+      else if (!offsetMatchesZone(stamp, policy.timeZone)) {
+        errors.push(`${item.id}: ${stamp} is not the ${policy.timeZone} offset`);
+      }
+    }
+    if (Date.parse(policy.editorial.holdUntil) < Date.parse(policy.officialRelease.at)) {
+      errors.push(`${item.id}: editorial hold ends before the official release`);
+    }
+    if (!policy.officialRelease.citation.url.startsWith("https://")) {
+      errors.push(`${item.id}: official release citation must be https`);
+    }
+    if (policy.requiresEndOfVotingConfirmation) {
+      const row = releaseRow(item.id);
+      if (!row || typeof row.votingEnded !== "boolean") {
+        errors.push(`${item.id}: end-of-voting confirmation is missing; the gate stays closed`);
+      }
+    }
+  }
   for (const rule of item.rules) {
     if (!ISO.test(rule.start) || !ISO.test(rule.end)) errors.push(`${item.id}/${rule.kind}: times need explicit UTC offsets`);
+    if (policy && ISO.test(rule.start) && !offsetMatchesZone(rule.start, policy.timeZone)) {
+      errors.push(`${item.id}/${rule.kind}: start is not the ${policy.timeZone} offset`);
+    }
+    if (policy && ISO.test(rule.end) && !offsetMatchesZone(rule.end, policy.timeZone)) {
+      errors.push(`${item.id}/${rule.kind}: end is not the ${policy.timeZone} offset`);
+    }
     if (Date.parse(rule.end) <= Date.parse(rule.start)) errors.push(`${item.id}/${rule.kind}: ends before it starts`);
     if (!rule.citation.url.startsWith("https://")) errors.push(`${item.id}/${rule.kind}: citation must be https`);
     if (Date.parse(rule.end) > Date.parse(item.trackerOpensAt) + 6 * 3600e3) {
@@ -40,6 +74,9 @@ const KW =
   "(?:opinion poll|voting intention|exit poll|sondage|sondaggi[oa]? (?:politic|elettoral)|encuesta|sondeo|sondaż|여론조사|umfrage|wählerbefragung|hochrechnung|kamuoyu araştırma|anket|世論調査|出口調査|prognos[ei]|seat projection|meningsmåling|meningsmaling|opinionsundersökning|opinionsundersokning|pobalbhreith)";
 const PCT = "\\d{1,2}(?:[.,]\\d)?\\s?%";
 const POLL_FIGURE = new RegExp(`${KW}[^<]{0,120}?${PCT}|${PCT}[^<]{0,120}?${KW}`, "i");
+
+const ilLabel = "Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.";
+const ilLabelHe = "חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית.";
 
 let scanned = 0;
 function walk(dir: string) {
@@ -61,6 +98,24 @@ function walk(dir: string) {
 
 if (existsSync(OUT)) {
   walk(OUT);
+  const enPage = path.join(OUT, "il/en/results/index.html");
+  const hePage = path.join(OUT, "il/he/results/index.html");
+  const imprintPage = path.join(OUT, "imprint/index.html");
+  if (existsSync(enPage) && !readFileSync(enPage, "utf8").includes(ilLabel)) {
+    errors.push("built /il/en/results/ is missing the unofficial seat label");
+  }
+  if (existsSync(hePage) && !readFileSync(hePage, "utf8").includes(ilLabelHe)) {
+    errors.push("built /il/he/results/ is missing the Hebrew seat label");
+  }
+  if (existsSync(imprintPage)) {
+    const imprintHtml = readFileSync(imprintPage, "utf8");
+    if (imprintHtml.includes("electoral advertising blackout for broadcasters")) {
+      errors.push("imprint still cites the Broadcasting Services Act blackout as the results hold");
+    }
+    if (!imprintHtml.includes("conservative editorial policy")) {
+      errors.push("imprint does not describe the results hold as editorial policy");
+    }
+  }
   for (const item of ELECTION_WINDOWS) {
     const file = path.join(OUT, "live", `${item.id}.json`);
     if (!existsSync(file) || trackerOpen(item.id, now)) continue;
@@ -103,6 +158,47 @@ const chietiUrls = new Set((chieti?.verified?.sources ?? []).map((source) => sou
 if (!chieti?.verified) errors.push("it-2026-chieti: registry entry is not marked verified");
 for (const url of CHIETI_SOURCES) {
   if (!chietiUrls.has(url.replace(/\/+$/, ""))) errors.push(`it-2026-chieti: verified sources missing ${url}`);
+}
+
+for (const id of Object.keys(RELEASE_POLICIES)) {
+  if (!ELECTION_WINDOWS.some((item) => item.id === id)) errors.push(`${id}: policy without an election window`);
+}
+
+const mx = ELECTION_WINDOWS.find((item) => item.id === "mx-2027-federal");
+const mxPolicy = RELEASE_POLICIES["mx-2027-federal"];
+if (mx && mxPolicy) {
+  const instant = Date.parse(mx.trackerOpensAt);
+  const west = ianaOffset("America/Tijuana", instant);
+  const city = ianaOffset("America/Mexico_City", instant);
+  if (west && city && west !== city) {
+    const stamps = [mx.trackerOpensAt, mxPolicy.officialRelease.at, mxPolicy.editorial.holdUntil, ...mx.rules.map((rule) => rule.end)];
+    for (const stamp of stamps) {
+      if (stamp.endsWith(city)) errors.push(`mx-2027-federal: release ${stamp} uses Mexico City time`);
+      if (!stamp.endsWith(west)) errors.push(`mx-2027-federal: release ${stamp} is not America/Tijuana`);
+    }
+  }
+  if (mxPolicy.timeZone !== "America/Tijuana") errors.push("mx-2027-federal: time zone must be the westernmost zone, America/Tijuana");
+}
+
+if (trackerOpen("il-2026-knesset", Date.parse("2026-10-27T21:59:00+02:00"))) {
+  errors.push("Israel tracker opens before 22:00 Israel time");
+}
+if (!trackerOpen("il-2026-knesset", Date.parse("2026-10-27T22:00:00+02:00"))) {
+  errors.push("Israel tracker stays closed at 22:00 Israel time");
+}
+if (trackerOpen("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
+  errors.push("Bulgaria tracker opened on the clock without CEC confirmation");
+}
+if (trackerOpen("unknown-election", Date.parse("2026-11-01T21:00:00+02:00"))) {
+  errors.push("unknown tracker opened");
+}
+
+const ilCopy = readFileSync(path.join(process.cwd(), "src/data/il-results.ts"), "utf8");
+if (!ilCopy.includes(ilLabel)) errors.push("Israel English seat label missing from il-results");
+if (!ilCopy.includes(ilLabelHe)) errors.push("Israel Hebrew seat label missing from il-results");
+for (const rel of ["src/components/IlLiveResults.tsx", "src/components/IlEmbed.tsx", "src/components/IlResultsPage.tsx", "scripts/il-live/snapshot.mjs"]) {
+  const text = readFileSync(path.join(process.cwd(), rel), "utf8");
+  if (!text.includes(ilLabel) && !text.includes("IL_SEAT_LABEL")) errors.push(`${rel}: seat label is not wired through`);
 }
 
 const covered = new Set<string>([...ELECTION_WINDOWS.map((item) => item.country), ...standingCountries]);

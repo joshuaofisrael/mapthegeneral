@@ -21,7 +21,9 @@ Taiwan time.
 
 1. **Source.** Read only the official results service named in `officialResults`
    for that election. Free, public, official sources only. No media feeds, no
-   exit polls, no quick counts from pollsters, no projections, no seat models.
+   exit polls, no quick counts from pollsters, no survey projections. A seat
+   allocation this site calculates from partial official vote totals is labelled
+   unofficial, not final, and not an official seat allocation.
 2. **Opening time.** Show no count, percentage, leader or "called" label before
    `trackerOpen(id)` is true: the later of `trackerOpensAt` and the end of every
    rule in that window. Before then the tracker shows the polling-day facts and a
@@ -46,14 +48,14 @@ Taiwan time.
 | ca-bc-2026 | British Columbia provincial general election, 24 Oct 2026 | Election Act (BC) s. 233 (advertising) and s. 233.1 (new opinion surveys) on general voting day before the close | 24 Oct 2026 20:00 Pacific (UTC−7). No count is stored on this site; link to the official service | www.results.elections.bc.ca |
 | it-2026-chieti | Italy, Chamber by-election 01-Chieti, 15–16 Nov 2026 | L. 28/2000 art. 8 (15-day poll ban); L. 212/1956 art. 9 (silence) | 16 Nov 2026 15:00 CET | elezioni.interno.gov.it (Eligendo) |
 | pl-2026-senat-20 | Poland, Senate by-election, constituency 20, 22 Nov 2026 | Kodeks wyborczy art. 107 (cisza wyborcza) and art. 115 (no polls or exit polls) | 22 Nov 2026 21:00 CET, and only after PKW publishes | wybory.gov.pl (PKW) |
-| au-vic-2026 | Victoria state election, 28 Nov 2026 | No results embargo in law; broadcasters' ad blackout (BSA 1992 Sch. 2 cl. 3A) does not cover this site; authorisation (Electoral Act 2002 s. 83) applies to paid, printed or regulated-entity material, which this site does not publish | 28 Nov 2026 18:00 AEDT (07:00 UTC) | vec.vic.gov.au/results |
-| au-nsw-2027 | New South Wales state election, 13 Mar 2027 | Same broadcaster blackout (BSA 1992 Sch. 2 cl. 3A). The Commission’s page and Constitution Act 1902 (NSW) s. 24A were read on 27 Oct 2026. No 2027 results URL was printed, so the official source is the Commission’s election page | 13 Mar 2027 18:00 AEDT | elections.nsw.gov.au (2027 state election page) |
+| au-vic-2026 | Victoria state election, 28 Nov 2026 | No statutory results embargo for this site. The BSA 1992 Sch. 2 cl. 3A blackout applies to broadcasters only (ACMA). The hold until polls close is this site’s editorial policy | 28 Nov 2026 18:00 AEDT (07:00 UTC) | vec.vic.gov.au/results |
+| au-nsw-2027 | New South Wales state election, 13 Mar 2027 | Same editorial hold, not the broadcaster blackout. The Commission’s page and Constitution Act 1902 (NSW) s. 24A were read on 27 Oct 2026. No 2027 results URL was printed, so the official source is the Commission’s election page | 13 Mar 2027 18:00 AEDT | elections.nsw.gov.au (2027 state election page) |
 | es-2026-generales | Spain, general election, 29 Nov 2026 | LOREG art. 69.7 (5-day poll ban); arts. 51 and 53 (reflection day). Confirmed on 27 Oct 2026 in Real Decreto 806/2026 (BOE-A-2026-20742): https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742 | 29 Nov 2026 21:00 CET (Canary Islands close) | infoelectoral.interior.gob.es |
 | ie-2026-seanad | Ireland, Seanad Éireann bye-election, 6 Nov 2026 | No commenced poll-publication rule was applied. Part V of the Electoral Reform Act 2022 has not been commenced. Electorate is members of the Oireachtas. The fetcher writes no count until the Oireachtas publishes a count file this site can read | 6 Nov 2026 11:00 GMT | oireachtas.ie/en/elections |
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
-| mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
-| bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00 | 1 Nov 2026 21:00 EET | results.cik.bg |
-| nz-2026-11-07 | New Zealand general election, 7 Nov 2026 | Electoral Act 1993 s. 197(1)(d), (e) and (g), and s. 197(2A). The page lists the Commission’s 9 October 2026 party names, placed before polling day. The results host returned 403 when checked | 7 Nov 2026 19:00 NZDT | electionresults.govt.nz |
+| mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134. Poll, quick-count and exit-poll release uses America/Tijuana, not Mexico City | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
+| bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00. The clock does not open the gate; CEC end-of-voting confirmation is required, and a missing confirmation stays closed | 1 Nov 2026 21:00 EET, and only after that confirmation | results.cik.bg |
+| nz-2026-11-07 | New Zealand general election, 7 Nov 2026 | Electoral Act 1993 s. 197(1)(d), (e) and (g), and s. 197(2A). The page lists the Commission’s 9 October 2026 party names, placed before polling day. From 00:00 to 19:00 NZDT on 7 Nov the build freezes New Zealand content, IndexNow, and promotion. The results host returned 403 when checked | 7 Nov 2026 19:00 NZDT | electionresults.govt.nz |
 | tw-2026-local | Taiwan local public-office elections, 28 Nov 2026 | Civil Servants Election and Recall Act art. 53 (no survey material from ten days before election day). The Commission’s 16 July 2026 report prints no closing hour, so no count is shown before the next calendar day | 29 Nov 2026 00:00 Taiwan time (16:00 UTC on 28 Nov) | www.cec.gov.tw |
 
 Countries with no election window yet get one added here before any tracker is

@@ -134,34 +134,52 @@
     });
   }
 
-  function load() {
+  function heldClosed() {
+    if (cfg.pollingExtended === true) return true;
+    if (cfg.requiresConfirmation === true && cfg.votingEnded !== true) return true;
+    return false;
+  }
+
+  function freshEnough(doc) {
+    if (!doc || !Array.isArray(doc.results) || doc.results.length === 0) return true;
+    var ms = Date.parse(doc.fetchedAt || "");
+    if (!Number.isFinite(ms)) return false;
+    return Date.now() - ms <= 15 * 60 * 1000;
+  }
+
+  function showClosed() {
     if (Date.now() < opens) {
       countdown(Date.now());
       return;
     }
-    var urls = [cfg.feed, cfg.snapshot].filter(Boolean);
-    function tryNext(index) {
-      if (Date.now() < opens) {
-        countdown(Date.now());
-        return;
-      }
-      if (index >= urls.length) {
-        showFallback(cfg.fallback);
-        return;
-      }
-      pull(urls[index])
-        .then(function (doc) {
-          if (!acceptable(doc)) {
-            tryNext(index + 1);
-            return;
-          }
-          showRows(doc);
-        })
-        .catch(function () {
-          tryNext(index + 1);
-        });
+    showFallback(cfg.closedNote || cfg.countdownNote || cfg.fallback);
+  }
+
+  function load() {
+    if (Date.now() < opens || heldClosed()) {
+      showClosed();
+      return;
     }
-    tryNext(0);
+    var url = cfg.feed;
+    if (!url) {
+      showFallback(cfg.fallback);
+      return;
+    }
+    pull(url)
+      .then(function (doc) {
+        if (Date.now() < opens || heldClosed()) {
+          showClosed();
+          return;
+        }
+        if (!acceptable(doc) || !freshEnough(doc)) {
+          showFallback(cfg.fallback);
+          return;
+        }
+        showRows(doc);
+      })
+      .catch(function () {
+        showFallback(cfg.fallback);
+      });
   }
 
   load();
