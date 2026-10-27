@@ -13,6 +13,12 @@ export const FEEDS = [
     preserveSnapshot: true,
   },
   {
+    id: "nz-2026-11-07",
+    officialUrl: "https://electionresults.govt.nz/",
+    hosts: ["electionresults.govt.nz"],
+    preserveSnapshot: true,
+  },
+  {
     id: "ie-2026-seanad",
     officialUrl: "https://www.oireachtas.ie/en/elections/",
     hosts: ["oireachtas.ie", "data.oireachtas.ie"],
@@ -41,6 +47,11 @@ export const FEEDS = [
     id: "ch-2026-11-29",
     officialUrl: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html",
     hosts: ["bfs.admin.ch"],
+  },
+  {
+    id: "tw-2026-local",
+    officialUrl: "https://www.cec.gov.tw/",
+    hosts: ["cec.gov.tw"],
   },
 ];
 

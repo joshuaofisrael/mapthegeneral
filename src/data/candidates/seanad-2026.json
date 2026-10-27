@@ -1,0 +1,44 @@
+{
+  "id": "seanad-2026",
+  "langs": ["en"],
+  "submissionDeadline": "2026-10-06",
+  "source": {
+    "url": "https://data.oireachtas.ie/ie/oireachtas/electoralProcess/electionResults/seanad/2026/2026-10-16_seanad-bye-elections-2026-list-of-candidates_en.pdf",
+    "readOn": "2026-10-27",
+    "order": "source",
+    "label": {
+      "en": "Seanad Returning Officer, list of candidates, 16 October 2026"
+    },
+    "heading": {
+      "en": "Candidates on the Returning Officer’s list"
+    },
+    "intro": {
+      "en": "The Seanad Returning Officer’s list of 16 October 2026, read on {date}, names the people below for the nominating bodies sub-panel of the Cultural and Educational panel. The list does not print a ballot number, a nominating body for each person, or a personal page. Source: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the order of names on that list, not a ballot order."
+    }
+  },
+  "candidates": [
+    {
+      "name": "Ray McAdam",
+      "surname": "McAdam",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel"
+    },
+    {
+      "name": "Caitlín Ní Bhroin",
+      "surname": "Ní Bhroin",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel"
+    },
+    {
+      "name": "Maeve Maria O’Rourke",
+      "surname": "O’Rourke",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel"
+    },
+    {
+      "name": "Patrick Paul Walsh",
+      "surname": "Walsh",
+      "committee": "Nominating Bodies Sub-Panel, Cultural and Educational Panel"
+    }
+  ]
+}

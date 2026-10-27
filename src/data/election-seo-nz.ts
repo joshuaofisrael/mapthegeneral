@@ -35,7 +35,8 @@ function night(copy: {
   const config = {
     id: "nz-2026-11-07",
     opens: OPENS,
-    feed: "/live/nz-2026-11-07.json",
+    feed: "/il-live/nz-2026-11-07/results.json",
+    snapshot: "/live/nz-2026-11-07.json",
     official: RESULTS,
     timeZone: "Pacific/Auckland",
     ...copy,

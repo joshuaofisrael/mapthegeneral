@@ -60,9 +60,24 @@ const afterIsrael = Date.parse("2026-10-29T12:00:00Z");
 if (activeNight(afterIsrael)?.id !== "bg-2026-11-01") errors.push("after Israel night the next card should be Bulgaria");
 const afterBulgaria = Date.parse("2026-11-03T12:00:00Z");
 if (activeNight(afterBulgaria)?.id !== "ie-2026-seanad") errors.push("after the Bulgaria night the next card should be the Seanad");
+const afterSeanad = Date.parse("2026-11-07T05:30:00Z");
+if (activeNight(afterSeanad)?.id !== "nz-2026-11-07") errors.push("after the Seanad night the next card should be New Zealand");
+if (countsVisible("nz-2026-11-07", Date.parse("2026-11-07T18:59:00+13:00"))) {
+  errors.push("New Zealand count visible before 19:00");
+}
 if (countsVisible("bg-2026-11-01", Date.parse("2026-11-01T20:59:00+02:00"))) {
   errors.push("Bulgaria count visible before 21:00");
 }
+if (countsVisible("tw-2026-local", Date.parse("2026-11-28T23:59:00+08:00"))) {
+  errors.push("Taiwan count visible before 00:00 on 29 November");
+}
+if (!countsVisible("tw-2026-local", Date.parse("2026-11-29T00:00:00+08:00"))) {
+  errors.push("Taiwan count hidden at 00:00 on 29 November");
+}
+const victoriaHour = Date.parse("2026-11-28T08:00:00Z");
+if (activeNight(victoriaHour)?.id !== "au-vic-2026") errors.push("28 Nov at 08:00Z should surface Victoria");
+const taiwanHour = Date.parse("2026-11-28T16:30:00Z");
+if (activeNight(taiwanHour)?.id !== "tw-2026-local") errors.push("28 Nov at 16:30Z should surface Taiwan");
 const swissHour = Date.parse("2026-11-29T11:30:00Z");
 if (activeNight(swissHour)?.id !== "ch-2026-11-29") errors.push("29 Nov at 12:30 CET should surface Switzerland");
 const spainHour = Date.parse("2026-11-29T20:30:00Z");
