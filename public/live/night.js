@@ -182,6 +182,16 @@
       });
   }
 
+  // The feed is requested only from the two Israel results pages. Elsewhere
+  // the countdown is local and nothing is fetched.
+  var path = location.pathname.replace(/\/+$/, "") || "/";
+  if (path !== "/il/en/results" && path !== "/il/he/results") {
+    showClosed();
+    window.setInterval(function () {
+      showClosed();
+    }, 1000);
+    return;
+  }
   load();
   window.setInterval(load, 60000);
 })();

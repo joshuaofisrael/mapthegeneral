@@ -7,13 +7,13 @@ import {
   IL_CEC_RESULTS,
   IL_ELIGIBLE,
   IL_LIVE_DATA_URL,
-  IL_LIVE_POLL_MS,
   IL_LIVE_RAW_URL,
   IL_PATHS,
   IL_SEAT_LABEL,
   IL_TRACKER_OPENS_AT,
   IL_WINDOW_ID,
   ilEstimatesAllowed,
+  ilLivePollMs,
   ilLivePollUrl,
   type IlLang,
 } from "@/data/il-results";
@@ -128,7 +128,7 @@ export function ilUpdatedStamp(
   const minute = parts.find((p) => p.type === "minute")?.value ?? "";
   const hm = `${hour}:${minute}`;
   const text = lang === "he" ? `נבדק לאחרונה ${hm} שעון ישראל` : `Last checked ${hm} Israel time`;
-  const cadence = lang === "he" ? "מתעדכן בכל דקה" : "Updates every minute";
+  const cadence = lang === "he" ? "הנתונים נבדקים בכל דקה; העמוד מתרענן כל 2–5 דקות" : "Data checked every minute; page refreshes every 2–5 minutes";
   return { text, cadence, kind: "checked" };
 }
 
@@ -155,10 +155,19 @@ function preferDoc(prev: IlDoc | null, next: IlDoc): IlDoc {
   return b >= a ? next : prev;
 }
 
+/** Network refresh runs only on the two Israel results pages. */
+export function ilResultsPollPage(): boolean {
+  if (typeof window === "undefined") return false;
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  return path === "/il/en/results" || path === "/il/he/results";
+}
+
 /**
- * Poll the same-origin /il-live feed every 30s. The query param is
- * cacheable at the edge. On 404/5xx, a network error, an empty file, or a
- * stale file, clear the document so no seat estimate stays on screen.
+ * On /il/en/results/ and /il/he/results/ only, re-read the feed every 2 minutes
+ * once the stage has results, and every 5 minutes while the stage is awaiting.
+ * A hidden tab does not poll. Other pages keep the baked snapshot and the clock.
+ * On 404/5xx, a network error, an empty file, or a stale file, clear the
+ * document so no seat estimate stays on screen.
  */
 export function useIlResults(initial: IlDoc | null) {
   const seeded = ilEstimatesAllowed(initial, Date.now(), false) ? initial : initial && initial.results.length === 0 ? initial : null;
@@ -168,21 +177,25 @@ export function useIlResults(initial: IlDoc | null) {
   const [receivedAt, setReceivedAt] = useState<number | null>(null);
   useEffect(() => {
     let stop = false;
+    let latest: IlDoc | null = seeded;
+    let timer = 0;
     const accept = (next: unknown, nowMs: number): boolean => {
       if (stop || !next || typeof next !== "object" || !Array.isArray((next as IlDoc).results)) return false;
       const incoming = next as IlDoc;
       if (incoming.results.length > 0 && !ilEstimatesAllowed(incoming, nowMs, false)) return false;
-      setDoc((prev) => preferDoc(prev, incoming));
+      latest = preferDoc(latest, incoming);
+      setDoc(latest);
       setReceivedAt(nowMs);
       return true;
     };
     const pull = async (url: string, nowMs: number): Promise<unknown> => {
       // Default cache (not no-store) so the 60s edge cache on /il-live can answer.
-      const res = await fetch(ilLivePollUrl(url, nowMs), { signal: AbortSignal.timeout(20_000) });
+      const res = await fetch(ilLivePollUrl(url, nowMs, ilLivePollMs(latest)), { signal: AbortSignal.timeout(20_000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.json();
     };
     const load = async () => {
+      if (!ilResultsPollPage() || document.visibilityState === "hidden") return;
       if (Date.now() < Date.parse(IL_TRACKER_OPENS_AT)) return;
       const nowMs = Date.now();
       let fresh = false;
@@ -203,18 +216,38 @@ export function useIlResults(initial: IlDoc | null) {
         return;
       }
       if (!stop) {
+        latest = null;
         setDoc(null);
         setStale(true);
       }
     };
+    const arm = () => {
+      window.clearTimeout(timer);
+      timer = 0;
+      if (stop || !ilResultsPollPage() || document.visibilityState === "hidden") return;
+      timer = window.setTimeout(async () => {
+        await load();
+        arm();
+      }, ilLivePollMs(latest));
+    };
+    const onVisibility = () => {
+      if (!ilResultsPollPage()) return;
+      if (document.visibilityState === "hidden") {
+        window.clearTimeout(timer);
+        timer = 0;
+        return;
+      }
+      void load().finally(arm);
+    };
     setNow(Date.now());
-    load();
     const tick = window.setInterval(() => setNow(Date.now()), 1000);
-    const poll = window.setInterval(load, IL_LIVE_POLL_MS);
+    if (ilResultsPollPage() && document.visibilityState !== "hidden") void load().finally(arm);
+    document.addEventListener("visibilitychange", onVisibility);
     return () => {
       stop = true;
       window.clearInterval(tick);
-      window.clearInterval(poll);
+      window.clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
   return { doc, now, stale, receivedAt };

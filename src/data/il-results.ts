@@ -21,13 +21,23 @@ export const IL_LIVE_DATA_URL = "/il-live/il-2026-knesset/results.json";
 export const IL_LIVE_RAW_URL =
   "https://raw.githubusercontent.com/joshuaofisrael/mapthegeneral/il-live-data/il-2026-knesset/results.json";
 export const IL_SNAPSHOT_URL = "/live/il-2026-knesset.json";
-/** Poll twice a minute. ?t= stays constant inside that 30s window so the edge can answer. */
-export const IL_LIVE_POLL_MS = 30_000;
+/** While the feed's stage has results (preliminary or final). */
+export const IL_LIVE_POLL_RESULTS_MS = 120_000;
+/** While the feed's stage is awaiting, or there is no count yet. */
+export const IL_LIVE_POLL_AWAITING_MS = 300_000;
 
-/** Cache-friendly poll URL: ?t=floor(now/30000), shared by every visitor in that window. */
-export function ilLivePollUrl(base: string, now = Date.now()): string {
+/** 2 minutes once a stage has results; 5 minutes while stage is awaiting. */
+export function ilLivePollMs(doc: { stage?: string | null; results?: unknown[] } | null | undefined): number {
+  if (doc?.stage === "awaiting") return IL_LIVE_POLL_AWAITING_MS;
+  if (doc && Array.isArray(doc.results) && doc.results.length > 0) return IL_LIVE_POLL_RESULTS_MS;
+  if (doc?.stage === "preliminary" || doc?.stage === "final") return IL_LIVE_POLL_RESULTS_MS;
+  return IL_LIVE_POLL_AWAITING_MS;
+}
+
+/** Cache-friendly poll URL. ?t= stays constant inside the current refresh window. */
+export function ilLivePollUrl(base: string, now = Date.now(), windowMs = IL_LIVE_POLL_AWAITING_MS): string {
   const join = base.includes("?") ? "&" : "?";
-  return `${base}${join}t=${Math.floor(now / IL_LIVE_POLL_MS)}`;
+  return `${base}${join}t=${Math.floor(now / windowMs)}`;
 }
 export const IL_CEC_RESULTS = "https://cdn-votes26.bechirot.gov.il/";
 export const IL_META = meta;
