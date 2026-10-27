@@ -307,6 +307,34 @@ function checkAffiliation(text: string, draft: string, flags: Flag[]) {
   }
 }
 
+const IL_EXIT_POLLS_OPEN_AT = Date.parse("2026-10-27T22:00:00+02:00");
+const IL_EXIT_MARK = "data-il-" + "exit-polls";
+const IL_EXIT_MARK_END = "data-il-sample-end";
+
+function insideTag(text: string, index: number, tag: string): boolean {
+  const open = text.lastIndexOf(`<${tag}`, index);
+  if (open < 0) return false;
+  const close = text.indexOf(`</${tag}>`, open);
+  return close > index;
+}
+
+/** After 22:00 Israel time, television samples are allowed only in the Israel results section and its data file. */
+function ilExitPollAllowed(draft: string, text: string, index: number, now = Date.now()): boolean {
+  if (now < IL_EXIT_POLLS_OPEN_AT) return false;
+  const norm = draft.replace(/\\/g, "/");
+  if (norm.endsWith("src/data/il-2026-exit-polls.json")) return true;
+  const page =
+    norm.endsWith("src/components/IlExitPolls.tsx") ||
+    norm.endsWith("il/en/results/index.html") ||
+    norm.endsWith("il/he/results/index.html");
+  if (!page) return false;
+  if (norm.endsWith(".html") && (insideTag(text, index, "script") || insideTag(text, index, "style"))) return true;
+  const start = text.lastIndexOf(IL_EXIT_MARK, index);
+  if (start < 0) return false;
+  const end = text.indexOf(IL_EXIT_MARK_END, start);
+  return end > index;
+}
+
 function projectionDenied(text: string, index: number, length: number): boolean {
   const end = index + length;
   const around = text.slice(Math.max(0, index - 180), Math.min(text.length, end + 120));
@@ -322,6 +350,7 @@ function checkProjectionLanguage(text: string, draft: string, flags: Flag[]) {
   let match: RegExpExecArray | null;
   while ((match = PROJECTION.exec(text))) {
     if (projectionDenied(text, match.index, match[0].length)) continue;
+    if (ilExitPollAllowed(draft, text, match.index)) continue;
     const around = text.slice(Math.max(0, match.index - 180), Math.min(text.length, match.index + match[0].length + 120));
     pushFlag(flags, {
       rule: 6,
@@ -965,6 +994,13 @@ function selfTest(): number {
     `Does this site publish seat projections or polls? ${"x".repeat(240)} No. Seats are shown only once the commission assigns them.\n`,
   );
   writeFileSync(path.join(content, "calls-projection.txt"), "The exit poll gives the list 40 percent and calls the race.\n");
+  mkdirSync(path.join(content, "data"), { recursive: true });
+  mkdirSync(path.join(content, "components"), { recursive: true });
+  writeFileSync(path.join(content, "data", "il-2026-exit-polls.json"), '{"note":"exit poll 24"}\n');
+  writeFileSync(
+    path.join(content, "components", "IlExitPolls.tsx"),
+    '/** data-il-exit-polls */\nexport const inside = "exit poll inside";\nexport const end = "data-il-sample-end";\nexport const outside = "exit poll outside";\n',
+  );
   writeFileSync(
     path.join(content, "indemnity.txt"),
     "This indemnity does not apply to the extent a claim is caused by our own willful misconduct. These terms are governed by the laws of the State of Florida, United States of America.\n",
@@ -1036,6 +1072,9 @@ function selfTest(): number {
   assert(!paths.has("6:faq-projection.txt"), "a projection question answered No was held", errors);
   assert(paths.has("6:calls-projection.txt"), "an unlabeled exit poll was not held", errors);
   assert(blocked.find((flag) => flag.draft_path.endsWith("calls-projection.txt"))?.severity === "MODERATE", "exit poll was not moderate", errors);
+  assert(!blocked.some((flag) => flag.draft_path.endsWith("il-2026-exit-polls.json")), "Israel sample file was held after close", errors);
+  const exitFlags = blocked.filter((flag) => flag.draft_path.endsWith("IlExitPolls.tsx"));
+  assert(exitFlags.length === 1 && exitFlags[0]?.flagged.includes("outside"), "sample copy outside the marker was not the only hold", errors);
   assert(!paths.has("1:indemnity.txt"), "terms indemnity was held as an allegation", errors);
   assert(paths.has("1:named-misconduct.txt"), "named misconduct was not held", errors);
   assert(blocked.find((flag) => flag.draft_path.endsWith("allegation.txt"))?.severity === "HIGH", "allegation was not high", errors);

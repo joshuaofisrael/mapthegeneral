@@ -54,7 +54,7 @@ export const RELEASE_POLICIES: Record<string, ReleasePolicy> = {
     "2026-10-27T00:00:00+02:00",
     "Central Elections Committee vote totals may be shown after polls close at 22:00 Israel time. Seats this site calculates from partial totals are not an official allocation.",
     { label: "Central Elections Committee for the 26th Knesset, results", url: "https://cdn-votes26.bechirot.gov.il/" },
-    "No polls or exit polls. After 22:00 Israel time the page may show Committee vote totals. The seat allocation calculated from those partial totals is unofficial, not final, and not an official seat allocation. A missing or stale feed shows no seats.",
+    "After 22:00 Israel time the results pages may show television channels' published seat samples in a separate section marked unofficial. Committee vote totals stay in the results block. A seat allocation this site calculates from partial Committee totals is unofficial, not final, and not an official seat allocation. A missing or stale feed shows no seats.",
   ),
   "ca-bc-2026": policy(
     "America/Vancouver",

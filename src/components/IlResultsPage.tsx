@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { IlExitPolls } from "@/components/IlExitPolls";
 import { IlLiveResults } from "@/components/IlLiveResults";
 import { Hemicycle, colorMap, type IlDoc, type IlRow } from "@/components/IlShared";
 import { absoluteUrl, SITE } from "@/data/site";
@@ -240,6 +241,8 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
           </a>
         </p>
       </section>
+
+      <IlExitPolls lang={lang} />
 
       <section aria-labelledby="timeline" className="mb-10">
         <h2 id="timeline" className="mb-3 text-2xl font-bold text-ink">{l.timeline}</h2>
