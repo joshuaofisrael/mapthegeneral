@@ -32,9 +32,9 @@ const COUNTRY_LINKS = [
   { label: "Brazil", href: "/br/" },
   { label: "Serbia", href: "/rs/" },
   { label: "Israel", href: "/il/" },
-  { label: "Taiwan", href: "/tw/" },
   { label: "Bulgaria", href: "/bg/" },
   { label: "New Zealand", href: "/nz/" },
+  { label: "Taiwan", href: "/tw/" },
 ] as const;
 
 const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "Bulgaria", "New Zealand"]);
