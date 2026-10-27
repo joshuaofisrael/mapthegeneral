@@ -1,3 +1,4 @@
+import { BgElectionCard } from "@/components/BgElectionCard";
 import { EditorialPreview } from "@/components/EditorialPreview";
 import { IlResultsCard, IL_PROMO_UNTIL } from "@/components/IlResultsLinks";
 import Link from "@/components/AnchorLink";
@@ -25,7 +26,16 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   const copy = ui("en");
   const extraCountries = registryCountries().filter((country) => country.code !== "es");
-  const upcoming = upcomingElectionCards();
+  const upcoming = [
+    {
+      href: "/bg/bg/elections/prezident-2026/",
+      label: "Bulgaria: president and vice president, 1 November 2026",
+      detail:
+        "New election dated by the National Assembly for 1 November 2026 if the 25 October vote elects no pair. The Commission’s distribution of 26 October gives no pair more than half. No surveys and no forecast.",
+      recent: false,
+    },
+    ...upcomingElectionCards(),
+  ];
   return (
     <div className="space-y-12">
       <JsonLd
@@ -53,7 +63,10 @@ export default function HomePage() {
           to vote.
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
-        {Date.now() < IL_PROMO_UNTIL && <IlResultsCard />}
+        <div id="election-night">
+          {Date.now() < IL_PROMO_UNTIL && <IlResultsCard />}
+          <BgElectionCard />
+        </div>
         <EditorialPreview path="/" />
       </section>
 
@@ -101,7 +114,7 @@ export default function HomePage() {
         <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
           Each card opens that country’s guide. Where a card shows a photograph, it is an AI-generated image of a public
           place, and the country page captions it “AI-generated image”. Those images are not placed on municipality
-          pages. Ireland, Norway, Sweden, Brazil, Serbia and Israel have no photograph in this release.
+          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel and Bulgaria have no photograph in this release.
         </p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           <li

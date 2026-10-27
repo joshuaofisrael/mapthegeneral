@@ -329,6 +329,43 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     rules: [],
   },
   {
+    id: "bg-2026-president",
+    country: "bg",
+    localLang: "bg",
+    election: {
+      en: "Bulgaria president and vice president, 1 November 2026",
+      local: "Избори за президент и вицепрезидент, 1 ноември 2026",
+    },
+    pollingDay: "2026-11-01",
+    trackerOpensAt: "2026-11-01T21:00:00+02:00",
+    officialResults: {
+      label: "Централна избирателна комисия, резултати",
+      url: "https://results.cik.bg/pvr202610/rezultati/index.html",
+    },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        { label: "National Assembly, 31 July 2026", url: "https://www.parliament.bg/en/news/ID/6600" },
+        { label: "Central Election Commission, 25 October 2026 results", url: "https://results.cik.bg/pvr202610/rezultati/index.html" },
+        { label: "Election Code, article 205", url: "https://magistrat.bg/laws/00af9385cb23:205" },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-10-31T00:00:00+02:00",
+        end: "2026-11-01T21:00:00+02:00",
+        citation: {
+          label: "Изборен кодекс, чл. 205, ал. 5",
+          url: "https://magistrat.bg/laws/00af9385cb23:205",
+        },
+        en: "Election Code article 205(5) bars publishing public-opinion results about the elections, in any form, from 24 hours before election day until the end of election day is declared in the country. This site publishes no surveys and no forecasts at any time, and it shows a 1 November count only from the Central Election Commission after 21:00 Eastern European Time.",
+        local:
+          "Чл. 205, ал. 5 от Изборния кодекс забранява резултати от допитвания до общественото мнение по повод на изборите да се огласяват под каквато и да е форма от 24 часа преди изборния ден до обявяване края на изборния ден на територията на страната. Този сайт не публикува допитвания и прогнози в нито един ден и показва резултат за 1 ноември само от ЦИК след 21:00 ч. източноевропейско време.",
+      },
+    ],
+  },
+  {
     id: "mx-2027-federal",
     country: "mx",
     localLang: "es",

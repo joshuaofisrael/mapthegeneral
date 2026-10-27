@@ -1,0 +1,349 @@
+{
+  "id": "bg-president-2026",
+  "langs": [
+    "en"
+  ],
+  "source": {
+    "url": "https://results.cik.bg/pvr202610/rezultati/index.html",
+    "readOn": "2026-10-27",
+    "order": "ballot",
+    "label": {
+      "en": "Central Election Commission, results table, 25 October 2026"
+    },
+    "heading": {
+      "en": "Candidate pairs, ballot order"
+    },
+    "intro": {
+      "en": "The pairs below are the candidate pairs on the Central Election Commission results table for 25 October 2026, read on {date}. The number is the ballot number in that table. The registering body is the name printed beside the pair. Source: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the ballot order printed in that table."
+    }
+  },
+  "candidates": [
+    {
+      "name": "Георги Николов Димов и Димитър Атанасов Шивиков",
+      "surname": "Димов",
+      "committee": "ИК за Георги Димов и Димитър Шивиков",
+      "ballotOrder": 1,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Росен Пламенов Миленов и Иван Стефанов Иванов",
+      "surname": "Миленов",
+      "committee": "ИК за Росен Миленов и Иван Иванов",
+      "ballotOrder": 2,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Иванка Великова Цветанова-Петкова и Панайот Александров Кючуков",
+      "surname": "Цветанова-Петкова",
+      "committee": "ИК за Иванка Цветанова-Петкова и Панайот Кючуков",
+      "ballotOrder": 3,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Андрей Атанасов Гюров и Георги Димитров Кандев",
+      "surname": "Гюров",
+      "committee": "ИК за Андрей Гюров и Георги Кандев",
+      "ballotOrder": 4,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Йордан Иванов Малджански и Валентин Асенов Христов",
+      "surname": "Малджански",
+      "committee": "ИК за Йордан Малджански и Валентин Христов",
+      "ballotOrder": 5,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Камен Захариев Тасков и Галя Димитрова Иванова",
+      "surname": "Тасков",
+      "committee": "ИК за Камен Тасков и Галя Иванова",
+      "ballotOrder": 6,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Нако Райнов Стефанов и Нина Петкова Ламбова",
+      "surname": "Стефанов",
+      "committee": "ИК за Нако Стефанов и Нина Ламбова",
+      "ballotOrder": 7,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Методи Веселинов Бъчваров и Ленин Велинов Станоев",
+      "surname": "Бъчваров",
+      "committee": "ИК за Методи Бъчваров и Ленин Станоев",
+      "ballotOrder": 8,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Ивайло Петров Симеонов и Косьо Христов Стойчев",
+      "surname": "Симеонов",
+      "committee": "ИК за Ивайло Симеонов и Косьо Стойчев",
+      "ballotOrder": 9,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Мария Петрова Колева и Валери Йорданов Велковски",
+      "surname": "Колева",
+      "committee": "ПРАВОТО",
+      "ballotOrder": 10,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Костадин Тодоров Костадинов и Петър Петров Волгин",
+      "surname": "Костадинов",
+      "committee": "ВЪЗРАЖДАНЕ",
+      "ballotOrder": 11,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Александър Трифонов Томов и Александър Цветанов Гарибов",
+      "surname": "Томов",
+      "committee": "БЪЛГАРСКА СОЦИАЛДЕМОКРАЦИЯ – ЕВРОЛЕВИЦА",
+      "ballotOrder": 12,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Борис Кирилов Анзов и Бранимир Мичев Мичев",
+      "surname": "Анзов",
+      "committee": "ИК за Борис Анзов и Бранимир Мичев",
+      "ballotOrder": 13,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Румяна Методиева Ченалова и Георги Минчев Георгиев",
+      "surname": "Ченалова",
+      "committee": "ИК за Румяна Ченалова и Георги Георгиев",
+      "ballotOrder": 14,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Лъчезар Аспарухов Аврамов и Ивайло Дражев Атанасов",
+      "surname": "Аврамов",
+      "committee": "ИК за Лъчезар Аврамов и Ивайло Атанасов",
+      "ballotOrder": 15,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Иво Иванов Лулчев и Стефан Димитров Попов",
+      "surname": "Лулчев",
+      "committee": "ИК за Иво Лулчев и Стефан Попов",
+      "ballotOrder": 16,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Радостин Петев Василев и Красимир Цветков Манов",
+      "surname": "Василев",
+      "committee": "ПП МЕЧ",
+      "ballotOrder": 17,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Иван Маркос Христанов и Стоянка Гинева Черкезова",
+      "surname": "Христанов",
+      "committee": "ИК за Иван Христанов и Стоянка Черкезова",
+      "ballotOrder": 18,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Ивелин Людмилов Михайлов и Юлиана Младенова Матеева",
+      "surname": "Михайлов",
+      "committee": "ПП ВЕЛИЧИЕ",
+      "ballotOrder": 19,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Величка Неделчова Георгиева и Росен Игнатов Иванов",
+      "surname": "Георгиева",
+      "committee": "ИК за Величка Георгиева и Росен Иванов",
+      "ballotOrder": 20,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Волен Николов Сидеров и Славчо Георгиев Велков",
+      "surname": "Сидеров",
+      "committee": "ИК за Волен Сидеров и Славчо Велков",
+      "ballotOrder": 21,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Николай Нанков Ненчев и Цвета Кирилова Кирилова",
+      "surname": "Ненчев",
+      "committee": "БЗНС",
+      "ballotOrder": 22,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Искра Йорданова Недева и Стоян Руменов Георгиев",
+      "surname": "Недева",
+      "committee": "ИК за Искра Недева и Стоян Георгиев",
+      "ballotOrder": 23,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Пламен Панайотов Пасков и Светозар Стоянов Съев",
+      "surname": "Пасков",
+      "committee": "ИК за Пламен Пасков и Светозар Съев",
+      "ballotOrder": 24,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Илияна Малинова Йотова и Кирил Александров Вълчев",
+      "surname": "Йотова",
+      "committee": "ИК за Илияна Йотова и Кирил Вълчев",
+      "ballotOrder": 25,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Боян Боянов Станков Расате и Йордан Стоянов Манасиев",
+      "surname": "Расате",
+      "committee": "ИК за Боян Расате и Йордан Манасиев",
+      "ballotOrder": 26,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Венцислав Атанасов Ангелов и Атанас Иванов Стефанов",
+      "surname": "Ангелов",
+      "committee": "ПП НАРОДНА ПАРТИЯ ИСТИНАТА И САМО ИСТИНАТА",
+      "ballotOrder": 27,
+      "links": [
+        {
+          "href": "https://www.cik.bg/bg/pvr2026/registers/per_candidates",
+          "kind": "profile"
+        }
+      ]
+    }
+  ]
+}

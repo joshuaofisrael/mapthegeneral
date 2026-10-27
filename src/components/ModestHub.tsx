@@ -48,7 +48,7 @@ function Frame({
       <PageHeader eyebrow={copy.eyebrow} title={copy.title} lede={copy.lede} />
       {code === "il" && <IlResultsCard />}
       <ContentTrust
-        updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"}
+        updated={code === "bg" ? "27 October 2026" : ["br", "rs", "il"].includes(code) ? "26 October 2026" : "23 October 2026"}
         pagePath={path}
         officeHref={hub.officeHref}
         officeLabel={hub.officeLabel}
@@ -74,7 +74,7 @@ export function HubChooser({ code }: { code: HubCode }) {
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: hub.name }]} />
       <PageHeader eyebrow={hub.name} title={hub.name} lede={copy.lede} />
       {code === "il" && <IlResultsCard />}
-      <ContentTrust updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
+      <ContentTrust updated={code === "bg" ? "27 October 2026" : ["br", "rs", "il"].includes(code) ? "26 October 2026" : "23 October 2026"} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         <li
           className="country-card rounded-xl border border-line bg-paper-card p-5"
@@ -158,6 +158,14 @@ export function HubNational({ code }: { code: HubCode }) {
         <Link className="text-navy underline" href={hubEn(code, "sources")}>
           Sources
         </Link>
+        {code === "bg" ? (
+          <>
+            {" · "}
+            <Link className="text-navy underline" href="/bg/bg/" hrefLang="bg" lang="bg">
+              Български
+            </Link>
+          </>
+        ) : null}
       </p>
     </Frame>
   );
@@ -539,8 +547,9 @@ export function HubSources({ code }: { code: HubCode }) {
       ]}
     >
       <p className="text-sm leading-6 text-ink-muted">
-        This hub does not republish an electoral register, a candidate list, or a photograph of a person. Municipality
-        pages are not part of this release.
+        {code === "bg"
+          ? "Candidate pairs are on the election page, in the order of the Commission’s table, each linked to the public register. This page does not republish a photograph. Municipality pages are not part of this release."
+          : "This hub does not republish an electoral register, a candidate list, or a photograph of a person. Municipality pages are not part of this release."}
       </p>
     </Frame>
   );

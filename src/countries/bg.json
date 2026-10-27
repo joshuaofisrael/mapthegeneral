@@ -1,0 +1,28 @@
+{
+  "code": "bg",
+  "name": "Bulgaria",
+  "href": "/bg/",
+  "summary": "National hub. Presidential and vice-presidential election: first vote 25 October 2026, and a new election on 1 November 2026 if no pair was elected. Official distribution from the Central Election Commission. No municipality pages.",
+  "links": [
+    {
+      "href": "/bg/bg/elections/prezident-2026/",
+      "label": "Избори за президент, 1 ноември 2026"
+    },
+    {
+      "href": "/bg/bg/",
+      "label": "Български"
+    },
+    {
+      "href": "/bg/en/",
+      "label": "English"
+    },
+    {
+      "href": "/bg/en/elections/president-2026/",
+      "label": "Presidential election, 1 November 2026"
+    },
+    {
+      "href": "/bg/en/sources/",
+      "label": "Sources"
+    }
+  ]
+}

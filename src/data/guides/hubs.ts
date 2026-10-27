@@ -565,6 +565,186 @@ export const ilEn: Guide = {
   ],
 };
 
+const BG_CIK = "https://www.cik.bg/";
+const BG_RES = "https://results.cik.bg/pvr202610/rezultati/index.html";
+const BG_REG = "https://www.cik.bg/bg/pvr2026/registers/per_candidates";
+const BG_PARL = "https://www.parliament.bg/en/news/ID/6600";
+const BG_CODE = "https://www.ciela.net/svobodna-zona-normativi/view/2136112596/izboren-kodeks";
+const BG_205 = "https://magistrat.bg/laws/00af9385cb23:205";
+const BG_ARC = "https://results.cik.bg/index.html";
+
+export const bgEn: Guide = {
+  kicker: "Practical guide",
+  title: "How Bulgaria elects a president",
+  intro:
+    "This section is drawn from the National Assembly notice of 31 July 2026, the Central Election Commission pages read on 27 October 2026, and the consolidated Election Code. It does not tell a reader how to vote.",
+  blocks: [
+    {
+      heading: "The office and the dates",
+      paragraphs: [
+        [
+          t("The "),
+          t("National Assembly", BG_PARL),
+          t(" decided on 31 July 2026 that the election of a president and vice president is on 25 October 2026, and that a new election, if one is required, is on 1 November."),
+        ],
+        [
+          t("Annex 2 of the "),
+          t("Election Code", BG_CODE),
+          t(" says a pair is elected with more than half of the valid votes, if more than half of the voters took part. If no list is elected, the Commission schedules a new election within seven days between the two lists with the most votes. At that election the pair with the most votes is elected."),
+        ],
+      ],
+    },
+    {
+      heading: "Hours and the ballot",
+      paragraphs: [
+        [
+          t("Article 220 says voters vote from 7:00 to 20:00. Abroad the day runs from 7:00 to 20:00 local time. People still outside the room at 20:00 may vote, and not later than 21:00. Article 229 opens the room at 7:00 when more than half the section commission is present."),
+        ],
+        [
+          t("The pairs and their ballot numbers are the rows on the "),
+          t("Commission’s results table", BG_RES),
+          t(". Each name on the election page links to the "),
+          t("public register", BG_REG),
+          t(". The line for supporting no one is on the table and is not a pair."),
+        ],
+      ],
+    },
+    {
+      heading: "What is already counted",
+      paragraphs: [
+        [
+          t("The results table, timed 15:00 on 26 October 2026, says 100 percent of section protocols had been processed in the district commissions. No pair has more than half of the printed distribution. The activity page did not show a final turnout, so this hub does not decide whether more than half of the voters took part. A count for 1 November is not shown until the Commission publishes one after the end of election day."),
+        ],
+      ],
+    },
+  ],
+  electionsHeading: "Elections",
+  elections: [
+    {
+      name: "Избори за президент и вицепрезидент, 1 ноември 2026",
+      detail: "Страница на български. Ред в бюлетината и разпределението на ЦИК от 25 октомври.",
+      href: "/bg/bg/elections/prezident-2026/",
+    },
+    {
+      name: "President and vice president, 1 November 2026",
+      detail: "English page. Ballot order and the Commission’s 25 October distribution. No count for 1 November until the Commission publishes one.",
+      href: "/bg/en/elections/president-2026/",
+    },
+  ],
+  glossaryHeading: "Glossary",
+  glossary: [
+    { term: "ЦИК", text: "Централна избирателна комисия, the Central Election Commission, which runs the election and publishes the count." },
+    { term: "Candidate pair", text: "A candidate for president and a candidate for vice president, registered together." },
+    { term: "Не подкрепям никого", text: "The ballot line “I do not support anyone”. It is not a candidate pair." },
+  ],
+  faqHeading: "Questions",
+  faq: [
+    {
+      q: "When is the vote?",
+      a: "The National Assembly set 25 October 2026, and 1 November 2026 if a new election is required. The Commission’s 25 October distribution gives no pair more than half.",
+    },
+    {
+      q: "Does this site publish surveys?",
+      a: "No. Article 205(5) bars publication of public-opinion results from 24 hours before election day until the end of election day is declared. This site publishes none on any day, and it publishes no forecast.",
+    },
+  ],
+  sourcesHeading: "Official pages",
+  sources: [
+    { label: "Central Election Commission", href: BG_CIK },
+    { label: "Central Election Commission, 25 October 2026 results", href: BG_RES },
+    { label: "National Assembly, 31 July 2026", href: BG_PARL },
+    { label: "Election Code", href: BG_CODE },
+    { label: "Election Code, article 205", href: BG_205 },
+    { label: "Central Election Commission, results index", href: BG_ARC },
+  ],
+};
+
+export const bgBg: Guide = {
+  kicker: "Практически преглед",
+  title: "Как България избира президент",
+  intro:
+    "Този раздел е от съобщението на Народното събрание от 31 юли 2026 г., страниците на Централната избирателна комисия, прочетени на 27 октомври 2026 г., и консолидирания Изборен кодекс. Не казва как да се гласува.",
+  blocks: [
+    {
+      heading: "Длъжността и датите",
+      paragraphs: [
+        [
+          t("На 31 юли 2026 г. "),
+          t("Народното събрание", BG_PARL),
+          t(" реши изборите за президент и вицепрезидент да са на 25 октомври 2026 г., а нов избор, ако е нужен, да е на 1 ноември."),
+        ],
+        [
+          t("Приложение № 2 към "),
+          t("Изборния кодекс", BG_CODE),
+          t(" казва, че е избрана двойка с повече от половината действителни гласове, ако са гласували повече от половината избиратели. Ако няма избрана листа, ЦИК насрочва нов избор в седемдневен срок между двете листи с най-много гласове. На него е избрана двойката с най-много гласове."),
+        ],
+      ],
+    },
+    {
+      heading: "Часове и бюлетина",
+      paragraphs: [
+        [
+          t("Чл. 220: избирателите гласуват от 7:00 до 20:00 ч. В чужбина денят е от 7:00 до 20:00 местно време. Който е пред секцията в 20:00, може да гласува, но не по-късно от 21:00. Чл. 229 открива помещението в 7:00, ако присъстват повече от половината членове на секционната комисия."),
+        ],
+        [
+          t("Двойките и номерата им са редовете в "),
+          t("таблицата на ЦИК", BG_RES),
+          t(". Всяко име на страницата на избора води към "),
+          t("публичния регистър", BG_REG),
+          t(". Редът „Не подкрепям никого“ е в таблицата и не е двойка."),
+        ],
+      ],
+    },
+    {
+      heading: "Какво вече е преброено",
+      paragraphs: [
+        [
+          t("Таблицата, към 15:00 на 26 октомври 2026 г., казва, че са обработени 100 процента от протоколите на секционните комисии в районните. Нито една двойка няма повече от половината от отпечатаното разпределение. Страницата за активност не показа крайна активност, затова този хъб не решава дали са гласували повече от половината избиратели. Резултат за 1 ноември се показва едва когато ЦИК го публикува след края на изборния ден."),
+        ],
+      ],
+    },
+  ],
+  electionsHeading: "Избори",
+  elections: [
+    {
+      name: "Избори за президент и вицепрезидент, 1 ноември 2026",
+      detail: "Ред в бюлетината и разпределението на ЦИК от 25 октомври. Няма резултат за 1 ноември, докато ЦИК не го публикува.",
+      href: "/bg/bg/elections/prezident-2026/",
+    },
+    {
+      name: "President and vice president, 1 November 2026",
+      detail: "English page for the same election.",
+      href: "/bg/en/elections/president-2026/",
+    },
+  ],
+  glossaryHeading: "Думи",
+  glossary: [
+    { term: "ЦИК", text: "Централната избирателна комисия, която произвежда избора и публикува резултата." },
+    { term: "Кандидатска двойка", text: "Кандидат за президент и кандидат за вицепрезидент, регистрирани заедно." },
+    { term: "Не подкрепям никого", text: "Ред в бюлетината. Не е кандидатска двойка." },
+  ],
+  faqHeading: "Въпроси",
+  faq: [
+    {
+      q: "Кога е вотът?",
+      a: "Народното събрание определи 25 октомври 2026 г. и 1 ноември 2026 г., ако е нужен нов избор. Разпределението на ЦИК от 25 октомври не дава на никоя двойка повече от половината.",
+    },
+    {
+      q: "Публикува ли сайтът допитвания?",
+      a: "Не. Чл. 205, ал. 5 забранява огласяване на резултати от допитвания от 24 часа преди изборния ден до обявяване края на изборния ден. Този сайт не ги публикува в нито един ден и не прави прогноза.",
+    },
+  ],
+  sourcesHeading: "Официални страници",
+  sources: [
+    { label: "Централна избирателна комисия", href: BG_CIK },
+    { label: "ЦИК, резултати от 25 октомври 2026 г.", href: BG_RES },
+    { label: "Народно събрание, 31 юли 2026 г.", href: BG_PARL },
+    { label: "Изборен кодекс", href: BG_CODE },
+    { label: "Изборен кодекс, чл. 205", href: BG_205 },
+    { label: "ЦИК, указател на резултатите", href: BG_ARC },
+  ],
+};
+
 export const hubGuides: Record<string, Record<string, Guide>> = {
   ie: { en: ieEn },
   no: { en: noEn },
@@ -572,4 +752,5 @@ export const hubGuides: Record<string, Record<string, Guide>> = {
   br: { en: brEn },
   rs: { en: rsEn },
   il: { en: ilEn },
+  bg: { en: bgEn, bg: bgBg },
 };

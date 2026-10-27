@@ -1,7 +1,7 @@
 import type { SourceRef } from "@/data/spain/types";
 import { pageMetadata } from "@/lib/metadata";
 
-export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il";
+export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il" | "bg";
 export type HubKind = "chooser" | "national" | "elections" | "election" | "faq" | "sources";
 
 type Hub = {
@@ -154,6 +154,22 @@ export const HUBS: Record<HubCode, Hub> = {
       { id: "il-date", name: "Central Elections Committee, the date of the 26th Knesset election", url: "https://www.gov.il/en/pages/knesset26-date", readOn: READ_NEW },
       { id: "il-dept", name: "Central Elections Committee on gov.il", url: "https://www.gov.il/en/departments/central-elections-committee", readOn: READ_NEW },
       { id: "il-about", name: "Central Elections Committee, elections in Israel (threshold and seat distribution)", url: "https://www.gov.il/en/pages/election-about-info", readOn: READ_NEW },
+    ],
+  },
+  bg: {
+    code: "bg",
+    name: "Bulgaria",
+    officeLabel: "Централна избирателна комисия",
+    officeHref: "https://www.cik.bg/",
+    electionSlug: "president-2026",
+    electionName: "President and vice president, 1 November 2026",
+    blurb:
+      "National hub in English. The National Assembly scheduled the presidential election for 25 October 2026 and a new election for 1 November 2026 if no pair was elected. Figures are the Central Election Commission’s distribution. No municipality pages and no surveys.",
+    sources: [
+      { id: "bg-cik", name: "Central Election Commission", url: "https://www.cik.bg/", readOn: "2026-10-27" },
+      { id: "bg-res", name: "Central Election Commission, 25 October 2026 results", url: "https://results.cik.bg/pvr202610/rezultati/index.html", readOn: "2026-10-27" },
+      { id: "bg-parl", name: "National Assembly, 31 July 2026", url: "https://www.parliament.bg/en/news/ID/6600", readOn: "2026-10-27" },
+      { id: "bg-code", name: "Election Code", url: "https://www.ciela.net/svobodna-zona-normativi/view/2136112596/izboren-kodeks", readOn: "2026-10-27" },
     ],
   },
 };
@@ -375,6 +391,40 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
       title: "Israel sources",
       description: "Official pages used for the Israel hub: the Central Elections Committee and the Knesset.",
       lede: "Each page in this hub cites this list. The pages were read on 26 October 2026.",
+    },
+  },
+  bg: {
+    chooser: {
+      title: "Bulgaria — language",
+      description: "Bulgaria: presidential election of 25 October 2026 and a new election on 1 November 2026. Bulgarian and English. Unofficial information.",
+      lede: "The Bulgarian guide is the default. The English guide is the switch.",
+    },
+    national: {
+      title: "Bulgaria",
+      description: "Bulgaria: election of a president and vice president. First vote 25 October 2026, new election 1 November 2026. Unofficial information.",
+      eyebrow: "President and vice president · 1 November 2026",
+      lede: "The National Assembly scheduled 25 October 2026 and, if no pair is elected, a new election on 1 November 2026.",
+    },
+    elections: {
+      title: "Elections in Bulgaria",
+      description: "The presidential and vice-presidential votes of 25 October and 1 November 2026.",
+      lede: "This hub lists that election only. It has no municipality pages.",
+    },
+    election: {
+      title: "Bulgaria presidential election, 1 November 2026",
+      description: "New election on 1 November 2026 if the 25 October vote elected no pair. Commission distribution only. Unofficial information.",
+      eyebrow: "Sunday 1 November 2026 · no surveys",
+      lede: "Figures from 25 October are the Commission’s table. No count for 1 November is shown until the Commission publishes one.",
+    },
+    faq: {
+      title: "Bulgaria questions",
+      description: "Short answers on the Bulgaria hub: the dates, the hours, and where results come from.",
+      lede: "Answers below follow the Commission and the Election Code, read on 27 October 2026.",
+    },
+    sources: {
+      title: "Bulgaria sources",
+      description: "Official pages used for the Bulgaria hub: the Central Election Commission, the National Assembly, and the Election Code.",
+      lede: "Each page in this hub cites this list. The pages were read on 27 October 2026.",
     },
   },
 };

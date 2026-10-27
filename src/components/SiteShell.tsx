@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { SITE } from "@/data/site";
 import { ElectionLawNotice } from "./ElectionLawNotice";
+import { BgElectionBanner } from "./BgElectionCard";
 import { IlResultsBanner } from "./IlResultsLinks";
 import { HouseAd } from "./HouseAd";
 import { SiteFooter } from "./SiteFooter";
@@ -18,6 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <SiteHeader />
       <HouseAd />
       <IlResultsBanner />
+      <BgElectionBanner />
       <ElectionLawNotice />
       <main id="main" className="mx-auto w-full max-w-site flex-1 px-4 py-8 sm:py-10">
         {children}

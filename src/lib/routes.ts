@@ -153,7 +153,7 @@ function registryEntries(): IndexEntry[] {
   return [...mexicoIndexEntries()];
 }
 
-const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il"];
+const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il", "bg"];
 
 function hubIndexEntries(): IndexEntry[] {
   return HUB_CODES.flatMap((code) => {
@@ -182,6 +182,15 @@ function hubIndexEntries(): IndexEntry[] {
         : []),
       ...(code === "il"
         ? [{ path: "/il/he/elections/knesset-2026/", lang: "he", title: "הבחירות לכנסת ה-26, 27 באוקטובר 2026", kind: "election", text: "ישראל בחירות כנסת 27 באוקטובר 2026" }]
+        : []),
+      ...(code === "bg"
+        ? [
+            { path: "/bg/bg/", lang: "bg", title: "България", kind: "country", text: "България избори президент вицепрезидент 1 ноември 2026 ЦИК" },
+            { path: "/bg/bg/elections/", lang: "bg", title: "Избори в България", kind: "elections", text: "избори президент вицепрезидент" },
+            { path: "/bg/bg/elections/prezident-2026/", lang: "bg", title: "Избори за президент и вицепрезидент, 1 ноември 2026", kind: "election", text: "България президент 25 октомври 1 ноември 2026 ЦИК" },
+            { path: "/bg/bg/faq/", lang: "bg", title: "Въпроси за България", kind: "faq", text: "въпроси България ЦИК" },
+            { path: "/bg/bg/sources/", lang: "bg", title: "Източници за България", kind: "sources", text: "източници ЦИК Изборен кодекс" },
+          ]
         : []),
       { path: hubEn(code, "faq"), lang: "en", title: `${hub.name} questions`, kind: "faq", text: `${hub.name} faq` },
       { path: hubEn(code, "sources"), lang: "en", title: `${hub.name} sources`, kind: "sources", text: `${hub.name} official sources` },
