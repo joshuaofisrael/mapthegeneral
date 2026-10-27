@@ -2,10 +2,9 @@
  * One static house ad per exported page, placed under the header.
  * The offer is chosen at build time from an FNV-1a hash of the page path:
  * 3/5 NamedScan, 2/5 RankFootprint. NamedScan copy is what that site published
- * on 27 October 2026. RankFootprint's static copy is the $1 sample scan.
- * A deferred script may swap that card to the free-scan wording only when
- * the sample-status API reports mode "free". The card itself loads no image
- * or script, and it keeps a reserved height.
+ * on 27 October 2026. RankFootprint's line is the $1 sample scan, the same
+ * words in every language. The card loads no image or script, and it keeps
+ * a reserved height.
  */
 
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
@@ -45,104 +44,34 @@ export type RankfootprintLang = (typeof RANKFOOTPRINT_LANGS)[number];
 
 type RankLine = { pitch: string; cta: string };
 
+/** Exact RankFootprint headline. Same words in every language. */
+const RANKFOOTPRINT_PITCH = "$1 Google Maps rank sample scan";
+
+function rankPaid(cta: string): RankLine {
+  return { pitch: RANKFOOTPRINT_PITCH, cta };
+}
+
 /** Static HTML. Free-scan wording must not appear here. */
 const RANK_PAID: Record<RankfootprintLang, RankLine> = {
-  en: { pitch: "$1 Google Maps rank sample scan", cta: "Get the $1 sample scan" },
-  es: {
-    pitch: "Escaneo de muestra de $1 del ranking en Google Maps",
-    cta: "Consigue el escaneo de muestra de $1",
-  },
-  fr: {
-    pitch: "Scan d’échantillon à $1 du rang Google Maps",
-    cta: "Obtenir le scan d’échantillon à $1",
-  },
-  de: {
-    pitch: "Beispielscan für $1 zu Ihrem Google-Maps-Rang",
-    cta: "Beispielscan für $1 holen",
-  },
-  it: {
-    pitch: "Scansione campione da $1 della posizione su Google Maps",
-    cta: "Ottieni la scansione campione da $1",
-  },
-  pl: { pitch: "Próbny skan pozycji w Google Maps za $1", cta: "Weź próbny skan za $1" },
-  pt: {
-    pitch: "Varredura de amostra de $1 do ranking no Google Maps",
-    cta: "Obtenha a varredura de amostra de $1",
-  },
-  he: { pitch: "סריקת דגימה ב-$1 לדירוג ב-Google Maps", cta: "קבלו את סריקת הדגימה ב-$1" },
-  sr: { pitch: "Uzorak skeniranja ranga na Google Maps za $1", cta: "Uzmite uzorak skeniranja za $1" },
-  bg: {
-    pitch: "Примерно сканиране за $1 на ранга в Google Maps",
-    cta: "Вземете примерното сканиране за $1",
-  },
-  "de-CH": {
-    pitch: "Beispielscan für $1 zu Ihrem Google-Maps-Rang",
-    cta: "Beispielscan für $1 holen",
-  },
-  "fr-CH": {
-    pitch: "Échantillon à $1 du classement Google Maps",
-    cta: "Obtenir l’échantillon à $1",
-  },
-  "it-CH": {
-    pitch: "Scansione campione da $1 della posizione su Google Maps",
-    cta: "Ottieni la scansione campione da $1",
-  },
-  sv: { pitch: "$1-provskanning av Google Maps-rankning", cta: "Hämta provskanningen för $1" },
-  no: { pitch: "$1-prøveskanning av Google Maps-rangering", cta: "Få prøveskanningen for $1" },
-  zh: { pitch: "$1 Google 地圖排名樣本掃描", cta: "取得 $1 樣本掃描" },
-  et: { pitch: "$1 Google Mapsi asetuse näidisskaneering", cta: "Hangi $1 näidisskaneering" },
-  nl: { pitch: "$1-proefscan van je Google Maps-positie", cta: "Haal de proefscan van $1" },
-  fi: { pitch: "$1:n Google Maps -sijoituksen näyteskannaus", cta: "Hanki $1:n näyteskannaus" },
-};
-
-/** Used only by the deferred script. Never written into the ad HTML. */
-const RANK_FREE: Record<RankfootprintLang, RankLine> = {
-  en: { pitch: "Free Google Maps rank sample scan", cta: "Get the free sample scan" },
-  es: {
-    pitch: "Escaneo de muestra gratis del ranking en Google Maps",
-    cta: "Consigue el escaneo de muestra gratis",
-  },
-  fr: {
-    pitch: "Scan d’échantillon gratuit du rang Google Maps",
-    cta: "Obtenir le scan d’échantillon gratuit",
-  },
-  de: {
-    pitch: "Kostenloser Beispielscan zu Ihrem Google-Maps-Rang",
-    cta: "Kostenlosen Beispielscan holen",
-  },
-  it: {
-    pitch: "Scansione campione gratuita della posizione su Google Maps",
-    cta: "Ottieni la scansione campione gratuita",
-  },
-  pl: { pitch: "Bezpłatny próbny skan pozycji w Google Maps", cta: "Weź bezpłatny próbny skan" },
-  pt: {
-    pitch: "Varredura de amostra grátis do ranking no Google Maps",
-    cta: "Obtenha a varredura de amostra grátis",
-  },
-  he: { pitch: "סריקת דגימה חינמית לדירוג ב-Google Maps", cta: "קבלו את הסריקה החינמית" },
-  sr: { pitch: "Besplatan uzorak skeniranja ranga na Google Maps", cta: "Uzmite besplatno skeniranje" },
-  bg: {
-    pitch: "Безплатно примерно сканиране на ранга в Google Maps",
-    cta: "Вземете безплатното сканиране",
-  },
-  "de-CH": {
-    pitch: "Kostenloser Beispielscan zu Ihrem Google-Maps-Rang",
-    cta: "Kostenlosen Beispielscan holen",
-  },
-  "fr-CH": {
-    pitch: "Échantillon gratuit du classement Google Maps",
-    cta: "Obtenir l’échantillon gratuit",
-  },
-  "it-CH": {
-    pitch: "Scansione campione gratuita della posizione su Google Maps",
-    cta: "Ottieni la scansione campione gratuita",
-  },
-  sv: { pitch: "Gratis provskanning av Google Maps-rankning", cta: "Hämta den gratis provskanningen" },
-  no: { pitch: "Gratis prøveskanning av Google Maps-rangering", cta: "Få den gratis prøveskanningen" },
-  zh: { pitch: "免費 Google 地圖排名樣本掃描", cta: "取得免費樣本掃描" },
-  et: { pitch: "Tasuta Google Mapsi asetuse näidisskaneering", cta: "Hangi tasuta näidisskaneering" },
-  nl: { pitch: "Gratis proefscan van je Google Maps-positie", cta: "Haal de gratis proefscan" },
-  fi: { pitch: "Maksuton Google Maps -sijoituksen näyteskannaus", cta: "Hanki maksuton näyteskannaus" },
+  en: rankPaid("Get the $1 sample scan"),
+  es: rankPaid("Consigue el escaneo de muestra de $1"),
+  fr: rankPaid("Obtenir le scan d’échantillon à $1"),
+  de: rankPaid("Beispielscan für $1 holen"),
+  it: rankPaid("Ottieni la scansione campione da $1"),
+  pl: rankPaid("Weź próbny skan za $1"),
+  pt: rankPaid("Obtenha a varredura de amostra de $1"),
+  he: rankPaid("קבלו את סריקת הדגימה ב-$1"),
+  sr: rankPaid("Uzmite uzorak skeniranja za $1"),
+  bg: rankPaid("Вземете примерното сканиране за $1"),
+  "de-CH": rankPaid("Beispielscan für $1 holen"),
+  "fr-CH": rankPaid("Obtenir l’échantillon à $1"),
+  "it-CH": rankPaid("Ottieni la scansione campione da $1"),
+  sv: rankPaid("Hämta provskanningen för $1"),
+  no: rankPaid("Få prøveskanningen for $1"),
+  zh: rankPaid("取得 $1 樣本掃描"),
+  et: rankPaid("Hangi $1 näidisskaneering"),
+  nl: rankPaid("Haal de proefscan van $1"),
+  fi: rankPaid("Hanki $1:n näyteskannaus"),
 };
 
 const RANK_SPONSOR_EXTRA: Record<"sv" | "no" | "zh" | "et" | "nl" | "fi", string> = {
@@ -153,10 +82,6 @@ const RANK_SPONSOR_EXTRA: Record<"sv" | "no" | "zh" | "et" | "nl" | "fi", string
   nl: "Gesponsord door RankFootprint",
   fi: "RankFootprintin sponsoroima",
 };
-
-export const RANKFOOTPRINT_SAMPLE_API = "https://rankfootprint-api.joshofisrael.workers.dev/api/sample-status";
-export const RANKFOOTPRINT_SAMPLE_SCRIPT_PATH = "/rankfootprint-sample.js";
-export const RANKFOOTPRINT_SAMPLE_SCRIPT_TAG = `<script defer src="${RANKFOOTPRINT_SAMPLE_SCRIPT_PATH}"></script>`;
 
 const FREE_SCAN_MARKERS = [
   "free scan",
@@ -409,6 +334,14 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   },
 };
 
+/**
+ * Amber is outside the site navy and paper palette. #d97706 is 2.85:1 on the
+ * header wash #eef3f8, short of the 3:1 non-text minimum, so the border is
+ * #b45309 (4.5:1 on #eef3f8 and on the #fef3c7 fill). Ink #1a2332 on that
+ * fill is 14.2:1. The sponsored label #78350f is 8.2:1. White on the button
+ * #92400e is 7.1:1, and on the hover #78350f is 9.1:1. min-height stays 3rem
+ * so the bar does not collapse or animate.
+ */
 export const HOUSE_AD_CSS = `.house-ad {
   box-sizing: border-box;
   display: flex;
@@ -420,11 +353,10 @@ export const HOUSE_AD_CSS = `.house-ad {
   min-width: 0;
   min-height: 3rem;
   margin: 0 auto;
-  padding: 0.45rem 1rem;
-  border: 0;
-  border-bottom: 1px solid #d5dde6;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid #b45309;
   border-radius: 0;
-  background: #f4f7fb;
+  background: #fef3c7;
   color: #1a2332;
   font-size: 0.92rem;
   line-height: 1.35;
@@ -438,7 +370,7 @@ export const HOUSE_AD_CSS = `.house-ad {
 
 .house-ad:hover,
 .house-ad:focus-visible {
-  border-bottom-color: #1e4a73;
+  border-color: #92400e;
   text-decoration: none;
 }
 
@@ -447,7 +379,7 @@ export const HOUSE_AD_CSS = `.house-ad {
   display: block;
   flex: 0 0 auto;
   margin: 0;
-  color: #1e4a73;
+  color: #78350f;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -462,6 +394,7 @@ export const HOUSE_AD_CSS = `.house-ad {
   margin: 0;
   overflow: hidden;
   color: #1a2332;
+  font-weight: 700;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -472,19 +405,20 @@ export const HOUSE_AD_CSS = `.house-ad {
   flex: 0 0 auto;
   margin: 0;
   margin-inline-start: auto;
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 0.45rem;
-  background: #1e4a73;
+  background: #92400e;
   color: #fff;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   white-space: nowrap;
 }
 
 .house-ad:hover .house-ad-btn,
 .house-ad:focus-visible .house-ad-btn {
-  background: #143251;
+  background: #78350f;
+  color: #fff;
 }
 
 .house-ad-slot {
@@ -604,14 +538,9 @@ export function rankfootprintLangForRoute(route: string): RankfootprintLang {
   return "en";
 }
 
-function rankButtonCh(lang: RankfootprintLang): number {
-  return Math.ceil(Math.max(RANK_PAID[lang].cta.length, RANK_FREE[lang].cta.length) * 1.2);
-}
-
 function renderRankfootprint(lang: RankfootprintLang): string {
   const paid = RANK_PAID[lang];
-  const ch = rankButtonCh(lang);
-  return `<a class="house-ad" data-house-ad="rankfootprint" data-ad-lang="${lang}" href="${escapeHtml(houseAdHref("rankfootprint"))}" rel="sponsored noopener" target="_blank"><span class="house-ad-kicker">${escapeHtml(rankSponsor(lang))}</span><span class="house-ad-copy">${escapeHtml(paid.pitch)}</span><span class="house-ad-btn" style="min-width:${ch}ch">${escapeHtml(paid.cta)}</span></a>`;
+  return `<a class="house-ad" data-house-ad="rankfootprint" href="${escapeHtml(houseAdHref("rankfootprint"))}" rel="sponsored noopener" target="_blank"><span class="house-ad-kicker">${escapeHtml(rankSponsor(lang))}</span><span class="house-ad-copy">${escapeHtml(paid.pitch)}</span><span class="house-ad-btn">${escapeHtml(paid.cta)}</span></a>`;
 }
 
 /** The whole card is one anchor. The button is a span, so there is no nested link. */
@@ -626,59 +555,6 @@ export function houseAdHtml(route: string, lang: HouseAdLang): string {
   const id = houseAdIdForRoute(route);
   if (id === "rankfootprint") return renderRankfootprint(rankfootprintLangForRoute(route));
   return renderHouseAd(id, lang);
-}
-
-/** Deferred, non-blocking. On error, timeout, or any mode other than "free", the $1 copy stays. */
-export function rankfootprintSampleScript(): string {
-  const free: Record<string, RankLine> = {};
-  for (const lang of RANKFOOTPRINT_LANGS) free[lang.toLowerCase()] = RANK_FREE[lang];
-  free.nb = RANK_FREE.no;
-  free.nn = RANK_FREE.no;
-  const payload = JSON.stringify(free);
-  const api = JSON.stringify(RANKFOOTPRINT_SAMPLE_API);
-  return `(function () {
-  if (window.__rfSampleBoot) return;
-  window.__rfSampleBoot = true;
-  var FREE = ${payload};
-  var API = ${api};
-  function apply() {
-    var ads = document.querySelectorAll('a.house-ad[data-house-ad="rankfootprint"]');
-    if (!ads.length) return;
-    var ctrl = new AbortController();
-    var timer = setTimeout(function () { ctrl.abort(); }, 4000);
-    fetch(API, { signal: ctrl.signal, credentials: "omit" })
-      .then(function (res) {
-        if (!res.ok) throw new Error("bad status");
-        return res.json();
-      })
-      .then(function (data) {
-        if (!data || data.mode !== "free") return;
-        for (var i = 0; i < ads.length; i++) {
-          var key = (ads[i].getAttribute("data-ad-lang") || document.documentElement.lang || "en").trim().toLowerCase();
-          var copy = FREE[key] || FREE[key.split("-")[0]] || FREE.en;
-          if (!copy) continue;
-          var pitch = ads[i].querySelector(".house-ad-copy");
-          var btn = ads[i].querySelector(".house-ad-btn");
-          if (pitch) pitch.textContent = copy.pitch;
-          if (btn) btn.textContent = copy.cta;
-        }
-      })
-      .catch(function () {})
-      .then(function () { clearTimeout(timer); });
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply);
-  else apply();
-})();
-`;
-}
-
-/** Adds the sample-status script once, before </body>, only on RankFootprint pages. */
-export function withRankfootprintSampleScript(html: string): string {
-  if (!html.includes('data-house-ad="rankfootprint"')) return html;
-  if (html.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_PATH)) return html;
-  const at = html.lastIndexOf("</body>");
-  if (at === -1) return `${html}${RANKFOOTPRINT_SAMPLE_SCRIPT_TAG}`;
-  return `${html.slice(0, at)}${RANKFOOTPRINT_SAMPLE_SCRIPT_TAG}${html.slice(at)}`;
 }
 
 function sentenceCount(text: string): number {
@@ -718,14 +594,15 @@ export function selfCheckHouseAds(): string[] {
       if ((html.match(/<span class="house-ad-btn"/g) ?? []).length !== 1) {
         problems.push(`${lang} ${id}: button span missing`);
       }
-      if (id === "namedscan" && (html.includes("data-ad-lang") || html.includes("min-width") || html.includes("rankfootprint-sample"))) {
+      if (id === "namedscan" && (html.includes("data-ad-lang") || html.includes("min-width"))) {
         problems.push(`${lang} namedscan: markup drifted`);
       }
       if (id === "rankfootprint") {
         const marker = freeScanMarker(html);
         if (marker) problems.push(`${lang} rankfootprint: static ad has free-scan wording “${marker}”`);
-        if (!html.includes('style="min-width:') || !html.includes(`data-ad-lang="${lang}"`)) {
-          problems.push(`${lang} rankfootprint: reserved button width or language hook missing`);
+        if (!html.includes(RANKFOOTPRINT_PITCH)) problems.push(`${lang} rankfootprint: pitch is not the $1 line`);
+        if (html.includes("data-ad-lang") || html.includes("<script")) {
+          problems.push(`${lang} rankfootprint: card still has a script hook`);
         }
       }
       if (html.includes("<img") || html.includes("<script") || html.includes("url(")) {
@@ -743,47 +620,22 @@ export function selfCheckHouseAds(): string[] {
     }
   }
   if (COPY.en.cta.namedscan !== "Try NamedScan") problems.push("English NamedScan CTA drifted");
-  if (RANK_PAID.en.pitch !== "$1 Google Maps rank sample scan") problems.push("English RankFootprint pitch drifted");
+  if (RANKFOOTPRINT_PITCH !== "$1 Google Maps rank sample scan") problems.push("RankFootprint pitch drifted");
+  if (RANK_PAID.en.pitch !== RANKFOOTPRINT_PITCH) problems.push("English RankFootprint pitch drifted");
   if (RANK_PAID.en.cta !== "Get the $1 sample scan") problems.push("English RankFootprint CTA drifted");
   if (COPY.en.cta.rankfootprint !== RANK_PAID.en.cta || COPY.en.pitch.rankfootprint !== RANK_PAID.en.pitch) {
     problems.push("English RankFootprint card is not the $1 copy");
   }
-  if (RANK_FREE.en.pitch !== "Free Google Maps rank sample scan" || RANK_FREE.en.cta !== "Get the free sample scan") {
-    problems.push("English free-scan wording drifted");
-  }
-  const sampleScript = rankfootprintSampleScript();
-  if (!sampleScript.includes(RANKFOOTPRINT_SAMPLE_API)) problems.push("sample script missing the status API");
-  if (!sampleScript.includes('data.mode !== "free"')) problems.push("sample script must swap only for mode free");
-  if (!sampleScript.includes("AbortController") || !sampleScript.includes("4000")) problems.push("sample script missing timeout");
-  if (!sampleScript.includes('credentials: "omit"')) problems.push("sample script must not send credentials");
-  if (!RANKFOOTPRINT_SAMPLE_SCRIPT_TAG.startsWith("<script defer ")) problems.push("sample script must be deferred");
   for (const lang of RANKFOOTPRINT_LANGS) {
     const card = renderRankfootprint(lang);
     const marker = freeScanMarker(card);
+    if (RANK_PAID[lang].pitch !== RANKFOOTPRINT_PITCH) problems.push(`${lang} rank pitch is not the $1 line`);
     if (marker) problems.push(`${lang} rank card has free-scan wording “${marker}”`);
+    if (!card.includes(RANKFOOTPRINT_PITCH)) problems.push(`${lang} rank card missing the $1 line`);
     if (!card.includes("$1")) problems.push(`${lang} rank card missing $1`);
     if (!rankSponsor(lang).includes("RankFootprint")) problems.push(`${lang} rank label dropped the name`);
-    if (!sampleScript.includes(RANK_FREE[lang].pitch) || !sampleScript.includes(RANK_FREE[lang].cta)) {
-      problems.push(`${lang} free wording missing from the sample script`);
-    }
-    if (card.includes(RANK_FREE[lang].pitch) || card.includes(RANK_FREE[lang].cta)) {
-      problems.push(`${lang} free wording leaked into static ad HTML`);
-    }
-    if (RANK_FREE[lang].pitch === RANK_PAID[lang].pitch || RANK_FREE[lang].cta === RANK_PAID[lang].cta) {
-      problems.push(`${lang} free wording is identical to the $1 copy`);
-    }
-    if (!freeScanMarker(`${RANK_FREE[lang].pitch} ${RANK_FREE[lang].cta}`)) {
-      problems.push(`${lang} free wording has no free-scan phrase`);
-    }
+    if (card.includes("<script")) problems.push(`${lang} rank card loads a script`);
   }
-  const namedOnly = `<html><body>${renderHouseAd("namedscan", "en")}</body></html>`;
-  if (withRankfootprintSampleScript(namedOnly) !== namedOnly) problems.push("sample script attached to NamedScan");
-  const rankPage = `<html><body>${renderRankfootprint("en")}</body></html>`;
-  const withScript = withRankfootprintSampleScript(rankPage);
-  if (!withScript.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_TAG) || withScript.indexOf(RANKFOOTPRINT_SAMPLE_SCRIPT_TAG) > withScript.lastIndexOf("</body>")) {
-    problems.push("sample script was not deferred before </body>");
-  }
-  if (withRankfootprintSampleScript(withScript) !== withScript) problems.push("sample script inserted twice");
   if (rankfootprintLangForRoute("/") !== "en") problems.push("homepage rank language");
   if (rankfootprintLangForRoute("/ch/de/lu/") !== "de-CH" || rankfootprintLangForRoute("/ch/fr/") !== "fr-CH") {
     problems.push("Swiss rank language");

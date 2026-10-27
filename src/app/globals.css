@@ -81,11 +81,10 @@ body {
   min-width: 0;
   min-height: 3rem;
   margin: 0 auto;
-  padding: 0.45rem 1rem;
-  border: 0;
-  border-bottom: 1px solid #d5dde6;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid #b45309;
   border-radius: 0;
-  background: #f4f7fb;
+  background: #fef3c7;
   color: #1a2332;
   font-size: 0.92rem;
   line-height: 1.35;
@@ -99,7 +98,7 @@ body {
 
 .house-ad:hover,
 .house-ad:focus-visible {
-  border-bottom-color: #1e4a73;
+  border-color: #92400e;
   text-decoration: none;
 }
 
@@ -108,7 +107,7 @@ body {
   display: block;
   flex: 0 0 auto;
   margin: 0;
-  color: #1e4a73;
+  color: #78350f;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -123,6 +122,7 @@ body {
   margin: 0;
   overflow: hidden;
   color: #1a2332;
+  font-weight: 700;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -133,19 +133,20 @@ body {
   flex: 0 0 auto;
   margin: 0;
   margin-inline-start: auto;
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 0.45rem;
-  background: #1e4a73;
+  background: #92400e;
   color: #fff;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   white-space: nowrap;
 }
 
 .house-ad:hover .house-ad-btn,
 .house-ad:focus-visible .house-ad-btn {
-  background: #143251;
+  background: #78350f;
+  color: #fff;
 }
 
 .house-ad-slot {
