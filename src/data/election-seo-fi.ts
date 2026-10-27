@@ -9,27 +9,31 @@ const LETTER = "https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF";
 const CIRCULAR = "https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit";
 const RESULTS = "https://tulospalvelu.vaalit.fi/";
 const FI = "/fi/fi/elections/eduskunta-2027/";
+const SV = "/fi/sv/elections/riksdagsval-2027/";
 const EN = "/fi/en/elections/parliamentary-2027/";
 const OPEN = "2027-04-18T20:00:00+03:00";
 
 const alternates = [
   { hreflang: "fi", path: FI },
+  { hreflang: "sv", path: SV },
   { hreflang: "en", path: EN },
   { hreflang: "x-default", path: FI },
 ];
 
 const letterFi = { label: "Oikeusministeriön kirje", href: LETTER };
+const letterSv = { label: "Justitieministeriets brev", href: LETTER };
 const letterEn = { label: "Ministry of Justice letter", href: LETTER };
 const resultsFi = { label: "tulospalvelu.vaalit.fi", href: RESULTS };
+const resultsSv = { label: "tulospalvelu.vaalit.fi", href: RESULTS };
 const resultsEn = { label: "tulospalvelu.vaalit.fi", href: RESULTS };
 
 const FI_BODY = `<h2>Mitä valitaan</h2>
 <p><a href="${LETTER}">Oikeusministeriön kirje</a> 16. syyskuuta 2026, VN/12981/2026-OM-3, nimeää eduskuntavaalien vaalipäiväksi sunnuntain 18. huhtikuuta 2027. Tämä ei ole kuntasivu.</p>
-<p class="tools"><a href="${EN}">English</a> · <a href="/fi/fi/">Suomi</a></p>
+<p class="tools"><a href="${SV}">Svenska</a> · <a href="${EN}">English</a> · <a href="/fi/fi/">Suomi</a></p>
 <h2>Miten äänestää</h2>
 <p>Kirjeen aikataulu merkitsee vaalipäivän äänestykseksi 18. huhtikuuta kello 9–20 ja alustavan laskennan alkavaksi kello 20. Ennakkoäänestys Suomessa on 7.–13. huhtikuuta 2027 ja ulkomailla 7.–10. huhtikuuta 2027. Suomalaisessa laivassa ennakkoäänestys ulkomailla voi alkaa keskiviikkona 31. maaliskuuta 2027. Kirje lainaa vaalilain 48 §:ää ennakkoäänestyspaikkojen aukioloajoista. Vaalilakia ei avattu pykälittäin. vaalit.fi palautti 403 eikä sitä luettu. Kello 20 on kirjeen aikataulun tunti, ei avattua lain pykälää. Tämä sivu ei näytä ääniä ennen kello 20 Itä-Euroopan kesäaikaa. Kirje ei nimeä aikavyöhykettä. Tämä sivu käyttää siirtoa +03:00, koska kesäaika 2027 alkaa maaliskuun viimeisenä sunnuntaina, ennen tätä päivää.</p>
 <h2>Ehdokkaat</h2>
-<p>Ehdokashakemuksen on oltava vaalipiirilautakunnassa ennen kello 16.00 9. maaliskuuta 2027. Listaa ei avattu 27. lokakuuta 2026. Tässä ei ole nimiä.</p>
+<p>Ehdokashakemuksen on oltava vaalipiirilautakunnassa ennen kello 16.00 9. maaliskuuta 2027. Kirjeen aikataulu merkitsee, että vaalipiirilautakunta laatii ehdokaslistojen yhdistelmän 18. maaliskuuta 2027 ja että jakelu kunnille alkaa 19. maaliskuuta 2027. Yhdistelmää ei avattu 27. lokakuuta 2026. Tässä ei ole nimiä.</p>
 <h2>Aiemmat vaalit</h2>
 <p>Vanhaa tulosta ei kopioitu. Tulospalvelun etusivu ei tulostanut vuoden 2027 laskentaa. Linkki on <a href="${RESULTS}">tulospalvelu.vaalit.fi</a>.</p>
 <h2>Kyselyt</h2>
@@ -38,16 +42,29 @@ const FI_BODY = `<h2>Mitä valitaan</h2>
 
 const EN_BODY = `<h2>What is being elected</h2>
 <p>The <a href="${LETTER}">Ministry of Justice letter</a> of 16 September 2026, VN/12981/2026-OM-3, names Sunday 18 April 2027 as polling day for the parliamentary election. This is not a municipality page.</p>
-<p class="tools"><a href="${FI}">Suomi</a> · <a href="/fi/en/">Finland</a></p>
+<p class="tools"><a href="${FI}">Suomi</a> · <a href="${SV}">Svenska</a> · <a href="/fi/en/">Finland</a></p>
 <h2>How to vote</h2>
 <p>The letter’s timetable prints election-day voting on 18 April as 09:00–20:00 and the preliminary count from 20:00. Advance voting in Finland is 7–13 April 2027, and abroad 7–10 April 2027. On a Finnish ship, advance voting abroad may start on Wednesday 31 March 2027. The letter quotes Election Act section 48 for advance-station hours. The Act was not opened section by section. vaalit.fi returned 403 and was not read. 20:00 is the hour in the letter’s timetable, not a section of the Act that was opened. This page shows no votes before 20:00 Eastern European Summer Time. The letter does not name a time zone. This page uses the offset +03:00 because daylight-saving time in 2027 starts on the last Sunday of March, before this day.</p>
 <h2>Candidates</h2>
-<p>A candidate application must reach the electoral district board before 16:00 on 9 March 2027. No list was opened on 27 October 2026. No names are printed here.</p>
+<p>A candidate application must reach the electoral district board before 16:00 on 9 March 2027. The letter’s timetable says the electoral district board draws up the combined candidate list on 18 March 2027 and that distribution to the municipalities starts on 19 March 2027. That combined list was not opened on 27 October 2026. No names are printed here.</p>
 <h2>The previous election</h2>
 <p>No previous total was copied. The results-service front page did not print a 2027 count. The link is <a href="${RESULTS}">tulospalvelu.vaalit.fi</a>.</p>
 <h2>Polls</h2>
 <p>The letter does not print a ban on publishing polls. The Act was not section-read. A government bill named in the letter is not treated as law on this page. The <a href="${CIRCULAR}">Kuntaliitto circular</a> repeats the same day and recommends outdoor advertising from 31 March 2027. That is a recommendation, not a legal blackout. This site publishes no poll and no projection on any day.</p>
 <p>The next section shows a countdown, and no votes, until 20:00 on 18 April 2027. A vote is read only from a file on this site. If the file cannot be read, the section keeps the link to the results service.</p>`;
+
+const SV_BODY = `<h2>Vad som väljs</h2>
+<p><a href="${LETTER}">Justitieministeriets brev</a> den 16 september 2026, VN/12981/2026-OM-3, anger söndagen den 18 april 2027 som valdag för riksdagsvalet. Detta är inte en kommunsida.</p>
+<p class="tools"><a href="${FI}">Suomi</a> · <a href="${EN}">English</a> · <a href="/fi/sv/">Svenska</a></p>
+<h2>Hur man röstar</h2>
+<p>Brevets tidsplan anger röstning på valdagen den 18 april som klockan 9–20 och den preliminära räkningen från klockan 20. Förhandsröstning i Finland är 7–13 april 2027 och utomlands 7–10 april 2027. På ett finländskt fartyg kan förhandsröstning utomlands börja onsdagen den 31 mars 2027. Brevet citerar vallagens 48 § för öppettider på förhandsröstningsställen. Lagen öppnades inte paragraf för paragraf. vaalit.fi svarade 403 och lästes inte. Klockan 20 är timmen i brevets tidsplan, inte en öppnad paragraf i lagen. Denna sida visar inga röster före klockan 20 östeuropeisk sommartid. Brevet anger ingen tidszon. Denna sida använder förskjutningen +03:00, eftersom sommartid 2027 börjar den sista söndagen i mars, före denna dag.</p>
+<h2>Kandidater</h2>
+<p>En kandidatansökan ska vara hos valkretsnämnden före klockan 16.00 den 9 mars 2027. Brevets tidsplan anger att valkretsnämnden upprättar sammanställningen av kandidatlistorna den 18 mars 2027 och att utdelningen till kommunerna börjar den 19 mars 2027. Sammanställningen öppnades inte den 27 oktober 2026. Här finns inga namn.</p>
+<h2>Tidigare val</h2>
+<p>Inget tidigare resultat kopierades. Resultattjänstens förstasida skrev inte ut en räkning för 2027. Länken är <a href="${RESULTS}">tulospalvelu.vaalit.fi</a>.</p>
+<h2>Mätningar</h2>
+<p>Brevet innehåller inget förbud mot att publicera mätningar. Lagen lästes inte paragraf för paragraf. En regeringsproposition som nämns i brevet behandlas inte som lag på denna sida. <a href="${CIRCULAR}">Kuntaliittos cirkulär</a> upprepar samma dag och rekommenderar utomhusreklam från den 31 mars 2027. Det är en rekommendation, inte en lagstadgad tystnad. Denna webbplats publicerar ingen mätning och ingen projektion någon dag.</p>
+<p>Nästa avsnitt visar en nedräkning och inga röster före klockan 20 den 18 april 2027. En röst läses bara från en fil på denna webbplats. Om filen inte kan läsas behåller avsnittet länken till resultattjänsten.</p>`;
 
 export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
@@ -64,6 +81,11 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         href: FI,
         label: "Eduskuntavaalit, 18. huhtikuuta 2027",
         detail: "Päivä on oikeusministeriön kirjeessä. Ei ääniä ennen kello 20.",
+      },
+      {
+        href: SV,
+        label: "Riksdagsval, 18 april 2027",
+        detail: "Dagen står i justitieministeriets brev. Inga röster före klockan 20.",
       },
       {
         href: EN,
@@ -99,6 +121,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         nav: [
           { href: "/", label: "Map the General" },
           { href: "/fi/fi/", label: "Suomi" },
+          { href: SV, label: "Svenska" },
           { href: EN, label: "English" },
           { href: "/search/", label: "Search" },
         ],
@@ -126,7 +149,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Ehdokashakemukset",
-            text: "Oikeusministeriön kirje sanoo, että ehdokashakemuksen on oltava vaalipiirilautakunnassa ennen kello 16.00 9. maaliskuuta 2027.",
+            text: "Oikeusministeriön kirje sanoo, että ehdokashakemuksen on oltava vaalipiirilautakunnassa ennen kello 16.00 9. maaliskuuta 2027. Saman kirjeen aikataulu merkitsee ehdokaslistojen yhdistelmän laatimisen päiväksi 18. maaliskuuta 2027 ja jakelun kunnille alkavaksi 19. maaliskuuta 2027.",
             links: [letterFi],
           },
           {
@@ -167,6 +190,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         related: [
           { href: "/", label: "Home" },
           { href: "/fi/fi/", label: "Suomi" },
+          { href: SV, label: "Svenska" },
           { href: EN, label: "English" },
         ],
         bodyHtml: FI_BODY,
@@ -204,6 +228,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: "/", label: "Map the General" },
           { href: "/fi/en/", label: "Finland" },
           { href: FI, label: "Suomi" },
+          { href: SV, label: "Svenska" },
           { href: "/search/", label: "Search" },
         ],
         eventName: "Parliamentary election, 18 April 2027",
@@ -230,7 +255,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Applications",
-            text: "The Ministry of Justice letter says a candidate application must reach the electoral district board before 16:00 on 9 March 2027.",
+            text: "The Ministry of Justice letter says a candidate application must reach the electoral district board before 16:00 on 9 March 2027. The same timetable sets 18 March 2027 for drawing up the combined candidate list and 19 March 2027 for the start of distribution to the municipalities.",
             links: [letterEn],
           },
           {
@@ -272,6 +297,7 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: "/", label: "Home" },
           { href: "/fi/en/", label: "Finland" },
           { href: FI, label: "Suomi" },
+          { href: SV, label: "Svenska" },
         ],
         bodyHtml: EN_BODY,
         sourcesHeading: "Sources",
@@ -279,6 +305,113 @@ export const FI_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: LETTER, label: "Ministry of Justice, letter of 16 September 2026, VN/12981/2026-OM-3", readOn: "2026-10-27" },
           { href: CIRCULAR, label: "Kuntaliitto, circular on the 2027 parliamentary election", readOn: "2026-10-27" },
           { href: RESULTS, label: "Ministry of Justice, results service", readOn: "2026-10-27" },
+        ],
+      },
+      {
+        lang: "sv",
+        htmlLang: "sv",
+        readWord: "läst",
+        path: SV,
+        title: "Riksdagsval, 18 april 2027",
+        description:
+          "Riksdagsval söndagen den 18 april 2027. Dagen och klockslagen är från justitieministeriets brev den 16 september 2026. Inofficiell information.",
+        ogDescription: "Riksdagsval den 18 april 2027. Inga röster före klockan 20. Inofficiell information.",
+        ogLocale: "sv_FI",
+        alternates,
+        crumbs: [
+          { name: "Home", path: "/" },
+          { name: "Suomi", path: "/fi/" },
+          { name: "Riksdagsval 2027", path: SV },
+        ],
+        eyebrow: "18 april 2027",
+        h1: "Riksdagsval",
+        lede: "Valdagen är den 18 april 2027. Inga röster före klockan 20.",
+        updated: "Senast uppdaterad: 27 oktober 2026.",
+        reportLabel: "Rapportera ett fel",
+        officeHref: RESULTS,
+        bannerBefore: "Inofficiell information. Bekräfta i ",
+        bannerAfter: "resultattjänsten",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/fi/sv/", label: "Svenska" },
+          { href: FI, label: "Suomi" },
+          { href: EN, label: "English" },
+          { href: "/search/", label: "Search" },
+        ],
+        eventName: "Riksdagsval, 18 april 2027",
+        locationName: "Finland",
+        addressRegion: "Finland",
+        addressCountry: "FI",
+        keyDatesHeading: "Hur man röstar, datum och källor",
+        keyDatesIntro: "Dagen och klockan står i justitieministeriets brev.",
+        keyDates: [
+          {
+            label: "Valdag",
+            text: "Justitieministeriets brev anger söndagen den 18 april 2027 som valdag.",
+            links: [letterSv],
+          },
+          {
+            label: "Förhandsröstning",
+            text: "Justitieministeriets brev sätter förhandsröstningen i Finland till 7–13 april 2027 och utomlands till 7–10 april 2027.",
+            links: [letterSv],
+          },
+          {
+            label: "Klockslag",
+            text: "Justitieministeriets brev anger röstning på valdagen den 18 april som klockan 9–20.",
+            links: [letterSv],
+          },
+          {
+            label: "Kandidatansökningar",
+            text: "Justitieministeriets brev säger att en kandidatansökan ska vara hos valkretsnämnden före klockan 16.00 den 9 mars 2027. Samma tidsplan sätter den 18 mars 2027 för sammanställningen av kandidatlistorna och den 19 mars 2027 för starten av utdelningen till kommunerna.",
+            links: [letterSv],
+          },
+          {
+            label: "Rösträkningen",
+            text: "Justitieministeriets brev börjar den preliminära räkningen klockan 20.",
+            links: [letterSv],
+          },
+        ],
+        faqHeading: "Frågor",
+        faqs: [
+          {
+            question: "När är riksdagsvalet?",
+            text: "Justitieministeriets brev anger söndagen den 18 april 2027 som valdag.",
+            links: [letterSv],
+          },
+          {
+            question: "Hur länge röstar man på valdagen?",
+            text: "Justitieministeriets brev anger röstning från klockan 9 till klockan 20. Denna sida visar inga röster före klockan 20 östeuropeisk sommartid.",
+            links: [letterSv],
+          },
+          {
+            question: "När är förhandsröstningen?",
+            text: "Justitieministeriets brev sätter förhandsröstningen i Finland till 7–13 april 2027.",
+            links: [letterSv],
+          },
+          {
+            question: "Publicerar denna webbplats mätningar?",
+            text: "Nej. Justitieministeriets brev innehåller inget förbud mot att publicera mätningar. Vallagen lästes inte paragraf för paragraf. Denna webbplats publicerar ingen mätning och ingen projektion.",
+            links: [letterSv],
+          },
+          {
+            question: "När syns röster här?",
+            text: "Inte före klockan 20.00 den 18 april 2027, östeuropeisk sommartid. Därefter kopieras en siffra bara från tulospalvelu.vaalit.fi.",
+            links: [resultsSv],
+          },
+        ],
+        relatedHeading: "Närliggande sidor",
+        related: [
+          { href: "/", label: "Home" },
+          { href: "/fi/sv/", label: "Svenska" },
+          { href: FI, label: "Suomi" },
+          { href: EN, label: "English" },
+        ],
+        bodyHtml: SV_BODY,
+        sourcesHeading: "Källor",
+        sources: [
+          { href: LETTER, label: "Justitieministeriet, brev den 16 september 2026, VN/12981/2026-OM-3", readOn: "2026-10-27" },
+          { href: CIRCULAR, label: "Kuntaliitto, cirkulär om riksdagsvalet 2027", readOn: "2026-10-27" },
+          { href: RESULTS, label: "Justitieministeriet, resultattjänst", readOn: "2026-10-27" },
         ],
       },
     ],

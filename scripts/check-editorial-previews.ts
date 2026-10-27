@@ -74,6 +74,12 @@ const REQUIRED = [
   "/nl/nl/",
   "/nl/en/elections/provincial-2027/",
   "/nl/nl/elections/provinciale-staten-2027/",
+  "/fi/en/",
+  "/fi/fi/",
+  "/fi/sv/",
+  "/fi/en/elections/parliamentary-2027/",
+  "/fi/fi/elections/eduskunta-2027/",
+  "/fi/sv/elections/riksdagsval-2027/",
 ] as const;
 
 const KW =

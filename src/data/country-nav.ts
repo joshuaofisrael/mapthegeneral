@@ -16,7 +16,7 @@ export type CountryHubLink = {
 };
 
 /** Page languages that appear as the second URL segment. Same set as the html-lang stamp. */
-export const PAGE_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et", "nl", "fi"] as const;
+export const PAGE_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et", "nl", "fi", "sv"] as const;
 export type PageLang = (typeof PAGE_LANGS)[number];
 
 const PAGE_LANG_SET = new Set<string>(PAGE_LANGS);
@@ -42,6 +42,7 @@ const COUNTRIES_LABEL: Record<PageLang, string> = {
   et: "Riigid",
   nl: "Landen",
   fi: "Maat",
+  sv: "Länder",
 };
 
 export function countriesLabel(lang: PageLang): string {
