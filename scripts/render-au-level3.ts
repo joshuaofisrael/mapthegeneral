@@ -174,7 +174,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
       lede: `${item.name}, a Queensland Legislative Assembly electoral district. ABS State Electoral Division code ${item.absCode}.`,
       sources: ["abs-sed-2025", "ecq-boundaries", "ecq-2024", "qld-const-19b", "ecq-plan"],
       body: `${absDistrictLine(item)}
-<p>The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates. A direct request for the Commission’s copyright page returned HTTP 403 that day, so the Commission’s district roll and the Gazette notice of elected candidates were not copied. The member for ${esc(item.name)} is not printed. Not published under a confirmed reuse licence.</p>
+<p>The Electoral Commission of Queensland boundaries page, read on 24 October 2026, says Queensland is currently divided into 93 state electorates. The Commission’s copyright page could not be opened that day, so the Commission’s district roll and the Gazette notice of elected candidates were not copied. The member for ${esc(item.name)} is not printed. Not published under a confirmed reuse licence.</p>
 <p>The Commission’s 2024 state general election page says the election was held on Saturday 26 October 2024, and that all results have been declared. It says polling places were open from 8am to 6pm. This page does not reprint a count.</p>
 <p>The Constitution of Queensland 2001, section 19B, says the normal polling day for an ordinary general election is the last Saturday in October in the fourth calendar year after the calendar year of the last ordinary general election, unless polling is postponed under that section. The Commission’s Strategic Plan 2025–2029 places a state general election in October 2028 and does not print a calendar day. This page does not calculate that Saturday. No candidate list is printed.</p>
 <p>${NO_CALL}</p>
@@ -214,7 +214,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
       lede: `${item.name}, an Australian Capital Territory Legislative Assembly electorate. ABS State Electoral Division code ${item.absCode}.`,
       sources: ["abs-sed-2025", "elections-act"],
       body: `${absDistrictLine(item)}
-<p>The Elections ACT elections page, read on 17 October 2026, says the next ACT Legislative Assembly election will be held in October 2028. It does not print a calendar day. A direct request on 24 October 2026 returned HTTP 403, so the Commission’s electorate roll and the members elected for ${esc(item.name)} were not copied. Not published under a confirmed reuse licence.</p>
+<p>The Elections ACT elections page, read on 17 October 2026, says the next ACT Legislative Assembly election will be held in October 2028. It does not print a calendar day. The Elections ACT website could not be opened on 24 October 2026, so the Commission’s electorate roll and the members elected for ${esc(item.name)} were not copied. Not published under a confirmed reuse licence.</p>
 <p>${NO_CALL}</p>
 <p>Which House of Representatives division this electorate falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
     };
@@ -226,7 +226,7 @@ function districtBody(item: StateDistrict): { body: string; sources: string[]; o
       lede: `${item.name}, a Northern Territory Legislative Assembly division. ABS State Electoral Division code ${item.absCode}.`,
       sources: ["abs-sed-2025"],
       body: `${absDistrictLine(item)}
-<p>The Northern Territory Electoral Commission site returned HTTP 403 on 24 October 2026, so its division roll was not copied. The member for ${esc(item.name)} is not printed. Last and next election days were not read. Not published centrally.</p>
+<p>The Northern Territory Electoral Commission website could not be opened on 24 October 2026, so its division roll was not copied. The member for ${esc(item.name)} is not printed. Last and next election days were not read. Not published centrally.</p>
 <p>${NO_CALL}</p>
 <p>Which House of Representatives division this division falls in was not printed on an official correspondence read for this page. It is not guessed from a boundary.</p>`,
     };
@@ -346,13 +346,13 @@ function electionParagraph(area: LocalArea): string {
     return `<p>A current mayor was not published centrally under a reuse licence. The Western Australian Electoral Commission copyright notice does not allow this publisher to reproduce the Commission’s council list, district list, or election dates. Whether this area is in the December 2026 extraordinary elections is not stated here. The Government of Western Australia local-government elections page, read on 26 October 2026, prints a next ordinary election day. The wa.gov.au terms of use allow personal and non-commercial reproduction only, so that day is not copied here.</p>`;
   }
   if (area.jurisdictionSlug === "australian-capital-territory") {
-    return `<p>The ABS explanatory page says the Local Government Area codes for the Australian Capital Territory are statistical areas, not a statement that the Territory has elected councils of that number. Elections ACT returned HTTP 403 on 19 October 2026, so a Legislative Assembly electorate list was not copied.</p>`;
+    return `<p>The ABS explanatory page says the Local Government Area codes for the Australian Capital Territory are statistical areas, not a statement that the Territory has elected councils of that number. The Elections ACT website could not be opened on 19 October 2026, so a Legislative Assembly electorate list was not copied.</p>`;
   }
   if (area.jurisdictionSlug === "northern-territory") {
     const change = area.flags.includes("groote") || area.flags.includes("east-arnhem")
       ? " The ABS page says East Arnhem was split to create Groote Archipelago, with code changes, in the 2025 update."
       : "";
-    return `<p>No Northern Territory Electoral Commission page was read on 26 October 2026. A direct request returned HTTP 403, as it did on 19 October 2026. Last and next council election days are not printed here.${change}</p>`;
+    return `<p>No Northern Territory Electoral Commission page was read on 26 October 2026, because the Commissionâs website could not be opened that day or on 19 October 2026. Last and next council election days are not printed here.${change}</p>`;
   }
   return "";
 }
@@ -368,7 +368,7 @@ function officeParagraph(area: LocalArea): string {
     return `<p>The Victorian Electoral Commission says that in a local council election people vote for councillors, and that after the councillors are elected they decide who will act as mayor. The current mayor was not on the council index read on 19 October 2026. Not published centrally.</p>`;
   }
   if (area.jurisdictionSlug === "queensland" && area.stateCode) {
-    return `<p>A current mayor and the current councillors were not copied. The Queensland local government directory lists council officers. A direct request for that directory’s copyright licence returned HTTP 403 on 24 October 2026. Not published under a confirmed reuse licence.</p>`;
+    return `<p>A current mayor and the current councillors were not copied. The Queensland local government directory lists council officers. That directory’s copyright licence could not be opened on 24 October 2026. Not published under a confirmed reuse licence.</p>`;
   }
   return `<p>A current mayor or council membership was not published on a central page whose licence permits this publisher to copy it. Not published centrally.</p>`;
 }
@@ -455,10 +455,10 @@ function districtIndexLede(slug: string, count: number): string {
     return `${count} names. The Government of South Australia State Electorates 2026 dataset, CC BY 4.0, stores the same names in capitals. Members were not copied from the Government Gazette.`;
   }
   if (slug === "australian-capital-territory") {
-    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not electorates and have no page. Elections ACT returned HTTP 403 on 24 October 2026, so its roll was not copied.`;
+    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not electorates and have no page. The Elections ACT website could not be opened on 24 October 2026, so its roll was not copied.`;
   }
   if (slug === "northern-territory") {
-    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not divisions and have no page. The Northern Territory Electoral Commission site returned HTTP 403 on 24 October 2026, so its roll was not copied.`;
+    return `${count} names from the ABS ASGS 2025 State Electoral Division list. Two special-purpose ABS codes are not divisions and have no page. The Northern Territory Electoral Commission website could not be opened on 24 October 2026, so its roll was not copied.`;
   }
   return `${count} names. Each name links to its own page.`;
 }

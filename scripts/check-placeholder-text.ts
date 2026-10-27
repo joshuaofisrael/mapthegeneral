@@ -58,8 +58,8 @@ function selfCheck(): string[] {
   if (!placeholderLabels("The table was not retrieved.").includes("not retrieved")) {
     problems.push("self-check: “not retrieved” was accepted");
   }
-  if (placeholderLabels("A direct request returned HTTP 403 that day.").length) {
-    problems.push("self-check: an HTTP 403 sentence was banned");
+  if (placeholderLabels("The Elections ACT website could not be opened that day.").length) {
+    problems.push("self-check: a could-not-be-opened sentence was banned");
   }
   return problems;
 }
