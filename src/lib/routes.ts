@@ -156,7 +156,7 @@ function registryEntries(): IndexEntry[] {
   return [...mexicoIndexEntries()];
 }
 
-const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il"];
+const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il", "tw"];
 
 function hubIndexEntries(): IndexEntry[] {
   return HUB_CODES.flatMap((code) => {
@@ -185,6 +185,9 @@ function hubIndexEntries(): IndexEntry[] {
         : []),
       ...(code === "il"
         ? [{ path: "/il/he/elections/knesset-2026/", lang: "he", title: "הבחירות לכנסת ה-26, 27 באוקטובר 2026", kind: "election", text: "ישראל בחירות כנסת 27 באוקטובר 2026" }]
+        : []),
+      ...(code === "tw"
+        ? [{ path: "/tw/zh/elections/difang-gongzhi-2026/", lang: "zh", title: "地方公職人員選舉，2026年11月28日", kind: "election", text: "臺灣 地方公職人員選舉 2026年11月28日 中央選舉委員會" }]
         : []),
       { path: hubEn(code, "faq"), lang: "en", title: `${hub.name} questions`, kind: "faq", text: `${hub.name} faq` },
       { path: hubEn(code, "sources"), lang: "en", title: `${hub.name} sources`, kind: "sources", text: `${hub.name} official sources` },

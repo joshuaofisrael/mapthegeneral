@@ -1,0 +1,24 @@
+{
+  "code": "tw",
+  "name": "Taiwan",
+  "href": "/tw/",
+  "summary": "National hub. Local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. No municipality pages.",
+  "links": [
+    {
+      "href": "/tw/zh/elections/difang-gongzhi-2026/",
+      "label": "地方公職人員選舉"
+    },
+    {
+      "href": "/tw/en/",
+      "label": "English"
+    },
+    {
+      "href": "/tw/en/elections/local-2026/",
+      "label": "Local elections, 28 November 2026"
+    },
+    {
+      "href": "/tw/en/sources/",
+      "label": "Sources"
+    }
+  ]
+}

@@ -22,8 +22,12 @@ export type EditorialPreview = {
 export const EDITORIAL_BYLINE = "Map the General Editorial Team";
 export const EDITORIAL_UPDATED = "Last updated: 27 October 2026.";
 
+/** CJK characters have no spaces, so each one counts as a word. Spaced languages stay on whitespace tokens. */
 export function editorialWords(item: EditorialPreview): number {
-  return item.paragraphs.join(" ").trim().split(/\s+/).filter(Boolean).length;
+  const text = item.paragraphs.join(" ").trim();
+  const cjk = text.match(/[\u3400-\u9FFF\uF900-\uFAFF]/g)?.length ?? 0;
+  const rest = text.replace(/[\u3400-\u9FFF\uF900-\uFAFF]/g, " ").trim().split(/\s+/).filter(Boolean).length;
+  return cjk + rest;
 }
 
 export function editorialPlain(item: EditorialPreview): string {

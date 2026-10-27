@@ -32,11 +32,12 @@ const COUNTRY_LINKS = [
   { label: "Brazil", href: "/br/" },
   { label: "Serbia", href: "/rs/" },
   { label: "Israel", href: "/il/" },
+  { label: "Taiwan", href: "/tw/" },
   { label: "Bulgaria", href: "/bg/" },
   { label: "New Zealand", href: "/nz/" },
 ] as const;
 
-const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Bulgaria", "New Zealand"]);
+const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "Bulgaria", "New Zealand"]);
 
 function englishList(labels: readonly string[]): string {
   const spoken = labels.map((label) => (label === "United Kingdom" ? "the United Kingdom" : label));
@@ -55,7 +56,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria and New Zealand are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia, Israel and Taiwan, with no municipality pages and no live tracker. Bulgaria and New Zealand are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {
@@ -67,7 +68,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   {
     question: "Where do dates and results come from?",
     answer:
-      "Each page names the official body its dates and results were read from. This site does not keep its own count. The bodies already used include the Australian Electoral Commission, Elections Canada, the Electoral Commission for Ireland, the Dipartimento per gli Affari Interni e Territoriali, the Instituto Nacional Electoral, Valgdirektoratet, the Państwowa Komisja Wyborcza, the Junta Electoral Central, Infoelectoral (Ministerio del Interior), Valmyndigheten, the Bundeskanzlei, and the Electoral Commission for the United Kingdom. If this site and an official source differ, the official source controls.",
+      "Each page names the official body its dates and results were read from. This site does not keep its own count. The bodies already used include the Australian Electoral Commission, Elections Canada, the Electoral Commission for Ireland, the Dipartimento per gli Affari Interni e Territoriali, the Instituto Nacional Electoral, Valgdirektoratet, the Państwowa Komisja Wyborcza, the Junta Electoral Central, Infoelectoral (Ministerio del Interior), Valmyndigheten, the Bundeskanzlei, the Electoral Commission for the United Kingdom, and the Central Election Commission of Taiwan. If this site and an official source differ, the official source controls.",
     links: [
       { label: "Australian Electoral Commission", href: "https://www.aec.gov.au/learn/election-timetable.htm" },
       { label: "Elections Canada", href: "https://www.elections.ca/" },
@@ -87,6 +88,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
         label: "Electoral Commission for the United Kingdom",
         href: "https://www.electoralcommission.org.uk/about-us/our-plans-priorities-and-spending/corporate-plan-2025/6-2029/30/electoral-system",
       },
+      { label: "Central Election Commission of Taiwan", href: "https://www.cec.gov.tw/" },
     ],
   },
   {

@@ -336,6 +336,15 @@ export function isHouseAdLang(lang: string | null): lang is HouseAdLang {
   return lang !== null && (HOUSE_AD_LANGS as readonly string[]).includes(lang);
 }
 
+/**
+ * House-ad copy exists only for HOUSE_AD_LANGS. A document in another
+ * language keeps the existing English card. A missing lang stays missing.
+ */
+export function houseAdLangForDocument(lang: string | null): HouseAdLang | null {
+  if (lang === null) return null;
+  return isHouseAdLang(lang) ? lang : "en";
+}
+
 export function isEmbedRoute(route: string): boolean {
   return route === "/il/embed/" || route.startsWith("/il/embed/");
 }
@@ -446,5 +455,10 @@ export function selfCheckHouseAds(): string[] {
   if (languageFromRoute("/bg/bg/") !== "bg" || languageFromRoute("/bg/bg/elections/prezident-2026/") !== "bg") {
     problems.push("path language");
   }
+  if (houseAdLangForDocument("zh") !== "en") problems.push("zh document should use the English house ad");
+  if (houseAdLangForDocument("es") !== "es") problems.push("Spanish house ad must stay Spanish");
+  if (houseAdLangForDocument("bg") !== "bg") problems.push("Bulgarian house ad must stay Bulgarian");
+  if (houseAdLangForDocument("en") !== "en") problems.push("English house ad must stay English");
+  if (houseAdLangForDocument(null) !== null) problems.push("missing lang must not invent a house ad");
   return problems;
 }

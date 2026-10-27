@@ -565,6 +565,93 @@ export const ilEn: Guide = {
   ],
 };
 
+const TW_REPORT = "https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026071421/68105040273002713004.pdf";
+const TW_ACT = "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0020010";
+const TW_ART53 = "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010";
+const TW_CEC = "https://www.cec.gov.tw/";
+const TW_PREV = "https://web.cec.gov.tw/central/article/36817";
+
+export const twEn: Guide = {
+  kicker: "Practical guide",
+  title: "How Taiwan’s local elections work",
+  intro:
+    "This section is drawn from the Central Election Commission’s 16 July 2026 report to the Legislative Yuan and from the Civil Servants Election and Recall Act, read on 27 October 2026. It names no candidates.",
+  blocks: [
+    {
+      heading: "Polling day",
+      paragraphs: [
+        [
+          t("The Commission’s "),
+          t("report to the Legislative Yuan", TW_REPORT),
+          t(" says the 622nd meeting on 31 October 2025 set the local public-office elections for Saturday 28 November 2026. The report calls them the ROC year 115 elections. The report does not print an opening hour or a closing hour, so this page does not supply one."),
+        ],
+      ],
+    },
+    {
+      heading: "Who votes",
+      paragraphs: [
+        [
+          t("The "),
+          t("Civil Servants Election and Recall Act", TW_ACT),
+          t(" gives suffrage to a citizen of the Republic of China who has reached the age of 20, with at least four consecutive months of residence in the district. A person who moves in after the election notice has no suffrage for that election. Voting is at the polling station for the registered domicile, and a national identification card is presented for a ballot."),
+        ],
+      ],
+    },
+    {
+      heading: "Names and the count",
+      paragraphs: [
+        [
+          t("The same report sets a public notice of special-municipality mayoral candidates for 12 November 2026 and a public notice of special-municipality councillors, county and city mayors, and county and city councillors for 17 November 2026. No name list was on the pages read on 27 October 2026. "),
+          t("Article 53", TW_ART53),
+          t(" forbids publishing the survey material it describes from ten days before election day until the polls close. Counted from the day before election day, that period starts on 18 November 2026. No count is shown here before 00:00 on 29 November 2026, Taiwan time."),
+        ],
+      ],
+    },
+  ],
+  electionsHeading: "Elections",
+  elections: [
+    {
+      name: "地方公職人員選舉，2026年11月28日",
+      detail: "繁體中文。星期六。日期出自中央選舉委員會送立法院的專題報告。",
+      href: "/tw/zh/elections/difang-gongzhi-2026/",
+    },
+    {
+      name: "Local public-office elections, Saturday 28 November 2026",
+      detail: "English page. Candidate notices are 12 and 17 November 2026. No name list was published on the pages read.",
+      href: "/tw/en/elections/local-2026/",
+    },
+  ],
+  glossaryHeading: "Glossary",
+  glossary: [
+    { term: "Central Election Commission", text: "The commission that set 28 November 2026 and wrote the 16 July 2026 report to the Legislative Yuan." },
+    { term: "ROC year 115", text: "The year the report uses for 2026. ROC year 111 in the previous notice is 2022." },
+    { term: "Article 53", text: "The article that bars publishing the survey material it describes from ten days before election day until the polls close." },
+  ],
+  faqHeading: "Questions",
+  faq: [
+    {
+      q: "When is polling day?",
+      a: "Saturday 28 November 2026, set by the Central Election Commission’s 622nd meeting on 31 October 2025 and recorded in the 16 July 2026 report.",
+    },
+    {
+      q: "Where is the candidate list?",
+      a: "It was not on the pages read on 27 October 2026. The report sets public notices for 12 November 2026 and 17 November 2026.",
+    },
+    {
+      q: "Does this site publish survey figures?",
+      a: "No. Article 53 limits publication of the survey material it describes from 18 November 2026 until the polls close. This site publishes none at any time, and it shows no count before 00:00 on 29 November 2026, Taiwan time.",
+    },
+  ],
+  sourcesHeading: "Official pages",
+  sources: [
+    { label: "Central Election Commission, report to the Legislative Yuan, 16 July 2026", href: TW_REPORT },
+    { label: "Civil Servants Election and Recall Act, English text", href: TW_ACT },
+    { label: "Civil Servants Election and Recall Act, Article 53", href: TW_ART53 },
+    { label: "Central Election Commission", href: TW_CEC },
+    { label: "Central Election Commission, notice of the 26 November 2022 local elections", href: TW_PREV },
+  ],
+};
+
 export const hubGuides: Record<string, Record<string, Guide>> = {
   ie: { en: ieEn },
   no: { en: noEn },
@@ -572,4 +659,5 @@ export const hubGuides: Record<string, Record<string, Guide>> = {
   br: { en: brEn },
   rs: { en: rsEn },
   il: { en: ilEn },
+  tw: { en: twEn },
 };

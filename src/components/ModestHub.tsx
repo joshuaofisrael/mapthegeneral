@@ -15,6 +15,12 @@ import { faqJsonLd } from "@/lib/format";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import type { CSSProperties, ReactNode } from "react";
 
+function hubUpdated(code: HubCode): string {
+  if (code === "tw") return "27 October 2026";
+  if (code === "br" || code === "rs" || code === "il") return "26 October 2026";
+  return "23 October 2026";
+}
+
 function Frame({
   code,
   path,
@@ -48,7 +54,7 @@ function Frame({
       <PageHeader eyebrow={copy.eyebrow} title={copy.title} lede={copy.lede} />
       {code === "il" && <IlResultsCard />}
       <ContentTrust
-        updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"}
+        updated={hubUpdated(code)}
         pagePath={path}
         officeHref={hub.officeHref}
         officeLabel={hub.officeLabel}
@@ -74,8 +80,18 @@ export function HubChooser({ code }: { code: HubCode }) {
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: hub.name }]} />
       <PageHeader eyebrow={hub.name} title={hub.name} lede={copy.lede} />
       {code === "il" && <IlResultsCard />}
-      <ContentTrust updated={["br","rs","il"].includes(code) ? "26 October 2026" : "23 October 2026"} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
+      <ContentTrust updated={hubUpdated(code)} pagePath={path} officeHref={hub.officeHref} officeLabel={hub.officeLabel} />
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+        {code === "tw" ? (
+          <li className="country-card rounded-xl border border-line bg-paper-card p-5" style={{ borderTopColor: countryAccent(code) }} lang="zh-Hant">
+            <h2 className="font-serif text-2xl font-semibold">
+              <Link className="hover:text-navy" href="/tw/zh/elections/difang-gongzhi-2026/">
+                繁體中文
+              </Link>
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">地方公職人員選舉，2026年11月28日星期六。日期出自中央選舉委員會送立法院的專題報告。</p>
+          </li>
+        ) : null}
         <li
           className="country-card rounded-xl border border-line bg-paper-card p-5"
           style={{ borderTopColor: countryAccent(code) }}
@@ -434,6 +450,16 @@ function ElectionBody({ code }: { code: HubCode }) {
   if (code === "br") return <BrazilBody />;
   if (code === "rs") return <SerbiaBody />;
   if (code === "il") return <IsraelBody />;
+  if (code === "tw") {
+    return (
+      <p>
+        Saturday 28 November 2026 is on the{" "}
+        <Link href="/tw/zh/elections/difang-gongzhi-2026/">Traditional Chinese page</Link> and the{" "}
+        <Link href="/tw/en/elections/local-2026/">English page</Link>. The date is the one in the Central Election
+        Commission’s report to the Legislative Yuan. This hub does not keep a second copy of the count.
+      </p>
+    );
+  }
   return (
     <>
       <p>
