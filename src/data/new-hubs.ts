@@ -1,7 +1,7 @@
 import type { SourceRef } from "@/data/spain/types";
 import { pageMetadata } from "@/lib/metadata";
 
-export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il";
+export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il" | "tw";
 export type HubKind = "chooser" | "national" | "elections" | "election" | "faq" | "sources";
 
 type Hub = {
@@ -17,6 +17,7 @@ type Hub = {
 
 const READ = "2026-10-23";
 const READ_NEW = "2026-10-26";
+const READ_TW = "2026-10-27";
 
 export const HUBS: Record<HubCode, Hub> = {
   ie: {
@@ -154,6 +155,43 @@ export const HUBS: Record<HubCode, Hub> = {
       { id: "il-date", name: "Central Elections Committee, the date of the 26th Knesset election", url: "https://www.gov.il/en/pages/knesset26-date", readOn: READ_NEW },
       { id: "il-dept", name: "Central Elections Committee on gov.il", url: "https://www.gov.il/en/departments/central-elections-committee", readOn: READ_NEW },
       { id: "il-about", name: "Central Elections Committee, elections in Israel (threshold and seat distribution)", url: "https://www.gov.il/en/pages/election-about-info", readOn: READ_NEW },
+    ],
+  },
+  tw: {
+    code: "tw",
+    name: "Taiwan",
+    officeLabel: "Central Election Commission",
+    officeHref: "https://www.cec.gov.tw/",
+    electionSlug: "local-2026",
+    electionName: "Local public-office elections, 28 November 2026",
+    blurb:
+      "National hub in English. The Central Election Commission’s report to the Legislative Yuan, dated 16 July 2026, sets local public-office elections for Saturday 28 November 2026. No municipality pages and no candidate names.",
+    sources: [
+      {
+        id: "tw-report",
+        name: "Central Election Commission, report to the Legislative Yuan, 16 July 2026",
+        url: "https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026071421/68105040273002713004.pdf",
+        readOn: READ_TW,
+      },
+      {
+        id: "tw-act",
+        name: "Civil Servants Election and Recall Act, English text, Ministry of Justice",
+        url: "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0020010",
+        readOn: READ_TW,
+      },
+      {
+        id: "tw-art53",
+        name: "Civil Servants Election and Recall Act, Article 53",
+        url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010",
+        readOn: READ_TW,
+      },
+      { id: "tw-cec", name: "Central Election Commission", url: "https://www.cec.gov.tw/", readOn: READ_TW },
+      {
+        id: "tw-prev",
+        name: "Central Election Commission, notice of the 26 November 2022 local elections",
+        url: "https://web.cec.gov.tw/central/article/36817",
+        readOn: READ_TW,
+      },
     ],
   },
 };
@@ -375,6 +413,43 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
       title: "Israel sources",
       description: "Official pages used for the Israel hub: the Central Elections Committee and the Knesset.",
       lede: "Each page in this hub cites this list. The pages were read on 26 October 2026.",
+    },
+  },
+  tw: {
+    chooser: {
+      title: "Taiwan — language",
+      description:
+        "Taiwan local public-office elections on Saturday 28 November 2026. Traditional Chinese and English. The date is from the Central Election Commission. Unofficial information.",
+      lede: "The Traditional Chinese page is listed first. The English guide follows. There are no municipality pages.",
+    },
+    national: {
+      title: "Taiwan",
+      description:
+        "Taiwan: local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. Unofficial information.",
+      eyebrow: "Local public office · Saturday 28 November 2026",
+      lede: "The Commission’s 622nd meeting on 31 October 2025 set polling for Saturday 28 November 2026. The 16 July 2026 report records that decision.",
+    },
+    elections: {
+      title: "Elections in Taiwan",
+      description: "Taiwan’s local public-office elections on Saturday 28 November 2026, in Traditional Chinese and English.",
+      lede: "This hub lists the 28 November 2026 local elections. It does not list a separate municipal tree.",
+    },
+    election: {
+      title: "Taiwan local elections, 28 November 2026",
+      description:
+        "Saturday 28 November 2026 local public-office elections. Candidate notices are 12 and 17 November 2026. Unofficial information.",
+      eyebrow: "Saturday 28 November 2026",
+      lede: "The dated pages are the Traditional Chinese page and the English page. This hub does not repeat them as a second count.",
+    },
+    faq: {
+      title: "Taiwan questions",
+      description: "Short answers on the Taiwan hub: the polling day, the franchise, candidate notices, and survey material.",
+      lede: "Answers below follow the Commission’s report and the election statute read on 27 October 2026.",
+    },
+    sources: {
+      title: "Taiwan sources",
+      description: "Official pages used for the Taiwan hub: the Central Election Commission and the election statute.",
+      lede: "Each page in this hub cites this list. The report and the statute were read on 27 October 2026.",
     },
   },
 };

@@ -81,6 +81,7 @@ export const COUNTRY_ACCENTS: Record<string, string> = {
   br: "#00843d",
   rs: "#0c4076",
   il: "#0038b8",
+  tw: "#1b4f72",
 };
 
 export function countryAccent(code: string): string {

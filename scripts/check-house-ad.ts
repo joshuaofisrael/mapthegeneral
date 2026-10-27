@@ -12,7 +12,7 @@ import {
   type HouseAdId,
   houseAdHtml,
   isEmbedRoute,
-  isHouseAdLang,
+  houseAdLangForDocument,
   pageLanguage,
   routeFromHtmlFile,
   selfCheckHouseAds,
@@ -68,9 +68,9 @@ function walk(dir: string) {
       continue;
     }
     pages++;
-    const lang = pageLanguage(html);
-    if (!isHouseAdLang(lang)) {
-      errors.push(`${rel}: unsupported lang "${lang ?? ""}"`);
+    const lang = houseAdLangForDocument(pageLanguage(html));
+    if (!lang) {
+      errors.push(`${rel}: unsupported lang "${pageLanguage(html) ?? ""}"`);
       continue;
     }
     const expected = houseAdHtml(route, lang);

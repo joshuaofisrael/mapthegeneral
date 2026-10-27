@@ -423,6 +423,49 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "tw-2026-local",
+    country: "tw",
+    localLang: "zh",
+    election: {
+      en: "Taiwan local public-office elections, 28 November 2026",
+      local: "地方公職人員選舉，2026年11月28日",
+    },
+    pollingDay: "2026-11-28",
+    trackerOpensAt: "2026-11-29T00:00:00+08:00",
+    officialResults: { label: "Central Election Commission", url: "https://www.cec.gov.tw/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Central Election Commission, report to the Legislative Yuan, 16 July 2026",
+          url: "https://ppg.ly.gov.tw/ppg/SittingAttachment/download/2026071421/68105040273002713004.pdf",
+        },
+        {
+          label: "Civil Servants Election and Recall Act, English text, Ministry of Justice",
+          url: "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0020010",
+        },
+        {
+          label: "Civil Servants Election and Recall Act, Article 53",
+          url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-11-18T00:00:00+08:00",
+        end: "2026-11-29T00:00:00+08:00",
+        citation: {
+          label: "Civil Servants Election and Recall Act, Article 53",
+          url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?FLNO=53&Pcode=D0020010",
+        },
+        en: "Article 53 of the Civil Servants Election and Recall Act forbids any party or person, from ten days before election day until the polls close, to report, disseminate, comment on, or quote the survey material in the two paragraphs before that sentence. Article 5 counts those days by starting on the day before election day and counting backwards, so the ten days begin on 18 November 2026. The Commission’s 16 July 2026 report does not print a closing hour, so this site shows no count before 00:00 on 29 November 2026, Taiwan time, and it publishes no survey figure and no projection.",
+        local:
+          "公職人員選舉罷免法第53條規定，自投票日前十日起至投票時間截止前，不得發布、報導、散布、評論或引述調查資料。第5條把投票日前的日數從前一日起算，這十天自2026年11月18日開始。2026年7月16日的專題報告沒有印出截止鐘點，因此本站在台灣時間2026年11月29日0時之前不顯示得票，也不刊登調查數字或預測。",
+      },
+    ],
+  },
 ];
 
 /**

@@ -4,8 +4,9 @@ import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const out = new URL("../out", import.meta.url).pathname;
-const LANGS = new Set(["sr", "pt", "he", "es", "fr", "de", "it", "pl", "en", "bg"]);
+const LANGS = new Set(["sr", "pt", "he", "es", "fr", "de", "it", "pl", "en", "bg", "zh", "et", "nl", "fi", "sv"]);
 const RTL = new Set(["he"]);
+const HTML_LANG = { zh: "zh-Hant" };
 
 function walk(dir, files = []) {
   for (const name of readdirSync(dir)) {
@@ -23,7 +24,8 @@ for (const file of walk(out)) {
   const lang = parts.length > 2 && LANGS.has(parts[1]) ? parts[1] : null;
   if (!lang) continue;
   const html = readFileSync(file, "utf8");
-  const want = RTL.has(lang) ? `<html lang="${lang}" dir="rtl"` : `<html lang="${lang}"`;
+  const code = HTML_LANG[lang] ?? lang;
+  const want = RTL.has(lang) ? `<html lang="${code}" dir="rtl"` : `<html lang="${code}"`;
   const next = html.replace(/<html lang="[^"]*"(?: dir="[^"]*")?/, want);
   if (next !== html) {
     writeFileSync(file, next);

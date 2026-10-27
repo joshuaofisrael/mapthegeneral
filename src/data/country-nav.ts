@@ -49,7 +49,8 @@ export function countriesLabel(lang: PageLang): string {
  * Endonyms from each country's own pages: España, Italia, Polska, México,
  * Brasil, ישראל, Srbija, and Schweiz (the name on the German pages; the
  * chooser also prints Suisse and Svizzera). Norge and Sverige are the
- * Bokmål and Swedish short names. Australia, Canada, Ireland and the
+ * Bokmål and Swedish short names. Taiwan uses 臺灣, the form on the
+ * Commission’s Chinese pages. Australia, Canada, Ireland and the
  * United Kingdom and New Zealand are published in English only.
  */
 export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; dir?: "rtl" }> = {
@@ -69,6 +70,7 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   pl: { name: "Polska", lang: "pl" },
   rs: { name: "Srbija", lang: "sr" },
   se: { name: "Sverige", lang: "sv" },
+  tw: { name: "臺灣", lang: "zh-Hant" },
 };
 
 /** Alphabetical by native name. Accents share a base letter; Hebrew follows Latin. */

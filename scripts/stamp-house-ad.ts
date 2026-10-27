@@ -12,7 +12,7 @@ import {
   type HouseAdId,
   houseAdHtml,
   isEmbedRoute,
-  isHouseAdLang,
+  houseAdLangForDocument,
   pageLanguage,
   routeFromHtmlFile,
 } from "../src/lib/house-ad";
@@ -63,9 +63,9 @@ function walk(dir: string) {
       }
       continue;
     }
-    const lang = pageLanguage(html);
-    if (!isHouseAdLang(lang)) {
-      errors.push(`${rel}: no house-ad translation for lang "${lang ?? ""}"`);
+    const lang = houseAdLangForDocument(pageLanguage(html));
+    if (!lang) {
+      errors.push(`${rel}: no house-ad translation for lang "${pageLanguage(html) ?? ""}"`);
       continue;
     }
     const card = houseAdHtml(route, lang);

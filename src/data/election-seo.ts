@@ -9,6 +9,7 @@
 import { BG_ELECTION_SEO_PROFILES } from "./election-seo-bg";
 import { NZ_ELECTION_SEO_PROFILES } from "./election-seo-nz";
 import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
+import { TW_ELECTION_SEO_PROFILES } from "./election-seo-tw";
 
 export const ELECTION_SEO_WINDOW_DAYS = 60;
 
@@ -24,7 +25,7 @@ export type FaqItem = SourcedText & { question: string };
 export type KeyDate = SourcedText & { label: string };
 
 export type ElectionSeoPage = {
-  lang: "en" | "pl" | "fr" | "it" | "de" | "bg" | "zh" | "es" | "et" | "nl" | "fi" | "mi";
+  lang: "en" | "pl" | "fr" | "it" | "de" | "bg" | "zh" | "es" | "et" | "nl" | "fi" | "mi" | "sv";
   /** Word before the source date in the sources list. Defaults to “read”. */
   readWord?: string;
   htmlLang: string;
@@ -1380,6 +1381,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   ...EXTRA_ELECTION_SEO_PROFILES,
   ...BG_ELECTION_SEO_PROFILES,
   ...NZ_ELECTION_SEO_PROFILES,
+  ...TW_ELECTION_SEO_PROFILES,
 ];
 
 export function utcToday(now = new Date()): string {
