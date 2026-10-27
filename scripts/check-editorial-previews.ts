@@ -20,6 +20,20 @@ const REQUIRED = [
   "/no/en/",
   "/rs/en/",
   "/se/en/",
+  "/ca/en/",
+  "/ca/fr/",
+  "/es/en/",
+  "/es/es/",
+  "/it/en/",
+  "/it/it/",
+  "/pl/en/",
+  "/pl/pl/",
+  "/mx/en/",
+  "/mx/es/",
+  "/ch/en/",
+  "/ch/de/",
+  "/ch/fr/",
+  "/ch/it/",
 ] as const;
 
 const KW =
