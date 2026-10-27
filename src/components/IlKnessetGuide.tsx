@@ -1,6 +1,7 @@
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentTrust } from "@/components/ContentTrust";
+import { EditorialPreview } from "@/components/EditorialPreview";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { SourceList } from "@/components/SourceList";
@@ -200,6 +201,7 @@ export function IlKnessetGuide({ lang }: { lang: Lang }) {
       </p>
       <PageHeader eyebrow={copy.eyebrow} title={copy.h1} lede={copy.lede} />
       <ContentTrust updated="27 October 2026" pagePath={path} officeHref={CEC} officeLabel="Central Elections Committee" copy={copy.trust} />
+      <EditorialPreview path={path} />
       <div className="mt-8 space-y-8">
         <section className="space-y-3">
           <h2 className="font-serif text-2xl font-semibold">{he ? "יום הבחירות" : "Election day"}</h2>
