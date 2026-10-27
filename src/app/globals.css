@@ -188,6 +188,11 @@ body {
   transform: rotate(180deg);
 }
 
+/* Author CSS beats the user-agent details rule, so closed panels must be hidden here. */
+.countries-menu:not([open]) > .countries-panel {
+  display: none;
+}
+
 .countries-panel {
   position: absolute;
   z-index: 50;

@@ -14,8 +14,8 @@ let cached: CountryHubLink[] | null = null;
 export function countryHubs(): CountryHubLink[] {
   if (cached) return cached;
   const seen = new Set<string>();
-  const cards = registryCountries().map((card) => ({ code: card.code, href: card.href }));
-  if (!cards.some((card) => card.code === SPAIN.code)) cards.push(SPAIN);
+  const cards = registryCountries().map((card) => ({ code: card.code, href: card.href, fallback: card.name }));
+  if (!cards.some((card) => card.code === SPAIN.code)) cards.push({ ...SPAIN, fallback: "España" });
 
   const hubs = cards
     .filter((card) => {
@@ -25,16 +25,13 @@ export function countryHubs(): CountryHubLink[] {
     })
     .map((card) => {
       const native = NATIVE_COUNTRY_NAMES[card.code];
-      if (!native) {
-        throw new Error(`Country hub "${card.code}" has no native name in NATIVE_COUNTRY_NAMES.`);
-      }
       const href = card.href.endsWith("/") ? card.href : `${card.href}/`;
       return {
         code: card.code,
         href,
-        name: native.name,
-        lang: native.lang,
-        dir: native.dir,
+        name: native?.name ?? card.fallback,
+        lang: native?.lang ?? "en",
+        dir: native?.dir,
       };
     })
     .sort((a, b) => compareCountryNames(a.name, b.name) || a.code.localeCompare(b.code));
