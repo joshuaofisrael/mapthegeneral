@@ -77,7 +77,6 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   ee: { name: "Eesti", lang: "et" },
   nl: { name: "Nederland", lang: "nl" },
   fi: { name: "Suomi", lang: "fi" },
-  sv: { name: "El Salvador", lang: "es" },
   tw: { name: "臺灣", lang: "zh-Hant" },
 };
 

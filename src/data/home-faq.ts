@@ -35,13 +35,12 @@ const COUNTRY_LINKS = [
   { label: "Bulgaria", href: "/bg/" },
   { label: "New Zealand", href: "/nz/" },
   { label: "Taiwan", href: "/tw/" },
-  { label: "El Salvador", href: "/sv/" },
   { label: "Estonia", href: "/ee/" },
   { label: "Netherlands", href: "/nl/" },
   { label: "Finland", href: "/fi/" },
 ] as const;
 
-const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "Bulgaria", "New Zealand", "El Salvador", "Estonia", "Netherlands", "Finland"]);
+const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "Bulgaria", "New Zealand", "Estonia", "Netherlands", "Finland"]);
 
 function englishList(labels: readonly string[]): string {
   const spoken = labels.map((label) => (label === "United Kingdom" ? "the United Kingdom" : label));
@@ -60,7 +59,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria, New Zealand, Taiwan, El Salvador, Estonia, the Netherlands and Finland are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands and Finland are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {

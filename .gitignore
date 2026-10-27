@@ -45,7 +45,7 @@
 # New Zealand hub and election HTML is generated at build time
 /public/nz/
 
-# El Salvador hub and election HTML is generated at build time
+# Retired El Salvador path. Homepage redirect stubs are written into out/sv/ at build time.
 /public/sv/
 
 # Estonia hub and election HTML is generated at build time

@@ -59743,11 +59743,6 @@
 - [New Zealand](https://mapthegeneral.com/nz/)
 - [New Zealand](https://mapthegeneral.com/nz/en/)
 - [New Zealand general election, 7 November 2026](https://mapthegeneral.com/nz/en/elections/general-2026/)
-- [El Salvador](https://mapthegeneral.com/sv/)
-- [El Salvador](https://mapthegeneral.com/sv/es/)
-- [El Salvador](https://mapthegeneral.com/sv/en/)
-- [Elecciones del 28 de febrero de 2027](https://mapthegeneral.com/sv/es/elections/generales-2027/)
-- [El Salvador elections, 28 February 2027](https://mapthegeneral.com/sv/en/elections/general-2027/)
 - [Eesti](https://mapthegeneral.com/ee/)
 - [Eesti](https://mapthegeneral.com/ee/et/)
 - [Estonia](https://mapthegeneral.com/ee/en/)
@@ -59805,8 +59800,6 @@ Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional wind
 Serbia (https://mapthegeneral.com/rs/): National hub. Preliminary RIK results of the National Assembly election of 25 October 2026. The presidential election has no called polling day; the latest legal day stated by RTS is 27 December 2026. No municipality pages.
 
 Sweden (https://mapthegeneral.com/se/): National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.
-
-El Salvador (https://mapthegeneral.com/sv/): National hub. Presidential, legislative and municipal elections on Sunday 28 February 2027, from the Tribunal Supremo Electoral. No municipality pages and no count before 17:00 El Salvador time.
 
 Taiwan (https://mapthegeneral.com/tw/): National hub. Local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. No municipality pages.
 

@@ -12,7 +12,6 @@ import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
 import { EE_ELECTION_SEO_PROFILES } from "./election-seo-ee";
 import { FI_ELECTION_SEO_PROFILES } from "./election-seo-fi";
 import { NL_ELECTION_SEO_PROFILES } from "./election-seo-nl";
-import { SV_ELECTION_SEO_PROFILES } from "./election-seo-sv";
 import { TW_ELECTION_SEO_PROFILES } from "./election-seo-tw";
 
 export const ELECTION_SEO_WINDOW_DAYS = 60;
@@ -1416,7 +1415,6 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   ...BG_ELECTION_SEO_PROFILES,
   ...NZ_ELECTION_SEO_PROFILES,
   ...TW_ELECTION_SEO_PROFILES,
-  ...SV_ELECTION_SEO_PROFILES,
   ...EE_ELECTION_SEO_PROFILES,
   ...NL_ELECTION_SEO_PROFILES,
   ...FI_ELECTION_SEO_PROFILES,
