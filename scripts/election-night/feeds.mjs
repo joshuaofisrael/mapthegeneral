@@ -48,6 +48,11 @@ export const FEEDS = [
     officialUrl: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html",
     hosts: ["bfs.admin.ch"],
   },
+  {
+    id: "tw-2026-local",
+    officialUrl: "https://www.cec.gov.tw/",
+    hosts: ["cec.gov.tw"],
+  },
 ];
 
 export function feedById(id) {
