@@ -38,6 +38,34 @@ export default function AboutPage() {
           are not official election pictures. Municipality pages do not carry them. Pages for a country without one of
           these images use the plain site card instead.
         </p>
+        <h2>Editorial methods and sources</h2>
+        <p>
+          <strong>Last updated: 27 October 2026.</strong> Map the General Editorial Team writes the previews on the
+          homepage, on each country hub, and on the election pages that carry one. The byline is the team. A personal
+          name is not used on those pages.
+        </p>
+        <p>
+          A preview states what an official page printed, and the date that page was read. A figure, a date, or a name
+          that was not on a page read for the release is left out. The preview does not endorse a candidate, a party, or
+          a list, and it does not tell a reader how to vote.
+        </p>
+        <p>
+          Past results are copied from an official count. A party’s programme is that party’s own text. A preview names
+          a party when an official register, an official count, or a calling instrument names it. It does not rewrite a
+          programme that was not read, and it does not rank parties.
+        </p>
+        <p>
+          These pages do not publish voting-intention figures, samples of voters leaving stations, or seat forecasts,
+          including during a legal blackout. The dated windows are in the election-law table: Israel until the polls
+          close on 27 October 2026, Italy from 31 October 2026 for the Chieti by-election, Spain’s five-day rule before
+          29 November 2026, and the other rows in that table. When a rule is unclear, the page still prints no such
+          figure.
+        </p>
+        <p>
+          Sources are linked at the end of each preview and on the country sources page. A correction goes through the{" "}
+          <Link href="/contact/">contact page</Link>. Who operates the site is stated on the{" "}
+          <Link href="/imprint/">legal notice</Link>.
+        </p>
         <h2>What this site is not</h2>
         <ul>
           <li>Not an official election website and not affiliated with any government or party</li>
