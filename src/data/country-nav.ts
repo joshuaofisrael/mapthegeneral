@@ -50,7 +50,7 @@ export function countriesLabel(lang: PageLang): string {
  * Brasil, ישראל, Srbija, and Schweiz (the name on the German pages; the
  * chooser also prints Suisse and Svizzera). Norge and Sverige are the
  * Bokmål and Swedish short names. Australia, Canada, Ireland and the
- * United Kingdom are published in English only.
+ * United Kingdom and New Zealand are published in English only.
  */
 export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; dir?: "rtl" }> = {
   au: { name: "Australia", lang: "en" },
@@ -65,6 +65,7 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   it: { name: "Italia", lang: "it" },
   mx: { name: "México", lang: "es" },
   no: { name: "Norge", lang: "nb" },
+  nz: { name: "New Zealand", lang: "en" },
   pl: { name: "Polska", lang: "pl" },
   rs: { name: "Srbija", lang: "sr" },
   se: { name: "Sverige", lang: "sv" },

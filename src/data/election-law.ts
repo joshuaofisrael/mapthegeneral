@@ -389,6 +389,40 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "nz-2026-11-07",
+    country: "nz",
+    localLang: "en",
+    election: { en: "New Zealand general election, 7 November 2026" },
+    pollingDay: "2026-11-07",
+    trackerOpensAt: "2026-11-07T19:00:00+13:00",
+    officialResults: { label: "electionresults.govt.nz", url: "https://electionresults.govt.nz/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Electoral Commission, Election Service Plan for the 2026 General Election",
+          url: "https://elections.nz/assets/2026-General-Election/EC0131_Election_Service_Plan_A4.pdf",
+        },
+        {
+          label: "Electoral Act 1993, as at the latest consolidation",
+          url: "https://www.legislation.govt.nz/act/public/1993/87/en/latest/",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "poll-ban",
+        start: "2026-11-07T00:00:00+13:00",
+        end: "2026-11-07T19:00:00+13:00",
+        citation: {
+          label: "Electoral Act 1993, section 197(1)(d) and (e)",
+          url: "https://www.legislation.govt.nz/act/public/1993/87/en/latest/",
+        },
+        en: "Electoral Act 1993 section 197(1)(d) and (e) bars a public opinion poll of people who voted before polling day, and a public opinion poll on polling day, before the close of the poll. Section 197(1)(g) bars publishing a party name on polling day before the close. This site prints no polls and no party names. No count is shown before 7:00 pm New Zealand daylight time on 7 November 2026.",
+      },
+    ],
+  },
 ];
 
 /**

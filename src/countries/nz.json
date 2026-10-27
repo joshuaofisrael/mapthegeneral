@@ -1,0 +1,16 @@
+{
+  "code": "nz",
+  "name": "New Zealand",
+  "href": "/nz/",
+  "summary": "National hub. General election on Saturday 7 November 2026, with voting places open from 9am to 7pm. No municipality pages, no party names, and no count before 7:00 pm New Zealand daylight time that day.",
+  "links": [
+    {
+      "href": "/nz/en/",
+      "label": "New Zealand"
+    },
+    {
+      "href": "/nz/en/elections/general-2026/",
+      "label": "General election, 7 November 2026"
+    }
+  ]
+}

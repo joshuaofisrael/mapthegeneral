@@ -33,9 +33,10 @@ const COUNTRY_LINKS = [
   { label: "Serbia", href: "/rs/" },
   { label: "Israel", href: "/il/" },
   { label: "Bulgaria", href: "/bg/" },
+  { label: "New Zealand", href: "/nz/" },
 ] as const;
 
-const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Bulgaria"]);
+const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Bulgaria", "New Zealand"]);
 
 function englishList(labels: readonly string[]): string {
   const spoken = labels.map((label) => (label === "United Kingdom" ? "the United Kingdom" : label));
@@ -54,7 +55,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria is a national hub with no municipality pages. Its election-night section shows Central Election Commission counts only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil, Serbia and Israel, with no municipality pages and no live tracker. Bulgaria and New Zealand are national hubs with no municipality pages. Each election-night section shows that country’s official count only after the legal opening time. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {

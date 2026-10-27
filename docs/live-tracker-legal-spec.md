@@ -39,6 +39,7 @@ table is `src/data/election-law.ts`; `scripts/check-election-law.ts` enforces it
 | ch-2026-11-29 | Switzerland, federal popular vote, 29 Nov 2026 | No statutory poll or results ban | 29 Nov 2026 12:00 CET | bfs.admin.ch |
 | mx-2027-federal | Mexico, federal election, 6 Jun 2027 | LGIPE art. 251(4)-(6); Reglamento de Elecciones art. 134 | 6 Jun 2027 18:00 in Baja California (UTC-7) | ine.mx |
 | bg-2026-11-01 | Bulgaria, possible presidential runoff, 1 Nov 2026 | Election Code art. 205 (Pravko reprint; lex.bg was not opened) and CEC question 21. Art. 220 allows a queue until 21:00 | 1 Nov 2026 21:00 EET | results.cik.bg |
+| nz-2026-11-07 | New Zealand general election, 7 Nov 2026 | Electoral Act 1993 s. 197(1)(d), (e) and (g). No party names on the page. The results host returned 403 when checked | 7 Nov 2026 19:00 NZDT | electionresults.govt.nz |
 
 Countries with no election window yet get one added here before any tracker is
 built. `STANDING_RULES` in `src/data/election-law.ts` records the countries that
