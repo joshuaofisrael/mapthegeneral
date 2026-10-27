@@ -19,6 +19,7 @@ import { sourcesById } from "../src/data/au/sources";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import { auHome, jurisdictionPath } from "../src/countries/au";
@@ -108,6 +109,7 @@ ${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd}</script>
 ${ADSENSE_HEAD_TAGS}
+${GA_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">Unofficial information. Confirm with your <a href="${esc(input.officeHref)}">official election office</a>.</p>

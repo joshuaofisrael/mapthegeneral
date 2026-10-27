@@ -4,6 +4,7 @@ import type { ElectionSeoPage, ElectionSeoProfile, SourcedText } from "../data/e
 import { ELECTION_SEO_PROFILES } from "../data/election-seo";
 import { SITE, absoluteUrl, reportErrorHref } from "../data/site";
 import { ADSENSE_HEAD_TAGS } from "./adsense";
+import { GA_HEAD_TAGS } from "./google-analytics";
 import {
   candidateItemListJsonLd,
   listLanguages,
@@ -197,6 +198,7 @@ ${modifiedHead}${jsonScript(breadcrumbJsonLd(page))}
 ${jsonScript(eventJsonLd(profile, page, imageUrl))}
 ${jsonScript(faqJsonLd(page))}
 ${itemList ? `${jsonScript(itemList)}\n` : ""}${ADSENSE_HEAD_TAGS}
+${GA_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${esc(page.bannerBefore)}<a href="${esc(page.officeHref)}">${esc(page.bannerAfter)}</a>.</p>

@@ -39,7 +39,8 @@ export default function AdvertisingPage() {
           Cookies and the consent message for the European Economic Area, the United Kingdom, and
           Switzerland are described in the <Link href="/privacy/#advertising">privacy policy</Link>.
           That section is also written in Spanish, German, French, Italian, and Polish. This page does
-          not add a second consent banner. Questions go through the{" "}
+          not add a second advertising consent banner. Analytics cookies are a separate choice,
+          described in the privacy policy. Questions go through the{" "}
           <Link href="/contact/">contact page</Link>.
         </p>
         <h2>No paid political advertising</h2>

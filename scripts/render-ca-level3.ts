@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
@@ -209,6 +210,7 @@ ${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(crumbs)}</script>
 ${ADSENSE_HEAD_TAGS}
+${GA_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${banner}</p>

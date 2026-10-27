@@ -13,7 +13,7 @@ Every non-redirect HTML page gets two tags in `<head>`:
 
 Next.js pages get them from the root layout (`src/app/layout.tsx`). Static pages written by the render scripts get the same tags from `src/lib/adsense.ts`. After `next build`, `scripts/stamp-adsense-html.ts` inserts the tags into any exported page that still lacks them, including HTML that was already committed under `public/`. Redirect stubs (a meta refresh) are left alone. `public/ads.txt` is copied to `/ads.txt`.
 
-The loader is not delayed, wrapped, or blocked. Google's European consent message is delivered by this same script after it is published in the AdSense account. A second, site-built banner would duplicate that message, so none is added.
+The loader is not delayed, wrapped, or blocked. Google's European consent message is delivered by this same script after it is published in the AdSense account. A second, site-built banner for those advertising cookies would duplicate that message, so none is added for advertising. Google Analytics uses a separate consent banner and does not load until the visitor accepts. See the privacy policy.
 
 ## What the account owner must publish
 
@@ -35,11 +35,11 @@ Cloudflare Web Analytics stays where it already was. The beacon is:
 
 It is cookieless: it counts page views and does not set cookies or use local storage. It is not an advertising script, and it is not gated on the consent message. It loads on Next.js pages and on the static templates that already included it (Spain municipalities, Italy provinces, Canada level 2, Mexico, Australia, Switzerland, Poland level 2, and UK level 2). Some deeper static pages (Italy municipalities, Canada level 3, Poland level 3, UK level 3) did not include the beacon, and this change does not add it.
 
-No other analytics, tag manager, or cookie script is loaded. The site does not use Google Analytics, social-media pixels, or any advertising network besides this AdSense loader. Fonts are served from this site.
+Google Analytics 4 is a separate, consent-gated script (`public/consent.js`). It is not part of this AdSense loader, and gtag.js is not in the page until the visitor accepts. The site does not use social-media pixels or any advertising network besides this AdSense loader. Fonts are served from this site.
 
 ## Privacy page
 
-The only privacy page is English, at `/privacy/`. Country sections of the site use other languages; the legal pages do not have separate locale routes. The advertising section on `/privacy/` is written in English and repeated in Spanish, German, French, Italian, and Polish. It links to Google's partner-sites policy and to Google ads settings, says European visitors are asked for consent, and points questions to the [contact page](https://mapthegeneral.com/contact/). It does not print a personal email address.
+The only privacy page is English, at `/privacy/`. Country sections of the site use other languages; the legal pages do not have separate locale routes. The advertising section on `/privacy/` is written in English and repeated in Spanish, German, French, Italian, and Polish. A Google Analytics section (GA4, consent-based, with the opt-out link) is written in those same languages. It links to Google's partner-sites policy and to Google ads settings, says European visitors are asked for consent, and points questions to the [contact page](https://mapthegeneral.com/contact/). It does not print a personal email address.
 
 The advertising disclosure is a separate page at `/advertising/`. It says the ads are Google AdSense, that the site does not sell political advertising and does not endorse candidates or parties, and that there are no affiliate links. Cookie and consent detail stays on `/privacy/`. Copyright notices and the corrections log are at `/copyright/`. Both pages are linked from the footer and do not print a personal email address.
 

@@ -27,6 +27,7 @@ import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
+import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { socialMetaTags } from "../src/lib/social";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -110,6 +111,7 @@ ${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(input.crumbs)}</script>
 ${ADSENSE_HEAD_TAGS}
+${GA_HEAD_TAGS}
 </head>
 <body>
 <p class="banner">${pl ? `Informacja nieoficjalna. Potwierdź ją w <a href="${OFFICE}">urzędowym organie wyborczym</a>.` : esc(SITE.officialNotUs).replace("official election office", `<a href="${OFFICE}">official election office</a>`)}</p>
