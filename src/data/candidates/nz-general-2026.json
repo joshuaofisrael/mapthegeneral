@@ -1,4 +1,210 @@
 {
   "id": "nz-general-2026",
-  "candidates": []
+  "langs": ["en"],
+  "source": {
+    "url": "https://elections.nz/media-and-news/2026/candidate-and-party-lists-released",
+    "readOn": "2026-10-27",
+    "order": "source",
+    "label": {
+      "en": "Electoral Commission, candidate and party lists released, 9 October 2026"
+    },
+    "heading": {
+      "en": "Parties seeking the party vote"
+    },
+    "intro": {
+      "en": "The parties below are the registered parties the Electoral Commission listed, in alphabetical order, as seeking the party vote, in the release read on {date}. Each link is the Chief Electoral Officer’s party-list file, which prints that party’s list candidates in list order. Electorate candidates are published by electorate on vote.nz and are not retyped here. Source: {source}."
+    },
+    "orderNote": {
+      "en": "The order is the alphabetical order in that release. The Candidate Handbook describes a different layout on the ballot paper: electorate candidates alphabetical by surname, with party-only parties alphabetical after the parties that also contest an electorate."
+    }
+  },
+  "candidates": [
+    {
+      "name": "ACT New Zealand",
+      "surname": "ACT New Zealand",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Alliance Party",
+      "surname": "Alliance Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Animal Justice Party Aotearoa New Zealand",
+      "surname": "Animal Justice Party Aotearoa New Zealand",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Aotearoa Legalise Cannabis Party",
+      "surname": "Aotearoa Legalise Cannabis Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Conservative Party NZ",
+      "surname": "Conservative Party NZ",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Free Palestine",
+      "surname": "Free Palestine",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Green Party",
+      "surname": "Green Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Labour Party",
+      "surname": "Labour Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "National Party",
+      "surname": "National Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "New Zealand First Party",
+      "surname": "New Zealand First Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "New Zealand Loyal",
+      "surname": "New Zealand Loyal",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "NZ Outdoors & Freedom Party",
+      "surname": "NZ Outdoors & Freedom Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Opportunity Party",
+      "surname": "Opportunity Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Te Pāti Māori",
+      "surname": "Te Pāti Māori",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Te Tai Tokerau Party",
+      "surname": "Te Tai Tokerau Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Vision New Zealand",
+      "surname": "Vision New Zealand",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "Women's Rights Party",
+      "surname": "Women's Rights Party",
+      "committee": "registered party",
+      "links": [
+        {
+          "href": "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf",
+          "kind": "profile"
+        }
+      ]
+    }
+  ]
 }

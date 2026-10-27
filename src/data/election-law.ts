@@ -419,7 +419,7 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
           label: "Electoral Act 1993, section 197(1)(d) and (e)",
           url: "https://www.legislation.govt.nz/act/public/1993/87/en/latest/",
         },
-        en: "Electoral Act 1993 section 197(1)(d) and (e) bars a public opinion poll of people who voted before polling day, and a public opinion poll on polling day, before the close of the poll. Section 197(1)(g) bars publishing a party name on polling day before the close. This site prints no polls and no party names. No count is shown before 7:00 pm New Zealand daylight time on 7 November 2026.",
+        en: "Electoral Act 1993 section 197(1)(d) and (e) bars a public opinion poll of people who voted before polling day, and a public opinion poll on polling day, before the close of the poll. Section 197(1)(g) bars publishing a party name on polling day before the close. Section 197(2A) is a defence when the name was placed on a website before polling day, the site is not pushed that day to people who did not choose to open it, and the site is not advertised that day. This site prints no polls and no forecast. The party names were placed on 27 October 2026. No count is shown before 7:00 pm New Zealand daylight time on 7 November 2026.",
       },
     ],
   },

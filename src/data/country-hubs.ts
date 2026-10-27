@@ -165,7 +165,7 @@ export const NZ_COUNTRY_HUB: CountryHub = {
       title: "New Zealand",
       description: "New Zealand on Map the General. General election on Saturday 7 November 2026. Unofficial information.",
       h1: "New Zealand",
-      lede: "English is the language of this hub. A full te reo Māori translation was not opened in the sources read on 27 October 2026.",
+      lede: "English is the language of this hub. The Candidate Handbook’s title for the election is Te Pōtitanga ā-Motu 2026.",
       alternates: [
         { hreflang: "en", path: "/nz/" },
         { hreflang: "x-default", path: "/nz/" },
@@ -180,14 +180,14 @@ export const NZ_COUNTRY_HUB: CountryHub = {
       ],
       bodyHtml: `<p><a href="/nz/en/">New Zealand</a></p>
 <p>The election page is the <a href="${NZ}">general election on 7 November 2026</a>.</p>
-<p>The Election Service Plan uses the names Māori Electoral Option, Māori roll and Whare pōti Māori, and says voting services at a Whare pōti Māori are in te reo Māori and English. This site does not translate the guide.</p>`,
+<p>The Candidate Handbook titles the election Te Pōtitanga ā-Motu 2026 and the Commission Te Kaitiaki Take Kōwhiri. The Election Service Plan uses Māori Electoral Option, Māori roll and Whare pōti Māori. This site does not translate the guide.</p>`,
     },
     {
       path: "/nz/en/",
       htmlLang: "en",
       title: "New Zealand — general election",
       description:
-        "National hub for New Zealand. General election on Saturday 7 November 2026, 9am to 7pm. No municipality pages and no party names.",
+        "National hub for New Zealand. Te Pōtitanga ā-Motu, the general election, is on Saturday 7 November 2026, 9am to 7pm. No municipality pages.",
       h1: "New Zealand",
       lede: "National hub in English. No municipality pages. No vote count before 7:00 pm New Zealand daylight time on 7 November 2026.",
       alternates: [
@@ -204,10 +204,10 @@ export const NZ_COUNTRY_HUB: CountryHub = {
         { name: "New Zealand", path: "/nz/en/" },
       ],
       bodyHtml: `<h2>The election in this release</h2>
-<p>The Electoral Commission’s Election Service Plan says the 2026 General Election is on Saturday 7 November 2026. Voting places that day are open from 9am to 7pm. The election page collects the hours and the sources. Party names are not printed here.</p>
+<p>The Electoral Commission’s Election Service Plan says the 2026 General Election, Te Pōtitanga ā-Motu, is on Saturday 7 November 2026. Voting places that day are open from 9am to 7pm. The election page lists the parties seeking the party vote in the Commission’s 9 October alphabetical order and links each one to the party-list file.</p>
 <p><a href="${NZ}">General election, 7 November 2026</a></p>
 <h2>Te reo Māori</h2>
-<p>The plan says the Commission will produce enrolling and voting material in English, te reo Māori, and 29 other languages, and that a Whare pōti Māori provides voting services in te reo Māori and English. The Māori Electoral Option is the choice of the Māori roll or the general roll. No te reo page was opened on 27 October 2026, so this hub is not a translation.</p>
+<p>The Candidate Handbook titles the election Te Pōtitanga ā-Motu 2026 and the Commission Te Kaitiaki Take Kōwhiri. The plan says the Commission will produce enrolling and voting material in English, te reo Māori, and 29 other languages, and that a Whare pōti Māori provides voting services in te reo Māori and English. The Māori Electoral Option is the choice of the Māori roll or the general roll. This hub is not a translation, so it does not offer a Māori hreflang.</p>
 <h2>Personal data</h2>
 <p>The Privacy Act 2020 was not section-checked. This hub publishes no electoral roll and no voter details.</p>
 <h2>Sources</h2>
