@@ -10,10 +10,14 @@ import {
   HOUSE_AD_CSS,
   HOUSE_AD_IDS,
   type HouseAdId,
+  RANKFOOTPRINT_SAMPLE_API,
+  RANKFOOTPRINT_SAMPLE_SCRIPT_PATH,
+  freeScanMarker,
   houseAdHtml,
   isEmbedRoute,
   houseAdLangForDocument,
   pageLanguage,
+  rankfootprintSampleScript,
   routeFromHtmlFile,
   selfCheckHouseAds,
 } from "../src/lib/house-ad";
@@ -89,12 +93,35 @@ function walk(dir: string) {
     counts[id]++;
     examples[id] ??= `${SITE}${route}`;
     if (expected.includes("<img") || expected.includes("<script")) errors.push(`${rel}: card has a request`);
+    const sampleScripts = html.match(/<script\b[^>]*\bsrc="\/rankfootprint-sample\.js"[^>]*>/gi) ?? [];
+    if (id === "rankfootprint") {
+      if (sampleScripts.length !== 1 || !/\bdefer\b/.test(sampleScripts[0])) {
+        errors.push(`${rel}: expected one deferred RankFootprint sample script, found ${sampleScripts.length}`);
+      }
+      for (const ad of rankfootprintAnchors(html)) {
+        const marker = freeScanMarker(ad);
+        if (marker) errors.push(`${rel}: static RankFootprint ad has free-scan wording “${marker}”`);
+        if (!ad.includes("$1")) errors.push(`${rel}: static RankFootprint ad is missing $1`);
+      }
+    } else if (html.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_PATH)) {
+      errors.push(`${rel}: RankFootprint sample script on a ${id} page`);
+    }
     const inner = expected.replace(/^<a\b[^>]*>/, "").replace(/<\/a>$/, "");
     if (inner.includes("<a")) errors.push(`${rel}: nested link`);
   }
 }
 
-if (existsSync(OUT)) walk(OUT);
+if (existsSync(OUT)) {
+  walk(OUT);
+  const scriptFile = path.join(OUT, "rankfootprint-sample.js");
+  if (!existsSync(scriptFile)) {
+    errors.push("rankfootprint-sample.js is missing from out/");
+  } else {
+    const js = readFileSync(scriptFile, "utf8");
+    if (js !== rankfootprintSampleScript()) errors.push("rankfootprint-sample.js does not match the generator");
+    if (!js.includes(RANKFOOTPRINT_SAMPLE_API)) errors.push("rankfootprint-sample.js is missing the status API");
+  }
+}
 
 if (pages > 0) {
   const namedShare = counts.namedscan / pages;
@@ -108,6 +135,14 @@ if (pages > 0) {
   for (const id of HOUSE_AD_IDS) {
     if (!examples[id]) errors.push(`no page received ${id}`);
   }
+}
+
+function rankfootprintAnchors(html: string): string[] {
+  const found: string[] = [];
+  const re = /<a\b(?=[^>]*\bdata-house-ad="rankfootprint")[^>]*>[\s\S]*?<\/a>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(html))) found.push(match[0]);
+  return found;
 }
 
 function bannerPlacementError(html: string): string | null {
