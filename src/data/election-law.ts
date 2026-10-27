@@ -595,6 +595,49 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
       },
     ],
   },
+  {
+    id: "fi-2027-04-18",
+    country: "fi",
+    localLang: "fi",
+    election: {
+      en: "Finland parliamentary election, 18 April 2027",
+      local: "Eduskuntavaalit, 18. huhtikuuta 2027",
+    },
+    pollingDay: "2027-04-18",
+    trackerOpensAt: "2027-04-18T20:00:00+03:00",
+    officialResults: { label: "Oikeusministeriö, tulospalvelu", url: "https://tulospalvelu.vaalit.fi/" },
+    verified: {
+      readOn: "2026-10-27",
+      sources: [
+        {
+          label: "Ministry of Justice letter, 16 September 2026, VN/12981/2026-OM-3",
+          url: "https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF",
+        },
+        {
+          label: "Kuntaliitto, circular on the 2027 parliamentary election",
+          url: "https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit",
+        },
+        {
+          label: "Ministry of Justice, results service",
+          url: "https://tulospalvelu.vaalit.fi/",
+        },
+      ],
+    },
+    rules: [
+      {
+        kind: "results-embargo",
+        start: "2027-04-18T00:00:00+03:00",
+        end: "2027-04-18T20:00:00+03:00",
+        citation: {
+          label: "Ministry of Justice letter, 16 September 2026, VN/12981/2026-OM-3",
+          url: "https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF",
+        },
+        en: "The Ministry of Justice letter of 16 September 2026, VN/12981/2026-OM-3, prints election-day voting on 18 April 2027 as 09:00–20:00 and the preliminary count from 20:00. The Election Act was not section-read. This site shows no count before 20:00 Eastern European Summer Time on 18 April 2027. The letter does not print a ban on publishing polls. This site still publishes no poll and no projection.",
+        local:
+          "Oikeusministeriön kirje 16. syyskuuta 2026, VN/12981/2026-OM-3, merkitsee vaalipäivän äänestykseksi 18. huhtikuuta 2027 kello 9–20 ja alustavan laskennan alkavaksi kello 20. Vaalilakia ei luettu pykälittäin. Tämä sivusto ei näytä ääniä ennen kello 20 Itä-Euroopan kesäaikaa 18. huhtikuuta 2027. Kirje ei sisällä kieltoa julkaista kyselyjä. Tämä sivusto ei julkaise kyselyä eikä ennustetta.",
+      },
+    ],
+  },
 ];
 
 /**

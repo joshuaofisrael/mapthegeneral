@@ -638,6 +638,145 @@ export const NL_COUNTRY_HUB: CountryHub = {
 
 COUNTRY_HUBS.push(NL_COUNTRY_HUB);
 
+const FI_FI = "/fi/fi/elections/eduskunta-2027/";
+const FI_EN = "/fi/en/elections/parliamentary-2027/";
+
+const fiAlternates = [
+  { hreflang: "fi", path: "/fi/fi/" },
+  { hreflang: "en", path: "/fi/en/" },
+  { hreflang: "x-default", path: "/fi/fi/" },
+];
+
+export const FI_COUNTRY_HUB: CountryHub = {
+  index: [
+    {
+      path: "/fi/",
+      lang: "fi",
+      title: "Suomi",
+      kind: "country",
+      text: "Suomi eduskuntavaalit 18. huhtikuuta 2027 oikeusministeriö",
+    },
+    {
+      path: "/fi/fi/",
+      lang: "fi",
+      title: "Suomi",
+      kind: "country",
+      text: "Suomi eduskuntavaalit 18. huhtikuuta 2027",
+    },
+    {
+      path: "/fi/en/",
+      lang: "en",
+      title: "Finland",
+      kind: "country",
+      text: "Finland parliamentary election 18 April 2027 Ministry of Justice",
+    },
+    {
+      path: FI_FI,
+      lang: "fi",
+      title: "Eduskuntavaalit, 18. huhtikuuta 2027",
+      kind: "election",
+      text: "Suomi eduskuntavaalit 18. huhtikuuta 2027",
+    },
+    {
+      path: FI_EN,
+      lang: "en",
+      title: "Finland parliamentary election, 18 April 2027",
+      kind: "election",
+      text: "Finland parliamentary election 18 April 2027",
+    },
+  ],
+  pages: [
+    {
+      path: "/fi/",
+      htmlLang: "fi",
+      title: "Suomi",
+      description:
+        "Suomi Map the Generalissa. Eduskuntavaalit sunnuntaina 18. huhtikuuta 2027. Epävirallinen tieto.",
+      h1: "Suomi",
+      lede: "Suomenkielinen sivu on pääsivu. English on sen rinnalla.",
+      alternates: [
+        { hreflang: "fi", path: "/fi/" },
+        { hreflang: "en", path: "/fi/en/" },
+        { hreflang: "x-default", path: "/fi/" },
+      ],
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: "/fi/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Suomi", path: "/fi/" },
+      ],
+      bodyHtml: `<p><a href="/fi/fi/">Suomi</a> · <a href="/fi/en/">English</a></p>
+<p><a href="${FI_FI}">18. huhtikuuta 2027</a> eduskuntavaalit ovat suomenkielisellä sivulla.</p>`,
+    },
+    {
+      path: "/fi/fi/",
+      htmlLang: "fi",
+      title: "Suomi — vuoden 2027 vaalit",
+      description:
+        "Valtakunnallinen opas Suomeen. Eduskuntavaalit sunnuntaina 18. huhtikuuta 2027. Ei kuntasivuja.",
+      h1: "Suomi",
+      lede: "Valtakunnallinen opas suomeksi. Ei kuntasivuja. Ei ääniä ennen kello 20 Itä-Euroopan kesäaikaa 18. huhtikuuta 2027.",
+      alternates: fiAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: FI_FI, label: "Vaalit" },
+        { href: "/fi/en/", label: "English" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Suomi", path: "/fi/" },
+        { name: "Suomi", path: "/fi/fi/" },
+      ],
+      bodyHtml: `<h2>Vaalit tässä julkaisussa</h2>
+<p>Oikeusministeriön kirje 16. syyskuuta 2026 nimeää eduskuntavaalien vaalipäiväksi 18. huhtikuuta 2027. Aikataulu merkitsee äänestykseksi kello 9–20.</p>
+<p><a href="${FI_FI}">Eduskuntavaalit, 18. huhtikuuta 2027</a></p>
+<h2>Henkilötiedot</h2>
+<p>Suomi on Euroopan unionissa, joten yleistä tietosuoja-asetusta sovelletaan. Tietosuojalakia ei luettu pykälittäin. Tämä opas ei julkaise äänioikeusrekisteriä eikä henkilötunnusta.</p>
+<h2>Lähteet</h2>
+<ul>
+<li><a href="https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF">Oikeusministeriö, kirje 16. syyskuuta 2026</a></li>
+<li><a href="https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit">Kuntaliitto, yleiskirje</a></li>
+<li><a href="https://tulospalvelu.vaalit.fi/">tulospalvelu.vaalit.fi</a></li>
+</ul>`,
+    },
+    {
+      path: "/fi/en/",
+      htmlLang: "en",
+      title: "Finland — elections of 2027",
+      description:
+        "National hub for Finland. Parliamentary election on Sunday 18 April 2027. No municipality pages.",
+      h1: "Finland",
+      lede: "National hub in English. No municipality pages. No count before 20:00 Eastern European Summer Time on 18 April 2027.",
+      alternates: fiAlternates,
+      nav: [
+        { href: "/", label: "Map the General" },
+        { href: FI_EN, label: "The election" },
+        { href: "/fi/fi/", label: "Suomi" },
+      ],
+      crumbs: [
+        { name: "Home", path: "/" },
+        { name: "Suomi", path: "/fi/" },
+        { name: "Finland", path: "/fi/en/" },
+      ],
+      bodyHtml: `<h2>The election in this release</h2>
+<p>The Ministry of Justice letter of 16 September 2026 names 18 April 2027 as polling day for the parliamentary election. The timetable prints voting as 09:00–20:00.</p>
+<p><a href="${FI_EN}">Parliamentary election, 18 April 2027</a></p>
+<h2>Personal data</h2>
+<p>Finland is in the European Union, so the GDPR applies. The Data Protection Act was not section-read. This hub publishes no roll and no personal identity code.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://loviisa.oncloudos.com/fi/kuulutus/202681054.80020.PDF">Ministry of Justice, letter of 16 September 2026</a></li>
+<li><a href="https://www.kuntaliitto.fi/yleiskirjeet/2026/vuoden-2027-eduskuntavaalit">Kuntaliitto circular</a></li>
+<li><a href="https://tulospalvelu.vaalit.fi/">tulospalvelu.vaalit.fi</a></li>
+</ul>`,
+    },
+  ],
+};
+
+COUNTRY_HUBS.push(FI_COUNTRY_HUB);
+
 export function countryHubIndex(): HubIndexEntry[] {
   return COUNTRY_HUBS.flatMap((hub) => hub.index);
 }

@@ -54,6 +54,9 @@
 # Netherlands hub and election HTML is generated at build time
 /public/nl/
 
+# Finland hub and election HTML is generated at build time
+/public/fi/
+
 # production
 /build
 

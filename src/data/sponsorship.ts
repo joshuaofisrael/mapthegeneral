@@ -123,6 +123,13 @@ const COPY: Record<HouseAdLang, SlotCopy> = {
     cta: "Reserveer deze plek",
     sold: (name) => `Gesponsord door ${name}`,
   },
+  fi: {
+    label: "Mainoksenne tässä",
+    pitch:
+      "Mainoksenne tässä: yksinoikeudellinen sponsori Israelin vaaliyön tulosten aikana ja seuraavien 3 päivän ajan, 27–30 loka 2026, $1,000.",
+    cta: "Varaa tämä paikka",
+    sold: (name) => `Sponsoroitu: ${name}`,
+  },
 };
 
 /**

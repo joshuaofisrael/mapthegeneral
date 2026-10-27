@@ -11,7 +11,7 @@
 export const HOUSE_AD_IDS = ["namedscan", "rankfootprint"] as const;
 export type HouseAdId = (typeof HOUSE_AD_IDS)[number];
 
-export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et", "nl"] as const;
+export const HOUSE_AD_LANGS = ["en", "es", "fr", "de", "it", "pl", "pt", "he", "sr", "bg", "et", "nl", "fi"] as const;
 export type HouseAdLang = (typeof HOUSE_AD_LANGS)[number];
 
 export const HOUSE_ADS: Record<HouseAdId, { name: string; origin: string }> = {
@@ -339,6 +339,18 @@ const COPY: Record<HouseAdLang, AdCopy> = {
       rankfootprint: RANK_PAID.nl.cta,
     },
   },
+  fi: {
+    sponsored: (name) => `Sponsoroitu: ${name}`,
+    pitch: {
+      namedscan:
+        "Katso, nimeääkö ChatGPT paikallisen yrityksenne, kun asiakkaat kysyvät. NamedScan esittää nämä kysymykset live-verkkohaulla ja näyttää, ketä se suosittelee ja mitä korjata ensin.",
+      rankfootprint: RANK_PAID.fi.pitch,
+    },
+    cta: {
+      namedscan: "Kokeile NamedScan",
+      rankfootprint: RANK_PAID.fi.cta,
+    },
+  },
 };
 
 /** Phrases that must survive in each language, taken from the published offers. */
@@ -389,6 +401,10 @@ const REQUIRED: Record<HouseAdLang, Record<HouseAdId, string[]>> = {
   },
   nl: {
     namedscan: ["ChatGPT", "live zoeken op het web"],
+    rankfootprint: ["$1"],
+  },
+  fi: {
+    namedscan: ["ChatGPT", "live-verkkohaulla"],
     rankfootprint: ["$1"],
   },
 };
@@ -818,6 +834,7 @@ export function selfCheckHouseAds(): string[] {
   }
   if (languageFromRoute("/ee/et/") !== "et") problems.push("path language");
   if (languageFromRoute("/nl/nl/") !== "nl") problems.push("path language");
+  if (languageFromRoute("/fi/fi/") !== "fi") problems.push("path language");
   if (houseAdLangForDocument("zh") !== "en") problems.push("zh document should use the English house ad");
   if (houseAdLangForDocument("es") !== "es") problems.push("Spanish house ad must stay Spanish");
   if (houseAdLangForDocument("bg") !== "bg") problems.push("Bulgarian house ad must stay Bulgarian");

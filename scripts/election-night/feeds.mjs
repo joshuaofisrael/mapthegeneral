@@ -71,6 +71,12 @@ export const FEEDS = [
     hosts: ["verkiezingsuitslagen.nl"],
     preserveSnapshot: true,
   },
+  {
+    id: "fi-2027-04-18",
+    officialUrl: "https://tulospalvelu.vaalit.fi/",
+    hosts: ["tulospalvelu.vaalit.fi"],
+    preserveSnapshot: true,
+  },
 ];
 
 export function feedById(id) {
