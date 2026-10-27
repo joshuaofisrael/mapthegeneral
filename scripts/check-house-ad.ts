@@ -10,14 +10,11 @@ import {
   HOUSE_AD_CSS,
   HOUSE_AD_IDS,
   type HouseAdId,
-  RANKFOOTPRINT_SAMPLE_API,
-  RANKFOOTPRINT_SAMPLE_SCRIPT_PATH,
   freeScanMarker,
   houseAdHtml,
   isEmbedRoute,
   houseAdLangForDocument,
   pageLanguage,
-  rankfootprintSampleScript,
   routeFromHtmlFile,
   selfCheckHouseAds,
 } from "../src/lib/house-ad";
@@ -36,6 +33,9 @@ for (const file of CSS_FILES) {
 
 const houseAdSource = readFileSync(path.join(process.cwd(), "src/lib/house-ad.ts"), "utf8");
 if (/taxdeed|tax deed/i.test(houseAdSource)) errors.push("Tax Deed Pack remains in src/lib/house-ad.ts");
+if (/rankfootprint-sample|sample-status/i.test(houseAdSource)) {
+  errors.push("src/lib/house-ad.ts still references the RankFootprint sample script");
+}
 
 if (process.argv.includes("--self")) {
   if (errors.length) {
@@ -65,6 +65,9 @@ function walk(dir: string) {
     const route = routeFromHtmlFile(rel);
     const html = readFileSync(full, "utf8");
     if (html.toLowerCase().includes("taxdeedpack.com")) errors.push(`${rel}: links to taxdeedpack.com`);
+    if (html.includes("rankfootprint-sample.js") || html.includes("sample-status")) {
+      errors.push(`${rel}: references the RankFootprint sample script`);
+    }
     const cards = html.match(/class="house-ad"/g)?.length ?? 0;
     const skip = isRedirectStub(html) || htmlHead(html) === null || isEmbedRoute(route);
     if (skip) {
@@ -93,18 +96,15 @@ function walk(dir: string) {
     counts[id]++;
     examples[id] ??= `${SITE}${route}`;
     if (expected.includes("<img") || expected.includes("<script")) errors.push(`${rel}: card has a request`);
-    const sampleScripts = html.match(/<script\b[^>]*\bsrc="\/rankfootprint-sample\.js"[^>]*>/gi) ?? [];
     if (id === "rankfootprint") {
-      if (sampleScripts.length !== 1 || !/\bdefer\b/.test(sampleScripts[0])) {
-        errors.push(`${rel}: expected one deferred RankFootprint sample script, found ${sampleScripts.length}`);
-      }
       for (const ad of rankfootprintAnchors(html)) {
         const marker = freeScanMarker(ad);
         if (marker) errors.push(`${rel}: static RankFootprint ad has free-scan wording “${marker}”`);
+        if (!ad.includes("$1 Google Maps rank sample scan")) {
+          errors.push(`${rel}: static RankFootprint ad is missing the $1 line`);
+        }
         if (!ad.includes("$1")) errors.push(`${rel}: static RankFootprint ad is missing $1`);
       }
-    } else if (html.includes(RANKFOOTPRINT_SAMPLE_SCRIPT_PATH)) {
-      errors.push(`${rel}: RankFootprint sample script on a ${id} page`);
     }
     const inner = expected.replace(/^<a\b[^>]*>/, "").replace(/<\/a>$/, "");
     if (inner.includes("<a")) errors.push(`${rel}: nested link`);
@@ -113,13 +113,8 @@ function walk(dir: string) {
 
 if (existsSync(OUT)) {
   walk(OUT);
-  const scriptFile = path.join(OUT, "rankfootprint-sample.js");
-  if (!existsSync(scriptFile)) {
-    errors.push("rankfootprint-sample.js is missing from out/");
-  } else {
-    const js = readFileSync(scriptFile, "utf8");
-    if (js !== rankfootprintSampleScript()) errors.push("rankfootprint-sample.js does not match the generator");
-    if (!js.includes(RANKFOOTPRINT_SAMPLE_API)) errors.push("rankfootprint-sample.js is missing the status API");
+  if (existsSync(path.join(OUT, "rankfootprint-sample.js"))) {
+    errors.push("rankfootprint-sample.js is still in out/");
   }
 }
 
