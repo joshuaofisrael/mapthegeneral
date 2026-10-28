@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 66.2,
-  "asOf": "2026-10-28T09:20:00+02:00",
+  "countedPct": 76.8,
+  "asOf": "2026-10-28T10:58:00+02:00",
   "asOfLabel": {
-    "he": "09:20 שעון ישראל, 28.10.2026",
-    "en": "09:20 Israel time, 28 Oct 2026"
+    "he": "10:58 שעון ישראל, 28.10.2026",
+    "en": "10:58 Israel time, 28 Oct 2026"
   },
-  "copiedAt": "2026-10-28T08:08:05.886Z",
+  "copiedAt": "2026-10-28T09:51:21.593Z",
   "source": {
-    "url": "https://www.ynetnews.com/article/3thj2n57m",
+    "url": "https://www.ynetnews.com/article/hjnatbkaml",
     "name": {
-      "he": "Ynet ו-The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (3,413,319 קולות)",
-      "en": "Ynet and The Times of Israel, reporting partial results published by the Central Elections Committee (3,413,319 votes counted)"
+      "he": "Ynet ו-The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (76.8% מהקלפיות, 70.7% מהקולות). ב-Jerusalem Post דווח על חלוקה שונה במנדט אחד בין ישר! לישראל ביתנו",
+      "en": "Ynet and The Times of Israel, reporting partial results published by the Central Elections Committee (76.8% of ballot boxes, 70.7% of votes). The Jerusalem Post reports a split that differs by one seat between Yashar! and Yisrael Beiteinu"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -22,19 +22,19 @@
       "id": "מחל",
       "he": "הליכוד",
       "en": "Likud",
-      "seats": 28
+      "seats": 27
     },
     {
       "id": "דרך",
       "he": "ישר!",
       "en": "Yashar!",
-      "seats": 21
+      "seats": 20
     },
     {
       "id": "ודם",
       "he": "הרשימה המשותפת",
       "en": "Joint List",
-      "seats": 12
+      "seats": 13
     },
     {
       "id": "רק",
@@ -49,16 +49,16 @@
       "seats": 8
     },
     {
-      "id": "ג",
-      "he": "יהדות התורה",
-      "en": "United Torah Judaism",
-      "seats": 8
-    },
-    {
       "id": "ל",
       "he": "ישראל ביתנו",
       "en": "Yisrael Beiteinu",
       "seats": 8
+    },
+    {
+      "id": "ג",
+      "he": "יהדות התורה",
+      "en": "United Torah Judaism",
+      "seats": 7
     },
     {
       "id": "שס",
@@ -82,19 +82,19 @@
       "id": "עם",
       "he": "רע\"ם",
       "en": "United Arab List (Ra'am)",
-      "seats": 4
+      "seats": 6
     }
   ],
   "belowThreshold": [
     {
       "he": "המילואימניקים והכלכלית",
       "en": "The Reservists",
-      "pct": 2.7
+      "pct": 2.6
     },
     {
       "he": "עמך ישראל",
       "en": "People of Israel (Amcha Yisrael)",
-      "pct": 1.6
+      "pct": 1.7
     },
     {
       "he": "הציבור החרדי",

@@ -1,5 +1,30 @@
 [
   {
+    "time": "2026-10-28T11:50:00+02:00",
+    "headline_en": "Seat table updated to the 76.8% count; Arab-led lists signal openness to a change of government",
+    "body_en": "Our partial seat table now reflects the Committee's 10:58 figures, which Ynet says cover 70.7% of votes cast. By Ynet's breakdown, Likud has 27 seats, Yashar! 20, the Joint List 13 and Together 11, with the blocs unchanged at 54 for Netanyahu's camp, 47 for Eisenkot's and 19 for the Arab-led lists. The Jerusalem Post's tally of the same count gives Yashar! 21 and Yisrael Beiteinu 7, a one-seat difference that leaves the bloc totals the same. Ynet also reports that leaders of the Arab-led parties have indicated they are willing to help form an alternative to the current government. All figures are provisional until double-envelope ballots are counted.",
+    "headline_he": "טבלת המנדטים עודכנה לספירה של 76.8%; הרשימות הערביות מאותתות על נכונות לחילופי שלטון",
+    "body_he": "טבלת המנדטים החלקית אצלנו מבוססת כעת על נתוני הוועדה מ-10:58, שלפי Ynet משקפים 70.7% מהקולות. לפי הפירוט של Ynet, לליכוד 27 מנדטים, לישר! 20, לרשימה המשותפת 13 ולביחד 11, והגושים ללא שינוי: 54 למחנה נתניהו, 47 למחנה איזנקוט ו-19 לרשימות הערביות. ב-Jerusalem Post, על בסיס אותה ספירה, ניתנו לישר! 21 מנדטים ולישראל ביתנו 7, הפרש של מנדט אחד שאינו משנה את סך הגושים. עוד מדווח ב-Ynet כי ראשי המפלגות הערביות הביעו נכונות לסייע בהקמת חלופה לממשלה הנוכחית. כל הנתונים זמניים עד לספירת המעטפות הכפולות.",
+    "sources": [
+      {
+        "name": "Ynet",
+        "url": "https://www.ynetnews.com/article/hjnatbkaml"
+      },
+      {
+        "name": "The Jerusalem Post",
+        "url": "https://www.jpost.com/israel-election-2026/article-913053"
+      },
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog_entry/with-over-76-of-ballots-counted-pro-netanyahu-bloc-at-54-seats-eisenkot-led-bloc-at-47-arab-parties-increase-to-19/"
+      },
+      {
+        "name": "Central Elections Committee results",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T10:58:00+02:00",
     "headline_en": "76.8% counted: Netanyahu bloc 54, Eisenkot bloc 47, Arab parties 19",
     "body_en": "Just over three-quarters of ballot boxes had been counted by 10:58. According to the Central Elections Committee's partial figures, as reported by the Times of Israel, the bloc around Prime Minister Benjamin Netanyahu holds at 54 seats, short of the 61 needed for a majority, while the camp led by Yashar!'s Gadi Eisenkot slips one seat to 47. The Joint List (13) and Ra'am (6) together climb to 19. Reservists, People of Israel and Charedi Public remain below the 3.25% threshold. These numbers are partial: double-envelope ballots, including soldiers' votes, are counted later and could still move seats.",
