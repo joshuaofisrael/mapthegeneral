@@ -146,7 +146,8 @@ export const RELEASE_POLICIES: Record<string, ReleasePolicy> = {
     "2026-11-07T00:00:00+13:00",
     "electionresults.govt.nz is the official source after 19:00 New Zealand daylight time.",
     { label: "electionresults.govt.nz", url: "https://electionresults.govt.nz/" },
-    "From 00:00 to 19:00 New Zealand daylight time on 7 November 2026 this site does not change New Zealand election content, does not ping IndexNow for New Zealand URLs, and does not promote those pages. Existing pages stay as they are. No count is shown before 19:00.",
+    "From 00:00 to 19:00 New Zealand daylight time on 7 November 2026 this site does not change New Zealand election content, does not ping IndexNow for New Zealand URLs, and does not promote those pages. Existing pages stay as they are. No count is shown before 19:00, and none until the Electoral Commission has confirmed that voting places have closed (an official extension keeps it closed).",
+    { requiresEndOfVotingConfirmation: true },
   ),
   "tw-2026-local": policy(
     "Asia/Taipei",
