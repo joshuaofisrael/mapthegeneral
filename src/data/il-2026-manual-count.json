@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 85.6,
-  "asOf": "2026-10-28T15:00:00+02:00",
+  "countedPct": 88.6,
+  "asOf": "2026-10-28T20:48:00+02:00",
   "asOfLabel": {
-    "he": "15:00 שעון ישראל, 28.10.2026",
-    "en": "15:00 Israel time, 28 Oct 2026"
+    "he": "20:48 שעון ישראל, 28.10.2026",
+    "en": "20:48 Israel time, 28 Oct 2026"
   },
-  "copiedAt": "2026-10-28T13:03:13.077Z",
+  "copiedAt": "2026-10-28T20:12:55.000Z",
   "source": {
-    "url": "https://www.ynetnews.com/article/imfrr039t",
+    "url": "https://www.timesofisrael.com/liveblog-october-28-2026/",
     "name": {
-      "en": "Ynet, reporting partial results from the Central Elections Committee (85.6% of votes counted, regular ballots only; double-envelope votes still to come)",
-      "he": "Ynet, לפי התוצאות החלקיות של ועדת הבחירות המרכזית (85.6% מהקולות נספרו, קולות רגילים בלבד; המעטפות הכפולות טרם נספרו)"
+      "en": "The Times of Israel, reporting the Central Elections Committee (88.6% of votes counted, about 96% of regular ballot boxes; double-envelope votes still to come)",
+      "he": "The Times of Israel, לפי ועדת הבחירות המרכזית (88.6% מהקולות נספרו, כ-96% מהקלפיות הרגילות; המעטפות הכפולות טרם נספרו)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
