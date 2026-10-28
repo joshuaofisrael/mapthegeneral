@@ -101,5 +101,288 @@
       "en": "Charedi Public",
       "pct": 0.24
     }
-  ]
+  ],
+  "votes": {
+    "asOf": "2026-10-28T09:53:00+02:00",
+    "asOfLabel": {
+      "he": "09:53 שעון ישראל, 28.10.2026",
+      "en": "09:53 Israel time, 28 Oct 2026"
+    },
+    "source": {
+      "url": "https://votes26.bechirot.gov.il/nationalresults",
+      "name": {
+        "he": "ועדת הבחירות המרכזית (הועתק ידנית; הקובץ הרשמי חסום)",
+        "en": "Central Elections Committee (copied by hand; official feed blocked)"
+      }
+    },
+    "threshold": 3.25,
+    "rows": [
+      {
+        "letters": "מחל",
+        "he": "הליכוד בהנהגת בנימין נתניהו לראשות הממשלה",
+        "en": "Likud",
+        "pct": 21.45,
+        "votes": 732001
+      },
+      {
+        "letters": "דרך",
+        "he": "ישר! עם איזנקוט לראשות הממשלה מאחדים את ישראל",
+        "en": "Yashar!",
+        "pct": 16.24,
+        "votes": 554397
+      },
+      {
+        "letters": "ודם",
+        "he": "הרשימה המשותפת",
+        "en": "Joint List",
+        "pct": 9.46,
+        "votes": 322878
+      },
+      {
+        "letters": "רק",
+        "he": "ביחד בראשות נפתלי בנט",
+        "en": "Together (Bennett)",
+        "pct": 8.82,
+        "votes": 300887
+      },
+      {
+        "letters": "אמת",
+        "he": "הדמוקרטים בראשות יאיר גולן",
+        "en": "The Democrats",
+        "pct": 6.61,
+        "votes": 225455
+      },
+      {
+        "letters": "ג",
+        "he": "יהדות התורה והשבת אגודת ישראל - דגל התורה",
+        "en": "United Torah Judaism",
+        "pct": 6.33,
+        "votes": 216021
+      },
+      {
+        "letters": "ל",
+        "he": "ישראל ביתנו בראשות אביגדור ליברמן",
+        "en": "Yisrael Beiteinu",
+        "pct": 6.13,
+        "votes": 209101
+      },
+      {
+        "letters": "שס",
+        "he": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל",
+        "en": "Shas",
+        "pct": 5.69,
+        "votes": 194069
+      },
+      {
+        "letters": "ב",
+        "he": "עוצמה יהודית בראשות איתמר בן גביר",
+        "en": "Otzma Yehudit",
+        "pct": 5.67,
+        "votes": 193414
+      },
+      {
+        "letters": "ט",
+        "he": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות בראשות משה פייגלין",
+        "en": "Religious Zionism and Zehut",
+        "pct": 4.83,
+        "votes": 165003
+      },
+      {
+        "letters": "עם",
+        "he": "רע\"ם - הרשימה הערבית המאוחדת",
+        "en": "United Arab List (Ra'am)",
+        "pct": 3.43,
+        "votes": 116926
+      },
+      {
+        "letters": "די",
+        "he": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
+        "en": "The Reservists and the Economic Party",
+        "pct": 2.67,
+        "votes": 91130
+      },
+      {
+        "letters": "ך",
+        "he": "עמך ישראל בראשות עופר וינטר",
+        "en": "Amcha Yisrael",
+        "pct": 1.64,
+        "votes": 56045
+      },
+      {
+        "letters": "זך",
+        "he": "הציבור החרדי בראשות מוטי ליטנר",
+        "en": "The Haredi Public",
+        "pct": 0.22,
+        "votes": 7570
+      },
+      {
+        "letters": "נר",
+        "he": "צבע שחור - מגן עולם התורה",
+        "en": "Tzeva Shahor",
+        "pct": 0.21,
+        "votes": 7299
+      },
+      {
+        "letters": "ני",
+        "he": "נעם לישראל למען עתיד הילדים בראשות אבי מעוז",
+        "en": "Noam for Israel",
+        "pct": 0.17,
+        "votes": 5752
+      },
+      {
+        "letters": "בי",
+        "he": "צומת בית ישראל",
+        "en": "Tzomet Beit Yisrael",
+        "pct": 0.11,
+        "votes": 3721
+      },
+      {
+        "letters": "ד",
+        "he": "השותפות לכולם",
+        "en": "Partnership for All",
+        "pct": 0.07,
+        "votes": 2541
+      },
+      {
+        "letters": "צדק",
+        "he": "שרשר לאהבה ואחדות העם",
+        "en": "Sharshar",
+        "pct": 0.04,
+        "votes": 1231
+      },
+      {
+        "letters": "בד",
+        "he": "מפלגת ביחד נצליח - רשימה משותפת ערבית יהודית בראשות אבי שקד",
+        "en": "Together We Will Succeed",
+        "pct": 0.03,
+        "votes": 864
+      },
+      {
+        "letters": "ה",
+        "he": "גן עדן בראשות ישוע ישראל בן דוד",
+        "en": "Gan Eden",
+        "pct": 0.02,
+        "votes": 778
+      },
+      {
+        "letters": "י",
+        "he": "ישראל תחילה בראשות שרן השכל",
+        "en": "Israel First",
+        "pct": 0.02,
+        "votes": 636
+      },
+      {
+        "letters": "רץ",
+        "he": "הקהל - מפלגה כלל חרדית שנציגיה נבחרים על ידי הציבור בראשות הרב שלמה אלבוים",
+        "en": "HaKahal",
+        "pct": 0.02,
+        "votes": 622
+      },
+      {
+        "letters": "נקי",
+        "he": "התיקון לשיטת הבחירות והממשל",
+        "en": "Electoral and Governance Reform",
+        "pct": 0.02,
+        "votes": 619
+      },
+      {
+        "letters": "קך",
+        "he": "סדר-חדש לכינון חוקה, להפרדת רשויות ובחירות אישיות",
+        "en": "New Order",
+        "pct": 0.02,
+        "votes": 526
+      },
+      {
+        "letters": "צף",
+        "he": "הפיראטים - צפים לטוב",
+        "en": "The Pirates",
+        "pct": 0.02,
+        "votes": 512
+      },
+      {
+        "letters": "פה",
+        "he": "אני ואתה מפלגת העם הישראלית",
+        "en": "You and I – Israeli People's Party",
+        "pct": 0.01,
+        "votes": 486
+      },
+      {
+        "letters": "בקר",
+        "he": "אורות השחר בראשות ניסים לוק",
+        "en": "Orot HaShahar",
+        "pct": 0.01,
+        "votes": 442
+      },
+      {
+        "letters": "קץ",
+        "he": "משפט צדק",
+        "en": "Mishpat Tzedek",
+        "pct": 0.01,
+        "votes": 412
+      },
+      {
+        "letters": "קה",
+        "he": "קול הנשים",
+        "en": "Women's Voice",
+        "pct": 0.01,
+        "votes": 409
+      },
+      {
+        "letters": "ק",
+        "he": "תקומה",
+        "en": "Tkuma",
+        "pct": 0.01,
+        "votes": 334
+      },
+      {
+        "letters": "נף",
+        "he": "שמע בראשות נפתלי גולדמן",
+        "en": "Shema",
+        "pct": 0.01,
+        "votes": 291
+      },
+      {
+        "letters": "ז",
+        "he": "בטח - בטחון חברתי בראשות סמיון גרפמן",
+        "en": "Betah – Social Security",
+        "pct": 0.01,
+        "votes": 284
+      },
+      {
+        "letters": "נץ",
+        "he": "ביטחון אישי",
+        "en": "Personal Security",
+        "pct": 0.01,
+        "votes": 254
+      },
+      {
+        "letters": "יק",
+        "he": "גה\"ת - גוש התנ\"כי",
+        "en": "The Biblical Bloc",
+        "pct": 0.01,
+        "votes": 224
+      },
+      {
+        "letters": "זץ",
+        "he": "ברית עולם לגאולת ישראל",
+        "en": "Brit Olam",
+        "pct": 0.0,
+        "votes": 154
+      },
+      {
+        "letters": "צבי",
+        "he": "תנועת אחי תנועתו של הרב יורם אברג'ל זצ\"ל",
+        "en": "Ahi Movement",
+        "pct": 0.0,
+        "votes": 28
+      },
+      {
+        "letters": "כן",
+        "he": "כחול לבן בראשות בני גנץ",
+        "en": "Blue and White",
+        "pct": 0.0,
+        "votes": 3
+      }
+    ]
+  }
 }
