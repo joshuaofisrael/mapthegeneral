@@ -11,7 +11,8 @@
  * Organization's parentOrganization. The publisher stays the brand.
  *
  * Officeholder names already published on the site (Mr Joshua Reynolds MP,
- * Joshua Kim MS) are not the owner and are ignored.
+ * Joshua Kim MS) are not the owner and are ignored. Official New Zealand
+ * electorate candidates whose given name is Joshua are not the owner either.
  *
  * Third-party licence lines (© Commonwealth of Australia, © State of
  * Queensland, © Victorian Electoral Commission, and the like) are not the
@@ -24,7 +25,7 @@ import path from "node:path";
 const OUT = path.join(process.cwd(), "out");
 const ENTITY = path.join(process.cwd(), "src/data/legal-entity.ts");
 const PHRASES = ["joshua israel ventures", "joshua israel", "ji ventures"];
-const OFFICEHOLDERS = ["Joshua Reynolds", "Joshua Kim"];
+const OFFICEHOLDERS = ["Joshua Reynolds", "Joshua Kim", "MOSS, Joshua", "HARFORD, Joshua"];
 const OWNER_ALLOWED = new Set([
   "/terms/",
   "/disclaimer/",

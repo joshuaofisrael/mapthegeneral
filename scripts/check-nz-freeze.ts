@@ -16,13 +16,14 @@ import { NZ_FREEZE_END, NZ_FREEZE_START, NZ_WINDOW_ID, nzFreezeActive } from "..
 const FILES = [
   "src/data/election-seo-nz.ts",
   "src/data/candidates/nz-general-2026.json",
+  "src/data/candidates/nz-electorates-2026.json",
   "src/countries/nz.json",
   "src/data/editorial/batch5.ts",
   "data/review/nz-2026-11-07.md",
 ];
 
 /** Sealed baseline. Update only outside the freeze, in the same commit as a real New Zealand edit. */
-const SEAL = "201eb701e2ae78093e5270af45118ebe8e959cce254d189cedf474bfa76294ba";
+const SEAL = "6bb6b06466ae12f546b308c220cfe0119d48b57696966bc2b88167b715c07a39";
 
 function fileHash(rel: string): string {
   const bytes = readFileSync(path.join(process.cwd(), rel));

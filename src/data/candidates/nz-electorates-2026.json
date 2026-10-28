@@ -1,0 +1,3373 @@
+{
+  "id": "nz-electorates-2026",
+  "langs": [
+    "en"
+  ],
+  "source": {
+    "url": "https://elections.nz/assets/pagecomponent-file-files/Electorate-Candidates-2026.xlsx",
+    "readOn": "2026-10-28",
+    "order": "source",
+    "label": {
+      "en": "Electoral Commission, Electorate Candidates 2026 spreadsheet"
+    },
+    "heading": {
+      "en": "Electorate candidates"
+    },
+    "intro": {
+      "en": "The list below is every row of the Electoral Commission spreadsheet Electorate Candidates 2026. The 9 October 2026 release links that file. On {date} the live file address returned a challenge page, so the copy read that day is the Internet Archive capture of the same address dated 16 October 2026. The workbook’s created time is 9 October 2026. Each row is one electorate candidate and the party, or Independent, printed in the file. The file has 71 electorates and 469 candidates. The Commission’s 2026 media kit says there are 64 general electorates and seven Māori electorates. The seven Māori electorates named on the Commission’s electorate-maps page follow the general electorates below. A profile link is an English Wikipedia introduction read on {date} that identified that person as a New Zealand politician of the same party, or as a leader of that party. Names without that match are not linked. This page does not say which name to mark. Source: {source}."
+    },
+    "orderNote": {
+      "en": "Within each electorate the names stay in the order of that spreadsheet. That order is alphabetical by surname, with Mc sorted as Mac. The Candidate Handbook says electorate candidate names appear alphabetically by surname on the ballot paper."
+    }
+  },
+  "candidates": [
+    {
+      "name": "CHANG, Johan",
+      "surname": "CHANG",
+      "committee": "Opportunity Party",
+      "electorate": "Auckland Central"
+    },
+    {
+      "name": "CHEN, Naisi",
+      "surname": "CHEN",
+      "committee": "Labour Party",
+      "electorate": "Auckland Central",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Naisi_Chen",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "KINSER, Candace",
+      "surname": "KINSER",
+      "committee": "National Party",
+      "electorate": "Auckland Central"
+    },
+    {
+      "name": "MANAIA, Christopher",
+      "surname": "MANAIA",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Auckland Central"
+    },
+    {
+      "name": "MODKOVA, Antonia",
+      "surname": "MODKOVA",
+      "committee": "ACT New Zealand",
+      "electorate": "Auckland Central"
+    },
+    {
+      "name": "SWARBRICK, Chlöe",
+      "surname": "SWARBRICK",
+      "committee": "Green Party",
+      "electorate": "Auckland Central",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Chl%C3%B6e_Swarbrick",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "McLELLAN, Tracey",
+      "surname": "McLELLAN",
+      "committee": "Labour Party",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "PAULING, Craig",
+      "surname": "PAULING",
+      "committee": "Green Party",
+      "electorate": "Banks Peninsula",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Craig_Pauling",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SALES, Lesley Margaret",
+      "surname": "SALES",
+      "committee": "New Zealand Loyal",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "STRINGER, John",
+      "surname": "STRINGER",
+      "committee": "New Zealand First Party",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "TURNBULL, Kyle",
+      "surname": "TURNBULL",
+      "committee": "Alliance Party",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "TURNER, AmyLorraine",
+      "surname": "TURNER",
+      "committee": "Conservative Party NZ",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "WEENINK, Vanessa",
+      "surname": "WEENINK",
+      "committee": "National Party",
+      "electorate": "Banks Peninsula",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Vanessa_Weenink",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WELLMAN, Zac",
+      "surname": "WELLMAN",
+      "committee": "ACT New Zealand",
+      "electorate": "Banks Peninsula"
+    },
+    {
+      "name": "DAHCHE, Ali",
+      "surname": "DAHCHE",
+      "committee": "ACT New Zealand",
+      "electorate": "Botany"
+    },
+    {
+      "name": "LEAVASA, Anae Neru",
+      "surname": "LEAVASA",
+      "committee": "Labour Party",
+      "electorate": "Botany"
+    },
+    {
+      "name": "LUXON, Christopher",
+      "surname": "LUXON",
+      "committee": "National Party",
+      "electorate": "Botany",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Christopher_Luxon",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "STOBO, Craig H.",
+      "surname": "STOBO",
+      "committee": "New Zealand First Party",
+      "electorate": "Botany"
+    },
+    {
+      "name": "ANDERSON, Blair",
+      "surname": "ANDERSON",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "ARNEIL, Mark Russell",
+      "surname": "ARNEIL",
+      "committee": "New Zealand First Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "BYRNES, Greg",
+      "surname": "BYRNES",
+      "committee": "Alliance Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "CARTER, Kahu",
+      "surname": "CARTER",
+      "committee": "Green Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "HAMPTON, George",
+      "surname": "HAMPTON",
+      "committee": "Labour Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "HANSEN, Tubby",
+      "surname": "HANSEN",
+      "committee": "Economic Euthenics",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "LAURIE, Hayden",
+      "surname": "LAURIE",
+      "committee": "Independent",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "SKIPPER, Eden",
+      "surname": "SKIPPER",
+      "committee": "Opportunity Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "STEPHENS, Dale Aotea",
+      "surname": "STEPHENS",
+      "committee": "National Party",
+      "electorate": "Christchurch Central"
+    },
+    {
+      "name": "BUTLER, Teresa",
+      "surname": "BUTLER",
+      "committee": "Green Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "DAVIDS, Alexandra",
+      "surname": "DAVIDS",
+      "committee": "National Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "DAVIDSON, Reuben John",
+      "surname": "DAVIDSON",
+      "committee": "Labour Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "GULLERY, Ethan",
+      "surname": "GULLERY",
+      "committee": "Alliance Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "HOUGHTON, Helen",
+      "surname": "HOUGHTON",
+      "committee": "Conservative Party NZ",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "LAMBERT, Paula",
+      "surname": "LAMBERT",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "MUELLER-CAJAR, David",
+      "surname": "MUELLER-CAJAR",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "SEVERIN, Toni",
+      "surname": "SEVERIN",
+      "committee": "ACT New Zealand",
+      "electorate": "Christchurch East",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Toni_Severin",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SINGH, Vikramjit",
+      "surname": "SINGH",
+      "committee": "Independent",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "THOMPSON, Glenn",
+      "surname": "THOMPSON",
+      "committee": "New Zealand Loyal",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "WIREMU, Shane",
+      "surname": "WIREMU",
+      "committee": "New Zealand First Party",
+      "electorate": "Christchurch East"
+    },
+    {
+      "name": "ANDERSEN, Vincent",
+      "surname": "ANDERSEN",
+      "committee": "New Zealand First Party",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "BENNETT, Glen",
+      "surname": "BENNETT",
+      "committee": "Labour Party",
+      "electorate": "Coromandel",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Glen_Bennett",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "COBB, Ray",
+      "surname": "COBB",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "GREALEY, Pamela",
+      "surname": "GREALEY",
+      "committee": "Green Party",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "HART, Steven",
+      "surname": "HART",
+      "committee": "Independent",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "McCORMICK, Mike",
+      "surname": "McCORMICK",
+      "committee": "ACT New Zealand",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "SIMPSON, Scott",
+      "surname": "SIMPSON",
+      "committee": "National Party",
+      "electorate": "Coromandel"
+    },
+    {
+      "name": "ASUNCION, Kristine",
+      "surname": "ASUNCION",
+      "committee": "National Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "BAINBRIDGE-ZAFAR, David",
+      "surname": "BAINBRIDGE-ZAFAR",
+      "committee": "Opportunity Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "BILLOT, Victor",
+      "surname": "BILLOT",
+      "committee": "Alliance Party",
+      "electorate": "Dunedin",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Victor_Billot",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BROOKING, Rachel",
+      "surname": "BROOKING",
+      "committee": "Labour Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "HERNANDEZ, Francisco Bagkus",
+      "surname": "HERNANDEZ",
+      "committee": "Green Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "McDERMOTT, Adrian",
+      "surname": "McDERMOTT",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "McDONALD-KING, Kym",
+      "surname": "McDONALD-KING",
+      "committee": "New Zealand First Party",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "ONG, Benedict",
+      "surname": "ONG",
+      "committee": "Independent",
+      "electorate": "Dunedin"
+    },
+    {
+      "name": "DICKSON, Gordon John",
+      "surname": "DICKSON",
+      "committee": "Independent",
+      "electorate": "East Cape"
+    },
+    {
+      "name": "HAWKES, Darrin",
+      "surname": "HAWKES",
+      "committee": "ACT New Zealand",
+      "electorate": "East Cape"
+    },
+    {
+      "name": "KIRKPATRICK, Dana Margot",
+      "surname": "KIRKPATRICK",
+      "committee": "National Party",
+      "electorate": "East Cape"
+    },
+    {
+      "name": "LUXTON, Jo",
+      "surname": "LUXTON",
+      "committee": "Labour Party",
+      "electorate": "East Cape",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Jo_Luxton",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SMITH, Cail",
+      "surname": "SMITH",
+      "committee": "Opportunity Party",
+      "electorate": "East Cape"
+    },
+    {
+      "name": "WALKER, Jordan",
+      "surname": "WALKER",
+      "committee": "Green Party",
+      "electorate": "East Cape"
+    },
+    {
+      "name": "LIND, Allan",
+      "surname": "LIND",
+      "committee": "New Zealand Loyal",
+      "electorate": "East Coast Bays"
+    },
+    {
+      "name": "McENROE, Brendan",
+      "surname": "McENROE",
+      "committee": "Labour Party",
+      "electorate": "East Coast Bays"
+    },
+    {
+      "name": "McKEE, Abe",
+      "surname": "McKEE",
+      "committee": "Green Party",
+      "electorate": "East Coast Bays"
+    },
+    {
+      "name": "MILLS, Samuel",
+      "surname": "MILLS",
+      "committee": "ACT New Zealand",
+      "electorate": "East Coast Bays"
+    },
+    {
+      "name": "STANFORD, Erica",
+      "surname": "STANFORD",
+      "committee": "National Party",
+      "electorate": "East Coast Bays",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Erica_Stanford",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "TAYLOR, Vaughan",
+      "surname": "TAYLOR",
+      "committee": "New Zealand First Party",
+      "electorate": "East Coast Bays"
+    },
+    {
+      "name": "BELICH, Camilla",
+      "surname": "BELICH",
+      "committee": "Labour Party",
+      "electorate": "Epsom",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Camilla_Belich",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "GOLDSMITH, Paul",
+      "surname": "GOLDSMITH",
+      "committee": "National Party",
+      "electorate": "Epsom",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Paul_Goldsmith_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "GUMMER, Martin",
+      "surname": "GUMMER",
+      "committee": "New Zealand First Party",
+      "electorate": "Epsom"
+    },
+    {
+      "name": "JACKSON, Paul",
+      "surname": "JACKSON",
+      "committee": "Opportunity Party",
+      "electorate": "Epsom"
+    },
+    {
+      "name": "JERRY, Sawan",
+      "surname": "JERRY",
+      "committee": "Vision New Zealand",
+      "electorate": "Epsom"
+    },
+    {
+      "name": "SEYMOUR, David",
+      "surname": "SEYMOUR",
+      "committee": "ACT New Zealand",
+      "electorate": "Epsom",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/David_Seymour",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "XU-NAN, Lawrence",
+      "surname": "XU-NAN",
+      "committee": "Green Party",
+      "electorate": "Epsom",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Lawrence_Xu-Nan",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "FRENCH, Evan",
+      "surname": "FRENCH",
+      "committee": "Opportunity Party",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "KUMAR, Sunil",
+      "surname": "KUMAR",
+      "committee": "National Party",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "McNEIL, Rob",
+      "surname": "McNEIL",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "NGARO, Alfred",
+      "surname": "NGARO",
+      "committee": "New Zealand First Party",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "ROBERTS, Amanda",
+      "surname": "ROBERTS",
+      "committee": "ACT New Zealand",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "SCHUSTER, Tua",
+      "surname": "SCHUSTER",
+      "committee": "Independent",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "SEPULONI, Carmel Jean",
+      "surname": "SEPULONI",
+      "committee": "Labour Party",
+      "electorate": "Glendene",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Carmel_Sepuloni",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SERHAN, Yasmine",
+      "surname": "SERHAN",
+      "committee": "Green Party",
+      "electorate": "Glendene"
+    },
+    {
+      "name": "DANSEY, Georgie",
+      "surname": "DANSEY",
+      "committee": "Labour Party",
+      "electorate": "Hamilton East",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Georgie_Dansey",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "GIELEN, Jacobus",
+      "surname": "GIELEN",
+      "committee": "Independent",
+      "electorate": "Hamilton East"
+    },
+    {
+      "name": "HAMILTON, Ryan",
+      "surname": "HAMILTON",
+      "committee": "National Party",
+      "electorate": "Hamilton East",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ryan_Hamilton_(New_Zealand_politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LABOYRIE, Nicola",
+      "surname": "LABOYRIE",
+      "committee": "New Zealand First Party",
+      "electorate": "Hamilton East"
+    },
+    {
+      "name": "POCOCK, Naomi",
+      "surname": "POCOCK",
+      "committee": "Opportunity Party",
+      "electorate": "Hamilton East"
+    },
+    {
+      "name": "COUPER, Nathan Lee",
+      "surname": "COUPER",
+      "committee": "New World Order McCann Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "HUTT, Louise",
+      "surname": "HUTT",
+      "committee": "Green Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "PHELPS, Steve",
+      "surname": "PHELPS",
+      "committee": "Independent",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "POKERE-PHILLIPS, Donna",
+      "surname": "POKERE-PHILLIPS",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Hamilton West",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Donna_Pokere-Phillips",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "POTAKA, Tama William",
+      "surname": "POTAKA",
+      "committee": "National Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "SMITH, Blair",
+      "surname": "SMITH",
+      "committee": "Opportunity Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "STONE, Kevin",
+      "surname": "STONE",
+      "committee": "New Zealand First Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "THOMSON, Wiremu",
+      "surname": "THOMSON",
+      "committee": "Independent",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "WILLIAMSON, Myra",
+      "surname": "WILLIAMSON",
+      "committee": "Labour Party",
+      "electorate": "Hamilton West"
+    },
+    {
+      "name": "LUV, Kay",
+      "surname": "LUV",
+      "committee": "Independent",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "NICHOLAS, Angee",
+      "surname": "NICHOLAS",
+      "committee": "National Party",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "PAPALI'I, Kelso",
+      "surname": "PAPALI'I",
+      "committee": "Jobseeker Party",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "PEIRCE, Nick",
+      "surname": "PEIRCE",
+      "committee": "ACT New Zealand",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "TALAGI, John Divine Paola",
+      "surname": "TALAGI",
+      "committee": "Independent",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "TWYFORD, Phil",
+      "surname": "TWYFORD",
+      "committee": "Labour Party",
+      "electorate": "Henderson",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Phil_Twyford",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WELLS, Alika",
+      "surname": "WELLS",
+      "committee": "Green Party",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "WILSON, David Ashley",
+      "surname": "WILSON",
+      "committee": "New Zealand First Party",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "WONG, Almo",
+      "surname": "WONG",
+      "committee": "Opportunity Party",
+      "electorate": "Henderson"
+    },
+    {
+      "name": "ANDERSEN, Ginny",
+      "surname": "ANDERSEN",
+      "committee": "Labour Party",
+      "electorate": "Hutt South",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ginny_Andersen",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BISHOP, Chris",
+      "surname": "BISHOP",
+      "committee": "National Party",
+      "electorate": "Hutt South",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Chris_Bishop",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BOYCE, Alistair",
+      "surname": "BOYCE",
+      "committee": "New Zealand First Party",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "DICK, Malcolm",
+      "surname": "DICK",
+      "committee": "Independent",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "PETTERSON, Tom",
+      "surname": "PETTERSON",
+      "committee": "Socialist Equality Group",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "SMITH, David L F",
+      "surname": "SMITH",
+      "committee": "Independent",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "WHITE, Courtney",
+      "surname": "WHITE",
+      "committee": "Green Party",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "WYLIE-VAN EERD, Ben",
+      "surname": "WYLIE-VAN EERD",
+      "committee": "Opportunity Party",
+      "electorate": "Hutt South"
+    },
+    {
+      "name": "CAMPBELL, Hamish",
+      "surname": "CAMPBELL",
+      "committee": "National Party",
+      "electorate": "Ilam",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Hamish_Campbell",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "DAVIDSON, Mike",
+      "surname": "DAVIDSON",
+      "committee": "Green Party",
+      "electorate": "Ilam"
+    },
+    {
+      "name": "FRASER, Courtney",
+      "surname": "FRASER",
+      "committee": "Alliance Party",
+      "electorate": "Ilam"
+    },
+    {
+      "name": "HARPUR, Ken",
+      "surname": "HARPUR",
+      "committee": "ACT New Zealand",
+      "electorate": "Ilam"
+    },
+    {
+      "name": "JAMIESON, Rata",
+      "surname": "JAMIESON",
+      "committee": "Labour Party",
+      "electorate": "Ilam"
+    },
+    {
+      "name": "WALTON, Nathan",
+      "surname": "WALTON",
+      "committee": "New Zealand First Party",
+      "electorate": "Ilam"
+    },
+    {
+      "name": "GRUMBALL, Anntwinette",
+      "surname": "GRUMBALL",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Invercargill"
+    },
+    {
+      "name": "KENNEDY, Dave",
+      "surname": "KENNEDY",
+      "committee": "Green Party",
+      "electorate": "Invercargill"
+    },
+    {
+      "name": "LEE, Janice",
+      "surname": "LEE",
+      "committee": "Labour Party",
+      "electorate": "Invercargill"
+    },
+    {
+      "name": "SEAGER, Hayden John",
+      "surname": "SEAGER",
+      "committee": "Independent",
+      "electorate": "Invercargill"
+    },
+    {
+      "name": "SIMMONDS, Penny",
+      "surname": "SIMMONDS",
+      "committee": "National Party",
+      "electorate": "Invercargill",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Penny_Simmonds",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "ARBUCKLE, Jamie",
+      "surname": "ARBUCKLE",
+      "committee": "New Zealand First Party",
+      "electorate": "Kaikōura",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Jamie_Arbuckle",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BRITTON, Iain",
+      "surname": "BRITTON",
+      "committee": "Independent",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "FLIGHT, Matt",
+      "surname": "FLIGHT",
+      "committee": "Labour Party",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "HILL-HUGHES, Oliver John",
+      "surname": "HILL-HUGHES",
+      "committee": "Independent",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "HOWARD, Ted",
+      "surname": "HOWARD",
+      "committee": "Independent",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "SMITH, Stuart",
+      "surname": "SMITH",
+      "committee": "National Party",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "SPOONER, Tom",
+      "surname": "SPOONER",
+      "committee": "ACT New Zealand",
+      "electorate": "Kaikōura"
+    },
+    {
+      "name": "BROWN, Zephyr",
+      "surname": "BROWN",
+      "committee": "Green Party",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "COURT, Simon",
+      "surname": "COURT",
+      "committee": "ACT New Zealand",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "DENNIS, Mark",
+      "surname": "DENNIS",
+      "committee": "Independent",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "DOTCOM, Liz",
+      "surname": "DOTCOM",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "EB, Daniel",
+      "surname": "EB",
+      "committee": "Opportunity Party",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "MARCROFT, Jenny",
+      "surname": "MARCROFT",
+      "committee": "New Zealand First Party",
+      "electorate": "Kaipara ki Mahurangi",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Jenny_Marcroft",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "ROWE, Jessica",
+      "surname": "ROWE",
+      "committee": "National Party",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "SWINBURN, Jolyon",
+      "surname": "SWINBURN",
+      "committee": "Labour Party",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "WAGSTAFF, Ivan",
+      "surname": "WAGSTAFF",
+      "committee": "Independent",
+      "electorate": "Kaipara ki Mahurangi"
+    },
+    {
+      "name": "COSTLEY, Tim",
+      "surname": "COSTLEY",
+      "committee": "National Party",
+      "electorate": "Kapiti",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Tim_Costley",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "GAYLOR, Penny",
+      "surname": "GAYLOR",
+      "committee": "New Zealand First Party",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "GOODE, Richard",
+      "surname": "GOODE",
+      "committee": "NAP",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "HANDFORD, Sophie",
+      "surname": "HANDFORD",
+      "committee": "Labour Party",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "SNG, Chee Khiang (CK)",
+      "surname": "SNG",
+      "committee": "Opportunity Party",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "WALKER, Michael",
+      "surname": "WALKER",
+      "committee": "Progressive Party of Aotearoa New Zealand",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "WILLIS, Melody",
+      "surname": "WILLIS",
+      "committee": "Green Party",
+      "electorate": "Kapiti"
+    },
+    {
+      "name": "BLACKSHAW, Jon",
+      "surname": "BLACKSHAW",
+      "committee": "New Zealand First Party",
+      "electorate": "Kenepuru"
+    },
+    {
+      "name": "EDMONDS, Barbara",
+      "surname": "EDMONDS",
+      "committee": "Labour Party",
+      "electorate": "Kenepuru",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Barbara_Edmonds",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "EVETTS, Matthew",
+      "surname": "EVETTS",
+      "committee": "National Party",
+      "electorate": "Kenepuru"
+    },
+    {
+      "name": "MASON, Robert",
+      "surname": "MASON",
+      "committee": "Opportunity Party",
+      "electorate": "Kenepuru"
+    },
+    {
+      "name": "PHAM, Lan",
+      "surname": "PHAM",
+      "committee": "Green Party",
+      "electorate": "Kenepuru",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Lan_Pham",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WESSEX, Bob",
+      "surname": "WESSEX",
+      "committee": "NAP",
+      "electorate": "Kenepuru"
+    },
+    {
+      "name": "AFEAKI, Hine",
+      "surname": "AFEAKI",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "ALP, Kelvyn",
+      "surname": "ALP",
+      "committee": "New Zealand Loyal",
+      "electorate": "Māngere",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Kelvyn_Alp",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BOURKE, Rosemary",
+      "surname": "BOURKE",
+      "committee": "National Party",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "HAU, Vicky",
+      "surname": "HAU",
+      "committee": "New Zealand First Party",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "LANE, Ben",
+      "surname": "LANE",
+      "committee": "Opportunity Party",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "MULIPOLA, Michel",
+      "surname": "MULIPOLA",
+      "committee": "Green Party",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "SINGH, Manu",
+      "surname": "SINGH",
+      "committee": "ACT New Zealand",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "SOSENE, Lemauga Lydia",
+      "surname": "SOSENE",
+      "committee": "Labour Party",
+      "electorate": "Māngere",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Lemauga_Lydia_Sosene",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "TAIONE, Alani Fisher",
+      "surname": "TAIONE",
+      "committee": "People's Party New Zealand",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "TE MOKE, Timoti",
+      "surname": "TE MOKE",
+      "committee": "Independent",
+      "electorate": "Māngere"
+    },
+    {
+      "name": "MAJEED, Ghouse",
+      "surname": "MAJEED",
+      "committee": "National Party",
+      "electorate": "Manurewa"
+    },
+    {
+      "name": "TAVUI, Avalua",
+      "surname": "TAVUI",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Manurewa"
+    },
+    {
+      "name": "TOFILAU TEVAGA, Esther",
+      "surname": "TOFILAU TEVAGA",
+      "committee": "New Zealand First Party",
+      "electorate": "Manurewa"
+    },
+    {
+      "name": "WILLIAMS, Arena",
+      "surname": "WILLIAMS",
+      "committee": "Labour Party",
+      "electorate": "Manurewa",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Arena_Williams",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "ALVAREZ DE LUGO, Juan",
+      "surname": "ALVAREZ DE LUGO",
+      "committee": "ACT New Zealand",
+      "electorate": "Maungakiekie"
+    },
+    {
+      "name": "FLEMING, Greg",
+      "surname": "FLEMING",
+      "committee": "National Party",
+      "electorate": "Maungakiekie",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Greg_Fleming_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LANGEVELD, Keegan",
+      "surname": "LANGEVELD",
+      "committee": "New Zealand First Party",
+      "electorate": "Maungakiekie"
+    },
+    {
+      "name": "PAULL, Derrick",
+      "surname": "PAULL",
+      "committee": "Opportunity Party",
+      "electorate": "Maungakiekie"
+    },
+    {
+      "name": "POWELL, Adam",
+      "surname": "POWELL",
+      "committee": "Green Party",
+      "electorate": "Maungakiekie"
+    },
+    {
+      "name": "RADHAKRISHNAN, Priyanca",
+      "surname": "RADHAKRISHNAN",
+      "committee": "Labour Party",
+      "electorate": "Maungakiekie",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Priyanca_Radhakrishnan",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BONES, Luke",
+      "surname": "BONES",
+      "committee": "Independent",
+      "electorate": "Mt Albert"
+    },
+    {
+      "name": "EDEN-WHAITIRI, Sheldon",
+      "surname": "EDEN-WHAITIRI",
+      "committee": "New Zealand First Party",
+      "electorate": "Mt Albert"
+    },
+    {
+      "name": "LEE, Melissa",
+      "surname": "LEE",
+      "committee": "National Party",
+      "electorate": "Mt Albert"
+    },
+    {
+      "name": "MENENDEZ MARCH, Ricardo",
+      "surname": "MENENDEZ MARCH",
+      "committee": "Green Party",
+      "electorate": "Mt Albert",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ricardo_Men%C3%A9ndez_March",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "PRICE, Alex",
+      "surname": "PRICE",
+      "committee": "ACT New Zealand",
+      "electorate": "Mt Albert"
+    },
+    {
+      "name": "WHITE, Helen",
+      "surname": "WHITE",
+      "committee": "Labour Party",
+      "electorate": "Mt Albert",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Helen_White_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WONG, Qiulae",
+      "surname": "WONG",
+      "committee": "Opportunity Party",
+      "electorate": "Mt Albert",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Qiulae_Wong",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "COXHEAD, Tracey",
+      "surname": "COXHEAD",
+      "committee": "New Zealand First Party",
+      "electorate": "Mt Maunganui"
+    },
+    {
+      "name": "GRATTAN, Caitlin",
+      "surname": "GRATTAN",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Mt Maunganui"
+    },
+    {
+      "name": "GREY, Rhieve",
+      "surname": "GREY",
+      "committee": "Labour Party",
+      "electorate": "Mt Maunganui"
+    },
+    {
+      "name": "LUXTON, Cameron",
+      "surname": "LUXTON",
+      "committee": "ACT New Zealand",
+      "electorate": "Mt Maunganui",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Cameron_Luxton",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "RUTHERFORD, Tom",
+      "surname": "RUTHERFORD",
+      "committee": "National Party",
+      "electorate": "Mt Maunganui",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Tom_Rutherford",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WESTHEAD, Pualele Joan",
+      "surname": "WESTHEAD",
+      "committee": "Green Party",
+      "electorate": "Mt Maunganui"
+    },
+    {
+      "name": "YOUNG, Greer",
+      "surname": "YOUNG",
+      "committee": "New Zealand Loyal",
+      "electorate": "Mt Maunganui"
+    },
+    {
+      "name": "ATTENBOROUGH, Jamie",
+      "surname": "ATTENBOROUGH",
+      "committee": "Opportunity Party",
+      "electorate": "Mt Roskill"
+    },
+    {
+      "name": "CHEUNG, Carlos",
+      "surname": "CHEUNG",
+      "committee": "National Party",
+      "electorate": "Mt Roskill",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Carlos_Cheung",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "DEO, Priyanka",
+      "surname": "DEO",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Mt Roskill"
+    },
+    {
+      "name": "IYER, Anjana",
+      "surname": "IYER",
+      "committee": "Green Party",
+      "electorate": "Mt Roskill"
+    },
+    {
+      "name": "QU, Yang",
+      "surname": "QU",
+      "committee": "ACT New Zealand",
+      "electorate": "Mt Roskill"
+    },
+    {
+      "name": "WOOD, Michael Philip",
+      "surname": "WOOD",
+      "committee": "Labour Party",
+      "electorate": "Mt Roskill",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Michael_Wood_(New_Zealand_politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BOONEN, Roy Peter",
+      "surname": "BOONEN",
+      "committee": "Green Party",
+      "electorate": "Napier"
+    },
+    {
+      "name": "HEDLEY, Alex",
+      "surname": "HEDLEY",
+      "committee": "Labour Party",
+      "electorate": "Napier"
+    },
+    {
+      "name": "LAWRENCE, Te Kira",
+      "surname": "LAWRENCE",
+      "committee": "New Zealand First Party",
+      "electorate": "Napier"
+    },
+    {
+      "name": "NIMON, Katie",
+      "surname": "NIMON",
+      "committee": "National Party",
+      "electorate": "Napier",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Katie_Nimon",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "ORMOND, John",
+      "surname": "ORMOND",
+      "committee": "ACT New Zealand",
+      "electorate": "Napier"
+    },
+    {
+      "name": "WAINWRIGHT, Graham",
+      "surname": "WAINWRIGHT",
+      "committee": "Independent",
+      "electorate": "Napier"
+    },
+    {
+      "name": "BAILLIE, Chris",
+      "surname": "BAILLIE",
+      "committee": "ACT New Zealand",
+      "electorate": "Nelson",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Chris_Baillie_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BOYACK, Rachel",
+      "surname": "BOYACK",
+      "committee": "Labour Party",
+      "electorate": "Nelson",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Rachel_Boyack",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "CAMERON, Blair",
+      "surname": "CAMERON",
+      "committee": "National Party",
+      "electorate": "Nelson"
+    },
+    {
+      "name": "CRAWFORD, Julian",
+      "surname": "CRAWFORD",
+      "committee": "New Zealand Loyal",
+      "electorate": "Nelson"
+    },
+    {
+      "name": "DYER, Bruce",
+      "surname": "DYER",
+      "committee": "Progressive Party of Aotearoa New Zealand",
+      "electorate": "Nelson"
+    },
+    {
+      "name": "KUNTZSCH, Jodie",
+      "surname": "KUNTZSCH",
+      "committee": "Opportunity Party",
+      "electorate": "Nelson"
+    },
+    {
+      "name": "O'NEILL-STEVENS, Rohan",
+      "surname": "O'NEILL-STEVENS",
+      "committee": "Green Party",
+      "electorate": "Nelson"
+    },
+    {
+      "name": "CLINTON-GOHDES, Amanda",
+      "surname": "CLINTON-GOHDES",
+      "committee": "Labour Party",
+      "electorate": "New Plymouth"
+    },
+    {
+      "name": "KANE, Rusty",
+      "surname": "KANE",
+      "committee": "Independent",
+      "electorate": "New Plymouth"
+    },
+    {
+      "name": "LUCAS, Sarah",
+      "surname": "LUCAS",
+      "committee": "Opportunity Party",
+      "electorate": "New Plymouth"
+    },
+    {
+      "name": "MacLEOD, David",
+      "surname": "MacLEOD",
+      "committee": "National Party",
+      "electorate": "New Plymouth"
+    },
+    {
+      "name": "CHHOUR, Karen",
+      "surname": "CHHOUR",
+      "committee": "ACT New Zealand",
+      "electorate": "North Shore",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Karen_Chhour",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "COLLINS, Sam",
+      "surname": "COLLINS",
+      "committee": "Labour Party",
+      "electorate": "North Shore"
+    },
+    {
+      "name": "JACOBSEN, Josh",
+      "surname": "JACOBSEN",
+      "committee": "Green Party",
+      "electorate": "North Shore"
+    },
+    {
+      "name": "KNILL, Holly",
+      "surname": "KNILL",
+      "committee": "Opportunity Party",
+      "electorate": "North Shore"
+    },
+    {
+      "name": "WATTS, Simon",
+      "surname": "WATTS",
+      "committee": "National Party",
+      "electorate": "North Shore",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Simon_Watts",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BIDOIS, Dan",
+      "surname": "BIDOIS",
+      "committee": "National Party",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "CARRINGTON, Lily",
+      "surname": "CARRINGTON",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "DRURY, Marie",
+      "surname": "DRURY",
+      "committee": "Conservative Party NZ",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "FORD, Barak",
+      "surname": "FORD",
+      "committee": "New Zealand Loyal",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "GOODSIR, Bhen",
+      "surname": "GOODSIR",
+      "committee": "Green Party",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "HABRAKEN, Daryl",
+      "surname": "HABRAKEN",
+      "committee": "New Zealand First Party",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "HALBERT, Shanan",
+      "surname": "HALBERT",
+      "committee": "Labour Party",
+      "electorate": "Northcote",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Shanan_Halbert",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LUNDQVIST, Martin",
+      "surname": "LUNDQVIST",
+      "committee": "ACT New Zealand",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "MARSH, Cody",
+      "surname": "MARSH",
+      "committee": "Opportunity Party",
+      "electorate": "Northcote"
+    },
+    {
+      "name": "CAMERON, Mark",
+      "surname": "CAMERON",
+      "committee": "ACT New Zealand",
+      "electorate": "Northland",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Mark_Cameron_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "FINLAYSON, Mike",
+      "surname": "FINLAYSON",
+      "committee": "Green Party",
+      "electorate": "Northland"
+    },
+    {
+      "name": "JONES, Shane",
+      "surname": "JONES",
+      "committee": "New Zealand First Party",
+      "electorate": "Northland",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Shane_Jones",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LATIMER, Ashleigh",
+      "surname": "LATIMER",
+      "committee": "Labour Party",
+      "electorate": "Northland"
+    },
+    {
+      "name": "LYE, Jeffrey",
+      "surname": "LYE",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Northland"
+    },
+    {
+      "name": "LYELL, Douglas Robert",
+      "surname": "LYELL",
+      "committee": "Conservative Party NZ",
+      "electorate": "Northland"
+    },
+    {
+      "name": "McCALLUM, Grant Lewis",
+      "surname": "McCALLUM",
+      "committee": "National Party",
+      "electorate": "Northland"
+    },
+    {
+      "name": "McINTOSH, Richard",
+      "surname": "McINTOSH",
+      "committee": "Independent",
+      "electorate": "Northland"
+    },
+    {
+      "name": "VERHOEVEN, Pete",
+      "surname": "VERHOEVEN",
+      "committee": "New Zealand Loyal",
+      "electorate": "Northland"
+    },
+    {
+      "name": "WAIT, Alistair",
+      "surname": "WAIT",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Northland"
+    },
+    {
+      "name": "ALCOCK, John",
+      "surname": "ALCOCK",
+      "committee": "New Zealand Loyal",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "ARYA, Lalit",
+      "surname": "ARYA",
+      "committee": "National Party",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "DEVOE, Henrietta",
+      "surname": "DEVOE",
+      "committee": "ACT New Zealand",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "FALEU, Phillip Harry",
+      "surname": "FALEU",
+      "committee": "Independent",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "HAUNGA, Eseta",
+      "surname": "HAUNGA",
+      "committee": "People's Party New Zealand",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "MACRAE-MARTIN, Adam",
+      "surname": "MACRAE-MARTIN",
+      "committee": "Opportunity Party",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "MOKARAKA, Karl",
+      "surname": "MOKARAKA",
+      "committee": "Vision New Zealand",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "ROBB, James Gordon",
+      "surname": "ROBB",
+      "committee": "Independent",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "SALESA, Jenny",
+      "surname": "SALESA",
+      "committee": "Labour Party",
+      "electorate": "Ōtāhuhu",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Jenny_Salesa",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SKIPWITH, Te Whatanui Leka",
+      "surname": "SKIPWITH",
+      "committee": "Green Party",
+      "electorate": "Ōtāhuhu"
+    },
+    {
+      "name": "BROWN, Simeon",
+      "surname": "BROWN",
+      "committee": "National Party",
+      "electorate": "Pakuranga",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Simeon_Brown",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "HUANG, Kevin",
+      "surname": "HUANG",
+      "committee": "Opportunity Party",
+      "electorate": "Pakuranga"
+    },
+    {
+      "name": "MATTHEWS, Campbell Henry",
+      "surname": "MATTHEWS",
+      "committee": "Labour Party",
+      "electorate": "Pakuranga"
+    },
+    {
+      "name": "PARMAR, Parmjeet",
+      "surname": "PARMAR",
+      "committee": "ACT New Zealand",
+      "electorate": "Pakuranga",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Parmjeet_Parmar",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BAKER, Brian",
+      "surname": "BAKER",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Palmerston North"
+    },
+    {
+      "name": "BANSAL, Ankit",
+      "surname": "BANSAL",
+      "committee": "National Party",
+      "electorate": "Palmerston North"
+    },
+    {
+      "name": "GHIMIRE, Netra Prasad",
+      "surname": "GHIMIRE",
+      "committee": "Opportunity Party",
+      "electorate": "Palmerston North"
+    },
+    {
+      "name": "MOSS, Joshua",
+      "surname": "MOSS",
+      "committee": "Alliance Party",
+      "electorate": "Palmerston North"
+    },
+    {
+      "name": "TUIONO, Teanau",
+      "surname": "TUIONO",
+      "committee": "Green Party",
+      "electorate": "Palmerston North",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Teanau_Tuiono",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "UTIKERE, Tangi",
+      "surname": "UTIKERE",
+      "committee": "Labour Party",
+      "electorate": "Palmerston North"
+    },
+    {
+      "name": "CHATTERTON, Emma May",
+      "surname": "CHATTERTON",
+      "committee": "National Party",
+      "electorate": "Papakura"
+    },
+    {
+      "name": "DALTON, Angela",
+      "surname": "DALTON",
+      "committee": "Green Party",
+      "electorate": "Papakura"
+    },
+    {
+      "name": "KANONGATA'A, Anahila",
+      "surname": "KANONGATA'A",
+      "committee": "Labour Party",
+      "electorate": "Papakura",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Anahila_Kanongata'a",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SINGH, Malkiat",
+      "surname": "SINGH",
+      "committee": "ACT New Zealand",
+      "electorate": "Papakura"
+    },
+    {
+      "name": "TAMAKI, Hannah",
+      "surname": "TAMAKI",
+      "committee": "Vision New Zealand",
+      "electorate": "Papakura"
+    },
+    {
+      "name": "BRACHI, Matt",
+      "surname": "BRACHI",
+      "committee": "Labour Party",
+      "electorate": "Port Waikato"
+    },
+    {
+      "name": "COSTELLO, Casey",
+      "surname": "COSTELLO",
+      "committee": "New Zealand First Party",
+      "electorate": "Port Waikato",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Casey_Costello",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LOCHEAD-MACMILLAN, Sarah",
+      "surname": "LOCHEAD-MACMILLAN",
+      "committee": "ACT New Zealand",
+      "electorate": "Port Waikato"
+    },
+    {
+      "name": "MORGAN, Carl",
+      "surname": "MORGAN",
+      "committee": "Green Party",
+      "electorate": "Port Waikato"
+    },
+    {
+      "name": "PAUL, Matthew",
+      "surname": "PAUL",
+      "committee": "National Party",
+      "electorate": "Port Waikato"
+    },
+    {
+      "name": "ALLRED, Aaron",
+      "surname": "ALLRED",
+      "committee": "ACT New Zealand",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "HARRIS, Matt",
+      "surname": "HARRIS",
+      "committee": "Opportunity Party",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "McCRACKEN, Kevin",
+      "surname": "McCRACKEN",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "MALAMA, Sange",
+      "surname": "MALAMA",
+      "committee": "Labour Party",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "MEAGER, James",
+      "surname": "MEAGER",
+      "committee": "National Party",
+      "electorate": "Rangitata",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/James_Meager",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "NICHOLSON, Isaac",
+      "surname": "NICHOLSON",
+      "committee": "New Zealand First Party",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "RICHARDS, Dave",
+      "surname": "RICHARDS",
+      "committee": "Green Party",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "THOMAS, Karl",
+      "surname": "THOMAS",
+      "committee": "Conservative Party NZ",
+      "electorate": "Rangitata"
+    },
+    {
+      "name": "BACKHOUSE, Cedric",
+      "surname": "BACKHOUSE",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "GIBSON, Steve",
+      "surname": "GIBSON",
+      "committee": "New Zealand First Party",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "HOGGARD, Andrew",
+      "surname": "HOGGARD",
+      "committee": "ACT New Zealand",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "LONG, Bernard",
+      "surname": "LONG",
+      "committee": "Green Party",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "REDMAYNE, Suze",
+      "surname": "REDMAYNE",
+      "committee": "National Party",
+      "electorate": "Rangitīkei",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Suze_Redmayne",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SEVERINSEN, Karl",
+      "surname": "SEVERINSEN",
+      "committee": "Labour Party",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "SMITH, Jason Michael",
+      "surname": "SMITH",
+      "committee": "New Zealand Loyal",
+      "electorate": "Rangitīkei"
+    },
+    {
+      "name": "DENCH, Victor Edward",
+      "surname": "DENCH",
+      "committee": "Independent",
+      "electorate": "Remutaka"
+    },
+    {
+      "name": "ELDER, Nigel",
+      "surname": "ELDER",
+      "committee": "ACT New Zealand",
+      "electorate": "Remutaka"
+    },
+    {
+      "name": "FOSTER, Andy",
+      "surname": "FOSTER",
+      "committee": "New Zealand First Party",
+      "electorate": "Remutaka",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Andy_Foster",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "HIPKINS, Chris",
+      "surname": "HIPKINS",
+      "committee": "Labour Party",
+      "electorate": "Remutaka",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Chris_Hipkins",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LATEEF, Zabeen",
+      "surname": "LATEEF",
+      "committee": "National Party",
+      "electorate": "Remutaka"
+    },
+    {
+      "name": "NORTON, Chris",
+      "surname": "NORTON",
+      "committee": "Green Party",
+      "electorate": "Remutaka"
+    },
+    {
+      "name": "ROSS, Luke",
+      "surname": "ROSS",
+      "committee": "Opportunity Party",
+      "electorate": "Remutaka"
+    },
+    {
+      "name": "BROWN, Billy",
+      "surname": "BROWN",
+      "committee": "New Zealand First Party",
+      "electorate": "Rotorua"
+    },
+    {
+      "name": "LILEY, Finn",
+      "surname": "LILEY",
+      "committee": "Opportunity Party",
+      "electorate": "Rotorua"
+    },
+    {
+      "name": "McCLAY, Todd",
+      "surname": "McCLAY",
+      "committee": "National Party",
+      "electorate": "Rotorua"
+    },
+    {
+      "name": "WANG, Fisher",
+      "surname": "WANG",
+      "committee": "Labour Party",
+      "electorate": "Rotorua"
+    },
+    {
+      "name": "DE ANDA, Alma",
+      "surname": "DE ANDA",
+      "committee": "Green Party",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "GAUTAM, Sunita",
+      "surname": "GAUTAM",
+      "committee": "Labour Party",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "GRIGG, Nicola",
+      "surname": "GRIGG",
+      "committee": "National Party",
+      "electorate": "Selwyn",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Nicola_Grigg",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LUKE, Jesse",
+      "surname": "LUKE",
+      "committee": "Alliance Party",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "MEE, Adrian",
+      "surname": "MEE",
+      "committee": "Opportunity Party",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "MUNDT, Elizabeth",
+      "surname": "MUNDT",
+      "committee": "New Zealand First Party",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "MURRAY, Iain",
+      "surname": "MURRAY",
+      "committee": "ACT New Zealand",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "RAKOVIC, Zoran",
+      "surname": "RAKOVIC",
+      "committee": "Independent",
+      "electorate": "Selwyn"
+    },
+    {
+      "name": "BEEBE, Bianca",
+      "surname": "BEEBE",
+      "committee": "Opportunity Party",
+      "electorate": "Southland"
+    },
+    {
+      "name": "HERRICK, Jason",
+      "surname": "HERRICK",
+      "committee": "New Zealand First Party",
+      "electorate": "Southland"
+    },
+    {
+      "name": "McDONALD, Peter",
+      "surname": "McDONALD",
+      "committee": "Labour Party",
+      "electorate": "Southland"
+    },
+    {
+      "name": "MACLEAN, Naomi",
+      "surname": "MACLEAN",
+      "committee": "Vision New Zealand",
+      "electorate": "Southland"
+    },
+    {
+      "name": "MOONEY, Joseph",
+      "surname": "MOONEY",
+      "committee": "National Party",
+      "electorate": "Southland"
+    },
+    {
+      "name": "STEPHENSON, Todd",
+      "surname": "STEPHENSON",
+      "committee": "ACT New Zealand",
+      "electorate": "Southland",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Todd_Stephenson",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BYARS, Robbie",
+      "surname": "BYARS",
+      "committee": "ACT New Zealand",
+      "electorate": "Taieri"
+    },
+    {
+      "name": "FRENCH, Matthew",
+      "surname": "FRENCH",
+      "committee": "National Party",
+      "electorate": "Taieri"
+    },
+    {
+      "name": "KNIGHT, Anna",
+      "surname": "KNIGHT",
+      "committee": "Alliance Party",
+      "electorate": "Taieri"
+    },
+    {
+      "name": "LEARY, Ingrid",
+      "surname": "LEARY",
+      "committee": "Labour Party",
+      "electorate": "Taieri",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ingrid_Leary",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "PATTERSON, Mark",
+      "surname": "PATTERSON",
+      "committee": "New Zealand First Party",
+      "electorate": "Taieri"
+    },
+    {
+      "name": "WILLIS, Scott",
+      "surname": "WILLIS",
+      "committee": "Green Party",
+      "electorate": "Taieri",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Scott_Willis_(politician)",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "IKILEI, Elliot",
+      "surname": "IKILEI",
+      "committee": "New Zealand First Party",
+      "electorate": "Takanini",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Elliot_Ikilei",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "NAKHLE, Rima",
+      "surname": "NAKHLE",
+      "committee": "National Party",
+      "electorate": "Takanini",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Rima_Nakhle",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SINGH, Kharag",
+      "surname": "SINGH",
+      "committee": "Labour Party",
+      "electorate": "Takanini"
+    },
+    {
+      "name": "TEIO, Paul",
+      "surname": "TEIO",
+      "committee": "New Zealand Loyal",
+      "electorate": "Takanini"
+    },
+    {
+      "name": "TULLOCH, Lynley",
+      "surname": "TULLOCH",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Takanini"
+    },
+    {
+      "name": "CHRISTMAS, James",
+      "surname": "CHRISTMAS",
+      "committee": "ACT New Zealand",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "HARRIS, Max",
+      "surname": "HARRIS",
+      "committee": "Labour Party",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "HASKELL, Sacha",
+      "surname": "HASKELL",
+      "committee": "Opportunity Party",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "MACKENZIE MAYO, Donald",
+      "surname": "MACKENZIE MAYO",
+      "committee": "Green Party",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "MURALIDHAR, Mahesh",
+      "surname": "MURALIDHAR",
+      "committee": "National Party",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "PAUSINA, Ryan Earl",
+      "surname": "PAUSINA",
+      "committee": "Independent",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "SMITH, Finlay",
+      "surname": "SMITH",
+      "committee": "Independent",
+      "electorate": "Tāmaki"
+    },
+    {
+      "name": "JOVICIC, Ivana",
+      "surname": "JOVICIC",
+      "committee": "ACT New Zealand",
+      "electorate": "Taranaki-King Country"
+    },
+    {
+      "name": "KURIGER, Barbara Joan",
+      "surname": "KURIGER",
+      "committee": "National Party",
+      "electorate": "Taranaki-King Country",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Barbara_Kuriger",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "McCABE, Phil",
+      "surname": "McCABE",
+      "committee": "Green Party",
+      "electorate": "Taranaki-King Country"
+    },
+    {
+      "name": "PATTEMORE, David",
+      "surname": "PATTEMORE",
+      "committee": "Labour Party",
+      "electorate": "Taranaki-King Country"
+    },
+    {
+      "name": "SMITH, Lee",
+      "surname": "SMITH",
+      "committee": "New Zealand First Party",
+      "electorate": "Taranaki-King Country"
+    },
+    {
+      "name": "FLATT, Chris",
+      "surname": "FLATT",
+      "committee": "Labour Party",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "KEARNEY, Celine",
+      "surname": "KEARNEY",
+      "committee": "Green Party",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "NIKOLAO, Itania",
+      "surname": "NIKOLAO",
+      "committee": "Independent",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "PLUMMER, Sam",
+      "surname": "PLUMMER",
+      "committee": "Opportunity Party",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "UPSTON, Louise Claire",
+      "surname": "UPSTON",
+      "committee": "National Party",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "WILSON, Gordon",
+      "surname": "WILSON",
+      "committee": "New Zealand Loyal",
+      "electorate": "Taupō"
+    },
+    {
+      "name": "CARTER, Michael",
+      "surname": "CARTER",
+      "committee": "Opportunity Party",
+      "electorate": "Tauranga"
+    },
+    {
+      "name": "CONNELY, Sam",
+      "surname": "CONNELY",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Tauranga"
+    },
+    {
+      "name": "MALTBY, Tim",
+      "surname": "MALTBY",
+      "committee": "Independent",
+      "electorate": "Tauranga"
+    },
+    {
+      "name": "NORTON, Bryan",
+      "surname": "NORTON",
+      "committee": "ACT New Zealand",
+      "electorate": "Tauranga"
+    },
+    {
+      "name": "OOSTHUIZEN, Daniël",
+      "surname": "OOSTHUIZEN",
+      "committee": "Green Party",
+      "electorate": "Tauranga"
+    },
+    {
+      "name": "TINETTI, Jan",
+      "surname": "TINETTI",
+      "committee": "Labour Party",
+      "electorate": "Tauranga",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Jan_Tinetti",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "UFFINDELL, Sam",
+      "surname": "UFFINDELL",
+      "committee": "National Party",
+      "electorate": "Tauranga",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Sam_Uffindell",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "DOUGLAS, Rob",
+      "surname": "DOUGLAS",
+      "committee": "ACT New Zealand",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "LONGWORTH, Mark Norman",
+      "surname": "LONGWORTH",
+      "committee": "Green Party",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "MANNING, Romana (Marnz)",
+      "surname": "MANNING",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "RANDELL, Taine",
+      "surname": "RANDELL",
+      "committee": "New Zealand First Party",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "SCOTT, Dan",
+      "surname": "SCOTT",
+      "committee": "Labour Party",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "SETON, Grant",
+      "surname": "SETON",
+      "committee": "Independent",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "TOSH, Allister David",
+      "surname": "TOSH",
+      "committee": "Independent",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "WARD, Rachel",
+      "surname": "WARD",
+      "committee": "Opportunity Party",
+      "electorate": "Tukituki"
+    },
+    {
+      "name": "WEDD, Catherine",
+      "surname": "WEDD",
+      "committee": "National Party",
+      "electorate": "Tukituki",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Catherine_Wedd",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BARAL, Hannah Pia",
+      "surname": "BARAL",
+      "committee": "Labour Party",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "BREWER, Cameron",
+      "surname": "BREWER",
+      "committee": "National Party",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "GRIFFITHS, Jonathon",
+      "surname": "GRIFFITHS",
+      "committee": "Independent",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "PATROS, Panos",
+      "surname": "PATROS",
+      "committee": "ACT New Zealand",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "RICHARDS, Ryan",
+      "surname": "RICHARDS",
+      "committee": "Green Party",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "SOARES, Bernadette",
+      "surname": "SOARES",
+      "committee": "New Zealand First Party",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "TEVAGA, Romeo",
+      "surname": "TEVAGA",
+      "committee": "Opportunity Party",
+      "electorate": "Upper Harbour"
+    },
+    {
+      "name": "COOKSON, Robert John",
+      "surname": "COOKSON",
+      "committee": "New Zealand First Party",
+      "electorate": "Waikato"
+    },
+    {
+      "name": "PARMAR, Ash",
+      "surname": "PARMAR",
+      "committee": "ACT New Zealand",
+      "electorate": "Waikato"
+    },
+    {
+      "name": "ROBINSON, Turi Te Kamonga",
+      "surname": "ROBINSON",
+      "committee": "Independent",
+      "electorate": "Waikato"
+    },
+    {
+      "name": "TOKO, Jamie",
+      "surname": "TOKO",
+      "committee": "Labour Party",
+      "electorate": "Waikato"
+    },
+    {
+      "name": "VAN DE MOLEN, Tim",
+      "surname": "VAN DE MOLEN",
+      "committee": "National Party",
+      "electorate": "Waikato",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Tim_van_de_Molen",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WHYTE, Brendan Richard",
+      "surname": "WHYTE",
+      "committee": "Independent",
+      "electorate": "Waikato"
+    },
+    {
+      "name": "BETTRIDGE, Ashley",
+      "surname": "BETTRIDGE",
+      "committee": "ACT New Zealand",
+      "electorate": "Waimakariri"
+    },
+    {
+      "name": "DOOCEY, Matt",
+      "surname": "DOOCEY",
+      "committee": "National Party",
+      "electorate": "Waimakariri",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Matt_Doocey",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "FARRELLY, Jackie",
+      "surname": "FARRELLY",
+      "committee": "New Zealand First Party",
+      "electorate": "Waimakariri"
+    },
+    {
+      "name": "ROSEWARNE, Dan",
+      "surname": "ROSEWARNE",
+      "committee": "Labour Party",
+      "electorate": "Waimakariri",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Dan_Rosewarne",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WESLEY, Richard",
+      "surname": "WESLEY",
+      "committee": "Green Party",
+      "electorate": "Waimakariri"
+    },
+    {
+      "name": "ALE, Victoria",
+      "surname": "ALE",
+      "committee": "Alliance Party",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "BUTTERICK, Mike",
+      "surname": "BUTTERICK",
+      "committee": "National Party",
+      "electorate": "Wairarapa",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Mike_Butterick",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "CRAIG, Lauren",
+      "surname": "CRAIG",
+      "committee": "Green Party",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "GARDNER, Jared Warren",
+      "surname": "GARDNER",
+      "committee": "Te Pāti Hira",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "McANULTY, Kieran",
+      "surname": "McANULTY",
+      "committee": "Labour Party",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "MARK, Ron",
+      "surname": "MARK",
+      "committee": "New Zealand First Party",
+      "electorate": "Wairarapa",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ron_Mark",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SHEPHERD, Matt",
+      "surname": "SHEPHERD",
+      "committee": "Opportunity Party",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "YOUNG, Barry",
+      "surname": "YOUNG",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Wairarapa"
+    },
+    {
+      "name": "ABEL, Steve",
+      "surname": "ABEL",
+      "committee": "Green Party",
+      "electorate": "Waitākere",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Steve_Abel",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LOHENI, Agnes",
+      "surname": "LOHENI",
+      "committee": "National Party",
+      "electorate": "Waitākere",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Agnes_Loheni",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "O'KEEFE, Bianca",
+      "surname": "O'KEEFE",
+      "committee": "Independent",
+      "electorate": "Waitākere"
+    },
+    {
+      "name": "ROACH, Mark",
+      "surname": "ROACH",
+      "committee": "Opportunity Party",
+      "electorate": "Waitākere"
+    },
+    {
+      "name": "SHERIDAN, Callum",
+      "surname": "SHERIDAN",
+      "committee": "ACT New Zealand",
+      "electorate": "Waitākere"
+    },
+    {
+      "name": "WALTERS, Vanushi",
+      "surname": "WALTERS",
+      "committee": "Labour Party",
+      "electorate": "Waitākere",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Vanushi_Walters",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "ANDERSON, Miles John",
+      "surname": "ANDERSON",
+      "committee": "National Party",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "BEAMISH, Sean",
+      "surname": "BEAMISH",
+      "committee": "ACT New Zealand",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "GRAAMANS, Adrian Daegal",
+      "surname": "GRAAMANS",
+      "committee": "Independent",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "JUDGE, Bronwyn",
+      "surname": "JUDGE",
+      "committee": "Independent",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "LAWS, Michael",
+      "surname": "LAWS",
+      "committee": "New Zealand First Party",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "O'CONNOR, Damien",
+      "surname": "O'CONNOR",
+      "committee": "Labour Party",
+      "electorate": "Waitaki",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Damien_O'Connor",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "SHAND, Daniel",
+      "surname": "SHAND",
+      "committee": "Independent",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "TAIT, Helen",
+      "surname": "TAIT",
+      "committee": "Opportunity Party",
+      "electorate": "Waitaki"
+    },
+    {
+      "name": "ANDERSON, Liam",
+      "surname": "ANDERSON",
+      "committee": "Money Free Party NZ",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "GENTER, Julie Anne",
+      "surname": "GENTER",
+      "committee": "Green Party",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "KINGDON-BEBB, Kayla",
+      "surname": "KINGDON-BEBB",
+      "committee": "Opportunity Party",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "McDONALD, Donald DS",
+      "surname": "McDONALD",
+      "committee": "Independent",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "McKEE, Nicole",
+      "surname": "McKEE",
+      "committee": "ACT New Zealand",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "MUTHU, Karunā",
+      "surname": "MUTHU",
+      "committee": "National Party",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "RENNEY, Craig",
+      "surname": "RENNEY",
+      "committee": "Labour Party",
+      "electorate": "Wellington Bays",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Craig_Renney",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WARNER, Gerald",
+      "surname": "WARNER",
+      "committee": "New Zealand First Party",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "WELSH, Bruce",
+      "surname": "WELSH",
+      "committee": "Independent",
+      "electorate": "Wellington Bays"
+    },
+    {
+      "name": "APPLEBY, Michael",
+      "surname": "APPLEBY",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "ARNEIL, Taylor",
+      "surname": "ARNEIL",
+      "committee": "New Zealand First Party",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "HAGUE, Matthew",
+      "surname": "HAGUE",
+      "committee": "ACT New Zealand",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "HAMMOND, Jessica",
+      "surname": "HAMMOND",
+      "committee": "Opportunity Party",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "HARFORD, Joshua",
+      "surname": "HARFORD",
+      "committee": "Alliance Party",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "PAUL, Tamatha",
+      "surname": "PAUL",
+      "committee": "Green Party",
+      "electorate": "Wellington North",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Tamatha_Paul",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "PITTS, Jonathan",
+      "surname": "PITTS",
+      "committee": "National Party",
+      "electorate": "Wellington North"
+    },
+    {
+      "name": "VERRALL, Ayesha",
+      "surname": "VERRALL",
+      "committee": "Labour Party",
+      "electorate": "Wellington North",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Ayesha_Verrall",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "BEAUMONT, Andrew Charles",
+      "surname": "BEAUMONT",
+      "committee": "Green Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "CLEINE, Jamie",
+      "surname": "CLEINE",
+      "committee": "New Zealand First Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "DYATLOVA-MURPHY, Sara",
+      "surname": "DYATLOVA-MURPHY",
+      "committee": "Alliance Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "GREY, Sue",
+      "surname": "GREY",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "HISLOP, Alexander",
+      "surname": "HISLOP",
+      "committee": "New Zealand Loyal",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "HOCKING, Janelle",
+      "surname": "HOCKING",
+      "committee": "ACT New Zealand",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "MILNE, Katie",
+      "surname": "MILNE",
+      "committee": "National Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "OSMASTON, Richard Francis",
+      "surname": "OSMASTON",
+      "committee": "Money Free Party NZ",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "PATERSON, Rory William",
+      "surname": "PATERSON",
+      "committee": "Labour Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "ROOKE, Kevin",
+      "surname": "ROOKE",
+      "committee": "Progressive Party of Aotearoa New Zealand",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "UDDSTROM, Cindie",
+      "surname": "UDDSTROM",
+      "committee": "Opportunity Party",
+      "electorate": "West Coast-Tasman"
+    },
+    {
+      "name": "BATES, Carl",
+      "surname": "BATES",
+      "committee": "National Party",
+      "electorate": "Whanganui",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Carl_Bates",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "COFFEY, Juan Charles",
+      "surname": "COFFEY",
+      "committee": "Balance New Zealand",
+      "electorate": "Whanganui"
+    },
+    {
+      "name": "HIPANGO-BROWNLIE, Harete",
+      "surname": "HIPANGO-BROWNLIE",
+      "committee": "New Zealand First Party",
+      "electorate": "Whanganui"
+    },
+    {
+      "name": "KYLE, Sandra",
+      "surname": "KYLE",
+      "committee": "Animal Justice Party Aotearoa New Zealand",
+      "electorate": "Whanganui"
+    },
+    {
+      "name": "ROBERTS, Angela",
+      "surname": "ROBERTS",
+      "committee": "Labour Party",
+      "electorate": "Whanganui"
+    },
+    {
+      "name": "FAITHFULL, Brenton Bruce",
+      "surname": "FAITHFULL",
+      "committee": "New Zealand Loyal",
+      "electorate": "Whangaparāoa"
+    },
+    {
+      "name": "MITCHELL, Mark",
+      "surname": "MITCHELL",
+      "committee": "National Party",
+      "electorate": "Whangaparāoa"
+    },
+    {
+      "name": "MULLER PALLARÈS, Estefania",
+      "surname": "MULLER PALLARÈS",
+      "committee": "Labour Party",
+      "electorate": "Whangaparāoa"
+    },
+    {
+      "name": "ROZA, Helena",
+      "surname": "ROZA",
+      "committee": "ACT New Zealand",
+      "electorate": "Whangaparāoa"
+    },
+    {
+      "name": "BEHARRELL, Luke",
+      "surname": "BEHARRELL",
+      "committee": "Money Free Party NZ",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "BLACKMAN, Collin",
+      "surname": "BLACKMAN",
+      "committee": "New Zealand Loyal",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "BUDD, Lloyd Sam",
+      "surname": "BUDD",
+      "committee": "National Party",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "CLOTWORTHY, Daryl Warren",
+      "surname": "CLOTWORTHY",
+      "committee": "Independent",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "COCURULLO, Vince",
+      "surname": "COCURULLO",
+      "committee": "New Zealand First Party",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "DELLABARCA, Simon",
+      "surname": "DELLABARCA",
+      "committee": "Opportunity Party",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "GRAHAM, Doug",
+      "surname": "GRAHAM",
+      "committee": "ACT New Zealand",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "PAYINDA, Gary",
+      "surname": "PAYINDA",
+      "committee": "Labour Party",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "TWYMAN, Jon",
+      "surname": "TWYMAN",
+      "committee": "Independent",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "WAKELAM, Noah",
+      "surname": "WAKELAM",
+      "committee": "NZ Outdoors & Freedom Party",
+      "electorate": "Whangārei"
+    },
+    {
+      "name": "ALEXANDER, William Donald",
+      "surname": "ALEXANDER",
+      "committee": "Free Palestine",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "McCLURE, Laura",
+      "surname": "McCLURE",
+      "committee": "ACT New Zealand",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "McTAGUE, Geoff",
+      "surname": "McTAGUE",
+      "committee": "Independent",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "PANDEY, Shreejan",
+      "surname": "PANDEY",
+      "committee": "Green Party",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "PARK, Bryce",
+      "surname": "PARK",
+      "committee": "New Zealand First Party",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "SUMMERFIELD, Tracy",
+      "surname": "SUMMERFIELD",
+      "committee": "National Party",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "YANZICK, Dominik",
+      "surname": "YANZICK",
+      "committee": "Labour Party",
+      "electorate": "Wigram"
+    },
+    {
+      "name": "DENBY, Neil",
+      "surname": "DENBY",
+      "committee": "Independent",
+      "electorate": "Hauraki-Waikato"
+    },
+    {
+      "name": "KIRIONA, Kingi",
+      "surname": "KIRIONA",
+      "committee": "Labour Party",
+      "electorate": "Hauraki-Waikato"
+    },
+    {
+      "name": "MAIPI-CLARKE, Hana-Rawhiti",
+      "surname": "MAIPI-CLARKE",
+      "committee": "Te Pāti Māori",
+      "electorate": "Hauraki-Waikato",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Hana-Rawhiti_Maipi-Clarke",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "MAXWELL, Haley",
+      "surname": "MAXWELL",
+      "committee": "Te Pāti Māori",
+      "electorate": "Ikaroa-Rāwhiti"
+    },
+    {
+      "name": "TANGAERE-MANUEL, Cushla",
+      "surname": "TANGAERE-MANUEL",
+      "committee": "Labour Party",
+      "electorate": "Ikaroa-Rāwhiti",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Cushla_Tangaere-Manuel",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "TE AU-SKIPWORTH, Heather",
+      "surname": "TE AU-SKIPWORTH",
+      "committee": "Green Party",
+      "electorate": "Ikaroa-Rāwhiti"
+    },
+    {
+      "name": "KAIPARA, Oriini",
+      "surname": "KAIPARA",
+      "committee": "Te Pāti Māori",
+      "electorate": "Tāmaki Makaurau",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Oriini_Kaipara",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "LEONI, Kerrin",
+      "surname": "LEONI",
+      "committee": "Labour Party",
+      "electorate": "Tāmaki Makaurau"
+    },
+    {
+      "name": "TE OHAERE, Florence",
+      "surname": "TE OHAERE",
+      "committee": "Green Party",
+      "electorate": "Tāmaki Makaurau"
+    },
+    {
+      "name": "KĀTENE, Te Pūoho",
+      "surname": "KĀTENE",
+      "committee": "Labour Party",
+      "electorate": "Te Tai Hauāuru"
+    },
+    {
+      "name": "NGAREWA-PACKER, Debbie",
+      "surname": "NGAREWA-PACKER",
+      "committee": "Te Pāti Māori",
+      "electorate": "Te Tai Hauāuru",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Debbie_Ngarewa-Packer",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "RAUKAWA, Coral",
+      "surname": "RAUKAWA",
+      "committee": "National Party",
+      "electorate": "Te Tai Hauāuru"
+    },
+    {
+      "name": "BARKLEY, Karl",
+      "surname": "BARKLEY",
+      "committee": "Your PIC Party",
+      "electorate": "Te Tai Tokerau"
+    },
+    {
+      "name": "EDWARDS, Aperahama",
+      "surname": "EDWARDS",
+      "committee": "Te Pāti Māori",
+      "electorate": "Te Tai Tokerau"
+    },
+    {
+      "name": "HERBERT, Maki",
+      "surname": "HERBERT",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Te Tai Tokerau"
+    },
+    {
+      "name": "KAPA-KINGI, Mariameno",
+      "surname": "KAPA-KINGI",
+      "committee": "Te Tai Tokerau Party",
+      "electorate": "Te Tai Tokerau"
+    },
+    {
+      "name": "LYNDON, Hūhana",
+      "surname": "LYNDON",
+      "committee": "Green Party",
+      "electorate": "Te Tai Tokerau",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/H%C5%ABhana_Lyndon",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "PRIME, Willow-Jean",
+      "surname": "PRIME",
+      "committee": "Labour Party",
+      "electorate": "Te Tai Tokerau",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Willow-Jean_Prime",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "FERRIS, Tākuta",
+      "surname": "FERRIS",
+      "committee": "Independent",
+      "electorate": "Te Tai Tonga",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/T%C4%81kuta_Ferris",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "FISHER, Christine",
+      "surname": "FISHER",
+      "committee": "New Zealand Loyal",
+      "electorate": "Te Tai Tonga"
+    },
+    {
+      "name": "HENARE, Tania Lee",
+      "surname": "HENARE",
+      "committee": "Aotearoa Legalise Cannabis Party",
+      "electorate": "Te Tai Tonga"
+    },
+    {
+      "name": "MURCH, Lisa",
+      "surname": "MURCH",
+      "committee": "Te Pāti Māori",
+      "electorate": "Te Tai Tonga"
+    },
+    {
+      "name": "RAMSDEN, Mananui",
+      "surname": "RAMSDEN",
+      "committee": "Labour Party",
+      "electorate": "Te Tai Tonga"
+    },
+    {
+      "name": "TE MORENGA, Lisa",
+      "surname": "TE MORENGA",
+      "committee": "Green Party",
+      "electorate": "Te Tai Tonga"
+    },
+    {
+      "name": "BOYNTON, Toni",
+      "surname": "BOYNTON",
+      "committee": "Labour Party",
+      "electorate": "Waiariki"
+    },
+    {
+      "name": "WAIKATO, Tania",
+      "surname": "WAIKATO",
+      "committee": "Green Party",
+      "electorate": "Waiariki"
+    },
+    {
+      "name": "WAITITI, Rawiri",
+      "surname": "WAITITI",
+      "committee": "Te Pāti Māori",
+      "electorate": "Waiariki",
+      "links": [
+        {
+          "href": "https://en.wikipedia.org/wiki/Rawiri_Waititi",
+          "kind": "profile"
+        }
+      ]
+    },
+    {
+      "name": "WHAREWERA, Pāpā",
+      "surname": "WHAREWERA",
+      "committee": "Opportunity Party",
+      "electorate": "Waiariki"
+    }
+  ]
+}

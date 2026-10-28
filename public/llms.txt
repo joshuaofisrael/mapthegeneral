@@ -59742,7 +59742,7 @@
 - [Bulgaria presidential election, 1 November 2026](https://mapthegeneral.com/bg/en/elections/president-2026/)
 - [New Zealand](https://mapthegeneral.com/nz/)
 - [New Zealand](https://mapthegeneral.com/nz/en/)
-- [New Zealand general election, 7 November 2026](https://mapthegeneral.com/nz/en/elections/general-2026/)
+- [New Zealand general election, 7 November 2026](https://mapthegeneral.com/nz/en/elections/general-election/)
 - [Eesti](https://mapthegeneral.com/ee/)
 - [Eesti](https://mapthegeneral.com/ee/et/)
 - [Estonia](https://mapthegeneral.com/ee/en/)
@@ -59793,7 +59793,7 @@ Netherlands (https://mapthegeneral.com/nl/): National hub. Provincial States and
 
 Norway (https://mapthegeneral.com/no/): National hub in English. The Valgdirektoratet page published 21 May 2026 says the next Storting election is in September 2029. It does not name the day. No municipality pages and no candidate names.
 
-New Zealand (https://mapthegeneral.com/nz/): National hub. General election on Saturday 7 November 2026, voting places 9am to 7pm. Parties seeking the party vote follow the Electoral Commission’s 9 October 2026 alphabetical list. No municipality pages and no count before 7:00 pm New Zealand daylight time.
+New Zealand (https://mapthegeneral.com/nz/): National hub. General election on Saturday 7 November 2026, voting places 9am to 7pm. Parties seeking the party vote follow the Electoral Commission’s 9 October 2026 alphabetical list. Electorate candidates are the Commission’s spreadsheet for all 71 electorates. No municipality pages and no count before 7:00 pm New Zealand daylight time.
 
 Poland (https://mapthegeneral.com/pl/): Sejm and Senate: the constitutional window is 14 October to 12 November 2027, and the President sets the day. A Senate by-election in constituency 20 is ordered for 22 November 2026. This release has the national page, 16 voivodeships, 380 powiats, 2,479 gminas, 41 Sejm constituencies and 100 Senate constituencies, in Polish and English. Candidate lists and wards are not in this release.
 

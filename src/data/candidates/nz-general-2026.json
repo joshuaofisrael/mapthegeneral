@@ -12,7 +12,7 @@
       "en": "Parties seeking the party vote"
     },
     "intro": {
-      "en": "The parties below are the registered parties the Electoral Commission listed, in alphabetical order, as seeking the party vote, in the release read on {date}. Each link is the Chief Electoral Officer’s party-list file, which prints that party’s list candidates in list order. Electorate candidates are published by electorate on vote.nz and are not retyped here. Source: {source}."
+      "en": "The parties below are the registered parties the Electoral Commission listed, in alphabetical order, as seeking the party vote, in the release read on {date}. Each link is the Chief Electoral Officer’s party-list file, which prints that party’s list candidates in list order. Electorate candidates are in the next section. Source: {source}."
     },
     "orderNote": {
       "en": "The order is the alphabetical order in that release. The Candidate Handbook describes a different layout on the ballot paper: electorate candidates alphabetical by surname, with party-only parties alphabetical after the parties that also contest an electorate."

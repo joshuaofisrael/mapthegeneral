@@ -99,6 +99,12 @@ export type ElectionSeoProfile = {
    * `{{candidates}}` in bodyHtml where the list should sit.
    */
   candidateListId?: string;
+  /**
+   * A second list, rendered at `{{electorates}}` as per-electorate sections.
+   * It does not add a second ItemList. The party or notice list stays
+   * `candidateListId`.
+   */
+  electorateListId?: string;
   homeLinks: HomeElectionLink[];
   pages: ElectionSeoPage[];
 };

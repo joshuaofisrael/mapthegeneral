@@ -61,7 +61,7 @@ const REQUIRED = [
   "/bg/en/elections/president-2026/",
   "/bg/bg/elections/prezident-2026/",
   "/nz/en/",
-  "/nz/en/elections/general-2026/",
+  "/nz/en/elections/general-election/",
   "/ee/en/",
   "/ee/et/",
   "/ee/en/elections/riigikogu-2027/",
