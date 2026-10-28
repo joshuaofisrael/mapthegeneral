@@ -3,6 +3,7 @@ import { Hemicycle, colorMap, partyName, type IlDoc, type IlRow } from "@/compon
 export { Hemicycle, colorMap, partyName, type IlDoc, type IlRow };
 
 import { useEffect, useMemo, useState } from "react";
+import manualCount from "@/data/il-2026-manual-count.json";
 import {
   IL_CEC_RESULTS,
   IL_ELIGIBLE,
@@ -24,6 +25,7 @@ const T = {
     countdown: "הקלפיות נסגרות בעוד",
     countdownNote: "הספירה הרשמית תוצג כאן מיד עם סגירת הקלפיות ב-22:00 (שעון ישראל). לפני כן לא יוצגו כאן סקרים, מדגמים או נתונים כלשהם.",
     units: ["ימים", "שעות", "דקות", "שניות"],
+    awaitingManual: "קובץ הנתונים האוטומטי של הוועדה עדיין לא זמין לנו. הספירה החלקית שלמעלה הועתקה ידנית עם מקור; לוח זה יתעדכן אוטומטית כשהקובץ יהיה זמין.",
     awaiting: "הקלפיות נסגרו. ממתינים לנתוני הספירה הראשונים של ועדת הבחירות המרכזית. העמוד מתעדכן אוטומטית.",
     preliminary: "ספירה רשמית ראשונית",
     final: "ספירת קולות סופית של הוועדה",
@@ -62,6 +64,7 @@ const T = {
     countdown: "Polls close in",
     countdownNote: "The official count appears here as soon as polls close at 22:00 Israel time. Until then this page shows no polls, exit polls or numbers of any kind.",
     units: ["days", "hours", "min", "sec"],
+    awaitingManual: "The Committee's automatic data file isn't reachable from our servers yet. The partial count above is copied by hand with its source; this board fills in automatically once the file is available.",
     awaiting: "Polls have closed. Waiting for the first Central Elections Committee count. This page updates automatically.",
     preliminary: "Preliminary official count",
     final: "Final Committee count",
@@ -367,9 +370,13 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
     return (
       <div className="space-y-4">
         <IlUpdatedStamp lang={lang} doc={doc} receivedAt={receivedAt} />
-        <div className="rounded-xl border border-notice-line bg-notice-wash p-5 text-navy-deep" role="status" aria-live="polite">
-          {t.awaiting}
-        </div>
+        {manualCount.active ? (
+          <p className="text-xs text-ink-soft" data-il-awaiting-manual>{t.awaitingManual}</p>
+        ) : (
+          <div className="rounded-xl border border-notice-line bg-notice-wash p-5 text-navy-deep" role="status" aria-live="polite">
+            {t.awaiting}
+          </div>
+        )}
         {stale && (
           <div className="rounded-xl border border-notice-line bg-notice-wash p-4 text-navy-deep" role="status">
             {ilStaleNotice(lang, false)}
