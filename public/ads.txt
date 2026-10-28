@@ -1,5 +1,1 @@
 google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0
-
-#Ezoic ads.txt (AdsTxtManager)
-ownerdomain=mapthegeneral.com
-managerdomain=ezoic.ai
