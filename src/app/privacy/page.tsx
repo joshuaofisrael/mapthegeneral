@@ -59,12 +59,12 @@ export default function PrivacyPage() {
           <li>Messages you choose to send us by email or through the contact form (delivered by FormSubmit).</li>
           <li>Visit counts: the site uses Cloudflare Web Analytics, which is cookieless and counts page views without setting cookies or using local storage.</li>
           <li>Analytics, only if you click Accept: Google Analytics cookies and usage data, as described below.</li>
-          <li>Advertising: Google may set cookies when AdSense ads are served. See Advertising below.</li>
+          <li>Advertising: Google may set cookies when AdSense ads are served, and Ezoic loads its scripts and consent tool on every page. See Advertising below.</li>
         </ul>
         <h2>What we do not collect</h2>
         <ul>
           <li>We do not set our own cookies. The analytics choice is kept in this browser’s local storage and is not a tracking cookie. Google Analytics cookies are set only if you click Accept.</li>
-          <li>We do not use social-media pixels, or any advertising network other than Google AdSense. Google Analytics is not loaded unless you click Accept.</li>
+          <li>We do not use social-media pixels, or any advertising network other than Google AdSense and Ezoic. Google Analytics is not loaded unless you click Accept.</li>
           <li>We do not collect national identity numbers, voter numbers, or ballot images.</li>
           <li>We do not sell personal information.</li>
         </ul>
@@ -184,6 +184,16 @@ export default function PrivacyPage() {
           consent before those advertising cookies are used. The message is Google’s consent message
           for European regulations. It is shown through the AdSense script. This site does not add a
           second advertising consent banner.
+        </p>
+        <p>
+          {SITE.name} also loads scripts from Ezoic Inc. (ezojs.com, ezoicanalytics.com) and Ezoic’s
+          Gatekeeper consent tool (gatekeeperconsent.com) on every page. Ezoic may use cookies and
+          similar technologies to serve, measure and improve ads. Gatekeeper asks visitors in the
+          European Economic Area and the United Kingdom for consent. Ezoic’s privacy policy is at{" "}
+          <a href="https://www.ezoic.com/privacy-policy/" rel="noopener noreferrer">
+            https://www.ezoic.com/privacy-policy/
+          </a>
+          .
         </p>
         <p>
           Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
