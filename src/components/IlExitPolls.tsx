@@ -12,7 +12,7 @@ const COLOR: Record<string, string> = {
 };
 
 const DISCLAIMER = {
-  en: "These are unofficial exit-poll projections published by TV channels, not official results. Official results come only from the Central Elections Committee.",
+  en: "These are unofficial TV seat samples published by television channels, not official results. Official results come only from the Central Elections Committee.",
   he: "אלה תחזיות לא רשמיות של מדגמי טלוויזיה שפרסמו ערוצי הטלוויזיה, לא תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית.",
 } as const;
 
@@ -89,7 +89,7 @@ export function IlExitPolls({ lang }: { lang: IlLang }) {
           also: "גם דווח ב",
         }
       : {
-          title: "Unofficial exit polls (TV projections)",
+          title: "Unofficial TV seat samples",
           chart: "The bars use the latest complete sample from each channel. The colour marks the channel.",
           majority: "Dashed line: 61 seats for a majority.",
           party: "List",

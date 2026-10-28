@@ -554,7 +554,7 @@ export const ilEn: Guide = {
     },
     {
       q: "Does this site publish polls?",
-      a: "The results pages, after 22:00 Israel time, may show seat counts published by television channels in a section marked unofficial. Those counts are not official results. Vote totals in the results section come from the Central Elections Committee. Any seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation.",
+      a: "The results pages, after 22:00 Israel time, may show seat counts published by television channels in a section marked unofficial. Those counts are not official results. Vote totals in the results section are copied by hand from the Central Elections Committee results site, and seat numbers are copied from a named media report. This site does not calculate seats.",
     },
   ],
   sourcesHeading: "Official pages",

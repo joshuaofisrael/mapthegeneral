@@ -29,7 +29,7 @@ export function IlEmbed() {
           <strong dir="ltr">
             {Math.floor(left / 36e5)}:{String(Math.floor(left / 6e4) % 60).padStart(2, "0")}:{String(Math.floor(left / 1e3) % 60).padStart(2, "0")}
           </strong>
-          . {he ? "ספירת הוועדה תוצג כאן לאחר סגירת הקלפיות. חלוקת מנדטים שתחושב ממנה אינה רשמית." : "The Committee count appears here after polls close. Seats calculated from it are unofficial."}
+          . {he ? "תוצאות חלקיות ולא רשמיות, עם מקור ושעת עדכון, בעמוד התוצאות. האתר אינו מחשב מנדטים." : "Partial, unofficial results, each with a source and as-of time, are on the results page. This site does not calculate seats."}
         </p>
       ) : rows.length === 0 ? (
         <div className="mt-2 space-y-2">

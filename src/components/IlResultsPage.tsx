@@ -5,7 +5,6 @@ import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { IlExitPolls } from "@/components/IlExitPolls";
-import { IlLiveResults } from "@/components/IlLiveResults";
 import { IlManualCount } from "@/components/IlManualCount";
 import { IL_UPDATES, IlLiveUpdates } from "@/components/IlLiveUpdates";
 import { Hemicycle, colorMap, type IlDoc, type IlRow } from "@/components/IlShared";
@@ -98,7 +97,7 @@ const L = {
     sources: "מקורות",
     feed: "קובץ הנתונים (JSON)",
     related: "עוד באתר",
-    method: `שיטה: הנתונים נמשכים מקובץ התוצאות של ועדת הבחירות המרכזית כל דקה. ${IL_SEAT_LABEL.he} אין כאן סקרים, מדגמים או תחזיות.`,
+    method: "שיטה: קובץ התוצאות של הוועדה חסום מחוץ לישראל, ולכן הנתונים מוזנים ידנית. לכל טבלה מקור אחד ושעת עדכון. האתר אינו מחשב מנדטים. מדגמי הטלוויזיה מוצגים רק במדור הנפרד שלהם. אין כאן סקרים או תחזיות. קובץ ה-JSON מתעד רק את בדיקות הקובץ הרשמי ואינו מכיל תוצאות.",
     other: "English version",
     seats: "מנדטים",
     votes: "קולות",
@@ -117,7 +116,7 @@ const L = {
     sources: "Sources",
     feed: "Data file (JSON)",
     related: "More on Map the General",
-    method: `Method: the data is read from the Central Elections Committee results file every minute. ${IL_SEAT_LABEL.en} No polls or forecasts.`,
+    method: "Method: the Committee's results file is blocked outside Israel, so figures are entered by hand. Each table has one source and an as-of time. This site does not calculate seats. TV seat samples appear only in their own section. No polls or forecasts. The JSON file only logs checks of the official file and holds no results.",
     other: "גרסה בעברית",
     seats: "Seats",
     votes: "Votes",
@@ -213,9 +212,9 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
       url,
       inLanguage: lang,
       dateModified: modified(doc),
-      isBasedOn: "https://cdn-votes26.bechirot.gov.il/",
+      isBasedOn: "https://votes26.bechirot.gov.il/nationalresults",
       creator: { "@type": "Organization", name: SITE.name, url: SITE.url },
-      distribution: [{ "@type": "DataDownload", encodingFormat: "application/json", contentUrl: liveFeedHref }],
+      
     },
     {
       "@context": "https://schema.org",
@@ -247,7 +246,6 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
         <h2 id="live" className="mb-3 text-2xl font-bold text-ink">{l.live}</h2>
         <p className="mb-3 text-sm font-semibold text-ink" data-il-seat-label>{IL_SEAT_LABEL[lang]}</p>
         <IlManualCount lang={lang} />
-        <IlLiveResults lang={lang} initial={doc} />
         <p className="mt-3 text-xs text-ink-soft">
           {l.method}{" "}
           <a className="underline" href={liveFeedHref} rel="noopener noreferrer">
