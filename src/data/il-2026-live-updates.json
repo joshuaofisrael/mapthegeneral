@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-28T10:05:00+02:00",
+    "headline_en": "Seat table refreshed: Likud 28, Yashar! 21 on the latest partial count",
+    "body_en": "Ynet has translated the Committee's latest partial tally of 3,413,319 votes into seats. On that basis Likud has 28, Yashar! 21, the Joint List 12, Together 11, and the Democrats, United Torah Judaism and Yisrael Beiteinu 8 each. Shas and Otzma Yehudit have 7 each, Religious Zionism and Zehut 6, and Ra'am 4. Counting the blocs the same way, that is 56 for the Netanyahu camp, 48 for the Eisenkot camp and 16 for the Arab parties, matching the Times of Israel's 09:20 figures. No bloc has the 61 seats needed, and the double-envelope ballots, soldiers' votes among them, are still to be counted, so these numbers can change.",
+    "headline_he": "טבלת המנדטים עודכנה: הליכוד 28, ישר! 21 בספירה החלקית האחרונה",
+    "body_he": "Ynet המיר למנדטים את הספירה החלקית האחרונה של ועדת הבחירות, 3,413,319 קולות. לפי חישוב זה לליכוד 28 מנדטים, לישר! 21, לרשימה המשותפת 12, לביחד 11, ולדמוקרטים, ליהדות התורה ולישראל ביתנו 8 כל אחת. לש\"ס ולעוצמה יהודית 7 כל אחת, להציונות הדתית וזהות 6 ולרע\"ם 4. בחלוקה לגושים: 56 למחנה נתניהו, 48 למחנה איזנקוט ו-16 למפלגות הערביות, בהתאם לנתוני The Times of Israel מ-09:20. אף גוש אינו מגיע ל-61 המנדטים הדרושים, וקולות המעטפות הכפולות, ובהם קולות החיילים, טרם נספרו, כך שהנתונים עשויים להשתנות.",
+    "sources": [
+      {
+        "name": "Ynet",
+        "url": "https://www.ynetnews.com/article/3thj2n57m"
+      },
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog_entry/with-over-66-of-ballots-counted-netanyahu-led-bloc-at-56-seats/"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T09:53:00+02:00",
     "headline_en": "Committee's latest partial vote shares: Likud 21.45%, Yashar! 16.24%",
     "body_en": "The Central Elections Committee's national results page, checked at 09:53, still shows a partial count. Likud leads on 21.45% of valid votes, followed by Yashar! (16.24%), the Joint List (9.46%), Together (8.82%), the Democrats (6.61%), United Torah Judaism (6.33%), Yisrael Beiteinu (6.13%), Shas (5.69%), Otzma Yehudit (5.67%), Religious Zionism (4.83%) and Ra'am (3.43%). For now the Reservists (2.67%) and People of Israel (1.64%) sit under the 3.25% threshold. These shares are not final and will shift as remaining ballots, including double envelopes, are added.",
