@@ -10,7 +10,7 @@ const T = {
   he: {
     h: "ספירה חלקית (הועתקה ידנית)",
     label: (pct: string, time: string) => `ספירה חלקית, ${pct}% נספרו, נכון ל-${time}. מקור:`,
-    notFinal: "אינה תוצאה סופית. הנתונים ישתנו עם המשך הספירה, כולל המעטפות הכפולות. הועתקו ידנית כי קובץ התוצאות של הוועדה חסום לגישה מחוץ לישראל. נפרד ממדגמי הטלוויזיה.",
+    notFinal: "אינה תוצאה סופית. הנתונים ישתנו עם המשך הספירה, כולל המעטפות הכפולות. הועתקו ידנית כי קובץ התוצאות של הוועדה חסום לגישה מחוץ לישראל. אינם מספרי הטלוויזיה שבמדור הנפרד למטה.",
     official: "אתר התוצאות של ועדת הבחירות המרכזית",
     party: "רשימה",
     seats: "מנדטים (חלקי)",
@@ -19,7 +19,7 @@ const T = {
   en: {
     h: "Partial count (copied by hand)",
     label: (pct: string, time: string) => `Partial count, ${pct}% counted, as of ${time}. Source:`,
-    notFinal: "Not final. Figures will change as counting continues, including double-envelope votes. Copied by hand because the Committee's results file is blocked outside Israel. Separate from the TV exit polls.",
+    notFinal: "Not final. Figures will change as counting continues, including double-envelope votes. Copied by hand because the Committee's results file is blocked outside Israel. Not the TV seat samples shown in the separate section below.",
     official: "Central Elections Committee results site",
     party: "List",
     seats: "Seats (partial)",
