@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-28T15:30:00+02:00",
+    "headline_en": "Herzog urges parties to avoid a repeat election as count pauses at 85.6%",
+    "body_en": "President Isaac Herzog called on party leaders to do all they can to prevent another round of voting and asked them to come to coalition talks with \"an open mind\", the Times of Israel reports. He said he expects to receive the official results next week from Supreme Court Justice Noam Sohlberg before consulting each Knesset faction. The Central Elections Committee's partial figures stay at 53 seats for Netanyahu's bloc, 48 for Eisenkot's and 19 for the Arab-led lists, and the paper says no further update is expected today. Ynet reports that counting of the double-envelope ballots is due to start around midnight and finish on Thursday evening.",
+    "headline_he": "הרצוג קורא למפלגות למנוע בחירות חוזרות; הספירה נעצרה על 85.6%",
+    "body_he": "הנשיא יצחק הרצוג קרא לראשי המפלגות לעשות כל שביכולתם כדי למנוע סבב בחירות נוסף, וביקש מהם להגיע למגעים להרכבת הממשלה \"בראש פתוח\", כך מדווח טיימס אוף ישראל. לדבריו, הוא צפוי לקבל את התוצאות הרשמיות בשבוע הבא משופט בית המשפט העליון נועם סולברג ולאחר מכן ייפגש עם כל סיעות הכנסת. לפי הנתונים החלקיים של הוועדה, גוש נתניהו נותר עם 53 מנדטים, גוש איזנקוט עם 48 והרשימות הערביות עם 19, ולפי העיתון לא צפוי עדכון נוסף היום. לפי ynet, ספירת המעטפות הכפולות אמורה להתחיל סביב חצות ולהסתיים ביום חמישי בערב.",
+    "sources": [
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+      },
+      {
+        "name": "Ynet",
+        "url": "https://www.ynetnews.com/article/hjnatbkaml"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T15:00:00+02:00",
     "headline_en": "Regular ballots nearly all counted: Netanyahu bloc 53, Eisenkot bloc 48, Arab-led lists 19",
     "body_en": "With 85.6% of votes tallied and only the double-envelope ballots left, Likud slips to 26 seats while Bennett's Together rises to 12, Ynet reports from Central Elections Committee data. Yashar holds 21 and the Joint List 12. Neither bloc reaches the 61 seats needed for a majority, and soldiers' and other absentee ballots, estimated at around 600,000 by the Times of Israel, could still shift seats.",
