@@ -4,6 +4,7 @@ import { countryHubs } from "@/lib/country-hubs";
 import { ElectionLawNotice } from "./ElectionLawNotice";
 import { IlResultsBanner } from "./IlResultsLinks";
 import { HouseAd } from "./HouseAd";
+import { BannerAd, TopBanner } from "./BannerAd";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 
@@ -21,7 +22,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <IlResultsBanner />
       <ElectionLawNotice />
       <main id="main" className="mx-auto w-full max-w-site flex-1 px-4 py-8 sm:py-10">
+        <TopBanner />
         {children}
+        <BannerAd size="300x250" className="flex" />
       </main>
       <SiteFooter />
     </div>
