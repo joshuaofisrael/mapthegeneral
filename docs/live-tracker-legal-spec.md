@@ -9,8 +9,10 @@ Feeds for the November 2026 contests are `https://mapthegeneral.com/il-live/<win
 That prefix is the existing Cloudflare Worker route for the `il-live-data` branch.
 No new route is required if the worker already proxies `/il-live/*`. If it is pinned
 to `/il-live/il-2026-knesset/*` only, the route has to be widened to `/il-live/*`.
-This repository cannot edit that Cloudflare route. Bulgaria’s page also reads
-`/il-live/bg-2026-11-01/results.json` and falls back to `/live/bg-2026-11-01.json`.
+This repository cannot edit that Cloudflare route. Bulgaria’s election pages and the runoff results pages
+(`/bg/bg/results/`, `/bg/en/results/`) read
+`/il-live/bg-2026-11-01/results.json` and fall back to `/live/bg-2026-11-01.json`.
+A challenged or non-JSON response from results.cik.bg publishes no figures.
 New Zealand’s page reads `/il-live/nz-2026-11-07/results.json` and falls back to
 `/live/nz-2026-11-07.json`. Taiwan’s pages read `/il-live/tw-2026-local/results.json`
 and fall back to `/live/tw-2026-local.json`. The Commission’s 16 July 2026 report

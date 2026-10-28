@@ -43,6 +43,20 @@ export const COUNTRY_HUBS: CountryHub[] = [
       { path: "/bg/en/", lang: "en", title: "Bulgaria", kind: "country", text: "Bulgaria presidential election 1 November 2026 Central Election Commission" },
       { path: LOCAL, lang: "bg", title: "Избор за президент, 1 ноември 2026 г.", kind: "election", text: "избор за президент и вицепрезидент 1 ноември 2026 балотаж ЦИК" },
       { path: EN, lang: "en", title: "Bulgaria presidential election, 1 November 2026", kind: "election", text: "Bulgaria president vice president 1 November 2026 runoff Central Election Commission" },
+      {
+        path: "/bg/bg/results/",
+        lang: "bg",
+        title: "Резултати от балотажа 2026",
+        kind: "election",
+        text: "резултати от балотажа 2026 президентски избори 2026 резултати кой печели втория тур Централна избирателна комисия",
+      },
+      {
+        path: "/bg/en/results/",
+        lang: "en",
+        title: "Bulgaria presidential runoff results 2026",
+        kind: "election",
+        text: "Bulgaria presidential election 2026 results runoff 1 November Central Election Commission",
+      },
     ],
     pages: [
       {
@@ -66,7 +80,8 @@ export const COUNTRY_HUBS: CountryHub[] = [
           { name: "България", path: "/bg/" },
         ],
         bodyHtml: `<p><a href="/bg/bg/">Български</a> · <a href="/bg/en/">English</a></p>
-<p>Страницата за избора е <a href="${LOCAL}">евентуален нов избор на 1 ноември 2026 г.</a></p>`,
+<p>Страницата за избора е <a href="${LOCAL}">евентуален нов избор на 1 ноември 2026 г.</a></p>
+<p>Официалният брой е на <a href="/bg/bg/results/">Резултати от балотажа 2026</a>. <a href="/bg/en/results/">English</a>.</p>`,
       },
       {
         path: "/bg/bg/",
@@ -80,6 +95,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
         nav: [
           { href: "/", label: "Map the General" },
           { href: EN, label: "Изборът" },
+          { href: "/bg/bg/results/", label: "Резултати" },
           { href: "/bg/en/", label: "English" },
         ],
         crumbs: [
@@ -90,6 +106,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
         bodyHtml: `<h2>Изборът в това издание</h2>
 <p>Централната избирателна комисия е публикувала таблицата за 25 октомври 2026 г. и решения за хартиените бюлетини за евентуален нов избор за президент и вицепрезидент на 1 ноември 2026 г. Страницата на избора дава реда от октомврийската таблица, часовете и източниците. Заглавията за 1 ноември още казват „евентуален“ и не се четат тук като решение коя двойка е избрана.</p>
 <p><a href="${LOCAL}">Избор за президент, 1 ноември 2026 г.</a></p>
+<p><a href="/bg/bg/results/">Резултати от балотажа 2026</a>. <a href="/bg/en/results/">English</a>.</p>
 <h2>Лични данни</h2>
 <p>България е в Европейския съюз, затова Общият регламент относно защитата на данните важи за лични данни. Тази страница не публикува избирателни списъци, снимки или единен граждански номер. Имена на кандидати се добавят само когато Комисията ги публикува.</p>
 <h2>Източници</h2>
@@ -110,6 +127,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
         nav: [
           { href: "/", label: "Map the General" },
           { href: LOCAL, label: "The election" },
+          { href: "/bg/en/results/", label: "Results" },
           { href: "/bg/bg/", label: "Български" },
         ],
         crumbs: [
@@ -120,6 +138,7 @@ export const COUNTRY_HUBS: CountryHub[] = [
         bodyHtml: `<h2>The election in this release</h2>
 <p>The Central Election Commission has published the 25 October 2026 table and decisions on the paper ballots for a possible new election for president and vice president on 1 November 2026. The election page gives the October table’s order, the hours and the sources. The November titles still say the new election is possible and are not read here as a decision that a pair was elected.</p>
 <p><a href="${EN}">Presidential election, 1 November 2026</a></p>
+<p><a href="/bg/en/results/">Presidential runoff results</a>. <a href="/bg/bg/results/">Български</a>.</p>
 <h2>Personal data</h2>
 <p>Bulgaria is in the European Union, so the General Data Protection Regulation applies to personal data. This hub publishes no electoral roll, no photographs and no national identity number. Candidate names are added only when the Commission publishes them.</p>
 <h2>Sources</h2>

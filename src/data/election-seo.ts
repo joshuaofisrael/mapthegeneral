@@ -59,6 +59,11 @@ export type ElectionSeoPage = {
   faqs: FaqItem[];
   relatedHeading: string;
   related: { href: string; label: string }[];
+  /**
+   * The shared night board is added for every page whose election has night
+   * copy. Set this when the page already has its own board.
+   */
+  suppressNight?: boolean;
   /** Existing narrative, already escaped. Inserted before the key-dates section. */
   bodyHtml: string;
   sourcesHeading: string;

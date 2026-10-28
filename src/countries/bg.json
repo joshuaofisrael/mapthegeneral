@@ -19,6 +19,14 @@
     {
       "href": "/bg/en/elections/president-2026/",
       "label": "Presidential election, 1 November 2026"
+    },
+    {
+      "href": "/bg/bg/results/",
+      "label": "Резултати от балотажа 2026"
+    },
+    {
+      "href": "/bg/en/results/",
+      "label": "Runoff results"
     }
   ]
 }

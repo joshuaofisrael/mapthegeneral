@@ -1,9 +1,11 @@
 {
-  "id": "bg-2026-11-01",
-  "source": "Централна избирателна комисия",
-  "sourceUrl": "https://results.cik.bg/",
+  "schema": 1,
+  "election": "bg-2026-11-01",
+  "trackerOpensAt": "2026-11-01T21:00:00+02:00",
+  "stage": "pre",
   "fetchedAt": null,
   "sourceUpdated": null,
-  "status": "closed",
+  "source": "https://results.cik.bg/",
+  "officialStatus": "none",
   "results": []
 }

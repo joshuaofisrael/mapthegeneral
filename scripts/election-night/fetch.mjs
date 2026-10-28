@@ -98,9 +98,15 @@ async function readOfficial(feed, now) {
       accept: "application/json,text/json",
     },
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) {
+    const challenged = res.status === 403 || res.status === 429 || res.status === 503 || Boolean(res.headers.get("cf-mitigated"));
+    throw new Error(challenged ? `challenged HTTP ${res.status}` : `HTTP ${res.status}`);
+  }
   const type = res.headers.get("content-type") ?? "";
-  if (!type.includes("json") && !parsed.pathname.endsWith(".json")) return null;
+  if (!type.includes("json") && !parsed.pathname.endsWith(".json")) {
+    console.warn(`${feed.id}: official response is not a JSON count file; awaiting, no count`);
+    return null;
+  }
   return acceptOfficial(feed.id, await res.json());
 }
 

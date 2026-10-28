@@ -19,6 +19,8 @@ const BROCHURE =
 const RESULTS = "https://results.cik.bg/";
 const LOCAL = "/bg/bg/elections/prezident-2026/";
 const EN = "/bg/en/elections/president-2026/";
+const RESULTS_BG = "/bg/bg/results/";
+const RESULTS_EN = "/bg/en/results/";
 const OPENS = "2026-11-01T21:00:00+02:00";
 
 function night(copy: {
@@ -106,6 +108,7 @@ ${bgResultsTableHtml()}
 <p>Двете най-големи разпределения са № 25 и № 4. Нито една двойка няма повече от половината от отпечатаното разпределение. Тази страница не обявява избрана двойка.</p>
 <h2>Предишни официални резултати</h2>
 <p>Указателят на резултатите показва президентски избори на 14 ноември 2021 г., 6 ноември 2016 г. и 23 октомври 2011 г. Техните сборове не са преписани тук. <a href="${BG_ARCHIVE}">Указател на Комисията</a>.</p>
+<p>Официалният брой за 1 ноември е на страницата <a href="${RESULTS_BG}">Резултати от балотажа 2026</a>. <a href="${RESULTS_EN}">English</a>.</p>
 <h2>Изборна нощ</h2>
 <p>Тук няма брой преди 21:00 ч. българско време на 1 ноември 2026 г. След това страницата чете само файл от същия сайт. Ако файлът липсва, връзката е към услугата на Комисията. На страницата няма прогноза.</p>
 ${NIGHT_BG}`;
@@ -123,6 +126,7 @@ ${bgResultsTableHtml()}
 <p>The two largest shares are no. 25 and no. 4. No pair has more than half of the printed distribution. This page does not declare a pair elected. Decisions No. 405-PVR and No. 415-PVR do not print a separate two-name order for 1 November.</p>
 <h2>Earlier official results</h2>
 <p>The results index lists presidential elections on 14 November 2021, 6 November 2016 and 23 October 2011. Those totals are not copied here. <a href="${BG_ARCHIVE}">Commission results index</a>.</p>
+<p>The official count for 1 November is on the <a href="${RESULTS_EN}">runoff results page</a>. <a href="${RESULTS_BG}">Български</a>.</p>
 <h2>Election night</h2>
 <p>No count is shown here before 21:00 Bulgaria time on 1 November 2026. After that hour the page reads only a same-origin file. If the file is missing, the link is the Commission’s results service. This page has no forecast.</p>
 ${NIGHT_EN}`;
@@ -133,6 +137,22 @@ const alternates = [
   { hreflang: "x-default", path: LOCAL },
 ];
 
+const resultAlternates = [
+  { hreflang: "bg", path: RESULTS_BG },
+  { hreflang: "en", path: RESULTS_EN },
+  { hreflang: "x-default", path: RESULTS_BG },
+];
+
+const BODY_RESULTS_BG = `<p><a href="${RESULTS_EN}">English</a></p>
+<h2>Официален брой</h2>
+<p>Очакват се официални резултати. Тази страница чете само файла на Централната избирателна комисия за евентуалния нов избор на 1 ноември 2026 г. До 21:00 ч. българско време и до обявяване на края на изборния ден тук няма брой. Ако файлът не се зареди или сайтът на Комисията върне проверка за достъп, числа не се добавят. Връзката остава <a href="${RESULTS}">results.cik.bg</a>.</p>
+<p>Таблицата за 25 октомври 2026 г. е отделна публикация. Тя е на <a href="${BG_RESULTS_URL}">страницата на Комисията за октомври</a> и на <a href="${LOCAL}">страницата за избора</a>. Тя не е балотажът на 1 ноември. Решения № 405-ПВР и № 415-ПВР, прочетени на 27 октомври 2026 г., още казват „евентуален“ и не печатат двете листи. Име се показва тук само ако е в официалния файл.</p>`;
+
+const BODY_RESULTS_EN = `<p><a href="${RESULTS_BG}">Български</a></p>
+<h2>Official count</h2>
+<p>Awaiting official results. This page reads only the Central Election Commission file for the possible new election on 1 November 2026. No count is shown before 21:00 Bulgaria time, or before the Commission declares that voting has ended. If the file does not load, or the Commission’s site returns an access check, no figures are added. The link stays <a href="${RESULTS}">results.cik.bg</a>.</p>
+<p>The table for 25 October 2026 is a separate publication. It is on the <a href="${BG_RESULTS_URL}">Commission’s October page</a> and on the <a href="${EN}">election page</a>. It is not the 1 November runoff. Decisions No. 405-PVR and No. 415-PVR, read on 27 October 2026, still say the new election is possible and do not print the two lists. A name is shown here only when it is in the official file.</p>`;
+
 export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
     id: "bg-2026-11-01",
@@ -141,7 +161,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     endDate: OPENS,
     organizerName: "Централна избирателна комисия",
     organizerUrl: "https://www.cik.bg/",
-    lastmod: "2026-10-27",
+    lastmod: "2026-10-28",
     candidateListId: "bg-president-2026",
     homeLinks: [
       {
@@ -154,6 +174,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     pages: [
       {
         lang: "bg",
+        suppressNight: true,
         readWord: "прочетено",
         htmlLang: "bg",
         path: LOCAL,
@@ -173,7 +194,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "1 ноември 2026 г.",
         h1: "Избор за президент и вицепрезидент",
         lede: "Евентуален нов избор в неделя, 1 ноември 2026 г. Гласуването е от 7:00 до 20:00 ч., а опашката пред секцията може да гласува до 21:00 ч.",
-        updated: "Последна редакция: 27 октомври 2026 г.",
+        updated: "Последна редакция: 28 октомври 2026 г.",
         reportLabel: "Съобщете за грешка",
         officeHref: CIK,
         bannerBefore: "Неофициална информация. Потвърдете при ",
@@ -181,6 +202,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         nav: [
           { href: "/", label: "Map the General" },
           { href: "/bg/bg/", label: "България" },
+          { href: RESULTS_BG, label: "Резултати" },
           { href: EN, label: "English" },
         ],
         eventName: "Избор за президент и вицепрезидент, 1 ноември 2026 г.",
@@ -265,6 +287,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         relatedHeading: "Още",
         related: [
           { href: "/bg/bg/", label: "България" },
+          { href: RESULTS_BG, label: "Резултати от балотажа 2026" },
           { href: EN, label: "English" },
           { href: "/bg/en/", label: "Bulgaria in English" },
         ],
@@ -284,6 +307,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
       },
       {
         lang: "en",
+        suppressNight: true,
         htmlLang: "en",
         path: EN,
         title: "Bulgaria presidential election, 1 November 2026",
@@ -302,7 +326,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "1 November 2026",
         h1: "Presidential election",
         lede: "A possible new election on Sunday 1 November 2026. Voting runs from 7:00 to 20:00, and a queue outside the room may vote until 21:00.",
-        updated: "Last updated: 27 October 2026.",
+        updated: "Last updated: 28 October 2026.",
         reportLabel: "Report an error",
         officeHref: CIK,
         bannerBefore: "Unofficial information. Confirm with the ",
@@ -310,6 +334,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         nav: [
           { href: "/", label: "Map the General" },
           { href: "/bg/en/", label: "Bulgaria" },
+          { href: RESULTS_EN, label: "Results" },
           { href: LOCAL, label: "Български" },
         ],
         eventName: "Bulgaria presidential election, 1 November 2026",
@@ -394,6 +419,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         relatedHeading: "Also",
         related: [
           { href: "/bg/en/", label: "Bulgaria" },
+          { href: RESULTS_EN, label: "Runoff results" },
           { href: LOCAL, label: "Български" },
           { href: "/bg/bg/", label: "България" },
         ],
@@ -409,6 +435,247 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { href: ART220, label: "Magistrat reprint of Election Code article 220", readOn: "2026-10-27" },
           { href: BROCHURE, label: "CEC information brochure for 25 October 2026", readOn: "2026-10-27" },
           { href: RESULTS, label: "CEC election results", readOn: "2026-10-27" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "bg-2026-11-01",
+    pollingDay: "2026-11-01",
+    startDate: "2026-11-01T07:00:00+02:00",
+    endDate: OPENS,
+    organizerName: "Централна избирателна комисия",
+    organizerUrl: "https://www.cik.bg/",
+    lastmod: "2026-10-28",
+    homeLinks: [],
+    pages: [
+      {
+        lang: "bg",
+        readWord: "прочетено",
+        htmlLang: "bg",
+        path: RESULTS_BG,
+        title: "Резултати от балотажа 2026",
+        description:
+          "Резултати от балотажа 2026 и президентски избори 2026 резултати от Централната избирателна комисия. Кой печели втория тур се чете само от официалния брой след 21:00 ч.",
+        ogDescription:
+          "Резултати от балотажа 2026. Президентски избори 2026 резултати от Централната избирателна комисия. Очакват се официални резултати.",
+        ogLocale: "bg_BG",
+        alternates: resultAlternates,
+        crumbs: [
+          { name: "Начало", path: "/" },
+          { name: "България", path: "/bg/" },
+          { name: "България", path: "/bg/bg/" },
+          { name: "Резултати от балотажа 2026", path: RESULTS_BG },
+        ],
+        eyebrow: "1 ноември 2026 г.",
+        h1: "Резултати от балотажа 2026",
+        lede: "Президентски избори 2026 резултати за евентуалния нов избор. Въпросът кой печели втория тур има отговор само в официалния брой след 21:00 ч. българско време и след обявяване на края на изборния ден.",
+        updated: "Последна редакция: 28 октомври 2026 г.",
+        reportLabel: "Съобщете за грешка",
+        officeHref: CIK,
+        bannerBefore: "Неофициална информация. Потвърдете при ",
+        bannerAfter: "Централната избирателна комисия",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/bg/bg/", label: "България" },
+          { href: LOCAL, label: "Изборът" },
+          { href: RESULTS_EN, label: "English" },
+        ],
+        eventName: "Резултати от балотажа за президент, 1 ноември 2026 г.",
+        locationName: "България",
+        addressRegion: "България",
+        addressCountry: "BG",
+        keyDatesHeading: "Часове, тишина и официален източник",
+        keyDatesIntro: "Всеки ред по-долу е от страница, прочетена на 27 октомври 2026 г. Час, който тези страници не печатат, не е добавен.",
+        keyDates: [
+          {
+            label: "Дата",
+            text: "Решения № 405-ПВР и № 415-ПВР в списъка на Комисията са за евентуален нов избор за президент и вицепрезидент на 1 ноември 2026 г.",
+            links: [{ label: "списъка на Комисията", href: CIK }],
+          },
+          {
+            label: "Часове",
+            text: "Въпрос 3 на Комисията казва, че гласуването започва в 7:00 ч. и приключва в 20:00 ч. Член 220 допуска гласуване след 20:00 ч. само за избирателите пред помещението, но не по-късно от 21:00 ч.",
+            links: [
+              { label: "Въпрос 3 на Комисията", href: Q03 },
+              { label: "Член 220", href: ART220 },
+            ],
+          },
+          {
+            label: "Тишина",
+            text: "Член 205, в текста на Правко, забранява огласяване на резултати от допитвания 24 часа преди изборния ден до обявяване на края му. Тази страница не печата такива числа.",
+            links: [{ label: "Член 205, в текста на Правко", href: ART205 }],
+          },
+          {
+            label: "Източник",
+            text: "Услугата за резултати е единственият брой, който тази страница може да покаже след 21:00 ч. на 1 ноември 2026 г. Октомврийската таблица не е този брой.",
+            links: [
+              { label: "Услугата за резултати", href: RESULTS },
+              { label: "Октомврийската таблица", href: BG_RESULTS_URL },
+            ],
+          },
+        ],
+        faqHeading: "Въпроси",
+        faqs: [
+          {
+            question: "Къде са резултатите от балотажа 2026?",
+            text: "На тази страница, и само от файла на Централната избирателна комисия. До 21:00 ч. българско време на 1 ноември 2026 г. и до обявяване на края на изборния ден тук няма брой.",
+            links: [{ label: "Централната избирателна комисия", href: RESULTS }],
+          },
+          {
+            question: "Кога излизат президентски избори 2026 резултати?",
+            text: "Въпрос 3 казва, че гласуването приключва в 20:00 ч. Член 220 допуска опашка до 21:00 ч. Тази страница не показва брой преди 21:00 ч. и преди Комисията да обяви края на изборния ден.",
+            links: [
+              { label: "Въпрос 3", href: Q03 },
+              { label: "Член 220", href: ART220 },
+            ],
+          },
+          {
+            question: "Кой печели втория тур?",
+            text: "Тази страница не обявява избран кандидат. Официалният брой идва само от услугата за резултати след 21:00 ч. на 1 ноември 2026 г. и само ако Комисията е обявила края на изборния ден.",
+            links: [{ label: "услугата за резултати", href: RESULTS }],
+          },
+          {
+            question: "Показва ли страницата допитвания?",
+            text: "Не. Член 205 забранява огласяването им 24 часа преди изборния ден до обявяване на края му. Тази страница не печата такива числа в нито един ден.",
+            links: [{ label: "Член 205", href: ART205 }],
+          },
+          {
+            question: "Кои са кандидатските двойки на новия избор?",
+            text: "Решения № 405-ПВР и № 415-ПВР още описват 1 ноември 2026 г. като евентуален нов избор и не печатат двете листи. Име на тази страница се появява само ако е в официалния файл на Комисията.",
+            links: [{ label: "Решения № 405-ПВР и № 415-ПВР", href: CIK }],
+          },
+        ],
+        relatedHeading: "Още",
+        related: [
+          { href: LOCAL, label: "Избор за президент, 1 ноември 2026 г." },
+          { href: "/bg/bg/", label: "България" },
+          { href: RESULTS_EN, label: "English" },
+        ],
+        bodyHtml: BODY_RESULTS_BG,
+        sourcesHeading: "Източници",
+        sources: [
+          { href: CIK, label: "Централна избирателна комисия, избори за президент и вицепрезидент 2026", readOn: "2026-10-27" },
+          { href: Q03, label: "ЦИК, въпрос 3: от колко часа се гласува", readOn: "2026-10-27" },
+          { href: Q26, label: "ЦИК, въпрос 26: ако никой не бъде избран", readOn: "2026-10-27" },
+          { href: ART205, label: "Правко, препечатване на чл. 205 от Изборния кодекс", readOn: "2026-10-27" },
+          { href: ART220, label: "Магистрат, препечатване на чл. 220 от Изборния кодекс", readOn: "2026-10-27" },
+          { href: RESULTS, label: "ЦИК, резултати от избори", readOn: "2026-10-27" },
+          { href: BG_RESULTS_URL, label: "ЦИК, таблица за 25 октомври 2026 г.", readOn: "2026-10-27" },
+        ],
+      },
+      {
+        lang: "en",
+        htmlLang: "en",
+        path: RESULTS_EN,
+        title: "Bulgaria presidential runoff results 2026",
+        description:
+          "Bulgaria presidential election 2026 results for the 1 November runoff, from the Central Election Commission. No count before 21:00 Bulgaria time. Awaiting official results.",
+        ogDescription:
+          "Official Bulgaria presidential runoff results for 1 November 2026. Central Election Commission. Awaiting official results. No count before 21:00.",
+        ogLocale: "en_GB",
+        alternates: resultAlternates,
+        crumbs: [
+          { name: "Home", path: "/" },
+          { name: "Bulgaria", path: "/bg/" },
+          { name: "Bulgaria", path: "/bg/en/" },
+          { name: "Runoff results", path: RESULTS_EN },
+        ],
+        eyebrow: "1 November 2026",
+        h1: "Bulgaria presidential election 2026 results",
+        lede: "Official results for the possible presidential runoff on Sunday 1 November 2026. This page does not declare a pair elected. No count appears before 21:00 Bulgaria time, or before the Commission declares that voting has ended.",
+        updated: "Last updated: 28 October 2026.",
+        reportLabel: "Report an error",
+        officeHref: CIK,
+        bannerBefore: "Unofficial information. Confirm with the ",
+        bannerAfter: "Central Election Commission",
+        nav: [
+          { href: "/", label: "Map the General" },
+          { href: "/bg/en/", label: "Bulgaria" },
+          { href: EN, label: "The election" },
+          { href: RESULTS_BG, label: "Български" },
+        ],
+        eventName: "Bulgaria presidential runoff, 1 November 2026",
+        locationName: "Bulgaria",
+        addressRegion: "Bulgaria",
+        addressCountry: "BG",
+        keyDatesHeading: "Hours, silence and the official source",
+        keyDatesIntro: "Each line below is from a page read on 27 October 2026. A time those pages did not print is not added.",
+        keyDates: [
+          {
+            label: "Date",
+            text: "Decisions No. 405-PVR and No. 415-PVR on the Commission’s list are for a possible new election for president and vice president on 1 November 2026.",
+            links: [{ label: "the Commission’s list", href: CIK }],
+          },
+          {
+            label: "Hours",
+            text: "Commission question 3 says voting starts at 7:00 and ends at 20:00. Article 220 allows voting after 20:00 only for voters already outside the room, and not later than 21:00.",
+            links: [
+              { label: "Commission question 3", href: Q03 },
+              { label: "Article 220", href: ART220 },
+            ],
+          },
+          {
+            label: "Silence",
+            text: "Article 205, in the Pravko text, bars announcing survey results for the 24 hours before election day until the end of that day is declared. This page prints no such figures.",
+            links: [{ label: "Article 205, in the Pravko text", href: ART205 }],
+          },
+          {
+            label: "Source",
+            text: "The Commission results service is the only count this page may show after 21:00 on 1 November 2026. The October table is not that count.",
+            links: [
+              { label: "The Commission results service", href: RESULTS },
+              { label: "The October table", href: BG_RESULTS_URL },
+            ],
+          },
+        ],
+        faqHeading: "Frequently asked questions",
+        faqs: [
+          {
+            question: "Where are the Bulgaria presidential runoff results for 2026?",
+            text: "On this page, and only from the Central Election Commission results file. No count is shown before 21:00 Bulgaria time on 1 November 2026, or before the Commission declares that voting has ended.",
+            links: [{ label: "Central Election Commission results file", href: RESULTS }],
+          },
+          {
+            question: "When are the presidential election 2026 results published?",
+            text: "Question 3 says voting ends at 20:00. Article 220 allows a queue until 21:00. This page shows no count before 21:00 or before the Commission declares that voting has ended.",
+            links: [
+              { label: "Question 3", href: Q03 },
+              { label: "Article 220", href: ART220 },
+            ],
+          },
+          {
+            question: "Who wins the runoff?",
+            text: "This page does not declare a pair elected. The official count comes only from the Commission results service after 21:00 on 1 November 2026, and only after the Commission declares that voting has ended.",
+            links: [{ label: "Commission results service", href: RESULTS }],
+          },
+          {
+            question: "Does this page print surveys?",
+            text: "No. Article 205 bars announcing them for the 24 hours before election day until the end of that day is declared. This page prints no such figures on any day.",
+            links: [{ label: "Article 205", href: ART205 }],
+          },
+          {
+            question: "Which candidate pairs are on the new election?",
+            text: "Decisions No. 405-PVR and No. 415-PVR still describe 1 November 2026 as a possible new election and do not print the two lists. A name appears on this page only when it is in the Commission’s official file.",
+            links: [{ label: "Decisions No. 405-PVR and No. 415-PVR", href: CIK }],
+          },
+        ],
+        relatedHeading: "Also",
+        related: [
+          { href: EN, label: "Presidential election, 1 November 2026" },
+          { href: "/bg/en/", label: "Bulgaria" },
+          { href: RESULTS_BG, label: "Български" },
+        ],
+        bodyHtml: BODY_RESULTS_EN,
+        sourcesHeading: "Sources",
+        sources: [
+          { href: CIK, label: "Central Election Commission, presidential election 2026", readOn: "2026-10-27" },
+          { href: Q03, label: "CEC, question 3, voting hours", readOn: "2026-10-27" },
+          { href: Q26, label: "CEC, question 26, if nobody is elected", readOn: "2026-10-27" },
+          { href: ART205, label: "Pravko reprint of Election Code article 205", readOn: "2026-10-27" },
+          { href: ART220, label: "Magistrat reprint of Election Code article 220", readOn: "2026-10-27" },
+          { href: RESULTS, label: "CEC election results", readOn: "2026-10-27" },
+          { href: BG_RESULTS_URL, label: "CEC table for 25 October 2026", readOn: "2026-10-27" },
         ],
       },
     ],

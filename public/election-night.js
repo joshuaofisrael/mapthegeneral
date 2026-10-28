@@ -86,6 +86,30 @@
     }
   }
 
+  function sourcePara(section) {
+    var href = section.getAttribute("data-source-href");
+    var label = section.getAttribute("data-source-label");
+    if (!href || !label) return null;
+    var link = document.createElement("a");
+    link.href = href;
+    link.rel = "noopener noreferrer";
+    link.textContent = label;
+    var holder = node("p", null, "margin:8px 0 0");
+    holder.appendChild(link);
+    return holder;
+  }
+
+  function renderHeld(root, section) {
+    clear(root);
+    var wrap = node("div", null, "border:1px solid #d5dde6;border-radius:12px;padding:16px;background:#fff");
+    wrap.appendChild(node("p", section.getAttribute("data-awaiting") || "", "margin:0;font-weight:700"));
+    var note = section.getAttribute("data-countdown-note") || "";
+    if (note) wrap.appendChild(node("p", note, "margin:8px 0 0;color:#4a5568"));
+    var source = sourcePara(section);
+    if (source) wrap.appendChild(source);
+    root.appendChild(wrap);
+  }
+
   function renderCountdown(root, section, now) {
     clear(root);
     var left = Math.max(0, opensMs(section) - now);
@@ -151,11 +175,15 @@
       var failed = section.getAttribute("data-stale-empty") || section.getAttribute("data-stale") || "";
       if (failed) gate.appendChild(node("p", failed, "margin:0 0 8px;padding:8px 12px;background:#e8eef5;border-radius:8px"));
       gate.appendChild(node("p", section.getAttribute("data-awaiting") || "", "margin:0;padding:12px;background:#e8eef5;border-radius:8px"));
+      var staleSource = sourcePara(section);
+      if (staleSource) gate.appendChild(staleSource);
       root.appendChild(gate);
       return;
     }
     if (!rows.length) {
       gate.appendChild(node("p", section.getAttribute("data-awaiting") || "", "margin:0;padding:12px;background:#e8eef5;border-radius:8px"));
+      var emptySource = sourcePara(section);
+      if (emptySource) gate.appendChild(emptySource);
       root.appendChild(gate);
       return;
     }
@@ -212,6 +240,11 @@
 
     function paint() {
       var now = Date.now();
+      var open = opensMs(section);
+      if (Number.isFinite(open) && now >= open && !visible(section, now)) {
+        renderHeld(root, section);
+        return;
+      }
       if (!visible(section, now)) {
         renderCountdown(root, section, now);
         return;
@@ -263,10 +296,10 @@
 
     paint();
     window.setInterval(paint, 1000);
-    // The feed is requested only from the two Israel results pages. Every other
-    // page keeps the local countdown and does not call /il-live.
+    // The feed is requested only from the Israel results pages and the Bulgaria
+    // runoff results pages. Every other page keeps the local countdown.
     var path = location.pathname.replace(/\/+$/, "") || "/";
-    if (path !== "/il/en/results" && path !== "/il/he/results") return;
+    if (path !== "/il/en/results" && path !== "/il/he/results" && path !== "/bg/bg/results" && path !== "/bg/en/results") return;
     load();
     window.setInterval(load, POLL_MS);
   }

@@ -109,10 +109,20 @@ export function eventJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage, 
       name: profile.organizerName,
       url: profile.organizerUrl,
     },
+    image: [imageUrl ?? socialImageFor(page.path).url],
     url: absoluteUrl(page.path),
   };
-  if (imageUrl) data.image = imageUrl;
   return data;
+}
+
+/** Absolute URL of the page’s existing large OG image. The file must already be in public/. */
+export function pageImageUrl(pagePath: string, root = process.cwd()): string {
+  const image = socialImageFor(pagePath);
+  const rel = new URL(image.url).pathname.replace(/^\//, "");
+  if (!existsSync(join(root, "public", rel))) {
+    throw new Error(`${pagePath}: OG image missing at public/${rel}`);
+  }
+  return image.url;
 }
 
 export function faqJsonLd(page: ElectionSeoPage): Record<string, unknown> {
@@ -164,7 +174,7 @@ function webPageJsonLd(profile: ElectionSeoProfile, page: ElectionSeoPage): Reco
 }
 
 export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSeoPage, root = process.cwd()): string {
-  const imageUrl = existingImageUrl(profile, root);
+  const imageUrl = pageImageUrl(page.path, root);
   const candidateLang = page.lang as CandidateLang;
   const candidateReady = page.lang === "en" || page.lang === "pl" || page.lang === "it" || page.lang === "bg";
   const candidateList = candidateReady ? pageCandidateList(profile, root) : null;
@@ -239,7 +249,7 @@ ${GA_HEAD_TAGS}
 <h1>${esc(page.h1)}</h1>
 <p class="lede">${esc(page.lede)}</p>
 <p><strong>${esc(page.updated)}</strong> <a href="${esc(reportErrorHref(page.path))}">${esc(page.reportLabel)}</a></p>
-${editorialPreviewHtml(previewByPath(page.path))}${fillCandidateMarkers(page.bodyHtml, candidateHtml, electorateHtml)}${nightSectionHtml(profile.id, page.lang)}<section id="how-to-vote">
+${editorialPreviewHtml(previewByPath(page.path))}${fillCandidateMarkers(page.bodyHtml, candidateHtml, electorateHtml)}${page.suppressNight ? "" : nightSectionHtml(profile.id, page.lang)}<section id="how-to-vote">
 <h2>${esc(page.keyDatesHeading)}</h2>
 <p>${esc(page.keyDatesIntro)}</p>
 <ul>
@@ -329,11 +339,11 @@ export function validateElectionHtml(
     }
     const organizer = event.organizer as JsonLdNode | undefined;
     if (!organizer || organizer.name !== profile.organizerName || organizer.url !== profile.organizerUrl) errors.push("Event organizer");
-    if (imageUrl) {
-      if (event.image !== imageUrl) errors.push("Event image does not match the existing OG image");
-    } else if ("image" in event) errors.push("Event image was set without an existing file");
-    const social = socialImageFor(page.path);
-    if (imageUrl && social.url !== imageUrl) errors.push("Event image is not the page OG image");
+    if (typeof event.endDate !== "string" || !event.endDate) errors.push("Event endDate missing");
+    const social = socialImageFor(page.path).url;
+    if (imageUrl && imageUrl !== social) errors.push("Event image argument is not the page OG image");
+    const images = Array.isArray(event.image) ? event.image : event.image ? [event.image] : [];
+    if (images.length !== 1 || images[0] !== social) errors.push("Event image is not the page OG image");
   }
   if (page.faqs.length < 4 || page.faqs.length > 6) errors.push(`FAQ count ${page.faqs.length} is outside 4–6`);
   const faq = faqs[0];

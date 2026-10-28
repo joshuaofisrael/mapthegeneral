@@ -59740,6 +59740,8 @@
 - [Bulgaria](https://mapthegeneral.com/bg/en/)
 - [Избор за президент, 1 ноември 2026 г.](https://mapthegeneral.com/bg/bg/elections/prezident-2026/)
 - [Bulgaria presidential election, 1 November 2026](https://mapthegeneral.com/bg/en/elections/president-2026/)
+- [Резултати от балотажа 2026](https://mapthegeneral.com/bg/bg/results/)
+- [Bulgaria presidential runoff results 2026](https://mapthegeneral.com/bg/en/results/)
 - [New Zealand](https://mapthegeneral.com/nz/)
 - [New Zealand](https://mapthegeneral.com/nz/en/)
 - [New Zealand general election, 7 November 2026](https://mapthegeneral.com/nz/en/elections/general-election/)

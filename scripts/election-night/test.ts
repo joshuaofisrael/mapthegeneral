@@ -112,6 +112,9 @@ if (early.stage !== "pre" || early.results.length !== 0) errors.push(`early file
 
 const client = readFileSync(path.join(process.cwd(), "public", "election-night.js"), "utf8");
 if (!client.includes("now >= open")) errors.push("client is missing the open gate");
+if (!client.includes("/bg/bg/results") || !client.includes("/bg/en/results")) {
+  errors.push("Bulgaria results pages are not allowed to read the official feed");
+}
 if (!client.includes("data-election-gate")) errors.push("client does not mark the count for the blackout gate");
 if (client.includes("innerHTML")) errors.push("client writes HTML from the feed");
 

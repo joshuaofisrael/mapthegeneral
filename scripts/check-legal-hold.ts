@@ -69,8 +69,8 @@ const PROJECTION_NEGATION =
   /\b(no|not|never|without|none|isn't|aren't|doesn't|don't|won't|non|kein(?:e|en)?|nicht|geen|ingen|aucun|aucune|pas|forbid(?:s|den)?|prohibit(?:s|ion)?|bars?|banned)\b|n[’']en\b|\bni\b|אינו|אין|לא/i;
 
 const PRELIMINARY_WORD =
-  /preliminary|provisional|partial|wstępne|provvisor|vorläufig|provisoire|esialgne|voorlopig|alustav|preliminärt|初步|ראשונית/i;
-const FINAL_ATTRIBUTION = /,|，|\bfrom\b|\bdal\b|\bdall|\bdel\b|\bde l|\bvom\b|\bvan\b|\bfrån\b|出自|Riigi |oikeusministeriön/i;
+  /preliminary|provisional|partial|wstępne|provvisor|vorläufig|provisoire|esialgne|voorlopig|alustav|preliminärt|предварител|Предварител|初步|ראשונית/i;
+const FINAL_ATTRIBUTION = /,|，|\bfrom\b|\bdal\b|\bdall|\bdel\b|\bde l|\bvom\b|\bvan\b|\bfrån\b| от |出自|Riigi |oikeusministeriön/i;
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/;
