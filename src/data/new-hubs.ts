@@ -205,7 +205,10 @@ export function hubEn(code: HubCode, rest = ""): string {
   return tail ? `/${code}/en/${tail}/` : `/${code}/en/`;
 }
 
-const COPY: Record<HubCode, Record<HubKind, { title: string; description: string; lede: string; eyebrow?: string }>> = {
+const COPY: Record<
+  HubCode,
+  Record<HubKind, { title: string; description: string; lede: string; eyebrow?: string; metaTitle?: string }>
+> = {
   ie: {
     chooser: {
       title: "Ireland — language",
@@ -214,8 +217,9 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Ireland",
+      metaTitle: "Ireland Dáil elections",
       description:
-        "Ireland: how Dáil elections work, from the Electoral Commission. The most recent general election on its page was Friday 29 November 2024. No next polling day was printed. Unofficial information.",
+        "Ireland: Dáil elections, from the Electoral Commission. The latest general election it lists was 29 November 2024. No next polling day is printed.",
       eyebrow: "Dáil · no polling day printed for the next election",
       lede: "The Electoral Commission’s general-elections page says the most recent general election was on Friday 29 November 2024. It does not print the next polling day.",
     },
@@ -227,7 +231,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     election: {
       title: "Next Dáil election",
       description:
-        "The Electoral Commission says a Dáil general election has to take place at least every five years. No polling day for the next one was printed. Unofficial information.",
+        "A Dáil general election is due at least every five years. No next polling day was printed. Unofficial information.",
       eyebrow: "No polling day printed",
       lede: "The general-elections page, read on 23 October 2026, does not name the next polling day.",
     },
@@ -250,6 +254,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Norway",
+      metaTitle: "Norway Storting election 2029",
       description:
         "Norway: the Storting election the Valgdirektoratet places in September 2029, with no day named. Unofficial information.",
       eyebrow: "Storting · September 2029 · no day named",
@@ -285,6 +290,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Sweden",
+      metaTitle: "Sweden elections, 2030",
       description:
         "Sweden: Riksdag, regional and municipal elections on Sunday 8 September 2030, as Valmyndigheten’s page published 16 October 2026 states. Unofficial information.",
       eyebrow: "Riksdag, regions and municipalities · 8 September 2030",
@@ -321,6 +327,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Brazil",
+      metaTitle: "Brazil general election 2026",
       description: "Brazil 2026 general election: how it works and the official TSE presidential runoff result of 25 October 2026. Unofficial information.",
       eyebrow: "General election · 4 and 25 October 2026",
       lede: "The TSE results service records the first round on 4 October 2026 and the presidential runoff on 25 October 2026, both with 100% of polling sections counted.",
@@ -355,6 +362,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Serbia",
+      metaTitle: "Serbia National Assembly 2026",
       description: "Serbia National Assembly election of 25 October 2026: how it works and the preliminary results published by RIK. Unofficial information.",
       eyebrow: "National Assembly · 25 October 2026 · preliminary",
       lede: "The Republic Electoral Commission (RIK) is publishing a preliminary count of the National Assembly election held on 25 October 2026. RIK has not yet published the final result.",
@@ -366,6 +374,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     election: {
       title: "Serbia National Assembly election 2026: preliminary results",
+      metaTitle: "Serbia Assembly election 2026",
       description: "Preliminary RIK results of Serbia’s 25 October 2026 National Assembly election. Not the final result. Unofficial information.",
       eyebrow: "Preliminary · RIK count in progress",
       lede: "Figures below are RIK’s preliminary results, read on 26 October 2026. They are not the final result.",
@@ -389,6 +398,7 @@ const COPY: Record<HubCode, Record<HubKind, { title: string; description: string
     },
     national: {
       title: "Israel",
+      metaTitle: "Israel Knesset election 2026",
       description: "Israel: the election to the 26th Knesset on Tuesday 27 October 2026, set by the Central Elections Committee. 120 seats, 3.25% threshold. Unofficial information.",
       eyebrow: "26th Knesset · Tuesday 27 October 2026",
       lede: "The Central Elections Committee set Tuesday 27 October 2026 (16 Heshvan 5787) as election day for the 26th Knesset.",
@@ -468,7 +478,7 @@ export function hubMetadata(code: HubCode, kind: HubKind) {
             : kind === "faq"
               ? hubEn(code, "faq")
               : hubEn(code, "sources");
-  return pageMetadata({ title: copy.title, description: copy.description, path });
+  return pageMetadata({ title: copy.metaTitle ?? copy.title, description: copy.description, path });
 }
 
 export function hubCopy(code: HubCode, kind: HubKind) {

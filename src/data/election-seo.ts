@@ -296,7 +296,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/au/en/elections/victoria-2026/",
         title: "Victorian state election, 28 November 2026",
         description:
-          "Victorian state election, Saturday 28 November 2026. Enrolment, nominations, early and postal voting, and the 88 districts and 8 regions. No candidate list has been published. Unofficial information.",
+          "Victorian state election, Saturday 28 November 2026. 88 districts and 8 regions. No candidate list is published. Unofficial information.",
         ogDescription:
           "Victorian state election, Saturday 28 November 2026. Enrolment closes at 8 pm on 3 November 2026. Unofficial information.",
         ogLocale: "en_AU",
@@ -479,7 +479,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/pl/en/elections/senat-20-2026/",
         title: "Poland Senate by-election, Lubusz constituency 20, 22 November 2026",
         description:
-          "Poland Senate by-election in Lubusz constituency 20, Zielona Góra, Sunday 22 November 2026, 7:00–21:00. Calendar from the presidential order and the Commission candidate file. Unofficial information.",
+          "Poland Senate by-election, Lubusz constituency 20, Sunday 22 November 2026, 7:00–21:00. Unofficial information.",
         ogDescription: "Poland Senate by-election in Lubusz constituency 20, Sunday 22 November 2026, 7:00–21:00. Unofficial information.",
         ogLocale: "en_US",
         alternates: [
@@ -632,7 +632,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/pl/pl/elections/senat-20-2026/",
         title: "Polska: wybory uzupełniające do Senatu, okręg 20, 22 listopada 2026",
         description:
-          "Polska, wybory uzupełniające do Senatu w województwie lubuskim, okręg nr 20, Zielona Góra, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Kalendarz z postanowienia Prezydenta i plik kandydatów PKW. Informacja nieoficjalna.",
+          "Wybory uzupełniające do Senatu, okręg 20, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Informacja nieoficjalna.",
         ogDescription:
           "Polska, wybory uzupełniające do Senatu, okręg 20, niedziela 22 listopada 2026 r., godz. 7:00–21:00. Informacja nieoficjalna.",
         ogLocale: "pl_PL",
@@ -812,7 +812,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ca/en/elections/bc-2026/",
         title: "British Columbia election results, 24 October 2026",
         description:
-          "British Columbia provincial general election results, Final Voting Day 24 October 2026. Final count is planned for 6–10 November 2026. This page copies no count. Unofficial information.",
+          "British Columbia election results, Final Voting Day 24 October 2026. Final count is planned for 6–10 November 2026. Unofficial information.",
         ogDescription:
           "British Columbia election, 24 October 2026. Final count is planned for 6–10 November 2026. This page copies no count. Unofficial information.",
         ogLocale: "en_CA",
@@ -964,9 +964,9 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ca/fr/elections/bc-2026/",
         title: "Résultats de l'élection en Colombie-Britannique, 24 octobre 2026",
         description:
-          "Résultats de l'élection générale provinciale de la Colombie-Britannique, jour du scrutin final le 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026. Cette page ne copie aucun décompte. Information non officielle.",
+          "Résultats en Colombie-Britannique, scrutin final le 24 octobre 2026. Décompte final prévu du 6 au 10 novembre 2026. Information non officielle.",
         ogDescription:
-          "Élection en Colombie-Britannique, 24 octobre 2026. Le décompte final est prévu du 6 au 10 novembre 2026. Aucun décompte n'est copié ici. Information non officielle.",
+          "Élection en Colombie-Britannique, 24 octobre 2026. Décompte final prévu du 6 au 10 novembre 2026. Information non officielle.",
         ogLocale: "fr_CA",
         alternates: [
           { hreflang: "en", path: "/ca/en/elections/bc-2026/" },
@@ -1148,7 +1148,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/it/en/elections/camera-chieti-2026/",
         title: "Italy Chamber by-election, 01-Chieti, Abruzzo, 15–16 November 2026",
         description:
-          "Italy, Chamber of Deputies by-election in single-member constituency 01-Chieti, Abruzzo, Sunday 15 and Monday 16 November 2026. Polling hours, electoral card, and the candidates the Interior Ministry has published. Unofficial information.",
+          "Italy Chamber by-election, constituency 01-Chieti, 15–16 November 2026. Unofficial information.",
         ogDescription:
           "Chamber by-election in constituency 01-Chieti, Abruzzo, on 15–16 November 2026. Sunday 7:00–23:00 and Monday 7:00–15:00. Unofficial information.",
         ogLocale: "en_US",
@@ -1287,7 +1287,7 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/it/it/elections/camera-chieti-2026/",
         title: "Italia: elezione suppletiva della Camera, 01-Chieti, 15-16 novembre 2026",
         description:
-          "Italia, elezione suppletiva della Camera dei deputati nel collegio uninominale 01-Chieti, Abruzzo, domenica 15 e lunedì 16 novembre 2026. Orari dei seggi, tessera elettorale e candidati pubblicati dal Ministero dell'interno. Informazione non ufficiale.",
+          "Elezione suppletiva della Camera, collegio 01-Chieti, 15-16 novembre 2026. Informazione non ufficiale.",
         ogDescription:
           "Elezione suppletiva nel collegio 01-Chieti, Abruzzo, il 15-16 novembre 2026. Domenica ore 7-23 e lunedì ore 7-15. Informazione non ufficiale.",
         ogLocale: "it_IT",

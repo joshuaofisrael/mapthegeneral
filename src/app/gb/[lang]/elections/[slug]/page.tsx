@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return gbMetadata({
     title: "UK Parliament, no later than 15 August 2029",
     description:
-      "The next UK Parliament election is listed by the Electoral Commission as no later than 15 August 2029. Section 4 of the Dissolution and Calling of Parliament Act 2022 sets automatic dissolution. Unofficial information.",
+      "The next UK Parliament election is no later than 15 August 2029. Unofficial information.",
     path: "/gb/en/elections/general-election/",
   });
 }

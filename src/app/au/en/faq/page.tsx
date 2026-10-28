@@ -41,7 +41,7 @@ const FAQ = [
 export const metadata = auPageMetadata({
   title: "Australia FAQ",
   description:
-    "Questions about Australia’s next federal election and the 3 May 2025 House results, answered from the Australian Electoral Commission and the Victorian Electoral Commission.",
+    "Questions on Australia’s next federal election and the 3 May 2025 House results. Unofficial information.",
   path: "/au/en/faq",
 });
 

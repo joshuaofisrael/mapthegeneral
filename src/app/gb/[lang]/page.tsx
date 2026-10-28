@@ -28,7 +28,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "United Kingdom",
+    title: "UK general election by 2029",
     description:
       "United Kingdom: UK Parliament general election no later than 15 August 2029, the 4 July 2024 result, and the current House of Commons. Unofficial information.",
     path: "/gb/en/",

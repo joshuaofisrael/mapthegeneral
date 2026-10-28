@@ -9,6 +9,7 @@ import { collegiInRegion, unitsInRegion } from "@/data/italy/level2";
 import { regionBySlug, regionNeighbors, REGIONS } from "@/data/italy/places";
 import { chietiByElectionPath, collegioPath, collegiIndexPath, italyChooser, italyHome, otherLang, regionPath, unitPath, unitsIndexPath } from "@/data/italy/paths";
 import { italyMetadata } from "@/data/italy/seo";
+import { fitDescription, fitMetaTitle } from "@/lib/snippet";
 import { sourceById, sourcesById } from "@/data/italy/sources";
 import type { ItLang } from "@/data/italy/types";
 import { ui, unitLabel } from "@/data/italy/ui";
@@ -31,11 +32,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const region = regionBySlug(slug);
   if (!region || RESERVED.has(slug)) return {};
   return italyMetadata({
-    title: region.istatName,
-    description:
+    title: fitMetaTitle(region.istatName, lang === "it" ? "elezioni 2022" : "2022 election"),
+    description: fitDescription(region.istatName, [
       lang === "it"
-        ? `${region.istatName}: popolazione residente al 1° gennaio 2025, comuni nell'elenco ISTAT al 21 febbraio 2026, seggi del 2022. Informazione non ufficiale.`
-        : `${region.istatName}: resident population at 1 January 2025, municipalities in the ISTAT list at 21 February 2026, and 2022 seats. Unofficial information.`,
+        ? `${region.istatName}: popolazione al 1° gennaio 2025 e seggi del 2022. Informazione non ufficiale.`
+        : `${region.istatName}: population at 1 January 2025 and 2022 seats. Unofficial information.`,
+    ]),
     path: regionPath(lang, slug),
     lang,
     alternatePath: regionPath(otherLang(lang), slug),

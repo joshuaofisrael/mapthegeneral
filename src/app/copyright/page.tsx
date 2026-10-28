@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Copyright, content use, and corrections",
-  description: `Copyright and DMCA notices for ${SITE.name}, operated by ${SITE.legalName}. Notices and correction reports go through the contact form. No affiliate or political use of the text is granted.`,
+  description: `Copyright and DMCA notices for ${SITE.name}. ${SITE.legalName}. Use the contact form.`,
   path: "/copyright",
 });
 

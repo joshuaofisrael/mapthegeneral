@@ -23,7 +23,7 @@ const COPY = {
   pt: {
     title: "Brasil: eleição geral de 2026, 4 e 25 de outubro",
     description:
-      "Eleição geral no Brasil: primeiro turno em 4 de outubro de 2026 e segundo turno presidencial em 25 de outubro de 2026. Totais oficiais do TSE. Informação não oficial.",
+      "Eleição geral no Brasil: 1.º turno em 4 de outubro de 2026 e 2.º turno em 25 de outubro de 2026. Totais do TSE. Informação não oficial.",
     h1: "Eleição geral de 2026 no Brasil",
     lede: "Totais presidenciais do Tribunal Superior Eleitoral. As eleições estaduais não estão nesta página.",
     eyebrow: "4 de outubro e 25 de outubro de 2026",
@@ -45,7 +45,7 @@ const COPY = {
   en: {
     title: "Brazil general election, 4 and 25 October 2026",
     description:
-      "General election in Brazil: first round on 4 October 2026 and the presidential runoff on 25 October 2026. Official totals from the Superior Electoral Court. Unofficial information.",
+      "Brazil general election: first round 4 October 2026, presidential runoff 25 October 2026. TSE totals. Unofficial information.",
     h1: "General election of 2026 in Brazil",
     lede: "Presidential totals from the Superior Electoral Court. State races are not on this page.",
     eyebrow: "4 October and 25 October 2026",

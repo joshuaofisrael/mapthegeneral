@@ -129,7 +129,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/au/en/elections/nsw-2027/",
         title: "New South Wales state election, 13 March 2027",
         description:
-          "New South Wales state election, Saturday 13 March 2027, for the 59th Parliament. Enrolment, nominations, early and postal voting. Nominations are not yet open. Unofficial information.",
+          "New South Wales state election, Saturday 13 March 2027. Nominations are not yet open. Unofficial information.",
         ogDescription:
           "New South Wales state election, Saturday 13 March 2027, 8 am to 6 pm. Nominations open on 15 February 2027. Unofficial information.",
         ogLocale: "en_AU",
@@ -272,7 +272,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ie/en/elections/seanad-2026/",
         title: "Ireland Seanad bye-election, 6 November 2026",
         description:
-          "Seanad Éireann bye-election in Ireland on Friday 6 November 2026, Cultural and Educational Panel. The electorate is members of the Oireachtas. Polls close at 11 a.m. Unofficial information.",
+          "Seanad Éireann bye-election, Friday 6 November 2026, Cultural and Educational Panel. Polls close at 11 a.m. Unofficial information.",
         ogDescription:
           "Ireland Seanad bye-election, Cultural and Educational Panel, Friday 6 November 2026. Polls close at 11 a.m. Unofficial information.",
         ogLocale: "en_IE",
@@ -525,7 +525,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ch/fr/elections/volksabstimmung-2026-11-29/",
         title: "Suisse : votation populaire du 29 novembre 2026",
         description:
-          "Votation populaire en Suisse le dimanche 29 novembre 2026, sur quatre objets. Matériel de vote et sources officielles. Aucun résultat. Information non officielle.",
+          "Votation populaire en Suisse le dimanche 29 novembre 2026, quatre objets. Aucun résultat. Information non officielle.",
         ogDescription: "Votation populaire en Suisse, dimanche 29 novembre 2026, quatre objets. Information non officielle.",
         ogLocale: "fr_CH",
         alternates: chAlternates,
@@ -632,7 +632,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ch/it/elections/volksabstimmung-2026-11-29/",
         title: "Svizzera: votazione popolare del 29 novembre 2026",
         description:
-          "Votazione popolare in Svizzera domenica 29 novembre 2026, su quattro oggetti. Materiale di voto e fonti ufficiali. Nessun risultato. Informazione non ufficiale.",
+          "Votazione popolare in Svizzera domenica 29 novembre 2026, quattro oggetti. Nessun risultato. Informazione non ufficiale.",
         ogDescription: "Votazione popolare in Svizzera, domenica 29 novembre 2026, quattro oggetti. Informazione non ufficiale.",
         ogLocale: "it_CH",
         alternates: chAlternates,
@@ -739,7 +739,7 @@ export const EXTRA_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: "/ch/en/elections/volksabstimmung-2026-11-29/",
         title: "Switzerland federal popular vote, 29 November 2026",
         description:
-          "Federal popular vote in Switzerland on Sunday 29 November 2026, on four proposals. Voting papers and official sources. No result is shown. Unofficial information.",
+          "Federal popular vote in Switzerland on Sunday 29 November 2026, four proposals. No result is shown. Unofficial information.",
         ogDescription: "Switzerland federal popular vote, Sunday 29 November 2026, four proposals. Unofficial information.",
         ogLocale: "en_US",
         alternates: chAlternates,

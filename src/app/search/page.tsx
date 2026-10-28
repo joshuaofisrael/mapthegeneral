@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Search",
   description:
-    "Search Map the General for countries, Spanish autonomous communities, and provinces. The index is loaded in the browser. Postcodes are not matched to municipalities in this release.",
+    "Search countries, communities, provinces, and municipalities. Matching runs in the browser. Unofficial information.",
   path: "/search",
 });
 

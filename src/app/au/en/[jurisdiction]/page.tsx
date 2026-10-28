@@ -18,6 +18,7 @@ import {
 import { areasIn, chamberTitle, districtsIn, localIndexPath, localPath, stateAssemblyIndexPath, stateAssemblyPath } from "@/data/au/level3";
 import { sourcesById } from "@/data/au/sources";
 import { auHome, jurisdictionPath } from "@/countries/au";
+import { fitDescription, fitMetaTitle } from "@/lib/snippet";
 
 export function generateStaticParams() {
   return JURISDICTIONS.map((item) => ({ jurisdiction: item.slug }));
@@ -30,8 +31,10 @@ export async function generateMetadata({ params }: { params: Promise<{ jurisdict
   const item = jurisdictionBySlug(slug);
   if (!item) return {};
   return auPageMetadata({
-    title: item.officialName,
-    description: `${item.officialName}: population at 31 March 2026, House electorates in the 23 July 2026 determination, and the election dates that were read. Unofficial information.`,
+    title: fitMetaTitle(item.officialName, "elections"),
+    description: fitDescription(item.officialName, [
+      `${item.officialName}: population, House divisions, and the election dates that were read. Unofficial information.`,
+    ]),
     path: `/au/en/${slug}`,
   });
 }

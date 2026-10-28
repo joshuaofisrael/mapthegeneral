@@ -16,6 +16,7 @@ import { ui } from "@/data/spain/ui";
 import { formatNumber } from "@/lib/format";
 import { asLang } from "@/lib/lang";
 import { pageMetadata } from "@/lib/metadata";
+import { fitDescription, fitMetaTitle } from "@/lib/snippet";
 import { communityPath, municipalityPath, provincePath, spainHome } from "@/lib/routes";
 
 export function generateStaticParams() {
@@ -41,11 +42,12 @@ export async function generateMetadata({
   if (!province || province.communitySlug !== communitySlug) return {};
   const path = provincePath(lang, communitySlug, provinceSlug);
   return pageMetadata({
-    title: province.decreeName,
-    description:
+    title: fitMetaTitle(province.decreeName, lang === "es" ? "elecciones generales" : "general election"),
+    description: fitDescription(path, [
       lang === "es"
-        ? `${province.decreeName}: población del Padrón a 1 de enero de 2025, diputados del Real Decreto 806/2026 y municipios de la tabla 29005 del INE. Información no oficial.`
-        : `${province.decreeName}: municipal-register population at 1 January 2025, deputies in Royal Decree 806/2026, and municipalities from INE table 29005. Unofficial information.`,
+        ? `${province.decreeName}: diputados del Real Decreto 806/2026 y municipios del INE. Información no oficial.`
+        : `${province.decreeName}: deputies in Royal Decree 806/2026 and INE municipalities. Unofficial information.`,
+    ]),
     path,
     lang,
     alternatePath: provincePath(lang === "es" ? "en" : "es", communitySlug, provinceSlug),

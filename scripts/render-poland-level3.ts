@@ -22,12 +22,21 @@ import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
+import { fitDescription } from "../src/lib/snippet";
 
 const PKW_RESULTS = "https://samorzad2024.pkw.gov.pl/samorzad2024/";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const OFFICE = "https://pkw.gov.pl/";
 const READ = "2026-10-19";
+const DUPLICATE_GMINA_TITLES = (() => {
+  const counts = new Map<string, number>();
+  for (const gmina of allGminy()) {
+    const key = `${gmina.name} — ${gmina.kind}`;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return new Set([...counts].filter(([, count]) => count > 1).map(([key]) => key));
+})();
 
 const KIND_EN: Record<string, string> = {
   "gmina wiejska": "rural gmina",
@@ -225,10 +234,21 @@ function gminaPage(lang: Lang, gmina: Gmina, powiat: Powiat): string {
     .filter((item): item is Gmina => Boolean(item))
     .map((item) => `<a href="${esc(gminaPath(lang, item))}">${esc(item.name)}</a>`)
     .join(" · ");
-  const title = `${gmina.name} — ${gmina.kind}`;
+  const bare = `${gmina.name} — ${gmina.kind}`;
+  const duplicate = DUPLICATE_GMINA_TITLES.has(bare);
+  const place = duplicate ? `${gmina.name} (${parentHeading})` : gmina.name;
+  const context = pl ? "wybory 2024" : "elections 2024";
+  const withContext = `${place} — ${context}`;
+  const title = [...`${withContext} · ${SITE.name}`].length <= 60 ? withContext : place;
   const description = pl
-    ? `${gmina.name}, ${gmina.kind}, TERC ${gmina.code}. Informacja nieoficjalna.`
-    : `${gmina.name}, ${gloss}, TERC ${gmina.code}. Unofficial.`;
+    ? fitDescription(path, [
+        `${gmina.name}, ${gmina.kind}, ${voj.name}. Wybory samorządowe 7 kwietnia 2024; następne regularne w 2029. Informacja nieoficjalna.`,
+        `${gmina.name}, ${voj.name}. Wybory samorządowe 7 kwietnia 2024. Informacja nieoficjalna.`,
+      ])
+    : fitDescription(path, [
+        `${gmina.name}, ${gloss}, ${voj.name}. Local elections 7 April 2024; next regular election in 2029. Unofficial information.`,
+        `${gmina.name}, ${voj.name}. Local elections 7 April 2024. Unofficial information.`,
+      ]);
   const crumbs = [
     { name: pl ? "Strona główna" : "Home", path: "/" },
     { name: pl ? "Polska" : "Poland", path: polandHome(lang) },

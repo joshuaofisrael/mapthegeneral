@@ -28,6 +28,7 @@ import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
+import { fitDescription } from "../src/lib/snippet";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -214,8 +215,14 @@ function placePage(lang: Lang, row: Municipio): string {
   const kind = isAlcaldia(row) ? "Alcaldía" : es ? "Municipio" : "Municipality";
   const title = `${row.name} · ${entity.name} · ${SITE.name}`;
   const description = es
-    ? `${row.name}, clave ${row.code}. ${kind} de ${entity.name}. Información no oficial.`
-    : `${row.name}, code ${row.code}. ${kind} of ${entity.name}. Unofficial information.`;
+    ? fitDescription(path, [
+        `${row.name}, clave ${row.code}. ${kind} de ${entity.name}. Información no oficial.`,
+        `${row.name}: ${kind} de ${entity.name}. Información no oficial.`,
+      ])
+    : fitDescription(path, [
+        `${row.name}, code ${row.code}. ${kind} of ${entity.name}. Unofficial information.`,
+        `${row.name}: ${kind} of ${entity.name}. Unofficial information.`,
+      ]);
   const crumbs = [
     { name: es ? "Inicio" : "Home", path: "/" },
     { name: "México", path: "/mx/" },

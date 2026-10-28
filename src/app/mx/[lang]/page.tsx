@@ -24,7 +24,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asLang((await params).lang);
   return pageMetadata({
-    title: lang === "es" ? "México" : "Mexico",
+    title: lang === "es" ? "México — elección federal 2027" : "Mexico federal election 2027",
     description:
       lang === "es"
         ? "Elección federal del 6 de junio de 2027: 500 diputaciones, 32 entidades federativas y 17 gubernaturas en la página del INE. Información no oficial."

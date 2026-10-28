@@ -27,7 +27,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asLang((await params).lang);
   return polandMetadata({
-    title: lang === "pl" ? "Polska" : "Poland",
+    title: lang === "pl" ? "Polska: Sejm i Senat, 2027" : "Poland: Sejm and Senate, 2027",
     description:
       lang === "pl"
         ? "Wybory do Sejmu i Senatu w oknie od 14 października do 12 listopada 2027 r., urząd Prezydenta, Rada Ministrów i 16 województw. Informacja nieoficjalna."

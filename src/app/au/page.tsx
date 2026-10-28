@@ -10,7 +10,7 @@ import { breadcrumbJsonLd } from "@/lib/metadata";
 import { auPageMetadata } from "@/data/au/meta";
 
 export const metadata = auPageMetadata({
-  title: "Australia — language",
+  title: "Australia federal election",
   description:
     "Australia on Map the General: the federal election due between August 2027 and May 2028, in English. Unofficial information.",
   path: "/au",

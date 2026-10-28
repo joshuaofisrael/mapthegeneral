@@ -41,7 +41,14 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asChLang((await params).lang);
-  const title = ui(lang).switzerland;
+  const title =
+    lang === "de"
+      ? "Schweiz — Nationalrat 2027"
+      : lang === "fr"
+        ? "Suisse — Conseil national 2027"
+        : lang === "it"
+          ? "Svizzera — Consiglio nazionale 2027"
+          : "Switzerland — National Council 2027";
   const description =
     lang === "de"
       ? "Schweiz: Nationalratswahlen vom 24. Oktober 2027, Bundesrat, 26 Kantone. Inoffizielle Information."

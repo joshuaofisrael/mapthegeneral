@@ -30,7 +30,7 @@ const COPY = {
   sr: {
     title: "Srbija: izbori za Narodnu skupštinu, 25. oktobar 2026",
     description:
-      "Izbori za Narodnu skupštinu Republike Srbije, 25. oktobar 2026, od 07:00 do 20:00. Preliminarni rezultati RIK, nisu konačni. Nezvanične informacije.",
+      "Izbori za Narodnu skupštinu Srbije, 25. oktobar 2026. Preliminarni rezultati RIK, nisu konačni. Nezvanične informacije.",
     h1: "Izbori za Narodnu skupštinu, 25. oktobar 2026",
     lede: "Preliminarni zbir Republičke izborne komisije. Konačan izveštaj još nije ovde.",
     eyebrow: "25. oktobar 2026 · preliminarni zbir",
@@ -52,7 +52,7 @@ const COPY = {
   en: {
     title: "Serbia National Assembly election, 25 October 2026",
     description:
-      "National Assembly election in Serbia on 25 October 2026, from 07:00 to 20:00. Preliminary results from the Republic Electoral Commission, not final. Unofficial information.",
+      "Serbia National Assembly election, 25 October 2026. Preliminary RIK results, not the final result. Unofficial information.",
     h1: "National Assembly election, 25 October 2026",
     lede: "A preliminary count from the Republic Electoral Commission. The final report is not on this page.",
     eyebrow: "25 October 2026 · preliminary count",

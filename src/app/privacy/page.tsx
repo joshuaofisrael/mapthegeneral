@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy practices for ${SITE.name}: no accounts, cookieless Cloudflare Web Analytics, Google Analytics 4 only after consent, Google AdSense advertising cookies with a consent request for the EEA, the UK, and Switzerland, browser-only search, and GitHub Pages hosting logs. ${SITE.legalName} is the controller.`,
+  description: `Privacy policy for ${SITE.name}. ${SITE.legalName} is the controller. No accounts. Analytics and ads follow the choices on this page.`,
   path: "/privacy",
 });
 

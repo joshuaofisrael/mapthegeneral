@@ -19,6 +19,7 @@ import { alphaNeighbors, alphaVoivodeships, voivodeshipBySlug } from "../../../.
 import { sourceById, sourcesById } from "../../../../../data/pl/sources";
 import { ui } from "../../../../../data/pl/ui";
 import { polandMetadata } from "../../../../../data/pl/seo";
+import { fitMetaTitle } from "@/lib/snippet";
 import { gminaIndexPath } from "../../../../../data/pl/gminy";
 import { polandHome, voivodeshipPath } from "../../../../../data/pl/paths";
 import type { Lang } from "../../../../../data/pl/types";
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!item) return {};
   const path = voivodeshipPath(lang, slug);
   return polandMetadata({
-    title: item.name,
+    title: fitMetaTitle(item.name, lang === "pl" ? "wybory 2024" : "elections 2024"),
     description:
       lang === "pl"
         ? `${item.name}: sejmik, wojewoda, posłowie z załącznika nr 1 do Kodeksu wyborczego. Informacja nieoficjalna.`

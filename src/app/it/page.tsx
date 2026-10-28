@@ -9,9 +9,9 @@ import { sourceById } from "@/data/italy/sources";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Italy — languages",
+  title: "Italy: Chamber and Senate, 2022",
   description:
-    "Italy on Map the General: the Chamber and the Senate elected on 25 September 2022, and the 20 regions, in Italian and English. The next general election has no printed polling day. Unofficial information.",
+    "Italy: Chamber and Senate elected on 25 September 2022, in Italian and English. No next polling day is printed. Unofficial information.",
   path: "/it",
 });
 

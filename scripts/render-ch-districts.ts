@@ -177,12 +177,12 @@ function districtPage(lang: ChLang, district: District): string {
     .join(" · ");
   const description =
     lang === "de"
-      ? `${district.officialName}: Eintrag im historisierten Gemeindeverzeichnis, ${district.municipalities} politische Gemeinden, Kanton ${canton.officialName}. Inoffizielle Information.`
+      ? `${district.officialName}: ${district.municipalities} politische Gemeinden, Kanton ${canton.officialName}. Inoffizielle Information.`
       : lang === "fr"
-        ? `${district.officialName} : entrée du répertoire historisé des communes, ${district.municipalities} communes politiques, canton ${canton.officialName}. Information non officielle.`
+        ? `${district.officialName} : ${district.municipalities} communes politiques, canton ${canton.officialName}. Information non officielle.`
         : lang === "it"
-          ? `${district.officialName}: voce del repertorio storicizzato dei comuni, ${district.municipalities} comuni politici, cantone ${canton.officialName}. Informazione non ufficiale.`
-          : `${district.officialName}: historized commune-register entry, ${district.municipalities} political municipalities, canton ${canton.officialName}. Unofficial information.`;
+          ? `${district.officialName}: ${district.municipalities} comuni politici, cantone ${canton.officialName}. Informazione non ufficiale.`
+          : `${district.officialName}: ${district.municipalities} political municipalities, canton ${canton.officialName}. Unofficial information.`;
   const body = `<p class="eyebrow">${esc(copy.districts)}</p>
 <h1>${esc(district.officialName)}</h1>
 <p class="lede">${esc(canton.officialName)}</p>
