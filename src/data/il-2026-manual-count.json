@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 84.5,
-  "asOf": "2026-10-28T12:34:00+02:00",
+  "countedPct": 85.6,
+  "asOf": "2026-10-28T15:00:00+02:00",
   "asOfLabel": {
-    "he": "12:34 שעון ישראל, 28.10.2026",
-    "en": "12:34 Israel time, 28 Oct 2026"
+    "he": "15:00 שעון ישראל, 28.10.2026",
+    "en": "15:00 Israel time, 28 Oct 2026"
   },
-  "copiedAt": "2026-10-28T11:09:03.754Z",
+  "copiedAt": "2026-10-28T13:03:13.077Z",
   "source": {
-    "url": "https://www.timesofisrael.com/liveblog_entry/with-84-of-ballots-counted-pro-netanyahu-bloc-at-54-seats-eisenkot-led-bloc-at-49-arab-parties-at-17/",
+    "url": "https://www.ynetnews.com/article/imfrr039t",
     "name": {
-      "he": "The Times of Israel ו-Ynet, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (84.5% מהקלפיות, כ-77.6% מהקולות)",
-      "en": "The Times of Israel and Ynet, reporting partial results published by the Central Elections Committee (84.5% of ballot boxes, about 77.6% of votes)"
+      "en": "Ynet, reporting partial results from the Central Elections Committee (85.6% of votes counted, regular ballots only; double-envelope votes still to come)",
+      "he": "Ynet, לפי התוצאות החלקיות של ועדת הבחירות המרכזית (85.6% מהקולות נספרו, קולות רגילים בלבד; המעטפות הכפולות טרם נספרו)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -22,13 +22,13 @@
       "id": "מחל",
       "he": "הליכוד",
       "en": "Likud",
-      "seats": 27
+      "seats": 26
     },
     {
       "id": "דרך",
       "he": "ישר!",
       "en": "Yashar!",
-      "seats": 22
+      "seats": 21
     },
     {
       "id": "רק",
@@ -40,7 +40,7 @@
       "id": "ודם",
       "he": "הרשימה המשותפת",
       "en": "Joint List",
-      "seats": 11
+      "seats": 12
     },
     {
       "id": "אמת",
@@ -73,15 +73,15 @@
       "seats": 7
     },
     {
-      "id": "ט",
-      "he": "הציונות הדתית וזהות",
-      "en": "Religious Zionism and Zehut",
-      "seats": 6
-    },
-    {
       "id": "עם",
       "he": "רע\"ם",
       "en": "United Arab List (Ra'am)",
+      "seats": 7
+    },
+    {
+      "id": "ט",
+      "he": "הציונות הדתית וזהות",
+      "en": "Religious Zionism and Zehut",
       "seats": 6
     }
   ],
