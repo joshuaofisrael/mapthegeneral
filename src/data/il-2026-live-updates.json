@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-28T10:58:00+02:00",
+    "headline_en": "76.8% counted: Netanyahu bloc 54, Eisenkot bloc 47, Arab parties 19",
+    "body_en": "Just over three-quarters of ballot boxes had been counted by 10:58. According to the Central Elections Committee's partial figures, as reported by the Times of Israel, the bloc around Prime Minister Benjamin Netanyahu holds at 54 seats, short of the 61 needed for a majority, while the camp led by Yashar!'s Gadi Eisenkot slips one seat to 47. The Joint List (13) and Ra'am (6) together climb to 19. Reservists, People of Israel and Charedi Public remain below the 3.25% threshold. These numbers are partial: double-envelope ballots, including soldiers' votes, are counted later and could still move seats.",
+    "headline_he": "76.8% נספרו: גוש נתניהו 54, גוש אייזנקוט 47, המפלגות הערביות 19",
+    "body_he": "עד השעה 10:58 נספרו מעט יותר משלושה רבעים מהקלפיות. לפי התוצאות החלקיות של ועדת הבחירות המרכזית, כפי שדווחו ב-Times of Israel, הגוש בראשות ראש הממשלה בנימין נתניהו נותר עם 54 מנדטים, פחות מ-61 הנדרשים לרוב, והמחנה בראשות גדי אייזנקוט מ'ישר!' יורד במנדט אחד ל-47. הרשימה המשותפת (13) ורע\"מ (6) עולות יחד ל-19. המילואימניקים, עם ישראל והציבור החרדי עדיין מתחת לאחוז החסימה של 3.25%. מדובר בתוצאות חלקיות: קולות המעטפות הכפולות, ובהם קולות החיילים, נספרים מאוחר יותר ועשויים עוד להזיז מנדטים.",
+    "sources": [
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T10:40:00+02:00",
     "headline_en": "Tel Aviv shares and the shekel fall as the count points to deadlock",
     "body_en": "Markets reacted on Wednesday morning to partial results that leave neither bloc with a 61-seat majority. The Times of Israel reports the TA-125 index down 1.7% and the blue-chip TA-35 down 1.5%, with insurance stocks off 4.1%, while the shekel lost about 1% against the dollar to around NIS 3.08. A Mizrahi Tefahot Bank economist told the paper investors are waiting for final results and want a stable coalition. The latest published count is still 72.4% of ballot boxes, as of 10:03, and double-envelope ballots are yet to be added.",
