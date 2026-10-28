@@ -2,14 +2,14 @@
   "code": "nz",
   "name": "New Zealand",
   "href": "/nz/",
-  "summary": "National hub. General election on Saturday 7 November 2026, voting places 9am to 7pm. Parties seeking the party vote follow the Electoral Commission’s 9 October 2026 alphabetical list. No municipality pages and no count before 7:00 pm New Zealand daylight time.",
+  "summary": "National hub. General election on Saturday 7 November 2026, voting places 9am to 7pm. Parties seeking the party vote follow the Electoral Commission’s 9 October 2026 alphabetical list. Electorate candidates are the Commission’s spreadsheet for all 71 electorates. No municipality pages and no count before 7:00 pm New Zealand daylight time.",
   "links": [
     {
       "href": "/nz/en/",
       "label": "New Zealand"
     },
     {
-      "href": "/nz/en/elections/general-2026/",
+      "href": "/nz/en/elections/general-election/",
       "label": "General election, 7 November 2026"
     }
   ]

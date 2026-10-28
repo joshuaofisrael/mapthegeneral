@@ -13,7 +13,10 @@ const LISTS = "https://elections.nz/media-and-news/2026/candidate-and-party-list
 const PDF = "https://vote.nz/assets/pagecomponent-file-files/Party-lists-for-the-2026-General-Election.pdf";
 const BOOK = "https://elections.nz/assets/Handbooks/Candidate-Handbook-2026-General-Election.pdf";
 const DATES = "https://elections.nz/media-and-news/2026/key-dates-for-2026-general-election";
-const PATH = "/nz/en/elections/general-2026/";
+const XLSX = "https://elections.nz/assets/pagecomponent-file-files/Electorate-Candidates-2026.xlsx";
+const MAPS = "https://elections.nz/democracy-in-nz/historical-events/boundary-review-2025/electorate-maps";
+const KIT = "https://elections.nz/assets/2026-Media-Kit-/2026-General-Election-media-kit.pdf";
+const PATH = "/nz/en/elections/general-election/";
 const OPENS = "2026-11-07T19:00:00+13:00";
 
 function night(copy: {
@@ -75,11 +78,12 @@ const BODY = `<h2>What is being elected</h2>
 <p>The plan says overseas voting runs from Wednesday 21 October until 7pm on Saturday 7 November, New Zealand time, for voters enrolled by midnight on Sunday 25 October, New Zealand time. That enrolment time has passed. This page does not say a person can still enrol.</p>
 <p>The plan says a Whare pōti Māori provides voting services in te reo Māori and English, and that anyone can vote at one. The Māori Electoral Option is the choice of the Māori roll or the general roll. The plan says the Commission will produce material in English, te reo Māori, and 29 other languages. No te reo page was opened on 27 October 2026, so this page is not a translation.</p>
 <h2>Parties seeking the party vote</h2>
-<p>The <a href="${LISTS}">9 October 2026 release</a> lists 17 registered parties seeking the party vote, in alphabetical order. Each name links to the <a href="${PDF}">party-list file</a>, which prints list candidates in list order. Electorate candidates are on <a href="${VOTE}">vote.nz</a> by electorate. The handbook says electorate names are alphabetical by surname on the right-hand side of the ballot paper, and that parties contesting only the party vote are listed alphabetically on the left after the parties that also contest an electorate. This page does not rebuild that paper and does not say which name to mark.</p>
-<p><a href="${ACT}">Section 197(1)(g)</a> bars publishing a party name on polling day before the close of the poll. Section 197(2A) is a defence when the name was placed on a website before polling day, the site is not pushed that day to people who did not choose to open it, and the site is not advertised that day. These names were placed on 27 October 2026.</p>
+<p>The <a href="${LISTS}">9 October 2026 release</a> lists 17 registered parties seeking the party vote, in alphabetical order. Each name links to the <a href="${PDF}">party-list file</a>, which prints list candidates in list order. Electorate candidates are the rows of the Commission’s spreadsheet, in the next section. The handbook says electorate names are alphabetical by surname on the right-hand side of the ballot paper, and that parties contesting only the party vote are listed alphabetically on the left after the parties that also contest an electorate. This page does not rebuild that paper and does not say which name to mark.</p>
+<p><a href="${ACT}">Section 197(1)(g)</a> bars publishing a party name on polling day before the close of the poll. Section 197(2A) is a defence when the name was placed on a website before polling day, the site is not pushed that day to people who did not choose to open it, and the site is not advertised that day. The party names were placed on 27 October 2026. The electorate candidate names were placed on 28 October 2026.</p>
 {{candidates}}
+{{electorates}}
 <h2>Earlier official results</h2>
-<p>The results index, read on 27 October 2026, lists general elections on 14 October 2023, 17 October 2020, 23 September 2017, 20 September 2014, 26 November 2011 and 8 November 2008. Those totals are not copied here. <a href="${RESULTS}">electionresults.govt.nz</a>. The key-dates release says official results of this election are declared on 27 November 2026.</p>
+<p>The results index, read on 27 October 2026, lists general elections on 14 October 2023, 17 October 2020, 23 September 2017, 20 September 2014, 26 November 2011 and 8 November 2008. On 28 October 2026 the results host returned 403, so those totals are not copied here. <a href="${RESULTS}">electionresults.govt.nz</a>. The key-dates release says official results of this election are declared on 27 November 2026.</p>
 <h2>Election night</h2>
 <p>No count is shown here before 7:00 pm New Zealand daylight time on 7 November 2026. The plan says preliminary results are released progressively from 7pm that day on electionresults.govt.nz. After that hour this page reads only a same-origin file. If the file is missing, the link is that service. This page has no forecast.</p>
 ${NIGHT}`;
@@ -92,14 +96,15 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     endDate: OPENS,
     organizerName: "Electoral Commission",
     organizerUrl: "https://elections.nz/",
-    lastmod: "2026-10-27",
+    lastmod: "2026-10-28",
     candidateListId: "nz-general-2026",
+    electorateListId: "nz-electorates-2026",
     homeLinks: [
       {
         href: PATH,
         label: "New Zealand general election, 7 November 2026",
         detail:
-          "Saturday 7 November 2026, voting places 9am to 7pm New Zealand time. Parties seeking the party vote are the Commission’s 9 October alphabetical list. No count on this page before 7:00 pm.",
+          "Saturday 7 November 2026, voting places 9am to 7pm New Zealand time. Parties seeking the party vote are the Commission’s 9 October alphabetical list. Electorate candidates are the Commission’s spreadsheet for all 71 electorates. No count on this page before 7:00 pm.",
       },
     ],
     pages: [
@@ -126,7 +131,7 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         eyebrow: "7 November 2026",
         h1: "General election — Te Pōtitanga ā-Motu 2026",
         lede: "Saturday 7 November 2026. The Election Service Plan says voting places are open from 9am to 7pm. The Candidate Handbook’s title is Te Pōtitanga ā-Motu 2026.",
-        updated: "Last updated: 27 October 2026.",
+        updated: "Last updated: 28 October 2026.",
         reportLabel: "Report an error",
         officeHref: "https://elections.nz/",
         bannerBefore: "Unofficial information. Confirm with the ",
@@ -140,7 +145,7 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         addressRegion: "New Zealand",
         addressCountry: "NZ",
         keyDatesHeading: "How to vote, key times and official sources",
-        keyDatesIntro: "Each line below is from a page read on 27 October 2026. A time those pages did not print is not added.",
+        keyDatesIntro: "Each line below is from a page read on 27 or 28 October 2026. A time those pages did not print is not added.",
         keyDates: [
           {
             label: "Date",
@@ -159,8 +164,18 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             label: "Polling day",
-            text: "Electoral Act 1993, section 197 bars a public opinion poll on polling day before the close of the poll, and section 197(1)(g) bars publishing a party name then. The party names on this page were placed on 27 October 2026, which is the fact section 197(2A) addresses. This page prints no poll.",
+            text: "Electoral Act 1993, section 197 bars a public opinion poll on polling day before the close of the poll, and section 197(1)(g) bars publishing a party name then. The party names on this page were placed on 27 October 2026, and the electorate candidate names on 28 October 2026, which is the fact section 197(2A) addresses. This page prints no poll.",
             links: [{ label: "Electoral Act 1993, section 197", href: ACT }],
+          },
+          {
+            label: "Candidates",
+            text: "The 9 October 2026 release links the Electorate Candidates 2026 spreadsheet. This page lists every row, in that file’s order within each electorate. The Commission’s media kit says there are 64 general electorates and seven Māori electorates, and the electorate-maps page names the seven Māori electorates.",
+            links: [
+              { label: "The 9 October 2026 release", href: LISTS },
+              { label: "Electorate Candidates 2026 spreadsheet", href: XLSX },
+              { label: "media kit", href: KIT },
+              { label: "electorate-maps page", href: MAPS },
+            ],
           },
           {
             label: "Results",
@@ -182,10 +197,11 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             question: "Where are the candidates?",
-            text: "The 9 October 2026 release lists the registered parties seeking the party vote, in alphabetical order, and each name links to the party-list file. That file is the list order of list candidates. Electorate candidates are on vote.nz by electorate. Section 197(2A) is why names placed on this page on 27 October 2026 may remain on polling day if the site is not pushed or advertised that day. This page does not say which name to mark.",
+            text: "The 9 October 2026 release lists the registered parties seeking the party vote, in alphabetical order, and each name links to the party-list file. That file is the list order of list candidates. Electorate candidates are every row of the Commission’s Electorate Candidates 2026 spreadsheet, in that file’s order within each electorate. Section 197(2A) is why names placed on this page before polling day may remain that day if the site is not pushed or advertised. This page does not say which name to mark.",
             links: [
               { label: "The 9 October 2026 release", href: LISTS },
               { label: "the party-list file", href: PDF },
+              { label: "Electorate Candidates 2026 spreadsheet", href: XLSX },
             ],
           },
           {
@@ -216,6 +232,9 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           { href: LISTS, label: "Electoral Commission, candidate and party lists released, 9 October 2026", readOn: "2026-10-27" },
           { href: PDF, label: "Chief Electoral Officer, party lists for the 2026 General Election", readOn: "2026-10-27" },
+          { href: XLSX, label: "Electoral Commission, Electorate Candidates 2026 spreadsheet", readOn: "2026-10-28" },
+          { href: MAPS, label: "Electoral Commission, 2025 electorate maps, Māori electorates", readOn: "2026-10-28" },
+          { href: KIT, label: "Electoral Commission, 2026 General Election media kit", readOn: "2026-10-28" },
           { href: BOOK, label: "Candidate Handbook, 2026 General Election, December 2025", readOn: "2026-10-27" },
           { href: DATES, label: "Electoral Commission, key dates for the 2026 General Election", readOn: "2026-10-27" },
           { href: RESULTS, label: "electionresults.govt.nz, index of general elections", readOn: "2026-10-27" },

@@ -161,7 +161,7 @@ const reviewPath = join(root, "data/review/unlinked-candidates.json");
 let reviewRows: ReviewRow[] = [];
 try {
   const review = JSON.parse(readFileSync(reviewPath, "utf8")) as { readOn?: string; candidates?: ReviewRow[] };
-  if (review.readOn !== "2026-10-27") errors.push("unlinked-candidates.json: readOn is not 2026-10-27");
+  if (review.readOn !== "2026-10-28") errors.push("unlinked-candidates.json: readOn is not 2026-10-28");
   reviewRows = review.candidates ?? [];
 } catch (error) {
   errors.push(`unlinked-candidates.json: ${error instanceof Error ? error.message : String(error)}`);

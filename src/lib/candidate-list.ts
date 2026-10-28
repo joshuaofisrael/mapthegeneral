@@ -31,6 +31,8 @@ export type CandidateRecord = {
   surname: string;
   /** Official ballot position. Omit when the source does not publish one. */
   ballotOrder?: number;
+  /** Electorate, when one file holds every electorate on a ballot. */
+  electorate?: string;
   links?: CandidateLink[];
 };
 
@@ -280,10 +282,11 @@ export function validateCandidateData(data: CandidateList, fileId: string): stri
   const orders: number[] = [];
   data.candidates.forEach((row, index) => {
     const where = `${fileId}.candidates[${index}]`;
-    exactKeys(row, ["name", "committee", "surname", "ballotOrder", "links"], where, errors);
+    exactKeys(row, ["name", "committee", "surname", "ballotOrder", "electorate", "links"], where, errors);
     if (!row.name?.trim()) errors.push(`${where}: name is empty`);
     if (!row.committee?.trim()) errors.push(`${where}: committee is empty`);
     if (!row.surname?.trim()) errors.push(`${where}: surname is empty`);
+    if (row.electorate !== undefined && !row.electorate.trim()) errors.push(`${where}: electorate is empty`);
     const upper = row.surname.toLocaleUpperCase(sortLocale(data));
     if (!row.name.includes(upper) && !row.name.includes(row.surname)) {
       errors.push(`${where}: surname is not part of the published name`);
@@ -305,6 +308,10 @@ export function validateCandidateData(data: CandidateList, fileId: string): stri
     if (new Set(orders).size !== orders.length) errors.push(`${fileId}: ballot positions repeat`);
   } else if (withOrder !== 0) {
     errors.push(`${fileId}: this list must not mix in ballot positions`);
+  }
+  const withElectorate = data.candidates.filter((row) => row.electorate).length;
+  if (withElectorate !== 0 && withElectorate !== data.candidates.length) {
+    errors.push(`${fileId}: electorate is missing on a row`);
   }
   return errors;
 }
@@ -408,6 +415,67 @@ export function renderCandidateListHtml(list: CandidateList, lang: CandidateLang
 <ul>
 ${items}
 </ul>
+</section>`;
+}
+
+function electorateSlug(name: string): string {
+  const folded = name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
+  const slug = folded
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return slug || "electorate";
+}
+
+/**
+ * One section, with a heading for each electorate. Rows stay in source
+ * order inside an electorate. The caller sorts electorates before this runs.
+ */
+export function renderElectorateCandidateHtml(
+  list: CandidateList,
+  lang: CandidateLang,
+  kindFor?: (electorate: string) => string,
+): string {
+  if (list.candidates.length === 0 || !list.source) return "";
+  if (!listLanguages(list).includes(lang)) throw new Error(`${list.id}: no ${lang} copy`);
+  const rows = orderedCandidates(list);
+  const date = formatReadOn(list.source.readOn, lang);
+  const label = list.source.label[lang];
+  if (!label) throw new Error(`${list.id}: source label missing for ${lang}`);
+  const source = outbound(list.source.url, label);
+  const intro = list.source.intro?.[lang]
+    ? fillTemplate(list.source.intro[lang], date, source)
+    : noticeIntro(lang, date, source);
+  const order = list.source.orderNote?.[lang] ? esc(list.source.orderNote[lang]) : noticeOrder(list, lang);
+  const groups: { electorate: string; rows: CandidateRecord[] }[] = [];
+  for (const row of rows) {
+    const electorate = row.electorate ?? "";
+    const last = groups[groups.length - 1];
+    if (!last || last.electorate !== electorate) groups.push({ electorate, rows: [row] });
+    else last.rows.push(row);
+  }
+  const blocks = groups
+    .map((group) => {
+      const kind = kindFor ? kindFor(group.electorate) : "";
+      const items = group.rows
+        .map((row) => {
+          const links = (row.links ?? []).map((link) => outbound(link.href, LINK_LABEL[lang][link.kind]));
+          const tail = links.length ? ` ${links.join(" · ")}` : "";
+          return `<li>${esc(row.name)} — ${esc(row.committee)}.${tail}</li>`;
+        })
+        .join("\n");
+      const note = kind ? `\n<p>${esc(kind)}</p>` : "";
+      return `<h3 id="electorate-${electorateSlug(group.electorate)}">${esc(group.electorate)}</h3>${note}
+<ol>
+${items}
+</ol>`;
+    })
+    .join("\n");
+  return `<section id="electorates">
+<h2>${esc(candidateHeading(list, lang))}</h2>
+<p>${intro}</p>
+<p>${order}</p>
+${blocks}
 </section>`;
 }
 

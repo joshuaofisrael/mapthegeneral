@@ -10,6 +10,7 @@ import {
   listLanguages,
   loadCandidateList,
   renderCandidateListHtml,
+  renderElectorateCandidateHtml,
   type CandidateLang,
   type CandidateList,
 } from "./candidate-list";
@@ -20,6 +21,25 @@ import { withLegalFooter } from "./legal-footer";
 import { socialImageFor, socialMetaTags } from "./social";
 
 const ISO_OFFSET = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d$/;
+
+/** Named on the Commission’s 2025 electorate-maps page. General electorates are the rest. */
+const NZ_MAORI_ELECTORATES = new Set([
+  "Hauraki-Waikato",
+  "Ikaroa-Rāwhiti",
+  "Tāmaki Makaurau",
+  "Te Tai Hauāuru",
+  "Te Tai Tokerau",
+  "Te Tai Tonga",
+  "Waiariki",
+]);
+
+function fillCandidateMarkers(body: string, candidateHtml: string, electorateHtml: string): string {
+  const withCandidates = body.includes("{{candidates}}")
+    ? body.replaceAll("{{candidates}}", candidateHtml)
+    : `${body}\n${candidateHtml ? `${candidateHtml}\n` : ""}`;
+  if (withCandidates.includes("{{electorates}}")) return withCandidates.replaceAll("{{electorates}}", electorateHtml);
+  return electorateHtml ? `${withCandidates}\n${electorateHtml}\n` : withCandidates;
+}
 
 export function esc(value: string): string {
   return value
@@ -152,6 +172,15 @@ export function renderElectionHtml(profile: ElectionSeoProfile, page: ElectionSe
     throw new Error(`${page.path}: candidate list ${profile.candidateListId} has no ${page.lang} copy`);
   }
   const candidateHtml = candidateList ? renderCandidateListHtml(candidateList, candidateLang) : "";
+  const electorateList = profile.electorateListId && candidateReady ? loadCandidateList(profile.electorateListId, root) : null;
+  if (electorateList && !listLanguages(electorateList).includes(candidateLang)) {
+    throw new Error(`${page.path}: electorate list ${profile.electorateListId} has no ${page.lang} copy`);
+  }
+  const electorateHtml = electorateList
+    ? renderElectorateCandidateHtml(electorateList, candidateLang, (name) =>
+        NZ_MAORI_ELECTORATES.has(name) ? "Māori electorate" : "General electorate",
+      )
+    : "";
   const itemList = candidateList ? candidateItemListJsonLd(candidateList, candidateLang) : null;
   const modifiedHead = profile.candidateListId
     ? `<meta property="article:modified_time" content="${esc(profile.lastmod)}">\n${jsonScript(webPageJsonLd(profile, page))}\n`
@@ -210,7 +239,7 @@ ${GA_HEAD_TAGS}
 <h1>${esc(page.h1)}</h1>
 <p class="lede">${esc(page.lede)}</p>
 <p><strong>${esc(page.updated)}</strong> <a href="${esc(reportErrorHref(page.path))}">${esc(page.reportLabel)}</a></p>
-${editorialPreviewHtml(previewByPath(page.path))}${page.bodyHtml.includes("{{candidates}}") ? page.bodyHtml.replaceAll("{{candidates}}", candidateHtml) : `${page.bodyHtml}\n${candidateHtml ? `${candidateHtml}\n` : ""}`}${nightSectionHtml(profile.id, page.lang)}<section id="how-to-vote">
+${editorialPreviewHtml(previewByPath(page.path))}${fillCandidateMarkers(page.bodyHtml, candidateHtml, electorateHtml)}${nightSectionHtml(profile.id, page.lang)}<section id="how-to-vote">
 <h2>${esc(page.keyDatesHeading)}</h2>
 <p>${esc(page.keyDatesIntro)}</p>
 <ul>
@@ -269,6 +298,7 @@ export function validateElectionHtml(
 ): string[] {
   const errors: string[] = [];
   if (html.includes("{{candidates}}")) errors.push("candidate marker was not filled");
+  if (html.includes("{{electorates}}")) errors.push("electorate marker was not filled");
   let nodes: JsonLdNode[] = [];
   try {
     nodes = jsonLdNodes(html);
