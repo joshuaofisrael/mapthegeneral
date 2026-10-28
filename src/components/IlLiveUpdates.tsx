@@ -1,21 +1,21 @@
 import updates from "@/data/il-2026-live-updates.json";
 import type { IlLang } from "@/data/il-results";
 
-/** Journalist-style live updates (hand-written, attributed, sourced). Separate from counts and exit polls. */
+/** Journalist-style live updates (hand-written, attributed, sourced). Kept apart from the count and TV seat-sample sections. */
 export type IlUpdate = (typeof updates)[number];
 export const IL_UPDATES: IlUpdate[] = [...updates].sort((a, b) => +new Date(b.time) - +new Date(a.time));
 
 const T = {
   he: {
     h: "עדכונים שוטפים",
-    note: "סיכומים שלנו של דיווחים ממקורות שצוינו. אינם תוצאות רשמיות; הספירה החלקית והסקרים מוצגים במדורים נפרדים.",
+    note: "סיכומים שלנו של דיווחים ממקורות שצוינו. אינם תוצאות רשמיות; הספירה החלקית ומספרי הטלוויזיה מוצגים במדורים נפרדים.",
     updated: "עודכן",
     tz: "שעון ישראל",
     src: "מקורות",
   },
   en: {
     h: "Live updates",
-    note: "Our summaries of reporting from the named sources. Not official results; the partial count and exit polls are shown in separate sections.",
+    note: "Our summaries of reporting from the named sources. Not official results; the partial count and TV seat samples are in their own sections.",
     updated: "Updated",
     tz: "Israel time",
     src: "Sources",
