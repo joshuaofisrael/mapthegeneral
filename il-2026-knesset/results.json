@@ -7,7 +7,7 @@
  "stage": "awaiting",
  "fetchedAt": "2026-10-27T20:22:55.335Z",
  "results": [],
- "lastCheckedAt": "2026-10-28T09:56:49.803Z",
+ "lastCheckedAt": "2026-10-28T09:57:52.444Z",
  "feedStatus": "unreachable",
  "note": "Status log only, not results. The Central Elections Committee results file could not be read from our servers (blocked outside Israel). The results pages show partial, unofficial figures copied by hand, each with its own source and as-of time: https://mapthegeneral.com/il/en/results/",
  "lastError": "https://media.bechirot.gov.il/files/expc.csv: fetch failed"
