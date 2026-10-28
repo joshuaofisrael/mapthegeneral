@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-28T09:20:00+02:00",
+    "headline_en": "Partial count, 66.2% of ballot boxes: Netanyahu bloc 56, Eisenkot bloc 48",
+    "body_en": "Two-thirds of the ballot boxes (66.2%) had been counted by 09:20. On those Committee figures, as reported by the Times of Israel, the camp led by Prime Minister Benjamin Netanyahu has edged up to 56 seats, the bloc headed by Gadi Eisenkot of Yashar! has slipped to 48, and the Arab parties hold 16. Neither side reaches the 61 needed for a majority. The Reservists (2.7%), People of Israel (1.6%) and Charedi Public (0.2%) remain below the 3.25% threshold. The figures are provisional, and double-envelope ballots, including soldiers' votes, are still to be added.",
+    "headline_he": "ספירה חלקית, 66.2% מהקלפיות: גוש נתניהו 56, גוש איזנקוט 48",
+    "body_he": "עד 09:20 נספרו שני שלישים מהקלפיות (66.2%). לפי נתוני הוועדה כפי שדיווח The Times of Israel, המחנה בראשות ראש הממשלה בנימין נתניהו עלה ל-56 מנדטים, הגוש בראשות גדי איזנקוט מ\"ישר!\" ירד ל-48, ולמפלגות הערביות 16. אף צד אינו מגיע ל-61 הנדרשים לרוב. המילואימניקים (2.7%), עמך ישראל (1.6%) והציבור החרדי (0.2%) עדיין מתחת לאחוז החסימה (3.25%). הנתונים זמניים, והמעטפות הכפולות, כולל קולות החיילים, טרם נוספו.",
+    "sources": [
+      {
+        "name": "The Times of Israel (09:28 Israel time)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/with-over-66-of-ballots-counted-netanyahu-led-bloc-at-56-seats/"
+      },
+      {
+        "name": "Central Elections Committee results site",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T08:06:00+02:00",
     "headline_en": "IDF reports 79.9% turnout among soldiers; their votes are counted later",
     "body_en": "Soldiers turned out at a rate of 79.9%, according to IDF figures cited by the Times of Israel, about six points higher than in 2022. Their ballots travel in double envelopes and, per the Central Elections Committee as reported by the paper, will only be tallied from this evening alongside other absentee votes. The Committee's acting director, Dean Livne, warned that the strong turnout may mean a larger absentee pile and a slower finish, the Times of Israel says.",
