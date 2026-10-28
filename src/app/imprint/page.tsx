@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Legal notice (aviso legal, note legali, nota prawna)",
-  description: `Publisher details for ${SITE.name}: ${SITE.legalName}, ${SITE.location}, USA. Election-law notices and the dates this site holds back polls and results.`,
+  description: `Publisher: ${SITE.legalName}, West Bloomfield, Michigan, USA. Legal notice for ${SITE.name}.`,
   path: "/imprint",
 });
 

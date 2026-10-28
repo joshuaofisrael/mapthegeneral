@@ -23,6 +23,7 @@ import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
 import { auHome, jurisdictionPath } from "../src/countries/au";
+import { fitDescription } from "../src/lib/snippet";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -597,7 +598,13 @@ function renderAreas() {
         shell({
           path,
           title: h1,
-          description: `${lede} Unofficial information.`,
+          description: fitDescription(path, [
+            `${lede} Unofficial information.`,
+            lede.includes("Queensland")
+              ? `${item.name}, a Queensland local government area. Unofficial information.`
+              : `${item.name}, a local government area in ${parentName}. Unofficial information.`,
+            `${item.name}. Unofficial information.`,
+          ]),
           crumbs: parentCrumbs(slug, title, indexHref, h1, path),
           eyebrow: item.group === "vic-council" ? "Local council" : "Local government area",
           h1,

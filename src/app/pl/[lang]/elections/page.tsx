@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "pl" ? "Wybory w Polsce" : "Elections in Poland",
     description:
       lang === "pl"
-        ? "Indeks wyborów na stronach Polski. Wybory uzupełniające do Senatu w okręgu nr 20: 22 listopada 2026 r. Okno wyborów do Sejmu i Senatu: 14 października–12 listopada 2027 r."
-        : "Index of elections on the Poland pages. Senate by-election in constituency 20: 22 November 2026. Sejm and Senate window: 14 October–12 November 2027.",
+        ? "Wybory w Polsce: Senat, okręg 20, 22 listopada 2026 r. Okno Sejmu i Senatu: 14 października–12 listopada 2027 r."
+        : "Elections in Poland: Senate constituency 20 on 22 November 2026. Sejm and Senate window 14 October–12 November 2027.",
     path,
     lang,
     alternatePath: `${polandHome(lang === "pl" ? "en" : "pl")}elections/`,

@@ -30,7 +30,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asLang((await params).lang);
   return pageMetadata({
-    title: lang === "es" ? "España" : "Spain",
+    title: lang === "es" ? "Elecciones generales, España 2026" : "Spain general election 2026",
     description:
       lang === "es"
         ? "Elecciones a Cortes Generales del 29 de noviembre de 2026: Congreso, Senado, comunidades autónomas, provincias y municipios. Información no oficial."

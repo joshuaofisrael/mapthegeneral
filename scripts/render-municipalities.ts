@@ -19,6 +19,7 @@ import type { Community, Lang, Province } from "../src/data/spain/types";
 import { ui } from "../src/data/spain/ui";
 import { formatNumber } from "../src/lib/format";
 import { communityPath, municipalityPath, provincePath, spainHome } from "../src/lib/routes";
+import { fitDescription } from "../src/lib/snippet";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -74,11 +75,20 @@ function page(lang: Lang, municipality: Municipality, province: Province, commun
     })),
   }).replace(/</g, "\\u003c");
   const description = es
-    ? `${municipality.name} (${municipality.code}): Total ${population} en la tabla 29005 del INE, periodo 2025. Información no oficial.`
-    : `${municipality.name} (${municipality.code}): Total ${population} in INE table 29005, period 2025. Unofficial information.`;
-  const title = DUPLICATE_MUNICIPALITY_NAMES.has(municipality.name)
-    ? `${municipality.name}, ${province.decreeName} · ${SITE.name}`
-    : `${municipality.name} · ${SITE.name}`;
+    ? fitDescription(path, [
+        `${municipality.name}, ${province.decreeName}: municipio. Elecciones locales del 28 de mayo de 2023. Información no oficial.`,
+        `${municipality.name}: municipio. Elecciones locales del 28 de mayo de 2023. Información no oficial.`,
+      ])
+    : fitDescription(path, [
+        `${municipality.name}, ${province.decreeName}: municipality. Local elections of 28 May 2023. Unofficial information.`,
+        `${municipality.name}: municipality. Local elections of 28 May 2023. Unofficial information.`,
+      ]);
+  const place = DUPLICATE_MUNICIPALITY_NAMES.has(municipality.name)
+    ? `${municipality.name}, ${province.decreeName}`
+    : municipality.name;
+  const context = es ? "elecciones locales" : "local elections";
+  const withContext = `${place} — ${context} · ${SITE.name}`;
+  const title = [...withContext].length <= 60 ? withContext : `${place} · ${SITE.name}`;
   const canonical = absoluteUrl(path);
   const capitalNote = sameName
     ? es

@@ -16,6 +16,7 @@ import { sourceById, sourcesById } from "../src/data/italy/sources";
 import type { ItLang } from "../src/data/italy/types";
 import { ui } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { fitDescription } from "../src/lib/snippet";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
@@ -302,12 +303,21 @@ ${nearbyPlacesParagraph(
   return shell({
     lang,
     path,
-    title: duplicateComuneNames.has(comune.name)
-      ? `${comune.name}, ${comune.unitName} · ${SITE.name}`
-      : `${comune.name} · ${SITE.name}`,
+    title: (() => {
+      const place = duplicateComuneNames.has(comune.name) ? `${comune.name}, ${comune.unitName}` : comune.name;
+      const context = it ? "comune" : "municipality";
+      const withContext = `${place} — ${context} · ${SITE.name}`;
+      return [...withContext].length <= 60 ? withContext : `${place} · ${SITE.name}`;
+    })(),
     description: it
-      ? `${comune.name}: comune ${comune.code}, ${comune.unitName}, ${region.istatName}. Informazione non ufficiale.`
-      : `${comune.name}: municipality ${comune.code}, ${comune.unitName}, ${region.istatName}. Unofficial information.`,
+      ? fitDescription(path, [
+          `${comune.name}: comune in ${comune.unitName}, ${region.istatName}. Nessun giorno di elezione comunale è stampato. Informazione non ufficiale.`,
+          `${comune.name}: comune in ${region.istatName}. Informazione non ufficiale.`,
+        ])
+      : fitDescription(path, [
+          `${comune.name}: municipality in ${comune.unitName}, ${region.istatName}. No municipal polling day is printed. Unofficial information.`,
+          `${comune.name}: municipality in ${region.istatName}. Unofficial information.`,
+        ]),
     crumbs: [
       { name: copy.home, path: "/" },
       { name: copy.italy, path: "/it/" },

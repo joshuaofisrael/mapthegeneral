@@ -6,6 +6,7 @@ import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { socialMetaTags } from "../src/lib/social";
+import { fitDescription } from "../src/lib/snippet";
 import {
   districtName,
   districtNeighbors,
@@ -245,8 +246,14 @@ function districtPage(lang: CaLang, district: District): string {
     { name, path },
   ];
   const description = fr
-    ? `${name} (${district.fed}), circonscription électorale fédérale en ${regionLabel}. Information non officielle.`
-    : `${name} (${district.fed}), federal electoral district in ${regionLabel}. Unofficial information.`;
+    ? fitDescription(path, [
+        `${name} (${district.fed}), circonscription électorale fédérale en ${regionLabel}. Information non officielle.`,
+        `${name}: circonscription électorale fédérale. Information non officielle.`,
+      ])
+    : fitDescription(path, [
+        `${name} (${district.fed}), federal electoral district in ${regionLabel}. Unofficial information.`,
+        `${name}: federal electoral district. Unofficial information.`,
+      ]);
   const election = fr
     ? "La dernière élection générale fédérale a eu lieu le 28 avril 2025. La prochaine date fixée est le lundi 15 octobre 2029, sauf dissolution plus tôt du Parlement. Cette page ne publie pas de sondages, de projections ni de résultats par circonscription, et elle ne copie pas de liste de candidatures."
     : "The last federal general election was 28 April 2025. The next fixed date is Monday, 15 October 2029, unless Parliament is dissolved earlier. This page does not publish polls, projections, or riding results, and it does not copy a candidate list.";
@@ -302,8 +309,14 @@ function divisionPage(lang: CaLang, division: CensusDivision): string {
     { name, path },
   ];
   const description = fr
-    ? `${name} (${division.code}), division de recensement de la CGT 2021 en ${regionLabel}. Information non officielle.`
-    : `${name} (${division.code}), SGC 2021 census division in ${regionLabel}. Unofficial information.`;
+    ? fitDescription(path, [
+        `${name} (${division.code}), division de recensement de la CGT 2021 en ${regionLabel}. Information non officielle.`,
+        `${name}: division de recensement. Information non officielle.`,
+      ])
+    : fitDescription(path, [
+        `${name} (${division.code}), SGC 2021 census division in ${regionLabel}. Unofficial information.`,
+        `${name}: census division. Unofficial information.`,
+      ]);
   const lead = fr
     ? `Le fichier de structure de la Classification géographique type (CGT) 2021 inscrit cette division de recensement (niveau 3) en ${regionLabel}. Le titre de classe est le nom ci-dessus. Le fichier ne dit pas si cette division est un gouvernement municipal et ne nomme pas de titulaire. Il ne donne pas la population.`
     : `The Standard Geographical Classification (SGC) 2021 structure file lists this census division (level 3) in ${regionLabel}. The class title is the name above. The file does not say whether this division is a municipal government, and it does not name an officeholder. It does not give a population.`;

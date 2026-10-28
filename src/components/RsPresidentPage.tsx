@@ -29,7 +29,7 @@ const COPY = {
   sr: {
     title: "Srbija: izbori za predsednika Republike 2026, datum nije raspisan",
     description:
-      "Izbori za predsednika Republike Srbije 2026. Datum glasanja nije raspisan. Zakon traži da se glasa najkasnije 27. decembra 2026. Vršilac dužnosti je Ana Brnabić. Nezvanične informacije.",
+      "Izbori za predsednika Srbije 2026. Datum glasanja nije raspisan. Zakon traži glasanje najkasnije 27. decembra 2026. Nezvanične informacije.",
     h1: "Izbori za predsednika Republike Srbije, 2026",
     lede: "Dan glasanja nije raspisan. Ova stranica ne navodi pretpostavljeni datum.",
     eyebrow: "Datum nije raspisan · najkasnije 27. decembar 2026",
@@ -52,7 +52,7 @@ const COPY = {
   en: {
     title: "Serbia presidential election 2026: no polling day called",
     description:
-      "Presidential election in Serbia, 2026. No polling day has been called. The vote must be held by 27 December 2026 at the latest. Ana Brnabić is acting president. Unofficial information.",
+      "Presidential election in Serbia, 2026. No polling day has been called. The law requires a vote by 27 December 2026. Unofficial information.",
     h1: "Presidential election of Serbia, 2026",
     lede: "No polling day has been called. This page does not print a guessed date.",
     eyebrow: "Polling day not called · 27 December 2026 at the latest",

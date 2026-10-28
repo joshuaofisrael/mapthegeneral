@@ -20,7 +20,7 @@ import { auHome, jurisdictionPath } from "@/countries/au";
 const aec = sourceById("aec-entitlement-2026");
 
 export const metadata = auPageMetadata({
-  title: "Australia",
+  title: "Australia federal election",
   description:
     "Australia: next federal election due between August 2027 and May 2028, the 3 May 2025 House results, and the states and territories. Unofficial information.",
   path: "/au/en",

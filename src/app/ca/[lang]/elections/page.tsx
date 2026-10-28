@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "fr" ? "Élections au Canada" : "Elections in Canada",
     description:
       lang === "fr"
-        ? "Index des élections sur les pages du Canada. La date fédérale fixe lue est le 15 octobre 2029. L'élection provinciale de la Colombie-Britannique a eu son jour du scrutin final le 24 octobre 2026."
-        : "Index of elections on the Canada pages. The federal fixed date that was read is 15 October 2029. British Columbia's provincial Final Voting Day was 24 October 2026.",
+        ? "Élections au Canada. Date fédérale fixe : 15 octobre 2029. Scrutin final en Colombie-Britannique : 24 octobre 2026."
+        : "Elections on the Canada pages. Federal fixed date 15 October 2029. British Columbia final voting day was 24 October 2026.",
     path: `${canadaHome(lang)}elections/`,
     lang,
   });

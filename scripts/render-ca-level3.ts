@@ -8,6 +8,7 @@ import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
 import { socialMetaTags } from "../src/lib/social";
+import { fitDescription } from "../src/lib/snippet";
 import { DIVISIONS, divisionName } from "../src/data/ca/level2";
 import {
   CSD_TYPE_LABEL,
@@ -326,8 +327,14 @@ ${nearbyPlacesParagraph(
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, SEAT_SOURCES[seat.region])}</ul>`;
   const description = fr
-    ? `${seat.name}, circonscription de l’assemblée en ${regionLabel}. Information non officielle.`
-    : `${seat.name}, legislative assembly district in ${regionLabel}. Unofficial information.`;
+    ? fitDescription(path, [
+        `${seat.name}, circonscription de l’assemblée en ${regionLabel}. Information non officielle.`,
+        `${seat.name}: circonscription de l’assemblée. Information non officielle.`,
+      ])
+    : fitDescription(path, [
+        `${seat.name}, legislative assembly district in ${regionLabel}. Unofficial information.`,
+        `${seat.name}: legislative assembly district. Unofficial information.`,
+      ]);
   return shell({ lang, path, title: seat.name, description, crumbs, body });
 }
 
@@ -776,8 +783,14 @@ ${nearbyPlacesParagraph(
 <h2>${esc(copy.sourcesHeading)}</h2>
 <ul>${sourceList(lang, muniSourceIds(place))}</ul>`;
   const description = fr
-    ? `${name} (${place.code}), municipalité de la CGT 2021 en ${regionLabel}. Information non officielle.`
-    : `${name} (${place.code}), SGC 2021 municipality in ${regionLabel}. Unofficial information.`;
+    ? fitDescription(path, [
+        `${name} (${place.code}), municipalité de la CGT 2021 en ${regionLabel}. Information non officielle.`,
+        `${name}: municipalité. Information non officielle.`,
+      ])
+    : fitDescription(path, [
+        `${name} (${place.code}), SGC 2021 municipality in ${regionLabel}. Unofficial information.`,
+        `${name}: municipality. Unofficial information.`,
+      ]);
   return shell({ lang, path, title: name, description, crumbs, body });
 }
 

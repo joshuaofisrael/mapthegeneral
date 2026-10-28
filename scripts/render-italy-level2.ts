@@ -25,6 +25,7 @@ import { sourceById, sourcesById } from "../src/data/italy/sources";
 import type { ItLang } from "../src/data/italy/types";
 import { ui, unitLabel } from "../src/data/italy/ui";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
+import { fitDescription } from "../src/lib/snippet";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
@@ -208,10 +209,20 @@ ${officeholders}
   return shell({
     lang,
     path,
-    title: `${unit.name} · ${SITE.name}`,
+    title: (() => {
+      const context = it ? "elezioni" : "elections";
+      const withContext = `${unit.name} — ${context} · ${SITE.name}`;
+      return [...withContext].length <= 60 ? withContext : `${unit.name} · ${SITE.name}`;
+    })(),
     description: it
-      ? `${unit.name}: ${typeName}, codice ISTAT ${unit.code}, ${region.istatName}. Informazione non ufficiale.`
-      : `${unit.name}: ${typeName}, ISTAT code ${unit.code}, ${region.istatName}. Unofficial information.`,
+      ? fitDescription(path, [
+          `${unit.name}: ${typeName}, codice ISTAT ${unit.code}, ${region.istatName}. Informazione non ufficiale.`,
+          `${unit.name}: ${typeName}, ${region.istatName}. Informazione non ufficiale.`,
+        ])
+      : fitDescription(path, [
+          `${unit.name}: ${typeName}, ISTAT code ${unit.code}, ${region.istatName}. Unofficial information.`,
+          `${unit.name}: ${typeName}, ${region.istatName}. Unofficial information.`,
+        ]),
     crumbs: [
       { name: copy.home, path: "/" },
       { name: copy.italy, path: "/it/" },
@@ -320,8 +331,14 @@ ${childLinks ? `<h2>${it ? "Collegi uninominali compresi" : "Uninominal constitu
     path,
     title: `${item.name} · ${SITE.name}`,
     description: it
-      ? `${item.name}: ${kind}, ${house}, decreto legislativo 177/2020. Informazione non ufficiale.`
-      : `${item.name}: ${kind}, ${house}, legislative decree 177/2020. Unofficial information.`,
+      ? fitDescription(path, [
+          `${item.name}: ${kind}, ${house}, decreto legislativo 177/2020. Informazione non ufficiale.`,
+          `${item.name}: ${kind}, ${house}. Informazione non ufficiale.`,
+        ])
+      : fitDescription(path, [
+          `${item.name}: ${kind}, ${house}, legislative decree 177/2020. Unofficial information.`,
+          `${item.name}: ${kind}, ${house}. Unofficial information.`,
+        ]),
     crumbs: [
       { name: copy.home, path: "/" },
       { name: copy.italy, path: "/it/" },

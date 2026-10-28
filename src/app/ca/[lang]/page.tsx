@@ -29,7 +29,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Canada (français)" : "Canada",
+    title: lang === "fr" ? "Canada — élection fédérale 2029" : "Canada federal election 2029",
     description:
       lang === "fr"
         ? "Élection générale fédérale fixée au 15 octobre 2029, Chambre des communes, Sénat, provinces et territoires. Information non officielle."

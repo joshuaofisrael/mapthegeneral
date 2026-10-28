@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return auPageMetadata({
     title: "Next federal election",
     description:
-      "The Australian Electoral Commission says the next federal election is due between August 2027 and May 2028. No writ naming a polling day was read on 17 October 2026. Unofficial information.",
+      "Next Australian federal election is due between August 2027 and May 2028. No polling day was named. Unofficial information.",
     path: "/au/en/elections/federal-next",
   });
 }

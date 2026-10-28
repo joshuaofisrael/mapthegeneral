@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         : lang === "fr"
           ? "Le registre des partis de la Chancellerie fédérale n’est pas reproduit ici. L’élection du Conseil national de 2027 n’a pas encore de liste de candidatures lue."
           : lang === "it"
-            ? "Il registro dei partiti della Cancelleria federale non è riprodotto qui. L’elezione del Consiglio nazionale del 2027 non ha ancora una lista di candidature letta."
+            ? "Il registro dei partiti non è riprodotto qui. Il Consiglio nazionale del 2027 non ha ancora una lista letta."
             : "The Federal Chancellery’s party register is not reprinted here. The 2027 National Council election does not yet have a candidacy list that was read.",
     path: `${chHome(lang)}parties/`,
     lang,

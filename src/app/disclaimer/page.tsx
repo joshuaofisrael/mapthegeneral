@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Disclaimer",
-  description: `Disclaimer for ${SITE.name}: information only, not legal, political, voting, or financial advice. No warranty. ${SITE.brandSentence}`,
+  description: `Disclaimer for ${SITE.name}: information only, not advice. No warranty. ${SITE.legalName} operates the site.`,
   path: "/disclaimer",
 });
 

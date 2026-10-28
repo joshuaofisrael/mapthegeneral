@@ -18,6 +18,7 @@ import { withLegalFooter } from "../src/lib/legal-footer";
 import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { socialMetaTags } from "../src/lib/social";
+import { fitDescription } from "../src/lib/snippet";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -69,8 +70,14 @@ function page(lang: Lang, district: District): string {
     })),
   }).replace(/</g, "\\u003c");
   const description = es
-    ? `Distrito electoral federal ${number} de ${entity.name}. Cabecera: ${district.cabeceraLocalidad}. Diputación de mayoría relativa. Información no oficial.`
-    : `Federal electoral district ${number} of ${entity.name}. Cabecera: ${district.cabeceraLocalidad}. Relative-majority seat. Unofficial information.`;
+    ? fitDescription(path, [
+        `Distrito electoral federal ${number} de ${entity.name}. Cabecera: ${district.cabeceraLocalidad}. Diputación de mayoría relativa. Información no oficial.`,
+        `Distrito electoral federal ${number} de ${entity.name}. Información no oficial.`,
+      ])
+    : fitDescription(path, [
+        `Federal electoral district ${number} of ${entity.name}. Cabecera: ${district.cabeceraLocalidad}. Relative-majority seat. Unofficial information.`,
+        `Federal electoral district ${number} of ${entity.name}. Unofficial information.`,
+      ]);
   const title = `${titleName} · ${entity.name} · ${SITE.name}`;
   const shortSource: Record<(typeof SOURCE_IDS)[number], string> = {
     "ine-cg875-anexo": es ? "INE/CG875/2022, anexo 3, descriptivo de cabeceras" : "INE/CG875/2022, annex 3, cabecera descriptivo",

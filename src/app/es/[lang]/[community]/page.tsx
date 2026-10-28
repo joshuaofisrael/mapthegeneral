@@ -17,6 +17,7 @@ import { ui } from "@/data/spain/ui";
 import { formatIsoDate, formatNumber } from "@/lib/format";
 import { asLang } from "@/lib/lang";
 import { pageMetadata } from "@/lib/metadata";
+import { fitMetaTitle } from "@/lib/snippet";
 import { communityPath, provincePath, spainHome } from "@/lib/routes";
 
 export function generateStaticParams() {
@@ -40,7 +41,7 @@ export async function generateMetadata({
   if (!community) return {};
   const path = communityPath(lang, slug);
   return pageMetadata({
-    title: community.officialName,
+    title: fitMetaTitle(community.officialName, lang === "es" ? "elecciones generales" : "general election"),
     description:
       lang === "es"
         ? `${community.officialName}: ${community.parliamentName}, última elección citada y provincias. Información no oficial.`

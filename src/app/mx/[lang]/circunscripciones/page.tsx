@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "es" ? "Circunscripciones plurinominales" : "Plurinominal constituencies",
     description:
       lang === "es"
-        ? "Las cinco circunscripciones electorales plurinominales federales del acuerdo INE/CG130/2023 y los nombres que el directorio de la Cámara imprime en cada una. Información no oficial."
+        ? "Cinco circunscripciones plurinominales del acuerdo INE/CG130/2023. Información no oficial."
         : "The five federal plurinominal constituencies in agreement INE/CG130/2023 and the names the Chamber directory prints in each one. Unofficial information.",
     path,
     lang,

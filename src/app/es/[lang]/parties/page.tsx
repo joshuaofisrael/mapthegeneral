@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "es" ? "Partidos" : "Spain parties",
     description:
       lang === "es"
-        ? "Las candidaturas de las elecciones del 29 de noviembre de 2026 no están proclamadas en las fuentes leídas el 17 de octubre de 2026. Esta página no enumera partidos."
+        ? "Candidaturas del 29 de noviembre de 2026 no proclamadas en las fuentes leídas. Esta página no enumera partidos."
         : "Candidacies for the 29 November 2026 election were not proclaimed in the sources read on 17 October 2026. This page does not list parties.",
     path,
     lang,

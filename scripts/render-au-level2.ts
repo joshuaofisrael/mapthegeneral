@@ -220,7 +220,7 @@ ${
   return shell({
     path,
     title: item.name,
-    description: `${item.name} (${item.stateLabel}): House of Representatives division in place for the 2025 federal election, with the member the Australian Electoral Commission declared elected. Unofficial information.`,
+    description: `${item.name} (${item.stateLabel}): House division for the 2025 federal election. Unofficial information.`,
     crumbs: baseCrumbs([
       { name: state.officialName, path: parent },
       { name: "House of Representatives", path: indexPath },

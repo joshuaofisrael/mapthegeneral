@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Advertising and affiliate disclosure",
-  description: `${SITE.name} may show Google AdSense ads. It does not sell political advertising, does not endorse candidates or parties, and does not use affiliate links. ${SITE.legalName} operates the site.`,
+  description: `Advertising on ${SITE.name} may include Google AdSense. ${SITE.legalName} does not sell political ads or endorse candidates.`,
   path: "/advertising",
 });
 

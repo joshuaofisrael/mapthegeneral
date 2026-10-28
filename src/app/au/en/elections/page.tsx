@@ -7,7 +7,7 @@ import { auHome, jurisdictionPath } from "@/countries/au";
 export const metadata = auPageMetadata({
   title: "Elections in Australia",
   description:
-    "Elections in Australia. Victoria votes on Saturday 28 November 2026. The New South Wales state election is Saturday 13 March 2027. No federal polling day has been named. Unofficial information.",
+    "Elections in Australia: Victoria on 28 November 2026 and New South Wales on 13 March 2027. No federal polling day is named. Unofficial information.",
   path: "/au/en/elections",
 });
 

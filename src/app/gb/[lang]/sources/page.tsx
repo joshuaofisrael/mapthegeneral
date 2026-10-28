@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return gbMetadata({
     title: "United Kingdom sources",
     description:
-      "Official sources for the United Kingdom pages: legislation.gov.uk, the Electoral Commission, UK Parliament, the Scottish Parliament, the Senedd, the Northern Ireland Assembly, GOV.UK and the ONS.",
+      "Official sources for the United Kingdom pages, with the date each was read. Unofficial information.",
     path: "/gb/en/sources/",
   });
 }

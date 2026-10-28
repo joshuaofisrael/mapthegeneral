@@ -63,20 +63,20 @@ export function ilEstimatesAllowed(doc: { fetchedAt?: string | null; results?: u
 
 export const IL_COPY = {
   he: {
-    title: "תוצאות הבחירות 2026 בזמן אמת – מנדטים לכנסת ה-26",
+    title: "תוצאות הבחירות לכנסת ה-26, 2026",
     h1: "תוצאות הבחירות לכנסת ה-26",
     description:
-      "תוצאות הבחירות 2026 בזמן אמת מנתוני ועדת הבחירות המרכזית: מנדטים לכל רשימה, אחוז החסימה, אחוז הצבעה, קלפיות שנספרו ומחשבון קואליציה. מספרי מנדטים של ערוצי הטלוויזיה, אם מוצגים, נמצאים במדור נפרד. חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית.",
+      "תוצאות הבחירות לכנסת ה-26 ב-27 באוקטובר 2026, מנתוני ועדת הבחירות המרכזית. אינן סופיות. מידע לא רשמי.",
     kicker: "בחירות 2026 · 27 באוקטובר",
     intro:
       "עמוד זה מציג את ספירת הקולות של ועדת הבחירות המרכזית מרגע סגירת הקלפיות ב-22:00. חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית. מספרי מנדטים שפרסמו ערוצי הטלוויזיה, אם מוצגים, נמצאים במדור נפרד ואינם תוצאות רשמיות.",
     breadcrumbs: ["דף הבית", "ישראל", "תוצאות הבחירות"],
   },
   en: {
-    title: "Israel Election Results 2026 Live – Knesset Seats",
+    title: "Israel election results, 27 October 2026",
     h1: "Israel election results 2026: the 26th Knesset",
     description:
-      "Live Israel election results 2026 from the Central Elections Committee: Knesset seats by party, the 3.25% threshold, turnout, ballot boxes counted and a coalition calculator. Television seat samples are in a separate section. Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.",
+      "Unofficial results of the 26th Knesset election on 27 October 2026, from Central Elections Committee totals. Not a final result.",
     kicker: "Knesset election · 27 October 2026",
     intro:
       "This page shows Central Elections Committee vote totals from the moment polls close at 22:00 Israel time. Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation. Television channels' seat samples, if shown, are in a separate section and are not official results.",

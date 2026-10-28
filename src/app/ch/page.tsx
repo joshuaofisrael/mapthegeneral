@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 import { sourceById } from "../../../data/ch/sources";
 
 export const metadata = pageMetadata({
-  title: "Switzerland — languages",
+  title: "Switzerland National Council 2027",
   description:
     "Switzerland on Map the General: the National Council election of 24 October 2027, in German, French, Italian, and English. Unofficial information.",
   path: "/ch",

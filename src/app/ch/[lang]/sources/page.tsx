@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       lang === "fr" ? "Sources, Suisse" : lang === "it" ? "Fonti, Svizzera" : lang === "en" ? "Switzerland sources" : copy.sources,
     description:
       lang === "de"
-        ? "Amtliche Quellen der Schweiz-Seiten, gelesen am 17. Oktober 2026: Bundesverfassung, Bundesblatt, Bundesrat, Bundeskanzlei, Parlament und BFS."
+        ? "Amtliche Quellen der Schweiz-Seiten, gelesen am 17. Oktober 2026. Inoffizielle Information."
         : lang === "fr"
-          ? "Sources officielles des pages Suisse, lues le 17 octobre 2026 : Constitution fédérale, Feuille fédérale, Conseil fédéral, Chancellerie fédérale, Parlement et OFS."
+          ? "Sources officielles des pages Suisse, lues le 17 octobre 2026. Information non officielle."
           : lang === "it"
-            ? "Fonti ufficiali delle pagine Svizzera, lette il 17 ottobre 2026: Costituzione federale, Foglio federale, Consiglio federale, Cancelleria federale, Parlamento e UST."
-            : "Official sources for the Switzerland pages, read on 17 October 2026: Federal Constitution, Federal Gazette, Federal Council, Federal Chancellery, Parliament, and the BFS.",
+            ? "Fonti ufficiali delle pagine Svizzera, lette il 17 ottobre 2026. Informazione non ufficiale."
+            : "Official sources for the Switzerland pages, read on 17 October 2026. Unofficial information.",
     path: `${chHome(lang)}sources/`,
     lang,
   });

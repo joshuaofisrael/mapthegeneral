@@ -6,7 +6,7 @@ import { auHome } from "@/countries/au";
 export const metadata = auPageMetadata({
   title: "Australia sources",
   description:
-    "Official sources for the Australia pages, with the date each one was read. Australian Electoral Commission, Parliament of Australia, Victorian Electoral Commission, and the ABS. Unofficial information.",
+    "Official sources for the Australia pages, with the date each was read. Unofficial information.",
   path: "/au/en/sources",
 });
 

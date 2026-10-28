@@ -27,11 +27,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = italyHome(lang);
   return italyMetadata({
-    title: lang === "it" ? "Italia" : "Italy",
+    title: lang === "it" ? "Italia: Camera e Senato, 2022" : "Italy: Chamber and Senate, 2022",
     description:
       lang === "it"
-        ? "Italia: Camera dei deputati, Senato della Repubblica, elezione del 25 settembre 2022 e 20 regioni. Nessun giorno stampato per la prossima elezione politica. Informazione non ufficiale."
-        : "Italy: Chamber of Deputies, Senate, the election of 25 September 2022, and 20 regions. No polling day is printed for the next general election. Unofficial information.",
+        ? "Italia: Camera, Senato, elezione del 25 settembre 2022 e 20 regioni. Nessun giorno per la prossima elezione. Informazione non ufficiale."
+        : "Italy: Chamber, Senate, the 25 September 2022 election, and 20 regions. No next polling day is printed. Unofficial information.",
     path,
     lang,
     alternatePath: italyHome(otherLang(lang)),
