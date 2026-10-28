@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 76.8,
-  "asOf": "2026-10-28T10:58:00+02:00",
+  "countedPct": 84.5,
+  "asOf": "2026-10-28T12:34:00+02:00",
   "asOfLabel": {
-    "he": "10:58 שעון ישראל, 28.10.2026",
-    "en": "10:58 Israel time, 28 Oct 2026"
+    "he": "12:34 שעון ישראל, 28.10.2026",
+    "en": "12:34 Israel time, 28 Oct 2026"
   },
-  "copiedAt": "2026-10-28T09:51:21.593Z",
+  "copiedAt": "2026-10-28T11:09:03.754Z",
   "source": {
-    "url": "https://www.ynetnews.com/article/hjnatbkaml",
+    "url": "https://www.timesofisrael.com/liveblog_entry/with-84-of-ballots-counted-pro-netanyahu-bloc-at-54-seats-eisenkot-led-bloc-at-49-arab-parties-at-17/",
     "name": {
-      "he": "Ynet ו-The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (76.8% מהקלפיות, 70.7% מהקולות). ב-Jerusalem Post דווח על חלוקה שונה במנדט אחד בין ישר! לישראל ביתנו",
-      "en": "Ynet and The Times of Israel, reporting partial results published by the Central Elections Committee (76.8% of ballot boxes, 70.7% of votes). The Jerusalem Post reports a split that differs by one seat between Yashar! and Yisrael Beiteinu"
+      "he": "The Times of Israel ו-Ynet, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (84.5% מהקלפיות, כ-77.6% מהקולות)",
+      "en": "The Times of Israel and Ynet, reporting partial results published by the Central Elections Committee (84.5% of ballot boxes, about 77.6% of votes)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -28,18 +28,18 @@
       "id": "דרך",
       "he": "ישר!",
       "en": "Yashar!",
-      "seats": 20
-    },
-    {
-      "id": "ודם",
-      "he": "הרשימה המשותפת",
-      "en": "Joint List",
-      "seats": 13
+      "seats": 22
     },
     {
       "id": "רק",
       "he": "ביחד",
       "en": "Together (B'Yachad)",
+      "seats": 12
+    },
+    {
+      "id": "ודם",
+      "he": "הרשימה המשותפת",
+      "en": "Joint List",
       "seats": 11
     },
     {
@@ -52,7 +52,7 @@
       "id": "ל",
       "he": "ישראל ביתנו",
       "en": "Yisrael Beiteinu",
-      "seats": 8
+      "seats": 7
     },
     {
       "id": "ג",
@@ -89,12 +89,12 @@
     {
       "he": "המילואימניקים והכלכלית",
       "en": "The Reservists",
-      "pct": 2.6
+      "pct": 2.7
     },
     {
       "he": "עמך ישראל",
       "en": "People of Israel (Amcha Yisrael)",
-      "pct": 1.7
+      "pct": 1.6
     },
     {
       "he": "הציבור החרדי",
