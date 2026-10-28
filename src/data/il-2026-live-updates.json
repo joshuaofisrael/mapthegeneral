@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-28T17:25:00+02:00",
+    "headline_en": "Committee lowers its estimate of uncounted double-envelope ballots",
+    "body_en": "The Central Elections Committee now puts the number of double-envelope ballots cast at between 430,000 and 480,000, below the roughly 600,000 cited earlier, the Times of Israel and Haaretz report. The committee says the figure is still preliminary because ballots are still arriving and being processed. These votes, mostly from soldiers, diplomats, prisoners, hospital patients and others voting away from home, are tallied separately once officials confirm no one voted twice. A full count is due on Thursday afternoon, and the official final results are expected on 4 November. Until then the partial count stays at 85.6%, with the Netanyahu-led bloc on 53 seats, Eisenkot's bloc on 48 and the Arab-led lists on 19.",
+    "headline_he": "ועדת הבחירות מורידה את ההערכה למספר המעטפות הכפולות שטרם נספרו",
+    "body_he": "ועדת הבחירות המרכזית מעריכה כעת כי בין 430 אלף ל-480 אלף קולות הוטלו במעטפות כפולות, פחות מכ-600 אלף שדווחו קודם לכן, כך מדווחים טיימס אוף ישראל והארץ. לדברי הוועדה ההערכה עדיין ראשונית, שכן מעטפות ממשיכות להגיע ולעבור עיבוד. קולות אלה, בעיקר של חיילים, דיפלומטים, אסירים, מאושפזים ומצביעים נוספים מחוץ לקלפי הקבועה שלהם, נספרים בנפרד לאחר שמוודאים שאיש לא הצביע פעמיים. ספירה מלאה צפויה ביום חמישי אחר הצהריים, והתוצאות הרשמיות הסופיות צפויות להתפרסם ב-4 בנובמבר. עד אז הספירה החלקית נותרת על 85.6%: 53 מושבים לגוש בראשות נתניהו, 48 לגוש של איזנקוט ו-19 לרשימות בהובלה ערבית.",
+    "sources": [
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+      },
+      {
+        "name": "Haaretz",
+        "url": "https://www.haaretz.com/israel-news/elections/2026-10-28/ty-article-live/over-70-of-votes-counted-arab-parties-at-historic-high/000001a1-81fb-d6da-a7eb-e7ff6bb30004"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T16:45:00+02:00",
     "headline_en": "Double-envelope count set to run overnight into Thursday evening",
     "body_en": "The Central Elections Committee expects more than half a million double-envelope ballots, cast by soldiers, hospital patients and others voting away from their home polling station, Ynet reports. Elad Naveh, who heads the committee's control centre, told Ynet that counting should start around midnight and finish on Thursday evening, and that it is too early to say how these votes will affect seat numbers. Even then the figures will be close to final rather than certified, with further checks due next week. The IDF put turnout among military personnel at 79.9%, up 6.2 points on the last election, according to Ynet. Until those ballots are added, the committee's partial count stays at 85.6%, with the Netanyahu-led bloc on 53 seats, Eisenkot's bloc on 48 and the Arab-led lists on 19.",
