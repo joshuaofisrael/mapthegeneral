@@ -701,7 +701,7 @@ function checkIsraelLabels(root: string, flags: Flag[]) {
       text.includes("ספירת קולות סופית של הוועדה") &&
       text.includes("ספירה רשמית ראשונית");
     const oldSnapshot = text.includes('stage === "final"') && text.includes("Final results") && text.includes("Preliminary official count");
-    const newSnapshot = /not final/i.test(text) && /not an official seat allocation/i.test(text);
+    const newSnapshot = /not final/i.test(text) && (/not an official seat allocation/i.test(text) || (/does not calculate seats/i.test(text) && /not official/i.test(text)));
     const distinct = rel.endsWith(".mjs") ? oldSnapshot || newSnapshot : oldEmbed || newEmbed;
     if (!distinct) {
       pushFlag(flags, {
