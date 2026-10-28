@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 57.3,
-  "asOf": "2026-10-28T07:58:00+02:00",
+  "countedPct": 66.2,
+  "asOf": "2026-10-28T09:20:00+02:00",
   "asOfLabel": {
-    "he": "07:58 שעון ישראל, 28.10.2026",
-    "en": "07:58 Israel time, 28 Oct 2026"
+    "he": "09:20 שעון ישראל, 28.10.2026",
+    "en": "09:20 Israel time, 28 Oct 2026"
   },
-  "copiedAt": "2026-10-28T07:24:44.890Z",
+  "copiedAt": "2026-10-28T08:08:05.886Z",
   "source": {
-    "url": "https://www.timesofisrael.com/liveblog_entry/pro-netanyahu-bloc-at-55-seats-with-57-3-of-ballots-counted/",
+    "url": "https://www.ynetnews.com/article/3thj2n57m",
     "name": {
-      "he": "The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית",
-      "en": "The Times of Israel, reporting partial results published by the Central Elections Committee"
+      "he": "Ynet ו-The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית (3,413,319 קולות)",
+      "en": "Ynet and The Times of Israel, reporting partial results published by the Central Elections Committee (3,413,319 votes counted)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -22,7 +22,7 @@
       "id": "מחל",
       "he": "הליכוד",
       "en": "Likud",
-      "seats": 27
+      "seats": 28
     },
     {
       "id": "דרך",
@@ -46,13 +46,13 @@
       "id": "אמת",
       "he": "הדמוקרטים",
       "en": "The Democrats",
-      "seats": 9
+      "seats": 8
     },
     {
       "id": "ג",
       "he": "יהדות התורה",
       "en": "United Torah Judaism",
-      "seats": 9
+      "seats": 8
     },
     {
       "id": "ל",
@@ -70,7 +70,7 @@
       "id": "ב",
       "he": "עוצמה יהודית",
       "en": "Otzma Yehudit",
-      "seats": 6
+      "seats": 7
     },
     {
       "id": "ט",
@@ -89,17 +89,17 @@
     {
       "he": "המילואימניקים והכלכלית",
       "en": "The Reservists",
-      "pct": 2.64
+      "pct": 2.7
     },
     {
       "he": "עמך ישראל",
       "en": "People of Israel (Amcha Yisrael)",
-      "pct": 1.65
+      "pct": 1.6
     },
     {
       "he": "הציבור החרדי",
       "en": "Charedi Public",
-      "pct": 0.24
+      "pct": 0.2
     }
   ],
   "votes": {
@@ -366,21 +366,21 @@
         "letters": "זץ",
         "he": "ברית עולם לגאולת ישראל",
         "en": "Brit Olam",
-        "pct": 0.0,
+        "pct": 0,
         "votes": 154
       },
       {
         "letters": "צבי",
         "he": "תנועת אחי תנועתו של הרב יורם אברג'ל זצ\"ל",
         "en": "Ahi Movement",
-        "pct": 0.0,
+        "pct": 0,
         "votes": 28
       },
       {
         "letters": "כן",
         "he": "כחול לבן בראשות בני גנץ",
         "en": "Blue and White",
-        "pct": 0.0,
+        "pct": 0,
         "votes": 3
       }
     ]
