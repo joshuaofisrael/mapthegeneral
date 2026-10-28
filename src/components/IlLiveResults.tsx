@@ -131,7 +131,7 @@ export function ilUpdatedStamp(
   const minute = parts.find((p) => p.type === "minute")?.value ?? "";
   const hm = `${hour}:${minute}`;
   const text = lang === "he" ? `נבדק לאחרונה ${hm} שעון ישראל` : `Last checked ${hm} Israel time`;
-  const cadence = lang === "he" ? "הנתונים נבדקים בכל דקה; העמוד מתרענן כל 2–5 דקות" : "Data checked every minute; page refreshes every 2–5 minutes";
+  const cadence = lang === "he" ? "הקובץ הרשמי נבדק מעת לעת; הוא חסום מחוץ לישראל" : "Official file checked periodically; it is blocked outside Israel";
   return { text, cadence, kind: "checked" };
 }
 

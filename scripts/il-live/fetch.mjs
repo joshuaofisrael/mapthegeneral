@@ -45,7 +45,8 @@ function write(doc, haveData) {
   // No new count: keep results, stage, and fetchedAt. fetchedAt stays the
   // time the figures last changed. lastCheckedAt moves on every run.
   const keep = Boolean(prev) && (!haveData || !countChanged);
-  const next = keep ? { ...prev, lastCheckedAt: checkedAt } : { ...doc, lastCheckedAt: checkedAt };
+  const status = doc.feedStatus ? { feedStatus: doc.feedStatus, note: doc.note, lastError: doc.lastError } : {};
+  const next = keep ? { ...prev, ...status, lastCheckedAt: checkedAt } : { ...doc, lastCheckedAt: checkedAt };
   publishFile(outFile, JSON.stringify(next, null, 1) + "\n");
   setOutput("changed", keep ? "false" : "true");
   setOutput("published", "true");
@@ -117,5 +118,13 @@ for (const url of urls) {
   }
 }
 // No CSV this run. Keep published results and stage; only lastCheckedAt moves.
-write({ ...base, stage: "awaiting", fetchedAt: now.toISOString(), results: [] }, false);
+write({
+  ...base,
+  stage: "awaiting",
+  feedStatus: "unreachable",
+  note: "Status log only, not results. The Central Elections Committee results file could not be read from our servers (blocked outside Israel). The results pages show partial, unofficial figures copied by hand, each with its own source and as-of time: https://mapthegeneral.com/il/en/results/",
+  lastError: lastErr.slice(0, 200),
+  fetchedAt: now.toISOString(),
+  results: [],
+}, false);
 console.warn(`no CEC CSV available (${lastErr}); no counts published`);

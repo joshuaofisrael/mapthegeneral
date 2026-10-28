@@ -1,7 +1,7 @@
 /**
  * Copy and facts for the Israel 2026 Knesset results pages (/il/he/results/,
- * /il/en/results/). Every figure here is sourced; live counts come only from
- * the Central Elections Committee via scripts/il-live/fetch.mjs.
+ * /il/en/results/). Every figure here is sourced. The CEC feed is blocked outside
+ * Israel, so figures are hand-copied (src/data/il-2026-manual-count.json).
  */
 import meta from "./il-knesset-2026.json";
 import { pollingExtended } from "./release-status";
@@ -42,10 +42,10 @@ export function ilLivePollUrl(base: string, now = Date.now(), windowMs = IL_LIVE
 export const IL_CEC_RESULTS = "https://cdn-votes26.bechirot.gov.il/";
 export const IL_META = meta;
 
-/** Seats this site calculates. Exact English; native Hebrew on he pages. */
+/** Seat label: seats are copied from a named report, never calculated here. Exact English; native Hebrew on he pages. */
 export const IL_SEAT_LABEL = {
-  he: "חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית.",
-  en: "Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.",
+  he: "מספרי המנדטים הועתקו מדיווח תקשורתי שצוין בשמו על הספירה החלקית; האתר אינו מחשב מנדטים. לא רשמי ולא סופי.",
+  en: "Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. Unofficial and not final.",
 } as const;
 
 /** A feed older than this, or a failed fetch, must not show seat estimates. */
@@ -66,20 +66,20 @@ export const IL_COPY = {
     title: "תוצאות הבחירות לכנסת ה-26, 2026",
     h1: "תוצאות הבחירות לכנסת ה-26",
     description:
-      "תוצאות הבחירות לכנסת ה-26 ב-27 באוקטובר 2026, מנתוני ועדת הבחירות המרכזית. אינן סופיות. מידע לא רשמי.",
+      "תוצאות חלקיות ולא רשמיות של הבחירות לכנסת ה-26 ב-27 באוקטובר 2026, שהוזנו ידנית עם מקור ושעת עדכון. אינן סופיות.",
     kicker: "בחירות 2026 · 27 באוקטובר",
     intro:
-      "עמוד זה מציג את ספירת הקולות של ועדת הבחירות המרכזית מרגע סגירת הקלפיות ב-22:00. חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית. מספרי מנדטים שפרסמו ערוצי הטלוויזיה, אם מוצגים, נמצאים במדור נפרד ואינם תוצאות רשמיות.",
+      "קובץ התוצאות של ועדת הבחירות המרכזית חסום לגישה מחוץ לישראל, ולכן הנתונים בעמוד זה מוזנים ידנית. כל טבלה מציינת מקור אחד ושעת עדכון: מספרי מנדטים שהועתקו מדיווח תקשורתי (האתר אינו מחשב מנדטים), סכומי קולות שהועתקו ידנית מאתר הוועדה, ובמדור נפרד מדגמי המנדטים של ערוצי הטלוויזיה. שום נתון כאן אינו סופי או רשמי.",
     breadcrumbs: ["דף הבית", "ישראל", "תוצאות הבחירות"],
   },
   en: {
     title: "Israel election results, 27 October 2026",
     h1: "Israel election results 2026: the 26th Knesset",
     description:
-      "Unofficial results of the 26th Knesset election on 27 October 2026, from Central Elections Committee totals. Not a final result.",
+      "Partial, unofficial results of the 26th Knesset election on 27 October 2026, entered by hand with a source and as-of time for each table. Not final.",
     kicker: "Knesset election · 27 October 2026",
     intro:
-      "This page shows Central Elections Committee vote totals from the moment polls close at 22:00 Israel time. Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation. Television channels' seat samples, if shown, are in a separate section and are not official results.",
+      "The Central Elections Committee results file is blocked outside Israel, so the figures on this page are entered by hand. Each table names one source and an as-of time: seat numbers copied from a named media report (this site does not calculate seats), vote totals copied by hand from the Committee's results site, and, in a separate section, TV seat samples published by television channels. Nothing here is final or official.",
     breadcrumbs: ["Home", "Israel", "Election results"],
   },
 } as const;
@@ -123,21 +123,21 @@ export const IL_TIMELINE = {
 export const IL_FAQ = {
   he: [
     ["מתי יתפרסמו תוצאות הבחירות 2026?", "הספירה מתחילה עם סגירת הקלפיות ב-22:00 ב-27 באוקטובר 2026, והתוצאות מתעדכנות כאן במהלך הלילה. ועדת הבחירות צופה תוצאות אמת סביב הצהריים ב-29 באוקטובר, והתוצאות הרשמיות יפורסמו ברשומות עד 4 בנובמבר."],
-    ["מאיפה מגיעים הנתונים?", "חלק התוצאות משתמש רק בקובץ התוצאות שמפרסמת ועדת הבחירות המרכזית לכנסת ה-26. מספרי מנדטים של ערוצי הטלוויזיה, אם מוצגים, נמצאים במדור נפרד ואינם הקובץ הזה."],
-    ["האם המנדטים בעמוד הם סופיים?", "לא. חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית. החישוב הוא לפי שיטת בדר-עופר והסכמי העודפים שדווחו, והוא ישתנה ככל שהספירה תתקדם, ובמיוחד לאחר ספירת המעטפות הכפולות. התוצאה המחייבת היא זו שתפרסם ועדת הבחירות."],
+    ["מאיפה מגיעים הנתונים?", "קובץ התוצאות של הוועדה חסום מחוץ לישראל. סכומי הקולות מועתקים ידנית מאתר התוצאות של ועדת הבחירות המרכזית, ומספרי המנדטים מועתקים מהדיווח התקשורתי שצוין ליד הטבלה. מדגמי הטלוויזיה נמצאים במדור נפרד."],
+    ["האם המנדטים בעמוד הם סופיים?", "לא. מספרי המנדטים הועתקו מדיווח תקשורתי על הספירה החלקית; האתר אינו מחשב מנדטים. הם ישתנו ככל שהספירה תתקדם, ובמיוחד לאחר ספירת המעטפות הכפולות. התוצאה המחייבת היא זו שתפרסם ועדת הבחירות."],
     ["מהו אחוז החסימה?", "3.25% מהקולות הכשרים. רשימה מתחת לסף זה אינה מקבלת מושבים."],
-    ["כמה מנדטים צריך כדי להקים ממשלה?", "ממשלה צריכה אמון של רוב חברי הכנסת: 61 מתוך 120. מחשבון הקואליציה בעמוד רק מחבר מספרים לבחירתכם ואינו מנבא דבר."],
+    ["כמה מנדטים צריך כדי להקים ממשלה?", "ממשלה צריכה אמון של רוב חברי הכנסת: 61 מתוך 120. "],
     ["כמה בעלי זכות בחירה יש?", "לפי ועדת הבחירות המרכזית, 7,331,981 בעלי זכות בחירה ו-12,018 קלפיות."],
-    ["האם מספרי הטלוויזיה הם תוצאות רשמיות?", "לא. אחרי 22:00 יש במדור נפרד את מספרי המנדטים שפרסמו ערוצי הטלוויזיה. הם אינם תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית. הספירה בחלק התוצאות היא של הוועדה."],
+    ["האם מספרי הטלוויזיה הם תוצאות רשמיות?", "לא. אחרי 22:00 יש במדור נפרד את מספרי המנדטים שפרסמו ערוצי הטלוויזיה. הם אינם תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית. סכומי הקולות בחלק התוצאות הועתקו ידנית מאתר הוועדה."],
   ],
   en: [
     ["When will the Israel election results be published?", "Counting starts when polls close at 22:00 Israel time on 27 October 2026, and results update here through the night. The Central Elections Committee expects true results around midday on 29 October; official results are published in the Reshumot gazette by 4 November."],
-    ["Where does the data come from?", "The results section uses only the results file published by the Central Elections Committee for the 26th Knesset. Television seat samples, if shown, are in a separate section and are not that file."],
-    ["Are the seat numbers final?", "No. Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation. The arithmetic uses the Bader-Ofer method and the reported surplus-vote agreements, and it will change as counting goes on, especially after the double-envelope count. The binding result is the one the Committee publishes."],
+    ["Where does the data come from?", "The Committee's results file is blocked outside Israel. Vote totals are copied by hand from the Central Elections Committee results site, and seat numbers are copied from the media report named beside that table. TV seat samples are in a separate section."],
+    ["Are the seat numbers final?", "No. Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. They will change as counting goes on, especially after the double-envelope count. The binding result is the one the Committee publishes."],
     ["What is the electoral threshold?", "3.25 percent of valid votes. A list below it wins no seats."],
-    ["How many seats are needed to form a government?", "A government needs the confidence of a Knesset majority: 61 of 120. The coalition calculator on this page only adds up the numbers you pick; it predicts nothing."],
+    ["How many seats are needed to form a government?", "A government needs the confidence of a Knesset majority: 61 of 120. "],
     ["How many people can vote?", "According to the Central Elections Committee, 7,331,981 eligible voters and 12,018 polling stations."],
-    ["Are the television numbers official?", "No. After 22:00 a separate section shows seat counts published by television channels. They are not official results. Official results come only from the Central Elections Committee. The count in the results section is the Committee's."],
+    ["Are the television numbers official?", "No. After 22:00 a separate section shows seat counts published by television channels. They are not official results. Official results come only from the Central Elections Committee. The vote totals in the results section are copied by hand from the Committee's results site."],
   ],
 } as const;
 

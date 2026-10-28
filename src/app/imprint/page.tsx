@@ -53,15 +53,16 @@ export default function ImprintPage() {
         <h2>What this site does not publish</h2>
         <ul>
           <li>
-            No opinion polls or voting-intention figures. After 22:00 Israel time on 27 October 2026, the Israel
-            results pages may show television channels&apos; published seat samples in a section marked unofficial.
+            No opinion polls or voting-intention figures. The only samples shown anywhere are on the Israel results
+            pages: after 22:00 Israel time on 27 October 2026 they may show TV seat samples published by television
+            channels, in a separate section marked unofficial.
             Official results come only from the election authority.
           </li>
           <li>
             No results or partial counts before polls close and before any later editorial hold. Counts, when shown,
-            come from the official election body. On the Israel results pages, seats are an unofficial allocation
-            calculated from partial official vote totals. That allocation is not final and is not an official seat
-            allocation.
+            come from the official election body. On the Israel results pages, vote totals are copied by hand from
+            the Central Elections Committee results site and seat numbers are copied from a named media report, each
+            labelled partial, unofficial and not final. This site does not calculate seats.
           </li>
           <li>No campaign material and no calls to vote for or against anyone.</li>
         </ul>

@@ -75,13 +75,13 @@ const KW =
 const PCT = "\\d{1,2}(?:[.,]\\d)?\\s?%";
 const POLL_FIGURE = new RegExp(`${KW}[^<]{0,120}?${PCT}|${PCT}[^<]{0,120}?${KW}`, "i");
 
-const ilLabel = "Unofficial seat allocation calculated from partial official vote totals; not final and not an official seat allocation.";
-const ilLabelHe = "חלוקת מנדטים בלתי רשמית, שחושבה מספירת קולות רשמית חלקית; אינה סופית ואינה חלוקת מנדטים רשמית.";
+const ilLabel = "Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. Unofficial and not final.";
+const ilLabelHe = "מספרי המנדטים הועתקו מדיווח תקשורתי שצוין בשמו על הספירה החלקית; האתר אינו מחשב מנדטים. לא רשמי ולא סופי.";
 
 const IL_EXIT_OPEN = Date.parse("2026-10-27T22:00:00+02:00");
 const IL_EXIT_SECTION = /<section\b[^>]*\bdata-il-exit-polls\b[^>]*>[\s\S]*?<\/section>/i;
 const IL_EXIT_DISCLAIMER_EN =
-  "These are unofficial exit-poll projections published by TV channels, not official results. Official results come only from the Central Elections Committee.";
+  "These are unofficial TV seat samples published by television channels, not official results. Official results come only from the Central Elections Committee.";
 const IL_EXIT_DISCLAIMER_HE =
   "אלה תחזיות לא רשמיות של מדגמי טלוויזיה שפרסמו ערוצי הטלוויזיה, לא תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית.";
 

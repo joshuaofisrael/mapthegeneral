@@ -48,7 +48,7 @@ const COPY = {
     description:
       "Election to the 26th Knesset in Israel on Tuesday 27 October 2026. 120 seats. Polling stations from 07:00 to 22:00 Israel time. Unofficial information.",
     h1: "Election to the 26th Knesset, 27 October 2026",
-    lede: "The election day set by the Central Elections Committee. This page has no polls and no exit samples.",
+    lede: "The election day set by the Central Elections Committee. This page has no polls and no TV seat samples.",
     eyebrow: "Tuesday 27 October 2026 · 16 Heshvan 5787",
     home: "Home",
     country: "Israel",
@@ -132,7 +132,7 @@ function faq(lang: Lang) {
     },
     {
       q: "Where are the results?",
-      a: "Vote totals come from the Central Elections Committee results file, on this site’s results page after 22:00. Any seat allocation this site calculates from those partial totals is unofficial, not final, and not an official seat allocation. The results page may also show television seat samples in a separate section marked unofficial. This guide does not.",
+      a: "The results page shows partial, unofficial figures entered by hand, each with a source and as-of time: vote totals copied from the Central Elections Committee results site, and seat numbers copied from a named media report. This site does not calculate seats. The results page may also show TV seat samples in a separate section marked unofficial. This guide does not.",
     },
     {
       q: "When are the official results published?",
