@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "it" ? "Elezioni in Italia" : "Elections in Italy",
     description:
       lang === "it"
-        ? "Indice delle elezioni nelle pagine italiane: la suppletiva della Camera nel collegio 01-Chieti del 15-16 novembre 2026, le politiche del 25 settembre 2022 e la prossima, senza un giorno di calendario."
-        : "Index of elections on the Italy pages: the Chamber by-election in constituency 01-Chieti on 15–16 November 2026, the general election of 25 September 2022, and the next one, with no calendar day.",
+        ? "Elezioni nelle pagine italiane: suppletiva 01-Chieti, 15-16 novembre 2026, e politiche del 25 settembre 2022. Informazione non ufficiale."
+        : "Elections on the Italy pages: the 01-Chieti by-election, 15–16 November 2026, and the general election of 25 September 2022. Unofficial information.",
     path,
     lang,
     alternatePath: `${italyHome(otherLang(lang))}elections/`,

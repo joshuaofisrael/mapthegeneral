@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: lang === "it" ? "Fonti, Italia" : "Italy sources",
     description:
       lang === "it"
-        ? "Fonti ufficiali delle pagine italiane: Costituzione, Gazzetta Ufficiale, ISTAT, Camera, Quirinale e Ministero dell'interno. Le schede dei comuni di questa consegna sono datate 25 ottobre 2026."
-        : "Official sources for the Italy pages: Constitution, Official Gazette, ISTAT, Chamber, Quirinale and the Interior Ministry. Municipality pages in this delivery are dated 25 October 2026.",
+        ? "Fonti delle pagine italiane: Costituzione, Gazzetta Ufficiale, ISTAT, Camera e Ministero dell'interno. Informazione non ufficiale."
+        : "Sources for the Italy pages: Constitution, Official Gazette, ISTAT, Chamber, and the Interior Ministry. Unofficial information.",
     path,
     lang,
     alternatePath: `${italyHome(otherLang(lang))}sources/`,

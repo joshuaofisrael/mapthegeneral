@@ -13,6 +13,7 @@ import { cantonPath, chHome, communePath, communesIndexPath, districtPath, distr
 import { sourceById, sourcesById } from "../../../../../data/ch/sources";
 import type { ChLang } from "../../../../../data/ch/types";
 import { formatNumber, ui } from "../../../../../data/ch/ui";
+import { fitDescription, fitMetaTitle } from "@/lib/snippet";
 
 const OFFICE = sourceById("bk-nationalrat");
 
@@ -27,16 +28,21 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asChLang(raw);
   const canton = cantonBySlug(slug);
   if (!canton) return {};
-  const description =
+  const description = fitDescription(canton.officialName, [
     lang === "en"
-      ? `${canton.officialName}: permanent resident population at the end of 2024, National Council seats for 2027, and Council of States seats. Unofficial information.`
+      ? `${canton.officialName}: National Council 2027 and Council of States. Unofficial information.`
       : lang === "de"
-        ? `${canton.officialName}: ständige Wohnbevölkerung Ende 2024, Nationalratssitze 2027 und Ständeratssitze. Inoffizielle Information.`
+        ? `${canton.officialName}: Nationalrat 2027 und Ständerat. Inoffizielle Information.`
         : lang === "fr"
-          ? `${canton.officialName} : population résidante permanente fin 2024, sièges au Conseil national pour 2027 et sièges au Conseil des États. Information non officielle.`
-          : `${canton.officialName}: popolazione residente permanente fine 2024, seggi al Consiglio nazionale per il 2027 e seggi al Consiglio degli Stati. Informazione non ufficiale.`;
+          ? `${canton.officialName} : Conseil national 2027 et Conseil des États. Information non officielle.`
+          : `${canton.officialName}: Consiglio nazionale 2027 e Consiglio degli Stati. Informazione non ufficiale.`,
+  ]);
+  const title = fitMetaTitle(
+    canton.officialName,
+    lang === "de" ? "Nationalrat 2027" : lang === "fr" ? "Conseil national 2027" : lang === "it" ? "Consiglio nazionale 2027" : "National Council 2027",
+  );
   return chMetadata({
-    title: canton.officialName,
+    title,
     description,
     path: cantonPath(lang, slug),
     lang,

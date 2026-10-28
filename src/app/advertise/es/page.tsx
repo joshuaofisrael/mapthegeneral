@@ -4,7 +4,7 @@ import { SITE, absoluteUrl } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 
 const description =
-  "Un banner exclusivo en la portada y en los portales de país durante los resultados de la noche electoral de Israel y los 3 días siguientes, 27–30 oct 2026, $1,000. Solo negocios no políticos. Sin garantía de tráfico.";
+  "Banner exclusivo en la portada y los portales de país, noche electoral de Israel, 27–30 oct 2026, $1,000. Solo negocios no políticos.";
 
 const base = pageMetadata({
   title: "Anunciar",

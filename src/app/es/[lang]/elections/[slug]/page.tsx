@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return pageMetadata({
     title:
       lang === "es"
-        ? "España: elecciones generales a Cortes Generales, 29 de noviembre de 2026"
-        : "Spain general election, Cortes Generales, 29 November 2026",
+        ? "Elecciones generales, 29 de noviembre de 2026"
+        : "Spain general election, 29 November 2026",
     description:
       lang === "es"
-        ? "Elecciones generales a Cortes Generales en España, domingo 29 de noviembre de 2026, convocadas por el Real Decreto 806/2026. Campaña, horario y fuentes oficiales. Información no oficial."
-        : "Spain general election for the Cortes Generales on Sunday 29 November 2026, called by Royal Decree 806/2026. Campaign, voting hours and official sources. Unofficial information.",
+        ? "Elecciones a Cortes Generales, domingo 29 de noviembre de 2026, Real Decreto 806/2026. Información no oficial."
+        : "Spain general election, Sunday 29 November 2026, called by Royal Decree 806/2026. Unofficial information.",
     path,
     lang,
     alternatePath: `${spainHome(lang === "es" ? "en" : "es")}elections/${SLUG}/`,
