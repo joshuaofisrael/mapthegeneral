@@ -1,0 +1,49 @@
+[
+  {
+    "time": "2026-10-28T08:06:00+02:00",
+    "headline_en": "IDF reports 79.9% turnout among soldiers; their votes are counted later",
+    "body_en": "Soldiers turned out at a rate of 79.9%, according to IDF figures cited by the Times of Israel, about six points higher than in 2022. Their ballots travel in double envelopes and, per the Central Elections Committee as reported by the paper, will only be tallied from this evening alongside other absentee votes. The Committee's acting director, Dean Livne, warned that the strong turnout may mean a larger absentee pile and a slower finish, the Times of Israel says.",
+    "headline_he": "צה\"ל: שיעור ההצבעה בקרב חיילים 79.9%; קולותיהם נספרים מאוחר יותר",
+    "body_he": "לפי נתוני צה\"ל שמביא The Times of Israel, 79.9% מהחיילים הצביעו, כשש נקודות יותר מאשר ב-2022. קולותיהם נמצאים במעטפות כפולות, ולפי ועדת הבחירות המרכזית, כפי שדווח, ייספרו רק מהערב יחד עם שאר המעטפות הכפולות. ממלא מקום מנהל הוועדה, דין ליבנה, הזהיר שההצבעה הגבוהה עלולה להגדיל את מספר המעטפות הכפולות ולהאט את סיום הספירה, לפי העיתון.",
+    "sources": [
+      {
+        "name": "The Times of Israel (08:06 Israel time)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/idf-says-voter-turnout-among-troops-reached-79-9-an-increase-of-6-2-compared-to-2022/"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-28T07:58:00+02:00",
+    "headline_en": "Partial count, 57.3% of ballot boxes: neither bloc at 61 seats",
+    "body_en": "Just over half the ballot boxes (57.3%) had been tallied by 07:58, and on those Committee figures, as summarised by the Times of Israel, Netanyahu's camp holds 55 seats, his opponents 49 and the Arab parties 16. That leaves both camps short of the 61 needed to govern. Three lists sit under the 3.25% threshold for now: the Reservists, People of Israel and Charedi Public. These numbers are provisional; double-envelope ballots, including soldiers' votes, have yet to be added.",
+    "headline_he": "ספירה חלקית, 57.3% מהקלפיות: אף גוש אינו מגיע ל-61 מנדטים",
+    "body_he": "עד 07:58 נספרו 57.3% מהקלפיות. לפי נתוני הוועדה כפי שסיכם The Times of Israel, למחנה נתניהו 55 מנדטים, למתנגדיו 49 ולמפלגות הערביות 16, כך ששני המחנות רחוקים מ-61. שלוש רשימות נמצאות כרגע מתחת לאחוז החסימה (3.25%): המילואימניקים, עמך ישראל והציבור החרדי. הנתונים זמניים; המעטפות הכפולות, כולל קולות החיילים, טרם נוספו.",
+    "sources": [
+      {
+        "name": "The Times of Israel (08:03 Israel time)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/pro-netanyahu-bloc-at-55-seats-with-57-3-of-ballots-counted/"
+      },
+      {
+        "name": "Central Elections Committee results site",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-28T07:43:00+02:00",
+    "headline_en": "Partial count, 55.4% of ballot boxes: pro-Netanyahu bloc 56, opposition 49",
+    "body_en": "At 07:43, with 55.4% of boxes in, the Committee's provisional tally had Netanyahu's camp on 56 seats and his opponents on 49, according to the Times of Israel. A provisional figure that has since moved (see the 07:58 update).",
+    "headline_he": "ספירה חלקית, 55.4% מהקלפיות: הגוש התומך בנתניהו 56, האופוזיציה 49",
+    "body_he": "ב-07:43, לאחר ספירת 55.4% מהקלפיות, הספירה הזמנית של הוועדה העניקה למחנה נתניהו 56 מנדטים ולמתנגדיו 49, לפי The Times of Israel. נתון זמני שכבר השתנה (ראו העדכון של 07:58).",
+    "sources": [
+      {
+        "name": "The Times of Israel (07:49 Israel time)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/pro-netanyahu-bloc-at-56-seats-with-55-4-of-ballots-counted-opposition-at-49-arab-parties-at-15/"
+      },
+      {
+        "name": "Central Elections Committee results site",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  }
+]

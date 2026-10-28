@@ -94,3 +94,18 @@ Facts that were not on a source read on 17 October 2026 are marked as gaps. That
 ## Contact
 
 Joshua Israel Ventures LLC. Email `joshuaofisrael@gmail.com` with subject `[Contact: Map the General]`.
+
+## Israel live updates (election night)
+
+The Israel results pages (`/il/en/results/`, `/il/he/results/`) carry a journalist-style **Live updates** feed from `src/data/il-2026-live-updates.json` (newest first; each entry has `time`, `headline_en`, `body_en`, `headline_he`, `body_he`, `sources[{name,url}]`). It is separate from the hand-copied partial count and the exit polls, and it feeds the page's `LiveBlogPosting.liveBlogUpdate` JSON-LD and the "Updated HH:MM Israel time" stamp.
+
+Add an entry:
+
+```bash
+node scripts/add-il-live-update.mjs --time 2026-10-28T09:15:00+02:00 \
+  --en-headline "Partial count, 70% of ballot boxes: ..." --en-body "..., the Times of Israel reports." \
+  --he-headline "..." --he-body "..." \
+  --source "The Times of Israel|https://www.timesofisrael.com/liveblog_entry/..."
+```
+
+`--time` defaults to now; at least one `--source` is required. Write entries in our own words (at most a short attributed quote) and cite only reputable sources (Central Elections Committee, Times of Israel, Haaretz, Ynet, Kan, Jerusalem Post, Reuters, AP). Attribute every claim to a named source, no predictions as fact, no allegations against people. Run the legal check (`/workspace/content-review/RULE.md`) on anything moderate, then commit and push to `main`; the Pages deploy republishes both pages.

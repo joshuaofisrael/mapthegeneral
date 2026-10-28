@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { IlExitPolls } from "@/components/IlExitPolls";
 import { IlLiveResults } from "@/components/IlLiveResults";
 import { IlManualCount } from "@/components/IlManualCount";
+import { IL_UPDATES, IlLiveUpdates } from "@/components/IlLiveUpdates";
 import { Hemicycle, colorMap, type IlDoc, type IlRow } from "@/components/IlShared";
 import { absoluteUrl, SITE } from "@/data/site";
 import {
@@ -172,7 +173,17 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
       mainEntityOfPage: url,
       image: [`${SITE.url}${IL_OG.path}`],
       datePublished: "2026-10-26T12:00:00+00:00",
-      dateModified: modified(doc),
+      dateModified: IL_UPDATES[0] && Date.parse(IL_UPDATES[0].time) > Date.parse(modified(doc)) ? IL_UPDATES[0].time : modified(doc),
+      liveBlogUpdate: IL_UPDATES.map((u) => ({
+        "@type": "BlogPosting",
+        headline: lang === "he" ? u.headline_he : u.headline_en,
+        articleBody: lang === "he" ? u.body_he : u.body_en,
+        datePublished: u.time,
+        url: `${url}#u-${new Date(u.time).getTime()}`,
+        inLanguage: lang,
+        citation: u.sources.map((s) => s.url),
+        author: { "@type": "Organization", name: SITE.name, url: SITE.url },
+      })),
       coverageStartTime: IL_TRACKER_OPENS_AT,
       coverageEndTime: "2026-11-04T23:59:00+02:00",
       about: {
@@ -243,6 +254,8 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
           </a>
         </p>
       </section>
+
+      <IlLiveUpdates lang={lang} />
 
       <IlExitPolls lang={lang} />
 
