@@ -153,6 +153,7 @@ export function BrGeneralPage({ lang }: { lang: Lang }) {
         data={{
           "@context": "https://schema.org",
           "@type": "Event",
+          description: copy.description,
           name: pt ? "Eleição geral de 2026 no Brasil" : "Brazil general election of 2026",
           startDate: "2026-10-04",
           endDate: "2026-10-25",

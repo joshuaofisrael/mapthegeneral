@@ -160,6 +160,7 @@ export function RsParliamentPage({ lang }: { lang: Lang }) {
         data={{
           "@context": "https://schema.org",
           "@type": "Event",
+          description: copy.description,
           name: eventName,
           startDate: "2026-10-25T07:00:00+01:00",
           endDate: "2026-10-25T20:00:00+01:00",

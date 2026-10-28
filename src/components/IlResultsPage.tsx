@@ -188,13 +188,14 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
       coverageEndTime: "2026-11-04T23:59:00+02:00",
       about: {
         "@type": "Event",
+        description: c.description,
         name: lang === "he" ? "הבחירות לכנסת ה-26" : "Election to the 26th Knesset",
         startDate: "2026-10-27T07:00:00+02:00",
         endDate: "2026-10-27T22:00:00+02:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         image: [`${SITE.url}${IL_OG.path}`],
-        location: { "@type": "Country", name: lang === "he" ? "ישראל" : "Israel" },
+        location: { "@type": "Country", name: lang === "he" ? "ישראל" : "Israel", address: { "@type": "PostalAddress", addressCountry: "IL" } },
         organizer: {
           "@type": "Organization",
           name: lang === "he" ? "ועדת הבחירות המרכזית" : "Central Elections Committee",
