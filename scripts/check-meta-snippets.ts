@@ -65,6 +65,8 @@ function walk(dir: string) {
       continue;
     }
     const head = readFileSync(full, "utf8").slice(0, 12000);
+    // Site-verification tokens are a single line, not an indexable document.
+    if (!/<html[\s>]/i.test(head)) continue;
     const robots = robotsRe.exec(head)?.[1] ?? "";
     if (/noindex/i.test(robots)) continue;
     indexable++;
