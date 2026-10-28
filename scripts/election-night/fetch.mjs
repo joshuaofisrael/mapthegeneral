@@ -110,7 +110,7 @@ async function readOfficial(feed, now) {
   return acceptOfficial(feed.id, await res.json());
 }
 
-const CONFIRM = new Set(["bg-2026-11-01"]);
+const CONFIRM = new Set(["bg-2026-11-01", "nz-2026-11-07"]);
 
 function publicationBlocked(id) {
   let all;

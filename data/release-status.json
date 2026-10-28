@@ -5,5 +5,9 @@
   },
   "il-2026-knesset": {
     "pollingExtended": false
+  },
+  "nz-2026-11-07": {
+    "votingEnded": false,
+    "pollingExtended": false
   }
 }

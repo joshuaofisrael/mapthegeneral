@@ -23,7 +23,7 @@ const FILES = [
 ];
 
 /** Sealed baseline. Update only outside the freeze, in the same commit as a real New Zealand edit. */
-const SEAL = "6bb6b06466ae12f546b308c220cfe0119d48b57696966bc2b88167b715c07a39";
+const SEAL = "d9489f66c8979e1975ff48c3431094d5922d9ef5ad04bb3ae5080dccbf889e02";
 
 function fileHash(rel: string): string {
   const bytes = readFileSync(path.join(process.cwd(), rel));
@@ -54,6 +54,9 @@ if (!workflow.includes("2026-11-06T11:00:00+00:00") || !workflow.includes("2026-
   errors.push("IndexNow workflow is missing the New Zealand freeze window");
 }
 if (!workflow.includes('"/nz/"')) errors.push("IndexNow workflow does not drop New Zealand URLs");
+if (RELEASE_POLICIES[NZ_WINDOW_ID]?.requiresEndOfVotingConfirmation !== true) {
+  errors.push("New Zealand results are not gated on official confirmation that voting places have closed");
+}
 
 const digest = nzContentDigest();
 if (process.env.PRINT_NZ_SEAL === "1") {
