@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-28T23:35:00+02:00",
+    "headline_en": "90% of votes counted and the seat picture holds steady",
+    "body_en": "Late on Wednesday the Central Elections Committee raised the count to 90% of votes, covering about 97.5% of ballot boxes, and the seat split did not move, according to the Times of Israel: Netanyahu's camp stays on 53, the Jewish-led opposition on 48 and Arab-led parties on 19, leaving both main blocs short of 61. Most of what remains are double-envelope ballots from soldiers, diplomats, prisoners and others, which the committee says it will start counting at 1 a.m. and expects to finish by Thursday evening. Official final results are due on 4 November.",
+    "headline_he": "נספרו 90% מהקולות ותמונת המנדטים נותרה יציבה",
+    "body_he": "בשעת לילה מאוחרת ביום רביעי עדכנה ועדת הבחירות המרכזית כי נספרו 90% מהקולות, כ-97.5% מהקלפיות, וחלוקת המנדטים לא השתנתה, כך לפי The Times of Israel: למחנה נתניהו 53, לאופוזיציה בהובלת מפלגות יהודיות 48 ולמפלגות בהובלה ערבית 19, כך ששני הגושים המרכזיים אינם מגיעים ל-61. רוב הקולות שנותרו הם מעטפות כפולות של חיילים, דיפלומטים, אסירים ואחרים, שהוועדה צפויה להתחיל לספור ב-1 בלילה ולסיים עד יום חמישי בערב. התוצאות הרשמיות הסופיות צפויות ב-4 בנובמבר.",
+    "sources": [
+      {
+        "name": "The Times of Israel live blog (28 Oct)",
+        "url": "https://www.timesofisrael.com/liveblog-october-28-2026/"
+      },
+      {
+        "name": "Central Elections Committee results",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T20:48:00+02:00",
     "headline_en": "88.6% counted with seat totals unchanged; soldiers' and diplomats' ballots to be counted from 1 a.m.",
     "body_en": "The Central Elections Committee says 88.6% of votes, roughly 96% of regular ballot boxes, have now been tallied, and the seat picture is the same as at the previous update, the Times of Israel reports: Netanyahu's camp on 53, the Jewish-led opposition on 48 and Arab-led parties on 19, so neither side reaches 61. The committee plans to start counting the double-envelope ballots from soldiers, security forces and diplomats at 1 a.m. on Thursday, with that count expected to wrap up by Thursday afternoon or evening. Official final results are due on 4 November.",
