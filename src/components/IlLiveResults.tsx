@@ -325,6 +325,13 @@ export function IlLiveResults({ lang, initial }: { lang: IlLang; initial: IlDoc 
   const coalitionSeats = above.filter((p) => picked.includes(p.letter)).reduce((a, p) => a + p.seats, 0);
 
   useEffect(() => {
+    // A live Committee count supersedes the hand-copied partial count.
+    document.querySelectorAll<HTMLElement>("[data-il-manual]").forEach((el) => {
+      el.hidden = rows.length > 0;
+    });
+  }, [rows.length]);
+
+  useEffect(() => {
     // Keep structured data in step with the live count.
     if (!doc?.fetchedAt || !open) return;
     document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {

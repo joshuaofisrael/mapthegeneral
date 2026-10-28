@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { IlExitPolls } from "@/components/IlExitPolls";
 import { IlLiveResults } from "@/components/IlLiveResults";
+import { IlManualCount } from "@/components/IlManualCount";
 import { Hemicycle, colorMap, type IlDoc, type IlRow } from "@/components/IlShared";
 import { absoluteUrl, SITE } from "@/data/site";
 import {
@@ -233,6 +234,7 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
       <section aria-labelledby="live" className="mb-10">
         <h2 id="live" className="mb-3 text-2xl font-bold text-ink">{l.live}</h2>
         <p className="mb-3 text-sm font-semibold text-ink" data-il-seat-label>{IL_SEAT_LABEL[lang]}</p>
+        <IlManualCount lang={lang} />
         <IlLiveResults lang={lang} initial={doc} />
         <p className="mt-3 text-xs text-ink-soft">
           {l.method}{" "}

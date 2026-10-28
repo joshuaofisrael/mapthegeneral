@@ -1,0 +1,105 @@
+{
+  "active": true,
+  "election": "il-2026-knesset",
+  "kind": "partial",
+  "countedPct": 57.3,
+  "asOf": "2026-10-28T07:58:00+02:00",
+  "asOfLabel": {
+    "he": "07:58 שעון ישראל, 28.10.2026",
+    "en": "07:58 Israel time, 28 Oct 2026"
+  },
+  "copiedAt": "2026-10-28T07:24:44.890Z",
+  "source": {
+    "url": "https://www.timesofisrael.com/liveblog_entry/pro-netanyahu-bloc-at-55-seats-with-57-3-of-ballots-counted/",
+    "name": {
+      "he": "The Times of Israel, לפי התוצאות החלקיות שפרסמה ועדת הבחירות המרכזית",
+      "en": "The Times of Israel, reporting partial results published by the Central Elections Committee"
+    }
+  },
+  "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
+  "seats": [
+    {
+      "id": "מחל",
+      "he": "הליכוד",
+      "en": "Likud",
+      "seats": 27
+    },
+    {
+      "id": "דרך",
+      "he": "ישר!",
+      "en": "Yashar!",
+      "seats": 21
+    },
+    {
+      "id": "ודם",
+      "he": "הרשימה המשותפת",
+      "en": "Joint List",
+      "seats": 12
+    },
+    {
+      "id": "רק",
+      "he": "ביחד",
+      "en": "Together (B'Yachad)",
+      "seats": 11
+    },
+    {
+      "id": "אמת",
+      "he": "הדמוקרטים",
+      "en": "The Democrats",
+      "seats": 9
+    },
+    {
+      "id": "ג",
+      "he": "יהדות התורה",
+      "en": "United Torah Judaism",
+      "seats": 9
+    },
+    {
+      "id": "ל",
+      "he": "ישראל ביתנו",
+      "en": "Yisrael Beiteinu",
+      "seats": 8
+    },
+    {
+      "id": "שס",
+      "he": "ש\"ס",
+      "en": "Shas",
+      "seats": 7
+    },
+    {
+      "id": "ב",
+      "he": "עוצמה יהודית",
+      "en": "Otzma Yehudit",
+      "seats": 6
+    },
+    {
+      "id": "ט",
+      "he": "הציונות הדתית וזהות",
+      "en": "Religious Zionism and Zehut",
+      "seats": 6
+    },
+    {
+      "id": "עם",
+      "he": "רע\"ם",
+      "en": "United Arab List (Ra'am)",
+      "seats": 4
+    }
+  ],
+  "belowThreshold": [
+    {
+      "he": "המילואימניקים והכלכלית",
+      "en": "The Reservists",
+      "pct": 2.64
+    },
+    {
+      "he": "עמך ישראל",
+      "en": "People of Israel (Amcha Yisrael)",
+      "pct": 1.65
+    },
+    {
+      "he": "הציבור החרדי",
+      "en": "Charedi Public",
+      "pct": 0.24
+    }
+  ]
+}
