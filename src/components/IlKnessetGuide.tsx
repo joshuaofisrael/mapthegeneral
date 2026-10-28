@@ -160,6 +160,7 @@ export function IlKnessetGuide({ lang }: { lang: Lang }) {
         data={{
           "@context": "https://schema.org",
           "@type": "Event",
+          description: copy.description,
           name: he ? "הבחירות לכנסת ה-26" : "Election to the 26th Knesset",
           startDate: "2026-10-27T07:00:00+02:00",
           endDate: "2026-10-27T22:00:00+02:00",

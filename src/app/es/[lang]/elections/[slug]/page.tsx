@@ -97,6 +97,9 @@ export default async function ElectionPage({ params }: { params: Promise<{ lang:
           "@context": "https://schema.org",
           "@type": "Event",
           name: es ? "Elecciones generales a Cortes Generales de España, 29 de noviembre de 2026" : "Spain general election, Cortes Generales, 29 November 2026",
+          description: es
+            ? "Elecciones a Cortes Generales, domingo 29 de noviembre de 2026, Real Decreto 806/2026. Información no oficial."
+            : "Spain general election, Sunday 29 November 2026, called by Royal Decree 806/2026. Unofficial information.",
           startDate: "2026-11-29T09:00:00+01:00",
           endDate: "2026-11-29T21:00:00+01:00",
           eventStatus: "https://schema.org/EventScheduled",
