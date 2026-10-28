@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-28T19:00:00+02:00",
+    "headline_en": "Uncounted double-envelope ballots unlikely to break the deadlock, analysts tell ToI",
+    "body_en": "The 430,000 to 480,000 double-envelope ballots still to be tallied are worth roughly 12 seats, but experts quoted by the Times of Israel expect them to move individual party totals rather than the overall bloc balance. Assaf Shapira of the Israel Democracy Institute said he did not predict 'a lot of difference'. The Central Elections Committee put turnout among soldiers at 79.9%, prisoners at 88.7% and diplomatic staff abroad at 86.7%, the report says. The regular count stays at 85.6%, with official results not expected before 4 November.",
+    "headline_he": "מעטפות כפולות צפויות לשנות מנדטים בודדים, לא את מאזן הגושים",
+    "body_he": "לפי הערכת מומחים שצוטטו בטיימס אוף ישראל, 430 עד 480 אלף המעטפות הכפולות שטרם נספרו שוות כ-12 מנדטים, אך צפויות להשפיע בעיקר על חלוקת המנדטים בין המפלגות ולא על מאזן הגושים. אסף שפירא מהמכון הישראלי לדמוקרטיה אמר שאינו צופה הבדל גדול. לפי הדיווח, שיעור ההצבעה בקרב חיילים עמד על 79.9%, בקרב אסירים על 88.7% ובקרב נציגויות בחו\"ל על 86.7%. הספירה הרגילה עומדת על 85.6%, ותוצאות רשמיות אינן צפויות לפני 4 בנובמבר.",
+    "sources": [
+      {
+        "name": "The Times of Israel",
+        "url": "https://www.timesofisrael.com/israels-uncounted-ballots-could-shift-knesset-seats-but-likely-not-the-balance-of-power/"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T17:25:00+02:00",
     "headline_en": "Committee lowers its estimate of uncounted double-envelope ballots",
     "body_en": "The Central Elections Committee now puts the number of double-envelope ballots cast at between 430,000 and 480,000, below the roughly 600,000 cited earlier, the Times of Israel and Haaretz report. The committee says the figure is still preliminary because ballots are still arriving and being processed. These votes, mostly from soldiers, diplomats, prisoners, hospital patients and others voting away from home, are tallied separately once officials confirm no one voted twice. A full count is due on Thursday afternoon, and the official final results are expected on 4 November. Until then the partial count stays at 85.6%, with the Netanyahu-led bloc on 53 seats, Eisenkot's bloc on 48 and the Arab-led lists on 19.",
