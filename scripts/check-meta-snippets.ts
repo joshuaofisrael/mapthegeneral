@@ -35,7 +35,7 @@ function routeOf(rel: string): string {
   return `/${rel}`;
 }
 
-function skipped(route: string): boolean {
+function isSkipped(route: string): boolean {
   return SKIP_PREFIXES.some((prefix) => route === prefix || route.startsWith(prefix));
 }
 
@@ -60,7 +60,7 @@ function walk(dir: string) {
     const rel = path.relative(OUT, full).split(path.sep).join("/");
     const route = routeOf(rel);
     scanned++;
-    if (skipped(route)) {
+    if (isSkipped(route)) {
       skipped++;
       continue;
     }
