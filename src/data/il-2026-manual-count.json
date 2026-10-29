@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 96.1,
-  "asOf": "2026-10-29T13:30:00+02:00",
+  "countedPct": 99.5,
+  "asOf": "2026-10-29T16:50:00+02:00",
   "asOfLabel": {
-    "he": "13:30 שעון ישראל, 29.10.2026",
-    "en": "13:30 Israel time, 29 Oct 2026"
+    "he": "16:50 שעון ישראל, 29.10.2026",
+    "en": "16:50 Israel time, 29 Oct 2026"
   },
-  "copiedAt": "2026-10-29T12:08:12.328Z",
+  "copiedAt": "2026-10-29T16:04:20.298Z",
   "source": {
     "url": "https://www.globes.co.il/news/article.aspx?did=1001561230",
     "name": {
-      "en": "Globes, reporting the Central Elections Committee (about 96.1% of votes counted; over half of double-envelope ballots counted)",
-      "he": "גלובס, לפי ועדת הבחירות המרכזית (כ-96.1% מהקולות נספרו; נספרו יותר ממחצית המעטפות הכפולות)"
+      "en": "Globes and Ynet, reporting the Central Elections Committee (about 99.5% of votes counted; double-envelope count completed, not final)",
+      "he": "גלובס ו-Ynet, לפי ועדת הבחירות המרכזית (כ-99.5% מהקולות נספרו; ספירת המעטפות הכפולות הסתיימה, לא סופי)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -22,7 +22,7 @@
       "id": "מחל",
       "he": "הליכוד",
       "en": "Likud",
-      "seats": 26
+      "seats": 27
     },
     {
       "id": "דרך",
@@ -70,7 +70,7 @@
       "id": "שס",
       "he": "ש\"ס",
       "en": "Shas",
-      "seats": 7
+      "seats": 6
     },
     {
       "id": "ב",
@@ -89,12 +89,12 @@
     {
       "he": "המילואימניקים והכלכלית",
       "en": "The Reservists",
-      "pct": 2.7
+      "pct": 2.71
     },
     {
       "he": "עמך ישראל",
       "en": "People of Israel (Amcha Yisrael)",
-      "pct": 1.6
+      "pct": 1.67
     },
     {
       "he": "הציבור החרדי",
