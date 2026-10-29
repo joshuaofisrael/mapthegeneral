@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-29T13:30:00+02:00",
+    "headline_en": "At 96.1% counted, with over half the double envelopes in, seats and blocs are unchanged",
+    "body_en": "Globes reports that after about 96.1% of votes were counted, the seat map was the same as at 10:05: Likud 26, Yashar 21, Together 12, the Joint List 11, the Democrats and Ra'am 8 each, and 6 for Religious Zionism and Zehut. The blocs stay at 53 for Netanyahu's camp, 48 for the Jewish-led opposition and 19 for Arab-led parties. Ynet, citing the Central Elections Committee, says 233,815 double-envelope ballots have now been counted, more than half of them. Ynet adds that the Reservists list of Yoaz Hendel and Yaron Zelekha remains below the 3.25% threshold and now looks unlikely to get in, and that the last seat could still move between Shas and Likud. These figures are partial; the Committee expected the double-envelope count to finish today, and official final results are due on 4 November.",
+    "headline_he": "ב-96.1% מהקולות, אחרי ספירת יותר ממחצית המעטפות הכפולות: אין שינוי במנדטים ובגושים",
+    "body_he": "לפי גלובס, לאחר ספירת כ-96.1% מהקולות מפת המנדטים זהה לזו של 10:05: הליכוד 26, ישר 21, ביחד 12, הרשימה המשותפת 11, הדמוקרטים ורע\"ם 8 כל אחת, והציונות הדתית וזהות 6. הגושים נותרים 53 למחנה נתניהו, 48 לאופוזיציה בהובלת מפלגות יהודיות ו-19 למפלגות בהובלה ערבית. לפי Ynet, על סמך ועדת הבחירות המרכזית, נספרו עד כה 233,815 מעטפות כפולות, יותר ממחציתן. עוד לפי Ynet, רשימת המילואימניקים של יועז הנדל וירון זליכה עדיין מתחת לאחוז החסימה (3.25%) וסיכוייה להיכנס נראים נמוכים, והמנדט האחרון עשוי עוד לעבור בין ש\"ס לליכוד. מדובר בתוצאות חלקיות; הוועדה העריכה שספירת המעטפות הכפולות תסתיים היום, והתוצאות הרשמיות הסופיות צפויות ב-4 בנובמבר.",
+    "sources": [
+      {
+        "name": "Globes",
+        "url": "https://www.globes.co.il/news/article.aspx?did=1001561230"
+      },
+      {
+        "name": "Ynet",
+        "url": "https://www.ynet.co.il/news/blogs/article/sj60fvepze"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-29T10:05:00+02:00",
     "headline_en": "At 93.8% counted, Ra'am regains a seat from the Joint List; blocs hold at 53-48-19",
     "body_en": "Globes reports, citing Central Elections Committee figures, that with about 93.8% of votes counted the United Arab List (Ra'am) has moved back up to eight seats and the Joint List has slipped to 11. The overall picture is unchanged: 53 seats for Netanyahu's camp, 48 for the Jewish-led opposition and 19 for Arab-led parties, so neither main bloc reaches 61. Likud remains on 26, Yashar on 21 and Together on 12. Ynet, as cited by the Guardian, reports that only around 29,000 of an estimated 500,000 double-envelope ballots had been counted by Thursday morning, so seat totals for individual parties may still change. These figures are partial; official final results are due on 4 November.",
