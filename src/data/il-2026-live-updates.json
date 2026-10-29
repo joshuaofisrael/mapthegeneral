@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-29T01:00:00+02:00",
+    "headline_en": "Counting of soldiers' and diplomats' ballots gets under way",
+    "body_en": "The Central Elections Committee began tallying the double-envelope ballots at 1 a.m. on Thursday, the Times of Israel reports. These are absentee votes cast mainly by soldiers, along with prisoners, medical staff, patients and Israeli diplomats abroad, and the committee's latest estimate puts them at 430,000 to 480,000. The committee also said the regular count is not quite complete: results are in from 11,712 of 12,018 regular polling stations, covering 5,126,759 voters, while the rest go through standard checks. The double-envelope count is expected to finish by Thursday afternoon or evening, with official final results due on 4 November.",
+    "headline_he": "החלה ספירת קולות החיילים והדיפלומטים",
+    "body_he": "ועדת הבחירות המרכזית החלה לספור את המעטפות הכפולות ב-1 בלילה ביום חמישי, כך מדווח The Times of Israel. מדובר בקולות שהוצבעו מחוץ לקלפי הרגילה, בעיקר של חיילים, וגם של אסירים, אנשי צוות רפואי, מטופלים ונציגי ישראל בחו\"ל, ולפי ההערכה העדכנית של הוועדה מספרם 430,000 עד 480,000. הוועדה ציינה גם שספירת הקולות הרגילים טרם הושלמה: התקבלו תוצאות מ-11,712 מתוך 12,018 קלפיות רגילות, שבהן הצביעו 5,126,759 בוחרים, ושאר הקלפיות עוברות בדיקות שגרתיות. ספירת המעטפות הכפולות צפויה להסתיים עד יום חמישי אחר הצהריים או בערב, והתוצאות הרשמיות הסופיות צפויות ב-4 בנובמבר.",
+    "sources": [
+      {
+        "name": "The Times of Israel: double-envelope count begins",
+        "url": "https://www.timesofisrael.com/liveblog_entry/counting-of-double-envelope-votes-has-begun-says-central-elections-commission/"
+      },
+      {
+        "name": "Ynet: committee's double-envelope estimate",
+        "url": "https://www.ynetnews.com/article/1ihq7kcd8"
+      },
+      {
+        "name": "Central Elections Committee results",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-28T23:35:00+02:00",
     "headline_en": "90% of votes counted and the seat picture holds steady",
     "body_en": "Late on Wednesday the Central Elections Committee raised the count to 90% of votes, covering about 97.5% of ballot boxes, and the seat split did not move, according to the Times of Israel: Netanyahu's camp stays on 53, the Jewish-led opposition on 48 and Arab-led parties on 19, leaving both main blocs short of 61. Most of what remains are double-envelope ballots from soldiers, diplomats, prisoners and others, which the committee says it will start counting at 1 a.m. and expects to finish by Thursday evening. Official final results are due on 4 November.",
