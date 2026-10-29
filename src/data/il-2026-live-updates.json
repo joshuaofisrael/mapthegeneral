@@ -1,5 +1,22 @@
 [
   {
+    "time": "2026-10-29T08:00:00+02:00",
+    "headline_en": "At 91% counted, Ra'am gains a seat from the Joint List; bloc totals hold",
+    "body_en": "With about 91% of votes counted, Haaretz reports from Central Elections Committee figures that Mansour Abbas's United Arab List (Ra'am) has risen from seven to eight seats while the Joint List has fallen from 12 to 11. The bloc picture is unchanged: 53 seats for Netanyahu's camp, 48 for Eisenkot's Jewish-led opposition and 19 for Arab-led parties, so neither main bloc reaches 61. Likud remains on 26, Yashar on 21 and Together on 12. Double-envelope ballots are still being counted, and official final results are due on 4 November.",
+    "headline_he": "ב-91% מהקולות: רע\"ם עולה במנדט על חשבון הרשימה המשותפת; הגושים ללא שינוי",
+    "body_he": "עם ספירת כ-91% מהקולות, Haaretz מדווח לפי נתוני ועדת הבחירות המרכזית כי רע\"ם בראשות מנסור עבאס עלתה משבעה לשמונה מנדטים, והרשימה המשותפת ירדה מ-12 ל-11. חלוקת הגושים לא השתנתה: 53 למחנה נתניהו, 48 לאופוזיציה בהובלת מפלגות יהודיות בראשות איזנקוט ו-19 למפלגות בהובלה ערבית, כך שאף גוש מרכזי אינו מגיע ל-61. הליכוד נותר על 26, ישר על 21 וביחד על 12. ספירת המעטפות הכפולות נמשכת, והתוצאות הרשמיות הסופיות צפויות ב-4 בנובמבר.",
+    "sources": [
+      {
+        "name": "Haaretz live blog (91% count)",
+        "url": "https://www.haaretz.com/israel-news/elections/2026-10-29/ty-article-live/seat-results-steady-as-elections-committee-begins-counting-absentee-ballots/000001a1-8567-d9b5-a3b5-cdf7e5cc0004"
+      },
+      {
+        "name": "Central Elections Committee results",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-29T01:00:00+02:00",
     "headline_en": "Counting of soldiers' and diplomats' ballots gets under way",
     "body_en": "The Central Elections Committee began tallying the double-envelope ballots at 1 a.m. on Thursday, the Times of Israel reports. These are absentee votes cast mainly by soldiers, along with prisoners, medical staff, patients and Israeli diplomats abroad, and the committee's latest estimate puts them at 430,000 to 480,000. The committee also said the regular count is not quite complete: results are in from 11,712 of 12,018 regular polling stations, covering 5,126,759 voters, while the rest go through standard checks. The double-envelope count is expected to finish by Thursday afternoon or evening, with official final results due on 4 November.",
