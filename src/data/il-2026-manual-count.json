@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 90.0,
-  "asOf": "2026-10-28T23:35:00+02:00",
+  "countedPct": 91,
+  "asOf": "2026-10-29T08:00:00+02:00",
   "asOfLabel": {
-    "he": "23:35 שעון ישראל, 28.10.2026",
-    "en": "23:35 Israel time, 28 Oct 2026"
+    "he": "08:00 שעון ישראל, 29.10.2026",
+    "en": "08:00 Israel time, 29 Oct 2026"
   },
-  "copiedAt": "2026-10-28T22:15:00.000Z",
+  "copiedAt": "2026-10-29T06:06:59.533Z",
   "source": {
-    "url": "https://www.timesofisrael.com/liveblog-october-28-2026/",
+    "url": "https://www.haaretz.com/israel-news/elections/2026-10-29/ty-article-live/seat-results-steady-as-elections-committee-begins-counting-absentee-ballots/000001a1-8567-d9b5-a3b5-cdf7e5cc0004",
     "name": {
-      "en": "The Times of Israel, reporting the Central Elections Committee (90% of votes counted, about 97.5% of ballot boxes; double-envelope votes still to come)",
-      "he": "The Times of Israel, לפי ועדת הבחירות המרכזית (90% מהקולות נספרו, כ-97.5% מהקלפיות; המעטפות הכפולות טרם נספרו)"
+      "en": "Haaretz, reporting the Central Elections Committee (about 91% of votes counted; double-envelope ballots still being counted)",
+      "he": "Haaretz, לפי ועדת הבחירות המרכזית (כ-91% מהקולות נספרו; ספירת המעטפות הכפולות נמשכת)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -40,12 +40,18 @@
       "id": "ודם",
       "he": "הרשימה המשותפת",
       "en": "Joint List",
-      "seats": 12
+      "seats": 11
     },
     {
       "id": "אמת",
       "he": "הדמוקרטים",
       "en": "The Democrats",
+      "seats": 8
+    },
+    {
+      "id": "עם",
+      "he": "רע\"ם",
+      "en": "United Arab List (Ra'am)",
       "seats": 8
     },
     {
@@ -70,12 +76,6 @@
       "id": "ב",
       "he": "עוצמה יהודית",
       "en": "Otzma Yehudit",
-      "seats": 7
-    },
-    {
-      "id": "עם",
-      "he": "רע\"ם",
-      "en": "United Arab List (Ra'am)",
       "seats": 7
     },
     {
