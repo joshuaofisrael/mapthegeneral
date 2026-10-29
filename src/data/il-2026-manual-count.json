@@ -2,18 +2,18 @@
   "active": true,
   "election": "il-2026-knesset",
   "kind": "partial",
-  "countedPct": 92.7,
-  "asOf": "2026-10-29T09:15:00+02:00",
+  "countedPct": 93.8,
+  "asOf": "2026-10-29T10:05:00+02:00",
   "asOfLabel": {
-    "he": "09:15 שעון ישראל, 29.10.2026",
-    "en": "09:15 Israel time, 29 Oct 2026"
+    "he": "10:05 שעון ישראל, 29.10.2026",
+    "en": "10:05 Israel time, 29 Oct 2026"
   },
-  "copiedAt": "2026-10-29T08:10:07.952Z",
+  "copiedAt": "2026-10-29T10:04:33.355Z",
   "source": {
     "url": "https://www.globes.co.il/news/article.aspx?did=1001561230",
     "name": {
-      "en": "Globes and Haaretz, reporting the Central Elections Committee (about 92.7% of votes counted; double-envelope ballots still being counted)",
-      "he": "גלובס ו-Haaretz, לפי ועדת הבחירות המרכזית (כ-92.7% מהקולות נספרו; ספירת המעטפות הכפולות נמשכת)"
+      "en": "Globes, reporting the Central Elections Committee (about 93.8% of votes counted; double-envelope ballots still being counted)",
+      "he": "גלובס, לפי ועדת הבחירות המרכזית (כ-93.8% מהקולות נספרו; ספירת המעטפות הכפולות נמשכת)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -40,7 +40,7 @@
       "id": "ודם",
       "he": "הרשימה המשותפת",
       "en": "Joint List",
-      "seats": 12
+      "seats": 11
     },
     {
       "id": "אמת",
@@ -52,7 +52,7 @@
       "id": "עם",
       "he": "רע\"ם",
       "en": "United Arab List (Ra'am)",
-      "seats": 7
+      "seats": 8
     },
     {
       "id": "ל",
