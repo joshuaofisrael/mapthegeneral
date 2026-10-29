@@ -1,5 +1,26 @@
 [
   {
+    "time": "2026-10-29T10:05:00+02:00",
+    "headline_en": "At 93.8% counted, Ra'am regains a seat from the Joint List; blocs hold at 53-48-19",
+    "body_en": "Globes reports, citing Central Elections Committee figures, that with about 93.8% of votes counted the United Arab List (Ra'am) has moved back up to eight seats and the Joint List has slipped to 11. The overall picture is unchanged: 53 seats for Netanyahu's camp, 48 for the Jewish-led opposition and 19 for Arab-led parties, so neither main bloc reaches 61. Likud remains on 26, Yashar on 21 and Together on 12. Ynet, as cited by the Guardian, reports that only around 29,000 of an estimated 500,000 double-envelope ballots had been counted by Thursday morning, so seat totals for individual parties may still change. These figures are partial; official final results are due on 4 November.",
+    "headline_he": "ב-93.8% מהקולות: רע\"ם מחזירה מנדט מהרשימה המשותפת; הגושים נותרים 53-48-19",
+    "body_he": "לפי גלובס, על סמך נתוני ועדת הבחירות המרכזית, עם ספירת כ-93.8% מהקולות רע\"ם עלתה בחזרה לשמונה מנדטים והרשימה המשותפת ירדה ל-11. התמונה הכוללת לא השתנתה: 53 מנדטים למחנה נתניהו, 48 לאופוזיציה בהובלת מפלגות יהודיות ו-19 למפלגות בהובלה ערבית, כך שאף גוש מרכזי אינו מגיע ל-61. הליכוד נותר על 26, ישר על 21 וביחד על 12. לפי Ynet, כפי שמצוטט ב-Guardian, עד בוקר יום חמישי נספרו רק כ-29 אלף מתוך כ-500 אלף מעטפות כפולות, ולכן מספר המנדטים של מפלגות בודדות עשוי עוד להשתנות. מדובר בתוצאות חלקיות; התוצאות הרשמיות הסופיות צפויות ב-4 בנובמבר.",
+    "sources": [
+      {
+        "name": "Globes",
+        "url": "https://www.globes.co.il/news/article.aspx?did=1001561230"
+      },
+      {
+        "name": "The Guardian (citing Ynet)",
+        "url": "https://www.theguardian.com/world/live/2026/oct/29/israel-election-results-live-updates-poll-netanyahu-eisenkot-bloc-coalition-latest-news"
+      },
+      {
+        "name": "Central Elections Committee",
+        "url": "https://votes26.bechirot.gov.il/nationalresults?lang=en"
+      }
+    ]
+  },
+  {
     "time": "2026-10-29T09:15:00+02:00",
     "headline_en": "At 92.7% counted, the Joint List takes back a seat from Ra'am; blocs unchanged",
     "body_en": "With about 92.7% of votes counted, Globes and Haaretz report from Central Elections Committee figures that the Joint List has moved back up to 12 seats while the United Arab List (Ra'am) has returned to seven. The bloc totals have not moved: 53 for Netanyahu's camp, 48 for the Jewish-led opposition and 19 for Arab-led parties, leaving both main blocs short of 61. Likud stays on 26, Yashar on 21 and Together on 12. According to Globes, the committee expects the double-envelope count to finish around midday today. These are partial figures, and official final results are due on 4 November.",
