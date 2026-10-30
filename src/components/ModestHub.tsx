@@ -389,6 +389,13 @@ export function HubElections({ code }: { code: HubCode }) {
           </li>
         ))}
       </ul>
+      <section className="mt-10 border-t border-line pt-6">
+        <h2 className="font-serif text-2xl font-semibold">What the official pages say</h2>
+        <p className="mt-3 text-sm leading-6 text-ink-muted">{hub.blurb}</p>
+        <div className="prose-legal mt-4 space-y-4">
+          <ElectionBody code={code} />
+        </div>
+      </section>
     </Frame>
   );
 }

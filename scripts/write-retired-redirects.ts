@@ -56,6 +56,8 @@ for (const route of RETIRED_EL_SALVADOR_PATHS) {
 const LEGAL_ALIASES: Record<string, string> = {
   "privacy-policy": "/privacy/",
   corrections: "/copyright/#corrections",
+  // No Russian edition; visitors arrive from shared links.
+  "il/ru/results": "/il/en/results/",
 };
 for (const [route, target] of Object.entries(LEGAL_ALIASES)) {
   const htmlPath = path.join(outDir, route, "index.html");
