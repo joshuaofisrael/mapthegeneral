@@ -9,5 +9,9 @@
   "nz-2026-11-07": {
     "votingEnded": false,
     "pollingExtended": false
+  },
+  "it-2026-chieti": {
+    "votingEnded": false,
+    "pollingExtended": false
   }
 }

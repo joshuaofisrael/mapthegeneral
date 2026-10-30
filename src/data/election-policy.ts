@@ -67,10 +67,11 @@ export const RELEASE_POLICIES: Record<string, ReleasePolicy> = {
   "it-2026-chieti": policy(
     "Europe/Rome",
     "2026-11-16T15:00:00+01:00",
-    "2026-11-16T00:00:00+01:00",
+    "2026-10-31T00:00:00+01:00",
     "Eligendo is the official source after voting ends at 15:00 on 16 November 2026.",
     { label: "Ministero dell’Interno, Eligendo", url: "https://elezioni.interno.gov.it/" },
     editorialCount,
+    { requiresEndOfVotingConfirmation: true },
   ),
   "pl-2026-senat-20": policy(
     "Europe/Warsaw",
