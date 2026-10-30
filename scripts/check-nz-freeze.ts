@@ -11,6 +11,7 @@ import { NZ_COUNTRY_HUB } from "../src/data/country-hubs";
 import { ELECTION_WINDOWS } from "../src/data/election-law";
 import { nightById } from "../src/data/election-night";
 import { RELEASE_POLICIES } from "../src/data/election-policy";
+import { votingEndedConfirmed } from "../src/data/release-status";
 import { NZ_FREEZE_END, NZ_FREEZE_START, NZ_WINDOW_ID, nzFreezeActive } from "../src/data/nz-freeze";
 
 const FILES = [
@@ -58,6 +59,11 @@ if (RELEASE_POLICIES[NZ_WINDOW_ID]?.requiresEndOfVotingConfirmation !== true) {
   errors.push("New Zealand results are not gated on official confirmation that voting places have closed");
 }
 
+// Full-deploy freeze: the build (and so every Pages deploy) fails inside the window
+// unless nz-2026-11-07.votingEnded is true. Pages, JSON, sitemaps and IndexNow all ride that deploy.
+if (process.env.NZ_FREEZE_SELFTEST !== "1" && nzFreezeActive() && !votingEndedConfirmed(NZ_WINDOW_ID)) {
+  errors.push("NZ_FULL_DEPLOY_FREEZE: no deploy between 11:00Z 6 Nov and 06:00Z 7 Nov 2026 until nz-2026-11-07.votingEnded is true");
+}
 const digest = nzContentDigest();
 if (process.env.PRINT_NZ_SEAL === "1") {
   console.log(digest);
