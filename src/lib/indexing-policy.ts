@@ -121,7 +121,29 @@ export function isThinMunicipality(path: string): boolean {
 }
 
 /** Thin, and the country's calendar is reliable and outside the window. */
+/**
+ * Language-version ranking (Oct 2026). Low-value version: the English mirror
+ * of Mexico's municipio pages. Spanish is the page's audience language, the
+ * English copy repeats the same figures, and Mexico is outside its election
+ * window until 2027. These pages stay live, are noindex,follow, leave the
+ * sitemap and hreflang, and re-index automatically when the window opens.
+ * Undo: empty this list.
+ */
+export const LOW_VALUE_MIRRORS: { country: string; lang: string }[] = [{ country: "mx", lang: "en" }];
+
+let mirrorPaths: Set<string> | null = null;
+export function lowValueMirrorPaths(): Set<string> {
+  if (mirrorPaths) return mirrorPaths;
+  mirrorPaths = new Set();
+  for (const m of LOW_VALUE_MIRRORS) {
+    if (m.country !== "mx") continue;
+    for (const row of MUNICIPIOS) mirrorPaths.add(`/mx/${m.lang}/${entitySlugFor(row)}/${row.slug}/`);
+  }
+  return mirrorPaths;
+}
+
 export function thinMunicipalityExcluded(path: string, asOf = indexingAsOf()): boolean {
+  if (lowValueMirrorPaths().has(path)) return !thinPagesIndexed(countryOfPath(path), asOf);
   if (!isThinMunicipality(path)) return false;
   return !thinPagesIndexed(countryOfPath(path), asOf);
 }

@@ -17,6 +17,7 @@ import {
   isThinMunicipality,
   reliablePollingDays,
   thinMunicipalityExcluded,
+  lowValueMirrorPaths,
   thinMunicipalityPaths,
   thinPagesIndexed,
   THIN_POPULATION_UNDER,
@@ -131,7 +132,7 @@ if (!existsSync(OUT)) {
   const listed = sitemapPaths();
   const publicPaths = allPublicPaths();
   const excluded = new Set<string>();
-  for (const route of thinMunicipalityPaths()) {
+  for (const route of new Set([...thinMunicipalityPaths(), ...lowValueMirrorPaths()])) {
     const file = htmlFile(route);
     const outside = thinMunicipalityExcluded(route, AS_OF);
     if (outside) excluded.add(route);

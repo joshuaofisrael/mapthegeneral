@@ -29,9 +29,14 @@ function walk(dir: string) {
     if (!name.endsWith(".html")) continue;
     scanned++;
     const route = routeOf(full);
-    if (!route || !thinMunicipalityExcluded(route, AS_OF)) continue;
+    if (!route) continue;
     const before = readFileSync(full, "utf8");
-    const after = applyRobotsMeta(before, "noindex,follow");
+    // Drop hreflang alternates that point at excluded pages.
+    let after = before.replace(/<link[^>]*hreflang=["'][^"']*["'][^>]*>/gi, (tag) => {
+      const href = tag.match(/href=["']https:\/\/mapthegeneral\.com(\/[^"'#?]*)/)?.[1];
+      return href && href !== route && thinMunicipalityExcluded(href, AS_OF) ? "" : tag;
+    });
+    if (thinMunicipalityExcluded(route, AS_OF)) after = applyRobotsMeta(after, "noindex,follow");
     if (after === before) continue;
     writeFileSync(full, after);
     updated++;
