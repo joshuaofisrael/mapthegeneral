@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { HubNational } from "@/components/ModestHub";
-import { hubMetadata } from "@/data/new-hubs";
+import { hubMetadata, TW_HUB_LANGUAGES } from "@/data/new-hubs";
 
-export const metadata = hubMetadata("tw", "national");
+const base = hubMetadata("tw", "national");
+export const metadata: Metadata = { ...base, alternates: { ...base.alternates, languages: TW_HUB_LANGUAGES } };
 
 export default function Page() {
   return <HubNational code="tw" />;

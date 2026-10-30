@@ -199,6 +199,7 @@ export const NZ_COUNTRY_HUB: CountryHub = {
       ],
       bodyHtml: `<p><a href="/nz/en/">New Zealand</a></p>
 <p>The election page is the <a href="${NZ}">general election on 7 November 2026</a>.</p>
+<p>Results: <a href="/nz/en/results/">New Zealand election results page</a>. No vote count before 7:00 pm New Zealand daylight time on 7 November 2026.</p>
 <p>The Candidate Handbook titles the election Te Pōtitanga ā-Motu 2026 and the Commission Te Kaitiaki Take Kōwhiri. The Election Service Plan uses Māori Electoral Option, Māori roll and Whare pōti Māori. This site does not translate the guide.</p>`,
     },
     {
@@ -216,6 +217,7 @@ export const NZ_COUNTRY_HUB: CountryHub = {
       nav: [
         { href: "/", label: "Map the General" },
         { href: NZ, label: "The election" },
+        { href: "/nz/en/results/", label: "Results" },
       ],
       crumbs: [
         { name: "Home", path: "/" },
@@ -225,6 +227,7 @@ export const NZ_COUNTRY_HUB: CountryHub = {
       bodyHtml: `<h2>The election in this release</h2>
 <p>The Electoral Commission’s Election Service Plan says the 2026 General Election, Te Pōtitanga ā-Motu, is on Saturday 7 November 2026. Voting places that day are open from 9am to 7pm. The election page lists the parties seeking the party vote in the Commission’s 9 October alphabetical order and links each one to the party-list file. It also lists every electorate candidate from the Commission’s Electorate Candidates 2026 spreadsheet, for the 64 general electorates and the seven Māori electorates.</p>
 <p><a href="${NZ}">General election, 7 November 2026</a></p>
+<p><a href="/nz/en/results/">Results page</a>. It shows no vote count before 7:00 pm New Zealand daylight time on 7 November 2026.</p>
 <h2>Te reo Māori</h2>
 <p>The Candidate Handbook titles the election Te Pōtitanga ā-Motu 2026 and the Commission Te Kaitiaki Take Kōwhiri. The plan says the Commission will produce enrolling and voting material in English, te reo Māori, and 29 other languages, and that a Whare pōti Māori provides voting services in te reo Māori and English. The Māori Electoral Option is the choice of the Māori roll or the general roll. This hub is not a translation, so it does not offer a Māori hreflang.</p>
 <h2>Personal data</h2>

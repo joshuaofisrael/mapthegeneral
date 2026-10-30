@@ -217,6 +217,7 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         ],
         relatedHeading: "Also",
         related: [
+          { href: "/nz/en/results/", label: "Results page" },
           { href: "/nz/en/", label: "New Zealand" },
           { href: "/nz/", label: "New Zealand hub" },
         ],

@@ -1,5 +1,13 @@
 import type { SourceRef } from "@/data/spain/types";
+import { absoluteUrl } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
+
+/** /tw/ defaults to Traditional Chinese; English stays at /tw/en/. */
+export const TW_HUB_LANGUAGES = {
+  "zh-Hant-TW": absoluteUrl("/tw/"),
+  en: absoluteUrl("/tw/en/"),
+  "x-default": absoluteUrl("/tw/"),
+};
 
 export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il" | "tw";
 export type HubKind = "chooser" | "national" | "elections" | "election" | "faq" | "sources";
