@@ -1,3 +1,4 @@
+import { votingEndedConfirmed } from "../src/data/release-status";
 import { execSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -142,7 +143,10 @@ for (const name of readdirSync(sitemapDir)) {
 }
 
 write("public/search/index.json", JSON.stringify(searchIndex()));
-write("public/search/indexnow-urls.json", JSON.stringify(paths.map((path) => absoluteUrl(path))));
+// Chieti poll-publication hold: the committed IndexNow list carries no Italian URL until
+// it-2026-chieti.votingEnded is true (the deploy job pings from this committed file).
+const indexNowPaths = paths.filter((path) => votingEndedConfirmed("it-2026-chieti") || !(path === "/it/" || path.startsWith("/it/")));
+write("public/search/indexnow-urls.json", JSON.stringify(indexNowPaths.map((path) => absoluteUrl(path))));
 
 const indexed = searchIndex();
 const byPath = new Map(indexed.map((item) => [item.path, item]));
