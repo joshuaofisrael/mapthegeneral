@@ -138,6 +138,7 @@
     if (typeof window.gtag === "function") window.gtag.apply(null, arguments);
   }
   function loadGa() {
+    if (window.__mtgGaId) window["ga-disable-" + window.__mtgGaId] = false;
     if (window.__mtgGaLoaded) return;
     var id = window.__mtgGaId;
     if (!id) return;
@@ -212,12 +213,15 @@
     save(v);
     if (v === "granted") loadGa();
     else {
+      // Withdrawal: disable the loaded tag first so the consent update
+      // itself and any page-exit hit send nothing to Google.
+      if (window.__mtgGaId) window["ga-disable-" + window.__mtgGaId] = true;
       gtagSafe("consent", "update", { analytics_storage: "denied" });
       clearGaCookies();
     }
     close();
   }
-  function show(focus) {
+  function show(focus, atEnd) {
     ensureStyle();
     if (document.getElementById("mtg-consent")) return;
     var copy = COPY[pageLang()];
@@ -235,7 +239,8 @@
       '<button type="button" class="rej">' + copy.reject + "</button></div></div>";
     box.querySelector(".acc").addEventListener("click", function () { choose("granted"); });
     box.querySelector(".rej").addEventListener("click", function () { choose("denied"); });
-    if (document.body.firstChild) document.body.insertBefore(box, document.body.firstChild);
+    if (atEnd) document.body.appendChild(box);
+    else if (document.body.firstChild) document.body.insertBefore(box, document.body.firstChild);
     else document.body.appendChild(box);
     if (focus) box.querySelector(".acc").focus();
   }
@@ -275,6 +280,18 @@
   function boot() {
     setTimeout(init, 0);
   }
+  // First visit: show the banner as soon as the document is parsed, so it
+  // paints with the page instead of after load (it was the late largest
+  // paint on mobile). It is appended at the end of <body>, which React 19
+  // skips while hydrating; the footer control still waits for load.
+  function early() {
+    var v = read();
+    if (v === "granted" || v === "denied") return;
+    if (isInstantRedirect()) return;
+    show(false, true);
+  }
+  if (document.body) early();
+  else document.addEventListener("DOMContentLoaded", early);
   if (document.readyState === "complete") boot();
   else window.addEventListener("load", boot);
 })();
