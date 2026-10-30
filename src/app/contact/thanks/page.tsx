@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Message sent",
-  description: `Thank you for contacting ${SITE.name}. Your message was sent to ${SITE.legalName}.`,
+  description: `Thank you for contacting ${SITE.name}. Your message was sent to the ${SITE.name} team.`,
   path: "/contact/thanks",
 });
 
@@ -27,7 +27,7 @@ export default function ContactThanksPage() {
       <PageHeader eyebrow="Contact" title="Thank you" lede="Your message was sent." />
       <div className="prose-legal">
         <p>
-          Thank you for contacting {SITE.name}. Your message was delivered to {SITE.legalName}, and we
+          Thank you for contacting {SITE.name}. Your message was delivered to the {SITE.name} team, and we
           reply by email. If you need to add anything, use the <Link href="/contact/">contact form</Link>{" "}
           again.
         </p>

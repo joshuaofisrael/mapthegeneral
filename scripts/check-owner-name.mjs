@@ -33,8 +33,7 @@ const OWNER_ALLOWED = new Set([
   "/imprint/",
   "/copyright/",
   "/advertising/",
-  "/contact/",
-  "/contact/thanks/",
+
 ]);
 const COPYRIGHT_PAGES = new Set([
   "/terms/",
@@ -86,7 +85,6 @@ function routeOf(rel) {
 function scrubAllowedIdentity(text) {
   let scrubbed = text;
   for (const person of OFFICEHOLDERS) scrubbed = scrubbed.split(person).join("");
-  scrubbed = scrubbed.replace(PARENT_ORG, "");
   return scrubbed;
 }
 
