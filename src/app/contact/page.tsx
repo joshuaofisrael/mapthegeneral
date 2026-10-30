@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: `Contact ${SITE.name}, a brand of ${SITE.legalName}, with the contact form. Error reports and copyright notices are welcome.`,
+  description: `Contact ${SITE.name} with the contact form. Error reports and copyright notices are welcome.`,
   path: "/contact",
 });
 
@@ -22,17 +22,17 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title={`Contact ${SITE.name}`}
-        lede={`${SITE.name} is owned and operated by ${SITE.legalName}.`}
+        lede={`Send ${SITE.name} a correction, question or copyright notice.`}
       />
       <div className="prose-legal">
         <p>
-          Use the form below. It reaches {SITE.legalName}. We reply by email. The site does not
+          Use the form below. It reaches the {SITE.name} team. We reply by email. The site does not
           publish a personal email address.
         </p>
         <h2>Contact form</h2>
         <ContactForm />
         <p>
-          {SITE.legalName}
+          {SITE.name}
           <br />
           {SITE.location}
         </p>

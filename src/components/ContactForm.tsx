@@ -52,7 +52,7 @@ export function ContactForm() {
         </div>
       </div>
       <p className="mt-3 text-sm leading-6 text-ink-muted">
-        Messages are delivered to {SITE.legalName} by email through FormSubmit, a third-party form
+        Messages are delivered to the {SITE.name} team by email through FormSubmit, a third-party form
         service. See the <a className="underline" href="/privacy/#contact-form">privacy policy</a>.
         Please do not include identity documents, voter numbers, or ballot photos.
       </p>
