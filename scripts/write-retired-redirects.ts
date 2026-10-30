@@ -52,6 +52,18 @@ for (const route of RETIRED_EL_SALVADOR_PATHS) {
   if (html.includes("El Salvador") || html.includes("/sv/")) throw new Error(`${route} still names the retired country`);
 }
 
+// Legal-page aliases people type or link to. They refresh to the real pages.
+const LEGAL_ALIASES: Record<string, string> = {
+  "privacy-policy": "/privacy/",
+  corrections: "/copyright/#corrections",
+};
+for (const [route, target] of Object.entries(LEGAL_ALIASES)) {
+  const htmlPath = path.join(outDir, route, "index.html");
+  if (existsSync(htmlPath)) throw new Error(`${route} already exists; not overwriting`);
+  mkdirSync(path.dirname(htmlPath), { recursive: true });
+  writeFileSync(htmlPath, redirectHtml(target));
+}
+
 const sitemapDir = path.join(outDir, "sitemaps");
 if (existsSync(sitemapDir)) {
   for (const name of readdirSync(sitemapDir)) {
