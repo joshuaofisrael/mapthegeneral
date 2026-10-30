@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang(raw);
   if (slug !== AWAITING_SLUG) return {};
   const path = `${spainHome(lang)}candidates/${slug}/`;
-  return pageMetadata({
+  // Placeholder until the BOE proclamation: kept out of search and the sitemap.
+  const meta = pageMetadata({
     title: lang === "es" ? "Sin candidatura proclamada" : "No candidacy proclaimed",
     description:
       lang === "es"
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     lang,
     alternatePath: `${spainHome(lang === "es" ? "en" : "es")}candidates/${slug}/`,
   });
+  return { ...meta, robots: { index: false, follow: true } };
 }
 
 export default async function CandidateSlugPage({

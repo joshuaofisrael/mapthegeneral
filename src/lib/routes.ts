@@ -102,13 +102,6 @@ function spainEntries(lang: Lang): IndexEntry[] {
     },
     { path: `${home}parties/`, lang, title: labels.parties, kind: "parties", text: "partidos parties" },
     { path: `${home}candidates/`, lang, title: labels.candidates, kind: "candidates", text: "candidaturas candidates BOE" },
-    {
-      path: `${home}candidates/awaiting-proclamation/`,
-      lang,
-      title: lang === "es" ? "Sin candidatura proclamada" : "No candidacy proclaimed",
-      kind: "candidates",
-      text: "candidaturas proclamación BOE",
-    },
     { path: `${home}results/`, lang, title: labels.results, kind: "results", text: "resultados escrutinio" },
     { path: `${home}faq/`, lang, title: labels.faq, kind: "faq", text: "faq preguntas" },
     { path: `${home}sources/`, lang, title: labels.sources, kind: "sources", text: "fuentes sources BOE INE" },
