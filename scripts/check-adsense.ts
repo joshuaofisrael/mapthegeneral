@@ -133,7 +133,9 @@ if (!existsSync(adsPath)) {
   errors.push("ads.txt is missing from out/");
 } else {
   const body = readFileSync(adsPath, "utf8").replace(/\r\n/g, "\n").trim();
-  if (body !== ADS_TXT_LINE) errors.push(`ads.txt must be exactly: ${ADS_TXT_LINE}`);
+  const lines = body.split("\n").map((l) => l.trim());
+  if (lines.filter((l) => l === ADS_TXT_LINE).length !== 1) errors.push(`ads.txt must contain exactly one line: ${ADS_TXT_LINE}`);
+  if (lines.some((l) => /^google\.com,\s*pub-5681559774142917/i.test(l) && l !== ADS_TXT_LINE)) errors.push("ads.txt has a conflicting AdSense line");
 }
 
 const robotsPath = path.join(OUT, "robots.txt");
