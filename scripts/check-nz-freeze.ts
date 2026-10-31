@@ -21,10 +21,15 @@ const FILES = [
   "src/countries/nz.json",
   "src/data/editorial/batch5.ts",
   "data/review/nz-2026-11-07.md",
+  "src/app/nz/en/electorates/page.tsx",
+  "src/app/nz/en/parties/page.tsx",
+  "src/app/nz/en/results-night/page.tsx",
+  "src/app/nz/en/preview/page.tsx",
+  "src/components/NzArticle.tsx",
 ];
 
 /** Sealed baseline. Update only outside the freeze, in the same commit as a real New Zealand edit. */
-const SEAL = "a04b80eb592909292fb17aa0858f49a4eacd268f149ab199ae3ca128688df5d5";
+const SEAL = "07346d5c7a9d2c73022ca5b4f7ab94c0f8f340bbb417b31de9c9abb1f111bbf8";
 
 function fileHash(rel: string): string {
   const bytes = readFileSync(path.join(process.cwd(), rel));

@@ -20,8 +20,9 @@ export default function Page() {
       lede="Voters choose the 54th Parliament on Saturday 7 November 2026. Here is the starting point and what decides the outcome."
       updated="31 October 2026."
       cites={[
-        { label: "Electoral Commission, 2023 General Election official results", href: "https://www.electionresults.govt.nz/electionresults_2023/" },
+        { label: "Electoral Commission, 2023 General Election official results", href: "https://elections.nz/media-and-news/2023/official-results-for-the-2023-general-election" },
         { label: "Electoral Commission, candidate and party lists released", href: "https://elections.nz/media-and-news/2026/candidate-and-party-lists-released" },
+        { label: "Electoral Commission, Port Waikato by-election official results", href: "https://elections.nz/media-and-news/2023/port-waikato" },
         { label: "Electoral Commission, about MMP", href: "https://elections.nz/democracy-in-nz/what-is-mmp/" },
         { label: "Electoral Commission, key dates for the 2026 General Election", href: "https://elections.nz/media-and-news/2026/key-dates-for-2026-general-election" },
         { label: "New Zealand Parliament, election 2026 timeline", href: "https://www3.parliament.nz/en/visit-and-learn/parliament-in-election-year/election-2026-timeline/" },
@@ -33,7 +34,9 @@ export default function Page() {
         ACT New Zealand and New Zealand First, with Christopher Luxon as Prime Minister. Labour, led since 2023 by
         Chris Hipkins, became the largest opposition party, alongside the Green Party and Te Pāti Māori. The official
         2023 results gave Parliament 122 seats rather than the usual 120 because of an overhang: a party won more
-        electorates than its party vote share alone would have given it.
+        electorates than its party vote share alone would have given it. The Port Waikato electorate vote was
+        cancelled after a candidate died, and the National Party’s win at the November 2023 by-election there added
+        one more seat, so the 54th Parliament has 123 members.
       </p>
       <h2>Who is on the ballot</h2>
       <p>
