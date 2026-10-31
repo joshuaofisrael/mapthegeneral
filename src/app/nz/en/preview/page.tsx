@@ -1,5 +1,6 @@
 import { NzArticle } from "@/components/NzArticle";
 import { pageMetadata } from "@/lib/metadata";
+import { NZ_POLLS_BLACKOUT } from "@/data/nz-polls";
 
 const PATH = "/nz/en/preview/";
 
@@ -57,12 +58,16 @@ export default function Page() {
         Close general electorates matter less for the total size of each party, since list seats top parties up to
         their party vote share, but they decide which individual candidates enter Parliament.
       </p>
-      <h2>Polls</h2>
-      <p>
-        Map the General does not publish opinion poll figures or forecasts for any election. Published polls in New
-        Zealand are run by media and research firms, not the Electoral Commission, and they measure a sample, not the
-        result. Treat any single poll with caution.
-      </p>
+      {!NZ_POLLS_BLACKOUT && (
+        <>
+          <h2>Polls</h2>
+          <p>
+            Published polls are run by media and research firms, not the Electoral Commission, and they measure a
+            sample, not the result. Our <a href="/nz/en/polls/">polling average page</a> shows a simple average of
+            the latest poll from each major pollster, with dates, links and margins of error.
+          </p>
+        </>
+      )}
       <h2>Key dates</h2>
       <p>
         Advance voting ran from 26 October. All election advertising must end on 6 November, and on election day

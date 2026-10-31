@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import { EDITORIAL_BYLINE } from "@/data/editorial/model";
 import type { ReactNode } from "react";
+import { NZ_POLLS_BLACKOUT } from "@/data/nz-polls";
 
 export type Cite = { label: string; href: string };
 
@@ -42,6 +43,7 @@ export function NzArticle(props: {
           <li><Link href="/nz/en/parties/">Parties on the party vote</Link></li>
           <li><Link href="/nz/en/results-night/">How results night works</Link></li>
           <li><Link href="/nz/en/preview/">Election preview</Link></li>
+          {!NZ_POLLS_BLACKOUT && <li><Link href="/nz/en/polls/">Polling average</Link></li>}
         </ul>
       </nav>
       <section className="prose-legal mt-8">

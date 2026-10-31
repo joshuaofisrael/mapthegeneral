@@ -17,6 +17,7 @@ import { RELEASE_POLICIES } from "../src/data/election-policy";
 import { releaseRow } from "../src/data/release-status";
 import { ianaOffset, offsetMatchesZone } from "../src/data/zone-offset";
 import { registryCountries } from "../src/lib/country-registry";
+import { NZ_POLLS_BLACKOUT } from "../src/data/nz-polls";
 
 const OUT = path.join(process.cwd(), "out");
 const now = Date.now();
@@ -147,6 +148,12 @@ function walk(dir: string) {
         .replace(/<script[\s\S]*?<\/script>/g, "")
         .replace(/<style[\s\S]*?<\/style>/g, ""),
     );
+    const rel = path.relative(OUT, full).split(path.sep).join("/");
+    // Narrow exception: the NZ polling-average page only, and only while NZ_POLLS_BLACKOUT is false.
+    if (rel === "nz/en/polls/index.html" && !NZ_POLLS_BLACKOUT) continue;
+    if (NZ_POLLS_BLACKOUT && rel.startsWith("nz/") && /\d{1,2}\.\d<\/td>/.test(text)) {
+      errors.push(`${rel}: NZ poll blackout is on but the page carries poll-style figures`);
+    }
     const match = text.match(POLL_FIGURE);
     if (match) errors.push(`${path.relative(OUT, full)}: poll-like figure "${match[0].slice(0, 160)}"`);
   }

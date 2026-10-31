@@ -26,10 +26,12 @@ const FILES = [
   "src/app/nz/en/results-night/page.tsx",
   "src/app/nz/en/preview/page.tsx",
   "src/components/NzArticle.tsx",
+  "src/app/nz/en/polls/page.tsx",
+  "src/data/nz-polls.ts",
 ];
 
 /** Sealed baseline. Update only outside the freeze, in the same commit as a real New Zealand edit. */
-const SEAL = "07346d5c7a9d2c73022ca5b4f7ab94c0f8f340bbb417b31de9c9abb1f111bbf8";
+const SEAL = "a3958db5d8dbd8c29733068702e2881d27cb92742d1bdd1e68b0d24bd3e93959";
 
 function fileHash(rel: string): string {
   const bytes = readFileSync(path.join(process.cwd(), rel));
