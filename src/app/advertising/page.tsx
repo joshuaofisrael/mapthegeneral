@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Advertising and affiliate disclosure",
-  description: `Advertising on ${SITE.name} may include Google AdSense. ${SITE.legalName} does not sell political ads or endorse candidates.`,
+  description: `Advertising on ${SITE.name} may include Google AdSense and Ezoic. ${SITE.legalName} does not sell political ads or endorse candidates.`,
   path: "/advertising",
 });
 
@@ -30,8 +30,8 @@ export default function AdvertisingPage() {
       <div className="prose-legal">
         <h2>Who sells the ads</h2>
         <p>
-          {SITE.name} may show advertisements from Google AdSense. Google and its partners choose and
-          measure those ads. {SITE.legalName} does not write the ads and does not pick the advertiser
+          {SITE.name} may show advertisements from Google AdSense and from Ezoic Inc. Google, Ezoic
+          and their partners choose and measure those ads. {SITE.legalName} does not write the ads and does not pick the advertiser
           for a particular visit. An advertisement is not an endorsement by {SITE.legalName} or by{" "}
           {SITE.name}.
         </p>
