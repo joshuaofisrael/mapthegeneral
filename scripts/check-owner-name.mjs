@@ -25,7 +25,7 @@ import path from "node:path";
 const OUT = path.join(process.cwd(), "out");
 const ENTITY = path.join(process.cwd(), "src/data/legal-entity.ts");
 const PHRASES = ["joshua israel ventures", "joshua israel", "ji ventures"];
-const OFFICEHOLDERS = ["Joshua Reynolds", "Joshua Kim", "MOSS, Joshua", "HARFORD, Joshua"];
+const OFFICEHOLDERS = ["Joshua Reynolds", "Joshua Kim", "MOSS, Joshua", "HARFORD, Joshua", "Joshua Moss", "Joshua Harford"];
 const OWNER_ALLOWED = new Set([
   "/terms/",
   "/disclaimer/",

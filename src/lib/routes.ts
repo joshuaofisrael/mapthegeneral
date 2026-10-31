@@ -205,6 +205,10 @@ export function searchIndex(): IndexEntry[] {
     ...hubIndexEntries(),
     ...countryHubIndex(),
     { path: "/il/he/results/", lang: "he", title: "תוצאות הבחירות 2026", kind: "election", text: "תוצאות הבחירות לכנסת 2026 ועדת הבחירות המרכזית" },
+    { path: "/nz/en/electorates/", lang: "en", title: "New Zealand electorates and candidates 2026", kind: "election", text: "New Zealand 2026 electorates candidates general Māori electorate vote" },
+    { path: "/nz/en/parties/", lang: "en", title: "New Zealand parties on the party vote 2026", kind: "election", text: "New Zealand 2026 registered parties party vote MMP threshold" },
+    { path: "/nz/en/results-night/", lang: "en", title: "How New Zealand results night works", kind: "election", text: "New Zealand election night preliminary results special votes official count 27 November" },
+    { path: "/nz/en/preview/", lang: "en", title: "New Zealand election 2026 preview", kind: "election", text: "New Zealand general election 2026 preview MMP parties what to watch" },
     { path: "/il/en/results/", lang: "en", title: "Israel election results 2026", kind: "election", text: "Israel Knesset election results 2026 live" },
   ];
   return rows.filter((row) => {

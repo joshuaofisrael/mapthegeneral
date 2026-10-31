@@ -3,6 +3,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
+import manual from "@/data/nz-results-manual.json";
+
+type Row = { party: string; votes: number; share?: string; electorates?: number; listSeats?: number; totalSeats?: number };
 
 const RESULTS = "https://electionresults.govt.nz/";
 const PATH = "/nz/en/results";
@@ -44,6 +47,31 @@ export default function NzResultsPage() {
         </p>
         <p>
           For dates and how the election works, see the <Link href="/nz/en/elections/general-election/">general election guide</Link>.
+        </p>
+        {(manual.rows as Row[]).length > 0 && (
+          <section>
+            <h2>Party vote, {manual.stage || "preliminary"} count (unofficial copy)</h2>
+            <p>
+              Read from <a href={manual.sourceUrl} rel="noopener">electionresults.govt.nz</a> at {manual.readAt} New Zealand
+              time{manual.votingPlacesCounted ? `, with ${manual.votingPlacesCounted} of voting places counted` : ""}. Preliminary
+              figures exclude special votes and will change. Seat columns are the Commission’s own numbers; this site does
+              not calculate seats.
+            </p>
+            <table>
+              <thead>
+                <tr><th scope="col">Party</th><th scope="col">Party votes</th><th scope="col">Share</th><th scope="col">Electorate seats</th><th scope="col">List seats</th><th scope="col">Total seats</th></tr>
+              </thead>
+              <tbody>
+                {(manual.rows as Row[]).map((r) => (
+                  <tr key={r.party}><td>{r.party}</td><td>{r.votes.toLocaleString("en-NZ")}</td><td>{r.share ?? ""}</td><td>{r.electorates ?? ""}</td><td>{r.listSeats ?? ""}</td><td>{r.totalSeats ?? ""}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
+        <p>
+          How the count works: <Link href="/nz/en/results-night/">how results night works</Link>. Candidates by seat:{" "}
+          <Link href="/nz/en/electorates/">electorates</Link>. Parties: <Link href="/nz/en/parties/">party vote</Link>.
         </p>
       </div>
     </div>
