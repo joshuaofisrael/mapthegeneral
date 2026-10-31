@@ -1,3 +1,4 @@
+import { NZ_POLLS_BLACKOUT } from "./nz-polls";
 /** National hubs generated into public/ by scripts/render-country-hubs.ts. */
 
 export type HubIndexEntry = {
@@ -231,7 +232,7 @@ export const NZ_COUNTRY_HUB: CountryHub = {
 <p><a href="${NZ}">General election, 7 November 2026</a></p>
 <p><a href="/nz/en/results/">Results page</a>. It shows no vote count before 7:00 pm New Zealand daylight time on 7 November 2026.</p>
 <h2>More New Zealand pages</h2>
-<ul><li><a href="/nz/en/electorates/">Electorates and candidates</a></li><li><a href="/nz/en/parties/">Parties on the party vote</a></li><li><a href="/nz/en/results-night/">How results night works</a></li><li><a href="/nz/en/preview/">Election preview</a></li></ul>
+<ul><li><a href="/nz/en/electorates/">Electorates and candidates</a></li><li><a href="/nz/en/parties/">Parties on the party vote</a></li><li><a href="/nz/en/results-night/">How results night works</a></li><li><a href="/nz/en/preview/">Election preview</a></li>${NZ_POLLS_BLACKOUT ? "" : '<li><a href="/nz/en/polls/">Polling average</a></li>'}</ul>
 <h2>Te reo Māori</h2>
 <p>The Candidate Handbook titles the election Te Pōtitanga ā-Motu 2026 and the Commission Te Kaitiaki Take Kōwhiri. The plan says the Commission will produce enrolling and voting material in English, te reo Māori, and 29 other languages, and that a Whare pōti Māori provides voting services in te reo Māori and English. The Māori Electoral Option is the choice of the Māori roll or the general roll. This hub is not a translation, so it does not offer a Māori hreflang.</p>
 <h2>Personal data</h2>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mapthegeneral.com/nz/en/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://mapthegeneral.com/nz/en/elections/general-election/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/elections/general-election/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/electorates/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/parties/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/results-night/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/preview/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://mapthegeneral.com/nz/en/polls/</loc><lastmod>2026-10-31</lastmod></url>
 </urlset>
