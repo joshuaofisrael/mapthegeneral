@@ -195,9 +195,18 @@ export default function PrivacyPage() {
           </a>
           .
         </p>
+        <h3 id="ezoic">Ezoic and its partners</h3>
+        <p>
+          Ezoic Inc. and its advertising partners may use first- and third-party cookies, tags, pixels
+          and similar technologies on this site to serve ads, measure them, limit how often they
+          repeat, and detect invalid traffic. In the European Economic Area and the United Kingdom they act on
+          the consent signal recorded by Google’s consent message. Ezoic’s required disclosure,
+          including its list of partners, follows.
+        </p>
+        <span id="ezoic-privacy-policy-embed"></span>
         <p>
           Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
-          The <Link href="/advertising/">advertising disclosure</Link> says that ads are Google AdSense,
+          The <Link href="/advertising/">advertising disclosure</Link> says that ads are Google AdSense and Ezoic,
           that the site does not sell political advertising or endorsements, and that it has no
           affiliate links.
         </p>

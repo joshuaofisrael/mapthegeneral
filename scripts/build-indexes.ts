@@ -145,7 +145,12 @@ for (const name of readdirSync(sitemapDir)) {
 write("public/search/index.json", JSON.stringify(searchIndex()));
 // Chieti poll-publication hold: the committed IndexNow list carries no Italian URL until
 // it-2026-chieti.votingEnded is true (the deploy job pings from this committed file).
-const indexNowPaths = paths.filter((path) => votingEndedConfirmed("it-2026-chieti") || !(path === "/it/" || path.startsWith("/it/")));
+// Bulgaria runoff blackout: no /bg/ URL is pinged from the start of the art. 205 survey ban
+// until the CEC confirms voting has ended (polls close 20:00 Bulgaria time, 1 Nov).
+const bgBlackout = Date.now() >= Date.parse("2026-10-30T22:00:00Z") && !votingEndedConfirmed("bg-2026-11-01");
+const indexNowPaths = paths
+  .filter((path) => votingEndedConfirmed("it-2026-chieti") || !(path === "/it/" || path.startsWith("/it/")))
+  .filter((path) => !bgBlackout || !(path === "/bg/" || path.startsWith("/bg/")));
 write("public/search/indexnow-urls.json", JSON.stringify(indexNowPaths.map((path) => absoluteUrl(path))));
 
 const indexed = searchIndex();
