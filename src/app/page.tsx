@@ -64,6 +64,20 @@ export default function HomePage() {
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
         <HomeElectionNight />
+        <aside className="mt-6 rounded-lg border border-navy/20 p-4" aria-label="Featured election">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Featured · 7 November 2026</p>
+          <h2 className="mt-1 font-serif text-xl font-semibold">New Zealand general election</h2>
+          <p className="mt-1 text-sm text-ink-muted">
+            Voting closes 7:00 pm New Zealand time (06:00 London). Preliminary results come from the Electoral Commission.
+          </p>
+          <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            <li><a className="text-navy underline" href="/nz/en/">New Zealand hub</a></li>
+            <li><a className="text-navy underline" href="/nz/en/results/">Results</a></li>
+            <li><a className="text-navy underline" href="/nz/en/results-night/">How results night works</a></li>
+            <li><a className="text-navy underline" href="/nz/en/electorates/">Electorates</a></li>
+            <li><a className="text-navy underline" href="/nz/en/parties/">Parties</a></li>
+          </ul>
+        </aside>
         <EditorialPreview path="/" />
       </section>
 
