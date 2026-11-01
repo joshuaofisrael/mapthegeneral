@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { sponsorOfferExpired, sponsorSlotHtml } from "@/data/sponsorship";
-import { houseAdHtml, isEmbedRoute, languageFromRoute } from "@/lib/house-ad";
+import { isEmbedRoute, languageFromRoute } from "@/lib/house-ad";
 
 /**
  * Compact banner under the header, with the sponsorship slot directly under
@@ -25,7 +25,7 @@ export function HouseAd() {
   return (
     <div
       className="house-ad-slot"
-      dangerouslySetInnerHTML={{ __html: `${houseAdHtml(route, lang)}${sponsorSlotHtml(route, lang)}` }}
+      dangerouslySetInnerHTML={{ __html: `${sponsorSlotHtml(route, lang)}` }}
     />
   );
 }
