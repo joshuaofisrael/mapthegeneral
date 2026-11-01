@@ -47,6 +47,7 @@ export const LEGAL_NAV = [
 ] as const;
 
 export const PRIMARY_NAV = [
+  { href: "/us/en/live/", label: "US election results live" },
   { href: "/search/", label: "Search" },
   { href: "/about/", label: "About" },
 ] as const;
