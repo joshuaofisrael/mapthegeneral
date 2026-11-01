@@ -249,7 +249,7 @@ if (trackerOpen("il-2026-knesset", Date.parse("2026-10-27T21:59:00+02:00"))) {
 if (!trackerOpen("il-2026-knesset", Date.parse("2026-10-27T22:00:00+02:00"))) {
   errors.push("Israel tracker stays closed at 22:00 Israel time");
 }
-if (trackerOpen("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
+if (releaseRow("bg-2026-11-01")?.votingEnded !== true && trackerOpen("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
   errors.push("Bulgaria tracker opened on the clock without CEC confirmation");
 }
 if (trackerOpen("unknown-election", Date.parse("2026-11-01T21:00:00+02:00"))) {
