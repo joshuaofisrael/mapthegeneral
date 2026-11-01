@@ -156,12 +156,34 @@ const resultAlternates = [
 const BODY_RESULTS_BG = `<p><a href="${RESULTS_EN}">English</a></p>
 <h2>Официален брой</h2>
 <p>Очакват се официални резултати. Тази страница чете само файла на Централната избирателна комисия за евентуалния нов избор на 1 ноември 2026 г. До 21:00 ч. българско време и до обявяване на края на изборния ден тук няма брой. Ако файлът не се зареди или сайтът на Комисията върне проверка за достъп, числа не се добавят. Връзката остава <a href="${RESULTS}">results.cik.bg</a>.</p>
-<p>Таблицата за 25 октомври 2026 г. е отделна публикация. Тя е на <a href="${BG_RESULTS_URL}">страницата на Комисията за октомври</a> и на <a href="${LOCAL}">страницата за избора</a>. Тя не е балотажът на 1 ноември. Решения № 405-ПВР и № 415-ПВР, прочетени на 27 октомври 2026 г., още казват „евентуален“ и не печатат двете листи. Име се показва тук само ако е в официалния файл.</p>`;
+<p>Таблицата за 25 октомври 2026 г. е отделна публикация. Тя е на <a href="${BG_RESULTS_URL}">страницата на Комисията за октомври</a> и на <a href="${LOCAL}">страницата за избора</a>. Тя не е балотажът на 1 ноември. Решения № 405-ПВР и № 415-ПВР, прочетени на 27 октомври 2026 г., още казват „евентуален“ и не печатат двете листи. Име се показва тук само ако е в официалния файл.</p>
+<h2>Частичен брой (въведен ръчно)</h2>
+<p>Частични данни, не окончателни. Източник: <a href="https://bntnews.bg/news/cik-pri-obraboteni-1739-ot-protokolite-iliyana-yotova-poluchava-5794-gyurov-e-vtori-s-39-1420115news.html">БНТ Новини, 23:11 ч., 1 ноември 2026 г.</a>, по данни на ЦИК при 17,39% обработени протоколи на СИК в РИК. Автоматичното зареждане от ЦИК още не показва числа.</p>
+<table><thead><tr><th>Кандидатска двойка</th><th>Дял</th></tr></thead><tbody>
+<tr><td>№ 25 Илияна Йотова и Кирил Вълчев</td><td>57,94%</td></tr>
+<tr><td>№ 4 Андрей Гюров и Георги Кандев</td><td>39%</td></tr>
+<tr><td>Не подкрепям никого</td><td>3,05%</td></tr>
+</tbody></table>
+<h2>Актуални новини</h2>
+<p>Наши обобщения на публикации от посочените източници. Не са окончателни резултати.</p>
+<article><p><strong><time datetime="2026-11-01T23:11:00+02:00">23:11 ч. българско време</time> · ЦИК публикува първи данни от балотажа</strong></p>
+<p>След като Централната избирателна комисия обяви края на изборния ден с Решение № 437-ПВР, тя започна да публикува данни от втория тур. При 17,39% обработени протоколи двойката Илияна Йотова и Кирил Вълчев има 57,94%, а Андрей Гюров и Георги Кандев — 39%, съобщава БНТ. „Не подкрепям никого“ е отбелязано от 3,05%. Броенето продължава; тази страница не обявява избран кандидат. Източник: <a href="https://bntnews.bg/news/cik-pri-obraboteni-1739-ot-protokolite-iliyana-yotova-poluchava-5794-gyurov-e-vtori-s-39-1420115news.html">БНТ Новини</a>.</p></article>`;
 
 const BODY_RESULTS_EN = `<p><a href="${RESULTS_BG}">Български</a></p>
 <h2>Official count</h2>
 <p>Awaiting official results. This page reads only the Central Election Commission file for the runoff on 1 November 2026. No count is shown before 21:00 Bulgaria time, or before the Commission declares that voting has ended. If the file does not load, or the Commission’s site returns an access check, no figures are added. The link stays <a href="${RESULTS}">results.cik.bg</a>.</p>
-<p>The table for 25 October 2026 is a separate publication. It is on the <a href="${BG_RESULTS_URL}">Commission’s October page</a> and on the <a href="${EN}">election page</a>. It is not the 1 November runoff. The runoff pairs, called by the Commission on 27 October 2026, are no. 25 Iliana Iotova and Kiril Valchev and no. 4 Andrey Gyurov and Georgi Kandev.</p>`;
+<p>The table for 25 October 2026 is a separate publication. It is on the <a href="${BG_RESULTS_URL}">Commission’s October page</a> and on the <a href="${EN}">election page</a>. It is not the 1 November runoff. The runoff pairs, called by the Commission on 27 October 2026, are no. 25 Iliana Iotova and Kiril Valchev and no. 4 Andrey Gyurov and Georgi Kandev.</p>
+<h2>Partial count (entered by hand)</h2>
+<p>Partial figures, not final. Source: <a href="https://bntnews.bg/news/cik-pri-obraboteni-1739-ot-protokolite-iliyana-yotova-poluchava-5794-gyurov-e-vtori-s-39-1420115news.html">BNT News, 23:11 Bulgaria time, 1 November 2026</a>, citing Central Election Commission data with 17.39% of polling-station protocols processed. The automatic Commission feed is not showing figures yet.</p>
+<table><thead><tr><th>Candidate list</th><th>Share</th></tr></thead><tbody>
+<tr><td>No. 25 Iliana Iotova and Kiril Valchev</td><td>57.94%</td></tr>
+<tr><td>No. 4 Andrey Gyurov and Georgi Kandev</td><td>39%</td></tr>
+<tr><td>I do not support anyone</td><td>3.05%</td></tr>
+</tbody></table>
+<h2>Live updates</h2>
+<p>Our summaries of reporting from the named sources. Not final results.</p>
+<article><p><strong><time datetime="2026-11-01T23:11:00+02:00">23:11 Bulgaria time</time> · Commission posts first runoff figures</strong></p>
+<p>After declaring the end of election day in Decision No. 437-PVR, the Central Election Commission began publishing figures from the second round. With 17.39% of protocols processed, Iliana Iotova and Kiril Valchev have 57.94% and Andrey Gyurov and Georgi Kandev 39%, BNT reports. The "I do not support anyone" option has 3.05%. Counting continues, and this page does not declare a pair elected. Source: <a href="https://bntnews.bg/news/cik-pri-obraboteni-1739-ot-protokolite-iliyana-yotova-poluchava-5794-gyurov-e-vtori-s-39-1420115news.html">BNT News</a>.</p></article>`;
 
 export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
