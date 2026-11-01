@@ -64,6 +64,15 @@ export default function HomePage() {
         </p>
         <p className="mt-3 text-sm leading-6 text-ink-muted">{SITE.officialNotUs}</p>
         <HomeElectionNight />
+        <aside className="mt-6 rounded-lg border-2 border-navy bg-navy-wash p-4" aria-label="US election results live">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Live · 3 November 2026</p>
+          <h2 className="mt-1 font-serif text-2xl font-semibold">
+            <a className="text-navy underline" href="/us/en/live/">US midterm election results live</a>
+          </h2>
+          <p className="mt-1 text-sm text-ink-muted">
+            House, Senate and governor races from official state files as polls close, from 23:00 London (6 pm Eastern).
+          </p>
+        </aside>
         <aside className="mt-6 rounded-lg border border-navy/20 p-4" aria-label="Featured election">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Featured · 7 November 2026</p>
           <h2 className="mt-1 font-serif text-xl font-semibold">New Zealand general election</h2>

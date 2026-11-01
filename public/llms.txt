@@ -59766,6 +59766,7 @@
 - [How New Zealand results night works](https://mapthegeneral.com/nz/en/results-night/)
 - [New Zealand election 2026 preview](https://mapthegeneral.com/nz/en/preview/)
 - [New Zealand polls 2026: polling average](https://mapthegeneral.com/nz/en/polls/)
+- [US midterm election results live 2026](https://mapthegeneral.com/us/en/live/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.

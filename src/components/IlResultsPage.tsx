@@ -142,7 +142,7 @@ const NEXT: Record<IlLang, { title: string; note: string; items: [string, string
     note: "Polling dates come from each election authority, and each guide cites its official sources.",
     items: [
       ["/bg/en/elections/president-2026/", "Bulgaria presidential election, 1 November 2026"],
-      ["https://mapthemidterms.com/", "US midterm elections, 3 November 2026 (Map the Midterms)"],
+      ["/us/en/live/", "US midterm elections, 3 November 2026: live results"],
       ["/nz/en/elections/general-election/", "New Zealand general election, 7 November 2026"],
       ["/pl/en/elections/senat-20-2026/", "Poland Senate by-election, Lubusz constituency 20, 22 November 2026"],
       ["/au/en/elections/victoria-2026/", "Victorian state election, 28 November 2026"],
@@ -153,7 +153,7 @@ const NEXT: Record<IlLang, { title: string; note: string; items: [string, string
     note: "מועדי ההצבעה לקוחים מרשות הבחירות של כל מדינה, וכל מדריך מצטט את מקורותיו הרשמיים. המדריכים כתובים באנגלית.",
     items: [
       ["/bg/en/elections/president-2026/", "הבחירות לנשיאות בבולגריה, 1 בנובמבר 2026"],
-      ["https://mapthemidterms.com/", "בחירות האמצע בארצות הברית, 3 בנובמבר 2026 (Map the Midterms)"],
+      ["/us/en/live/", "בחירות האמצע בארצות הברית, 3 בנובמבר 2026: תוצאות בזמן אמת"],
       ["/nz/en/elections/general-election/", "הבחירות הכלליות בניו זילנד, 7 בנובמבר 2026"],
       ["/pl/en/elections/senat-20-2026/", "בחירות משנה לסנאט בפולין, מחוז בחירה 20 (לובוש), 22 בנובמבר 2026"],
       ["/au/en/elections/victoria-2026/", "הבחירות במדינת ויקטוריה שבאוסטרליה, 28 בנובמבר 2026"],
