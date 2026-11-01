@@ -3,7 +3,7 @@
  * Facts are limited to pages read on 27 October 2026. No survey figures.
  */
 import type { ElectionSeoProfile } from "./election-seo";
-import { BG_ARCHIVE, BG_REGISTER, BG_RESULTS_URL, bgResultsTableHtml } from "./bg-president-2026";
+import { BG_ARCHIVE, BG_DECISION_RUNOFF, BG_REGISTER, BG_RESULTS_URL, BG_TURNOUT_R1, BG_TURNOUT_SRC, bgResultsTableHtml, bgRunoffHtml } from "./bg-president-2026";
 import { RELEASE_POLICIES } from "./election-policy";
 import { pollingExtended, votingEndedConfirmed } from "./release-status";
 
@@ -114,16 +114,26 @@ ${bgResultsTableHtml()}
 ${NIGHT_BG}`;
 
 const BODY_EN = `<h2>What is being elected</h2>
-<p>The Central Election Commission’s decision list for the presidential election, read on 27 October 2026, includes Decision No. 405-PVR of 23 October 2026 and Decision No. 415-PVR of 26 October 2026. Both concern the technical specifications of the paper ballots for a possible new election for president and vice president on 1 November 2026. The Commission’s brochure for 25 October 2026 says a candidate for president is elected with more than half of the valid votes if more than half of the voters took part. If nobody reaches that majority, a new election is held with the two candidate lists that received the most votes, and the method of voting stays the same.</p>
-<p>This page does not say the Commission has already named the two lists for 1 November. The decision titles read on 27 October 2026 still say the new election is possible. The October table is a separate publication and is not treated here as a decision on the November ballot.</p>
+<p>Bulgarians choose a president and a vice president, who run together as a pair. The president is head of state for a five-year term. Under the rules set out in the Commission’s brochure, a pair wins in the first round only if it gets more than half of the valid votes and more than half of registered voters take part. If neither condition is met, a second round is held one week later between the two pairs with the most votes, using the same voting method. In that second round the pair with more votes wins, whatever the turnout.</p>
+<h2>The runoff on 1 November</h2>
+<p>On 27 October 2026 the Commission announced the final first-round result and called the runoff (<a href="${BG_DECISION_RUNOFF}">Commission decisions, 27 October</a>). The two pairs keep their first-round ballot numbers:</p>
+<ul>
+<li>No. 25: <a href="${BG_REGISTER}" rel="nofollow noopener">Iliana Iotova and Kiril Valchev</a> (nominated by an initiative committee), 528,951 valid votes in the first round.</li>
+<li>No. 4: <a href="${BG_REGISTER}" rel="nofollow noopener">Andrey Gyurov and Georgi Kandev</a> (nominated by an initiative committee), 486,232 valid votes in the first round.</li>
+</ul>
+<p>The gap after the first round was 42,719 votes. The runoff ballot also carries the option “I do not support anyone”. Listing the pairs here is not an endorsement of either.</p>
+<h2>Turnout</h2>
+<p>The Commission reported first-round turnout of ${BG_TURNOUT_R1} percent: about 1.5 million of more than 6.5 million eligible voters (<a href="${BG_TURNOUT_SRC}">BGNES report of the Commission’s press conference, 28 October</a>). Because fewer than half of voters took part and no pair passed half of the valid votes, nobody was elected on 25 October. In the 2021 presidential election, first-round turnout was above 40 percent, when it was held together with a parliamentary vote, and the runoff was just under 35 percent.</p>
+<h2>Runoff results</h2>
+${bgRunoffHtml(votingEndedConfirmed("bg-2026-11-01"))}
 <h2>How to vote</h2>
 <p>Voter question 3 on the Commission’s page for this election says voting starts at 7:00 and ends at 20:00. Article 220 of the Election Code, in the text on the Magistrat page read on 27 October 2026, says the same and adds that voters who are outside the polling room at 20:00 and hand over their identity papers may vote after 20:00, but not later than 21:00. Abroad, that text sets the election day from 7:00 to 20:00 local time.</p>
 <p>The brochure says sections with 300 or more voters on the list use a machine. A paper ballot is for smaller sections, a mobile box, hospitals, homes and specialised institutions, ships under the Bulgarian flag, some sections abroad, and a stopped machine. A driving licence is not accepted. Deadlines in the brochure are for 25 October 2026 and are not repeated here as deadlines for 1 November.</p>
 {{candidates}}
 <h2>Official distribution of 25 October</h2>
-<p>Every figure below is from the Commission’s table, read on 27 October 2026: data as of 15:00 on 26 October, with 100.00% of section-commission protocols processed in the district commissions. A final turnout was not copied, so this page does not decide whether more than half of the voters took part. <a href="${BG_RESULTS_URL}">Commission table</a>. The pairs, in that table’s ballot order, are listed below and each one links to the <a href="${BG_REGISTER}">public register</a>. The line „Не подкрепям никого“ is not a pair.</p>
+<p>The table below is the Commission’s distribution as of 15:00 on 26 October, with 100.00% of section-commission protocols processed in the district commissions. The final declared totals of 27 October differ slightly (for example 528,951 rather than 528,929 for no. 25). <a href="${BG_RESULTS_URL}">Commission table</a>. The pairs, in that table’s ballot order, are listed below and each one links to the <a href="${BG_REGISTER}">public register</a>. The line „Не подкрепям никого“ is not a pair.</p>
 ${bgResultsTableHtml()}
-<p>The two largest shares are no. 25 and no. 4. No pair has more than half of the printed distribution. This page does not declare a pair elected. Decisions No. 405-PVR and No. 415-PVR do not print a separate two-name order for 1 November.</p>
+<p>The two largest shares are no. 25 and no. 4, and they are the two pairs in the runoff.</p>
 <h2>Earlier official results</h2>
 <p>The results index lists presidential elections on 14 November 2021, 6 November 2016 and 23 October 2011. Those totals are not copied here. <a href="${BG_ARCHIVE}">Commission results index</a>.</p>
 <p>The official count for 1 November is on the <a href="${RESULTS_EN}">runoff results page</a>. <a href="${RESULTS_BG}">Български</a>.</p>
@@ -150,8 +160,8 @@ const BODY_RESULTS_BG = `<p><a href="${RESULTS_EN}">English</a></p>
 
 const BODY_RESULTS_EN = `<p><a href="${RESULTS_BG}">Български</a></p>
 <h2>Official count</h2>
-<p>Awaiting official results. This page reads only the Central Election Commission file for the possible new election on 1 November 2026. No count is shown before 21:00 Bulgaria time, or before the Commission declares that voting has ended. If the file does not load, or the Commission’s site returns an access check, no figures are added. The link stays <a href="${RESULTS}">results.cik.bg</a>.</p>
-<p>The table for 25 October 2026 is a separate publication. It is on the <a href="${BG_RESULTS_URL}">Commission’s October page</a> and on the <a href="${EN}">election page</a>. It is not the 1 November runoff. Decisions No. 405-PVR and No. 415-PVR, read on 27 October 2026, still say the new election is possible and do not print the two lists. A name is shown here only when it is in the official file.</p>`;
+<p>Awaiting official results. This page reads only the Central Election Commission file for the runoff on 1 November 2026. No count is shown before 21:00 Bulgaria time, or before the Commission declares that voting has ended. If the file does not load, or the Commission’s site returns an access check, no figures are added. The link stays <a href="${RESULTS}">results.cik.bg</a>.</p>
+<p>The table for 25 October 2026 is a separate publication. It is on the <a href="${BG_RESULTS_URL}">Commission’s October page</a> and on the <a href="${EN}">election page</a>. It is not the 1 November runoff. The runoff pairs, called by the Commission on 27 October 2026, are no. 25 Iliana Iotova and Kiril Valchev and no. 4 Andrey Gyurov and Georgi Kandev.</p>`;
 
 export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
   {
@@ -161,7 +171,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     endDate: OPENS,
     organizerName: "Централна избирателна комисия",
     organizerUrl: "https://www.cik.bg/",
-    lastmod: "2026-10-28",
+    lastmod: "2026-11-01",
     candidateListId: "bg-president-2026",
     homeLinks: [
       {
@@ -310,11 +320,11 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         suppressNight: true,
         htmlLang: "en",
         path: EN,
-        title: "Bulgaria presidential election, 1 November 2026",
+        title: "Bulgaria presidential runoff 2026: candidates, rules and results",
         description:
-          "Possible new election for president and vice president of Bulgaria on 1 November 2026. Voting from 7:00 to 20:00. No count before 21:00. Unofficial information.",
+          "Bulgaria presidential runoff, 1 November 2026: Iotova–Valchev vs Gyurov–Kandev, how the two-round vote works, first-round turnout, and official CIK results.",
         ogDescription:
-          "Possible Bulgaria presidential election on Sunday 1 November 2026. Central Election Commission. No count before 21:00. Unofficial information.",
+          "Bulgaria presidential runoff on 1 November 2026: the two pairs, the rules and turnout, from the Central Election Commission.",
         ogLocale: "en_GB",
         alternates,
         crumbs: [
@@ -325,8 +335,8 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         ],
         eyebrow: "1 November 2026",
         h1: "Presidential election",
-        lede: "A possible new election on Sunday 1 November 2026. Voting runs from 7:00 to 20:00, and a queue outside the room may vote until 21:00.",
-        updated: "Last updated: 28 October 2026.",
+        lede: "The runoff between the two leading pairs is on Sunday 1 November 2026. Voting runs from 7:00 to 20:00, and a queue outside the room may vote until 21:00.",
+        updated: "Last updated: 1 November 2026.",
         reportLabel: "Report an error",
         officeHref: CIK,
         bannerBefore: "Unofficial information. Confirm with the ",
@@ -346,8 +356,8 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         keyDates: [
           {
             label: "Date",
-            text: "Decisions No. 405-PVR and No. 415-PVR on the Commission’s list are for a possible new election for president and vice president on 1 November 2026.",
-            links: [{ label: "the Commission’s list", href: CIK }],
+            text: "The Commission’s decisions of 27 October 2026 call the runoff for president and vice president on 1 November 2026.",
+            links: [{ label: "The Commission’s decisions of 27 October 2026", href: BG_DECISION_RUNOFF }],
           },
           {
             label: "Hours",
@@ -379,18 +389,18 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         faqHeading: "Frequently asked questions",
         faqs: [
           {
-            question: "When is the possible new election?",
-            text: "Decisions No. 405-PVR and No. 415-PVR name 1 November 2026. Question 26 says that if nobody is elected, the Commission names the two lists with the most votes and schedules a runoff.",
+            question: "When is the runoff?",
+            text: "Sunday 1 November 2026. The Commission’s decisions of 27 October 2026 called it after nobody was elected on 25 October. Question 26 says that in that case the two lists with the most votes go to a runoff.",
             links: [
-              { label: "Decisions No. 405-PVR and No. 415-PVR", href: CIK },
+              { label: "The Commission’s decisions of 27 October 2026", href: BG_DECISION_RUNOFF },
               { label: "Question 26", href: Q26 },
             ],
           },
           {
             question: "Who are the candidate pairs?",
-            text: "The Commission’s table for 25 October 2026 gives the pairs in ballot order, and each pair links to the public register. The largest shares are no. 25 and no. 4. The decision titles for 1 November still say the new election is possible and do not print a separate two-name order. This page does not declare a pair elected.",
+            text: "No. 25, Iliana Iotova and Kiril Valchev, and no. 4, Andrey Gyurov and Georgi Kandev, the two pairs with the most votes in the first round according to the Commission’s decisions of 27 October 2026. Each links to the public register.",
             links: [
-              { label: "The Commission’s table for 25 October 2026", href: BG_RESULTS_URL },
+              { label: "the Commission’s decisions of 27 October 2026", href: BG_DECISION_RUNOFF },
               { label: "the public register", href: BG_REGISTER },
             ],
           },
@@ -583,7 +593,7 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         ],
         eyebrow: "1 November 2026",
         h1: "Bulgaria presidential election 2026 results",
-        lede: "Official results for the possible presidential runoff on Sunday 1 November 2026. This page does not declare a pair elected. No count appears before 21:00 Bulgaria time, or before the Commission declares that voting has ended.",
+        lede: "Official results for the presidential runoff on Sunday 1 November 2026. This page does not declare a pair elected. No count appears before 21:00 Bulgaria time, or before the Commission declares that voting has ended.",
         updated: "Last updated: 28 October 2026.",
         reportLabel: "Report an error",
         officeHref: CIK,
@@ -604,8 +614,8 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         keyDates: [
           {
             label: "Date",
-            text: "Decisions No. 405-PVR and No. 415-PVR on the Commission’s list are for a possible new election for president and vice president on 1 November 2026.",
-            links: [{ label: "the Commission’s list", href: CIK }],
+            text: "The Commission’s decisions of 27 October 2026 call the runoff for president and vice president on 1 November 2026.",
+            links: [{ label: "The Commission’s decisions of 27 October 2026", href: BG_DECISION_RUNOFF }],
           },
           {
             label: "Hours",
@@ -656,8 +666,8 @@ export const BG_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           },
           {
             question: "Which candidate pairs are on the new election?",
-            text: "Decisions No. 405-PVR and No. 415-PVR still describe 1 November 2026 as a possible new election and do not print the two lists. A name appears on this page only when it is in the Commission’s official file.",
-            links: [{ label: "Decisions No. 405-PVR and No. 415-PVR", href: CIK }],
+            text: "The Commission’s decisions of 27 October 2026 call the runoff between no. 25 and no. 4. A count appears on this page only when it is in the Commission’s official file.",
+            links: [{ label: "The Commission’s decisions of 27 October 2026", href: BG_DECISION_RUNOFF }],
           },
         ],
         relatedHeading: "Also",

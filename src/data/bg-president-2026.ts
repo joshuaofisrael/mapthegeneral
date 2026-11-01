@@ -59,3 +59,37 @@ export function bgResultsTableHtml(): string {
   return `<table>\n<tbody>\n${rows}\n</tbody>\n</table>`;
 }
 
+
+/** CIK decision of 27 October 2026 declaring the 25 October result and calling the 1 November runoff. */
+export const BG_DECISION_RUNOFF = "https://www.cik.bg/bg/calendar/2026-10-27";
+export const BG_TURNOUT_R1 = "22.98";
+export const BG_TURNOUT_SRC = "https://www.bgnes.bg/izbiratelnata-aktivnost-na-parviq-tur-ot-prezidentskite-izbori-e-22-98";
+
+/**
+ * Runoff figures, hand-copied from results.cik.bg after the CIK declares the end of voting.
+ * Leave `rows` empty until then. Fill counted (e.g. "45.20"), asOf (Sofia time) and source URL.
+ * Rendered only when votingEndedConfirmed("bg-2026-11-01") is true.
+ */
+export const BG_RUNOFF: {
+  asOf: string;
+  counted: string;
+  turnout: string;
+  source: string;
+  rows: { order: number | null; name: string; votes: string; share: string }[];
+} = { asOf: "", counted: "", turnout: "", source: "https://results.cik.bg/", rows: [] };
+
+export function bgRunoffHtml(confirmed: boolean): string {
+  if (!confirmed || BG_RUNOFF.rows.length === 0) {
+    return `<p>No runoff figures are shown yet. After the Commission declares that voting has ended, figures are copied by hand from <a href="${BG_RUNOFF.source}">results.cik.bg</a> with the share of protocols processed and the time of the reading.</p>`;
+  }
+  const rows = BG_RUNOFF.rows.map((r) => {
+    const name = r.order === null ? esc(r.name) : `<a href="${BG_REGISTER}" rel="nofollow noopener" target="_blank">${esc(r.name)}</a>`;
+    return `<tr><td>${r.order ?? "–"}</td><td>${name}</td><td>${esc(r.votes)}</td><td>${esc(r.share)}</td></tr>`;
+  }).join("\n");
+  return `<p>Source: <a href="${esc(BG_RUNOFF.source)}">Central Election Commission</a>, as of ${esc(BG_RUNOFF.asOf)} Bulgaria time, ${esc(BG_RUNOFF.counted)} percent of protocols processed.${BG_RUNOFF.turnout ? ` Turnout ${esc(BG_RUNOFF.turnout)} percent.` : ""} These are not final until the Commission declares the result.</p>
+<table>
+<tbody>
+${rows}
+</tbody>
+</table>`;
+}
