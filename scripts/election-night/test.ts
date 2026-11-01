@@ -72,7 +72,8 @@ if (countsVisible("nz-2026-11-07", Date.parse("2026-11-07T18:59:00+13:00"))) {
 if (countsVisible("bg-2026-11-01", Date.parse("2026-11-01T20:59:00+02:00"))) {
   errors.push("Bulgaria count visible before 21:00");
 }
-if (countsVisible("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
+const bgConfirmed = (JSON.parse(readFileSync(new URL("../../data/release-status.json", import.meta.url), "utf8")) as Record<string, { votingEnded?: boolean }>)["bg-2026-11-01"]?.votingEnded === true;
+if (!bgConfirmed && countsVisible("bg-2026-11-01", Date.parse("2026-11-01T21:00:00+02:00"))) {
   errors.push("Bulgaria count visible on the clock without CEC confirmation");
 }
 if (countsVisible("tw-2026-local", Date.parse("2026-11-28T23:59:00+08:00"))) {
