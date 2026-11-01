@@ -211,6 +211,7 @@ export function searchIndex(): IndexEntry[] {
     { path: "/nz/en/results-night/", lang: "en", title: "How New Zealand results night works", kind: "election", text: "New Zealand election night preliminary results special votes official count 27 November" },
     { path: "/nz/en/preview/", lang: "en", title: "New Zealand election 2026 preview", kind: "election", text: "New Zealand general election 2026 preview MMP parties what to watch" },
     ...(NZ_POLLS_BLACKOUT ? [] : [{ path: "/nz/en/polls/", lang: "en", title: "New Zealand polls 2026: polling average", kind: "election", text: "New Zealand 2026 opinion polls polling average party vote" }]),
+    { path: "/us/en/live/", lang: "en", title: "US midterm election results live 2026", kind: "election", text: "US midterm election results live 2026 House Senate governor official state results" },
     { path: "/il/en/results/", lang: "en", title: "Israel election results 2026", kind: "election", text: "Israel Knesset election results 2026 live" },
   ];
   return rows.filter((row) => {
