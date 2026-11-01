@@ -59767,6 +59767,9 @@
 - [New Zealand election 2026 preview](https://mapthegeneral.com/nz/en/preview/)
 - [New Zealand polls 2026: polling average](https://mapthegeneral.com/nz/en/polls/)
 - [Israel election results 2026](https://mapthegeneral.com/il/en/results/)
+- [United States](https://mapthegeneral.com/us/)
+- [United States](https://mapthegeneral.com/us/en/)
+- [US midterms 2026 live state results](https://mapthegeneral.com/us/en/live/)
 
 Spain: 19 autonomous communities and cities, 50 provinces, 8130 municipalities with a 2025 Total in INE table 29005. Ceuta and Melilla are the city pages. 6 codes with an empty 2025 Total have no page.
 
@@ -59807,5 +59810,7 @@ Serbia (https://mapthegeneral.com/rs/): National hub. Preliminary RIK results of
 Sweden (https://mapthegeneral.com/se/): National hub in English. Valmyndigheten’s page published 16 October 2026 says the next Riksdag, regional and municipal elections are on Sunday 8 September 2030. No municipality pages, no candidate names and no 2026 party figures.
 
 Taiwan (https://mapthegeneral.com/tw/): National hub. Local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. No municipality pages.
+
+United States (https://mapthegeneral.com/us/): National hub in English. One page: a live, state-by-state results board for the 2026 midterm elections on Tuesday 3 November 2026, linking each state to its own official election-office results site. The full midterm guide is the sibling site, Map the Midterms.
 
 Sitemap index: https://mapthegeneral.com/sitemap.xml

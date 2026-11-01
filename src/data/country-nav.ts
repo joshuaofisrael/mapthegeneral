@@ -78,6 +78,7 @@ export const NATIVE_COUNTRY_NAMES: Record<string, { name: string; lang: string; 
   nl: { name: "Nederland", lang: "nl" },
   fi: { name: "Suomi", lang: "fi" },
   tw: { name: "臺灣", lang: "zh-Hant" },
+  us: { name: "United States", lang: "en" },
 };
 
 /** Alphabetical by native name. Accents share a base letter; Hebrew follows Latin. */

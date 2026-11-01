@@ -125,7 +125,7 @@ export default function HomePage() {
         <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
           Each card opens that country’s guide. Where a card shows a photograph, it is an AI-generated image of a public
           place, and the country page captions it “AI-generated image”. Those images are not placed on municipality
-          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands and Finland have no photograph in this release.
+          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands, Finland and the United States have no photograph in this release.
         </p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           <li
@@ -193,9 +193,16 @@ export default function HomePage() {
       <section className="rounded-xl border border-line bg-paper-card p-5">
         <h2 className="font-serif text-2xl font-semibold">United States midterms</h2>
         <p className="mt-2 text-sm leading-6 text-ink-muted">
-          The 2026 U.S. midterm pages are on the sibling site {SITE.siblingName}.
+          The full 2026 U.S. midterm pages are on the sibling site {SITE.siblingName}. This site carries one live,
+          state-by-state results board for election day, Tuesday 3 November 2026.
         </p>
-        <p className="mt-3">
+        <p className="mt-3 flex flex-wrap gap-4 text-sm">
+          <Link className="font-medium text-navy hover:underline" href="/us/en/live/">
+            Live state results
+          </Link>
+          <Link className="font-medium text-navy hover:underline" href="/us/en/">
+            United States hub
+          </Link>
           <a className="font-medium text-navy underline" href={SITE.siblingUrl}>
             {SITE.siblingUrl}
           </a>

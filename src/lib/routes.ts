@@ -212,6 +212,9 @@ export function searchIndex(): IndexEntry[] {
     { path: "/nz/en/preview/", lang: "en", title: "New Zealand election 2026 preview", kind: "election", text: "New Zealand general election 2026 preview MMP parties what to watch" },
     ...(NZ_POLLS_BLACKOUT ? [] : [{ path: "/nz/en/polls/", lang: "en", title: "New Zealand polls 2026: polling average", kind: "election", text: "New Zealand 2026 opinion polls polling average party vote" }]),
     { path: "/il/en/results/", lang: "en", title: "Israel election results 2026", kind: "election", text: "Israel Knesset election results 2026 live" },
+    { path: "/us/", lang: "en-only", title: "United States", kind: "country", text: "United States US midterms 2026 live results" },
+    { path: "/us/en/", lang: "en", title: "United States", kind: "country", text: "United States 2026 midterm elections 3 November live results state" },
+    { path: "/us/en/live/", lang: "en", title: "US midterms 2026 live state results", kind: "election", text: "United States midterms 2026 live results state by state official sources 3 November" },
   ];
   return rows.filter((row) => {
     if (seen.has(row.path)) return false;

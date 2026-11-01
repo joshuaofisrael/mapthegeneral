@@ -633,6 +633,11 @@ export const STANDING_RULES: StandingRule[] = [
     note: "No dated window is open for a count. Voting for the National Assembly ended at 20:00 on 25 October 2026. A presidential election has not been called; this site does not print a presidential polling day until one is published. This site publishes only RIK figures for the Assembly, labelled preliminary until RIK publishes the total report, and no polls or seat projections.",
     citation: { label: "RIK, about National Assembly elections", url: "https://www.rik.parlament.gov.rs/tekst/77/o-izborima-za-narodne-poslanike.php" },
   },
+  {
+    country: "us",
+    note: "No single dated window: each state runs its own election-night reporting law. This site publishes no national exit poll, no seat projection, and calls no race of its own; the /us/en/live/ page reads one aggregated file of links to each state's own official election-office results service and shows each state's own feed status, nothing more. Election day for the 2026 midterms is Tuesday 3 November 2026; several states keep counting and certifying for days or weeks afterward, and this site waits on each state's own figures rather than estimating a result.",
+    citation: { label: "USA.gov, find your state or local election office", url: "https://www.usa.gov/election-office" },
+  },
 ];
 
 /** Rules that are in force at `now` for a given country path segment. */
