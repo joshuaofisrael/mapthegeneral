@@ -62,6 +62,8 @@ export function bgResultsTableHtml(): string {
 
 /** CIK decision of 27 October 2026 declaring the 25 October result and calling the 1 November runoff. */
 export const BG_DECISION_RUNOFF = "https://www.cik.bg/bg/calendar/2026-10-27";
+/** CIK Decision 437-PVR, 1 November 2026: end of election day for the runoff. */
+export const BG_DECISION_END = "https://www.cik.bg/bg/decisions";
 export const BG_TURNOUT_R1 = "22.98";
 export const BG_TURNOUT_SRC = "https://www.bgnes.bg/izbiratelnata-aktivnost-na-parviq-tur-ot-prezidentskite-izbori-e-22-98";
 
@@ -79,6 +81,9 @@ export const BG_RUNOFF: {
 } = { asOf: "", counted: "", turnout: "", source: "https://results.cik.bg/", rows: [] };
 
 export function bgRunoffHtml(confirmed: boolean): string {
+  if (confirmed && BG_RUNOFF.rows.length === 0) {
+    return `<p>The Commission declared the end of election day for the 1 November runoff in <a href="${BG_DECISION_END}">Decision No. 437-PVR of 1 November 2026</a>. The count is under way. Partial figures will be copied by hand from <a href="${BG_RUNOFF.source}">results.cik.bg</a> once the Commission publishes them, with the share of protocols processed and the time of the reading.</p>`;
+  }
   if (!confirmed || BG_RUNOFF.rows.length === 0) {
     return `<p>No runoff figures are shown yet. After the Commission declares that voting has ended, figures are copied by hand from <a href="${BG_RUNOFF.source}">results.cik.bg</a> with the share of protocols processed and the time of the reading.</p>`;
   }
