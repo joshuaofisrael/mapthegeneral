@@ -1,0 +1,16 @@
+{
+  "code": "us",
+  "name": "United States",
+  "href": "/us/",
+  "summary": "National hub in English. One page: a live, state-by-state results board for the 2026 midterm elections on Tuesday 3 November 2026, linking each state to its own official election-office results site. The full midterm guide is the sibling site, Map the Midterms.",
+  "links": [
+    {
+      "href": "/us/en/",
+      "label": "English"
+    },
+    {
+      "href": "/us/en/live/",
+      "label": "Live state results, 3 November 2026"
+    }
+  ]
+}
