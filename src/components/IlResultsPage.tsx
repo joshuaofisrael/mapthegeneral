@@ -136,6 +136,31 @@ const RELATED: { href: string; he: string; en: string }[] = [
   { href: "/", he: "כל הבחירות בעולם", en: "All elections worldwide" },
 ];
 
+const NEXT: Record<IlLang, { title: string; note: string; items: [string, string][] }> = {
+  en: {
+    title: "Next elections on Map the General",
+    note: "Polling dates come from each election authority, and each guide cites its official sources.",
+    items: [
+      ["/bg/en/elections/president-2026/", "Bulgaria presidential election, 1 November 2026"],
+      ["https://mapthemidterms.com/", "US midterm elections, 3 November 2026 (Map the Midterms)"],
+      ["/nz/en/elections/general-election/", "New Zealand general election, 7 November 2026"],
+      ["/pl/en/elections/senat-20-2026/", "Poland Senate by-election, Lubusz constituency 20, 22 November 2026"],
+      ["/au/en/elections/victoria-2026/", "Victorian state election, 28 November 2026"],
+    ],
+  },
+  he: {
+    title: "הבחירות הבאות ב-Map the General",
+    note: "מועדי ההצבעה לקוחים מרשות הבחירות של כל מדינה, וכל מדריך מצטט את מקורותיו הרשמיים. המדריכים כתובים באנגלית.",
+    items: [
+      ["/bg/en/elections/president-2026/", "הבחירות לנשיאות בבולגריה, 1 בנובמבר 2026"],
+      ["https://mapthemidterms.com/", "בחירות האמצע בארצות הברית, 3 בנובמבר 2026 (Map the Midterms)"],
+      ["/nz/en/elections/general-election/", "הבחירות הכלליות בניו זילנד, 7 בנובמבר 2026"],
+      ["/pl/en/elections/senat-20-2026/", "בחירות משנה לסנאט בפולין, מחוז בחירה 20 (לובוש), 22 בנובמבר 2026"],
+      ["/au/en/elections/victoria-2026/", "הבחירות במדינת ויקטוריה שבאוסטרליה, 28 בנובמבר 2026"],
+    ],
+  },
+};
+
 export function IlResultsPage({ lang }: { lang: IlLang }) {
   const c = IL_COPY[lang];
   const l = L[lang];
@@ -342,19 +367,19 @@ export function IlResultsPage({ lang }: { lang: IlLang }) {
         </div>
       </section>
 
-      {lang === "en" ? (
-        <section aria-labelledby="next" className="mb-10">
-          <h2 id="next" className="mb-3 text-2xl font-bold text-ink">Next elections on Map the General</h2>
-          <p className="mb-3 text-sm text-ink-muted">Polling dates come from each election authority, and each guide cites its official sources.</p>
-          <ul className="list-disc space-y-1 ps-5 text-base text-ink">
-            <li><Link className="underline" href="/bg/en/elections/president-2026/">Bulgaria presidential election, 1 November 2026</Link></li>
-            <li><a className="underline" href="https://mapthemidterms.com/">US midterm elections, 3 November 2026 (Map the Midterms)</a></li>
-            <li><Link className="underline" href="/nz/en/elections/general-election/">New Zealand general election, 7 November 2026</Link></li>
-            <li><Link className="underline" href="/pl/en/elections/senat-20-2026/">Poland Senate by-election, Lubusz constituency 20, 22 November 2026</Link></li>
-            <li><Link className="underline" href="/au/en/elections/victoria-2026/">Victorian state election, 28 November 2026</Link></li>
-          </ul>
-        </section>
-      ) : null}
+      <section aria-labelledby="next" className="mb-10">
+        <h2 id="next" className="mb-3 text-2xl font-bold text-ink">{NEXT[lang].title}</h2>
+        <p className="mb-3 text-sm text-ink-muted">{NEXT[lang].note}</p>
+        <ul className="list-disc space-y-1 ps-5 text-base text-ink">
+          {NEXT[lang].items.map(([href, label]) =>
+            href.startsWith("http") ? (
+              <li key={href}><a className="underline" href={href} hrefLang={lang === "he" ? "en" : undefined}>{label}</a></li>
+            ) : (
+              <li key={href}><Link className="underline" href={href} hrefLang={lang === "he" ? "en" : undefined}>{label}</Link></li>
+            ),
+          )}
+        </ul>
+      </section>
 
       <section aria-labelledby="faq" className="mb-10">
         <h2 id="faq" className="mb-3 text-2xl font-bold text-ink">{l.faq}</h2>
