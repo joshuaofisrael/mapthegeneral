@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "election": "ee-2027-03-07",
+ "trackerOpensAt": "2027-03-07T20:15:00+02:00",
+ "stage": "pre",
+ "fetchedAt": null,
+ "sourceUpdated": null,
+ "source": "https://www.valimised.ee/",
+ "officialStatus": "none",
+ "results": []
+}

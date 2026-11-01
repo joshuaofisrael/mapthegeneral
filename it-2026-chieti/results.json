@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "election": "it-2026-chieti",
+ "trackerOpensAt": "2026-11-16T15:00:00+01:00",
+ "stage": "pre",
+ "fetchedAt": null,
+ "sourceUpdated": null,
+ "source": "https://elezioni.interno.gov.it/",
+ "officialStatus": "none",
+ "results": []
+}

@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "election": "bg-2026-11-01",
+ "trackerOpensAt": "2026-11-01T21:00:00+02:00",
+ "stage": "awaiting",
+ "fetchedAt": "2026-11-01T22:36:20.931Z",
+ "sourceUpdated": null,
+ "source": "https://results.cik.bg/",
+ "officialStatus": "none",
+ "results": []
+}

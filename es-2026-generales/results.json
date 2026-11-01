@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "election": "es-2026-generales",
+ "trackerOpensAt": "2026-11-29T21:00:00+01:00",
+ "stage": "pre",
+ "fetchedAt": null,
+ "sourceUpdated": null,
+ "source": "https://www.infoelectoral.interior.gob.es/",
+ "officialStatus": "none",
+ "results": []
+}

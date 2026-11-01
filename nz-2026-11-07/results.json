@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "election": "nz-2026-11-07",
+ "trackerOpensAt": "2026-11-07T19:00:00+13:00",
+ "stage": "pre",
+ "fetchedAt": null,
+ "sourceUpdated": null,
+ "source": "https://electionresults.govt.nz/",
+ "officialStatus": "none",
+ "results": []
+}
