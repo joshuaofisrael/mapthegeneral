@@ -6,7 +6,6 @@
  * No poll, projection, or result is stored here.
  */
 
-import { BG_ELECTION_SEO_PROFILES } from "./election-seo-bg";
 import { NZ_ELECTION_SEO_PROFILES } from "./election-seo-nz";
 import { EXTRA_ELECTION_SEO_PROFILES } from "./election-seo-extra";
 import { EE_ELECTION_SEO_PROFILES } from "./election-seo-ee";
@@ -1423,7 +1422,6 @@ export const ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
     ],
   },
   ...EXTRA_ELECTION_SEO_PROFILES,
-  ...BG_ELECTION_SEO_PROFILES,
   ...NZ_ELECTION_SEO_PROFILES,
   ...TW_ELECTION_SEO_PROFILES,
   ...EE_ELECTION_SEO_PROFILES,

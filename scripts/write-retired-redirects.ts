@@ -5,7 +5,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { RETIRED_EL_SALVADOR_PATHS } from "../src/data/retired-el-salvador";
+import { RETIRED_BULGARIA_PATHS, RETIRED_EL_SALVADOR_PATHS } from "../src/data/retired-el-salvador";
 import { absoluteUrl } from "../src/data/site";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 
@@ -37,7 +37,7 @@ if (!existsSync(outDir)) {
 }
 
 const html = redirectHtml("/");
-for (const route of RETIRED_EL_SALVADOR_PATHS) {
+for (const route of [...RETIRED_EL_SALVADOR_PATHS, ...RETIRED_BULGARIA_PATHS]) {
   const htmlPath = path.join(outDir, route, "index.html");
   if (existsSync(htmlPath)) {
     const existing = readFileSync(htmlPath, "utf8");
@@ -49,7 +49,7 @@ for (const route of RETIRED_EL_SALVADOR_PATHS) {
   writeFileSync(htmlPath, html);
   if (!html.includes('content="noindex, follow"')) throw new Error(`${route} is not noindex`);
   if (!html.includes('http-equiv="refresh"')) throw new Error(`${route} has no refresh`);
-  if (html.includes("El Salvador") || html.includes("/sv/")) throw new Error(`${route} still names the retired country`);
+  if (html.includes("El Salvador") || html.includes("/sv/") || html.includes("/bg/")) throw new Error(`${route} still names the retired country`);
 }
 
 // Legal-page aliases people type or link to. They refresh to the real pages.
@@ -71,6 +71,7 @@ if (existsSync(sitemapDir)) {
   for (const name of readdirSync(sitemapDir)) {
     if (!name.endsWith(".xml")) continue;
     const xml = readFileSync(path.join(sitemapDir, name), "utf8");
+    if (xml.includes("https://mapthegeneral.com/bg/")) throw new Error(`${name} still lists a Bulgaria URL`);
     if (xml.includes("https://mapthegeneral.com/sv/")) {
       throw new Error(`${name} still lists an El Salvador URL`);
     }

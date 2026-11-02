@@ -9,7 +9,6 @@ import { FEEDS, feedById, hostAllowed } from "./feeds.mjs";
 import { publishFile } from "../publish-gate.mjs";
 
 export const OPENS = {
-  "bg-2026-11-01": "2026-11-01T21:00:00+02:00",
   "nz-2026-11-07": "2026-11-07T19:00:00+13:00",
   "ie-2026-seanad": "2026-11-06T11:00:00+00:00",
   "it-2026-chieti": "2026-11-16T15:00:00+01:00",
@@ -110,7 +109,7 @@ async function readOfficial(feed, now) {
   return acceptOfficial(feed.id, await res.json());
 }
 
-const CONFIRM = new Set(["bg-2026-11-01", "nz-2026-11-07", "it-2026-chieti"]);
+const CONFIRM = new Set(["nz-2026-11-07", "it-2026-chieti"]);
 
 function publicationBlocked(id) {
   let all;

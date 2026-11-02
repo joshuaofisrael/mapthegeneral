@@ -390,7 +390,7 @@ export function selfCheckSponsorship(): string[] {
     if (inner.includes("<a")) problems.push(`${lang}: nested anchor`);
   }
 
-  const surfaces = ["/", "/es/", "/es/en/", "/es/es/", "/au/en/", "/ca/fr/", "/il/he/", "/bg/bg/", "/bg/en/"];
+  const surfaces = ["/", "/es/", "/es/en/", "/es/es/", "/au/en/", "/ca/fr/", "/il/he/"];
   for (const route of surfaces) {
     if (!isSponsorSurface(route)) problems.push(`${route} should show the slot`);
   }

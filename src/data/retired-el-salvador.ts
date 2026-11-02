@@ -10,3 +10,14 @@ export const RETIRED_EL_SALVADOR_PATHS = [
   "/sv/es/elections/generales-2027/",
   "/sv/en/elections/general-2027/",
 ] as const;
+
+/** Bulgaria pages taken down on 2 November 2026. They refresh to the homepage. */
+export const RETIRED_BULGARIA_PATHS = [
+  "/bg/",
+  "/bg/bg/",
+  "/bg/en/",
+  "/bg/bg/elections/prezident-2026/",
+  "/bg/en/elections/president-2026/",
+  "/bg/bg/results/",
+  "/bg/en/results/",
+] as const;
