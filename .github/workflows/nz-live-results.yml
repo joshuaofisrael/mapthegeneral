@@ -1,0 +1,80 @@
+name: NZ live results (Electoral Commission)
+
+# Reads ONLY the Electoral Commission's results source for the New Zealand
+# general election, reusing the existing nz-2026-11-07 feed defined in
+# scripts/election-night/feeds.mjs (the same single-feed fetch that
+# election-night.yml already runs every 10 minutes across many contests).
+# This workflow checks New Zealand alone, every 5 minutes, only in its
+# 06:00-13:00 London window on election day (polls close at 19:00 NZDT,
+# which is 06:00 UTC/London). Nothing is fetched before trackerOpensAt or
+# before data/release-status.json confirms nz-2026-11-07.votingEnded.
+# At most every 30 minutes, a changed count rebuilds Pages and pings
+# IndexNow for the NZ results page only.
+
+on:
+  schedule:
+    - cron: "*/5 6-12 7 11 *"
+    - cron: "0 13 7 11 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: nz-live-results
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: site
+      - name: Check out data branch
+        run: |
+          set -e
+          if git ls-remote --exit-code --heads "https://github.com/${GITHUB_REPOSITORY}.git" il-live-data >/dev/null; then
+            git clone --depth 1 --branch il-live-data "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" data
+          else
+            mkdir data && cd data && git init -q -b il-live-data
+            git remote add origin "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git"
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch official count
+        # election-night/fetch.mjs runs the legal-hold gate before replacing
+        # results.json for the single feed nz-2026-11-07. A refusal leaves the
+        # last published file in place and does not retry past the gate.
+        id: fetch
+        working-directory: site
+        env:
+          NIGHT_RESULTS_URL: ${{ vars.NZ_RESULTS_URL }}
+        run: node scripts/election-night/fetch.mjs nz-2026-11-07 ../data
+      - name: Commit data
+        if: steps.fetch.outputs.changed == 'true'
+        working-directory: data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "NZ count: stage=${{ steps.fetch.outputs.stage }}"
+          git push -q origin il-live-data
+      - name: Throttled Pages rebuild (IndexNow after deploy)
+        if: steps.fetch.outputs.changed == 'true' && steps.fetch.outputs.stage != 'pre'
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          last=$(gh run list --workflow pages.yml --event workflow_dispatch --limit 1 --json createdAt --jq '.[0].createdAt // ""')
+          age=999999
+          if [ -n "$last" ]; then age=$(( $(date +%s) - $(date -d "$last" +%s) )); fi
+          if [ "$age" -lt 1800 ]; then
+            echo "last rebuild ${age}s ago; skipping"; exit 0
+          fi
+          # pages.yml pings IndexNow for the NZ results page only, after deploy.
+          gh workflow run pages.yml --ref main -f indexnow_scope=nz
