@@ -1,0 +1,22 @@
+diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
+index e3ca73054..aa81c4665 100644
+--- a/.github/workflows/pages.yml
++++ b/.github/workflows/pages.yml
+@@ -6,7 +6,7 @@ on:
+   workflow_dispatch:
+     inputs:
+       indexnow_scope:
+-        description: "all = every URL; il = only the Israel results pages (live-results rebuilds)"
++        description: "all = every URL; il = only the Israel results pages; us = only the US live results page (live-results rebuilds)"
+         default: all
+ 
+ permissions:
+@@ -76,6 +76,8 @@ jobs:
+           urls = json.loads(Path("public/search/indexnow-urls.json").read_text())
+           if os.environ.get("INDEXNOW_SCOPE") == "il":
+             urls = ["https://mapthegeneral.com/il/he/results/", "https://mapthegeneral.com/il/en/results/"]
++          if os.environ.get("INDEXNOW_SCOPE") == "us":
++            urls = ["https://mapthegeneral.com/us/en/live/"]
+           # New Zealand freeze: 00:00–19:00 NZDT on 7 Nov 2026 (11:00Z 6 Nov–06:00Z 7 Nov).
+           from datetime import datetime, timezone
+           freeze_start = datetime.fromisoformat("2026-11-06T11:00:00+00:00")
