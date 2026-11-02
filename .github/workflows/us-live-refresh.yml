@@ -1,0 +1,38 @@
+name: US live page refresh
+
+# Same pattern as Israel (il-live-results.yml): when the official-file tracker on
+# mapthemidterms.com has written new figures, rebuild Pages so /us/en/live/ carries
+# a fresh dateModified, then pages.yml pings IndexNow for that one URL.
+# At most one rebuild every 30 minutes; nothing happens if results.json is unchanged.
+
+on:
+  schedule:
+    - cron: "*/30 23 3 11 *"
+    - cron: "*/30 0-14 4 11 *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: us-live-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Rebuild if the tracker wrote new figures in the last 35 minutes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -e
+          gen=$(curl -fsS https://mapthemidterms.com/live/results.json | jq -r '.generatedAt // ""')
+          echo "results.json generatedAt=$gen"
+          [ -n "$gen" ] || exit 0
+          age=$(( $(date +%s) - $(date -d "$gen" +%s) ))
+          if [ "$age" -gt 2100 ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then echo "no new figures"; exit 0; fi
+          gh workflow run pages.yml --ref main -f indexnow_scope=us
