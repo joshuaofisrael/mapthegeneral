@@ -87,15 +87,6 @@ export default function HomePage() {
             <li><a className="text-navy underline" href="/nz/en/parties/">Parties</a></li>
           </ul>
         </aside>
-        <aside className="mt-4 rounded-lg border border-navy/20 p-4" aria-label="Featured election">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Featured · 1 November 2026</p>
-          <h2 className="mt-1 font-serif text-xl font-semibold">Bulgaria presidential runoff</h2>
-          <p className="mt-1 text-sm text-ink-muted">The two leading pairs, how the runoff works, turnout and official results from the Central Election Commission.</p>
-          <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-            <li><a className="text-navy underline" href="/bg/en/elections/president-2026/">Runoff guide</a></li>
-            <li><a className="text-navy underline" href="/bg/en/results/">Results</a></li>
-          </ul>
-        </aside>
         <EditorialPreview path="/" />
       </section>
 
@@ -143,7 +134,7 @@ export default function HomePage() {
         <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
           Each card opens that country’s guide. Where a card shows a photograph, it is an AI-generated image of a public
           place, and the country page captions it “AI-generated image”. Those images are not placed on municipality
-          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, Bulgaria, New Zealand, Taiwan, Estonia, the Netherlands and Finland have no photograph in this release.
+          pages. Ireland, Norway, Sweden, Brazil, Serbia, Israel, New Zealand, Taiwan, Estonia, the Netherlands and Finland have no photograph in this release.
         </p>
         <ul className="mt-4 grid gap-4 md:grid-cols-2">
           <li

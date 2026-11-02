@@ -7,7 +7,6 @@ import { BATCH3A } from "./batch3a";
 import { BATCH3B } from "./batch3b";
 import { BATCH3C } from "./batch3c";
 import { BATCH3D } from "./batch3d";
-import { BATCH4 } from "./batch4";
 import { BATCH5 } from "./batch5";
 import { BATCH_EE } from "./batch-ee";
 import { BATCH_FI } from "./batch-fi";
@@ -25,7 +24,6 @@ export const EDITORIAL_PREVIEWS: EditorialPreview[] = [
   ...BATCH3B,
   ...BATCH3C,
   ...BATCH3D,
-  ...BATCH4,
   ...BATCH5,
   ...BATCH_TW,
   ...BATCH_EE,

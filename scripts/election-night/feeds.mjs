@@ -7,12 +7,6 @@ export const RAW_REPO = "https://raw.githubusercontent.com/joshuaofisrael/mapthe
 
 export const FEEDS = [
   {
-    id: "bg-2026-11-01",
-    officialUrl: "https://results.cik.bg/",
-    hosts: ["results.cik.bg"],
-    preserveSnapshot: true,
-  },
-  {
     id: "nz-2026-11-07",
     officialUrl: "https://electionresults.govt.nz/",
     hosts: ["electionresults.govt.nz"],
