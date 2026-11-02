@@ -81,7 +81,7 @@ export default function HomePage() {
           </p>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
             <li><a className="text-navy underline" href="/nz/en/">New Zealand hub</a></li>
-            <li><a className="text-navy underline" href="/nz/en/results/">Results</a></li>
+            <li><a className="text-navy underline" href="/nz/en/results/">NZ election results</a></li>
             <li><a className="text-navy underline" href="/nz/en/results-night/">How results night works</a></li>
             <li><a className="text-navy underline" href="/nz/en/electorates/">Electorates</a></li>
             <li><a className="text-navy underline" href="/nz/en/parties/">Parties</a></li>

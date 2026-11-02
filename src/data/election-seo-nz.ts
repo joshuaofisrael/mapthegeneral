@@ -85,7 +85,7 @@ const BODY = `<h2>What is being elected</h2>
 <h2>Earlier official results</h2>
 <p>The results index, read on 27 October 2026, lists general elections on 14 October 2023, 17 October 2020, 23 September 2017, 20 September 2014, 26 November 2011 and 8 November 2008. On 28 October 2026 the results host returned 403, so those totals are not copied here. <a href="${RESULTS}">electionresults.govt.nz</a>. The key-dates release says official results of this election are declared on 27 November 2026.</p>
 <h2>Election night</h2>
-<p>No count is shown here before 7:00 pm New Zealand daylight time on 7 November 2026. The plan says preliminary results are released progressively from 7pm that day on electionresults.govt.nz. After that hour this page reads only a same-origin file. If the file is missing, the link is that service. This page has no forecast.</p>
+<p>No count is shown here before 7:00 pm New Zealand daylight time on 7 November 2026. The plan says preliminary results are released progressively from 7pm that day on electionresults.govt.nz. After that hour this page reads only a same-origin file. If the file is missing, the link is that service. This page has no forecast. For who won the NZ election, see the <a href="/nz/en/results/">New Zealand election results page</a> once the count begins.</p>
 ${NIGHT}`;
 
 export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
@@ -112,11 +112,11 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         lang: "en",
         htmlLang: "en",
         path: PATH,
-        title: "New Zealand general election, 7 November 2026 — Te Pōtitanga ā-Motu",
+        title: "New Zealand election 2026: general election date and how to vote NZ",
         description:
-          "Te Pōtitanga ā-Motu, the New Zealand general election, is on Saturday 7 November 2026. Voting places 9am to 7pm. No count before 7:00 pm. Unofficial information.",
+          "New Zealand election 2026: the general election date is Saturday 7 November. How to vote NZ and voting hours, 9am to 7pm, from the Electoral Commission. No count before 7:00 pm. Unofficial information.",
         ogDescription:
-          "New Zealand general election on Saturday 7 November 2026. Electoral Commission. No count before 7:00 pm. Unofficial information.",
+          "New Zealand election 2026: general election date Saturday 7 November, and how to vote NZ, from the Electoral Commission. No count before 7:00 pm.",
         ogLocale: "en_NZ",
         alternates: [
           { hreflang: "en", path: PATH },
@@ -129,8 +129,8 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
           { name: "7 November 2026", path: PATH },
         ],
         eyebrow: "7 November 2026",
-        h1: "General election — Te Pōtitanga ā-Motu 2026",
-        lede: "Saturday 7 November 2026. The Election Service Plan says voting places are open from 9am to 7pm. The Candidate Handbook’s title is Te Pōtitanga ā-Motu 2026.",
+        h1: "New Zealand election 2026: general election date and how to vote NZ",
+        lede: "The New Zealand general election date is Saturday 7 November 2026. The Election Service Plan says voting places are open from 9am to 7pm. The Candidate Handbook’s title is Te Pōtitanga ā-Motu 2026.",
         updated: "Last updated: 28 October 2026.",
         reportLabel: "Report an error",
         officeHref: "https://elections.nz/",
@@ -186,12 +186,12 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         faqHeading: "Frequently asked questions",
         faqs: [
           {
-            question: "When is the general election?",
+            question: "What is the New Zealand general election date?",
             text: "The Election Service Plan for 2026 says Saturday 7 November 2026.",
             links: [{ label: "Election Service Plan for 2026", href: PLAN }],
           },
           {
-            question: "What are the voting hours?",
+            question: "How to vote NZ: what are the voting hours?",
             text: "The election-day part of the plan says 9am to 7pm on Saturday 7 November. Advance hours are not one national set.",
             links: [{ label: "The election-day part of the plan", href: PLAN }],
           },
@@ -213,6 +213,11 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
             question: "When does the vote count appear?",
             text: "Not before 7:00 pm New Zealand daylight time on 7 November 2026, and only from the results service the plan names.",
             links: [{ label: "the results service the plan names", href: RESULTS }],
+          },
+          {
+            question: "What is the New Zealand election 2026?",
+            text: "Te Pōtitanga ā-Motu, the New Zealand general election 2026, is a parliamentary general election under the Electoral Act 1993 for the House of Representatives, held on Saturday 7 November 2026.",
+            links: [{ label: "the Electoral Act 1993", href: ACT }],
           },
         ],
         relatedHeading: "Also",
