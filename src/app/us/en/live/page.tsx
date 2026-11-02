@@ -11,7 +11,7 @@ const PATH = "/us/en/live/";
 export const metadata = pageMetadata({
   title: "2026 midterm election results live: House, Senate and governor results tonight",
   description:
-    "Midterms live results, 3 Nov 2026: House, Senate and governor results from official state files as polls close, plus poll closing times.",
+    "2026 midterm results live: House, Senate and governor race results from official state files as polls close on 3 Nov, plus poll closing times.",
   path: PATH,
 });
 
@@ -25,6 +25,10 @@ const FAQ: [string, string][] = [
   ["What is on the ballot in the 2026 midterms?", "All 435 seats in the US House of Representatives, 35 of the 100 Senate seats (33 regular elections and 2 special elections) and 36 governorships, plus many state and local offices and ballot measures (Ballotpedia)."],
   ["How many seats are needed to control the House and Senate?", "A party needs 218 of 435 seats for a House majority. In the Senate, 51 of 100 seats gives a majority; in a 50-50 split the vice president casts tie-breaking votes."],
   ["Does Map the General call races?", "No. This page copies figures from official state election-office files. A winner is labelled only when the official file marks one. News organisations' projections are not official results."],
+  ["Who won the House in 2026?", "Control of the House is decided once one party wins 218 of the 435 seats. This page shows House results live from official state files as they are posted; it does not project winners, and close races may not be settled on election night."],
+  ["Who won the Senate in 2026?", "Control of the Senate depends on the 35 seats up this year plus the 65 not on the ballot; 51 seats is a majority. Senate results live from each state appear in the results below once that state's polls close. Map the General does not call races."],
+  ["Where can I find governor race results 2026?", "Governor race results for the 36 states electing a governor appear here from official state files after polls close, with a link to each state's official results page in the table below."],
+  ["Is there a midterm elections live map?", "This page lists results state by state rather than on a map, so each figure links back to its official source. The table below shows every state's poll closing time and official results page."],
   ["How often is this page updated?", "A scheduled job reads the official state files every 5 minutes on election night, and this page checks for new figures about once a minute."],
 ];
 
@@ -80,7 +84,7 @@ export default function Page() {
       <PageHeader
         eyebrow="Live results · United States"
         title="2026 midterm election results live"
-        lede="Unofficial figures copied from state election-office files after polls close. Map the General does not call races. A winner is labelled only when the official file marks that candidate."
+        lede="Midterm election results tonight, state by state: unofficial figures copied from state election-office files after polls close. Map the General does not call races. A winner is labelled only when the official file marks that candidate."
       />
       <p className="text-sm text-ink-muted">{EDITORIAL_BYLINE} · Updated automatically from official state files.</p>
 
@@ -96,7 +100,7 @@ export default function Page() {
       </section>
 
       <section className="rounded-xl border border-line bg-paper-card p-5 text-sm leading-6">
-        <h2 className="font-serif text-xl font-semibold">What to watch tonight: House, Senate and governor results 2026</h2>
+        <h2 className="font-serif text-xl font-semibold">What to watch tonight: House results live, Senate results live and governor race results 2026</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5">
           <li><strong>House:</strong> all 435 seats are up; 218 is a majority (<a className="text-navy underline" href="https://ballotpedia.org/Election_results,_2026:_U.S._Congress" rel="noopener noreferrer">Ballotpedia</a>).</li>
           <li><strong>Senate:</strong> 35 seats are up, 33 regular and 2 special elections; 51 is a majority (<a className="text-navy underline" href="https://ballotpedia.org/Election_results,_2026:_U.S._Senate" rel="noopener noreferrer">Ballotpedia</a>).</li>
@@ -109,7 +113,7 @@ export default function Page() {
       <LiveResults sources={rows} />
 
       <section className="rounded-xl border border-line bg-paper-card p-5 text-sm leading-6">
-        <h2 className="font-serif text-xl font-semibold">Midterms live results: frequently asked questions</h2>
+        <h2 className="font-serif text-xl font-semibold">2026 midterm results: who won the House and who won the Senate? Frequently asked questions</h2>
         <dl className="mt-3 space-y-3">
           {FAQ.map(([q, a]) => (
             <div key={q}>
@@ -121,7 +125,7 @@ export default function Page() {
       </section>
 
       <section className="rounded-xl border border-line bg-paper-card p-5 text-sm leading-6">
-        <h2 className="font-serif text-xl font-semibold">Official sources</h2>
+        <h2 className="font-serif text-xl font-semibold">US election results 2026: official sources by state</h2>
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full text-left text-sm">
             <caption className="sr-only">State election-night results sources</caption>
