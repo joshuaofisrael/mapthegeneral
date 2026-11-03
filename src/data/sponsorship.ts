@@ -245,7 +245,11 @@ function escapeHtml(value: string): string {
 }
 
 /** Homepage, a country chooser (`/es/`), or a national language hub (`/es/en/`). */
+/** Off: the open "Your ad here" offer is retired sitewide. */
+export const SPONSOR_SLOT_ENABLED = false;
+
 export function isSponsorSurface(route: string): boolean {
+  if (!SPONSOR_SLOT_ENABLED) return false;
   if (isEmbedRoute(route)) return false;
   const parts = route.split("/").filter(Boolean);
   if (parts.length === 0) return true;
