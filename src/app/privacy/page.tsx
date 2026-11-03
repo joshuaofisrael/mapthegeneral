@@ -36,12 +36,23 @@ export default function PrivacyPage() {
           This policy explains what information is involved when you visit {SITE.name} ({SITE.url}).
           The site is operated by {SITE.legalName}, a {SITE.entityType}. Business address:{" "}
           {SITE.location}. {SITE.name} is a static informational website. It has no user accounts, no
-          comments, no email sign-up, and no payments. Its contact form is processed by FormSubmit.
+          comments, and no payments. It offers an optional email sign-up for election results, described under Election results email updates. Its contact form is processed by FormSubmit.
           It may show advertisements from Google AdSense. Google and its partners may use cookies
           for those ads, as described under Advertising. Visit counts use cookieless Cloudflare Web
           Analytics. Google Analytics 4 loads only after you accept analytics cookies, as described
           under Google Analytics.
         </p>
+        <h2 id="election-updates">Election results email updates</h2>
+        <p>
+          Some pages offer an optional “Get final results for your state by email” form. If you submit
+          it, we store your email address, the state you choose (optional), which of our sites you
+          signed up on, the time, and a record of your consent. We use it only to email election
+          results and updates from {SITE.name} and its sister site Map the Midterms. The list is stored
+          in a Cloudflare D1 database operated by {SITE.legalName}; it is not sold or shared with
+          advertisers. Every email includes a way to unsubscribe, and you can also ask us to delete
+          your address through the <Link href="/contact/">contact form</Link>.
+        </p>
+
         <h2>Who is responsible</h2>
         <p>
           {SITE.brandNote} {SITE.legalName} is the data controller for personal information it
