@@ -22,10 +22,12 @@ export function HouseAd() {
   }, [route]);
   if (isEmbedRoute(route)) return null;
   const lang = languageFromRoute(route);
+  const html = sponsorSlotHtml(route, lang);
+  if (!html) return null;
   return (
     <div
       className="house-ad-slot"
-      dangerouslySetInnerHTML={{ __html: `${sponsorSlotHtml(route, lang)}` }}
+      dangerouslySetInnerHTML={{ __html: html }}
     />
   );
 }
