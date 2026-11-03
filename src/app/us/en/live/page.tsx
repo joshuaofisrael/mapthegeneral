@@ -5,6 +5,7 @@ import { LiveResults, type LiveSource } from "@/components/us/LiveResults";
 import { EDITORIAL_BYLINE } from "@/data/editorial/model";
 import sources from "@/data/us/live-sources.json";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
+import { EmailSignup } from "@/components/EmailSignup";
 
 const PATH = "/us/en/live/";
 
@@ -154,6 +155,7 @@ export default function Page() {
           <a className="text-navy underline" href="https://mapthemidterms.com/">Map the Midterms</a>. Map the General is unofficial and not affiliated with any election office.
         </p>
       </section>
+      <EmailSignup />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { EditorialPreview } from "@/components/EditorialPreview";
 import { HomeElectionNight } from "@/components/HomeElectionNight";
 import Link from "@/components/AnchorLink";
 import { CountryHero } from "@/components/CountryHero";
+import { EmailSignup } from "@/components/EmailSignup";
 import { HomeFaq } from "@/components/HomeFaq";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBox } from "@/components/SearchBox";
@@ -211,6 +212,7 @@ export default function HomePage() {
         </p>
       </section>
 
+      <EmailSignup />
       <HomeFaq />
     </div>
   );
