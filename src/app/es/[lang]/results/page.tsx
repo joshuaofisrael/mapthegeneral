@@ -1,3 +1,4 @@
+import { OddsMeter } from "@/components/OddsMeter";
 import Link from "@/components/AnchorLink";
 import { GapNote } from "@/components/GapNote";
 import { SpainFrame } from "@/components/SpainFrame";
@@ -54,6 +55,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
       officeLabel="Infoelectoral, Ministerio del Interior"
       sources={sourcesById(["infoelectoral-home", "rd-806-2026", "jec-generales-2026"])}
     >
+      <OddsMeter slug="spain-general-election-winner" title={es ? "ganador de las elecciones generales" : "Spain general election winner"} />
       <GapNote
         label={copy.gap}
         text={
