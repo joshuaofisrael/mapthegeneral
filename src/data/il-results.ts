@@ -76,7 +76,7 @@ export const IL_COPY = {
     title: "Israel election results, 27 October 2026",
     h1: "Israel election results 2026: the 26th Knesset",
     description:
-      "Official final results of the 26th Knesset election on 27 October 2026, as approved by the Central Elections Committee on 4 November: seats by list and blocs, with sources.",
+      "Official final results of Israel's 27 October 2026 Knesset election, approved by the Central Elections Committee on 4 November: seats by list and blocs, with sources.",
     kicker: "Knesset election · 27 October 2026",
     intro:
       "The Central Elections Committee approved the official final results on 4 November 2026, shown at the top of this page with a source. Figures are copied by hand from the Committee, and this site does not calculate seats. The TV seat samples in the separate section are from election night and are not the official result.",
