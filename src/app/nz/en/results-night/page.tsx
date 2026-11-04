@@ -1,3 +1,4 @@
+import { OddsMeter } from "@/components/OddsMeter";
 import { NzArticle } from "@/components/NzArticle";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -27,6 +28,7 @@ export default function Page() {
         { label: "New Zealand Parliament, election 2026 timeline", href: "https://www3.parliament.nz/en/visit-and-learn/parliament-in-election-year/election-2026-timeline/" },
       ]}
     >
+      <OddsMeter slug="next-prime-minister-of-new-zealand-174" title="next New Zealand prime minister" hideFrom="2026-11-06T10:30:00Z" hideUntil="2026-11-07T06:05:00Z" pausedNote="Odds paused: New Zealand election-day rules. Market odds return after polls close at 7pm NZDT." />
       <h2>When the numbers start</h2>
       <p>
         Voting places are open from 9:00 am to 7:00 pm New Zealand daylight time on election day. Nothing is

@@ -1,3 +1,4 @@
+import { OddsMeter } from "@/components/OddsMeter";
 import Link from "@/components/AnchorLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -94,6 +95,7 @@ export default function NzResultsPage() {
         title="NZ election results live: New Zealand election results, 7 November 2026"
         lede="Awaiting results. This page shows no figures yet. The official source is the Electoral Commission's results service, electionresults.govt.nz."
       />
+      <OddsMeter slug="next-prime-minister-of-new-zealand-174" title="next New Zealand prime minister" hideFrom="2026-11-06T10:30:00Z" hideUntil="2026-11-07T06:05:00Z" pausedNote="Odds paused: New Zealand election-day rules. Market odds return after polls close at 7pm NZDT." />
       <div className="prose-legal">
         <p>
           <strong>Unofficial page. Awaiting results.</strong> No vote count, seat number, poll or forecast is shown here.
