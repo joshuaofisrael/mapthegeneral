@@ -1,12 +1,36 @@
 [
   {
+    "time": "2026-11-04T01:20:00Z",
+    "headline": "Democrats hold Senate seats in Georgia, New Jersey, Illinois and three more states, AP projects",
+    "body": "The Associated Press has projected Democratic holds in six more Senate races, according to the Guardian's live results tracker, which carries AP race calls. Jon Ossoff has been projected to win re-election in Georgia, one of the night's closely watched seats, with Cory Booker (New Jersey), Juliana Stratton (Illinois), Ed Markey (Massachusetts), Chris Coons (Delaware) and Jack Reed (Rhode Island) also projected winners. With Virginia called earlier, that makes seven Senate calls, all Democratic holds and no seats changing hands so far. In the House, the tracker shows 38 races called: 25 for Democrats and 13 for Republicans, out of the 218 needed for a majority. These are projections, not official results; counting continues and most of the vote in many states is still to be reported. Neither chamber has been called.",
+    "sources": [
+      {
+        "name": "The Guardian live results (AP race calls)",
+        "url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races"
+      },
+      {
+        "name": "AP: Mark Warner wins re-election in Virginia",
+        "url": "https://apnews.com/article/virginia-senate-07cd2d398f0086aee5e017a5db92eb2c"
+      }
+    ]
+  },
+  {
     "time": "2026-11-04T00:10:00Z",
     "headline": "First race calls: Democrats hold Virginia's Senate seat; early House calls in Kentucky and Florida",
     "body": "With the first polls closed across the East, the first race calls of the night have come in. The Guardian's live results tracker, which shows Associated Press race calls, has Democrats holding the Senate seat in Virginia. In the House, it shows Democrats holding Kentucky's 3rd district and Florida's 10th, and Republicans holding Kentucky's 5th. These are media projections, not official results; state counts continue and certification comes weeks later. Neither chamber has been called. AP says control of the Senate could take days to settle and the House up to about a week, with ranked-choice tabulation possible in Alaska and Maine. Democrats need to flip four Senate seats and three House seats to win control, according to AP.",
     "sources": [
-      { "name": "The Guardian live results (AP race calls)", "url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races" },
-      { "name": "AP live updates", "url": "https://apnews.com/live/midterm-election-2026" },
-      { "name": "AP: when will we know who controls Congress?", "url": "https://apnews.com/article/when-ap-calls-congress-control-9dae62cdd7d776a20a26eab6fbd9b12c" }
+      {
+        "name": "The Guardian live results (AP race calls)",
+        "url": "https://www.theguardian.com/us-news/ng-interactive/2026/nov/03/midterm-elections-full-results-senate-house-governor-races"
+      },
+      {
+        "name": "AP live updates",
+        "url": "https://apnews.com/live/midterm-election-2026"
+      },
+      {
+        "name": "AP: when will we know who controls Congress?",
+        "url": "https://apnews.com/article/when-ap-calls-congress-control-9dae62cdd7d776a20a26eab6fbd9b12c"
+      }
     ]
   }
 ]
