@@ -4,15 +4,22 @@
  * legal blackout window (hideFrom/hideUntil, ISO times) so no odds appear while polls must not be published. */
 import { useEffect, useState } from "react";
 
+function blackoutAt(n: number, from?: string, until?: string) {
+  return !!from && !!until && n >= +new Date(from) && n < +new Date(until);
+}
+
 type Outcome = { name: string; p: number };
 
-export function OddsMeter({ slug, title, hideFrom, hideUntil, max = 4 }: { slug: string; title: string; hideFrom?: string; hideUntil?: string; max?: number }) {
+export function OddsMeter({ slug, title, hideFrom, hideUntil, max = 4, pausedNote }: { slug: string; title: string; hideFrom?: string; hideUntil?: string; max?: number; pausedNote?: string }) {
   const [rows, setRows] = useState<Outcome[] | null>(null);
   const [at, setAt] = useState("");
-  const blackout = () => { const n = Date.now(); return !!hideFrom && !!hideUntil && n >= +new Date(hideFrom) && n < +new Date(hideUntil); };
+  // Build-time check: a page built inside the window starts paused, before any client code runs.
+  const [paused, setPaused] = useState(() => blackoutAt(Date.now(), hideFrom, hideUntil));
+  const blackout = () => blackoutAt(Date.now(), hideFrom, hideUntil);
   useEffect(() => {
     let off = false;
     const load = async () => {
+      setPaused(blackout());
       if (blackout()) { setRows(null); return; }
       try {
         const res = await fetch(`https://gamma-api.polymarket.com/events?slug=${encodeURIComponent(slug)}`);
@@ -30,7 +37,16 @@ export function OddsMeter({ slug, title, hideFrom, hideUntil, max = 4 }: { slug:
     const t = setInterval(load, 5 * 60 * 1000);
     return () => { off = true; clearInterval(t); };
   }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
-  if (!rows || blackout()) return null;
+  if (blackout() || (paused && hideFrom)) {
+    if (!pausedNote) return null;
+    return (
+      <section className="my-8 rounded-xl border border-line bg-paper-card p-5 text-sm" data-odds-meter-paused>
+        <h2 className="font-serif text-xl font-semibold text-ink">Win probability meter: {title}</h2>
+        <p className="mt-1 font-semibold text-ink">{pausedNote}</p>
+      </section>
+    );
+  }
+  if (!rows) return null;
   return (
     <section className="my-8 rounded-xl border border-line bg-paper-card p-5 text-sm" data-odds-meter>
       <h2 className="font-serif text-xl font-semibold text-ink">Win probability meter: {title}</h2>
