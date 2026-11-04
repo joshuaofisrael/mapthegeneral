@@ -76,8 +76,8 @@ const KW =
 const PCT = "\\d{1,2}(?:[.,]\\d)?\\s?%";
 const POLL_FIGURE = new RegExp(`${KW}[^<]{0,120}?${PCT}|${PCT}[^<]{0,120}?${KW}`, "i");
 
-const ilLabel = "Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. Unofficial and not final.";
-const ilLabelHe = "מספרי המנדטים הועתקו מדיווח תקשורתי שצוין בשמו על הספירה החלקית; האתר אינו מחשב מנדטים. לא רשמי ולא סופי.";
+const ilLabel = "Final seat numbers are copied by hand from the Central Elections Committee's official results (approved 4 Nov 2026); this site does not calculate seats.";
+const ilLabelHe = "מספרי המנדטים הסופיים הועתקו ידנית מהתוצאות הרשמיות של ועדת הבחירות המרכזית (אושרו ב-4.11.2026); האתר אינו מחשב מנדטים.";
 
 const IL_EXIT_OPEN = Date.parse("2026-10-27T22:00:00+02:00");
 const IL_EXIT_SECTION = /<section\b[^>]*\bdata-il-exit-polls\b[^>]*>[\s\S]*?<\/section>/i;

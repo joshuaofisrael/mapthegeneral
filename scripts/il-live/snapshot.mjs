@@ -54,7 +54,7 @@ const counted = doc.results.length > 0;
 const stamp = doc.fetchedAt
   ? new Date(doc.fetchedAt).toLocaleString("en-GB", { timeZone: "Asia/Jerusalem", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + " Israel time"
   : "";
-const seatLabel = "Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. Unofficial and not final.";
+const seatLabel = "Final seat numbers are copied by hand from the Central Elections Committee's official results (approved 4 Nov 2026); this site does not calculate seats.";
 const legend = counted
   ? above.slice(0, 8).map((p, i) => `<g transform="translate(700 ${140 + i * 36})"><circle cx="10" cy="-8" r="10" fill="${PALETTE[i % PALETTE.length]}"/><text x="32" y="0" font-size="24" fill="#1a2332">${esc(((n) => (n.length > 22 ? n.slice(0, 21) + "…" : n))(p.en ?? p.letter))}</text><text x="440" y="0" font-size="26" font-weight="700" text-anchor="end" fill="#1a2332">${p.seats}</text></g>`).join("")
     + `<text x="700" y="450" font-size="16" fill="#1a2332">Partial, unofficial figures copied by hand;</text><text x="700" y="472" font-size="16" fill="#1a2332">this site does not calculate seats.</text><text x="700" y="494" font-size="16" fill="#1a2332">Not final and not official.</text>`
