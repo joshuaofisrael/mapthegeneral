@@ -2,6 +2,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
 import { LiveResults, type LiveSource } from "@/components/us/LiveResults";
+import { UsLiveUpdates } from "@/components/us/UsLiveUpdates";
 import { EDITORIAL_BYLINE } from "@/data/editorial/model";
 import sources from "@/data/us/live-sources.json";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
@@ -110,6 +111,8 @@ export default function Page() {
           <li><strong>Counting takes time:</strong> states count mail and provisional ballots at different speeds, so early leads can change. Only certified results are final.</li>
         </ul>
       </section>
+
+      <UsLiveUpdates />
 
       <LiveResults sources={rows} />
 
