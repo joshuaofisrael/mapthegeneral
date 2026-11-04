@@ -22,6 +22,11 @@ const T = {
     pct: "% מהקולות הכשרים",
     votes: "קולות כשרים",
     belowGroup: (n: number) => `רשימות מתחת לאחוז החסימה (${n})`,
+    fh: "התוצאות הרשמיות הסופיות",
+    flabel: (time: string) => `תוצאה רשמית סופית, ${time}. מקור:`,
+    fnote: "אלה התוצאות הרשמיות הסופיות שאישרה ועדת הבחירות המרכזית. המספרים הועתקו ידנית מהוועדה; האתר אינו מחשב מנדטים.",
+    fseats: "מנדטים (סופי)",
+    fturnout: (pct: string, valid: string) => `אחוז ההצבעה ${pct}%, ${valid} קולות כשרים.`,
   },
   en: {
     h: "Partial count (copied by hand)",
@@ -38,27 +43,36 @@ const T = {
     pct: "% of valid votes",
     votes: "Valid votes",
     belowGroup: (n: number) => `Lists below the threshold (${n})`,
+    fh: "Official final results",
+    flabel: (time: string) => `Official final result, ${time}. Source:`,
+    fnote: "These are the official final results approved by the Central Elections Committee. Figures are copied by hand from the Committee; this site does not calculate seats.",
+    fseats: "Seats (final)",
+    fturnout: (pct: string, valid: string) => `Turnout ${pct}%, ${valid} valid votes.`,
   },
 } as const;
 
 export function IlManualCount({ lang }: { lang: IlLang }) {
   if (!manual.active) return null;
   const t = T[lang];
+  const final = manual.kind === "final";
+  const loc = lang === "he" ? "he-IL" : "en-GB";
+  const turnout = (manual as { turnout?: { pct: number; valid: number } }).turnout;
   const pct = manual.countedPct.toLocaleString(lang === "he" ? "he-IL" : "en-GB", { maximumFractionDigits: 1 });
   return (
-    <div className="mb-4 rounded-xl border border-notice-line bg-paper-card p-4" data-il-manual data-il-manual-as-of={manual.asOf}>
-      <h3 className="text-lg font-bold text-ink">{t.h}</h3>
+    <div className="mb-4 rounded-xl border border-notice-line bg-paper-card p-4" data-il-manual data-il-manual-kind={manual.kind} data-il-manual-as-of={manual.asOf}>
+      <h3 className="text-lg font-bold text-ink">{final ? t.fh : t.h}</h3>
       <p className="mt-1 text-sm font-semibold text-navy-deep" role="status">
-        {t.label(pct, manual.asOfLabel[lang])}{" "}
+        {final ? t.flabel(manual.asOfLabel[lang]) : t.label(pct, manual.asOfLabel[lang])}{" "}
         <a className="underline" href={manual.source.url} rel="noopener noreferrer">{manual.source.name[lang]}</a>
       </p>
       <p className="mt-1 text-sm text-ink-muted">
-        {t.notFinal}{" "}
+        {final ? t.fnote : t.notFinal}{" "}
+        {final && turnout ? `${t.fturnout(turnout.pct.toLocaleString(loc), turnout.valid.toLocaleString(loc))} ` : ""}
         <a className="underline" href={manual.officialSite} rel="noopener noreferrer">{t.official}</a>
       </p>
       <table className="mt-3 w-full text-sm">
         <thead className="bg-paper-tint text-ink-muted">
-          <tr><th className="p-2 text-start">{t.party}</th><th className="p-2 text-end">{t.seats}</th></tr>
+          <tr><th className="p-2 text-start">{t.party}</th><th className="p-2 text-end">{final ? t.fseats : t.seats}</th></tr>
         </thead>
         <tbody>
           {manual.seats.map((p) => (
@@ -69,7 +83,7 @@ export function IlManualCount({ lang }: { lang: IlLang }) {
           ))}
         </tbody>
       </table>
-      {manual.votes && <IlManualVotes lang={lang} />}
+      {manual.votes && !final && <IlManualVotes lang={lang} />}
       {manual.belowThreshold.length > 0 && (
         <p className="mt-2 text-sm text-ink-muted">
           {t.below}: {manual.belowThreshold.map((p) => `${p[lang]} ${p.pct}%`).join(" · ")}

@@ -44,8 +44,8 @@ export const IL_META = meta;
 
 /** Seat label: seats are copied from a named report, never calculated here. Exact English; native Hebrew on he pages. */
 export const IL_SEAT_LABEL = {
-  he: "מספרי המנדטים הועתקו מדיווח תקשורתי שצוין בשמו על הספירה החלקית; האתר אינו מחשב מנדטים. לא רשמי ולא סופי.",
-  en: "Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. Unofficial and not final.",
+  he: "מספרי המנדטים הסופיים הועתקו ידנית מהתוצאות הרשמיות של ועדת הבחירות המרכזית (אושרו ב-4.11.2026); האתר אינו מחשב מנדטים.",
+  en: "Final seat numbers are copied by hand from the Central Elections Committee's official results (approved 4 Nov 2026); this site does not calculate seats.",
 } as const;
 
 /** A feed older than this, or a failed fetch, must not show seat estimates. */
@@ -66,20 +66,20 @@ export const IL_COPY = {
     title: "תוצאות הבחירות לכנסת ה-26, 2026",
     h1: "תוצאות הבחירות לכנסת ה-26",
     description:
-      "תוצאות חלקיות ולא רשמיות של הבחירות לכנסת ה-26 ב-27 באוקטובר 2026, שהוזנו ידנית עם מקור ושעת עדכון. אינן סופיות.",
+      "התוצאות הרשמיות הסופיות של הבחירות לכנסת ה-26 ב-27 באוקטובר 2026, כפי שאישרה ועדת הבחירות המרכזית ב-4 בנובמבר: מנדטים לפי רשימה וגושים, עם מקור.",
     kicker: "בחירות 2026 · 27 באוקטובר",
     intro:
-      "קובץ התוצאות של ועדת הבחירות המרכזית חסום לגישה מחוץ לישראל, ולכן הנתונים בעמוד זה מוזנים ידנית. כל טבלה מציינת מקור אחד ושעת עדכון: מספרי מנדטים שהועתקו מדיווח תקשורתי (האתר אינו מחשב מנדטים), סכומי קולות שהועתקו ידנית מאתר הוועדה, ובמדור נפרד מדגמי המנדטים של ערוצי הטלוויזיה. שום נתון כאן אינו סופי או רשמי.",
+      "ועדת הבחירות המרכזית אישרה את התוצאות הרשמיות הסופיות ב-4 בנובמבר 2026, והן מוצגות בראש העמוד עם מקור. המספרים הועתקו ידנית מהוועדה, והאתר אינו מחשב מנדטים. מדגמי המנדטים של ערוצי הטלוויזיה במדור הנפרד הם מליל הבחירות ואינם התוצאה הרשמית.",
     breadcrumbs: ["דף הבית", "ישראל", "תוצאות הבחירות"],
   },
   en: {
     title: "Israel election results, 27 October 2026",
     h1: "Israel election results 2026: the 26th Knesset",
     description:
-      "Partial, unofficial results of the 26th Knesset election on 27 October 2026, entered by hand with a source and as-of time for each table. Not final.",
+      "Official final results of the 26th Knesset election on 27 October 2026, as approved by the Central Elections Committee on 4 November: seats by list and blocs, with sources.",
     kicker: "Knesset election · 27 October 2026",
     intro:
-      "The Central Elections Committee results file is blocked outside Israel, so the figures on this page are entered by hand. Each table names one source and an as-of time: seat numbers copied from a named media report (this site does not calculate seats), vote totals copied by hand from the Committee's results site, and, in a separate section, TV seat samples published by television channels. Nothing here is final or official.",
+      "The Central Elections Committee approved the official final results on 4 November 2026, shown at the top of this page with a source. Figures are copied by hand from the Committee, and this site does not calculate seats. The TV seat samples in the separate section are from election night and are not the official result.",
     breadcrumbs: ["Home", "Israel", "Election results"],
   },
 } as const;

@@ -1,19 +1,19 @@
 {
   "active": true,
   "election": "il-2026-knesset",
-  "kind": "partial",
-  "countedPct": 99.5,
-  "asOf": "2026-10-29T18:15:00+02:00",
+  "kind": "final",
+  "countedPct": 100,
+  "asOf": "2026-11-04T12:00:00+02:00",
   "asOfLabel": {
-    "he": "18:15 שעון ישראל, 29.10.2026",
-    "en": "18:15 Israel time, 29 Oct 2026"
+    "he": "4.11.2026, אושר על ידי ועדת הבחירות המרכזית",
+    "en": "4 Nov 2026, approved by the Central Elections Committee"
   },
-  "copiedAt": "2026-10-29T18:04:44.561Z",
+  "copiedAt": "2026-11-04T18:20:00.000Z",
   "source": {
-    "url": "https://en.globes.co.il/en/article-count-complete-likud-has-27-knesset-seats-shas-drops-to-6-1001561412",
+    "url": "https://www.gov.il/en/pages/results-26",
     "name": {
-      "en": "Globes and Ynet, reporting the Central Elections Committee (count of all votes completed; provisional, official results due 4 Nov)",
-      "he": "גלובס ו-Ynet, לפי ועדת הבחירות המרכזית (ספירת כל הקולות הסתיימה; תוצאות זמניות, התוצאות הרשמיות צפויות ב-4 בנובמבר)"
+      "en": "Central Elections Committee, final results and seat allocation (approved 4 Nov 2026 and presented to President Herzog; reported by the Times of Israel and Ynet)",
+      "he": "ועדת הבחירות המרכזית, התוצאות הסופיות וחלוקת המנדטים (אושרו ב-4.11.2026 והוגשו לנשיא הרצוג; לפי טיימס אוף ישראל ו-Ynet)"
     }
   },
   "officialSite": "https://votes26.bechirot.gov.il/nationalresults?lang=en",
@@ -384,5 +384,12 @@
         "votes": 3
       }
     ]
+  },
+  "turnout": {
+    "pct": 77.9,
+    "counted": 5716665,
+    "valid": 5690778,
+    "invalid": 25887,
+    "thresholdVotes": 184497
   }
 }
