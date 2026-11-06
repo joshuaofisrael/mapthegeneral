@@ -6,7 +6,7 @@
  * sitemap, IndexNow and search index, and every poll link and section is removed.
  * The election-law check then fails the build if any NZ page carries a poll figure.
  */
-export const NZ_POLLS_BLACKOUT = false;
+export const NZ_POLLS_BLACKOUT = true;
 
 export const NZ_POLLS_READ_ON = "31 October 2026";
 export const NZ_POLLS_WINDOW_DAYS = 30;
