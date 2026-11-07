@@ -4,6 +4,7 @@
  * read on 27 October 2026. No party names and no survey figures.
  */
 import type { ElectionSeoProfile } from "./election-seo";
+import { votingEndedConfirmed } from "./release-status";
 
 const PLAN = "https://elections.nz/assets/2026-General-Election/EC0131_Election_Service_Plan_A4.pdf";
 const ACT = "https://www.legislation.govt.nz/act/public/1993/87/en/latest/";
@@ -43,7 +44,7 @@ function night(copy: {
     official: RESULTS,
     timeZone: "Pacific/Auckland",
     requiresConfirmation: false,
-    votingEnded: false,
+    votingEnded: votingEndedConfirmed("nz-2026-11-07"),
     pollingExtended: false,
     ...copy,
   };
