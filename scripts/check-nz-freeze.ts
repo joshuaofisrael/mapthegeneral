@@ -31,7 +31,7 @@ const FILES = [
 ];
 
 /** Sealed baseline. Update only outside the freeze, in the same commit as a real New Zealand edit. */
-const SEAL = "46de89757e5e631a761a89cd14d7411e6e80b68a9581f427f42e159e0a4d7c53";
+const SEAL = "cc912df087af2f2c92ad9642773d7120bcd0a7563113f036142fa1f123ad4057";
 
 function fileHash(rel: string): string {
   const bytes = readFileSync(path.join(process.cwd(), rel));
