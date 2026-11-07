@@ -1,54 +1,54 @@
 {
   "note": "Preliminary figures hand-copied from RNZ's live results page (results data and seat allocations supplied by the Electoral Commission, per RNZ), because electionresults.govt.nz was unreachable from our build machine. Seats are RNZ/Commission numbers; electorate seats are current leads, not confirmed wins. This site does not calculate seats.",
   "stage": "preliminary",
-  "readAt": "8:51 pm, 7 November 2026",
+  "readAt": "9:10 pm, 7 November 2026",
   "sourceUrl": "https://www.rnz.co.nz/news/election-2026-results",
   "sourceLabel": "RNZ election results (Electoral Commission data)",
-  "votingPlacesCounted": "31.6%",
+  "votingPlacesCounted": "36.8%",
   "rows": [
     {
       "party": "National",
-      "votes": 429191,
+      "votes": 449014,
       "share": "29.4%",
-      "electorates": 41,
+      "electorates": 42,
       "listSeats": 0,
-      "totalSeats": 41
+      "totalSeats": 42
     },
     {
       "party": "Labour",
-      "votes": 436440,
-      "share": "29.9%",
-      "electorates": 21,
-      "listSeats": 15,
+      "votes": 455376,
+      "share": "29.8%",
+      "electorates": 20,
+      "listSeats": 16,
       "totalSeats": 36
     },
     {
       "party": "Greens",
-      "votes": 205777,
-      "share": "14.1%",
+      "votes": 214429,
+      "share": "14.0%",
       "electorates": 3,
       "listSeats": 14,
       "totalSeats": 17
     },
     {
       "party": "ACT",
-      "votes": 153615,
-      "share": "10.5%",
+      "votes": 161691,
+      "share": "10.6%",
       "electorates": 1,
       "listSeats": 12,
       "totalSeats": 13
     },
     {
       "party": "NZ First",
-      "votes": 136384,
-      "share": "9.3%",
+      "votes": 143237,
+      "share": "9.4%",
       "electorates": 0,
       "listSeats": 11,
       "totalSeats": 11
     },
     {
       "party": "Opportunity",
-      "votes": 79346,
+      "votes": 83104,
       "share": "5.4%",
       "electorates": 0,
       "listSeats": 7,
@@ -56,7 +56,7 @@
     },
     {
       "party": "Te Pāti Māori",
-      "votes": 8553,
+      "votes": 9150,
       "share": "0.6%",
       "electorates": 5,
       "listSeats": 0,
@@ -64,5 +64,5 @@
     }
   ],
   "source": "https://www.rnz.co.nz/news/election-2026-results",
-  "fetchedAt": "2026-11-07T07:51:00Z"
+  "fetchedAt": "2026-11-07T08:10:00Z"
 }
