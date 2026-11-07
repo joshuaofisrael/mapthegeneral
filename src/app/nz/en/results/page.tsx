@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 import { socialImageUrl } from "@/lib/social";
 import manual from "@/data/nz-results-manual.json";
+import { NzLiveUpdates } from "@/components/NzLiveUpdates";
 
 type Row = { party: string; votes: number; share?: string; electorates?: number; listSeats?: number; totalSeats?: number };
 
@@ -18,26 +19,26 @@ const MODIFIED = new Date().toISOString();
 export const metadata = pageMetadata({
   title: "NZ election results 2026: New Zealand election results live",
   description:
-    "NZ election results for the New Zealand general election, 7 November 2026. Awaiting the count from the Electoral Commission at electionresults.govt.nz. No figures yet.",
+    "NZ election results live for the 7 November 2026 general election: preliminary party vote as counting goes on, with sources. Unofficial; no winner called.",
   path: PATH,
 });
 
 const FAQ: [string, string][] = [
   [
     "Who won the NZ election?",
-    "Not yet. This is an unofficial page and names no winner until the Electoral Commission's results service does. No count is shown before 7:00 pm New Zealand daylight time on 7 November 2026, and official results are declared later.",
+    "Counting is under way. This unofficial page shows preliminary party vote figures as they are reported and does not call a winner. Preliminary results exclude special votes; the Electoral Commission declares official results later (expected 27 November).",
   ],
   [
     "Where can I find NZ election results live?",
-    "The official source is the Electoral Commission's results service, electionresults.govt.nz. This page copies any figures from there after polls close and labels them unofficial until the Commission's figures are official.",
+    "The official source is the Electoral Commission's results service, electionresults.govt.nz. This page copies preliminary figures from a named source (currently RNZ's results page, which carries Electoral Commission data), with the time they were read, and labels them unofficial.",
   ],
   [
     "What are NZ election results 2026?",
-    "NZ election results 2026 are the party vote and electorate counts for the New Zealand general election held on 7 November 2026, published by the Electoral Commission. This page is unofficial and currently shows no figures.",
+    "NZ election results 2026 are the party vote and electorate counts for the New Zealand general election held on 7 November 2026, published by the Electoral Commission. This page is unofficial and shows preliminary figures with their source.",
   ],
   [
     "Does this page show exit polls, projections, or a forecast?",
-    "No. This page does not publish a poll, an exit poll, a projection, or a forecast for the New Zealand election. It shows only figures copied from the Electoral Commission's results service, each with a source and the time it was read.",
+    "No. This page does not publish a poll, an exit poll, a projection, or a forecast for the New Zealand election. It shows only counted results from the Electoral Commission, as published by the Commission or a named outlet carrying its data, each with a source and the time it was read.",
   ],
 ];
 
@@ -93,32 +94,34 @@ export default function NzResultsPage() {
       <PageHeader
         eyebrow="Live results · New Zealand"
         title="NZ election results live: New Zealand election results, 7 November 2026"
-        lede="Awaiting results. This page shows no figures yet. The official source is the Electoral Commission's results service, electionresults.govt.nz."
+        lede="Preliminary results are coming in. This unofficial page shows the party vote as counted so far, with its source and the time it was read. Figures will change and no winner is called."
       />
       <OddsMeter slug="next-prime-minister-of-new-zealand-174" title="next New Zealand prime minister" hideFrom="2026-11-06T10:30:00Z" hideUntil="2026-11-07T06:05:00Z" pausedNote="Odds paused: New Zealand election-day rules. Market odds return after polls close at 7pm NZDT." />
       <div className="prose-legal">
         <p>
-          <strong>Unofficial page. Awaiting results.</strong> No vote count, seat number, poll or forecast is shown here.
-          No count will be shown before 7:00 pm New Zealand daylight time on 7 November 2026, and none until the
-          Electoral Commission has confirmed that voting places have closed.
+          <strong>Unofficial page. Preliminary count.</strong> Voting closed at 7:00 pm New Zealand daylight time on
+          7 November 2026. Figures below are preliminary, exclude special votes, and will change. No poll or forecast is
+          shown here.
         </p>
         <p>
           The official source for NZ election results is the Electoral Commission’s results site,{" "}
-          <a href={RESULTS} rel="noopener">electionresults.govt.nz</a>. Any figures added to this page later will be
+          <a href={RESULTS} rel="noopener">electionresults.govt.nz</a>. Figures on this page are
           labelled unofficial, with the source and the time they were read. Map the General is not an official website
           and is not affiliated with the Electoral Commission.
         </p>
         <p>
           For dates and how to vote NZ, see the <Link href="/nz/en/elections/general-election/">general election guide</Link>.
         </p>
+        <NzLiveUpdates />
         {(manual.rows as Row[]).length > 0 && (
           <section>
             <h2>Party vote, {manual.stage || "preliminary"} count (unofficial copy)</h2>
             <p>
-              Read from <a href={manual.sourceUrl} rel="noopener">electionresults.govt.nz</a> at {manual.readAt} New Zealand
-              time{manual.votingPlacesCounted ? `, with ${manual.votingPlacesCounted} of voting places counted` : ""}. Preliminary
-              figures exclude special votes and will change. Seat columns are the Commission’s own numbers; this site does
-              not calculate seats.
+              Read from <a href={manual.sourceUrl} rel="noopener">{manual.sourceLabel || "electionresults.govt.nz"}</a> at {manual.readAt} New Zealand
+              time{manual.votingPlacesCounted ? `, with ${manual.votingPlacesCounted} of voting places reported (not ${manual.votingPlacesCounted} of votes)` : ""}. Preliminary
+              figures exclude special votes and will change. Seat columns are the source’s own numbers (Electoral Commission
+              data as published by the source); electorate seats are current leads, not confirmed wins. This site does not
+              calculate seats.
             </p>
             <table>
               <thead>
