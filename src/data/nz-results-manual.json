@@ -1,14 +1,14 @@
 {
   "note": "Preliminary figures hand-copied from RNZ's live results page (results data and seat allocations supplied by the Electoral Commission, per RNZ), because electionresults.govt.nz was unreachable from our build machine. Seats are RNZ/Commission numbers; electorate seats are current leads, not confirmed wins. This site does not calculate seats.",
   "stage": "preliminary",
-  "readAt": "1:17 am, 8 November 2026",
+  "readAt": "1:34 am, 8 November 2026",
   "sourceUrl": "https://www.rnz.co.nz/news/election-2026-results",
   "sourceLabel": "RNZ election results (Electoral Commission data)",
-  "votingPlacesCounted": "99.1%",
+  "votingPlacesCounted": "99.3%",
   "rows": [
     {
       "party": "National",
-      "votes": 704892,
+      "votes": 705216,
       "share": "29.2%",
       "electorates": 42,
       "listSeats": 0,
@@ -16,7 +16,7 @@
     },
     {
       "party": "Labour",
-      "votes": 706989,
+      "votes": 707747,
       "share": "29.3%",
       "electorates": 21,
       "listSeats": 15,
@@ -24,7 +24,7 @@
     },
     {
       "party": "Greens",
-      "votes": 320714,
+      "votes": 320999,
       "share": "13.3%",
       "electorates": 2,
       "listSeats": 14,
@@ -32,7 +32,7 @@
     },
     {
       "party": "ACT",
-      "votes": 263460,
+      "votes": 263605,
       "share": "10.9%",
       "electorates": 1,
       "listSeats": 12,
@@ -40,7 +40,7 @@
     },
     {
       "party": "NZ First",
-      "votes": 235613,
+      "votes": 235811,
       "share": "9.8%",
       "electorates": 0,
       "listSeats": 12,
@@ -48,7 +48,7 @@
     },
     {
       "party": "Opportunity",
-      "votes": 143972,
+      "votes": 144058,
       "share": "6.0%",
       "electorates": 0,
       "listSeats": 7,
@@ -56,7 +56,7 @@
     },
     {
       "party": "Te Pāti Māori",
-      "votes": 13762,
+      "votes": 13788,
       "share": "0.6%",
       "electorates": 5,
       "listSeats": 0,
@@ -64,5 +64,5 @@
     }
   ],
   "source": "https://www.rnz.co.nz/news/election-2026-results",
-  "fetchedAt": "2026-11-07T12:17:00Z"
+  "fetchedAt": "2026-11-07T12:36:00Z"
 }
