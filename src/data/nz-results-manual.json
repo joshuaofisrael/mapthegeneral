@@ -1,14 +1,14 @@
 {
   "note": "Preliminary figures hand-copied from RNZ's live results page (results data and seat allocations supplied by the Electoral Commission, per RNZ), because electionresults.govt.nz was unreachable from our build machine. Seats are RNZ/Commission numbers; electorate seats are current leads, not confirmed wins. This site does not calculate seats.",
   "stage": "preliminary",
-  "readAt": "12:31 am, 8 November 2026",
+  "readAt": "12:50 am, 8 November 2026",
   "sourceUrl": "https://www.rnz.co.nz/news/election-2026-results",
   "sourceLabel": "RNZ election results (Electoral Commission data)",
-  "votingPlacesCounted": "98.1%",
+  "votingPlacesCounted": "98.7%",
   "rows": [
     {
       "party": "National",
-      "votes": 701978,
+      "votes": 704165,
       "share": "29.3%",
       "electorates": 42,
       "listSeats": 0,
@@ -16,15 +16,15 @@
     },
     {
       "party": "Labour",
-      "votes": 701867,
+      "votes": 705022,
       "share": "29.3%",
       "electorates": 21,
-      "listSeats": 14,
-      "totalSeats": 35
+      "listSeats": 15,
+      "totalSeats": 36
     },
     {
       "party": "Greens",
-      "votes": 318838,
+      "votes": 320244,
       "share": "13.3%",
       "electorates": 2,
       "listSeats": 14,
@@ -32,15 +32,15 @@
     },
     {
       "party": "ACT",
-      "votes": 262709,
-      "share": "11.0%",
+      "votes": 263298,
+      "share": "10.9%",
       "electorates": 1,
       "listSeats": 12,
       "totalSeats": 13
     },
     {
       "party": "NZ First",
-      "votes": 234653,
+      "votes": 235281,
       "share": "9.8%",
       "electorates": 0,
       "listSeats": 12,
@@ -48,7 +48,7 @@
     },
     {
       "party": "Opportunity",
-      "votes": 143253,
+      "votes": 143863,
       "share": "6.0%",
       "electorates": 0,
       "listSeats": 7,
@@ -56,7 +56,7 @@
     },
     {
       "party": "Te Pāti Māori",
-      "votes": 13653,
+      "votes": 13708,
       "share": "0.6%",
       "electorates": 5,
       "listSeats": 0,
@@ -64,5 +64,5 @@
     }
   ],
   "source": "https://www.rnz.co.nz/news/election-2026-results",
-  "fetchedAt": "2026-11-07T11:32:00Z"
+  "fetchedAt": "2026-11-07T11:50:00Z"
 }
