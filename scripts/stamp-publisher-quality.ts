@@ -13,6 +13,8 @@ import { applyRobotsMeta } from "../src/lib/indexing-policy";
 
 const OUT = path.join(process.cwd(), "out");
 const MIN_DISTINCT_WORDS = 200;
+// 8 Nov 2026 AdSense audit: national hubs are no longer exempt when thin.
+const MIN_HUB_DISTINCT_WORDS = 150;
 const PROTECTED_KINDS = new Set(["home", "legal", "page", "country", "elections", "election", "parties", "candidates", "results", "faq", "sources"]);
 const routeKinds = new Map(searchIndex().map(p => [p.path, p.kind]));
 const frequencies = new Map<string, number>();
@@ -48,7 +50,8 @@ for (const row of rows) {
   row.distinctWords = row.paragraphs.filter(p => p.words >= 12 && (frequencies.get(p.key)??0) <= 3).reduce((a,p)=>a+p.words,0);
   const protectedPage = PROTECTED_KINDS.has(row.kind) || /^\/[a-z]{2}\/[a-z]{2}\/(?:live|results|elections)(?:\/|$)/.test(row.route);
   const utility = row.kind === "search" || /^\/(?:404|contact\/thanks)\//.test(row.route);
-  row.excluded = utility || (!protectedPage && (row.distinctWords < MIN_DISTINCT_WORDS));
+  const thinHub = row.kind === "country" && row.distinctWords < MIN_HUB_DISTINCT_WORDS;
+  row.excluded = utility || thinHub || (!protectedPage && (row.distinctWords < MIN_DISTINCT_WORDS));
   if (row.excluded) {
     excluded.add(row.route);
   }
@@ -69,6 +72,20 @@ for (const row of rows) {
     return href && excluded.has(href) ? "" : tag;
   });
   if (before!==after) writeFileSync(row.file,after);
+}
+// Add reciprocal hreflang between indexed language versions of the same page
+// when the page has none (e.g. /ca/en/x/ <-> /ca/fr/x/).
+const kept = new Set(rows.filter(r=>!r.excluded).map(r=>r.route));
+for (const row of rows) {
+  if (row.excluded) continue;
+  const m = row.route.match(/^\/([a-z]{2})\/([a-z]{2})(\/.*)$/);
+  if (!m) continue;
+  const sibs = [...kept].filter(r => r.startsWith(`/${m[1]}/`) && r.endsWith(m[3]) && /^\/[a-z]{2}\/[a-z]{2}\//.test(r) && r.split("/").length === row.route.split("/").length && r.slice(7) === row.route.slice(7));
+  if (sibs.length < 2) continue;
+  const before = readFileSync(row.file,"utf8");
+  if (/hreflang=/i.test(before)) continue;
+  const tags = sibs.map(r => `<link rel="alternate" hreflang="${r.split("/")[2]}-${r.split("/")[1].toUpperCase()}" href="https://mapthegeneral.com${r}">`).join("");
+  writeFileSync(row.file, before.replace("</head>", tags + "</head>"));
 }
 // Keep source and exported sitemaps/IndexNow lists aligned. Build-indexes runs
 // earlier and can otherwise silently re-introduce low-value pages every deploy.
