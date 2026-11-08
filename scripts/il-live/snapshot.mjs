@@ -46,18 +46,30 @@ function seats(rows = 8, total = 120) {
   });
   return pts.sort((p, q) => q.a - p.a);
 }
-const above = doc.results.filter((p) => p.aboveThreshold);
+// The automatic feed is a status log while the CEC blocks it. Do not label
+// the share image provisional after the page has a sourced final manual table.
+const manual = JSON.parse(readFileSync(path.join(root, "src/data/il-2026-manual-count.json"), "utf8"));
+const manualFinal = manual.active === true && manual.kind === "final" && Array.isArray(manual.seats) && manual.seats.length > 0;
+const display = manualFinal ? {
+  stage: "final", fetchedAt: manual.asOf,
+  results: manual.seats.map((row) => ({ ...row, letter: row.id, aboveThreshold: true })),
+} : doc;
+const final = display.stage === "final";
+const above = display.results.filter((p) => p.aboveThreshold);
 const seq = [];
 above.forEach((p, i) => { for (let k = 0; k < p.seats; k++) seq.push(PALETTE[i % PALETTE.length]); });
 const dots = seats().map((s, i) => `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="10" fill="${seq[i] ?? "#d5dde6"}"/>`).join("");
-const counted = doc.results.length > 0;
-const stamp = doc.fetchedAt
-  ? new Date(doc.fetchedAt).toLocaleString("en-GB", { timeZone: "Asia/Jerusalem", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + " Israel time"
+const counted = display.results.length > 0;
+const stamp = display.fetchedAt
+  ? new Date(display.fetchedAt).toLocaleString("en-GB", { timeZone: "Asia/Jerusalem", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + " Israel time"
   : "";
 const seatLabel = "Final seat numbers are copied by hand from the Central Elections Committee's official results (approved 4 Nov 2026); this site does not calculate seats.";
+const statusLines = final
+  ? `<text x="700" y="450" font-size="16" fill="#1a2332">Official final allocation, approved 4 Nov 2026.</text><text x="700" y="472" font-size="16" fill="#1a2332">Source: Central Elections Committee.</text><text x="700" y="494" font-size="16" fill="#1a2332">Unofficial copy; no seat calculation.</text>`
+  : `<text x="700" y="450" font-size="16" fill="#1a2332">Partial, unofficial figures copied by hand;</text><text x="700" y="472" font-size="16" fill="#1a2332">this site does not calculate seats.</text><text x="700" y="494" font-size="16" fill="#1a2332">Not final and not official.</text>`;
 const legend = counted
   ? above.slice(0, 8).map((p, i) => `<g transform="translate(700 ${140 + i * 36})"><circle cx="10" cy="-8" r="10" fill="${PALETTE[i % PALETTE.length]}"/><text x="32" y="0" font-size="24" fill="#1a2332">${esc(((n) => (n.length > 22 ? n.slice(0, 21) + "…" : n))(p.en ?? p.letter))}</text><text x="440" y="0" font-size="26" font-weight="700" text-anchor="end" fill="#1a2332">${p.seats}</text></g>`).join("")
-    + `<text x="700" y="450" font-size="16" fill="#1a2332">Partial, unofficial figures copied by hand;</text><text x="700" y="472" font-size="16" fill="#1a2332">this site does not calculate seats.</text><text x="700" y="494" font-size="16" fill="#1a2332">Not final and not official.</text>`
+    + statusLines
   : `<text x="700" y="180" font-size="28" font-weight="700" fill="#143251">Partial results, copied by hand</text><text x="700" y="230" font-size="20" fill="#1a2332">Partial, unofficial figures copied by hand;</text><text x="700" y="258" font-size="20" fill="#1a2332">this site does not calculate seats.</text><text x="700" y="286" font-size="20" fill="#1a2332">Not final and not official.</text><text x="700" y="330" font-size="18" fill="#4a5568">No polls. 61 seats for a majority.</text>`;
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
 <rect width="1200" height="630" fill="#f6f7f9"/><rect width="1200" height="96" fill="#143251"/>
