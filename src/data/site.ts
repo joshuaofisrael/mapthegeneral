@@ -44,6 +44,7 @@ export const LEGAL_NAV = [
   { href: "/imprint/", label: "Legal notice" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
+  { href: "/about/#editorial-methods", label: "Editorial & corrections" },
 ] as const;
 
 export const PRIMARY_NAV = [

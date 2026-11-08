@@ -191,16 +191,16 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          Visitors in the European Economic Area, the United Kingdom, and Switzerland are asked for
-          consent before those advertising cookies are used. The message is Google’s consent message
-          for European regulations. It is shown through the AdSense script. This site does not add a
-          second advertising consent banner.
+          Advertising cookies for visitors in the European Economic Area, the United Kingdom and
+          Switzerland require a Google-certified consent management platform. The separate analytics
+          Accept/Reject banner is not advertising consent. Advertising must not be enabled in these
+          regions without the certified advertising message being configured and published.
         </p>
         <p>
           {SITE.name} also loads scripts from Ezoic Inc. (ezojs.com, ezoicanalytics.com) on every page.
           Ezoic may use cookies and similar technologies to serve, measure and improve ads. Ezoic’s
-          own consent pop-up is not used; Ezoic reads the consent signal from Google’s consent
-          message in the European Economic Area and the United Kingdom. Ezoic’s privacy policy is at{" "}
+          own consent pop-up is not loaded by this site. Ezoic must use the certified advertising
+          consent signal before serving ads in regions requiring consent. Ezoic’s privacy policy is at{" "}
           <a href="https://www.ezoic.com/privacy-policy/" rel="noopener noreferrer">
             https://www.ezoic.com/privacy-policy/
           </a>
@@ -210,9 +210,13 @@ export default function PrivacyPage() {
         <p>
           Ezoic Inc. and its advertising partners may use first- and third-party cookies, tags, pixels
           and similar technologies on this site to serve ads, measure them, limit how often they
-          repeat, and detect invalid traffic. In the European Economic Area and the United Kingdom they act on
-          the consent signal recorded by Google’s consent message. Ezoic’s required disclosure,
-          including its list of partners, follows.
+          repeat, and detect invalid traffic. You can refuse or withdraw advertising consent in the
+          certified advertising message, when displayed, and manage personalized ads through Google’s
+          ad settings. You can also opt out of participating third-party personalized advertising at{' '}
+          <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer">YourAdChoices</a>{' '}
+          or <a href="https://www.youronlinechoices.com/" rel="noopener noreferrer">Your Online Choices</a>.
+          Browser settings can block or delete third-party cookies; opting out does not necessarily stop
+          all advertisements. Ezoic’s partner disclosure, when available, follows.
         </p>
         <span id="ezoic-privacy-policy-embed"></span>
         <p>
@@ -235,10 +239,7 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          A las personas que visitan desde el Espacio Económico Europeo, el Reino Unido y Suiza se
-          les pide consentimiento antes de usar esas cookies publicitarias. El mensaje es el de
-          Google para la normativa europea y se muestra con el script de AdSense. Este sitio no añade
-          un segundo aviso de consentimiento publicitario. Las preguntas se envían por la <Link href="/contact/">página de contacto</Link>.
+          En el Espacio Económico Europeo, el Reino Unido y Suiza, los anuncios que usan cookies requieren una plataforma de consentimiento certificada por Google. El aviso de analítica no es consentimiento publicitario. No se deben activar anuncios en esas regiones sin configurar y publicar el mensaje certificado.
         </p>
         <h2 id="google-analytics-es">Analítica: Google Analytics (solo con su consentimiento)</h2>
         <p>
@@ -284,11 +285,7 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          Besucherinnen und Besuchern aus dem Europäischen Wirtschaftsraum, dem Vereinigten
-          Königreich und der Schweiz wird vor der Verwendung dieser Werbe-Cookies eine Einwilligung
-          abgefragt. Die Meldung ist die von Google für europäische Vorschriften und erscheint über
-          das AdSense-Skript. Diese Website fügt kein zweites Banner für Werbe-Cookies hinzu. Fragen gehen über die{" "}
-          <Link href="/contact/">Kontaktseite</Link>.
+          Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz erfordern Werbe-Cookies eine von Google zertifizierte Einwilligungsplattform. Das Analyse-Banner ist keine Werbe-Einwilligung. Werbung darf dort erst nach Einrichtung und Veröffentlichung der zertifizierten Meldung aktiviert werden.
         </p>
         <h2 id="google-analytics-de">Analyse: Google Analytics (nur mit Ihrer Einwilligung)</h2>
         <p>
@@ -334,11 +331,7 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          Les visiteurs de l’Espace économique européen, du Royaume-Uni et de la Suisse sont invités
-          à donner leur consentement avant l’usage de ces cookies publicitaires. Le message est celui
-          de Google pour la réglementation européenne et s’affiche par le script AdSense. Ce site
-          n’ajoute pas un second bandeau de consentement publicitaire. Les questions passent par la{" "}
-          <Link href="/contact/">page de contact</Link>.
+          Dans l’Espace économique européen, au Royaume-Uni et en Suisse, les cookies publicitaires nécessitent une plateforme de consentement certifiée par Google. Le bandeau analytique ne constitue pas un consentement publicitaire. La publicité ne doit pas être activée dans ces régions sans configurer et publier le message certifié.
         </p>
         <h2 id="google-analytics-fr">Analytique : Google Analytics (uniquement avec votre consentement)</h2>
         <p>
@@ -384,10 +377,7 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          Ai visitatori dello Spazio economico europeo, del Regno Unito e della Svizzera viene chiesto
-          il consenso prima dell’uso di questi cookie pubblicitari. Il messaggio è quello di Google
-          per la normativa europea e compare tramite lo script AdSense. Questo sito non aggiunge un
-          secondo avviso di consenso pubblicitario. Le domande vanno inviate dalla <Link href="/contact/">pagina dei contatti</Link>.
+          Nello Spazio economico europeo, nel Regno Unito e in Svizzera, i cookie pubblicitari richiedono una piattaforma di consenso certificata da Google. Il banner di analisi non è un consenso pubblicitario. La pubblicità non deve essere attivata in queste regioni senza configurare e pubblicare il messaggio certificato.
         </p>
         <h2 id="google-analytics-it">Analisi: Google Analytics (solo con il tuo consenso)</h2>
         <p>
@@ -433,11 +423,7 @@ export default function PrivacyPage() {
           .
         </p>
         <p>
-          Osoby odwiedzające z Europejskiego Obszaru Gospodarczego, Wielkiej Brytanii i Szwajcarii są
-          proszone o zgodę, zanim te reklamowe pliki cookie zostaną użyte. Komunikat jest komunikatem
-          Google dotyczącym przepisów europejskich i pojawia się przez skrypt AdSense. Ta strona nie
-          dodaje drugiego banera zgody na reklamy. Pytania należy wysyłać przez{" "}
-          <Link href="/contact/">stronę kontaktową</Link>.
+          W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii reklamowe pliki cookie wymagają platformy zgody certyfikowanej przez Google. Baner analityczny nie jest zgodą na reklamy. Reklam nie należy tam uruchamiać bez skonfigurowania i opublikowania certyfikowanego komunikatu.
         </p>
         <h2 id="google-analytics-pl">Analityka: Google Analytics (tylko za zgodą)</h2>
         <p>

@@ -122,18 +122,18 @@ export const IL_TIMELINE = {
 
 export const IL_FAQ = {
   he: [
-    ["מתי יתפרסמו תוצאות הבחירות 2026?", "הספירה מתחילה עם סגירת הקלפיות ב-22:00 ב-27 באוקטובר 2026, והתוצאות מתעדכנות כאן במהלך הלילה. ועדת הבחירות צופה תוצאות אמת סביב הצהריים ב-29 באוקטובר, והתוצאות הרשמיות יפורסמו ברשומות עד 4 בנובמבר."],
+    ["מתי יתפרסמו תוצאות הבחירות 2026?", "ועדת הבחירות המרכזית אישרה את התוצאות הרשמיות הסופיות ב-4 בנובמבר 2026. טבלת המנדטים הסופית מוצגת בראש העמוד; עדכוני ליל הבחירות המתוארכים נשמרו כארכיון."],
     ["מאיפה מגיעים הנתונים?", "קובץ התוצאות של הוועדה חסום מחוץ לישראל. סכומי הקולות מועתקים ידנית מאתר התוצאות של ועדת הבחירות המרכזית, ומספרי המנדטים מועתקים מהדיווח התקשורתי שצוין ליד הטבלה. מדגמי הטלוויזיה נמצאים במדור נפרד."],
-    ["האם המנדטים בעמוד הם סופיים?", "לא. מספרי המנדטים הועתקו מדיווח תקשורתי על הספירה החלקית; האתר אינו מחשב מנדטים. הם ישתנו ככל שהספירה תתקדם, ובמיוחד לאחר ספירת המעטפות הכפולות. התוצאה המחייבת היא זו שתפרסם ועדת הבחירות."],
+    ["האם המנדטים בעמוד הם סופיים?", "כן. הטבלה בראש העמוד מציגה את חלוקת המנדטים הסופית שאישרה ועדת הבחירות המרכזית ב-4 בנובמבר 2026. ספירות חלקיות ומדגמי טלוויזיה קודמים נשמרו במדורים היסטוריים מסומנים ואינם התוצאה הסופית."],
     ["מהו אחוז החסימה?", "3.25% מהקולות הכשרים. רשימה מתחת לסף זה אינה מקבלת מושבים."],
     ["כמה מנדטים צריך כדי להקים ממשלה?", "ממשלה צריכה אמון של רוב חברי הכנסת: 61 מתוך 120. "],
     ["כמה בעלי זכות בחירה יש?", "לפי ועדת הבחירות המרכזית, 7,331,981 בעלי זכות בחירה ו-12,018 קלפיות."],
     ["האם מספרי הטלוויזיה הם תוצאות רשמיות?", "לא. אחרי 22:00 יש במדור נפרד את מספרי המנדטים שפרסמו ערוצי הטלוויזיה. הם אינם תוצאות רשמיות. התוצאות הרשמיות מגיעות רק מוועדת הבחירות המרכזית. סכומי הקולות בחלק התוצאות הועתקו ידנית מאתר הוועדה."],
   ],
   en: [
-    ["When will the Israel election results be published?", "Counting starts when polls close at 22:00 Israel time on 27 October 2026, and results update here through the night. The Central Elections Committee expects true results around midday on 29 October; official results are published in the Reshumot gazette by 4 November."],
-    ["Where does the data come from?", "The Committee's results file is blocked outside Israel. Vote totals are copied by hand from the Central Elections Committee results site, and seat numbers are copied from the media report named beside that table. TV seat samples are in a separate section."],
-    ["Are the seat numbers final?", "No. Seat numbers are copied from a named media report of the partial count; this site does not calculate seats. They will change as counting goes on, especially after the double-envelope count. The binding result is the one the Committee publishes."],
+    ["When will the Israel election results be published?", "The Central Elections Committee approved the official final results on 4 November 2026. The final seat table is shown at the top of this page; the dated election-night updates below are an archive."],
+    ["Where does the data come from?", "The top table records the Central Elections Committee final result approved on 4 November 2026, with its source. Earlier dated entries cite the reports used for the partial count. Television seat samples are historical and are not official results."],
+    ["Are the seat numbers final?", "Yes, the top table is the official final seat allocation approved by the Central Elections Committee on 4 November 2026. Earlier partial counts and television samples remain in clearly labelled historical sections; they are not the final result."],
     ["What is the electoral threshold?", "3.25 percent of valid votes. A list below it wins no seats."],
     ["How many seats are needed to form a government?", "A government needs the confidence of a Knesset majority: 61 of 120. "],
     ["How many people can vote?", "According to the Central Elections Committee, 7,331,981 eligible voters and 12,018 polling stations."],

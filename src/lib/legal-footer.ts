@@ -7,8 +7,8 @@ export const INFORMATIONAL_NOTE =
 /** English labels. Locale pages link to the English legal URLs, as they do for privacy. */
 export function staticLegalNavHtml(): string {
   return LEGAL_NAV.map((item) => {
-    const href = item.href.endsWith("/") ? item.href : `${item.href}/`;
-    return `<a href="${href}">${item.label}</a>`;
+    const href = item.href.includes("#") || item.href.endsWith("/") ? item.href : `${item.href}/`;
+    return `<a href="${href}">${item.label.replace(/&/g, "&amp;")}</a>`;
   }).join(" · ");
 }
 
