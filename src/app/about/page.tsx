@@ -38,9 +38,9 @@ export default function AboutPage() {
           are not official election pictures. Municipality pages do not carry them. Pages for a country without one of
           these images use the plain site card instead.
         </p>
-        <h2>Editorial methods and sources</h2>
+        <h2 id="editorial-methods">Editorial methods and sources</h2>
         <p>
-          <strong>Last updated: 27 October 2026.</strong> Map the General Editorial Team writes the previews on the
+          <strong>Last updated: 7 November 2026.</strong> Map the General Editorial Team writes the previews on the
           homepage, on each country hub, and on the election pages that carry one. The byline is the team. A personal
           name is not used on those pages.
         </p>
@@ -65,6 +65,18 @@ export default function AboutPage() {
           Sources are linked at the end of each preview and on the country sources page. A correction goes through the{" "}
           <Link href="/contact/">contact page</Link>. Who operates the site is stated on the{" "}
           <Link href="/imprint/">legal notice</Link>.
+        </p>
+        <p>
+          Our compilation and drafting are AI-assisted. Dates, candidate eligibility and results must be
+          checked against the linked election authority; preliminary counts are not certified results.
+          We do not manufacture missing local officeholders or treat a population directory as election reporting.
+        </p>
+        <p>
+          To request a correction, send the page URL, the disputed statement and an authoritative source
+          through <Link href="/contact/">Contact</Link>. We review the evidence, correct material errors,
+          and record substantive changes in the <Link href="/copyright/#corrections">corrections log</Link>.
+          Advertising partners have no role in editorial decisions. This independently operated site is
+          published from the United States; the operator is identified in our <Link href="/imprint/">legal notice</Link>.
         </p>
         <h2>What this site is not</h2>
         <ul>

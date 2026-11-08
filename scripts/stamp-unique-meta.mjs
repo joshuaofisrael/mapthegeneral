@@ -1,16 +1,16 @@
 /**
  * Mediavine/AdSense quality pass: many place pages share a bare title such as
  * "Victoria · Map the General" (a BC municipality, a riding, a division...).
- * For indexable pages whose <title> or meta description is duplicated, add the
+ * For directory pages whose <title> or meta description is duplicated, add the
  * nearest breadcrumb parents (already on the page, already localized) until the
- * value is unique. Italy (Chieti hold) and NZ (sealed) are never touched.
+ * value is unique. NZ sealed pages are not touched; Italian election facts are unchanged.
  * Undo: remove this script from "postbuild".
  */
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const OUT = path.join(process.cwd(), "out");
-const SKIP = ["/it/", "/nz/"];
+const SKIP = ["/nz/"];
 const SUFFIX = " · Map the General";
 const DESC_LIMIT = 160;
 const titleRe = /<title>([^<]*)<\/title>/i;
@@ -28,7 +28,7 @@ function walk(dir) {
     const html = readFileSync(full, "utf8");
     if (/http-equiv="refresh"/i.test(html)) continue;
     const robots = html.match(robotsRe)?.[1] ?? "";
-    if (robots.includes("noindex")) continue;
+
     const title = html.match(titleRe)?.[1];
     if (!title) continue;
     const desc = html.match(descRe)?.[1] ?? "";
@@ -98,6 +98,18 @@ for (const g of group((p) => p.desc)) {
   }, "desc");
 }
 
+// Final collision guard: the route is unique, even where breadcrumb names
+// and English/local official names are identical. No election facts change.
+const finalTitles = new Map();
+for (const p of pages) {
+  const title = p.titleNew ?? p.title;
+  const group = finalTitles.get(title) ?? [];
+  group.push(p); finalTitles.set(title, group);
+}
+for (const group of finalTitles.values()) if (group.length > 1) {
+  for (const p of group) p.titleNew = (p.titleNew ?? p.title).replace(SUFFIX, "") + ` [${esc(p.route)}]` + SUFFIX;
+}
+
 let t = 0, d = 0;
 for (const p of pages) {
   if (!p.titleNew && !p.descNew) continue;
@@ -116,4 +128,4 @@ for (const p of pages) {
   }
   writeFileSync(p.full, html);
 }
-console.log(`unique-meta: ${t} titles and ${d} descriptions disambiguated across ${pages.length} indexable pages (it/nz skipped).`);
+console.log(`unique-meta: ${t} titles and ${d} descriptions disambiguated across ${pages.length} documents (NZ sealed pages skipped).`);

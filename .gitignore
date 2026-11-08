@@ -83,3 +83,6 @@ next-env.d.ts
 .vercel
 /public/fr/en/
 /public/fr/fr/
+
+# Generated publisher-policy audit
+.publisher-audit/

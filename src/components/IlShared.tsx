@@ -55,7 +55,7 @@ const SEATS = seatLayout();
 export function Hemicycle({ lang, rows, colors, seatLabel }: { lang: IlLang; rows: IlRow[]; colors: Record<string, string>; seatLabel?: string }) {
   const seq: string[] = [];
   for (const p of rows) for (let i = 0; i < p.seats; i++) seq.push(p.letter);
-  const t = { hemicycle: lang === "he" ? "חלוקת 120 המושבים בכנסת לפי הספירה עד כה" : "How the 120 Knesset seats divide on the count so far", majority: lang === "he" ? "61 לרוב" : "61 for a majority" };
+  const t = { hemicycle: lang === "he" ? "חלוקת 120 המושבים בכנסת בטבלה זו" : "Distribution of the 120 Knesset seats in this table", majority: lang === "he" ? "61 לרוב" : "61 for a majority" };
   const label = seatLabel ? `${t.hemicycle}. ${seatLabel}` : t.hemicycle;
   return (
     <figure className="m-0">

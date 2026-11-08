@@ -9,12 +9,6 @@ import { EMPTY_MUNICIPALITY_TOTAL_COUNT, MUNICIPALITY_PAGE_COUNT } from "../src/
 import { COMMUNITIES, PROVINCES } from "../src/data/spain/places";
 import { registryCountries } from "../src/lib/country-registry";
 import { allPublicPaths, searchIndex } from "../src/lib/routes";
-import {
-  calendarStatus,
-  indexingAsOf,
-  thinCountsByCountry,
-  thinMunicipalityExcluded,
-} from "../src/lib/indexing-policy";
 import { buildDateIso, loadGitFileDates, resolveLastmod, sourceFilesForPath } from "../src/lib/sitemap-lastmod";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -108,8 +102,9 @@ function urlset(paths: string[]): string {
 }
 
 const allPaths = allPublicPaths();
-const asOf = indexingAsOf();
-const paths = allPaths.filter((path) => !thinMunicipalityExcluded(path, asOf));
+// The export-time publisher-quality gate prunes this full inventory after
+// rendering, using actual content rather than population or election dates.
+const paths = allPaths;
 const buckets = new Map<string, string[]>();
 for (const path of paths) {
   const match = path.match(/^\/([a-z]{2})\/([a-z]{2})\//);
@@ -195,24 +190,8 @@ for (const name of bucketNames) {
   const country = name === "global" ? "global" : name.slice(0, 2);
   countryAfter.set(country, (countryAfter.get(country) ?? 0) + (buckets.get(name)?.length ?? 0));
 }
-const thinByCountry = thinCountsByCountry();
-const status = calendarStatus(asOf);
-console.log(
-  `indexes: sitemap ${paths.length} urls, was ${allPaths.length}, omitted ${allPaths.length - paths.length} thin municipality pages outside the election window (${asOf})`,
-);
-console.log(
-  `indexes: per country ${[...countryBefore.keys()].sort().map((country) => `${country} ${countryBefore.get(country)}→${countryAfter.get(country) ?? 0}`).join(", ")}`,
-);
-console.log(
-  `indexes: thin pages ${[...thinByCountry.entries()].sort().map(([country, count]) => `${country} ${count}`).join(", ") || "none"}`,
-);
-console.log(
-  `indexes: in window ${status.inWindow.map((row) => `${row.country} ${row.activeDays.join("+")}`).join(", ") || "none"}`,
-);
-console.log(
-  `indexes: outside window ${status.outsideWindow.map((row) => `${row.country} ${row.pollingDays.join("+")}`).join(", ") || "none"}`,
-);
-console.log(`indexes: unreliable calendars stay indexed: ${status.unreliable.join(", ") || "none"}`);
+console.log(`indexes: initial inventory ${paths.length} URLs; publisher-quality prunes non-substantive pages after export.`);
+console.log(`indexes: per country ${[...countryBefore.keys()].sort().map((country) => `${country} ${countryBefore.get(country)}`).join(", ")}`);
 console.log(
   `indexes: files ${bucketNames.map((name) => `${name} ${beforeBuckets.get(name) ?? 0}→${buckets.get(name)?.length ?? 0}`).join(", ")}; lastmod days ${distinct.size}; index ${BUILD_DATE}`,
 );

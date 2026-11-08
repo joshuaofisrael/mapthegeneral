@@ -2,10 +2,8 @@
  * Fails the build when an indexable exported page has no title, no meta
  * description, or a meta description longer than 160 characters.
  * Open Graph and Twitter descriptions are checked when those tags exist.
- * noindex pages are skipped here. Thin municipality pages outside an election
- * window are an owner-approved noindex exception; check-indexing-policy.ts
- * still fails the build if a country, region, election, results, larger-city,
- * or in-window page is noindex.
+ * noindex pages are skipped here. The publisher-content quality gate verifies
+ * every exclusion and protects core election/live/results pages.
  *
  * New Zealand, Bulgaria, and Taiwan are skipped: their current copy is over
  * the limit, and those countries are owned by other work.

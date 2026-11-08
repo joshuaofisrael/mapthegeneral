@@ -6,6 +6,7 @@
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { isRedirectStub } from "../src/lib/adsense";
+import { LEGAL_NAV } from "../src/data/site";
 import { INFORMATIONAL_NOTE, legalFooterSuffix } from "../src/lib/legal-footer";
 
 const OUT = path.join(process.cwd(), "out");
@@ -32,11 +33,15 @@ function walk(dir: string) {
     }
     const rel = path.relative(OUT, full);
     let next = html;
-    if (!html.includes(MARKER)) {
+    const missing = LEGAL_NAV.filter(item => !html.includes(`href="${item.href}"`));
+    const suffix = missing.length
+      ? `<nav aria-label="Publisher information">${missing.map(item => `<a href="${item.href}">${item.label.replace(/&/g,"&amp;")}</a>`).join(" · ")}</nav>${html.includes(INFORMATIONAL_NOTE) ? "" : `<br>${INFORMATIONAL_NOTE}`}`
+      : "";
+    if (missing.length) {
       if (html.includes("</footer>")) {
-        next = html.replace("</footer>", `${SUFFIX}</footer>`);
+        next = html.replace("</footer>", `${suffix}</footer>`);
       } else if (html.includes("</body>")) {
-        next = html.replace("</body>", `<footer class="wrap">${SUFFIX.trim()}</footer></body>`);
+        next = html.replace("</body>", `<footer class="wrap">${suffix}</footer></body>`);
       } else {
         errors.push(`${rel}: no footer to attach legal links to`);
         continue;
