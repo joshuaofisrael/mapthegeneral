@@ -138,6 +138,7 @@ export default function NzResultsPage() {
         <p>
           How the count works: <Link href="/nz/en/results-night/">how results night works</Link>. Candidates by seat:{" "}
           <Link href="/nz/en/electorates/">electorates</Link>. Parties: <Link href="/nz/en/parties/">party vote</Link>.
+          Other countries: <Link href="/results/">election results worldwide</Link>.
         </p>
       </div>
 
