@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Privacy" }]} />
       <PageHeader
-        eyebrow="Last updated 27 October 2026"
+        eyebrow="Last updated 9 November 2026"
         title="Privacy Policy"
         lede={`How ${SITE.legalName} handles information on ${SITE.name}.`}
       />
@@ -219,6 +219,72 @@ export default function PrivacyPage() {
           all advertisements. Ezoic’s partner disclosure, when available, follows.
         </p>
         <span id="ezoic-privacy-policy-embed"></span>
+        <h3 id="ad-partners">Third-party advertising partners</h3>
+        <p>
+          The advertising partners this site uses are Google AdSense and Ezoic, described above. {SITE.name} may
+          also work with Mediavine, Inc. as an advertising partner in future. Mediavine ads are not running on this
+          site today; if that changes, this section will be updated before they start. Mediavine’s privacy notices
+          are in its{" "}
+          <a href="https://www.mediavine.com/legal-and-privacy-center/" rel="noopener noreferrer">
+            Legal and Privacy Center
+          </a>
+          , and its privacy choices and requests are at{" "}
+          <a href="https://privacy.mediavine.com/" rel="noopener noreferrer">
+            privacy.mediavine.com
+          </a>
+          .
+        </p>
+        <p>
+          <strong>Cookies.</strong> Advertising partners may set or read cookies and similar technologies (such as
+          pixels, local storage and device identifiers) when ads load, to serve ads, limit how often they repeat,
+          measure them, and detect fraud and invalid traffic.
+        </p>
+        <p>
+          <strong>Personalised and non-personalised ads.</strong> Personalised ads use information about your
+          browsing on this and other sites to choose ads. Non-personalised ads are chosen from context, such as the
+          page you are reading and your approximate location, but partners may still use cookies for frequency
+          capping, measurement and fraud prevention. Where consent is required and not given, only
+          non-personalised or limited ads may be shown.
+        </p>
+        <p>
+          <strong>Data shared with ad partners.</strong> When an ad loads, your browser sends the partner
+          information such as your IP address, browser and device type, the page URL and referrer, the time,
+          cookie or device identifiers, and your consent choices. Partners may share it with their own ad-tech
+          partners to run ad auctions. This site does not give advertisers your email address, contact-form
+          messages or sign-up details.
+        </p>
+        <p>
+          <strong>Opt-out links.</strong> Google ad settings:{" "}
+          <a href="https://adssettings.google.com/" rel="noopener noreferrer">adssettings.google.com</a>. Digital
+          Advertising Alliance (US):{" "}
+          <a href="https://optout.aboutads.info/" rel="noopener noreferrer">optout.aboutads.info</a>. Network
+          Advertising Initiative:{" "}
+          <a href="https://optout.networkadvertising.org/" rel="noopener noreferrer">
+            optout.networkadvertising.org
+          </a>
+          . European Interactive Digital Advertising Alliance (EU/UK):{" "}
+          <a href="https://www.youronlinechoices.eu/" rel="noopener noreferrer">youronlinechoices.eu</a>.
+          Mediavine:{" "}
+          <a href="https://privacy.mediavine.com/" rel="noopener noreferrer">privacy.mediavine.com</a>. Opting
+          out works per browser and device, and you will still see ads, but they will be less personalised.
+        </p>
+        <p>
+          <strong>US state privacy rights.</strong> If you live in a US state with a consumer privacy law (such
+          as California, Colorado, Connecticut, Virginia, Utah, Texas or Oregon), you may have the right to know
+          what personal information is collected, to access, correct or delete it, and to opt out of the sale or
+          sharing of personal information for targeted (cross-context behavioural) advertising. Ad cookies set by
+          partners may count as a sale or sharing under some of these laws. You can opt out through the links
+          above, or ask us through the{" "}
+          <Link href="/contact/">contact page</Link>. We will not treat you differently for using these rights.
+        </p>
+        <p>
+          <strong>EU, EEA, UK and Switzerland.</strong> This site’s consent settings start with advertising and
+          analytics storage denied, and they are unchanged by this section. Personalised ads and non-essential advertising cookies are used only after consent
+          through the certified advertising consent message, when it is displayed, and you can withdraw consent at
+          any time. The legal basis for those cookies is your consent. You also have rights of access,
+          rectification, erasure, restriction, objection and portability, and the right to complain to your data
+          protection authority.
+        </p>
         <p>
           Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
           The <Link href="/advertising/">advertising disclosure</Link> says that ads are Google AdSense and Ezoic,
