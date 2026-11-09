@@ -23,7 +23,7 @@ export function SiteHeader({ hubs }: { hubs: readonly CountryHubLink[] }) {
           <span className="block font-serif text-lg font-semibold tracking-tight text-ink sm:text-xl">
             {SITE.name}
           </span>
-          <span className="block truncate text-xs text-ink-muted">Unofficial, independent guide</span>
+          <span className="block truncate text-xs text-ink-muted">Live election results worldwide · unofficial</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm md:flex" aria-label="Primary">
           <CountriesMenu hubs={hubs} menuId="countries-desktop" />

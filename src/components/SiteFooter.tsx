@@ -14,6 +14,11 @@ export function SiteFooter() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-white/60">Explore</p>
           <ul className="mt-3 space-y-2 text-sm">
+            <li>
+              <Link className="font-semibold hover:underline" href="/results/">
+                Election results worldwide
+              </Link>
+            </li>
             {countryHubs().map((hub) => (
               <li key={hub.code}>
                 <Link className="hover:underline" href={hub.href} lang={hub.lang} dir={hub.dir}>
@@ -28,7 +33,7 @@ export function SiteFooter() {
             </li>
             <li>
               <a className="hover:underline" href={SITE.siblingUrl}>
-                {SITE.siblingName}
+                US election results: {SITE.siblingName}
               </a>
             </li>
           </ul>
