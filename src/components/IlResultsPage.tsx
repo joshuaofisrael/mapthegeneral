@@ -131,9 +131,9 @@ const RELATED: { href: string; he: string; en: string }[] = [
   { href: "/il/en/sources/", he: "מקורות רשמיים", en: "Official sources for Israel" },
   { href: "/br/en/elections/", he: "ברזיל – הבחירות הכלליות 2026", en: "Brazil 2026 general election" },
   { href: "/rs/en/elections/national-assembly-2026/", he: "סרביה – הבחירות לפרלמנט 2026", en: "Serbia National Assembly election 2026" },
-  { href: "/es/en/", he: "ספרד – הבחירות הכלליות", en: "Spain general election" },
+  { href: "/es/en/results/", he: "ספרד – תוצאות הבחירות הכלליות", en: "Spain election results live" },
   { href: "/au/", he: "אוסטרליה – הבחירות בוויקטוריה", en: "Australia: Victorian state election" },
-  { href: "/", he: "כל הבחירות בעולם", en: "All elections worldwide" },
+  { href: "/results/", he: "תוצאות בחירות בעולם", en: "Election results worldwide" },
 ];
 
 const NEXT: Record<IlLang, { title: string; note: string; items: [string, string][] }> = {
