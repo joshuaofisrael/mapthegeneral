@@ -53,7 +53,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   {
     question: "What is Map the General?",
     answer:
-      "Map the General is an unofficial, independent, nonpartisan guide to elections in the countries covered so far. It is not affiliated with any government or election authority, and it does not tell you how to vote. Unofficial information. Confirm with your official election office.",
+      "Map the General is an unofficial, independent, nonpartisan site for live election results worldwide, with guides to elections in the countries covered so far. It is not affiliated with any government or election authority, and it does not tell you how to vote. Unofficial information. Confirm with your official election office.",
     links: [{ label: "countries covered so far", href: "#countries" }],
   },
   {

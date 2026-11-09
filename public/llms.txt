@@ -1,11 +1,12 @@
 # Map the General
 
-> Unofficial, independent election pages for countries covered so far. The Spanish general election is Sunday, 29 November 2026. Not an official election website. Publisher: Map the General. Business address: 5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322. Unofficial information. Confirm with your official election office.
+> Live election results worldwide from official sources, with dated updates, plus the calendar of next elections. Spain votes 29 November 2026. Unofficial. Publisher: Map the General. Business address: 5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322. Unofficial information. Confirm with your official election office.
 
 ## Pages
 
 - [Map the General](https://mapthegeneral.com/)
 - [Poland](https://mapthegeneral.com/pl/)
+- [Election results live worldwide](https://mapthegeneral.com/results/)
 - [Search](https://mapthegeneral.com/search/)
 - [About](https://mapthegeneral.com/about/)
 - [Disclaimer](https://mapthegeneral.com/disclaimer/)

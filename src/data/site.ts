@@ -3,7 +3,7 @@ const DEFAULT_SITE_URL = "https://mapthegeneral.com";
 /** 160 is the limit for both code points and UTF-8 bytes. A curly apostrophe made the old line 162 bytes. */
 function homepageDescription(): string {
   const description =
-    "Unofficial, independent election pages for countries covered so far. The Spanish general election is Sunday, 29 November 2026. Not an official election website.";
+    "Live election results worldwide from official sources, with dated updates, plus the calendar of next elections. Spain votes 29 November 2026. Unofficial.";
   const chars = [...description].length;
   const bytes = new TextEncoder().encode(description).length;
   if (chars > 160 || bytes > 160) {
@@ -19,7 +19,7 @@ function publicSiteUrl(): string {
 
 export const SITE = {
   name: "Map the General",
-  tagline: "A global, nonpartisan election guide",
+  tagline: "Live election results worldwide",
   description: homepageDescription(),
   url: publicSiteUrl(),
   streetAddress: "5640 W Maple Rd, Ste 101",
@@ -48,8 +48,9 @@ export const LEGAL_NAV = [
 ] as const;
 
 export const PRIMARY_NAV = [
-  { href: "/us/en/live/", label: "US election results live" },
-  { href: "/nz/en/results/", label: "NZ election results" },
+  { href: "/results/", label: "Election results" },
+  { href: "/results/#calendar", label: "Next elections" },
+  { href: "/es/en/results/", label: "Spain results live" },
   { href: "/search/", label: "Search" },
   { href: "/about/", label: "About" },
 ] as const;

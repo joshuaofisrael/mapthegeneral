@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "About",
-  description: `About ${SITE.name}, an unofficial, independent election guide for the countries covered so far.`,
+  description: `About ${SITE.name}, an unofficial, independent site for live election results worldwide and election guides.`,
   path: "/about",
 });
 
@@ -19,14 +19,17 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title={SITE.name}
-        lede="An unofficial, independent guide to elections in the countries covered so far."
+        lede="An unofficial, independent site for live election results worldwide, with guides to each election it covers. Figures are copied from official sources, with the time they were read."
       />
       <div className="prose-legal">
         <h2>What this site is</h2>
         <p>
-          {SITE.name} publishes sourced pages about elections. The first country in this release is
-          Spain, including the general election called for Sunday, 29 November 2026. Pages name the
-          official source and the date that source was read. Where a fact was not on a source read for
+          {SITE.name} publishes live election results worldwide and sourced guides to each election it covers.
+          Results pages copy counts from the official election authority, or a named outlet carrying its data, and
+          label each figure with its stage (preliminary or official final), its source and the time it was read. The{" "}
+          <Link href="/results/">results hub</Link> lists every covered election and the next polling days. This site
+          does not calculate seats and does not call winners. Pages name the official source and the date that source
+          was read. Where a fact was not on a source read for
           this release, the page says so. Ireland, Norway and Sweden are national hubs added from official
           pages read on 23 October 2026. They have no municipality pages, no candidate names and no live tracker.
         </p>
