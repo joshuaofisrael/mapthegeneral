@@ -443,7 +443,7 @@ const COPY: Record<
     national: {
       title: "Taiwan",
       description:
-        "Taiwan: local public-office elections on Saturday 28 November 2026, from the Central Election Commission’s report to the Legislative Yuan. Unofficial information.",
+        "Taiwan: local public-office elections on Saturday 28 November 2026, from the Central Election Commission report to the Legislative Yuan. Unofficial information.",
       eyebrow: "Local public office · Saturday 28 November 2026",
       lede: "The Commission’s 622nd meeting on 31 October 2025 set polling for Saturday 28 November 2026. The 16 July 2026 report records that decision.",
     },

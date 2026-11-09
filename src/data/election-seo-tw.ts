@@ -206,7 +206,7 @@ export const TW_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: EN,
         title: "Taiwan local elections, 28 November 2026",
         description:
-          "Taiwan local public-office elections on Saturday 28 November 2026. Voting rules, candidate-notice dates and the previous polling day, from the Central Election Commission and the election statute. Unofficial information.",
+          "Taiwan local public-office elections on Saturday 28 November 2026: voting rules, candidate-notice dates and the previous polling day, from official sources.",
         ogDescription:
           "Taiwan local elections, Saturday 28 November 2026. Candidate notices are 12 and 17 November 2026. Unofficial information.",
         ogLocale: "en_US",

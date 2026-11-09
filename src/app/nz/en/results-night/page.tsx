@@ -7,7 +7,7 @@ const PATH = "/nz/en/results-night/";
 export const metadata = pageMetadata({
   title: "How New Zealand election results night works, 7 November 2026",
   description:
-    "When New Zealand results appear on 7 November 2026, what the preliminary count includes, why special votes can change seats, and when official results come on 27 November.",
+    "When New Zealand results appear on 7 November 2026, what the preliminary count includes, why special votes can change seats, and when official results come.",
   path: PATH,
 });
 

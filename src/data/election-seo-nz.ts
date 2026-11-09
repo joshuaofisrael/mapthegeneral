@@ -115,7 +115,7 @@ export const NZ_ELECTION_SEO_PROFILES: ElectionSeoProfile[] = [
         path: PATH,
         title: "New Zealand election 2026: general election date and how to vote NZ",
         description:
-          "New Zealand election 2026: the general election date is Saturday 7 November. How to vote NZ and voting hours, 9am to 7pm, from the Electoral Commission. No count before 7:00 pm. Unofficial information.",
+          "New Zealand election 2026: general election on Saturday 7 November. How to vote NZ, voting hours 9am to 7pm, from the Electoral Commission. Unofficial.",
         ogDescription:
           "New Zealand election 2026: general election date Saturday 7 November, and how to vote NZ, from the Electoral Commission. No count before 7:00 pm.",
         ogLocale: "en_NZ",

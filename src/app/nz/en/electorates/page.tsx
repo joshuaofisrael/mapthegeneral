@@ -8,7 +8,7 @@ const MAORI = new Set(["Hauraki-Waikato", "Ikaroa-Rāwhiti", "Tāmaki Makaurau",
 export const metadata = pageMetadata({
   title: "New Zealand electorates 2026: all 71 and their candidates",
   description:
-    "Every electorate in the 7 November 2026 New Zealand general election, general and Māori, with each nominated candidate and party from the Electoral Commission list.",
+    "Every electorate in the 7 November 2026 New Zealand general election, general and Māori, with each nominated candidate and party from the Electoral Commission.",
   path: PATH,
 });
 
