@@ -152,7 +152,7 @@ function registryEntries(): IndexEntry[] {
   return [...mexicoIndexEntries()];
 }
 
-const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il", "tw"];
+const HUB_CODES: HubCode[] = ["ie", "no", "se", "br", "rs", "il", "tw", "kg"];
 
 function hubIndexEntries(): IndexEntry[] {
   return HUB_CODES.flatMap((code) => {

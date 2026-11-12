@@ -52,6 +52,21 @@ export type ElectionWindow = {
 
 export const ELECTION_WINDOWS: ElectionWindow[] = [
   {
+    id: "kg-2027-presidential",
+    country: "kg",
+    election: { en: "Kyrgyzstan presidential election, 27 January 2027" },
+    pollingDay: "2027-01-27",
+    trackerOpensAt: "2027-01-28T00:00:00+06:00",
+    officialResults: { label: "Central Commission for Elections and Referendums", url: "https://shailoo.gov.kg/" },
+    verified: {
+      readOn: "2026-11-12",
+      sources: [
+        { label: "Jogorku Kenesh, resolution No. 715-VIII of 24 September 2026", url: "https://shailoo.gov.kg/media/%D0%A0%D1%83%D1%81%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_RxKZBOB.pdf" },
+      ],
+    },
+    rules: [],
+  },
+  {
     id: "il-2026-knesset",
     country: "il",
     localLang: "he",
@@ -608,6 +623,11 @@ export type StandingRule = {
 };
 
 export const STANDING_RULES: StandingRule[] = [
+  {
+    country: "kg",
+    note: "The resolution of 24 September 2026 prints the polling day, Wednesday 27 January 2027, and no polling hours. The election law was not read section by section, so no poll or silence period is stated here. This site's editorial hold shows no count before 00:00 on 28 January 2027, Bishkek time, and it publishes no polls.",
+    citation: { label: "Jogorku Kenesh, resolution No. 715-VIII of 24 September 2026", url: "https://shailoo.gov.kg/media/%D0%A0%D1%83%D1%81%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_RxKZBOB.pdf" },
+  },
   {
     country: "gb",
     note: "No dated window. Representation of the People Act 1983 section 66A forbids publishing an exit poll before the close of the poll. This site publishes no exit poll and no United Kingdom tracker until a window is added.",

@@ -1,0 +1,20 @@
+{
+  "code": "kg",
+  "name": "Kyrgyzstan",
+  "href": "/kg/",
+  "summary": "National hub in English. Jogorku Kenesh resolution No. 715-VIII of 24 September 2026 calls the regular presidential election for Wednesday 27 January 2027. No polling hours, no candidate names and no count.",
+  "links": [
+    {
+      "href": "/kg/en/",
+      "label": "English"
+    },
+    {
+      "href": "/kg/en/elections/presidential-2027/",
+      "label": "27 January 2027"
+    },
+    {
+      "href": "/kg/en/sources/",
+      "label": "Sources"
+    }
+  ]
+}

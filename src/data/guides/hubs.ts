@@ -652,6 +652,79 @@ export const twEn: Guide = {
   ],
 };
 
+const KG_RES = "https://shailoo.gov.kg/media/%D0%A0%D1%83%D1%81%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_RxKZBOB.pdf";
+const KG_CEC = "https://shailoo.gov.kg/ru/npacik/Resheniya_CIK_KRKR_BShKnyn_chechimderi/?page=1";
+
+export const kgEn: Guide = {
+  kicker: "Practical guide",
+  title: "Kyrgyzstan's presidential election",
+  intro:
+    "This section is drawn from the Russian text of Jogorku Kenesh resolution No. 715-VIII of 24 September 2026, read on the Central Commission website on 12 November 2026. It describes that text. It is not a direction to vote in any way, and it does not name candidates.",
+  blocks: [
+    {
+      heading: "The date",
+      paragraphs: [
+        [
+          t("The "),
+          t("resolution", KG_RES),
+          t(" calls the regular presidential election for Wednesday 27 January 2027. It entered into force on the day it was adopted, 24 September 2026, and was to be published officially within two calendar days."),
+        ],
+      ],
+    },
+    {
+      heading: "Who runs it",
+      paragraphs: [
+        [
+          t("The resolution gives the Central Commission for Elections and Referendums the job of organising the election and asks it to provide for remote voting. The Cabinet of Ministers is to fund it from the Commission's estimate and to refine the single population register from which voter lists are built. The Prosecutor General's Office is to ensure the Constitution and laws are followed."),
+        ],
+      ],
+    },
+    {
+      heading: "What this hub leaves out",
+      paragraphs: [
+        [
+          t("The resolution does not print polling hours, a nomination timetable or a results date. Those are set by the Central Commission. This hub repeats none of them until they are read in a Commission decision, and it shows no count before 00:00 on 28 January 2027, Bishkek time. The Commission's "),
+          t("decisions list", KG_CEC),
+          t(" is the place to check."),
+        ],
+      ],
+    },
+  ],
+  electionsHeading: "Elections",
+  elections: [
+    {
+      name: "Presidential election, 27 January 2027",
+      detail: "Called by Jogorku Kenesh resolution No. 715-VIII of 24 September 2026.",
+      href: "/kg/en/elections/presidential-2027/",
+    },
+  ],
+  glossaryHeading: "Glossary",
+  glossary: [
+    { term: "Jogorku Kenesh", text: "The national parliament. It adopted the resolution calling the election." },
+    { term: "Central Commission", text: "The Central Commission for Elections and Referendums, which organises the vote and publishes results." },
+  ],
+  faqHeading: "Questions",
+  faq: [
+    {
+      q: "When is the Kyrgyzstan presidential election?",
+      a: "Wednesday 27 January 2027. That is the date in Jogorku Kenesh resolution No. 715-VIII of 24 September 2026.",
+    },
+    {
+      q: "What are the polling hours?",
+      a: "The resolution does not print them. This site gives no polling hours until it reads them in a Central Commission decision.",
+    },
+    {
+      q: "Does this site name candidates or publish polls?",
+      a: "No. It names no candidate, publishes no poll and shows no count before 00:00 on 28 January 2027, Bishkek time.",
+    },
+  ],
+  sourcesHeading: "Official pages",
+  sources: [
+    { label: "Jogorku Kenesh, resolution No. 715-VIII of 24 September 2026 (Russian text)", href: KG_RES },
+    { label: "Central Commission for Elections and Referendums, decisions list", href: KG_CEC },
+  ],
+};
+
 export const hubGuides: Record<string, Record<string, Guide>> = {
   ie: { en: ieEn },
   no: { en: noEn },
@@ -660,4 +733,5 @@ export const hubGuides: Record<string, Record<string, Guide>> = {
   rs: { en: rsEn },
   il: { en: ilEn },
   tw: { en: twEn },
+  kg: { en: kgEn },
 };
