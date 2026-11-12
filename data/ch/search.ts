@@ -127,6 +127,20 @@ function entriesFor(lang: ChLang): ChIndexEntry[] {
       kind: "election",
       text: "29 November 2026 Volksabstimmung votation votazione Switzerland Schweiz",
     },
+    {
+      path: `${home}elections/volksabstimmung-2027-02-28/`,
+      lang,
+      title:
+        lang === "de"
+          ? "Volksabstimmung, 28. Februar 2027"
+          : lang === "fr"
+            ? "Votation populaire, 28 février 2027"
+            : lang === "it"
+              ? "Votazione popolare, 28 febbraio 2027"
+              : "Federal popular vote, 28 February 2027",
+      kind: "election",
+      text: "28 February 2027 28. Februar 2027 Volksabstimmung votation votazione Bundeskanzlei Switzerland Schweiz",
+    },
     { path: `${home}parties/`, lang, title: labels.parties, kind: "parties", text: "Parteien partis partiti parties" },
     { path: `${home}candidates/`, lang, title: labels.candidates, kind: "candidates", text: "Kandidaturen candidatures candidature" },
     { path: `${home}results/`, lang, title: labels.results, kind: "results", text: "Ergebnisse résultats risultati Nationalrat 2023" },
