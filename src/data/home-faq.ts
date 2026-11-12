@@ -37,9 +37,10 @@ const COUNTRY_LINKS = [
   { label: "Estonia", href: "/ee/" },
   { label: "Netherlands", href: "/nl/" },
   { label: "Finland", href: "/fi/" },
+  { label: "Kyrgyzstan", href: "/kg/" },
 ] as const;
 
-const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "New Zealand", "Estonia", "Netherlands", "Finland"]);
+const HUB_LABELS = new Set(["Ireland", "Norway", "Sweden", "Brazil", "Serbia", "Israel", "Taiwan", "New Zealand", "Estonia", "Netherlands", "Finland", "Kyrgyzstan"]);
 
 function englishList(labels: readonly string[]): string {
   const spoken = labels.map((label) => (label === "United Kingdom" ? "the United Kingdom" : label));
@@ -58,7 +59,7 @@ export const HOME_FAQS: readonly HomeFaqItem[] = [
   },
   {
     question: "Which countries does this site cover?",
-    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil and Serbia, with no municipality pages and no live tracker. Israel is a national hub with no municipality pages. New Zealand, Taiwan, Estonia, the Netherlands and Finland are national hubs with no municipality pages. Each election-night section stays closed until its opening time, any required confirmation, and a usable official feed. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
+    answer: `This release covers ${fullGuides}. It also has national hubs for Ireland, Norway, Sweden, Brazil and Serbia, with no municipality pages and no live tracker. Israel is a national hub with no municipality pages. New Zealand, Taiwan, Estonia, the Netherlands, Finland and Kyrgyzstan are national hubs with no municipality pages. Each election-night section stays closed until its opening time, any required confirmation, and a usable official feed. An unofficial seat allocation calculated from partial official vote totals is labelled as not final and not an official seat allocation. The 2026 U.S. midterm pages are on the sibling site ${SITE.siblingName}.`,
     links: [...COUNTRY_LINKS, { label: SITE.siblingName, href: SITE.siblingUrl }],
   },
   {
