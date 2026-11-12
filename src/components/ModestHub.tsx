@@ -16,6 +16,7 @@ import { breadcrumbJsonLd } from "@/lib/metadata";
 import type { CSSProperties, ReactNode } from "react";
 
 function hubUpdated(code: HubCode): string {
+  if (code === "kg") return "12 November 2026";
   if (code === "tw") return "27 October 2026";
   if (code === "br" || code === "rs" || code === "il") return "26 October 2026";
   return "23 October 2026";
@@ -450,6 +451,35 @@ function ElectionBody({ code }: { code: HubCode }) {
           says section 21-8 does not allow results to be published before 21:00 on election day, including forecasts
           based on surveys on election day or the day before. Lovdata was not opened. This site publishes no count and
           no such forecast.
+        </p>
+      </>
+    );
+  }
+  if (code === "kg") {
+    return (
+      <>
+        <p>
+          The 
+          <a href="https://shailoo.gov.kg/media/%D0%A0%D1%83%D1%81%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_RxKZBOB.pdf" rel="noopener noreferrer">
+            Jogorku Kenesh resolution No. 715-VIII
+          </a>
+          , adopted on 24 September 2026, calls the regular election of the President of the Kyrgyz Republic for
+          Wednesday 27 January 2027. It cites article 80 of the Constitution and article 48 of the constitutional law on
+          the election of the President and of deputies of the Jogorku Kenesh.
+        </p>
+        <p>
+          The resolution tells the Central Commission for Elections and Referendums to organise the election and to
+          provide for remote voting. It tells the Cabinet of Ministers to fund the election, to refine the population
+          register used to build voter lists, and to support online voter identification and cyber security.
+        </p>
+        <p>
+          The resolution does not print polling hours, a candidate list or a results timetable. This page gives none.
+          It names no candidate, publishes no poll, and shows no count before 00:00 on 28 January 2027, Bishkek time.
+          Results come from the 
+          <a href="https://shailoo.gov.kg/" rel="noopener noreferrer">
+            Central Commission
+          </a>
+          .
         </p>
       </>
     );

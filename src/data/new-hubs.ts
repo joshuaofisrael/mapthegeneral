@@ -9,7 +9,7 @@ export const TW_HUB_LANGUAGES = {
   "x-default": absoluteUrl("/tw/"),
 };
 
-export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il" | "tw";
+export type HubCode = "ie" | "no" | "se" | "br" | "rs" | "il" | "tw" | "kg";
 export type HubKind = "chooser" | "national" | "elections" | "election" | "faq" | "sources";
 
 type Hub = {
@@ -26,6 +26,7 @@ type Hub = {
 const READ = "2026-10-23";
 const READ_NEW = "2026-10-26";
 const READ_TW = "2026-10-27";
+const READ_KG = "2026-11-12";
 
 export const HUBS: Record<HubCode, Hub> = {
   ie: {
@@ -202,6 +203,20 @@ export const HUBS: Record<HubCode, Hub> = {
       },
     ],
   },
+  kg: {
+    code: "kg",
+    name: "Kyrgyzstan",
+    officeLabel: "Central Commission for Elections and Referendums",
+    officeHref: "https://shailoo.gov.kg/",
+    electionSlug: "presidential-2027",
+    electionName: "Presidential election, 27 January 2027",
+    blurb:
+      "National hub in English. Jogorku Kenesh resolution No. 715-VIII of 24 September 2026 calls the regular presidential election for Wednesday 27 January 2027. No polling hours, no candidate names, no polls and no count. No regional pages.",
+    sources: [
+      { id: "kg-res", name: "Jogorku Kenesh, resolution No. 715-VIII of 24 September 2026 on calling the regular presidential election (Russian text)", url: "https://shailoo.gov.kg/media/%D0%A0%D1%83%D1%81%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_RxKZBOB.pdf", readOn: READ_KG },
+      { id: "kg-cec", name: "Central Commission for Elections and Referendums, decisions list", url: "https://shailoo.gov.kg/ru/npacik/Resheniya_CIK_KRKR_BShKnyn_chechimderi/?page=1", readOn: READ_KG },
+    ],
+  },
 };
 
 export function hubHome(code: HubCode): string {
@@ -217,6 +232,42 @@ const COPY: Record<
   HubCode,
   Record<HubKind, { title: string; description: string; lede: string; eyebrow?: string; metaTitle?: string }>
 > = {
+  kg: {
+    chooser: {
+      title: "Kyrgyzstan — language",
+      description: "Kyrgyzstan on Map the General: an English guide to the presidential election of 27 January 2027. Unofficial information.",
+      lede: "This release is an English national hub. It has no regional pages.",
+    },
+    national: {
+      title: "Kyrgyzstan",
+      metaTitle: "Kyrgyzstan presidential election 2027",
+      description: "Kyrgyzstan: the regular presidential election called for Wednesday 27 January 2027 by Jogorku Kenesh resolution No. 715-VIII. Unofficial information.",
+      eyebrow: "President · 27 January 2027",
+      lede: "The Jogorku Kenesh resolution adopted on 24 September 2026 calls the regular presidential election for Wednesday 27 January 2027.",
+    },
+    elections: {
+      title: "Elections in Kyrgyzstan",
+      description: "The presidential election of 27 January 2027, as called by the Jogorku Kenesh on 24 September 2026.",
+      lede: "This hub lists the presidential election only.",
+    },
+    election: {
+      title: "Presidential election, 27 January 2027",
+      metaTitle: "Kyrgyzstan presidential election, 27 January 2027",
+      description: "Kyrgyzstan votes for President on Wednesday 27 January 2027, under Jogorku Kenesh resolution No. 715-VIII. No polling hours, candidates or count here. Unofficial information.",
+      eyebrow: "Wednesday 27 January 2027",
+      lede: "The date below comes from the resolution itself. Polling hours are not printed in it, so this page does not give any.",
+    },
+    faq: {
+      title: "Kyrgyzstan questions",
+      description: "Short answers on the Kyrgyzstan hub: the 27 January 2027 date, polling hours, candidates and results.",
+      lede: "Answers below follow the resolution read on 12 November 2026.",
+    },
+    sources: {
+      title: "Kyrgyzstan sources",
+      description: "Official pages used for the Kyrgyzstan hub: the Jogorku Kenesh resolution of 24 September 2026 and the Central Commission decisions list.",
+      lede: "The resolution was read in its Russian text on the Central Commission website. No English translation was used.",
+    },
+  },
   ie: {
     chooser: {
       title: "Ireland — language",

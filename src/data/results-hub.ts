@@ -39,6 +39,7 @@ const COUNTRY_NAMES: Record<string, string> = {
   ie: "Ireland",
   il: "Israel",
   it: "Italy",
+  kg: "Kyrgyzstan",
   mx: "Mexico",
   nl: "Netherlands",
   nz: "New Zealand",
@@ -51,6 +52,13 @@ type Overlay = Omit<HubElection, "id" | "country" | "countryName" | "pollingDay"
 const nzCounted = nzManual.votingPlacesCounted ? `, ${nzManual.votingPlacesCounted} of voting places reported` : "";
 
 const OVERLAY: Record<string, Overlay> = {
+  "kg-2027-presidential": {
+    name: "Presidential election",
+    guidePath: "/kg/en/elections/presidential-2027/",
+    searchLabel: "Kyrgyzstan presidential election results",
+    stage: "awaiting",
+    stageNote: "Results come from the Central Commission for Elections and Referendums.",
+  },
   "il-2026-knesset": {
     name: "Knesset election",
     resultsPath: "/il/en/results/",

@@ -48,6 +48,14 @@ const editorialCount =
   "This site’s own policy is to show no count before the official release time, and to publish no poll, quick count, or exit poll. A missing confirmation, a failed feed, or an announced polling extension does not open the page.";
 
 export const RELEASE_POLICIES: Record<string, ReleasePolicy> = {
+  "kg-2027-presidential": policy(
+    "Asia/Bishkek",
+    "2027-01-28T00:00:00+06:00",
+    "2027-01-27T00:00:00+06:00",
+    "The resolution of 24 September 2026 does not print polling hours or a results time. The Central Commission for Elections and Referendums is the official results source. This site shows no count before 00:00 on 28 January 2027, Bishkek time.",
+    { label: "Central Commission for Elections and Referendums", url: "https://shailoo.gov.kg/" },
+    editorialCount,
+  ),
   "il-2026-knesset": policy(
     "Asia/Jerusalem",
     "2026-10-27T22:00:00+02:00",
