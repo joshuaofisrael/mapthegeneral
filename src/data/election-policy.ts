@@ -116,6 +116,14 @@ export const RELEASE_POLICIES: Record<string, ReleasePolicy> = {
     { label: "Bundesamt für Statistik, Abstimmungen", url: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html" },
     editorialCount,
   ),
+  "ch-2027-02-28": policy(
+    "Europe/Zurich",
+    "2027-03-01T00:00:00+01:00",
+    "2027-02-28T00:00:00+01:00",
+    "The Federal Chancellery release of 28 October 2026 does not print a results hour. The Federal Statistical Office is the official results service. This site shows no count before midnight Central European Time at the start of 1 March 2027.",
+    { label: "Bundesamt für Statistik, Abstimmungen", url: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html" },
+    editorialCount,
+  ),
   "ie-2026-seanad": policy(
     "Europe/Dublin",
     "2026-11-06T11:00:00+00:00",

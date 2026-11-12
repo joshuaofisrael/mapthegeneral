@@ -292,6 +292,26 @@ export default async function SwitzerlandNationalPage({ params }: { params: Prom
                   : "Popular vote of 29 November 2026"}
           </Link>
         </p>
+        <p>
+          {lang === "de"
+            ? "Die Medienmitteilung der Bundeskanzlei vom 28. Oktober 2026, gelesen am 12. November 2026, sagt, der Bundesrat habe an seiner Sitzung vom 28. Oktober 2026 beschlossen, fünf Vorlagen am 28. Februar 2027 zur Abstimmung zu bringen. Diese Ausgabe veröffentlicht dazu keine Umfrage, keine Hochrechnung und kein Ergebnis."
+            : lang === "fr"
+              ? "Le communiqué de la Chancellerie fédérale du 28 octobre 2026, lu le 12 novembre 2026, dit que le Conseil fédéral a décidé, lors de sa séance du 28 octobre 2026, de soumettre cinq objets à la votation populaire du 28 février 2027. Cette édition n’en publie ni sondage, ni projection, ni résultat."
+              : lang === "it"
+                ? "Il comunicato della Cancelleria federale del 28 ottobre 2026, letto il 12 novembre 2026, dice che il Consiglio federale, nella seduta del 28 ottobre 2026, ha deciso di sottoporre cinque oggetti alla votazione popolare del 28 febbraio 2027. Questa edizione non ne pubblica un sondaggio, una proiezione o un risultato."
+                : "The Federal Chancellery release of 28 October 2026, read on 12 November 2026, says the Federal Council decided at its meeting of 28 October 2026 to put five proposals to a popular vote on 28 February 2027. This release publishes no poll, projection, or result for that vote."}
+        </p>
+        <p className="text-sm">
+          <Link className="text-navy underline" href={`${path}elections/volksabstimmung-2027-02-28/`}>
+            {lang === "de"
+              ? "Volksabstimmung vom 28. Februar 2027"
+              : lang === "fr"
+                ? "Votation du 28 février 2027"
+                : lang === "it"
+                  ? "Votazione del 28 febbraio 2027"
+                  : "Popular vote of 28 February 2027"}
+          </Link>
+        </p>
         <p className="text-sm">
           <Link className="text-navy underline" href={`${path}parties/`}>
             {copy.parties}
