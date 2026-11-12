@@ -253,7 +253,7 @@ const COPY: Record<
     election: {
       title: "Presidential election, 27 January 2027",
       metaTitle: "Kyrgyzstan presidential election, 27 January 2027",
-      description: "Kyrgyzstan votes for President on Wednesday 27 January 2027, under Jogorku Kenesh resolution No. 715-VIII. No polling hours, candidates or count here. Unofficial information.",
+      description: "Kyrgyzstan votes for President on Wednesday 27 January 2027, under Jogorku Kenesh resolution No. 715-VIII. Unofficial information.",
       eyebrow: "Wednesday 27 January 2027",
       lede: "The date below comes from the resolution itself. Polling hours are not printed in it, so this page does not give any.",
     },
