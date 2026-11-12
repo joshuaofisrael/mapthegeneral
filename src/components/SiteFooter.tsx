@@ -19,6 +19,11 @@ export function SiteFooter() {
                 Election results worldwide
               </Link>
             </li>
+            <li>
+              <Link className="hover:underline" href="/election-calendar/">
+                Election calendar
+              </Link>
+            </li>
             {countryHubs().map((hub) => (
               <li key={hub.code}>
                 <Link className="hover:underline" href={hub.href} lang={hub.lang} dir={hub.dir}>

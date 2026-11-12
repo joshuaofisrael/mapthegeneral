@@ -129,7 +129,8 @@ export default function ResultsHubPage() {
         <h2 className="font-serif text-2xl font-semibold">Next elections: calendar</h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted">
           Polling days in date order. Each date is taken from the election authority or legal instrument cited on that
-          election’s guide.
+          election’s guide. The <Link className="text-navy underline" href="/election-calendar/">full election calendar</Link>{" "}
+          lists the source for every date.
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="w-full text-left text-sm">

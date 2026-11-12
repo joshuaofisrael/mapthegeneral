@@ -7,6 +7,7 @@
 - [Map the General](https://mapthegeneral.com/)
 - [Poland](https://mapthegeneral.com/pl/)
 - [Election results live worldwide](https://mapthegeneral.com/results/)
+- [Election calendar: upcoming elections worldwide](https://mapthegeneral.com/election-calendar/)
 - [Search](https://mapthegeneral.com/search/)
 - [About](https://mapthegeneral.com/about/)
 - [Disclaimer](https://mapthegeneral.com/disclaimer/)

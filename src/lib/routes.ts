@@ -54,6 +54,7 @@ const STATIC_EN: IndexEntry[] = [
   { path: "/", lang: "en-only", title: "Map the General", kind: "home", text: "live election results worldwide countries spain mexico poland italy united kingdom canada australia switzerland ireland norway sweden elections" },
   { path: "/pl/", lang: "en-only", title: "Poland", kind: "country", text: "Polska Poland Sejm Senat wojewodztwo" },
   { path: "/results/", lang: "en-only", title: "Election results live worldwide", kind: "page", text: "election results live worldwide latest counts next elections calendar spain new zealand israel" },
+  { path: "/election-calendar/", lang: "en-only", title: "Election calendar: upcoming elections worldwide", kind: "page", text: "election calendar 2026 2027 upcoming elections worldwide polling day dates next election" },
   { path: "/search/", lang: "en-only", title: "Search", kind: "search", text: "search postcode municipio" },
   { path: "/about/", lang: "en-only", title: "About", kind: "legal", text: "unofficial independent guide" },
   { path: "/disclaimer/", lang: "en-only", title: "Disclaimer", kind: "legal", text: "unofficial nonpartisan" },
