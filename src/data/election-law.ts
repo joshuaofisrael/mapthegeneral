@@ -292,6 +292,23 @@ export const ELECTION_WINDOWS: ElectionWindow[] = [
     rules: [],
   },
   {
+    id: "ch-2027-02-28",
+    country: "ch",
+    election: { en: "Federal popular vote, 28 February 2027", local: "Eidgenössische Volksabstimmung, 28. Februar 2027" },
+    pollingDay: "2027-02-28",
+    trackerOpensAt: "2027-03-01T00:00:00+01:00",
+    officialResults: { label: "Bundesamt für Statistik, Abstimmungen", url: "https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/abstimmungen.html" },
+    verified: {
+      readOn: "2026-11-12",
+      sources: [
+        { label: "Bundeskanzlei, Medienmitteilung, Abstimmungsvorlagen für den 28. Februar 2027", url: "https://www.bk.admin.ch/de/newnsb/jySr77K8EibE" },
+        { label: "Chancellerie fédérale, communiqué, objets de la votation populaire du 28 février 2027", url: "https://www.bk.admin.ch/fr/newnsb/jySr77K8EibE" },
+        { label: "Cancelleria federale, comunicato, oggetti della votazione popolare del 28 febbraio 2027", url: "https://www.bk.admin.ch/it/newnsb/jySr77K8EibE" },
+      ],
+    },
+    rules: [],
+  },
+  {
     id: "ie-2026-seanad",
     country: "ie",
     election: { en: "Seanad Éireann bye-election, Cultural and Educational Panel, 6 November 2026" },

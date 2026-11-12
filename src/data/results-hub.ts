@@ -127,6 +127,13 @@ const OVERLAY: Record<string, Overlay> = {
     stage: "awaiting",
     stageNote: "Results come from the Federal Statistical Office.",
   },
+  "ch-2027-02-28": {
+    name: "Federal popular vote",
+    guidePath: "/ch/en/elections/volksabstimmung-2027-02-28/",
+    searchLabel: "Swiss referendum results February 2027",
+    stage: "awaiting",
+    stageNote: "Results come from the Federal Statistical Office.",
+  },
   "ee-2027-03-07": {
     name: "Riigikogu election",
     guidePath: "/ee/en/elections/riigikogu-2027/",
