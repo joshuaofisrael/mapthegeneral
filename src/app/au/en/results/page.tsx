@@ -7,9 +7,9 @@ import { sourceById, sourcesById } from "@/data/au/sources";
 import { auHome } from "@/countries/au";
 
 export const metadata = auPageMetadata({
-  title: "Australia results",
+  title: "Australia election results map: 2025 federal election",
   description:
-    "House results for the Australian federal election of 3 May 2025, from the AEC tally room. Unofficial information.",
+    "Australia election results map: House results for the federal election of 3 May 2025, from the AEC tally room. Unofficial information.",
   path: "/au/en/results",
 });
 
@@ -26,7 +26,7 @@ export default function AustraliaResultsPage() {
         { name: "Results", path },
       ]}
       eyebrow="AEC tally room · final results"
-      title="Results"
+      title="Australia election results map"
       lede="The House figures below are the tally room’s final results for Saturday 3 May 2025. Putting them on this page does not declare a winner, a majority, or a government."
       officeHref={tally.url}
       officeLabel="AEC Tally Room"

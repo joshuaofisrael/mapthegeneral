@@ -49,11 +49,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${polandHome(lang)}results/`;
   return polandMetadata({
-    title: lang === "pl" ? "Wyniki" : "Poland results",
+    title: lang === "pl" ? "Wyniki" : "Poland election results map: Sejm, Senate and presidential",
     description:
       lang === "pl"
         ? "Przedruk obwieszczeń PKW o Sejmie i Senacie z 2023 r. oraz o Prezydencie z 2025 r. Strona nie ogłasza zwycięzcy wyborów z 2027 r."
-        : "Reprint of the 2023 Sejm and Senate announcements and the 2025 presidential announcement. This page does not call the 2027 election.",
+        : "Poland election results map: reprint of the 2023 Sejm and Senate announcements and the 2025 presidential announcement. This page does not call the 2027 vote.",
     path,
     lang,
     alternatePath: `${polandHome(lang === "pl" ? "en" : "pl")}results/`,
@@ -77,7 +77,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         { name: copy.results, path },
       ]}
       eyebrow={pl ? "Przedruk obwieszczeń. Bez ogłaszania wyniku 2027." : "Announcement reprint. No 2027 call."}
-      title={pl ? "Wyniki" : "Results"}
+      title={pl ? "Wyniki" : "Poland election results map"}
       lede={
         pl
           ? "Liczby poniżej są przepisane z obwieszczeń Państwowej Komisji Wyborczej. Ta strona nie rozstrzyga, kto tworzy rząd, i nie ogłasza wyborów, które się nie odbyły."

@@ -22,7 +22,7 @@ import type { CSSProperties } from "react";
 
 /** Distinct from the site default so the unique-meta pass leaves the homepage alone. */
 const HOME_DESCRIPTION =
-  "Map the General: live election results worldwide. Latest counts from Israel and New Zealand, Spain on 29 November 2026, and the next elections. Unofficial.";
+  "Map the General: world election maps and live results. Latest counts from Israel and New Zealand, Spain on 29 November 2026, and the next elections. Unofficial.";
 
 export const metadata = pageMetadata({
   title: SITE.name,
@@ -58,9 +58,9 @@ export default function HomePage() {
       />
       <JsonLd data={homeFaqJsonLd} />
       <section className="max-w-3xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">Live election results worldwide</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy">World election maps and live results</p>
         <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-          Map the General: live election results worldwide
+          Map the General: world election maps and live results
         </h1>
         <p className="mt-4 text-lg leading-8 text-ink-muted">
           Election results as they are counted, copied from official election authorities with the time each figure

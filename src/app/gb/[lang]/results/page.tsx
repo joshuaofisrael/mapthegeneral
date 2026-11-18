@@ -21,9 +21,9 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   gbLang((await params).lang);
   return gbMetadata({
-    title: "United Kingdom results",
+    title: "UK election results map: 2024 general election",
     description:
-      "Published results of the UK general election of 4 July 2024. There is no count for a later UK Parliament election. This page does not call an election.",
+      "UK election results map: published results of the general election of 4 July 2024. No count yet for a later UK Parliament election; this page calls none.",
     path: "/gb/en/results/",
   });
 }
@@ -40,7 +40,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         { name: "Results", path: "/gb/en/results/" },
       ]}
       eyebrow="Published count only"
-      title="Results"
+      title="UK election results map"
       lede="The 4 July 2024 figures below are copied from the UK Parliament election-results site. This page does not declare a winner of any election that has not been held."
       officeHref={results.url}
       officeLabel="UK Parliament election results"

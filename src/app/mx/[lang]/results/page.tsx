@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const lang = asLang((await params).lang);
   const path = `${mexicoHome(lang)}results/`;
   return pageMetadata({
-    title: lang === "es" ? "Resultados de México" : "Mexico results",
+    title: lang === "es" ? "Resultados de México" : "Mexico election results map: 2027 election",
     description:
       lang === "es"
         ? "Resultados de la elección del 6 de junio de 2027. No hay escrutinio que reproducir. Esta página no canta la elección."
-        : "Results of the 6 June 2027 election. There is no count to reprint. This page does not call the election.",
+        : "Mexico election results map: results of the 6 June 2027 election. There is no count to reprint. This page does not call the election.",
     path,
     lang,
     alternatePath: `${mexicoHome(lang === "es" ? "en" : "es")}results/`,
@@ -44,7 +44,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         { name: copy.results, path },
       ]}
       eyebrow={es ? "Sin escrutinio de 2027" : "No 2027 count"}
-      title={es ? "Resultados" : "Results"}
+      title={es ? "Resultados" : "Mexico election results map"}
       lede={
         es
           ? "Esta página espera el escrutinio oficial del 6 de junio de 2027. No atribuye escaños y no declara una mayoría."

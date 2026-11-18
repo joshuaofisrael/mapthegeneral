@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title:
       lang === "es"
         ? "Resultados elecciones generales 2026 en directo"
-        : "Spain election results live: 29 November 2026 general election",
+        : "Spain election results map live: 29 November 2026 general election",
     description:
       lang === "es"
         ? "Resultados de las elecciones generales 2026 en directo: escrutinio del 29 de noviembre copiado del Ministerio del Interior, con hora de lectura. No oficial."
-        : "Spain election results live: 29 November 2026 general election count, copied from the Ministry of the Interior with read times. Unofficial; no winner called.",
+        : "Spain election results map: 29 November 2026 general election count, copied from the Ministry of the Interior with read times. Unofficial; no winner called.",
     path,
     lang,
     alternatePath: `${spainHome(lang === "es" ? "en" : "es")}results/`,
@@ -87,8 +87,8 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         { name: es ? "España" : "Spain", path: spainHome(lang) },
         { name: copy.results, path },
       ]}
-      eyebrow={es ? "Resultados en directo · 29 de noviembre de 2026" : "Live results · 29 November 2026"}
-      title={es ? "Resultados de las elecciones generales 2026 en directo" : "Spain election results live: general election, 29 November 2026"}
+      eyebrow={es ? "Resultados en directo · 29 de noviembre de 2026" : "Live results map · 29 November 2026"}
+      title={es ? "Resultados de las elecciones generales 2026 en directo" : "Spain election results map, live: general election, 29 November 2026"}
       lede={
         es
           ? "Esta página copiará el escrutinio oficial del Ministerio del Interior cuando empiece, con la hora de lectura. No atribuye escaños y no declara una mayoría."

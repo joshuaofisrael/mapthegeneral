@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const copy = ui(lang);
   return chMetadata({
     title:
-      lang === "fr" ? "Résultats en Suisse" : lang === "it" ? "Risultati in Svizzera" : lang === "en" ? "Switzerland results" : copy.results,
+      lang === "fr" ? "Résultats en Suisse" : lang === "it" ? "Risultati in Svizzera" : lang === "en" ? "Switzerland election results map: 2023 National Council" : copy.results,
     description:
       lang === "de"
         ? "Mandate des Nationalrats 2023, wie sie das BFS druckt. Für den 24. Oktober 2027 gibt es kein Ergebnis. Diese Seite ruft keine Wahl aus."
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
           ? "Mandats du Conseil national 2023 tels que l’OFS les imprime. Il n’y a pas de résultat pour le 24 octobre 2027. Cette page ne proclame pas d’élection."
           : lang === "it"
             ? "Mandati del Consiglio nazionale 2023 come li stampa l’UST. Non c’è un risultato per il 24 ottobre 2027. Questa pagina non proclama un’elezione."
-            : "National Council mandates for 2023 as the BFS prints them. There is no result for 24 October 2027. This page does not call an election.",
+            : "Switzerland election results map: National Council mandates for 2023, as the BFS prints them. No result yet for 24 October 2027; this page calls no election.",
     path: `${chHome(lang)}results/`,
     lang,
   });

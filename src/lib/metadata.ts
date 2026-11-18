@@ -21,7 +21,7 @@ export function pageMetadata(input: {
         }
       : undefined;
 
-  const socialTitle = input.path === "/" ? `${SITE.name}: live election results worldwide` : `${input.title} · ${SITE.name}`;
+  const socialTitle = input.path === "/" ? `${SITE.name}: world election maps and live results` : `${input.title} · ${SITE.name}`;
   const locale =
     input.path.startsWith("/mx/") && input.lang === "es"
       ? "es_MX"

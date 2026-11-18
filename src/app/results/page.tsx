@@ -10,9 +10,9 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 const PATH = "/results/";
 
 export const metadata = pageMetadata({
-  title: "Election results live worldwide: latest counts and next elections",
+  title: "World election results map: live counts and next elections",
   description:
-    "Live election results worldwide from official sources: Israel and New Zealand counts, Spain on 29 November, and a calendar of the next elections. Unofficial.",
+    "World election results map: live counts from Israel and New Zealand, Spain on 29 November, and a calendar of the next elections. Unofficial.",
   path: PATH,
 });
 
@@ -82,7 +82,7 @@ export default function ResultsHubPage() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Election results live worldwide",
+            name: "World election results map",
             url: absoluteUrl(PATH),
             isPartOf: { "@type": "WebSite", name: SITE.name, url: absoluteUrl("/") },
             mainEntity: {
@@ -100,8 +100,8 @@ export default function ResultsHubPage() {
       />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Election results" }]} />
       <PageHeader
-        eyebrow="Live election results worldwide"
-        title="Election results live: latest counts and the next elections"
+        eyebrow="World election results map"
+        title="World election results map: live counts and the next elections"
         lede="Every election this site covers, newest first, with the stage of its count, the official source, and a calendar of upcoming polling days. Unofficial; no winner is called here."
       />
 

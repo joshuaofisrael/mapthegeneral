@@ -22,11 +22,11 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = asCaLang((await params).lang);
   return caMetadata({
-    title: lang === "fr" ? "Résultats au Canada" : "Canada results",
+    title: lang === "fr" ? "Résultats au Canada" : "Canada election results map: 2025 general election",
     description:
       lang === "fr"
         ? "Reproduction des résultats officiels du scrutin du 28 avril 2025 publiés par Élections Canada. Cette page ne déclare pas un vainqueur."
-        : "Reprint of the official voting results of 28 April 2025 published by Elections Canada. This page does not declare a winner.",
+        : "Canada election results map: reprint of the official voting results of 28 April 2025 published by Elections Canada. This page does not declare a winner.",
     path: `${canadaHome(lang)}results/`,
     lang,
   });
@@ -56,7 +56,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         { name: copy.results, path },
       ]}
       eyebrow={fr ? "Reproduction · sans proclamation" : "Reprint · no call"}
-      title={fr ? "Résultats du 28 avril 2025" : "Results of 28 April 2025"}
+      title={fr ? "Résultats du 28 avril 2025" : "Canada election results map, 28 April 2025"}
       lede={
         fr
           ? "Cette page recopie des chiffres déjà publiés par Élections Canada. Elle n’attribue pas le gouvernement, ne déclare pas une majorité et ne chante pas l’élection."
