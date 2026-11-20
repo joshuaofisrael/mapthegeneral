@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Privacy" }]} />
       <PageHeader
-        eyebrow="Last updated 9 November 2026"
+        eyebrow="Last updated 20 November 2026"
         title="Privacy Policy"
         lede={`How ${SITE.legalName} handles information on ${SITE.name}.`}
       />
@@ -178,6 +178,15 @@ export default function PrivacyPage() {
           ), or block or delete cookies in your browser settings. The site works the same either way.
         </p>
         <h2 id="advertising">Advertising</h2>
+        <p>
+          Third-party vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits
+          to this website or other websites. Google&apos;s use of advertising cookies enables it and its
+          partners to serve ads to you based on your visit to this site and/or other sites on the Internet. You
+          may opt out of personalized advertising by visiting{" "}
+          <a href="https://adssettings.google.com" rel="noopener noreferrer">Google Ads Settings</a>, or opt out
+          of some third-party vendors&apos; use of cookies at{" "}
+          <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer">www.aboutads.info/choices</a>.
+        </p>
         <p>
           {SITE.name} may show advertisements provided by Google AdSense. Google and its advertising
           partners may use cookies to serve and measure ads on this site. Google describes that use at{" "}
