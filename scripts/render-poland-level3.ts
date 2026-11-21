@@ -17,7 +17,6 @@ import { sourcesById } from "../data/pl/sources";
 import type { Lang } from "../data/pl/types";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
-import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { CLOUDFLARE_BEACON_TAG } from "../src/lib/cloudflare-beacon";
 import { nearbyIds, nearbyPlacesParagraph } from "../src/lib/nearby-html";
@@ -131,7 +130,6 @@ function shell(input: {
 ${socialMetaTags()}
 <link rel="stylesheet" href="/place.css">
 <script type="application/ld+json">${jsonLd(input.crumbs)}</script>
-${ADSENSE_HEAD_TAGS}
 ${GA_HEAD_TAGS}
 </head>
 <body>

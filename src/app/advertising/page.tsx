@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Advertising and affiliate disclosure",
-  description: `Advertising on ${SITE.name} may include Google AdSense and Ezoic. ${SITE.legalName} does not sell political ads or endorse candidates.`,
+  description: `Advertising on ${SITE.name} may include Ezoic. ${SITE.legalName} does not sell political ads or endorse candidates.`,
   path: "/advertising",
 });
 
@@ -23,15 +23,15 @@ export default function AdvertisingPage() {
       />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Advertising" }]} />
       <PageHeader
-        eyebrow="Last updated 23 October 2026"
+        eyebrow="Last updated 21 November 2026"
         title="Advertising and affiliate disclosure"
         lede={`${SITE.name} may show display ads. It does not sell political ads, and it does not endorse candidates or parties.`}
       />
       <div className="prose-legal">
         <h2>Who sells the ads</h2>
         <p>
-          {SITE.name} may show advertisements from Google AdSense and from Ezoic Inc. Google, Ezoic
-          and their partners choose and measure those ads. {SITE.legalName} does not write the ads and does not pick the advertiser
+          {SITE.name} may show advertisements from Ezoic Inc. Ezoic
+          and its partners choose and measure those ads. {SITE.legalName} does not write the ads and does not pick the advertiser
           for a particular visit. An advertisement is not an endorsement by {SITE.legalName} or by{" "}
           {SITE.name}.
         </p>

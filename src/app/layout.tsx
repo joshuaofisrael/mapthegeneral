@@ -4,7 +4,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { SiteShell } from "@/components/SiteShell";
 import { SITE } from "@/data/site";
 import { GoogleAnalyticsHead } from "@/components/GoogleAnalytics";
-import { ADSENSE_CLIENT, ADSENSE_SCRIPT_SRC } from "@/lib/adsense";
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -76,8 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-        <script async src={ADSENSE_SCRIPT_SRC} crossOrigin="anonymous" />
         <GoogleAnalyticsHead />
       </head>
       <body className={`${sourceSans.variable} ${sourceSerif.variable} font-sans`}>
