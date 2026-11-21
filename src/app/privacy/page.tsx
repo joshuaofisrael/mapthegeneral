@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }])} />
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Privacy" }]} />
       <PageHeader
-        eyebrow="Last updated 20 November 2026"
+        eyebrow="Last updated 21 November 2026"
         title="Privacy Policy"
         lede={`How ${SITE.legalName} handles information on ${SITE.name}.`}
       />
@@ -37,8 +37,8 @@ export default function PrivacyPage() {
           The site is operated by {SITE.legalName}, a {SITE.entityType}. Business address:{" "}
           {SITE.location}. {SITE.name} is a static informational website. It has no user accounts, no
           comments, and no payments. It offers an optional email sign-up for election results, described under Election results email updates. Its contact form is processed by FormSubmit.
-          It may show advertisements from Google AdSense. Google and its partners may use cookies
-          for those ads, as described under Advertising. Visit counts use cookieless Cloudflare Web
+          It may show advertisements through Ezoic. Ezoic and its partners, including Google, may use
+          cookies for those ads, as described under Advertising. Visit counts use cookieless Cloudflare Web
           Analytics. Google Analytics 4 loads only after you accept analytics cookies, as described
           under Google Analytics.
         </p>
@@ -70,12 +70,12 @@ export default function PrivacyPage() {
           <li>Messages you choose to send us by email or through the contact form (delivered by FormSubmit).</li>
           <li>Visit counts: the site uses Cloudflare Web Analytics, which is cookieless and counts page views without setting cookies or using local storage.</li>
           <li>Analytics, only if you click Accept: Google Analytics cookies and usage data, as described below.</li>
-          <li>Advertising: Google may set cookies when AdSense ads are served, and Ezoic loads its ad and analytics scripts on every page. See Advertising below.</li>
+          <li>Advertising: Ezoic loads its ad and analytics scripts on every page, and its partners, including Google, may set cookies when ads are served. See Advertising below.</li>
         </ul>
         <h2>What we do not collect</h2>
         <ul>
           <li>We do not set our own cookies. The analytics choice is kept in this browser’s local storage and is not a tracking cookie. Google Analytics cookies are set only if you click Accept.</li>
-          <li>We do not use social-media pixels, or any advertising network other than Google AdSense and Ezoic. Google Analytics is not loaded unless you click Accept.</li>
+          <li>We do not use social-media pixels, or any advertising network other than Ezoic. Google Analytics is not loaded unless you click Accept.</li>
           <li>We do not collect national identity numbers, voter numbers, or ballot images.</li>
           <li>We do not sell personal information.</li>
         </ul>
@@ -124,9 +124,8 @@ export default function PrivacyPage() {
           Google LLC, to count visits and understand which pages are useful. The Google Analytics
           script is not on the page until you click Accept. That choice is this site’s consent
           script. Advertising and analytics storage for that tag start denied. When you first visit,
-          a banner asks whether you accept analytics cookies. Google AdSense is a separate script
-          and is described under Advertising. This analytics banner does not replace Google’s
-          advertising consent message.
+          a banner asks whether you accept analytics cookies. This analytics banner does not replace
+          the advertising consent message described under Advertising.
         </p>
         <ul>
           <li>
@@ -188,7 +187,7 @@ export default function PrivacyPage() {
           <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer">www.aboutads.info/choices</a>.
         </p>
         <p>
-          {SITE.name} may show advertisements provided by Google AdSense. Google and its advertising
+          {SITE.name} may show advertisements provided through Ezoic. Google and other advertising
           partners may use cookies to serve and measure ads on this site. Google describes that use at{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
             https://policies.google.com/technologies/partner-sites
@@ -230,7 +229,7 @@ export default function PrivacyPage() {
         <span id="ezoic-privacy-policy-embed"></span>
         <h3 id="ad-partners">Third-party advertising partners</h3>
         <p>
-          The advertising partners this site uses are Google AdSense and Ezoic, described above. {SITE.name} may
+          The advertising partner this site uses is Ezoic, described above. {SITE.name} may
           also work with Mediavine, Inc. as an advertising partner in future. Mediavine ads are not running on this
           site today; if that changes, this section will be updated before they start. Mediavine’s privacy notices
           are in its{" "}
@@ -296,13 +295,13 @@ export default function PrivacyPage() {
         </p>
         <p>
           Questions about advertising or this policy go through the <Link href="/contact/">contact page</Link>.
-          The <Link href="/advertising/">advertising disclosure</Link> says that ads are Google AdSense and Ezoic,
+          The <Link href="/advertising/">advertising disclosure</Link> says that ads are from Ezoic,
           that the site does not sell political advertising or endorsements, and that it has no
           affiliate links.
         </p>
         <h2>Publicidad</h2>
         <p>
-          {SITE.name} puede mostrar anuncios de Google AdSense. Google y sus socios publicitarios
+          {SITE.name} puede mostrar anuncios a través de Ezoic. Google y otros socios publicitarios
           pueden usar cookies para mostrar y medir anuncios en este sitio. Google describe ese uso en{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
             https://policies.google.com/technologies/partner-sites
@@ -323,8 +322,8 @@ export default function PrivacyPage() {
           Google Analytics no está en la página hasta que pulsa Aceptar. Esa elección la hace el
           script de consentimiento de este sitio. El almacenamiento de publicidad y de analítica de
           esa etiqueta empieza denegado. En la primera visita, un aviso pregunta si acepta las
-          cookies de analítica. Google AdSense es un script distinto y se describe en Publicidad.
-          Este aviso no sustituye el mensaje de consentimiento publicitario de Google.
+          cookies de analítica. Este aviso no sustituye el mensaje de consentimiento publicitario
+          descrito en Publicidad.
         </p>
         <p>
           Si pulsa <strong>Aceptar</strong>, el sitio carga la etiqueta de Google y Google Analytics
@@ -347,7 +346,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Werbung</h2>
         <p>
-          {SITE.name} kann Anzeigen von Google AdSense zeigen. Google und seine Werbepartner können
+          {SITE.name} kann Anzeigen über Ezoic zeigen. Google und andere Werbepartner können
           Cookies verwenden, um Anzeigen auf dieser Website auszuliefern und zu messen. Google
           beschreibt das unter{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
@@ -369,8 +368,8 @@ export default function PrivacyPage() {
           von Google Analytics ist erst auf der Seite, wenn Sie auf Akzeptieren klicken. Diese Wahl
           trifft das Einwilligungsskript dieser Website. Werbe- und Analyse-Speicher für dieses Tag
           starten auf abgelehnt. Beim ersten Besuch fragt ein Hinweis, ob Sie Analyse-Cookies
-          akzeptieren. Google AdSense ist ein eigenes Skript und unter Werbung beschrieben. Dieser
-          Hinweis ersetzt nicht die Werbe-Einwilligung von Google.
+          akzeptieren. Dieser Hinweis ersetzt nicht die Werbe-Einwilligung, die unter Werbung
+          beschrieben ist.
         </p>
         <p>
           Wenn Sie <strong>Akzeptieren</strong> wählen, lädt die Website das Google-Tag, und Google
@@ -393,7 +392,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Publicité</h2>
         <p>
-          {SITE.name} peut afficher des annonces fournies par Google AdSense. Google et ses
+          {SITE.name} peut afficher des annonces fournies par Ezoic. Google et d’autres
           partenaires publicitaires peuvent utiliser des cookies pour diffuser et mesurer des annonces
           sur ce site. Google décrit cet usage sur{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
@@ -415,8 +414,8 @@ export default function PrivacyPage() {
           script Google Analytics n’est pas sur la page tant que vous n’avez pas cliqué sur Accepter.
           Ce choix est fait par le script de consentement de ce site. Le stockage publicitaire et
           analytique de cette balise commence refusé. À la première visite, un bandeau demande si
-          vous acceptez les cookies d’analytique. Google AdSense est un script distinct, décrit sous
-          Publicité. Ce bandeau ne remplace pas le message de consentement publicitaire de Google.
+          vous acceptez les cookies d’analytique. Ce bandeau ne remplace pas le message de
+          consentement publicitaire décrit sous Publicité.
         </p>
         <p>
           Si vous cliquez sur <strong>Accepter</strong>, le site charge la balise Google et Google
@@ -439,7 +438,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Pubblicità</h2>
         <p>
-          {SITE.name} può mostrare annunci di Google AdSense. Google e i suoi partner pubblicitari
+          {SITE.name} può mostrare annunci tramite Ezoic. Google e altri partner pubblicitari
           possono usare cookie per erogare e misurare gli annunci su questo sito. Google descrive
           questo uso su{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
@@ -460,9 +459,8 @@ export default function PrivacyPage() {
           Google LLC, per contare le visite e capire quali pagine sono utili. Lo script di Google
           Analytics non è nella pagina finché non clicchi Accetta. Questa scelta la fa lo script di
           consenso di questo sito. L’archiviazione pubblicitaria e analitica di quel tag parte come
-          negata. Alla prima visita, un avviso chiede se accetti i cookie di analisi. Google AdSense
-          è uno script separato ed è descritto in Pubblicità. Questo avviso non sostituisce il
-          messaggio di consenso pubblicitario di Google.
+          negata. Alla prima visita, un avviso chiede se accetti i cookie di analisi. Questo avviso
+          non sostituisce il messaggio di consenso pubblicitario descritto in Pubblicità.
         </p>
         <p>
           Se clicchi <strong>Accetta</strong>, il sito carica il tag di Google e Google Analytics può
@@ -485,7 +483,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Reklama</h2>
         <p>
-          {SITE.name} może wyświetlać reklamy Google AdSense. Google i jego partnerzy reklamowi mogą
+          {SITE.name} może wyświetlać reklamy przez Ezoic. Google i inni partnerzy reklamowi mogą
           używać plików cookie, aby wyświetlać i mierzyć reklamy na tej stronie. Google opisuje to
           użycie na stronie{" "}
           <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">
@@ -507,8 +505,7 @@ export default function PrivacyPage() {
           Analytics nie jest na stronie, dopóki nie klikniesz Akceptuj. Tego wyboru dokonuje skrypt
           zgody tego serwisu. Przechowywanie danych reklamowych i analitycznych dla tego tagu startuje
           jako odrzucone. Przy pierwszej wizycie baner pyta, czy akceptujesz pliki cookie analityki.
-          Google AdSense to osobny skrypt, opisany w części Reklama. Ten baner nie zastępuje
-          komunikatu zgody reklamowej Google.
+          Ten baner nie zastępuje komunikatu zgody reklamowej opisanego w części Reklama.
         </p>
         <p>
           Po kliknięciu <strong>Akceptuj</strong> serwis ładuje tag Google, a Google Analytics może

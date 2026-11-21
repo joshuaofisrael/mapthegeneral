@@ -35,7 +35,6 @@ import { nationPath } from "../src/data/gb/paths";
 import { sourcesById } from "../src/data/gb/sources";
 import { absoluteUrl, reportErrorHref, SITE } from "../src/data/site";
 import { withLegalFooter } from "../src/lib/legal-footer";
-import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { socialMetaTags } from "../src/lib/social";
 import { formatIsoDate } from "../src/lib/format";
@@ -113,7 +112,6 @@ function page(input: {
 ${socialMetaTags()}
 <link rel="stylesheet" href="/gb/place.css">
 <script type="application/ld+json">${jsonLd}</script>
-${ADSENSE_HEAD_TAGS}
 ${GA_HEAD_TAGS}
 </head>
 <body>

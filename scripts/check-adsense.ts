@@ -1,27 +1,29 @@
 /**
- * Fails the build when a non-redirect page lacks the AdSense meta tag or loader,
- * when ads.txt is missing or different, when robots.txt blocks an AdSense crawler,
- * or when the exported site is 1 GB or larger.
+ * Fails the build when exported HTML still carries a Google AdSense marker,
+ * when ads.txt is missing, when ads.txt contains a google.com line for the
+ * withdrawn publisher, or when the exported site is 1 GB or larger.
+ *
+ * Ezoic seller records that begin with google.com for a different publisher
+ * id are part of the managed seller list and are not this site's AdSense
+ * account. Those lines are allowed. A google.com line that names publisher
+ * pub-5681559774142917 is not.
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
-import {
-  ADS_TXT_LINE,
-  ADSENSE_CLIENT,
-  ADSENSE_LOADER_TAG,
-  ADSENSE_META_TAG,
-  htmlHead,
-  isRedirectStub,
-} from "../src/lib/adsense";
 
 const OUT = path.join(process.cwd(), "out");
 const GIGABYTE = 1024 * 1024 * 1024;
-const ADSENSE_BOTS = ["Mediapartners-Google", "AdsBot-Google", "AdsBot-Google-Mobile"];
+const WITHDRAWN_PUBLISHER = "5681559774142917";
+const HTML_MARKERS = [
+  "adsbygoogle",
+  "pagead2.googlesyndication.com",
+  "ca-pub-5681559774142917",
+  "google-adsense-account",
+] as const;
+
 const errors: string[] = [];
 
 let pages = 0;
-let redirects = 0;
-let nonDocuments = 0;
 let bytes = 0;
 
 function walk(dir: string) {
@@ -35,22 +37,12 @@ function walk(dir: string) {
     }
     bytes += info.size;
     if (!name.endsWith(".html")) continue;
-    const html = readFileSync(full, "utf8");
-    if (isRedirectStub(html)) {
-      redirects++;
-      continue;
-    }
-    const head = htmlHead(html);
-    if (head === null) {
-      nonDocuments++;
-      continue;
-    }
     pages++;
+    const html = readFileSync(full, "utf8");
     const rel = path.relative(OUT, full);
-    if (!head.includes(ADSENSE_META_TAG)) errors.push(`${rel}: missing ${ADSENSE_META_TAG}`);
-    if (!head.includes(ADSENSE_LOADER_TAG)) errors.push(`${rel}: missing AdSense loader`);
-    if (/<ins\b[^>]*\badsbygoogle\b/i.test(html) || /adsbygoogle\s*=\s*window\.adsbygoogle/.test(html)) {
-      errors.push(`${rel}: ad unit is present; only the loader is allowed`);
+    const lower = html.toLowerCase();
+    for (const marker of HTML_MARKERS) {
+      if (lower.includes(marker)) errors.push(`${rel}: contains ${marker}`);
     }
   }
 }
@@ -65,60 +57,11 @@ function dirSize(dir: string): number {
   return total;
 }
 
-type RobotGroup = { agents: string[]; rules: { allow: boolean; path: string }[] };
-
-function parseRobots(text: string): RobotGroup[] {
-  const groups: RobotGroup[] = [];
-  let current: RobotGroup | null = null;
-  for (const raw of text.split(/\r?\n/)) {
-    const line = raw.replace(/#.*$/, "").trim();
-    if (!line) continue;
-    const match = line.match(/^([^:]+):\s*(.*)$/);
-    if (!match) continue;
-    const field = match[1].trim().toLowerCase();
-    const value = match[2].trim();
-    if (field === "user-agent") {
-      if (!current || current.rules.length > 0) {
-        current = { agents: [], rules: [] };
-        groups.push(current);
-      }
-      current.agents.push(value);
-      continue;
-    }
-    if (!current) continue;
-    if (field === "allow" || field === "disallow") {
-      current.rules.push({ allow: field === "allow", path: value });
-    }
-  }
-  return groups;
-}
-
-function groupFor(groups: RobotGroup[], agent: string): RobotGroup | undefined {
-  const specific = groups.filter((group) =>
-    group.agents.some((name) => name !== "*" && name.toLowerCase() === agent.toLowerCase()),
-  );
-  if (specific.length > 0) return specific[specific.length - 1];
-  return groups.filter((group) => group.agents.includes("*")).pop();
-}
-
-/** True when the group blocks the site root. An empty Disallow allows everything. */
-function blocksRoot(group: RobotGroup | undefined): boolean {
-  if (!group) return false;
-  let blocked = false;
-  let allowLength = -1;
-  let disallowLength = -1;
-  for (const rule of group.rules) {
-    if (rule.path === "") continue;
-    if (rule.path !== "/" && !"/".startsWith(rule.path)) continue;
-    if (rule.allow) {
-      if (rule.path.length >= allowLength) allowLength = rule.path.length;
-    } else if (rule.path.length >= disallowLength) {
-      disallowLength = rule.path.length;
-      blocked = true;
-    }
-  }
-  if (allowLength >= disallowLength) return false;
-  return blocked;
+/** A google.com ads.txt record for the withdrawn AdSense publisher. */
+function isWithdrawnGoogleLine(line: string): boolean {
+  const trimmed = line.trim();
+  if (!/^google\.com\s*,/i.test(trimmed)) return false;
+  return trimmed.toLowerCase().includes(WITHDRAWN_PUBLISHER);
 }
 
 if (!existsSync(OUT)) {
@@ -132,26 +75,14 @@ const adsPath = path.join(OUT, "ads.txt");
 if (!existsSync(adsPath)) {
   errors.push("ads.txt is missing from out/");
 } else {
-  const body = readFileSync(adsPath, "utf8").replace(/\r\n/g, "\n").trim();
-  const lines = body.split("\n").map((l) => l.trim());
-  if (lines.filter((l) => l === ADS_TXT_LINE).length !== 1) errors.push(`ads.txt must contain exactly one line: ${ADS_TXT_LINE}`);
-  if (lines.some((l) => /^google\.com,\s*pub-5681559774142917/i.test(l) && l !== ADS_TXT_LINE)) errors.push("ads.txt has a conflicting AdSense line");
-}
-
-const robotsPath = path.join(OUT, "robots.txt");
-if (!existsSync(robotsPath)) {
-  errors.push("robots.txt is missing from out/");
-} else {
-  const groups = parseRobots(readFileSync(robotsPath, "utf8"));
-  for (const agent of ADSENSE_BOTS) {
-    const group = groupFor(groups, agent);
-    if (!group) errors.push(`robots.txt has no rule group covering ${agent}`);
-    else if (blocksRoot(group)) errors.push(`robots.txt blocks ${agent} from /`);
+  const body = readFileSync(adsPath, "utf8").replace(/\r\n/g, "\n");
+  if (body.toLowerCase().includes(WITHDRAWN_PUBLISHER)) {
+    errors.push("ads.txt contains withdrawn publisher pub-5681559774142917");
   }
-}
-
-if (!ADSENSE_META_TAG.includes(ADSENSE_CLIENT) || !ADSENSE_LOADER_TAG.includes(ADSENSE_CLIENT)) {
-  errors.push("AdSense client id is not in the shared tags");
+  const googleLines = body.split("\n").filter((line) => isWithdrawnGoogleLine(line));
+  if (googleLines.length > 0) {
+    errors.push(`ads.txt contains a google.com line for pub-${WITHDRAWN_PUBLISHER}`);
+  }
 }
 
 if (bytes >= GIGABYTE) {
@@ -166,5 +97,5 @@ if (errors.length) {
 
 const mb = (bytes / (1024 * 1024)).toFixed(1);
 console.log(
-  `adsense: ${pages} pages have the meta tag and loader; ${redirects} redirect stubs skipped; ${nonDocuments} non-documents skipped; ads.txt ok; robots.txt allows AdSense crawlers; out/ is ${mb} MB.`,
+  `adsense: ${pages} html files scanned, no AdSense markers; ads.txt has no google.com line for pub-${WITHDRAWN_PUBLISHER}; out/ is ${mb} MB.`,
 );

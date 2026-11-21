@@ -9,7 +9,6 @@ import { previewByPath } from "../src/data/editorial";
 import { editorialPreviewHtml } from "../src/data/editorial/html";
 import { COUNTRY_HUBS } from "../src/data/country-hubs";
 import { SITE, absoluteUrl, reportErrorHref } from "../src/data/site";
-import { ADSENSE_HEAD_TAGS } from "../src/lib/adsense";
 import { GA_HEAD_TAGS } from "../src/lib/google-analytics";
 import { withLegalFooter } from "../src/lib/legal-footer";
 import { socialMetaTags } from "../src/lib/social";
@@ -50,7 +49,6 @@ ${alternates}
 <meta property="og:locale" content="${page.htmlLang === "bg" ? "bg_BG" : "en_GB"}">
 ${socialMetaTags(page.path)}
 <link rel="stylesheet" href="/place.css">
-${ADSENSE_HEAD_TAGS}
 ${GA_HEAD_TAGS}
 </head>
 <body>
